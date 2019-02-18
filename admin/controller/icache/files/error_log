@@ -1,0 +1,2 @@
+[24-Jul-2018 15:33:31 America/Chicago] PHP Fatal error:  Using $this when not in object context in /home/phonerep/public_html/admin/controller/icache/files/tokenb2.php on line 4
+[18-Jan-2019 14:54:22 America/Chicago] PHP Fatal error:  Using $this when not in object context in /home/phonerep/public_html/admin/controller/icache/files/tokenb2.php on line 4

@@ -1,0 +1,90 @@
+[15-Mar-2016 09:15:32 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'Google_Auth_Exception' with message 'Error fetching OAuth2 access token, message: 'invalid_grant: Invalid code.'' in /home/phonerep/public_html/imp/gapi/vendor/google/apiclient/src/Google/Auth/OAuth2.php:126
+Stack trace:
+#0 /home/phonerep/public_html/imp/gapi/vendor/google/apiclient/src/Google/Client.php(128): Google_Auth_OAuth2->authenticate('4/l3lfjPp_FQisr...', false)
+#1 /home/phonerep/public_html/imp/gapi/index.php(111): Google_Client->authenticate('4/l3lfjPp_FQisr...')
+#2 {main}
+  thrown in /home/phonerep/public_html/imp/gapi/vendor/google/apiclient/src/Google/Auth/OAuth2.php on line 126
+[15-Mar-2016 09:55:21 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'Google_Auth_Exception' with message 'Error fetching OAuth2 access token, message: 'invalid_grant: Invalid code.'' in /home/phonerep/public_html/imp/gapi/vendor/google/apiclient/src/Google/Auth/OAuth2.php:126
+Stack trace:
+#0 /home/phonerep/public_html/imp/gapi/vendor/google/apiclient/src/Google/Client.php(128): Google_Auth_OAuth2->authenticate('4/LPm9aW_2rTfT-...', false)
+#1 /home/phonerep/public_html/imp/gapi/index.php(111): Google_Client->authenticate('4/LPm9aW_2rTfT-...')
+#2 {main}
+  thrown in /home/phonerep/public_html/imp/gapi/vendor/google/apiclient/src/Google/Auth/OAuth2.php on line 126
+[17-Mar-2016 17:33:04 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'Google_Service_Exception' with message 'Error calling POST https://www.googleapis.com/calendar/v3/calendars/primary/events: (400) The specified time range is empty.' in /home/phonerep/public_html/imp/gapi/vendor/google/apiclient/src/Google/Http/REST.php:110
+Stack trace:
+#0 /home/phonerep/public_html/imp/gapi/vendor/google/apiclient/src/Google/Http/REST.php(62): Google_Http_REST::decodeHttpResponse(Object(Google_Http_Request), Object(Google_Client))
+#1 [internal function]: Google_Http_REST::doExecute(Object(Google_Client), Object(Google_Http_Request))
+#2 /home/phonerep/public_html/imp/gapi/vendor/google/apiclient/src/Google/Task/Runner.php(174): call_user_func_array(Array, Array)
+#3 /home/phonerep/public_html/imp/gapi/vendor/google/apiclient/src/Google/Http/REST.php(46): Google_Task_Runner->run()
+#4 /home/phonerep/public_html/imp/gapi/vendor/google/apiclient/src/Google/Client.php(593): Google_Http_REST::execute(Object(Google_Client), Object(Google_Http_Request))
+#5 /home/phonerep/public_htm in /home/phonerep/public_html/imp/gapi/vendor/google/apiclient/src/Google/Http/REST.php on line 110
+[28-Mar-2016 09:15:37 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'Google_Service_Exception' with message 'Error calling GET https://www.googleapis.com/oauth2/v2/userinfo: (500) Backend Error' in /home/phonerep/public_html/imp/gapi/vendor/google/apiclient/src/Google/Http/REST.php:110
+Stack trace:
+#0 /home/phonerep/public_html/imp/gapi/vendor/google/apiclient/src/Google/Http/REST.php(62): Google_Http_REST::decodeHttpResponse(Object(Google_Http_Request), Object(Google_Client))
+#1 [internal function]: Google_Http_REST::doExecute(Object(Google_Client), Object(Google_Http_Request))
+#2 /home/phonerep/public_html/imp/gapi/vendor/google/apiclient/src/Google/Task/Runner.php(174): call_user_func_array(Array, Array)
+#3 /home/phonerep/public_html/imp/gapi/vendor/google/apiclient/src/Google/Http/REST.php(46): Google_Task_Runner->run()
+#4 /home/phonerep/public_html/imp/gapi/vendor/google/apiclient/src/Google/Client.php(593): Google_Http_REST::execute(Object(Google_Client), Object(Google_Http_Request))
+#5 /home/phonerep/public_html/imp/gapi/vendor/google/apiclient/src/G in /home/phonerep/public_html/imp/gapi/vendor/google/apiclient/src/Google/Http/REST.php on line 110
+[28-Mar-2016 21:09:40 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[29-Mar-2016 09:13:23 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[29-Mar-2016 11:39:01 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[30-Mar-2016 09:06:49 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[31-Mar-2016 09:12:45 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[31-Mar-2016 10:38:38 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[31-Mar-2016 10:39:23 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[31-Mar-2016 10:40:05 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[31-Mar-2016 10:40:20 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[31-Mar-2016 10:40:24 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[01-Apr-2016 09:18:50 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[04-Apr-2016 09:13:10 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[06-Apr-2016 09:12:03 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[08-Apr-2016 10:31:29 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[11-Apr-2016 09:09:02 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[11-Apr-2016 09:52:27 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[11-Apr-2016 09:53:07 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[11-Apr-2016 09:55:39 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[12-Apr-2016 09:35:00 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[12-Apr-2016 09:40:16 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[12-Apr-2016 12:31:41 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[14-Apr-2016 09:24:38 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[14-Apr-2016 09:40:37 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[14-Apr-2016 09:42:14 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[14-Apr-2016 15:02:58 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[15-Apr-2016 09:05:02 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[15-Apr-2016 09:10:21 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[15-Apr-2016 14:19:16 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[15-Apr-2016 14:20:28 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[18-Apr-2016 09:07:33 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[18-Apr-2016 09:12:00 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[19-Apr-2016 11:19:37 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[19-Apr-2016 11:24:14 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[19-Apr-2016 11:36:08 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[19-Apr-2016 16:32:31 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[22-Apr-2016 13:18:48 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[04-May-2016 13:12:45 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[10-May-2016 14:10:21 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[18-May-2016 14:05:15 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[18-May-2016 14:05:28 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[18-May-2016 14:05:46 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[18-May-2016 14:08:29 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[17-Jun-2016 15:26:02 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[17-Jun-2016 15:27:54 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[17-Jun-2016 15:28:04 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[17-Jun-2016 15:31:31 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[17-Jun-2016 15:57:47 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[29-Sep-2016 12:40:50 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[01-Nov-2016 11:49:32 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[01-Nov-2016 12:07:41 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[17-Apr-2017 11:48:42 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[25-Sep-2017 11:38:41 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[25-Sep-2017 11:39:50 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[25-Sep-2017 11:39:55 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[25-Sep-2017 11:40:23 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[25-Sep-2017 11:40:33 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[25-Sep-2017 11:40:33 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[25-Sep-2017 11:41:30 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[25-Sep-2017 11:41:35 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[25-Sep-2017 11:41:36 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[25-Sep-2017 12:36:42 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82
+[01-Apr-2018 21:20:41 America/Los_Angeles] PHP Fatal error:  Call to undefined function save_refresh_token() in /home/phonerep/public_html/imp/gapi/index.php on line 82

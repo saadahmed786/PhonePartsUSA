@@ -1,0 +1,17 @@
+1. open the file fishbowlAPI.class.php
+2. Go to saveSOOrder function at line 486 appox.
+3. Add the below code after
+
+  $orderDetail['order_id'] = str_ireplace("-","",$orderDetail['order_id']);
+  $orderDetail['first_name'] = $this->replaceSpecial($orderDetail['first_name']);
+  $orderDetail['last_name'] = $this->replaceSpecial($orderDetail['last_name']);
+  $orderDetail['address1'] = $this->replaceSpecial($orderDetail['address1']);
+  $orderDetail['city'] = $this->replaceSpecial($orderDetail['city']);
+  $orderDetail['state'] = $this->replaceSpecial($orderDetail['state']);
+
+  // new changes for record number only for ebay	
+
+  if($orderDetail['store_type'] == 'ebay' && strlen($orderDetail['record_number']) > 2){
+      $orderDetail['order_id'] = $orderDetail['record_number'];
+  }
+4. Save the file

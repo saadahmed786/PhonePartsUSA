@@ -1,0 +1,100 @@
+VOID SO Response 210548 - FishbowlAPI Object
+(
+    [result] => Array
+        (
+            [Ticket] => Array
+                (
+                    [UserID] => 1
+                    [Key] => P8hcoZPWt/Aw5aTi9u4rTw==
+                )
+
+            [FbiMsgsRs] => Array
+                (
+                    [@attributes] => Array
+                        (
+                            [statusCode] => 1000
+                        )
+
+                    [0] => SimpleXMLElement Object
+                        (
+                            [@attributes] => Array
+                                (
+                                    [statusCode] => 4100
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [statusCode] => 1000
+    [statusMsg] => Success
+    [loggedIn] => 1
+    [userRights] => Array
+        (
+            [0] => Accounting
+            [1] => Calendar
+            [2] => Carrier
+            [3] => Class
+            [4] => Company
+            [5] => Consignment
+            [6] => Credit Card Receipt
+            [7] => Currency
+            [8] => Custom Field
+            [9] => Customer
+            [10] => Customer Purchase History
+            [11] => Dashboard
+            [12] => Discount
+            [13] => Inventory
+            [14] => Location
+            [15] => Location Group
+            [16] => Memo
+            [17] => Monitor
+            [18] => POS
+            [19] => Part
+            [20] => Payment Receipt
+            [21] => Payment Terms
+            [22] => Payment Viewer
+            [23] => Picking
+            [24] => Pricing Rule
+            [25] => Product
+            [26] => Property
+            [27] => Purchase Order
+            [28] => Quick Ship - Picking
+            [29] => RMA
+            [30] => Receiving
+            [31] => Reports
+            [32] => Sales Order
+            [33] => Sales Order Invoice
+            [34] => Schedule
+            [35] => Shipping
+            [36] => Tax Rate
+            [37] => Transfer Order
+            [38] => UOM
+            [39] => User
+            [40] => User Group
+            [41] => Vendor
+        )
+
+    [xmlRequest:FishbowlAPI:private] => <FbiXml>
+<Ticket>
+<UserID>1</UserID>
+<Key>P8hcoZPWt/Aw5aTi9u4rTw==</Key>
+</Ticket>
+<FbiMsgsRq>
+<VoidSORq><SONumber></SONumber></VoidSORq></FbiMsgsRq>
+</FbiXml>
+
+    [xmlResponse:FishbowlAPI:private] => <FbiXml><Ticket><UserID>1</UserID><Key>P8hcoZPWt/Aw5aTi9u4rTw==</Key></Ticket><FbiMsgsRs statusCode="1000"><VoidSORs statusCode="4100"/></FbiMsgsRs></FbiXml>
+    [id:FishbowlAPI:private] => Resource id #5
+    [key:FishbowlAPI:private] => P8hcoZPWt/Aw5aTi9u4rTw==
+    [fbErrorCodes:FishbowlAPI:private] => FBErrorCodes Object
+        (
+        )
+
+    [host] => localhost
+    [port] => 28192
+    [user] => admin
+    [pass] => ICy5YqxZB1uWSwcVLSNLcA==
+)

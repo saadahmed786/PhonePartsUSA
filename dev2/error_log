@@ -1,0 +1,93 @@
+[18-Apr-2018 04:56:33 America/Chicago] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Error: Unknown column 'f.is_blowout' in 'where clause'<br />Error No: 1054<br />SELECT  d.* FROM `inv_device_model` a, `inv_device_device` b, `inv_device_manufacturer` c, `inv_device_class` d, `inv_device_attrib` e,`inv_device_product` f  WHERE a.`device_device_id` = b.`device_device_id` AND b.`device_manufacturer_id` = c.`device_manufacturer_id` AND c.`class_id` = d.`device_class_id` AND a.`device_model_id` = e.`device_model_id` AND f.`device_product_id`=c.`device_product_id` AND f.`is_blowout`=1  AND a.`model_id` in ('1129')  AND c.`manufacturer_id` IN ('18') AND d.`class_id` = '83' GROUP BY d.`device_product_id` ' in /home/phonerep/public_html/dev2/system/database/mysqli.php:40
+Stack trace:
+#0 /home/phonerep/public_html/dev2/system/library/db.php(20): DBMySQLi->query('SELECT  d.* FRO...')
+#1 /home/phonerep/public_html/dev2/catalog/model/catalog/catalog.php(459): DB->query('SELECT  d.* FRO...')
+#2 /home/phonerep/public_html/dev2/catalog/controller/catalog/bl in /home/phonerep/public_html/dev2/system/database/mysqli.php on line 40
+[18-Apr-2018 03:04:56 America/Los_Angeles] PHP Fatal error:  require(): Failed opening required 'vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/phonerep/public_html/dev2/catalog/controller/account/login.php on line 3
+[18-Apr-2018 03:56:07 America/Los_Angeles] PHP Fatal error:  Class 'Controllerapirepairdesk' not found in /home/phonerep/public_html/dev2/system/engine/front.php on line 44
+[18-Apr-2018 04:40:58 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ')' in /home/phonerep/public_html/dev2/catalog/controller/api/repairdesk.php on line 61
+[18-Apr-2018 04:41:27 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/phonerep/public_html/dev2/catalog/controller/api/repairdesk.php on line 72
+[18-Apr-2018 04:42:47 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/phonerep/public_html/dev2/catalog/controller/api/repairdesk.php on line 72
+[18-Apr-2018 04:43:04 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/phonerep/public_html/dev2/catalog/controller/api/repairdesk.php on line 72
+[18-Apr-2018 04:43:06 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/phonerep/public_html/dev2/catalog/controller/api/repairdesk.php on line 72
+[18-Apr-2018 04:45:25 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/phonerep/public_html/dev2/catalog/controller/api/repairdesk.php on line 74
+[18-Apr-2018 04:46:30 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/phonerep/public_html/dev2/catalog/controller/api/repairdesk.php on line 74
+[18-Apr-2018 05:43:17 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ')', expecting variable (T_VARIABLE) in /home/phonerep/public_html/dev2/catalog/controller/api/repairdesk.php on line 91
+[18-Apr-2018 05:43:29 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ')' in /home/phonerep/public_html/dev2/catalog/controller/api/repairdesk.php on line 134
+[26-Apr-2018 18:32:41 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') GROUP BY d.`device_product_id`' at line 1<br />Error No: 1064<br />SELECT  d.* FROM `inv_device_model` a, `inv_device_device` b, `inv_device_manufacturer` c, `inv_device_class` d, `inv_device_attrib` e WHERE a.`device_device_id` = b.`device_device_id` AND b.`device_manufacturer_id` = c.`device_manufacturer_id` AND c.`class_id` = d.`device_class_id` AND a.`device_model_id` = e.`device_model_id`  AND d.`class_id` IN () GROUP BY d.`device_product_id` ' in /home/phonerep/public_html/dev2/system/database/mysqli.php:40
+Stack trace:
+#0 /home/phonerep/public_html/dev2/system/library/db.php(20): DBMySQLi->query('SELECT  d.* FRO...')
+#1 /home/phonerep/public_html/dev2/catalog/model/catalog/catalog.php(467): DB->query('SELECT  d.* FRO...')
+#2 /home/phonerep/public_html/dev2/catalog/controller/catalog/repair_tools.php(99): ModelCa in /home/phonerep/public_html/dev2/system/database/mysqli.php on line 40
+[26-Apr-2018 20:07:35 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') GROUP BY d.`device_product_id`' at line 1<br />Error No: 1064<br />SELECT  d.* FROM `inv_device_model` a, `inv_device_device` b, `inv_device_manufacturer` c, `inv_device_class` d, `inv_device_attrib` e WHERE a.`device_device_id` = b.`device_device_id` AND b.`device_manufacturer_id` = c.`device_manufacturer_id` AND c.`class_id` = d.`device_class_id` AND a.`device_model_id` = e.`device_model_id`  AND d.`class_id` IN () GROUP BY d.`device_product_id` ' in /home/phonerep/public_html/dev2/system/database/mysqli.php:40
+Stack trace:
+#0 /home/phonerep/public_html/dev2/system/library/db.php(20): DBMySQLi->query('SELECT  d.* FRO...')
+#1 /home/phonerep/public_html/dev2/catalog/model/catalog/catalog.php(467): DB->query('SELECT  d.* FRO...')
+#2 /home/phonerep/public_html/dev2/catalog/controller/catalog/repair_tools.php(99): ModelCa in /home/phonerep/public_html/dev2/system/database/mysqli.php on line 40
+[28-Apr-2018 08:47:16 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') GROUP BY d.`device_product_id`' at line 1<br />Error No: 1064<br />SELECT  d.* FROM `inv_device_model` a, `inv_device_device` b, `inv_device_manufacturer` c, `inv_device_class` d, `inv_device_attrib` e WHERE a.`device_device_id` = b.`device_device_id` AND b.`device_manufacturer_id` = c.`device_manufacturer_id` AND c.`class_id` = d.`device_class_id` AND a.`device_model_id` = e.`device_model_id`  AND d.`class_id` IN () GROUP BY d.`device_product_id` ' in /home/phonerep/public_html/dev2/system/database/mysqli.php:40
+Stack trace:
+#0 /home/phonerep/public_html/dev2/system/library/db.php(20): DBMySQLi->query('SELECT  d.* FRO...')
+#1 /home/phonerep/public_html/dev2/catalog/model/catalog/catalog.php(467): DB->query('SELECT  d.* FRO...')
+#2 /home/phonerep/public_html/dev2/catalog/controller/catalog/repair_tools.php(99): ModelCa in /home/phonerep/public_html/dev2/system/database/mysqli.php on line 40
+[28-Apr-2018 08:50:10 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') GROUP BY d.`device_product_id`' at line 1<br />Error No: 1064<br />SELECT  d.* FROM `inv_device_model` a, `inv_device_device` b, `inv_device_manufacturer` c, `inv_device_class` d, `inv_device_attrib` e WHERE a.`device_device_id` = b.`device_device_id` AND b.`device_manufacturer_id` = c.`device_manufacturer_id` AND c.`class_id` = d.`device_class_id` AND a.`device_model_id` = e.`device_model_id`  AND d.`class_id` IN () GROUP BY d.`device_product_id` ' in /home/phonerep/public_html/dev2/system/database/mysqli.php:40
+Stack trace:
+#0 /home/phonerep/public_html/dev2/system/library/db.php(20): DBMySQLi->query('SELECT  d.* FRO...')
+#1 /home/phonerep/public_html/dev2/catalog/model/catalog/catalog.php(467): DB->query('SELECT  d.* FRO...')
+#2 /home/phonerep/public_html/dev2/catalog/controller/catalog/repair_tools.php(99): ModelCa in /home/phonerep/public_html/dev2/system/database/mysqli.php on line 40
+[28-Apr-2018 12:31:00 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') GROUP BY d.`device_product_id`' at line 1<br />Error No: 1064<br />SELECT  d.* FROM `inv_device_model` a, `inv_device_device` b, `inv_device_manufacturer` c, `inv_device_class` d, `inv_device_attrib` e WHERE a.`device_device_id` = b.`device_device_id` AND b.`device_manufacturer_id` = c.`device_manufacturer_id` AND c.`class_id` = d.`device_class_id` AND a.`device_model_id` = e.`device_model_id`  AND d.`class_id` IN () GROUP BY d.`device_product_id` ' in /home/phonerep/public_html/dev2/system/database/mysqli.php:40
+Stack trace:
+#0 /home/phonerep/public_html/dev2/system/library/db.php(20): DBMySQLi->query('SELECT  d.* FRO...')
+#1 /home/phonerep/public_html/dev2/catalog/model/catalog/catalog.php(467): DB->query('SELECT  d.* FRO...')
+#2 /home/phonerep/public_html/dev2/catalog/controller/catalog/repair_tools.php(99): ModelCa in /home/phonerep/public_html/dev2/system/database/mysqli.php on line 40
+[01-May-2018 13:42:16 America/Chicago] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/phonerep/public_html/dev2/vqmod/vqcache/vq2-system_startup.php on line 123
+[01-May-2018 13:42:16 America/Chicago] PHP Notice:  Error: Could not connect to database phonerep_opencart in /home/phonerep/public_html/dev2/vqmod/vqcache/vq2-system_startup.php on line 125
+[01-May-2018 13:42:16 America/Chicago] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/phonerep/public_html/dev2/vqmod/vqcache/vq2-system_startup.php on line 128
+[01-May-2018 13:42:16 America/Chicago] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/phonerep/public_html/dev2/system/database/mysqli.php on line 6
+[01-May-2018 13:42:16 America/Chicago] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Error: Could not make a database link (2002) No such file or directory' in /home/phonerep/public_html/dev2/system/database/mysqli.php:9
+Stack trace:
+#0 /home/phonerep/public_html/dev2/system/library/db.php(13): DBMySQLi->__construct('localhost', 'phonerep_oc', '0jpIoLpoSSCG', 'phonerep_openca...')
+#1 /home/phonerep/public_html/dev2/index.php(77): DB->__construct('mysqli', 'localhost', 'phonerep_oc', '0jpIoLpoSSCG', 'phonerep_openca...')
+#2 {main}
+  thrown in /home/phonerep/public_html/dev2/system/database/mysqli.php on line 9
+[02-May-2018 13:26:31 America/Chicago] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/phonerep/public_html/dev2/vqmod/vqcache/vq2-system_startup.php on line 123
+[02-May-2018 13:26:31 America/Chicago] PHP Notice:  Error: Could not connect to database phonerep_opencart in /home/phonerep/public_html/dev2/vqmod/vqcache/vq2-system_startup.php on line 125
+[02-May-2018 13:26:31 America/Chicago] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/phonerep/public_html/dev2/vqmod/vqcache/vq2-system_startup.php on line 128
+[02-May-2018 13:26:31 America/Chicago] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/phonerep/public_html/dev2/system/database/mysqli.php on line 6
+[02-May-2018 13:26:31 America/Chicago] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Error: Could not make a database link (2002) No such file or directory' in /home/phonerep/public_html/dev2/system/database/mysqli.php:9
+Stack trace:
+#0 /home/phonerep/public_html/dev2/system/library/db.php(13): DBMySQLi->__construct('localhost', 'phonerep_oc', '0jpIoLpoSSCG', 'phonerep_openca...')
+#1 /home/phonerep/public_html/dev2/index.php(77): DB->__construct('mysqli', 'localhost', 'phonerep_oc', '0jpIoLpoSSCG', 'phonerep_openca...')
+#2 {main}
+  thrown in /home/phonerep/public_html/dev2/system/database/mysqli.php on line 9
+[11-May-2018 00:40:11 America/Chicago] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'phonerep_oc'@'localhost' (using password: YES) in /home/phonerep/public_html/dev2/vqmod/vqcache/vq2-system_startup.php on line 123
+[11-May-2018 00:40:11 America/Chicago] PHP Notice:  Error: Could not connect to database phonerep_opencart in /home/phonerep/public_html/dev2/vqmod/vqcache/vq2-system_startup.php on line 125
+[11-May-2018 00:40:11 America/Chicago] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/phonerep/public_html/dev2/vqmod/vqcache/vq2-system_startup.php on line 128
+[11-May-2018 00:40:11 America/Chicago] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'phonerep_oc'@'localhost' (using password: YES) in /home/phonerep/public_html/dev2/system/database/mysqli.php on line 6
+[11-May-2018 00:40:11 America/Chicago] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Error: Could not make a database link (1045) Access denied for user 'phonerep_oc'@'localhost' (using password: YES)' in /home/phonerep/public_html/dev2/system/database/mysqli.php:9
+Stack trace:
+#0 /home/phonerep/public_html/dev2/system/library/db.php(13): DBMySQLi->__construct('localhost', 'phonerep_oc', '0jpIoLpoSSCG', 'phonerep_openca...')
+#1 /home/phonerep/public_html/dev2/index.php(78): DB->__construct('mysqli', 'localhost', 'phonerep_oc', '0jpIoLpoSSCG', 'phonerep_openca...')
+#2 {main}
+  thrown in /home/phonerep/public_html/dev2/system/database/mysqli.php on line 9
+[27-Jun-2018 15:59:12 America/Chicago] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Error: Table 'phonerep_opencart_dev32.oc_wx_cron' doesn't exist<br />Error No: 1146<br />SELECT * FROM oc_wx_cron WHERE run_time <= 1530136752 AND paused='0'' in /home/phonerep/public_html/dev2/system/database/mysqli.php:40
+Stack trace:
+#0 /home/phonerep/public_html/dev2/system/library/db.php(20): DBMySQLi->query('SELECT * FROM o...')
+#1 /home/phonerep/public_html/dev2/catalog/controller/wx/cron.php(16): DB->query('SELECT * FROM o...')
+#2 [internal function]: ControllerWxCron->index()
+#3 /home/phonerep/public_html/dev2/system/engine/front.php(47): call_user_func_array(Array, Array)
+#4 /home/phonerep/public_html/dev2/system/engine/front.php(29): Front->execute(Object(Action))
+#5 /home/phonerep/public_html/dev2/index.php(297): Front->dispatch(Object(Action), Object(Action))
+#6 /home/phonerep/public_html/dev2/cron.php(12): require_once('/home/phonerep/...')
+#7 {main}
+  thrown in /home/phonerep/public_html/dev2/system/database/mysqli.php on line 40
+[28-Jun-2018 11:49:27 America/Chicago] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Error: Table 'phonerep_opencart_dev32.oc_wx_cron' doesn't exist<br />Error No: 1146<br />SELECT * FROM oc_wx_cron WHERE run_time <= 1530208167 AND paused='0'' in /home/phonerep/public_html/dev2/system/database/mysqli.php:40
+Stack trace:
+#0 /home/phonerep/public_html/dev2/system/library/db.php(20): DBMySQLi->query('SELECT * FROM o...')
+#1 /home/phonerep/public_html/dev2/catalog/controller/wx/cron.php(16): DB->query('SELECT * FROM o...')
+#2 [internal function]: ControllerWxCron->index()
+#3 /home/phonerep/public_html/dev2/system/engine/front.php(47): call_user_func_array(Array, Array)
+#4 /home/phonerep/public_html/dev2/system/engine/front.php(29): Front->execute(Object(Action))
+#5 /home/phonerep/public_html/dev2/index.php(297): Front->dispatch(Object(Action), Object(Action))
+#6 /home/phonerep/public_html/dev2/cron.php(12): require_once('/home/phonerep/...')
+#7 {main}
+  thrown in /home/phonerep/public_html/dev2/system/database/mysqli.php on line 40

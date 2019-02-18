@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Header>
+  <ebl:RequesterCredentials soapenv:mustUnderstand="0" xmlns:ns="urn:ebay:apis:eBLBaseComponents" xmlns:ebl="urn:ebay:apis:eBLBaseComponents">
+   <ebl:NotificationSignature xmlns:ebl="urn:ebay:apis:eBLBaseComponents">l1Sj+VLLyGDNqgKyhevLrw==</ebl:NotificationSignature>
+  </ebl:RequesterCredentials>
+ </soapenv:Header>
+ <soapenv:Body>
+  <GetItemTransactionsResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Timestamp>2013-03-15T07:42:41.184Z</Timestamp>
+   <Ack>Success</Ack>
+   <CorrelationID>567612150</CorrelationID>
+   <Version>813</Version>
+   <Build>E813_CORE_BUNDLED_15812957_R1</Build>
+   <NotificationEventName>FixedPriceTransaction</NotificationEventName>
+   <RecipientUserID>testuser_vipin</RecipientUserID>
+   <EIASToken>nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wFk4CpAZOFoQ2dj6x9nY+seQ**</EIASToken>
+   <PaginationResult>
+    <TotalNumberOfPages>1</TotalNumberOfPages>
+    <TotalNumberOfEntries>1</TotalNumberOfEntries>
+   </PaginationResult>
+   <HasMoreTransactions>false</HasMoreTransactions>
+   <TransactionsPerPage>100</TransactionsPerPage>
+   <PageNumber>1</PageNumber>
+   <ReturnedTransactionCountActual>1</ReturnedTransactionCountActual>
+   <Item>
+    <AutoPay>false</AutoPay>
+    <BuyItNowPrice currencyID="USD">0.0</BuyItNowPrice>
+    <Currency>EUR</Currency>
+    <ItemID>110084666137</ItemID>
+    <ListingDetails>
+     <StartTime>2011-02-25T10:01:51.000Z</StartTime>
+     <EndTime>2013-03-16T10:01:51.000Z</EndTime>
+     <ViewItemURL>http://cgi.sandbox.ebay.es/ws/eBayISAPI.dll?ViewItem&amp;Item=110084666137</ViewItemURL>
+     <ExpressListing>false</ExpressListing>
+     <ViewItemURLForNaturalSearch>http://cgi.sandbox.ebay.es/ws/eBayISAPI.dll?ViewItem&amp;item=110084666137&amp;category=0</ViewItemURLForNaturalSearch>
+    </ListingDetails>
+    <ListingType>FixedPriceItem</ListingType>
+    <PaymentMethods>PayPal</PaymentMethods>
+    <PrimaryCategory>
+     <CategoryID>68062</CategoryID>
+    </PrimaryCategory>
+    <PrivateListing>false</PrivateListing>
+    <Quantity>10</Quantity>
+    <SecondaryCategory>
+     <CategoryID>0</CategoryID>
+    </SecondaryCategory>
+    <Seller>
+     <AboutMePage>false</AboutMePage>
+     <EIASToken>nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wFk4CpAZOFoQ2dj6x9nY+seQ==</EIASToken>
+     <Email>vipin.garg12@gmail.com</Email>
+     <FeedbackScore>1</FeedbackScore>
+     <PositiveFeedbackPercent>100.0</PositiveFeedbackPercent>
+     <FeedbackPrivate>false</FeedbackPrivate>
+     <FeedbackRatingStar>None</FeedbackRatingStar>
+     <IDVerified>false</IDVerified>
+     <eBayGoodStanding>true</eBayGoodStanding>
+     <NewUser>false</NewUser>
+     <RegistrationDate>1995-01-01T00:00:00.000Z</RegistrationDate>
+     <Site>US</Site>
+     <Status>Confirmed</Status>
+     <UserID>testuser_vipin</UserID>
+     <UserIDChanged>false</UserIDChanged>
+     <UserIDLastChanged>2008-02-06T06:23:49.000Z</UserIDLastChanged>
+     <VATStatus>NoVATTax</VATStatus>
+     <SellerInfo>
+      <AllowPaymentEdit>true</AllowPaymentEdit>
+      <CheckoutEnabled>true</CheckoutEnabled>
+      <CIPBankAccountStored>false</CIPBankAccountStored>
+      <GoodStanding>true</GoodStanding>
+      <LiveAuctionAuthorized>false</LiveAuctionAuthorized>
+      <MerchandizingPref>OptIn</MerchandizingPref>
+      <QualifiesForB2BVAT>false</QualifiesForB2BVAT>
+      <SellerLevel>None</SellerLevel>
+      <StoreOwner>true</StoreOwner>
+      <StoreURL>http://www.stores.sandbox.ebay.com/id=132893701</StoreURL>
+      <ExpressEligible>false</ExpressEligible>
+      <ExpressWallet>false</ExpressWallet>
+      <SafePaymentExempt>true</SafePaymentExempt>
+     </SellerInfo>
+    </Seller>
+    <SellingStatus>
+     <ConvertedCurrentPrice currencyID="USD">9.64</ConvertedCurrentPrice>
+     <CurrentPrice currencyID="EUR">7.41</CurrentPrice>
+     <QuantitySold>1</QuantitySold>
+     <ListingStatus>Active</ListingStatus>
+    </SellingStatus>
+    <Site>Spain</Site>
+    <StartPrice currencyID="EUR">7.41</StartPrice>
+    <Title>Harry Potter 1 y el cáliz de fuego</Title>
+    <IntegratedMerchantCreditCardEnabled>false</IntegratedMerchantCreditCardEnabled>
+   </Item>
+   <TransactionArray>
+    <Transaction>
+     <AmountPaid currencyID="EUR">0.0</AmountPaid>
+     <AdjustmentAmount currencyID="EUR">0.0</AdjustmentAmount>
+     <ConvertedAdjustmentAmount currencyID="USD">0.0</ConvertedAdjustmentAmount>
+     <Buyer>
+      <AboutMePage>false</AboutMePage>
+      <EIASToken>nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wFk4CoAZCEoQ6dj6x9nY+seQ==</EIASToken>
+      <Email>friend.garg@gmail.com</Email>
+      <FeedbackScore>500</FeedbackScore>
+      <PositiveFeedbackPercent>0.0</PositiveFeedbackPercent>
+      <FeedbackPrivate>false</FeedbackPrivate>
+      <FeedbackRatingStar>Purple</FeedbackRatingStar>
+      <IDVerified>true</IDVerified>
+      <eBayGoodStanding>true</eBayGoodStanding>
+      <NewUser>false</NewUser>
+      <RegistrationDate>1995-01-01T00:00:00.000Z</RegistrationDate>
+      <Site>US</Site>
+      <Status>Confirmed</Status>
+      <UserID>testuser_friend</UserID>
+      <UserIDChanged>false</UserIDChanged>
+      <UserIDLastChanged>2011-01-17T12:29:09.000Z</UserIDLastChanged>
+      <VATStatus>NoVATTax</VATStatus>
+      <BuyerInfo>
+       <ShippingAddress>
+        <Name>Test User</Name>
+        <Street1>address</Street1>
+        <CityName>city</CityName>
+        <StateOrProvince>WA</StateOrProvince>
+        <Country>US</Country>
+        <CountryName>United States</CountryName>
+        <Phone>(180) 011-1111 ext.: 1</Phone>
+        <PostalCode>98102</PostalCode>
+        <AddressID>5530879</AddressID>
+        <AddressOwner>eBay</AddressOwner>
+       </ShippingAddress>
+      </BuyerInfo>
+      <UserAnonymized>false</UserAnonymized>
+     </Buyer>
+     <ShippingDetails>
+      <ChangePaymentInstructions>true</ChangePaymentInstructions>
+      <InsuranceFee currencyID="USD">0.0</InsuranceFee>
+      <InsuranceOption>NotOffered</InsuranceOption>
+      <InsuranceWanted>false</InsuranceWanted>
+      <PaymentEdited>false</PaymentEdited>
+      <SalesTax>
+       <SalesTaxPercent>0.0</SalesTaxPercent>
+       <ShippingIncludedInTax>false</ShippingIncludedInTax>
+       <SalesTaxAmount currencyID="EUR">0.0</SalesTaxAmount>
+      </SalesTax>
+      <ShippingServiceOptions>
+       <ShippingService>ES_PaqueteAzulDeMas2kg</ShippingService>
+       <ShippingServiceCost currencyID="EUR">2.96</ShippingServiceCost>
+       <ShippingServiceAdditionalCost currencyID="EUR">0.74</ShippingServiceAdditionalCost>
+       <ShippingServicePriority>1</ShippingServicePriority>
+       <ExpeditedService>false</ExpeditedService>
+      </ShippingServiceOptions>
+      <InternationalShippingServiceOption>
+       <ShippingService>ES_StandardInternational</ShippingService>
+       <ShippingServiceCost currencyID="EUR">2.96</ShippingServiceCost>
+       <ShippingServiceAdditionalCost currencyID="EUR">0.74</ShippingServiceAdditionalCost>
+       <ShippingServicePriority>1</ShippingServicePriority>
+       <ShipToLocation>Worldwide</ShipToLocation>
+      </InternationalShippingServiceOption>
+      <ShippingType>Flat</ShippingType>
+      <SellingManagerSalesRecordNumber>291</SellingManagerSalesRecordNumber>
+      <ThirdPartyCheckout>false</ThirdPartyCheckout>
+      <TaxTable/>
+     </ShippingDetails>
+     <ConvertedAmountPaid currencyID="USD">13.5</ConvertedAmountPaid>
+     <ConvertedTransactionPrice currencyID="USD">9.64</ConvertedTransactionPrice>
+     <CreatedDate>2013-03-15T07:42:33.000Z</CreatedDate>
+     <DepositType>None</DepositType>
+     <QuantityPurchased>1</QuantityPurchased>
+     <Status>
+      <eBayPaymentStatus>NoPaymentFailure</eBayPaymentStatus>
+      <CheckoutStatus>CheckoutIncomplete</CheckoutStatus>
+      <LastTimeModified>2013-03-15T07:42:34.000Z</LastTimeModified>
+      <PaymentMethodUsed>None</PaymentMethodUsed>
+      <CompleteStatus>Incomplete</CompleteStatus>
+      <BuyerSelectedShipping>false</BuyerSelectedShipping>
+      <PaymentHoldStatus>CustomCode</PaymentHoldStatus>
+      <IntegratedMerchantCreditCardEnabled>false</IntegratedMerchantCreditCardEnabled>
+     </Status>
+     <TransactionID>27046462001</TransactionID>
+     <TransactionPrice currencyID="EUR">7.41</TransactionPrice>
+     <BestOfferSale>false</BestOfferSale>
+     <ShippingServiceSelected>
+      <ShippingInsuranceCost currencyID="USD">0.0</ShippingInsuranceCost>
+      <ShippingService>ES_StandardInternational</ShippingService>
+      <ShippingServiceCost currencyID="EUR">2.96</ShippingServiceCost>
+     </ShippingServiceSelected>
+     <FinalValueFee currencyID="USD">0.67</FinalValueFee>
+     <TransactionSiteID>US</TransactionSiteID>
+     <Platform>eBay</Platform>
+     <PayPalEmailAddress>magicalbookseller@yahoo.com</PayPalEmailAddress>
+     <BuyerGuaranteePrice currencyID="USD">20000.0</BuyerGuaranteePrice>
+     <IntangibleItem>false</IntangibleItem>
+    </Transaction>
+   </TransactionArray>
+  </GetItemTransactionsResponse>
+ </soapenv:Body>
+</soapenv:Envelope><?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Header>
+  <ebl:RequesterCredentials soapenv:mustUnderstand="0" xmlns:ns="urn:ebay:apis:eBLBaseComponents" xmlns:ebl="urn:ebay:apis:eBLBaseComponents">
+   <ebl:NotificationSignature xmlns:ebl="urn:ebay:apis:eBLBaseComponents">k0Xh+mrVhZ75dVmFZCH96g==</ebl:NotificationSignature>
+  </ebl:RequesterCredentials>
+ </soapenv:Header>
+ <soapenv:Body>
+  <GetItemTransactionsResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Timestamp>2013-03-15T07:53:08.799Z</Timestamp>
+   <Ack>Success</Ack>
+   <CorrelationID>567612270</CorrelationID>
+   <Version>813</Version>
+   <Build>E813_CORE_BUNDLED_15812957_R1</Build>
+   <NotificationEventName>AuctionCheckoutComplete</NotificationEventName>
+   <RecipientUserID>testuser_vipin</RecipientUserID>
+   <EIASToken>nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wFk4CpAZOFoQ2dj6x9nY+seQ**</EIASToken>
+   <PaginationResult>
+    <TotalNumberOfPages>1</TotalNumberOfPages>
+    <TotalNumberOfEntries>1</TotalNumberOfEntries>
+   </PaginationResult>
+   <HasMoreTransactions>false</HasMoreTransactions>
+   <TransactionsPerPage>100</TransactionsPerPage>
+   <PageNumber>1</PageNumber>
+   <ReturnedTransactionCountActual>1</ReturnedTransactionCountActual>
+   <Item>
+    <AutoPay>false</AutoPay>
+    <BuyItNowPrice currencyID="USD">0.0</BuyItNowPrice>
+    <Currency>EUR</Currency>
+    <ItemID>110084666137</ItemID>
+    <ListingDetails>
+     <StartTime>2011-02-25T10:01:51.000Z</StartTime>
+     <EndTime>2013-03-16T10:01:51.000Z</EndTime>
+     <ViewItemURL>http://cgi.sandbox.ebay.es/ws/eBayISAPI.dll?ViewItem&amp;Item=110084666137</ViewItemURL>
+     <ExpressListing>false</ExpressListing>
+     <ViewItemURLForNaturalSearch>http://cgi.sandbox.ebay.es/ws/eBayISAPI.dll?ViewItem&amp;item=110084666137&amp;category=0</ViewItemURLForNaturalSearch>
+    </ListingDetails>
+    <ListingType>FixedPriceItem</ListingType>
+    <PaymentMethods>PayPal</PaymentMethods>
+    <PrimaryCategory>
+     <CategoryID>68062</CategoryID>
+    </PrimaryCategory>
+    <PrivateListing>false</PrivateListing>
+    <Quantity>10</Quantity>
+    <SecondaryCategory>
+     <CategoryID>0</CategoryID>
+    </SecondaryCategory>
+    <Seller>
+     <AboutMePage>false</AboutMePage>
+     <EIASToken>nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wFk4CpAZOFoQ2dj6x9nY+seQ==</EIASToken>
+     <Email>vipin.garg12@gmail.com</Email>
+     <FeedbackScore>1</FeedbackScore>
+     <PositiveFeedbackPercent>100.0</PositiveFeedbackPercent>
+     <FeedbackPrivate>false</FeedbackPrivate>
+     <FeedbackRatingStar>None</FeedbackRatingStar>
+     <IDVerified>false</IDVerified>
+     <eBayGoodStanding>true</eBayGoodStanding>
+     <NewUser>false</NewUser>
+     <RegistrationDate>1995-01-01T00:00:00.000Z</RegistrationDate>
+     <Site>US</Site>
+     <Status>Confirmed</Status>
+     <UserID>testuser_vipin</UserID>
+     <UserIDChanged>false</UserIDChanged>
+     <UserIDLastChanged>2008-02-06T06:23:49.000Z</UserIDLastChanged>
+     <VATStatus>NoVATTax</VATStatus>
+     <SellerInfo>
+      <AllowPaymentEdit>true</AllowPaymentEdit>
+      <CheckoutEnabled>true</CheckoutEnabled>
+      <CIPBankAccountStored>false</CIPBankAccountStored>
+      <GoodStanding>true</GoodStanding>
+      <LiveAuctionAuthorized>false</LiveAuctionAuthorized>
+      <MerchandizingPref>OptIn</MerchandizingPref>
+      <QualifiesForB2BVAT>false</QualifiesForB2BVAT>
+      <SellerLevel>None</SellerLevel>
+      <StoreOwner>true</StoreOwner>
+      <StoreURL>http://www.stores.sandbox.ebay.com/id=132893701</StoreURL>
+      <ExpressEligible>false</ExpressEligible>
+      <ExpressWallet>false</ExpressWallet>
+      <SafePaymentExempt>true</SafePaymentExempt>
+     </SellerInfo>
+    </Seller>
+    <SellingStatus>
+     <ConvertedCurrentPrice currencyID="USD">9.64</ConvertedCurrentPrice>
+     <CurrentPrice currencyID="EUR">7.41</CurrentPrice>
+     <QuantitySold>1</QuantitySold>
+     <ListingStatus>Active</ListingStatus>
+    </SellingStatus>
+    <Site>Spain</Site>
+    <StartPrice currencyID="EUR">7.41</StartPrice>
+    <Title>Harry Potter 1 y el cáliz de fuego</Title>
+    <IntegratedMerchantCreditCardEnabled>false</IntegratedMerchantCreditCardEnabled>
+   </Item>
+   <TransactionArray>
+    <Transaction>
+     <AmountPaid currencyID="EUR">10.37</AmountPaid>
+     <AdjustmentAmount currencyID="EUR">0.0</AdjustmentAmount>
+     <ConvertedAdjustmentAmount currencyID="USD">0.0</ConvertedAdjustmentAmount>
+     <Buyer>
+      <AboutMePage>false</AboutMePage>
+      <EIASToken>nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wFk4CoAZCEoQ6dj6x9nY+seQ==</EIASToken>
+      <Email>friend.garg@gmail.com</Email>
+      <FeedbackScore>500</FeedbackScore>
+      <PositiveFeedbackPercent>0.0</PositiveFeedbackPercent>
+      <FeedbackPrivate>false</FeedbackPrivate>
+      <FeedbackRatingStar>Purple</FeedbackRatingStar>
+      <IDVerified>true</IDVerified>
+      <eBayGoodStanding>true</eBayGoodStanding>
+      <NewUser>false</NewUser>
+      <RegistrationDate>1995-01-01T00:00:00.000Z</RegistrationDate>
+      <Site>US</Site>
+      <Status>Confirmed</Status>
+      <UserID>testuser_friend</UserID>
+      <UserIDChanged>false</UserIDChanged>
+      <UserIDLastChanged>2011-01-17T12:29:09.000Z</UserIDLastChanged>
+      <VATStatus>NoVATTax</VATStatus>
+      <BuyerInfo>
+       <ShippingAddress>
+        <Name>Test User</Name>
+        <Street1>address</Street1>
+        <CityName>city</CityName>
+        <StateOrProvince>WA</StateOrProvince>
+        <Country>US</Country>
+        <CountryName>United States</CountryName>
+        <Phone>(180) 011-1111 ext.: 1</Phone>
+        <PostalCode>98102</PostalCode>
+        <AddressID>5530879</AddressID>
+        <AddressOwner>eBay</AddressOwner>
+       </ShippingAddress>
+      </BuyerInfo>
+      <UserAnonymized>false</UserAnonymized>
+     </Buyer>
+     <ShippingDetails>
+      <ChangePaymentInstructions>true</ChangePaymentInstructions>
+      <InsuranceFee currencyID="EUR">0.0</InsuranceFee>
+      <InsuranceOption>NotOffered</InsuranceOption>
+      <InsuranceWanted>false</InsuranceWanted>
+      <PaymentEdited>true</PaymentEdited>
+      <SalesTax>
+       <SalesTaxPercent>0.0</SalesTaxPercent>
+       <ShippingIncludedInTax>false</ShippingIncludedInTax>
+       <SalesTaxAmount currencyID="EUR">0.0</SalesTaxAmount>
+      </SalesTax>
+      <ShippingServiceOptions>
+       <ShippingService>ES_PaqueteAzulDeMas2kg</ShippingService>
+       <ShippingServiceCost currencyID="EUR">2.96</ShippingServiceCost>
+       <ShippingServiceAdditionalCost currencyID="EUR">0.74</ShippingServiceAdditionalCost>
+       <ShippingServicePriority>1</ShippingServicePriority>
+       <ExpeditedService>false</ExpeditedService>
+      </ShippingServiceOptions>
+      <InternationalShippingServiceOption>
+       <ShippingService>ES_StandardInternational</ShippingService>
+       <ShippingServiceCost currencyID="EUR">2.96</ShippingServiceCost>
+       <ShippingServiceAdditionalCost currencyID="EUR">0.74</ShippingServiceAdditionalCost>
+       <ShippingServicePriority>1</ShippingServicePriority>
+       <ShipToLocation>Worldwide</ShipToLocation>
+      </InternationalShippingServiceOption>
+      <ShippingType>Flat</ShippingType>
+      <SellingManagerSalesRecordNumber>291</SellingManagerSalesRecordNumber>
+      <ThirdPartyCheckout>false</ThirdPartyCheckout>
+      <TaxTable/>
+     </ShippingDetails>
+     <ConvertedAmountPaid currencyID="USD">13.5</ConvertedAmountPaid>
+     <ConvertedTransactionPrice currencyID="USD">9.64</ConvertedTransactionPrice>
+     <CreatedDate>2013-03-15T07:42:33.000Z</CreatedDate>
+     <DepositType>None</DepositType>
+     <QuantityPurchased>1</QuantityPurchased>
+     <Status>
+      <eBayPaymentStatus>PayPalPaymentInProcess</eBayPaymentStatus>
+      <CheckoutStatus>CheckoutComplete</CheckoutStatus>
+      <LastTimeModified>2013-03-15T07:53:07.000Z</LastTimeModified>
+      <PaymentMethodUsed>PayPal</PaymentMethodUsed>
+      <CompleteStatus>Complete</CompleteStatus>
+      <BuyerSelectedShipping>true</BuyerSelectedShipping>
+      <PaymentHoldStatus>CustomCode</PaymentHoldStatus>
+      <IntegratedMerchantCreditCardEnabled>false</IntegratedMerchantCreditCardEnabled>
+     </Status>
+     <TransactionID>27046462001</TransactionID>
+     <TransactionPrice currencyID="EUR">7.41</TransactionPrice>
+     <BestOfferSale>false</BestOfferSale>
+     <ExternalTransaction>
+      <ExternalTransactionID>96C34226YH769604P</ExternalTransactionID>
+      <ExternalTransactionTime>2013-03-15T07:53:06.000Z</ExternalTransactionTime>
+      <FeeOrCreditAmount currencyID="USD">0.0</FeeOrCreditAmount>
+      <PaymentOrRefundAmount currencyID="USD">10.37</PaymentOrRefundAmount>
+     </ExternalTransaction>
+     <ShippingServiceSelected>
+      <ShippingInsuranceCost currencyID="EUR">0.0</ShippingInsuranceCost>
+      <ShippingService>ES_StandardInternational</ShippingService>
+      <ShippingServiceCost currencyID="EUR">2.96</ShippingServiceCost>
+     </ShippingServiceSelected>
+     <BuyerMessage>vipin.garg12@gmail.com</BuyerMessage>
+     <FinalValueFee currencyID="USD">0.67</FinalValueFee>
+     <TransactionSiteID>US</TransactionSiteID>
+     <Platform>eBay</Platform>
+     <PayPalEmailAddress>magicalbookseller@yahoo.com</PayPalEmailAddress>
+     <BuyerGuaranteePrice currencyID="USD">20000.0</BuyerGuaranteePrice>
+     <ActualShippingCost currencyID="EUR">2.96</ActualShippingCost>
+     <ActualHandlingCost currencyID="EUR">0.0</ActualHandlingCost>
+     <IntangibleItem>false</IntangibleItem>
+    </Transaction>
+   </TransactionArray>
+  </GetItemTransactionsResponse>
+ </soapenv:Body>
+</soapenv:Envelope>

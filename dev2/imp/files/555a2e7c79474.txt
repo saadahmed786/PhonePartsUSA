@@ -1,0 +1,74 @@
+Shipment ID	FBA2N11VDM
+Name	FBA (5/4/15 12:59 PM) - 1
+Plan ID	PLN49RX5D
+Ship To	Golden State FC LLC, 1555 N. Chrisman Rd, Tracy, CA, US, 95304-9370
+Total SKUs	65
+Total Units	29
+Pack list	1 of 1
+
+Merchant SKU	Title	ASIN	FNSKU	external-id	Condition	Who will prep?	Prep Type	Who will label?	Shipped
+BINP-1000	BinTEK Brand Samsung Galaxy Note 4 Premium Ultra-HD Scratch Resistant Clear Screen Protector (3 Pack) [Life-Time Warranty] Compatibile with SM-N910 AT&T T-Mobile Verizon Sprint US Cellular Rodgers -- Retail Packaging	B00TEADVOO	X000RTQ095	EAN : 0609459874189	New	"--"	"--"	"--"	0
+BINP-1002	BinTEK Brand HTC One M8 Premium Ultra-HD Scratch Resistant Clear Screen Protector (3 Pack) [Life-Time Warranty] Compatible with AT&T T-Mobile Verizon Sprint Rodgers Bell Telus Models -- Retail Packaging	B00TEADX92	X000RTQ00T	EAN : 0609459874196	New	"--"	"--"	"--"	0
+BINP-1004	BinTEK Brand iPhone 6 4.7 inch Premium Ultra-HD Scratch Resistant Clear Screen Protector (3 Pack) [Life-Time Warranty] Compatibile with A1549 A1586 AT&T T-Mobile Verizon Sprint US Cellular Metro PCS Cricket Rodgers Bell Telus -- Retail Packaging	B00TEADWCU	X000RTQ01D	EAN : 0609459874202	New	"--"	"--"	"--"	0
+BINP-1006	BinTEK Brand Samsung Galaxy S5 Premium Ultra-HD Scratch Resistant Clear Screen Protector (3 Pack) [Life-Time Warranty] Compatible with SM-G900 AT&T T-Mobile Verizon Sprint US Cellular Metro PCS Cricket Rodgers Bell Telus -- Retail Packaging	B00TEADY3W	X000RTQ07R	EAN : 0609459874219	New	"--"	"--"	"--"	0
+BINP-1008	BinTEKTM iPhone 6 Plus 5.5 HD Clear Screen Protector (3 Pack)	B00TEACJZ6	X000RTQ03V	EAN : 0609459874264	New	"--"	"--"	"--"	0
+BINP-1010	BinTEK Brand Samsung Galaxy Alpha Premium Ultra-HD Clear Screen Protector (3 Pack) Compatible with SM-G850 Compatible with: T-Mobile Vodafone European Canadian Models	B00TEADU68	X000RTQ04Z	EAN : 0609459874226	New	"--"	"--"	"--"	0
+BINP-1012	BinTEK Brand Samsung Galaxy Avant Premium Ultra-HD Scratch Resistant Clear Screen Protector (3 Pack) Compatible with SM-G386T T-Mobile	B00TEACA3M	X000RTQ081	EAN : 0609459874233	New	"--"	"--"	"--"	0
+BINP-1014	BinTEK Brand Samsung Galaxy S5 Active Premium Ultra-HD Scratch Resistant Clear Screen Protector (3 Pack) [Life-Time Warranty] Compatible with SM-G870 AT&T -- Retail Packaging	B00TEACKO6	X000RTQ06D	EAN : 0609459874240	New	"--"	"--"	"--"	0
+BINP-1016	BinTEKTM LG G3 Vigor HD Clear Screen Protector (3 Pack)	B00TEACH4E	X000RTQ059	EAN : 0609459874257	New	"--"	"--"	"--"	0
+BINP-1020	BinTEK Brand Samsung Galaxy Note 4 Ultra-Private Privacy 180 Degree UV Ray Fliter Anti-Spy Anti-Fingerprint Anti-Smudge Screen Protector Compatibile with SM-N910 AT&T T-Mobile Verizon Sprint US Cellular Rodgers - Retail Packaging	B00TEACDHK	X000RTQ01N	EAN : 0609459874271	New	"--"	"--"	"--"	0
+BINP-1022	BinTEK Brand HTC One M8 Ultra-Private Privacy 180 Degree UV Ray Fliter Anti-Spy Anti-Fingerprint Anti-Smudge Screen Protector Compatible with AT&T T-Mobile Verizon Sprint Rodgers Bell Telus Models - Retail Packaging	B00TEACJ92	X000RTQ06N	EAN : 0609459874295	New	"--"	"--"	"--"	0
+BINP-1024	BinTEK Brand iPhone 6 4.7 Ultra-Private Privacy 180 Degree UV Ray Fliter Anti-Spy Anti-Fingerprint Anti-Smudge Screen Protector Compatibile with A1549 A1586 AT&T T-Mobile Verizon Sprint US Cellular Metro PCS Cricket Rodgers Bell Telus - Retail Packaging	B00TEADUXG	X000RTQ08B	EAN : 0609459874301	New	"--"	"--"	"--"	0
+BINP-1026	BinTEK Samsung Galaxy S5 Ultra Privacy Screen Protector	B00TEADRKM	X000RTQ08L	EAN : 0609459874318	New	"--"	"--"	"--"	0
+BINP-1028	BinTEK Brand iPhone 6 Plus 5.5 inch Ultra-Private Privacy 180 Degree UV Ray Fliter Anti-Spy Anti-Fingerprint Anti-Smudge Screen Protector Compatibile with A1522 A1524 AT&T T-Mobile Verizon Sprint US Cellular Metro PCS Cricket Rodgers Bell Telus - Retail Packaging	B00TEADQO4	X000RTQ07H	EAN : 0609459874288	New	"--"	"--"	"--"	0
+BT-BP-30000K	BinTEK Brand iPhone 3GS 1219mAh Li-Ion Premium Battery with Opening Repair Tool Kit / Compatible with Model AT&T A1303	B00RKGS6B2	X000RS47AP		New	"--"	"--"	Merchant	1
+BT-BP-30006K	BinTEK Brand iPhone 5 1440mAh mAh Li-Ion Premium Battery with Opening Repair Tool Kit / Compatible with Model A1428	B00RKGSEMI	X000RS47E1		New	"--"	"--"	Merchant	1
+BT-BP-30012K	BinTEK Brand iPod Touch 5 1030mAh Li-Ion Premium Battery with Opening Repair Tool Kit / Compatible with Model A1332	B00RKGSFLI	X000RS47GJ		New	"--"	"--"	Merchant	1
+BT-BP-30014K	BinTEK Brand iPod Touch 2 789mAh Li-Ion Premium Battery with Opening Repair Tool Kit / Compatible with Model A1288, APN 616-0401	B00RKGS57M	X000RS47G9		New	"--"	"--"	Merchant	1
+BT-BP-30016	BinTEK Brand HTC Droid Incredible 2 / HTC Droid Incredible S / HTC Desire S / BG32100 1450mAh Li-Ion Premium Battery Compatible G11, S710E, S710D, S510	B00RKGSCJ8	X000RS47GT		New	"--"	"--"	Merchant	1
+BT-BP-30020	BinTEK Brand HTC myTouch 4G / HTC Thunderbolt / HTC Merge / BD42100 1400mAh Li-Ion Premium Battery Compatible with BTR6400, ADR6400, PD15100	B00RKGSBH6	X000RS47B9		New	"--"	"--"	Merchant	1
+BT-BP-30022	BinTEK Brand HTC Vivid / HTC Raider 4G / HTC Velocity 4G / BH39100 1620mAh Li-Ion Premium Battery Compatible with X710e X710s	B00RKGSDQA	X000RS47CN		New	"--"	"--"	Merchant	1
+BT-BP-30024	BinTEK Brand HTC Droid Incredible 4G LTE / HTC Fireball BTR6410B 1700mAh Li-Ion Premium Battery	B00RKGS7N4	X000RS47HN		New	"--"	"--"	Merchant	1
+BT-BP-30026K	BinTEK Brand HTC One M7 BN07100 2300mAh Li-Ion Premium Battery with Opening Repair Tool Kit / Compatible with Models 801e 801n AT&T International Unlocked Models	B00RKGS7W0	X000RS47HX		New	"--"	"--"	Merchant	1
+BT-BP-30028	BinTEK Brand LG Esteem / LG Revolution BF45NV 1500mAh Li-Ion Premium Battery Compatible with MS910, VS910	B00RKGSJ0A	X000RS47C3		New	"--"	"--"	Merchant	1
+BT-BP-30030	BinTEK Brand LG Optimus 3D P920 / LG Thrill P925 / LG G2X / LG Optimus 2X/ FL-53HN 1500mAh Li-Ion Premium Battery Compatible with P990, P999, P920, P925 AT&T	B00RKGSB8K	X000RS47IR		New	"--"	"--"	Merchant	1
+BT-BP-30032	BinTEK Brand LG Spectrum / LG Nitro BL-49KH 1830mAh Li-Ion Premium Battery Compatible with P930 VS920	B00RKGSA4A	X000RS47HD		New	"--"	"--"	Merchant	1
+BT-BP-30034	BinTEK Brand LG Optimus 3D Max / myTouch Q / Optimus Elite / BL-48LN 1520mAh Li-Ion Premium Battery / Compatible with C800, LS696, P720	B00RKGSCCA	X000RS47BJ		New	"--"	"--"	Merchant	1
+BT-BP-30036K	BinTEK Brand LG Optimus G E970 LS970 Google Nexus 4 BL-T5 2100mAh Premium Battery with Opening Repair Tool Kit / Compatible with Models E970 E973 LS970 E960 AT&T Sprint	B00RKGSGUS	X000RS479V		New	"--"	"--"	Merchant	1
+BT-BP-30038	BinTEK Brand Motorola Atrix 4G/ Droid X2 / Milestone X / Droid X/ BH6X 1880mAh Li-Ion Premium Battery / Compatible with MB860 MB870 MB810 MB809	B00RKGS8ZQ	X000RS47AZ		New	"--"	"--"	Merchant	1
+BT-BP-30042K	BinTEK Brand Motorola Droid Razr EB40 EB20 3300mAh Li-Ion Premium Battery with Opening Repair Tool Kit / Compatible with XT910maxx, XT910, XT912, XT912M, XT916, MT917 Verizon	B00RKGS6CQ	X000RS47EB		New	"--"	"--"	Merchant	1
+BT-BP-30044K	BinTEK Brand Motorola Droid 4 / Photon Q EB41 1750mAh Li-Ion Premium Battery with Phone Repair Tools / Compatible with XT894, XT897 Verizon	B00RKGSKVI	X000RS47CX		New	"--"	"--"	Merchant	1
+BT-BP-30046K	BinTEK Brand Motorola Droid Ultra MAXX EU40 3500mAh Li-Ion Premium Battery with Opening Repair Tool Kit / Compatible with XT1080M, XT1080 Verizon	B00RKGS91E	X000RS47DH		New	"--"	"--"	Merchant	1
+BT-BP-30050	BinTEK Brand Samsung Galaxy Epic EB575152LU 1650mAh Li-Ion Li-Ion Premium Battery / Compatible with SPH-D700 Sprint	B00RKGSDD8	X000RS47BT		New	"--"	"--"	Merchant	1
+BT-BP-30052	BinTEK Brand Samsung Google Galaxy Nexus Prime Galaxy S Blaze EB-L1F2HVU 1750mAh Li-Ion Li-Ion Premium Battery / Compatible with i9250 T769	B00RKGSIGA	X000RS47IH		New	"--"	"--"	Merchant	1
+BT-BP-30054	BinTEK Brand Samsung Galaxy Note 1 I 2500mAh Li-Ion Li-Ion Premium Battery / Compatible with i717 T889 N7000 i9220 AT&T, T-Mobile and International Models	B00RKGSJHI	X000RS47FZ		New	"--"	"--"	Merchant	1
+BT-BP-30056	BinTEK Brand Samsung Galaxy S EB575152VU 1800mAh Li-Ion Li-Ion Premium Battery / Compatible with GT-i9000 SPH-D700 Sprint and International Model	B00RKGSLGW	X000RS47FF		New	"--"	"--"	Merchant	1
+BT-BP-30058	BinTEK Brand Samsung Galaxy Note 2 Note II EB595675LU 3100mAh Li-Ion Li-Ion Premium Battery / Compatible with Models I317 L900 T889 R950 N7100 I317M I605 N7105 AT&T, T-Mobile, Sprint, Verizon, Metro PCS, Cricket, US Cellular, Rodgers, Bell, Telus	B00RKGSFAO	X000RS47D7		New	"--"	"--"	Merchant	1
+BT-BP-30060	BinTEK Brand Samsung Galaxy S3 SIII EB-L1G6LLU 2100mAh Li-Ion Li-Ion Premium Battery / Compatible with Models i747 i535 T999 L710 S960L R530 T999N I747M S960L S968C AT&T, T-Mobile, Sprint, Verizon, Metro PCS, Cricket, US Cellular, Rodgers, Bell, Telus	B00RKGSKJK	X000RS47H3		New	"--"	"--"	Merchant	1
+BT-BP-30062	BinTEK Brand Samsung Galaxy S5 SV EB-BG900BBC 2800mAh Li-Ion Li-Ion Premium Battery / Compatible with Models i9600 G900A G900P G900T G900V G900AZ G900T1 G900R4 G900F G900H G900W8 G900i AT&T, T-Mobile, Sprint, Verizon, Metro PCS, Cricket, US Cellular, Rodgers, Bell, Telus	B00RKGSGE4	X000RS47DR		New	"--"	"--"	Merchant	1
+BT-BP-30064	BinTEK Brand Samsung Note 4 Note IV EB-KN910BWEGW 3220mAh Li-Ion Premium Battery / Compatible with Models N910A N910P N910T N910V N910C N910F N910G N910G N910H N910U N910W8 AT&T, T-Mobile, Sprint, Verizon, Metro PCS, Cricket, US Cellular, Rodgers, Bell, Telus	B00RKGSEGE	X000RS47F5		New	"--"	"--"	Merchant	1
+BT-BP-30066K	BinTEK Brand HTC One M8 2600 mAh Li-Ion Premium Battery with Opening Repair Tool Kit / Compatible with Models 0P6B120 0P6B100 0P6B700 0P6B130 0P6B200 0P6B160 ONEM8HKE	B00RKGSI3S	X000RS47AF		New	"--"	"--"	Merchant	1
+BT-BP-30068	BinTEK Brand Samsung Note 3 Note III B800BE 3200mAh Li-Ion Premium Battery / Compatible with Models N900A N900T N900V N900P N9000 N9005 N900W8 N9002 AT&T, T-Mobile, Sprint, Verizon, Metro PCS, Cricket, US Cellular, Rodgers, Bell, Telus	B00RKGSHEI	X000RS47I7		New	"--"	"--"	Merchant	1
+BT-BP-30070K	BinTEK Brand LG Nexus 5 BL-T9 2100mAh Li-Ion Premium Battery with Opening Repair Tool Kit	B00RKGSA5Y	X000RS479L		New	"--"	"--"	Merchant	1
+BT-SPP-10325	BinTEK Brand LG Nexus 6 Premium Ultra-HD Scratch Resistant Clear Screen Protector [Life-Time Warranty] Compatible with T-Mobile Sprint AT&T US Cellular -- Retail Packaging	B00TPBJ8KS	X000RTQ009	EAN : 0609459874332	New	"--"	"--"	"--"	0
+BT-SPP-10611	BinTEK Brand Apple iPhone 5 5S 5C Premium Ultra-HD Scratch Resistant Clear Screen Protector [Life-Time Warranty] Compatible with A1533 A1457 A1530 A1533 A1453 A1518 A1528 A1530 A1532 A1507 A1529 A1532 A1456 A1516 A1526 A1529 A1428 A1429 A1442 AT&T T-Mobile Verizon Sprint US Cellular Metro PCS Cricket Rodgers Bell Telus -- Retail Packaging	B00TPBJ7HC	X000RTQ01X	EAN : 0609459874349	New	"--"	"--"	"--"	0
+BT-SPP-10613	BinTEK Brand Motorola Droid Razr XT910 XT912 Premium Ultra-HD Scratch Resistant Clear Screen Protector [Life-Time Warranty] Compatible with XT910 XT912 International Verizon -- Retail Packaging	B00TPBJ9H0	X000RTQ05T	EAN : 0609459874356	New	"--"	"--"	"--"	0
+BT-SPP-10617	BinTEK Brand Samsung Galaxy S2 i777 Attain Premium Ultra-HD Scratch Resistant Clear Screen Protector [Life-Time Warranty] Compatible with i777 AT&T -- Retail Packaging	B00TPBJ6H8	X000RTQ04P	EAN : 0609459874370	New	"--"	"--"	"--"	0
+BT-SPP-10623	BinTEK Brand HTC One SV Premium Ultra-HD Scratch Resistant Clear Screen Protector [Life-Time Warranty] Compatible with Boost Mobile -- Retail Packaging	B00TPBJALK	X000RTQ045	EAN : 0609459874400	New	"--"	"--"	"--"	0
+BT-SPP-10627	BinTEK Brand HTC Tmobile HD2 Premium Ultra-HD Scratch Resistant Clear Screen Protector [Life-Time Warranty] Compatible with T-Mobile -- Retail Packaging	B00TPBJBL4	X000RTPZZZ	EAN : 0609459874424	New	"--"	"--"	"--"	0
+BT-SPP-10637	BinTEK Brand Samsung Galaxy S3 Premium Privacy Scratch Resistant Clear Screen Protector [Life-Time Warranty] Compatible with i9300 i747 i535 International AT&T Verizon -- Retail Packaging	B00TPBJCHW	X000RTQ05J	EAN : 0609459874462	New	"--"	"--"	"--"	0
+BT-SPP-10639	BinTEK Brand Samsung Note 2 Premium Privacy Scratch Resistant Clear Screen Protector [Life-Time Warranty] Compatible with AT&T T-Mobile Verizon Sprint US Cellular Rodgers -- Retail Packaging	B00TPBJDBW	X000RTQ077	EAN : 0609459874479	New	"--"	"--"	"--"	0
+BT-SPP-10641	BinTEK Brand LG Optimus L9 MS769 Premium Privacy Scratch Resistant Clear Screen Protector [Life-Time Warranty] Compatible with Metro PCS T-Mobile -- Retail Packaging	B00TPBJGF0	X000RTPZZP	EAN : 0609459874486	New	"--"	"--"	"--"	0
+BT-SPP-10643	BinTEK Brand HTC One Premium Privacy Scratch Resistant Clear Screen Protector [Life-Time Warranty] Compatible with HTC One -- Retail Packaging	B00TPBJJJS	X000RTQ04F	EAN : 0609459874493	New	"--"	"--"	"--"	0
+BT-SPP-10645	BinTEK Brand HTC Evo 4G LTE Premium Privacy Scratch Resistant Clear Screen Protector [Life-Time Warranty] Compatible with Sprint HTC Evo 4G LTE -- Retail Packaging	B00TPBJIK8	X000RTQ02H	EAN : 0609459874509	New	"--"	"--"	"--"	0
+BT-SPP-10653	BinTEK Brand HTC Tmobile HD2 Premium Privacy Scratch Resistant Clear Screen Protector [Life-Time Warranty] Compatible with T-Mobile -- Retail Packaging	B00TPBJM7W	X000RTQ09P	EAN : 0609459874547	New	"--"	"--"	"--"	0
+BT-SPP-10655	BinTEK Brand HTC One SV Premium Privacy Scratch Resistant Clear Screen Protector [Life-Time Warranty] Compatible with Boost Mobile -- Retail Packaging	B00TPBJKJW	X000RTQ063	EAN : 0609459874554	New	"--"	"--"	"--"	0
+BTH210001	BinTEK Phillips + 1.5 Standard Size Premium Long-Lasting Screwdriver	B00TEAC7AS	X000RTQ027	EAN : 0609459874097	New	"--"	"--"	"--"	0
+BTS810011	BinTEK 8-Piece Cell Phone Repair Tool Kit For iPhone 3G/3GS	B00TEACICA	X000RTQ03L	EAN : 0609459874103	New	"--"	"--"	"--"	0
+BTS810012	BinTEK 9-Piece Cell Phone Repair Tool Kit For iPhone 4/4S/5/6/6 Plus	B00TEACB9K	X000RTQ08V	EAN : 0609459874110	New	"--"	"--"	"--"	0
+BTS810013	BinTEK 8-Piece Cell Phone Repair Tool Kit For iPad 1/2/3/4 iPad Mini 1/2 iPad Air 1/2	B00TEAC9EC	X000RTQ09F	EAN : 0609459874127	New	"--"	"--"	"--"	0
+BTS810014	BinTEK 8-Piece Cell Phone Repair Tool Kit For iPod Touch 1/2/3/4/5	B00TEADZFY	X000RTQ03B	EAN : 0609459874134	New	"--"	"--"	"--"	0
+BTS810015	BinTEK 8-Piece Cell Phone Repair Tool Kit For Motorola/LG/HTC	B00TEADSBK	X000RTQ00J	EAN : 0609459874141	New	"--"	"--"	"--"	0
+BTS810016	BinTEK 7-Piece Cell Phone Repair Tool Kit For Samsung	B00TEAC834	X000RTQ031	EAN : 0609459874158	New	"--"	"--"	"--"	0
+BTT110001	BinTEK 2.5 inch Premium Suction Cup For Cell Phone ot Tablet Screen Removal ULTRA STRONG	B00TEACCEO	X000RTQ013	EAN : 0609459874165	New	"--"	"--"	"--"	0
+BTT110002	BinTEK 4.5 inch Premium Suction Cup For Cell Phone ot Tablet Screen Removal ULTRA STRONG	B00TEADT5A	X000RTQ06X	EAN : 0609459874172	New	"--"	"--"	"--"	0

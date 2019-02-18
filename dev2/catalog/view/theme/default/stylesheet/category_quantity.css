@@ -1,0 +1,43 @@
+.cart .quantity, .quantity .quantity {
+	margin-bottom:2px;
+	height:21px;
+	border-radius:5px;
+	padding-top:0px;
+	padding-bottom:0px;
+	text-align:center !important;
+}
+.cart .qty-minus, .quantity .qty-minus, .cart .qty-plus, .quantity .qty-plus {
+	cursor:pointer;
+	border: 0 none;
+	width:20px;
+    height: 20px;
+    margin: 0;
+    text-align:center;
+    background: url("../image/button.png") repeat-x scroll left top transparent;
+    -webkit-border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-khtml-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 2px 2px #DDDDDD;
+	-moz-box-shadow: 0px 2px 2px #DDDDDD;
+    box-shadow: 0 2px 2px #DDDDDD;
+    color: #FFFFFF;
+}
+.cart .qty-plus:hover, .quantity .qty-plus:hover, .cart .qty-minus:hover, .quantity .qty-minus:hover {
+    background-position: 0px -24px;
+    	cursor:pointer;
+	border: 0 none;
+	width:20px;
+    height: 20px;
+    margin: 0;
+    text-align:center;
+background: url("../image/button-active.png") repeat-x scroll left top transparent;
+    -webkit-border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-khtml-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 2px 2px #DDDDDD;
+	-moz-box-shadow: 0px 2px 2px #DDDDDD;
+    box-shadow: 0 2px 2px #DDDDDD;
+    color: #FFFFFF;
+}

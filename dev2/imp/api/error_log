@@ -1,0 +1,38 @@
+[23-Jun-2015 11:14:18 America/Los_Angeles] PHP Fatal error:  Class 'QcAPI' not found in /home/phonerep/public_html/imp/api/request.php on line 6
+[11-Mar-2016 03:50:21 America/Los_Angeles] PHP Fatal error:  Call to undefined function json_encolde() in /home/phonerep/public_html/imp/api/customer.php on line 36
+[04-May-2016 12:34:07 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/phonerep/public_html/imp/inc/functions.php on line 40
+[04-May-2016 12:34:16 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/phonerep/public_html/imp/inc/functions.php on line 40
+[04-May-2016 12:34:53 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/phonerep/public_html/imp/inc/functions.php on line 40
+[04-May-2016 12:35:07 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/phonerep/public_html/imp/inc/functions.php on line 40
+[04-May-2016 12:35:48 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/phonerep/public_html/imp/inc/functions.php on line 40
+[29-Jun-2016 14:45:34 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[29-Jun-2016 14:47:08 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[08-Sep-2016 14:50:26 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'strtolower' (T_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 1998
+[08-Sep-2016 14:50:57 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'strtolower' (T_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 1998
+[08-Sep-2016 14:51:00 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'strtolower' (T_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 1998
+[08-Sep-2016 14:51:00 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'strtolower' (T_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 1998
+[08-Sep-2016 14:51:00 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'strtolower' (T_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 1998
+[08-Sep-2016 14:51:04 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'strtolower' (T_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 1998
+[08-Sep-2016 14:51:18 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'strtolower' (T_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 1998
+[08-Sep-2016 14:51:24 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'strtolower' (T_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 1998
+[08-Sep-2016 14:51:28 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'strtolower' (T_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 1998
+[08-Sep-2016 14:51:31 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'strtolower' (T_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 1998
+[08-Sep-2016 14:51:45 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'strtolower' (T_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 1998
+[08-Sep-2016 14:51:55 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'strtolower' (T_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 1998
+[08-Sep-2016 14:52:57 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'strtolower' (T_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 1998
+[08-Sep-2016 14:53:10 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'strtolower' (T_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 1998
+[08-Sep-2016 14:56:31 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '}' in /home/phonerep/public_html/imp/inc/functions.php on line 2025
+[08-Sep-2016 14:56:34 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '}' in /home/phonerep/public_html/imp/inc/functions.php on line 2025
+[08-Sep-2016 14:56:41 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '}' in /home/phonerep/public_html/imp/inc/functions.php on line 2025
+[08-Sep-2016 14:56:47 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '}' in /home/phonerep/public_html/imp/inc/functions.php on line 2025
+[08-Sep-2016 14:57:19 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '}' in /home/phonerep/public_html/imp/inc/functions.php on line 2025
+[08-Sep-2016 14:57:19 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '}' in /home/phonerep/public_html/imp/inc/functions.php on line 2025
+[08-Sep-2016 14:57:19 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '}' in /home/phonerep/public_html/imp/inc/functions.php on line 2025
+[08-Sep-2016 14:57:35 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '}' in /home/phonerep/public_html/imp/inc/functions.php on line 2025
+[08-Sep-2016 14:57:39 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '}' in /home/phonerep/public_html/imp/inc/functions.php on line 2025
+[24-Jan-2017 11:14:51 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '"', expecting ',' or ';' in /home/phonerep/public_html/imp/inc/functions.php on line 1407
+[20-Jul-2017 09:40:39 America/Los_Angeles] PHP Warning:  mysql_query() expects parameter 2 to be resource, object given in /home/phonerep/public_html/imp/inc/db.php on line 23
+[20-Jul-2017 09:40:39 America/Los_Angeles] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/phonerep/public_html/imp/inc/db.php:23) in /home/phonerep/public_html/imp/api/customer.php on line 39
+[20-Jul-2017 09:40:39 America/Los_Angeles] PHP Warning:  mysql_query() expects parameter 2 to be resource, object given in /home/phonerep/public_html/imp/inc/db.php on line 23
+[26-Oct-2017 09:11:27 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/phonerep/public_html/imp/inc/functions.php on line 2452
+[26-Oct-2017 09:11:51 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/phonerep/public_html/imp/inc/functions.php on line 2452

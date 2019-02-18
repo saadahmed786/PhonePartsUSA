@@ -1,0 +1,56 @@
+@import "colors";
+
+$primary-nav-li-ul-bgcolor: scale-color(
+												$primary-nav-bgcolor,
+												$saturation: -33.824%,
+												$lightness: 30.667% );
+
+$primary-nav-border-top-color: scale-color(
+												$primary-nav-bgcolor,
+												$saturation: -44.118%,
+												$lightness: 80% );
+
+$primary-nav-li-ul-link-color: scale-color(
+												$primary-nav-link-color,
+												$lightness: -6% );
+
+
+$secondary-nav-border-color: scale-color(
+													$secondary-nav-item-bgcolor,
+													$saturation: -19.149%,
+													$lightness: -31.034% );
+
+$secondary-nav-item-border-color: scale-color(
+													$secondary-nav-item-bgcolor,
+													$lightness: -7% );
+
+$secondary-nav-text-color: lighten($secondary-nav-link-color, 7%);
+
+
+
+$stack-box-shadow-color1: scale-color(
+										$secondary-nav-item-bgcolor,
+										$saturation: -17.021%,
+										$lightness: -18.966% );
+
+$stack-box-shadow-color3: scale-color(
+										$secondary-nav-item-bgcolor,
+										$saturation: -19.149%,
+										$lightness: -22.414% );
+
+
+
+$button-border-color: scale-color(
+										$button-bgcolor,
+										$saturation: -66%,
+										$lightness: 35% );
+
+
+
+$product-info-description-color: scale-color(
+										$link-color,
+										$lightness: 20% );
+
+$product-info-price-color: scale-color(
+										$link-color,
+										$lightness: -20% );

@@ -1,0 +1,52 @@
+/* General */
+
+body { background:#fff url(../images/version-three/bg-body.png);font-family:Times New Roman; }
+.body-full-width, .body { background:#ffffff; }
+
+/* Fonts */
+
+div.header .center .search .enterkey { font-family:Times New Roman; }
+h1, h2, h3, h4, h5, h6, .custom-font, div.header #cart .cart-heading p, .categories > ul > li > a, .categories-mobile-header a, .box .box-heading, .box-product > div .price, .footer-top-outside h2, #contact-us ul, .footer-navigation h3 { font-family:Old Standard TT; }
+.categories > ul > li > a { line-height:21px; }
+
+/* Button */
+
+.button { background:url(../images/version-three/bg-button.png) top left repeat-x; }
+
+/* Top Bar */
+
+div.top-bar { background:#f3f3f3; }
+
+/* Top Bar -> Welcome Text */
+
+div.top-bar .welcome-text a { color:#c18107; }
+
+/* Header -> Shopping Cart */
+
+div.header #cart .content table.cart tr .total { color:#c18107; }
+
+/* Categories */
+
+.categories, .categories-mobile-header { background:#343434 url(../images/version-three/bg-categories.png) bottom left repeat-x; }
+
+/* Box -> Products */
+
+.box-product > div .price { color:#c18107; }
+.product-list > div .price { color:#c18107; }
+div.product-info .right .price .price-new { color:#c18107; }
+
+/* Footer */
+
+div#footer { background:#f3f3f3; }
+
+/* Twitter updates */
+
+div#twitter-updates ul.tweet_list .tweet_text a { color:#c18107; }
+
+/* Content -> Box Category */
+
+.box-category ul li a:hover, .box-category ul li a.active { color:#c18107; }
+
+/* Product Compare */
+
+div.product-filter .product-compare a { color:#c18107; }

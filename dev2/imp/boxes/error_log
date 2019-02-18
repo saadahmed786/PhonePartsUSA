@@ -1,0 +1,41 @@
+[12-Feb-2016 05:17:39 America/Chicago] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/phonerep/public_html/imp/boxes/boxes_edit.php on line 293
+[20-Mar-2017 10:42:51 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'cURL Error (28): Resolving timed out after 4513 milliseconds' in /home/phonerep/public_html/system/PrintNode-PHP-master/src/PrintNode/Request.php:205
+Stack trace:
+#0 /home/phonerep/public_html/system/PrintNode-PHP-master/src/PrintNode/Request.php(238): PrintNode\Request->curlExec(Resource id #18, 'https://api.pri...')
+#1 /home/phonerep/public_html/system/PrintNode-PHP-master/src/PrintNode/Request.php(594): PrintNode\Request->curlGet('https://api.pri...')
+#2 /home/phonerep/public_html/imp/inc/functions.php(2738): PrintNode\Request->__call('getPrinters', Array)
+#3 /home/phonerep/public_html/imp/inc/functions.php(2738): PrintNode\Request->getPrinters()
+#4 /home/phonerep/public_html/imp/inc/functions.php(2818): printNodePDF('returns/58d0149...', 'Label print for...', '157967')
+#5 /home/phonerep/public_html/imp/boxes/boxes_edit.php(103): printLabel('-ACC-ZED-506-1', 'ACC-ZED-506', 'ItemIssueBox156', 'Bubble', '', '157967', '', '', '', '')
+#6 {main}
+  thrown in /home/phonerep/public_html/system/PrintNode-PHP-master/src/PrintNode/Request.php on line 205
+[24-Mar-2017 12:03:48 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'cURL Error (28): Resolving timed out after 4512 milliseconds' in /home/phonerep/public_html/system/PrintNode-PHP-master/src/PrintNode/Request.php:205
+Stack trace:
+#0 /home/phonerep/public_html/system/PrintNode-PHP-master/src/PrintNode/Request.php(238): PrintNode\Request->curlExec(Resource id #18, 'https://api.pri...')
+#1 /home/phonerep/public_html/system/PrintNode-PHP-master/src/PrintNode/Request.php(594): PrintNode\Request->curlGet('https://api.pri...')
+#2 /home/phonerep/public_html/imp/inc/functions.php(2738): PrintNode\Request->__call('getPrinters', Array)
+#3 /home/phonerep/public_html/imp/inc/functions.php(2738): PrintNode\Request->getPrinters()
+#4 /home/phonerep/public_html/imp/inc/functions.php(2818): printNodePDF('returns/58d56d8...', 'Label print for...', '157967')
+#5 /home/phonerep/public_html/imp/boxes/need_to_repair.php(41): printLabel('PP09614-APL-001...', 'APL-001-0730', 'NTRBox1291', 'Backlight', '506922', '157967', '', '', '', '')
+#6 {main}
+   in /home/phonerep/public_html/system/PrintNode-PHP-master/src/PrintNode/Request.php on line 205
+[25-May-2017 15:19:08 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'cURL Error (28): Resolving timed out after 4512 milliseconds' in /home/phonerep/public_html/system/PrintNode-PHP-master/src/PrintNode/Request.php:205
+Stack trace:
+#0 /home/phonerep/public_html/system/PrintNode-PHP-master/src/PrintNode/Request.php(238): PrintNode\Request->curlExec(Resource id #18, 'https://api.pri...')
+#1 /home/phonerep/public_html/system/PrintNode-PHP-master/src/PrintNode/Request.php(594): PrintNode\Request->curlGet('https://api.pri...')
+#2 /home/phonerep/public_html/imp/inc/functions.php(2750): PrintNode\Request->__call('getPrinters', Array)
+#3 /home/phonerep/public_html/imp/inc/functions.php(2750): PrintNode\Request->getPrinters()
+#4 /home/phonerep/public_html/imp/inc/functions.php(2830): printNodePDF('returns/5927585...', 'Label print for...', '157967')
+#5 /home/phonerep/public_html/imp/boxes/boxes_edit.php(103): printLabel('-APL-001-2310-3', 'APL-001-2310', 'CIB108', 'Not PPUSA Part', '', '157967', '', '', '', '')
+#6 {main}
+  thrown in /home/phonerep/public_html/system/PrintNode-PHP-master/src/PrintNode/Request.php on line 205
+[11-Aug-2017 14:47:45 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'cURL Error (6): name lookup timed out' in /home/phonerep/public_html/system/PrintNode-PHP-master/src/PrintNode/Request.php:205
+Stack trace:
+#0 /home/phonerep/public_html/system/PrintNode-PHP-master/src/PrintNode/Request.php(238): PrintNode\Request->curlExec(Resource id #38, 'https://api.pri...')
+#1 /home/phonerep/public_html/system/PrintNode-PHP-master/src/PrintNode/Request.php(594): PrintNode\Request->curlGet('https://api.pri...')
+#2 /home/phonerep/public_html/imp/inc/functions.php(2822): PrintNode\Request->__call('getPrinters', Array)
+#3 /home/phonerep/public_html/imp/inc/functions.php(2822): PrintNode\Request->getPrinters()
+#4 /home/phonerep/public_html/imp/inc/functions.php(2902): printNodePDF('returns/598e25f...', 'Label print for...', '157967')
+#5 /home/phonerep/public_html/imp/boxes/need_to_repair.php(41): printLabel('PP11295-SRN-SAM...', 'SRN-SAM-464', 'NTRBox1', 'Backlight', '', '157967', '', '', '', '')
+#6 {main}
+  thrown in /home/phonerep/public_html/system/PrintNode-PHP-master/src/PrintNode/Request.php on line 205

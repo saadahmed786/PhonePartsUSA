@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'AileronSemiBold';
+    src: url('fonts/AileronSemiBold.eot');
+    src: url('fonts/AileronSemiBold.eot') format('embedded-opentype'),
+         url('fonts/AileronSemiBold.woff2') format('woff2'),
+         url('fonts/AileronSemiBold.woff') format('woff'),
+         url('fonts/AileronSemiBold.ttf') format('truetype'),
+         url('fonts/AileronSemiBold.svg#AileronSemiBold') format('svg');
+}

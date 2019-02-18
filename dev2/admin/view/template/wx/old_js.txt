@@ -1,0 +1,131 @@
+		<script type="text/javascript">
+		<!--
+		function validate_cdn() {
+			$('#btn_cdn_validate').hide();
+			$('#loading_cdn_validate').fadeIn('slow');
+			$.ajax({
+				url: 'http://api.wxhosting.com/public/cdn/validate.json',
+				type: 'POST',
+				dataType: 'JSON',
+				data: 'key=' + $("input[name=wx_cdn_api_key]").val() + '&token=' + $("input[name=wx_cdn_api_token]").val() ,
+				success: function(json) {
+					$('.success, .warning, .attention, information, .error').remove();
+					if (json['success']['code'] == 200) {
+						//Form Values
+						$("input[name=wx_cdn_http]").val(json['http_url']);
+						$("input[name=wx_cdn_https]").val(json['https_url']);
+						$("input[name=wx_cdn_api_valid]").val('1');
+						$("input[name=wx_cdn_account]").val(json['id'] + ' (' + json['name'] + ')');
+						$("input[name=wx_cdn_https_status]").val('<?php echo $text_cdn_https_shared; ?>');
+						//Display Values
+						$("#wx_cdn_http").html(json['http_url']);
+						$("#wx_cdn_account").html(json['id'] + ' (' + json['name'] + ')');
+						$("#wx_cdn_https_status").html('<?php echo $text_cdn_https_shared; ?>');
+
+
+						//Effects
+						$('#validate-cdn').slideUp('slow');
+						$('#cdn-settings').slideDown('slow');
+
+						$('#notification').html('<div class="success" style="display: none;">' + json['success']['message'] + '</div>');
+						$('.success').fadeIn('slow');
+						$('html, body').animate({ scrollTop: 0 }, 'slow');
+						$('.success').delay(1500).fadeOut('slow');
+					}
+					$('#loading_cdn_validate').hide();
+					$('#btn_cdn_validate').fadeIn('slow');
+				},
+			error: function(xhr, status, error) {
+				$('#btn_cdn_validate').show();
+				$('#loading_cdn_validate').hide();
+				clear();
+				var json = $.parseJSON(xhr['responseText']);
+				$("input[name=wx_cdn_http]").val('');
+				$("input[name=wx_cdn_https]").val('');
+				$("input[name=wx_cdn_api_valid]").val('0');
+				$('#notification').html('<div class="warning" style="display: none;">' + json['error']['message'] + '</div>');
+				$('.warning').fadeIn('slow');
+				$('html, body').animate({ scrollTop: 0 }, 'slow');
+				$('.warning').delay(1500).fadeOut('slow');
+				}
+			});
+		}
+		function get_cdn_settings() {
+			$('#btn_cdn_get_settings').hide();
+			$('#loading_cdn_get_settings').fadeIn('slow');
+			$.ajax({
+				url: '<?php echo str_replace('&amp;', '&', $this->url->link('wx/settings/cdn_get_settings', 'token=' . $this->session->data['token'], 'SSL')) ?>',
+				type: 'post',
+				data: 'api_key=' + $("input[name=wx_cdn_api_key]").val() + '&api_token=' + $("input[name=wx_cdn_api_token]").val(),
+				dataType: 'json',
+				success: function(json) {
+					$('.success, .warning, .attention, information, .error').remove();
+					if (json['success']) {
+						$("input:radio[name=wx_cdn_compress]").filter('[value=' + json['wx_cdn_compress'] + ']').attr('checked', true);
+						$("input:radio[name=wx_cdn_backend_compress]").filter('[value=' + json['wx_cdn_backend_compress'] + ']').attr('checked', true);
+						$("input:radio[name=wx_cdn_queries]").filter('[value=' + json['wx_cdn_queries'] + ']').attr('checked', true);
+						$("input:radio[name=wx_cdn_ignore_setcookie_header]").filter('[value=' + json['wx_cdn_ignore_setcookie_header'] + ']').attr('checked', true);
+						$("input:radio[name=wx_cdn_ignore_cache_control]").filter('[value=' + json['wx_cdn_ignore_cache_control'] + ']').attr('checked', true);
+						$("input:radio[name=wx_cdn_use_stale]").filter('[value=' + json['wx_cdn_use_stale'] + ']').attr('checked', true);
+						$("input:radio[name=wx_cdn_proxy_cache_lock]").filter('[value=' + json['wx_cdn_proxy_cache_lock'] + ']').attr('checked', true);
+						$("select[name=wx_cdn_cache_valid]").val(json['wx_cdn_cache_valid']);
+						$("select[name=wx_cdn_expires]").val(json['wx_cdn_expires']);
+						$("input[name=wx_cdn_set_host_header]").val(json['wx_cdn_set_host_header']);
+						$("input:radio[name=wx_cdn_canonical_link_headers]").filter('[value=' + json['wx_cdn_canonical_link_headers'] + ']').attr('checked', true);
+
+						$('#advanced_cdn_settings').slideDown('slow');
+					}
+					if (json['error']) {
+						$('#notification').html('<div class="warning" style="display: none;">' + json['error'] + '</div>');
+						$('.warning').fadeIn('slow');
+						$('html, body').animate({ scrollTop: 0 }, 'slow');
+						$('.warning').delay(1500).fadeOut('slow');
+					}
+					$('#loading_cdn_get_settings').hide();
+				}
+			});
+		}
+		function update_cdn_settings() {
+			$('#btn_cdn_update_settings').hide();
+			$('#loading_cdn_update_settings').fadeIn('slow');
+			$.ajax({
+				url: '<?php echo str_replace('&amp;', '&', $this->url->link('wx/settings/cdn_update_settings', 'token=' . $this->session->data['token'], 'SSL')) ?>',
+				type: 'post',
+				data: 'api_key=' + $("input[name=wx_cdn_api_key]").val()
+						+ '&api_token=' + $("input[name=wx_cdn_api_token]").val()
+						+ '&wx_cdn_compress=' + $("input:radio[name=wx_cdn_compress]").val()
+						+ '&wx_cdn_backend_compress=' + $("input:radio[name=wx_cdn_backend_compress]").val()
+						+ '&wx_cdn_queries=' + $("input:radio[name=wx_cdn_queries]").val()
+						+ '&wx_cdn_ignore_setcookie_header=' + $("input:radio[name=wx_cdn_ignore_setcookie_header]").val()
+						+ '&wx_cdn_ignore_cache_control=' + $("input:radio[name=wx_cdn_ignore_cache_control]").val()
+						+ '&wx_cdn_use_stale=' + $("input:radio[name=wx_cdn_use_stale]").val()
+						+ '&wx_cdn_proxy_cache_lock=' + $("input:radio[name=wx_cdn_proxy_cache_lock]").val()
+						+ '&wx_cdn_cache_valid=' + $("select[name=wx_cdn_cache_valid]").val()
+						+ '&wx_cdn_expires=' + $("select[name=wx_cdn_expires]").val()
+						+ '&wx_cdn_set_host_header=' + $("input[name=wx_cdn_set_host_header]").val()
+						+ '&wx_cdn_canonical_link_headers=' + $("input[name=wx_cdn_canonical_link_headers]").val(),
+
+				dataType: 'json',
+				success: function(json) {
+					$('.success, .warning, .attention, information, .error').remove();
+					if (json['success']) {
+						$('#notification').html('<div class="success" style="display: none;">' + json['success'] + '</div>');
+						$('.success').fadeIn('slow');
+						$('html, body').animate({ scrollTop: 0 }, 'slow');
+						$('.success').delay(1500).fadeOut('slow');
+					}
+					if (json['error']) {
+						$('#notification').html('<div class="warning" style="display: none;">' + json['error'] + '</div>');
+						$('.warning').fadeIn('slow');
+						$('html, body').animate({ scrollTop: 0 }, 'slow');
+						$('.warning').delay(1500).fadeOut('slow');
+					}
+					$('#loading_cdn_update_settings').hide();
+					$('#btn_cdn_update_settings').fadeIn('slow');
+					$('#advanced_cdn_settings').slideUp('slow');
+					$('#btn_cdn_get_settings').fadeIn('slow');
+				}
+			});
+		}
+		// -->
+		</script>

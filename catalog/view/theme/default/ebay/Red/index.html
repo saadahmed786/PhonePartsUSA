@@ -1,0 +1,109 @@
+<style>
+.mainCont * { margin:0; padding:0; border:0; }
+
+.mainCont {
+	background-color:#ececec;
+	font-family:Helvetica, sans-serif;
+	width:100%;
+	min-height:900px;
+}
+h1 {
+	color:#ffffff;
+	font-weight:bold;
+	font-size:24px;
+} 
+h2 {
+	color:#861d21;
+	font-weight:bold;
+	font-size:18px;
+}
+h3 {
+	color:#f3353c;
+	font-weight:bold;
+	font-size:24px;
+}
+.container {
+	width:960px;
+	margin:auto;
+}
+.header {
+	height:100px;
+	width:960px;
+	background-color:#f3353c;
+}
+.logo {
+	height:65px;
+	float:left;
+	margin:35px 0 0 30px;
+}
+.contact {
+	height:100px;
+	float:right;
+	margin:30px 30px 0 0px;
+}
+.maindes {
+	width:940px;
+	min-height:300px;
+	color:#888888;
+	font-size:12px;
+	padding:10px;
+	background-color:#ffffff;
+	-moz-box-shadow: 0px 1px 1px #b7b7b7;
+	-webkit-box-shadow: 0px 1px 1px #b7b7b7;
+	box-shadow: 0px 1px 1px #b7b7b7;
+}
+.footer {
+	width:960px;
+	height:150px;
+}
+.footer p {
+	font-size:14px;
+	color:#3c4856;
+	line-height:20px;
+}
+.leftcol {
+	width:449px;
+	height:100px;
+	float:left;
+	margin-top:30px;
+	padding-left:30px;
+	border-right:#ffffff solid 2px;
+}
+.rightcol {
+	width:449px;
+	height:100px;
+	float:left;
+	margin-top:30px;
+	padding-left:30px;
+}
+
+.gallery
+{
+    list-style-image: none;
+    list-style: none;
+    list-style-type: none;
+}
+
+.gallery li
+{
+    list-style-image: none;
+    list-style: none;
+    list-style-type: none;
+    display:inline;
+    margin-right:10px;
+}
+
+.clear{clear:both;}
+</style>
+
+<div class="mainCont" id="mainCont">
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <h1>{title}</h1>
+            </div>
+        </div>
+        <div class="maindes">{description}</div>
+        <div class="maindes">{gallery}</div>
+    </div>
+</div>

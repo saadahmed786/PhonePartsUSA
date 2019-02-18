@@ -1,0 +1,105 @@
+SAVE SO Response  - Array
+(
+    [result] => Array
+        (
+            [0] => 
+        )
+
+    [qty] => 0
+    [Ack] => Error
+    [xml] => <FbiXml>
+<Ticket>
+<UserID>1</UserID>
+<Key></Key>
+</Ticket>
+<FbiMsgsRq>
+<SOSaveRq><SalesOrder><Salesman>admin</Salesman><Status>20</Status><Carrier>Will Call</Carrier><FirstShipDate>2013-09-12T06:10:54</FirstShipDate><CreatedDate>2013-09-12T06:10:54</CreatedDate><IssuedDate>2013-09-12T16:10:54</IssuedDate><TaxRatePercentage>0.0625</TaxRatePercentage><TaxRateName>Utah</TaxRateName><ShippingTerms>Prepaid &amp; Billed</ShippingTerms><PaymentTerms>PayPal</PaymentTerms><CustomerContact>cpr_algon </CustomerContact><CustomerName>cpr_algon </CustomerName><FOB>Origin</FOB><BillTo><Name>cpr_algon </Name><AddressField>130 S Randall Rd </AddressField><City>Algonquin</City><Zip>60102-9774</Zip></BillTo><Ship><Name>cpr_algon </Name><AddressField>130 S Randall Rd </AddressField><Zip>60102-9774</Zip><Country>United States</Country><State>IL</State></Ship><Items><SalesOrderItem><ID>-1</ID><ProductNumber>SRN-SAM-240</ProductNumber><Description>SRN-SAM-240</Description><Taxable>true</Taxable><Quantity>1</Quantity><ProductPrice>157.97</ProductPrice><TotalPrice>157.97</TotalPrice><UOMCode>ea</UOMCode><ItemType>10</ItemType><Status>10</Status><NewItemFlag>false</NewItemFlag><LineNumber>1</LineNumber></SalesOrderItem></Items></SalesOrder><IssueFlag>false</IssueFlag></SOSaveRq></FbiMsgsRq>
+</FbiXml>
+
+)
+
+
+SAVE SO Response  - Array
+(
+    [result] => Array
+        (
+            [0] => 
+        )
+
+    [qty] => 0
+    [Ack] => Error
+    [xml] => <FbiXml>
+<Ticket>
+<UserID>1</UserID>
+<Key></Key>
+</Ticket>
+<FbiMsgsRq>
+<SOSaveRq><SalesOrder><Salesman>admin</Salesman><Status>20</Status><Carrier>Will Call</Carrier><FirstShipDate>2013-09-12T04:12:30</FirstShipDate><CreatedDate>2013-09-12T04:12:30</CreatedDate><IssuedDate>2013-09-12T14:12:30</IssuedDate><TaxRatePercentage>0.0625</TaxRatePercentage><TaxRateName>Utah</TaxRateName><ShippingTerms>Prepaid &amp; Billed</ShippingTerms><PaymentTerms>PayPal</PaymentTerms><CustomerContact>elvindaviddavid </CustomerContact><CustomerName>elvindaviddavid </CustomerName><FOB>Origin</FOB><BillTo><Name>elvindaviddavid </Name><AddressField>750 Battery St Ste 200</AddressField><City>san francisco</City><Zip>94111-1524</Zip></BillTo><Ship><Name>elvindaviddavid </Name><AddressField>750 Battery St Ste 200</AddressField><Zip>94111-1524</Zip><Country>United States</Country><State>CA</State></Ship><Items><SalesOrderItem><ID>-1</ID><ProductNumber></ProductNumber><Description></Description><Taxable>true</Taxable><Quantity></Quantity><ProductPrice></ProductPrice><TotalPrice>0</TotalPrice><UOMCode>ea</UOMCode><ItemType>10</ItemType><Status>10</Status><NewItemFlag>false</NewItemFlag><LineNumber>1</LineNumber></SalesOrderItem></Items></SalesOrder><IssueFlag>false</IssueFlag></SOSaveRq></FbiMsgsRq>
+</FbiXml>
+
+)
+
+
+SAVE SO Response  - Array
+(
+    [result] => Array
+        (
+            [0] => 
+        )
+
+    [qty] => 0
+    [Ack] => Error
+    [xml] => <FbiXml>
+<Ticket>
+<UserID>1</UserID>
+<Key></Key>
+</Ticket>
+<FbiMsgsRq>
+<SOSaveRq><SalesOrder><Salesman>admin</Salesman><Status>20</Status><Carrier>Will Call</Carrier><FirstShipDate>2013-09-12T07:08:31</FirstShipDate><CreatedDate>2013-09-12T07:08:31</CreatedDate><IssuedDate>2013-09-12T17:08:31</IssuedDate><TaxRatePercentage>0.0625</TaxRatePercentage><TaxRateName>Utah</TaxRateName><ShippingTerms>Prepaid &amp; Billed</ShippingTerms><PaymentTerms>PayPal</PaymentTerms><CustomerContact>samuraimonk </CustomerContact><CustomerName>samuraimonk </CustomerName><FOB>Origin</FOB><BillTo><Name>samuraimonk </Name><AddressField>3100 Ousdahl Rd Apt 711</AddressField><City>Lawrence</City><Zip>66046-4330</Zip></BillTo><Ship><Name>samuraimonk </Name><AddressField>3100 Ousdahl Rd Apt 711</AddressField><Zip>66046-4330</Zip><Country>United States</Country><State>KS</State></Ship><Items><SalesOrderItem><ID>-1</ID><ProductNumber>FLX-HTC-300</ProductNumber><Description>FLX-HTC-300</Description><Taxable>true</Taxable><Quantity>1</Quantity><ProductPrice>3.99</ProductPrice><TotalPrice>3.99</TotalPrice><UOMCode>ea</UOMCode><ItemType>10</ItemType><Status>10</Status><NewItemFlag>false</NewItemFlag><LineNumber>1</LineNumber></SalesOrderItem></Items></SalesOrder><IssueFlag>false</IssueFlag></SOSaveRq></FbiMsgsRq>
+</FbiXml>
+
+)
+
+
+SAVE SO Response 117847 - Array
+(
+    [result] => Array
+        (
+            [0] => 
+        )
+
+    [items] => 
+    [Ack] => Error
+    [xml] => <FbiXml>
+<Ticket>
+<UserID>1</UserID>
+<Key></Key>
+</Ticket>
+<FbiMsgsRq>
+<SOSaveRq><SalesOrder><Salesman>admin</Salesman><Status>20</Status><Carrier>Will Call</Carrier><FirstShipDate>2013-09-12T01:53:55</FirstShipDate><CreatedDate>2013-09-12T01:53:55</CreatedDate><IssuedDate>2013-09-12T11:53:55</IssuedDate><TaxRatePercentage>0.0625</TaxRatePercentage><TaxRateName>Utah</TaxRateName><ShippingTerms>Prepaid &amp; Billed</ShippingTerms><PaymentTerms>Credit Card / Debit Card (Authorize.Net)</PaymentTerms><CustomerContact>Carrie Anne Hamblen</CustomerContact><CustomerName>Carrie Anne Hamblen</CustomerName><FOB>Origin</FOB><BillTo><Name>Carrie Anne Hamblen</Name><AddressField>6826 W. Yucca St</AddressField><City>Peoria</City><Zip>85051</Zip></BillTo><Ship><Name>Carrie Anne Hamblen</Name><AddressField>6826 W. Yucca St</AddressField><Zip>85051</Zip><Country>United States</Country><State>Arizona</State></Ship><Items><SalesOrderItem><ID>-1</ID><ProductNumber>BTY-AED-180</ProductNumber><Description>BTY-AED-180</Description><Taxable>true</Taxable><Quantity>1</Quantity><ProductPrice>8.97</ProductPrice><TotalPrice>8.97</TotalPrice><UOMCode>ea</UOMCode><ItemType>10</ItemType><Status>10</Status><NewItemFlag>false</NewItemFlag><LineNumber>1</LineNumber></SalesOrderItem></Items></SalesOrder><IssueFlag>false</IssueFlag></SOSaveRq></FbiMsgsRq>
+</FbiXml>
+
+)
+
+
+SAVE SO Response 117847 - Array
+(
+    [result] => Array
+        (
+            [0] => 
+        )
+
+    [items] => 
+    [Ack] => Error
+    [xml] => <FbiXml>
+<Ticket>
+<UserID>1</UserID>
+<Key></Key>
+</Ticket>
+<FbiMsgsRq>
+<SOSaveRq><SalesOrder><Salesman>admin</Salesman><Status>20</Status><Carrier>Will Call</Carrier><FirstShipDate>2013-09-12T01:53:55</FirstShipDate><CreatedDate>2013-09-12T01:53:55</CreatedDate><IssuedDate>2013-09-12T11:53:55</IssuedDate><TaxRatePercentage>0.0625</TaxRatePercentage><TaxRateName>Utah</TaxRateName><ShippingTerms>Prepaid &amp; Billed</ShippingTerms><PaymentTerms>Credit Card / Debit Card (Authorize.Net)</PaymentTerms><CustomerContact>Carrie Anne Hamblen</CustomerContact><CustomerName>Carrie Anne Hamblen</CustomerName><FOB>Origin</FOB><BillTo><Name>Carrie Anne Hamblen</Name><AddressField>6826 W. Yucca St</AddressField><City>Peoria</City><Zip>85051</Zip></BillTo><Ship><Name>Carrie Anne Hamblen</Name><AddressField>6826 W. Yucca St</AddressField><Zip>85051</Zip><Country>United States</Country><State>Arizona</State></Ship><Items><SalesOrderItem><ID>-1</ID><ProductNumber>BTY-AED-180</ProductNumber><Description>BTY-AED-180</Description><Taxable>true</Taxable><Quantity>1</Quantity><ProductPrice>8.97</ProductPrice><TotalPrice>8.97</TotalPrice><UOMCode>ea</UOMCode><ItemType>10</ItemType><Status>10</Status><NewItemFlag>false</NewItemFlag><LineNumber>1</LineNumber></SalesOrderItem></Items></SalesOrder><IssueFlag>false</IssueFlag></SOSaveRq></FbiMsgsRq>
+</FbiXml>
+
+)
+
+

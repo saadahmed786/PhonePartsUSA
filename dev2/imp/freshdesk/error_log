@@ -1,0 +1,13 @@
+[31-Mar-2016 11:50:02 America/Chicago] PHP Parse error:  syntax error, unexpected ':', expecting ')' in /home/phonerep/public_html/imp/freshdesk/create_ticket.php on line 13
+[07-Sep-2016 11:51:45 America/Chicago] PHP Notice:  Undefined index: config in /home/phonerep/public_html/imp/freshdesk/create_ticket.php on line 2
+[07-Sep-2016 11:55:23 America/Chicago] PHP Notice:  Undefined index: config in /home/phonerep/public_html/imp/freshdesk/create_ticket.php on line 2
+[08-Sep-2016 11:16:02 America/Chicago] PHP Notice:  Undefined index: config in /home/phonerep/public_html/imp/freshdesk/create_ticket.php on line 2
+[08-Sep-2016 11:32:43 America/Chicago] PHP Notice:  Undefined index: config in /home/phonerep/public_html/imp/freshdesk/create_ticket.php on line 2
+[08-Sep-2016 14:50:41 America/Chicago] PHP Notice:  Undefined index: config in /home/phonerep/public_html/imp/freshdesk/create_ticket.php on line 2
+[09-Sep-2016 16:01:48 America/Chicago] PHP Notice:  Undefined index: config in /home/phonerep/public_html/imp/freshdesk/create_ticket.php on line 2
+[12-Sep-2016 11:16:10 America/Chicago] PHP Notice:  Undefined index: config in /home/phonerep/public_html/imp/freshdesk/create_ticket.php on line 2
+[12-Sep-2016 11:39:25 America/Chicago] PHP Notice:  Undefined index: config in /home/phonerep/public_html/imp/freshdesk/create_ticket.php on line 2
+[12-Sep-2016 12:20:15 America/Chicago] PHP Notice:  Undefined index: config in /home/phonerep/public_html/imp/freshdesk/create_ticket.php on line 2
+[12-Sep-2016 12:21:58 America/Chicago] PHP Notice:  Undefined index: config in /home/phonerep/public_html/imp/freshdesk/create_ticket.php on line 2
+[12-Sep-2016 12:27:07 America/Chicago] PHP Notice:  Undefined index: config in /home/phonerep/public_html/imp/freshdesk/create_ticket.php on line 2
+[13-Jun-2017 11:56:07 America/Chicago] PHP Notice:  Undefined index: method in /home/phonerep/public_html/imp/freshdesk/ticket_buyback.php on line 6

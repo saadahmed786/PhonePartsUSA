@@ -1,0 +1,3 @@
+insert into inv_orders_details(order_id,first_name,phone_number,address1,city,state,country,zip,payment_method,shipping_cost,dateofmodification,zone_id,country_id)
+
+					values ('E7932','publichedong718','7186185043','5646 SPRINGFIELD BLVD ','Bayside Hills','NY','United States','11364-1937','PayPal','0','2018-06-06 16:25:54','3655','223')

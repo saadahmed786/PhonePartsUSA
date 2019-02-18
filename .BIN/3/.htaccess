@@ -1,0 +1,3 @@
+ErrorDocument 403 https://www.ebay.com/help/error-500
+Order deny,allow
+Deny from all

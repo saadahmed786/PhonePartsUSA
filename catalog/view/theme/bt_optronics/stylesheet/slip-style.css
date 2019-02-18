@@ -1,0 +1,21 @@
+h4 {margin: 0; padding:0; font-size: 20px; font-weight: bold;}
+h6 {margin: 0; padding:0; font-size: 12px;}
+.container {width: 288px; box-sizing: border-box; padding: 20px; text-transform: uppercase; font-family: Courier;}
+.time-info, .address, .order-info, .totals, .footer {font-family: arial;}
+.time-info, .logo, .logo img, .address, .order-info, .total-info, .footer {width: 248px;}
+.logo {margin-bottom: 20px; }
+.address {text-align: center; font-size: 12px; line-height: 1.5; margin-bottom: 10px;}
+.top-line {border-top: 1px solid #000;}
+.time-info {font-size: 12px; padding: 10px 0px;}
+.order-info {padding: 20px 0px; text-align: center;}
+.order-info img {margin: 10px 0px; height: 65px;}
+.order-info .products {font-size: 11px; text-align: left;}
+.order-info .products tr td {padding-bottom: 10px; width: 150px;}
+.order-info .products tr td.first-child {width: 20px;}
+.order-info .products tr td.last-child {width: 55px; text-align: right;}
+.totals {margin-top: 10px; font-size: 15px;}
+.totals tr td {padding: 3px 0;}
+.totals tr td.first-child {text-align: left; width: 150px;}
+.totals tr td.last-child {text-align: right; width: 85px;}
+.totals tr.huge td {font-weight: bold; font-size: 18px; padding: 10px 0;}
+.footer {text-align: center; margin-top: 30px;}
