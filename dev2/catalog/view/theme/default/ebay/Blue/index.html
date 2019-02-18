@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <style>
+            @charset "utf-8";
+            html, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a	 abbr, acronym, address, big, cite, code,
+            del, dfn, em, font, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol,
+            form, label, caption, body{
+                margin: 0;	padding: 0;	border: 0;	outline: 0;	font-size: 100%; vertical-align: baseline; background: transparent;
+                font-family:arial;
+            }
+
+            .header, .footer{
+                width:100%;
+                background-color: #14528B;
+                height:100px;
+                margin:0px;
+                padding:0px;
+                border:0px;
+            }
+            .header{
+                border-bottom:3px solid #B2B4B7;
+            }
+            .footer{
+                border-top:3px solid #B2B4B7;
+            }
+            .body {
+                width:800px;
+                margin-left:auto; margin-right:auto;
+                min-height:600px;
+            }
+            .logo{
+                margin:10px; margin-top:10px;
+                float:left;
+                height:80px; width:180px;
+                text-align: center;
+                background-color: #FFF;
+                line-height:80px; font-size:42px;
+                font-weight:bold;
+            }
+            .contact{
+                margin:10px; margin-top:10px;
+                float:right;
+                height:80px; width:250px;
+                text-align: right;
+                line-height:20px; font-size:14px;
+                color:#FFF;
+                font-weight:bold;
+            }
+            .left{
+                float:left;
+                width:450px;
+            }
+            .right{
+                float:right;
+                width:350px;
+            }
+            h1{
+                font-weight:bold; font-size:28px;
+                margin:20px 0;
+            }
+            h2{
+                font-weight:bold; font-size:18px;
+                margin-bottom:10px;
+            }
+            h3{
+                font-weight:bold; font-size:18px;
+                margin:10px 0;
+            }
+            .description{
+                font-size:12px;
+            }
+
+            .gallery ul{
+                list-style-type:none;
+            }
+
+            .gallery li{
+                list-style-type:none;
+                display:block;
+            }
+
+        </style>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    LOGO
+                </div>
+                <div class="contact">
+                    Suite 15, 30-38 Dock Street<br />Leeds, LS10 1JF<br />
+                    info@welfordmedia.co.uk<br />
+                    08456341838
+                </div>
+            </div>
+            <div class="body">
+                <h1>{title}</h1>
+                <div class="left">
+                    <h2>Description</h2>
+                    <div class="description">{description}</div>
+                    <h3>Returns</h3>
+                    <div class="description">{returns}</div>
+                    <h3>Payment information</h3>
+                    <div class="description">{paymentinfo}</div>
+                    <h4>Example of image thumb tag url</h4>
+                    <div class="description">{imageurl_1_thumb}</div>
+                    <h4>Example of image tag</h4>
+                    <div class="description">{imageurl_1}</div>
+                </div>
+                <div class="right">
+                    <h4>Example of gallery tag url</h4>
+                    <div class="description">{gallery}</div>
+                </div>
+            </div>
+            <div class="footer"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+[11-Oct-2018 22:04:18 America/Los_Angeles] PHP Fatal error:  Call to a member function getProductIDbySku() on null in /home/phonerep/public_html/catalog/controller/api/repairdesk.php on line 185
+[10-Nov-2018 11:47:11 America/Chicago] PHP Warning:  ZipArchive::close(): Read error: Is a directory in /home/phonerep/public_html/zip.php on line 31
+[10-Nov-2018 11:47:58 America/Chicago] PHP Warning:  ZipArchive::close(): Read error: Is a directory in /home/phonerep/public_html/zip.php on line 31
+[10-Nov-2018 11:48:24 America/Chicago] PHP Warning:  ZipArchive::close(): Read error: Is a directory in /home/phonerep/public_html/zip.php on line 31
+[04-Dec-2018 18:46:34 America/Los_Angeles] PHP Fatal error:  Call to a member function getZone() on null in /home/phonerep/public_html/catalog/controller/payment/pp_payflow_pro.php on line 273
+[04-Dec-2018 18:48:52 America/Los_Angeles] PHP Fatal error:  Call to undefined function parse_payflow_string() in /home/phonerep/public_html/catalog/controller/payment/pp_payflow_pro.php on line 1621
+[08-Jan-2019 09:08:26 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where order_id='566129'' at line 3<br />Error No: 1064<br />UPDATE oc_order SET 
+			total='18.1',
+			where order_id='566129'
+			' in /home/phonerep/public_html/system/database/mysqli.php:40
+Stack trace:
+#0 /home/phonerep/public_html/vqmod/vqcache/vq2-system_library_db.php(83): DBMySQLi->query('UPDATE oc_order...')
+#1 /home/phonerep/public_html/catalog/controller/api/repairdesk.php(312): DB->query('UPDATE oc_order...')
+#2 [internal function]: ControllerApiRepairdesk->add_order()
+#3 /home/phonerep/public_html/vqmod/vqcache/vq2-system_engine_front.php(47): call_user_func_array(Array, Array)
+#4 /home/phonerep/public_html/vqmod/vqcache/vq2-system_engine_front.php(29): Front->execute(Object(Action))
+#5 /home/phonerep/public_html/index.php(296): Front->dispatch(Object(Action), Object(Action))
+#6 {main}
+  thrown in /home/phonerep/public_html/system/database/mysqli.php on line 40

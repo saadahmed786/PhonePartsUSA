@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'AileronHeavy';
+    src: url('fonts/AileronHeavy.eot');
+    src: url('fonts/AileronHeavy.eot') format('embedded-opentype'),
+         url('fonts/AileronHeavy.woff2') format('woff2'),
+         url('fonts/AileronHeavy.woff') format('woff'),
+         url('fonts/AileronHeavy.ttf') format('truetype'),
+         url('fonts/AileronHeavy.svg#AileronHeavy') format('svg');
+}

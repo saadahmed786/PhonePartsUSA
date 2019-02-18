@@ -1,0 +1,9 @@
+UPDATE inv_orders_items SET product_qty=product_qty-1 WHERE order_id='554918' and product_sku='SRN-SAM-1654'
+UPDATE inv_orders_items SET product_price=product_qty*product_unit WHERE order_id='554918' and product_sku='SRN-SAM-1654'
+----------------------
+UPDATE inv_orders_items SET product_qty=product_qty-1 WHERE order_id='554918' and product_sku='SRN-SAM-1654'
+UPDATE inv_orders_items SET product_price=product_qty*product_unit WHERE order_id='554918' and product_sku='SRN-SAM-1654'
+----------------------
+UPDATE inv_orders_items SET product_qty=product_qty-2 WHERE order_id='555003' and product_sku='APL-001-2308'
+UPDATE inv_orders_items SET product_price=product_qty*product_unit WHERE order_id='555003' and product_sku='APL-001-2308'
+----------------------

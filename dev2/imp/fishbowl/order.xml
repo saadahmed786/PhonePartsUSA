@@ -1,0 +1,55 @@
+<FbiXml>
+	<Ticket>
+		<UserID>1</UserID>
+		<Key>lef4GMpdZlAFDAuwWuUmeA==</Key>
+	</Ticket>
+	<FbiMsgsRq>
+		<SOSaveRq>
+			<SalesOrder>
+				<Salesman>admin</Salesman>
+				<Status>20</Status>
+				<Carrier>Will Call</Carrier>
+				<FirstShipDate>2013-09-03T04:02:08</FirstShipDate>
+				<CreatedDate>2013-09-03T04:02:08</CreatedDate>
+				<IssuedDate>2013-09-03T14:02:08</IssuedDate>
+				<TaxRatePercentage>0.0625</TaxRatePercentage>
+				<TaxRateName>Utah</TaxRateName>
+				<ShippingTerms>Prepaid &amp; Billed</ShippingTerms>
+				<PaymentTerms>Other</PaymentTerms>
+				<CustomerContact>Franklin Jesús martinez </CustomerContact>
+				<CustomerName>Franklin Jesús martinez </CustomerName>
+				<FOB>Origin</FOB>
+				<BillTo>
+					<Name>Franklin Jesús martinez </Name>
+					<AddressField>17105 N BAY RD APARTAMENT B 405</AddressField>
+					<City>NORTH MIAMI BEACH</City>
+					<Zip>33160-3976</Zip>
+				</BillTo>
+				<Ship>
+					<Name>Franklin Jesús martinez </Name>
+					<AddressField>17105 N BAY RD APARTAMENT B 405</AddressField>
+					<Zip>33160-3976</Zip>
+					<Country>US</Country>
+					<State>FLORIDA</State>
+				</Ship>
+				<Items>
+					<SalesOrderItem>
+						<ID>-1</ID>
+						<ProductNumber>BTY-COV-096</ProductNumber>
+						<Description>BTY-COV-096</Description>
+						<Taxable>true</Taxable>
+						<Quantity>1</Quantity>
+						<ProductPrice>7.95</ProductPrice>
+						<TotalPrice>7.95</TotalPrice>
+						<UOMCode>ea</UOMCode>
+						<ItemType>10</ItemType>
+						<Status>10</Status>
+						<NewItemFlag>false</NewItemFlag>
+						<LineNumber>1</LineNumber>
+					</SalesOrderItem>
+				</Items>
+			</SalesOrder>
+			<IssueFlag>false</IssueFlag>
+		</SOSaveRq>
+	</FbiMsgsRq>
+</FbiXml>

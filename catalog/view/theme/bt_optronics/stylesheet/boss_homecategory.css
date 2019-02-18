@@ -1,0 +1,114 @@
+/* when not use scroll */
+.boss_category_tabs{float:left; width:766px}
+.boss_category_tabs .box-heading{background:url(../image/boss_heading.jpg) repeat-x; height:41px; border:1px solid #dedcdc; padding:0 12px;   font:400 16px/43px HelveticaBold; text-transform:uppercase; margin:0;}
+.boss_category_tabs #boss-category-heading-0.box-heading{color:#009e4a;border-bottom:2px solid #009e4a; }
+.boss_category_tabs #boss-category-heading-1.box-heading{color:#0062a9;border-bottom:2px solid #0062a9; }
+.boss_category_tabs #boss-category-heading-2.box-heading{color:#7b019a;border-bottom:2px solid #7b019a; }
+.boss_category_tabs #boss-category-heading-3.box-heading{color:#e60000;border-bottom:2px solid #e60000; }
+.boss_category_tabs .boss_htabs{background:url(../image/filter_tab_bg.jpg) repeat-x; height:34px; border-bottom:1px solid #cfcdcd; border-left:1px solid #dedcdc; border-right:1px solid #dedcdc;}
+.boss_category_tabs .boss_htabs a{float:left; color:#707070; font:400 11px HelveticaBold; text-transform:uppercase; padding:0 14px; text-decoration:none; height:34px; line-height:34px}
+.boss_category_tabs .boss_htabs a.selected{background:#fff url(../image/filter_tab_select.jpg) repeat-x; border-left:1px solid #dedcdc; border-right:1px solid #dedcdc; cursor:default; height:35px; }
+.boss_category_tabs .boss_htabs a.selected:first-child{border-left:none}
+.boss_category_tabs .boss_htabs a:hover{color:#000}
+.boss_category_tabs .boss_htabs a.selected:hover{color:#707070;}
+.boss_home_category {}
+.boss_home_category ul li{display: inline-block;list-style: none;width: 140px;margin-bottom: 20px; margin-right: 10px}
+.boss_category_content{margin-bottom: 10px; padding:0 0 0 0; border:1px solid #dedcdc; border-top:none; clear:both; position:relative}
+.boss_category_content .image{margin-bottom:5px; position:relative}
+.boss_category_content .name{margin-bottom: 4px;}
+.boss_category_content .name a{color: #3A3A3A; font: 400 12px HelveticaBold;}
+.boss_category_content .description{color: #676767;
+    font-size: 12px;
+    margin-bottom: 8px;}
+.boss_category_content .price{color: #D0344A;
+    display: block;
+    font: 700 14px Arial;
+    margin-bottom: 16px;}
+.boss_category_content .rating{display: block;
+    margin-bottom: 11px;}
+.boss_category_content .cart{display:none}	
+.boss_category_content .one-product-category{width:169px; padding:42px 10px 10px; border-right:1px solid #dedcdc; height:325px;}	
+.boss_category_content .box-content ul li{margin-right: 10px; width: 181px;}
+.boss_category_content .box{margin-bottom:0}
+/* when not use scroll */
+
+.box-heading {
+}
+
+.hc-box-product .image {
+	display: block;
+	margin-bottom: 0px;
+}
+.hc-box-product .image img {
+}
+.hc-box-product .name a {
+}
+.hc-box-product .price {
+}
+.hc-box-product .price-old {
+	text-decoration: line-through;
+	color:#787878;
+}
+.hc-box-product .price-new {}
+.hc-box-product .rating {
+	display: block;
+}
+
+/* Elastislide Style */
+.hc-es-carousel-wrapper  ul, .es-carousel-wrapper li{ 
+	margin:0;
+	padding:0;
+}
+.hc-es-carousel-wrapper{
+	position:relative;
+}
+.hc-es-carousel{
+	overflow:hidden;background:none;
+}
+.hc-es-carousel ul{
+/*	display:none;*/
+}
+.hc-es-carousel ul li{
+	height:100%;
+	float:left;
+	display:block;
+}
+.hc-es-carousel ul li a{
+
+}
+.hc-es-carousel ul li a img{
+	
+	border:none;
+	max-height:100%;
+	
+}
+.boss_category_content .es-nav span{
+	position:absolute;
+	margin-top:-13px;
+	text-indent:-9000px;
+	cursor:pointer;
+	opacity:0.8;
+}
+.boss_category_content .es-nav span.es-nav-prev{
+	position: absolute;
+	top: -66px;
+	right: 37px;
+	width: 42px;
+	height: 42px;
+	cursor: pointer;
+	background: url('../image/filter_prev.jpg') center no-repeat;
+}
+.boss_category_content .es-nav span.es-nav-next{
+	position: absolute;
+	top: -66px;
+	right: -3px;
+	width: 42px;
+	height: 42px;
+	cursor: pointer;
+	background: url('../image/filter_next.jpg') center no-repeat;
+}
+.boss_category_content .es-nav span.es-nav-prev:hover{background: url('../image/filter_prev_hover.jpg') center no-repeat;}
+.boss_category_content .es-nav span.es-nav-next:hover{background: url('../image/filter_next_hover.jpg') center no-repeat;}
+.boss_home_category .es-nav span:hover{
+	opacity:1.0;
+}

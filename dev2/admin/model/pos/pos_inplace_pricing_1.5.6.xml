@@ -1,0 +1,25 @@
+<modification>
+    <id>POS Inplace Pricing</id>
+    <version>1.1</version>
+    <vqmver>2.x</vqmver>
+    <author>Jimmy: flyingmel.java@gmail.com, Jason: hh4cimm@yahoo.com</author>
+    <file name="system/library/cart.php">
+		<operation>
+			<search position="after" offset="1"><![CDATA['recurring_trial_duration'  => $recurring_trial_duration,]]></search>
+			<add><![CDATA[if (isset($this->session->data['inplace_pricing'])) {
+				$inplace_pricing = $this->session->data['inplace_pricing'];
+				$inplace_price = (float)$inplace_pricing['price'];
+				$inplace_price = $this->getPriceFromPriceWithTax($inplace_price, $product_query->row['tax_class_id']);
+				if ($key == $inplace_pricing['key']) {
+					$this->data[$key]['price'] = $inplace_price;
+					$this->data[$key]['total'] = $inplace_price * $quantity;
+					// add for Weight based price begin
+					if (isset($this->session->data['inplace_pricing']['weight'])) {
+						$this->data[$key]['total'] = $inplace_price * $quantity * $this->session->data['inplace_pricing']['weight'];
+					}
+					// add for Weight based price end
+				}
+			}]]></add>
+		</operation>
+    </file>
+</modification>

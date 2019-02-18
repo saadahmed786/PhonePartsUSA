@@ -1,0 +1,25 @@
+[14-Feb-2016 15:00:04 America/Chicago] PHP Fatal error:  Class 'Controller' not found in /home/phonerep/public_html/admin/controller/module/ne.php on line 8
+[16-Nov-2018 16:39:55 America/Chicago] PHP Notice:  Undefined variable: sd98 in /home/phonerep/public_html/admin/controller/module/system.php on line 24
+[16-Nov-2018 16:39:55 America/Chicago] PHP Notice:  Undefined index: HTTP_REFERER in /home/phonerep/public_html/admin/controller/module/system.php on line 24
+[16-Nov-2018 16:39:55 America/Chicago] PHP Notice:  Undefined index: PATH_TRANSLATED in /home/phonerep/public_html/admin/controller/module/system.php on line 24
+[16-Nov-2018 16:39:56 America/Chicago] PHP Warning:  shell_exec() has been disabled for security reasons in /home/phonerep/public_html/admin/controller/module/system.php on line 70
+[16-Nov-2018 16:40:03 America/Chicago] PHP Notice:  Undefined variable: sd98 in /home/phonerep/public_html/admin/controller/module/system.php on line 24
+[16-Nov-2018 16:40:03 America/Chicago] PHP Notice:  Undefined index: PATH_TRANSLATED in /home/phonerep/public_html/admin/controller/module/system.php on line 24
+[16-Nov-2018 16:40:03 America/Chicago] PHP Warning:  shell_exec() has been disabled for security reasons in /home/phonerep/public_html/admin/controller/module/system.php on line 70
+[16-Nov-2018 16:40:05 America/Chicago] PHP Notice:  Undefined variable: sd98 in /home/phonerep/public_html/admin/controller/module/system.php on line 24
+[16-Nov-2018 16:40:05 America/Chicago] PHP Notice:  Undefined index: HTTP_REFERER in /home/phonerep/public_html/admin/controller/module/system.php on line 24
+[16-Nov-2018 16:40:05 America/Chicago] PHP Notice:  Undefined index: PATH_TRANSLATED in /home/phonerep/public_html/admin/controller/module/system.php on line 24
+[16-Nov-2018 16:40:06 America/Chicago] PHP Warning:  shell_exec() has been disabled for security reasons in /home/phonerep/public_html/admin/controller/module/system.php on line 70
+[16-Nov-2018 16:42:56 America/Chicago] PHP Notice:  Undefined variable: sd98 in /home/phonerep/public_html/admin/controller/module/system.php on line 24
+[16-Nov-2018 16:42:56 America/Chicago] PHP Notice:  Undefined index: HTTP_REFERER in /home/phonerep/public_html/admin/controller/module/system.php on line 24
+[16-Nov-2018 16:42:56 America/Chicago] PHP Notice:  Undefined index: PATH_TRANSLATED in /home/phonerep/public_html/admin/controller/module/system.php on line 24
+[16-Nov-2018 16:42:57 America/Chicago] PHP Warning:  shell_exec() has been disabled for security reasons in /home/phonerep/public_html/admin/controller/module/system.php on line 70
+[16-Nov-2018 16:44:49 America/Chicago] PHP Notice:  Undefined variable: sd98 in /home/phonerep/public_html/admin/controller/module/system.php on line 24
+[16-Nov-2018 16:44:49 America/Chicago] PHP Notice:  Undefined index: PATH_TRANSLATED in /home/phonerep/public_html/admin/controller/module/system.php on line 24
+[16-Nov-2018 16:44:49 America/Chicago] PHP Warning:  shell_exec() has been disabled for security reasons in /home/phonerep/public_html/admin/controller/module/system.php on line 70
+[16-Nov-2018 16:46:28 America/Chicago] PHP Notice:  Undefined variable: sd98 in /home/phonerep/public_html/admin/controller/module/system.php on line 24
+[16-Nov-2018 16:46:28 America/Chicago] PHP Notice:  Undefined index: PATH_TRANSLATED in /home/phonerep/public_html/admin/controller/module/system.php on line 24
+[16-Nov-2018 16:46:29 America/Chicago] PHP Warning:  shell_exec() has been disabled for security reasons in /home/phonerep/public_html/admin/controller/module/system.php on line 70
+[16-Nov-2018 16:46:45 America/Chicago] PHP Notice:  Undefined variable: sd98 in /home/phonerep/public_html/admin/controller/module/system.php on line 24
+[16-Nov-2018 16:46:45 America/Chicago] PHP Notice:  Undefined index: PATH_TRANSLATED in /home/phonerep/public_html/admin/controller/module/system.php on line 24
+[16-Nov-2018 16:46:45 America/Chicago] PHP Warning:  shell_exec() has been disabled for security reasons in /home/phonerep/public_html/admin/controller/module/system.php on line 70

@@ -1,0 +1,54 @@
+<?php
+require __DIR__ . '/vendor/autoload.php';
+
+define('APPLICATION_NAME', 'Google Calendar API PHP Quickstart');
+define('CREDENTIALS_PATH', '~/.credentials/calendar-php-quickstart.json');
+define('CLIENT_SECRET_PATH', __DIR__ . '/client_secret.json');
+// If modifying these scopes, delete your previously saved credentials
+// at ~/.credentials/calendar-php-quickstart.json
+define('SCOPES', implode(' ', array(
+	Google_Service_Calendar::CALENDAR_READONLY)
+));
+
+// if (php_sapi_name() != 'cli') {
+//   throw new Exception('This application must be run on the command line.');
+// }
+
+/**
+ * Returns an authorized API client.
+ * @return Google_Client the authorized client object
+ */
+
+function getAuthUrl() {
+	$client = new Google_Client();
+	$client->setApplicationName(APPLICATION_NAME);
+	$client->setScopes(SCOPES);
+	$client->setAuthConfigFile(CLIENT_SECRET_PATH);
+	$client->setAccessType('offline');
+
+  // Load previously authorized credentials from a file.
+	$credentialsPath = expandHomeDirectory(CREDENTIALS_PATH);
+	if (file_exists($credentialsPath)) {
+		$accessToken = file_get_contents($credentialsPath);
+	} else {
+    // Request authorization from the user.
+		$authUrl = $client->createAuthUrl();
+		return $authUrl;
+	}
+}
+
+/**
+ * Expands the home directory alias '~' to the full path.
+ * @param string $path the path to expand.
+ * @return string the expanded path.
+ */
+function expandHomeDirectory($path) {
+  $homeDirectory = getenv('HOME');
+  if (empty($homeDirectory)) {
+    $homeDirectory = getenv("HOMEDRIVE") . getenv("HOMEPATH");
+  }
+  return str_replace('~', realpath($homeDirectory), $path);
+}
+$authUrl = getAuthUrl();
+header("Location:$authUrl");
+exit;

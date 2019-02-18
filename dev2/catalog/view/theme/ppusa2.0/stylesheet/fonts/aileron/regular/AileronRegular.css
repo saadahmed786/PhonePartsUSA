@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'AileronRegular';
+    src: url('fonts/AileronRegular.eot');
+    src: url('fonts/AileronRegular.eot') format('embedded-opentype'),
+         url('fonts/AileronRegular.woff2') format('woff2'),
+         url('fonts/AileronRegular.woff') format('woff'),
+         url('fonts/AileronRegular.ttf') format('truetype'),
+         url('fonts/AileronRegular.svg#AileronRegular') format('svg');
+}

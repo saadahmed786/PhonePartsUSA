@@ -1,0 +1,266 @@
+/* onecheckout */
+.onecheckout {
+	width:32%;
+	float:left;
+	text-align:left;
+}
+.onecheckoutmid {
+	width:28%;
+	margin:0 3%;
+	float:left;
+	text-align:left;
+}
+.onecheckout #confirmorder{
+	display:none;
+}
+.onecheckout-heading {
+	border-bottom: 1px solid #000000;
+	padding: 8px;
+	padding-left:0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	color: #000000;
+	margin-bottom:15px;
+	text-align:left;
+}
+.onecheckout-content {
+	padding: 0px 0px 15px 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	overflow: auto;
+	color: #555555;
+	text-align:left;
+}
+#checkout #login{
+	padding-left:6px;
+	margin: 15px 0 20px;
+	display:none;
+	width:98%;
+	padding:10px;
+	border:1px solid #ccc;
+	margin-bottom:15px;
+}
+#checkout a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #38B0E3;
+	text-decoration: underline;
+	cursor: pointer;
+}
+#checkout b,.onecheckout-content p,.onecheckout-content table.form b{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+#checkout #login .close_la{
+	position:relative;
+	margin-bottom:-16px;
+	top:-16px;
+	right:-16px;
+	cursor:pointer;
+	float:right;
+	width:16px;
+	height:16px;
+	background:url("../image/cancel.png") no-repeat scroll 0 0 transparent;
+}
+.onecheckout-content .left {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	float: left;
+	width: 48%;
+}
+.onecheckout-content .right {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	float: right;
+	width: 48%;
+}
+.onecheckout-content .small-field{
+	width:90%;
+}
+.onecheckout-content .large-field{
+	width:95%;
+}
+.onecheckout-content .divclear {
+	clear: both;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+.onecheckout-product table {
+	width: 99%;
+	border-collapse: collapse;
+	border-top: 1px solid #DDDDDD;
+	border-left: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+	margin-bottom: 20px;
+}
+.onecheckout-product td {
+	padding: 7px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+.onecheckout-product td b{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+.onecheckout-product thead td {
+	color: #4D4D4D;
+	font-weight: bold;
+	background-color: #F7F7F7;
+	border-bottom: 1px solid #DDDDDD;
+}
+.onecheckout-product thead .name, .onecheckout-product thead .model {
+	text-align: left;
+}
+.onecheckout-product thead .quantity, .onecheckout-product thead .price, .onecheckout-product thead .total {
+	text-align: right;
+}
+.onecheckout-product tbody td {
+	vertical-align: top;
+	border-bottom: 1px solid #DDDDDD;
+}
+.onecheckout-product tbody .name, .onecheckout-product tbody .model {
+	text-align: left;
+}
+.onecheckout-product tbody .quantity, .onecheckout-product tbody .price, .onecheckout-product tbody .total {
+	text-align: right;
+}
+.onecheckout-product tfoot td {
+	text-align: right;
+	border-bottom: 1px solid #DDDDDD;
+}
+a.onebutton {
+	display: inline-block;
+	padding-left: 6px;
+	background: url('../image/button-left.png') top left no-repeat;
+	text-decoration: none;
+	cursor: pointer;
+}
+a.onebutton span {
+	color: #FFFFFF;
+	line-height: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	display: inline-block;
+	padding: 6px 12px 8px 5px;
+	background: url('../image/button-right.png') top right no-repeat;
+}
+a.onebutton:hover {
+	background: url('../image/button-left-active.png') top left no-repeat;
+}
+a.onebutton:hover span {
+	color: #FFFFFF;
+	background: url('../image/button-right-active.png') top right no-repeat;
+}
+.onecheckout-content .onebuttons {
+	background: #FFFFFF;
+	border: 1px solid #EEEEEE;
+	overflow: auto;
+	padding: 6px;
+	margin-bottom: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+.onecheckout-content .onebuttons .left {
+	float: left;
+	text-align: left;
+}
+.onecheckout-content .onebuttons b,.onecheckout-product td.name a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color: #38B0E3;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.onecheckout-content .onebuttons .right {
+	float: right;
+	text-align: right;
+}
+.onecheckout-content .onebuttons .center {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+} 
+.onecheckout-content .success,.onecheckout-content .warning,#checkout .success,#checkout .warning {
+	padding: 10px 10px 10px 33px;
+	margin-bottom: 15px;
+	color: #555555;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.onecheckout-content .success,#checkout .success {
+	background: #EAF7D9 url('../image/success.png') 10px center no-repeat;
+	border: 1px solid #BBDF8D;
+}
+.onecheckout-content .warning,#checkout .warning {
+	background: #FFD1D1 url('../image/warning.png') 10px center no-repeat;
+	border: 1px solid #F8ACAC;
+}
+.onecheckout-content .required {
+	color: #FF0000;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.onecheckout-content .error {
+	display: block;
+	color: #FF0000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+#checkout input[type='text'],#checkout input[type='password'],.onecheckout-content input[type='text'],.onecheckout-content  input[type='password'],.onecheckout-content  textarea {
+	background: #F8F8F8;
+	border: 1px solid #CCCCCC;
+	padding: 3px;
+	margin-left: 0px;
+	margin-right: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+.onecheckout-content select {
+	background: #F8F8F8;
+	border: 1px solid #CCCCCC;
+	padding: 2px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+.onecheckout-content label {
+	cursor: pointer;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	display:inline;
+}
+.onecheckout-content table.form td{
+	padding:4px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+.onecheckout-content table.form tr td:first-child {
+	width: 120px;
+}
+.onecheckout-content .cart-module .cart-heading {
+	border: 1px solid #DBDEE1;
+	padding: 8px 8px 8px 22px;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #555555;
+	margin-bottom: 15px;
+	cursor: pointer;
+	background: #F8F8F8 url('../image/arrow-right.png') 10px 50% no-repeat;
+}
+.onecheckout-content .cart-module .active {
+	background: #F8F8F8 url('../image/arrow-down.png') 7px 50% no-repeat;
+}
+.onecheckout-content .cart-module .cart-content {
+	padding: 0px 0px 15px 0px;
+	display: none;
+	overflow: auto;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+.wait img{
+	display:inline;
+}
+/*onecheckout end*/

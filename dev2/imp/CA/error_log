@@ -1,0 +1,15 @@
+[30-Jun-2015 22:45:05 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'Exception' with message 'fetchStoreOrders error : 3efef6b1-9138-4caf-8155-573fa7037dea , Array
+(
+    [GetOrderListResult] => Array
+        (
+            [Status] => Failure
+            [MessageCode] => 1
+            [Message] => Unexpected
+        )
+
+)
+' in /home/phonerep/public_html/imp/CA/ChannelAdvisor.php:201
+Stack trace:
+#0 /home/phonerep/public_html/imp/CA/ca_orders.php(23): ChannelAdvisor->fetchStoreOrders('2015-06-30T23:2...')
+#1 {main}
+  thrown in /home/phonerep/public_html/imp/CA/ChannelAdvisor.php on line 201

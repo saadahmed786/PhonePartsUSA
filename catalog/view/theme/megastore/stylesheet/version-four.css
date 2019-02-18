@@ -1,0 +1,46 @@
+/* General */
+
+body { background:#fff url(../images/version-four/bg-body.png); }
+.body-full-width, .body { background:#fff; }
+
+/* Button */
+
+.button { background:url(../images/version-four/bg-button.png) top left repeat-x; }
+
+/* Top Bar */
+
+div.top-bar { background:#f3f3f3; }
+
+/* Top Bar -> Welcome Text */
+
+div.top-bar .welcome-text a { color:#005bb9; }
+
+/* Header -> Shopping Cart */
+
+div.header #cart .content table.cart tr .total { color:#005bb9; }
+
+/* Categories */
+
+.categories, .categories-mobile-header { background:#006ac1 url(../images/version-four/bg-categories.png) bottom left repeat-x; }
+
+/* Box -> Products */
+
+.box-product > div .price { color:#005bb9; }
+.product-list > div .price, div.pagination .links b { color:#005bb9; }
+div.product-info .right .price .price-new { color:#005bb9; }
+
+/* Footer */
+
+div#footer { background:#f3f3f3; }
+
+/* Twitter updates */
+
+div#twitter-updates ul.tweet_list .tweet_text a { color:#005bb9; }
+
+/* Content -> Box Category */
+
+.box-category ul li a:hover, .box-category ul li a.active { color:#005bb9; }
+
+/* Product Compare */
+
+div.product-filter .product-compare a { color:#005bb9; }

@@ -1,0 +1,310 @@
+	<div id="tab-cdn">
+		<script type="text/javascript">
+		<!--
+		function validate_cdn() {
+			$('#btn_cdn_validate').hide();
+			$('#loading_cdn_validate').fadeIn('slow');
+			$.ajax({
+				url: '//api.wxhosting.com/public/cdn/validate.json',
+				type: 'POST',
+				dataType: 'JSON',
+				data: 'key=' + $("input[name=wx_cdn_api_key]").val() + '&token=' + $("input[name=wx_cdn_api_token]").val() ,
+				success: function(json) {
+					$('.success, .warning, .attention, information, .error').remove();
+					if (json['success']['code'] == 200) {
+						//Form Values
+						$("input[name=wx_cdn_http]").val(json['http_url']);
+						$("input[name=wx_cdn_https]").val(json['https_url']);
+						$("input[name=wx_cdn_api_valid]").val('1');
+						$("input[name=wx_cdn_account]").val(json['id'] + ' (' + json['name'] + ')');
+						$("input[name=wx_cdn_https_status]").val('<?php echo $text_cdn_https_shared; ?>');
+						//Display Values
+						$("#wx_cdn_http").html(json['http_url']);
+						$("#wx_cdn_account").html(json['id'] + ' (' + json['name'] + ')');
+						$("#wx_cdn_https_status").html('<?php echo $text_cdn_https_shared; ?>');
+
+
+						//Effects
+						$('#validate-cdn').slideUp('slow');
+						$('#cdn-settings').slideDown('slow');
+
+						$('#notification').html('<div class="success" style="display: none;">' + json['success']['message'] + '</div>');
+						$('.success').fadeIn('slow');
+						$('html, body').animate({ scrollTop: 0 }, 'slow');
+						$('.success').delay(1500).fadeOut('slow');
+					}
+					$('#loading_cdn_validate').hide();
+					$('#btn_cdn_validate').fadeIn('slow');
+				},
+			error: function(xhr, status, error) {
+				$('#btn_cdn_validate').show();
+				$('#loading_cdn_validate').hide();
+				clear();
+				var json = $.parseJSON(xhr['responseText']);
+				$("input[name=wx_cdn_http]").val('');
+				$("input[name=wx_cdn_https]").val('');
+				$("input[name=wx_cdn_api_valid]").val('0');
+				$('#notification').html('<div class="warning" style="display: none;">' + json['error']['message'] + '</div>');
+				$('.warning').fadeIn('slow');
+				$('html, body').animate({ scrollTop: 0 }, 'slow');
+				$('.warning').delay(1500).fadeOut('slow');
+				}
+			});
+		}
+		function get_cdn_settings() {
+			$('#btn_cdn_get_settings').hide();
+			$('#loading_cdn_get_settings').fadeIn('slow');
+			$.ajax({
+				url: '//api.wxhosting.com/public/cdn/validate.json',
+				type: 'POST',
+				dataType: 'JSON',
+				data: 'key=' + $("input[name=wx_cdn_api_key]").val() + '&token=' + $("input[name=wx_cdn_api_token]").val() ,
+				success: function(json) {
+					$('.success, .warning, .attention, information, .error').remove();
+					if (json['success']) {
+						$("input:radio[name=wx_cdn_compress]").filter('[value=' + json['zone']['compress'] + ']').attr('checked', true);
+						$("input:radio[name=wx_cdn_backend_compress]").filter('[value=' + json['zone']['backend_compress'] + ']').attr('checked', true);
+						$("input:radio[name=wx_cdn_queries]").filter('[value=' + json['zone']['queries'] + ']').attr('checked', true);
+						$("input:radio[name=wx_cdn_ignore_setcookie_header]").filter('[value=' + json['zone']['ignore_setcookie_header'] + ']').attr('checked', true);
+						$("input:radio[name=wx_cdn_ignore_cache_control]").filter('[value=' + json['zone']['ignore_cache_control'] + ']').attr('checked', true);
+						$("input:radio[name=wx_cdn_use_stale]").filter('[value=' + json['zone']['use_stale'] + ']').attr('checked', true);
+						$("input:radio[name=wx_cdn_proxy_cache_lock]").filter('[value=' + json['zone']['proxy_cache_lock'] + ']').attr('checked', true);
+						$("select[name=wx_cdn_cache_valid]").val(json['zone']['cache_valid']);
+						$("select[name=wx_cdn_expires]").val(json['zone']['expires']);
+						$("input[name=wx_cdn_set_host_header]").val(json['zone']['set_host_header']);
+						$("input:radio[name=wx_cdn_canonical_link_headers]").filter('[value=' + json['zone']['canonical_link_headers'] + ']').attr('checked', true);
+
+						$('#advanced_cdn_settings').slideDown('slow');
+					}
+					if (json['error']) {
+						$('#notification').html('<div class="warning" style="display: none;">' + json['error'] + '</div>');
+						$('.warning').fadeIn('slow');
+						$('html, body').animate({ scrollTop: 0 }, 'slow');
+						$('.warning').delay(1500).fadeOut('slow');
+					}
+					$('#loading_cdn_get_settings').hide();
+				}
+			});
+		}
+		function update_cdn_settings() {
+			$('#btn_cdn_update_settings').hide();
+			$('#loading_cdn_update_settings').fadeIn('slow');
+			$.ajax({
+				url: '//api.wxhosting.com/public/cdn/update.json',
+				type: 'post',
+				data: 'key=' + $("input[name=wx_cdn_api_key]").val()
+						+ '&token=' + $("input[name=wx_cdn_api_token]").val()
+						+ '&compress=' + $("input[name=wx_cdn_compress]:checked").val()
+						+ '&backend_compress=' + $("input[name=wx_cdn_backend_compress]:checked").val()
+						+ '&queries=' + $("input[name=wx_cdn_queries]:checked").val()
+						+ '&ignore_setcookie_header=' + $("input[name=wx_cdn_ignore_setcookie_header]:checked").val()
+						+ '&ignore_cache_control=' + $("input[name=wx_cdn_ignore_cache_control]:checked").val()
+						+ '&use_stale=' + $("input[name=wx_cdn_use_stale]:checked").val()
+						+ '&proxy_cache_lock=' + $("input[name=wx_cdn_proxy_cache_lock]:checked").val()
+						+ '&cache_valid=' + $("select[name=wx_cdn_cache_valid]").val()
+						+ '&expires=' + $("select[name=wx_cdn_expires]").val()
+						+ '&set_host_header=' + $("input[name=wx_cdn_set_host_header]").val()
+						+ '&canonical_link_headers=' + $("input[name=wx_cdn_canonical_link_headers]").val(),
+
+				dataType: 'json',
+				success: function(json) {
+					$('.success, .warning, .attention, information, .error').remove();
+					if (json['success']) {
+						$('#notification').html('<div class="success" style="display: none;">' + json['success']['message'] + '</div>');
+						$('.success').fadeIn('slow');
+						$('html, body').animate({ scrollTop: 0 }, 'slow');
+						$('.success').delay(1500).fadeOut('slow');
+					}
+					if (json['error']) {
+						$('#notification').html('<div class="warning" style="display: none;">' + json['error'] + '</div>');
+						$('.warning').fadeIn('slow');
+						$('html, body').animate({ scrollTop: 0 }, 'slow');
+						$('.warning').delay(1500).fadeOut('slow');
+					}
+					$('#loading_cdn_update_settings').hide();
+					$('#btn_cdn_update_settings').fadeIn('slow');
+					$('#advanced_cdn_settings').slideUp('slow');
+					$('#btn_cdn_get_settings').fadeIn('slow');
+				}
+			});
+		}
+		// -->
+		</script>
+	
+		<div id="validate-cdn" <?php echo ($wx_cdn_api_valid) ? 'style="display:none;"' : ''; ?>>
+			<table class="form">
+				<tr>
+					<td><?php echo $entry_cdn_api_key; ?></td>
+					<td><input onchange="$('input[name=wx_cdn_api_valid]').val('0');" type="text" name="wx_cdn_api_key" size="80" value="<?php echo $wx_cdn_api_key; ?>" /></td>
+				</tr>
+				<tr>
+					<td><?php echo $entry_cdn_api_token; ?></td>
+					<td><input onchange="$('input[name=wx_cdn_api_valid]').val('0');" type="text" name="wx_cdn_api_token" size="80" value="<?php echo $wx_cdn_api_token; ?>" /></td>
+				</tr>
+				<tr>
+					<td><?php echo $entry_cdn_validation; ?></td>
+					<td>
+						<span id="btn_cdn_validate" class="btn-advanced" onclick="validate_cdn();"><?php echo $text_validate_cdn; ?></span>
+						<div id="loading_cdn_validate" style="display:none;"><img src="data:image/gif;base64,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" /></div>
+						<input type="hidden" name="wx_cdn_api_valid" value="<?php echo $wx_cdn_api_valid; ?>" />
+						<input type="hidden" name="wx_cdn_http" value="<?php echo $wx_cdn_http; ?>" />
+						<input type="hidden" name="wx_cdn_https" value="<?php echo $wx_cdn_https; ?>" />
+						<input type="hidden" name="wx_cdn_account" value="<?php echo $wx_cdn_account; ?>" />
+						<input type="hidden" name="wx_cdn_https_status" value="<?php echo $wx_cdn_https_status; ?>" />
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="cdn-settings" <?php echo (!$wx_cdn_api_valid) ? 'style="display:none;"' : ''; ?>>
+			<table class="form">
+				<tr>
+					<td><?php echo $entry_cdn_status; ?></td>
+					<td>
+						<input type="radio" name="wx_cdn_status" value="1" <?php echo ($wx_cdn_status) ? 'checked="checked"' : ''; ?> /><?php echo $text_enabled; ?>
+						<input type="radio" name="wx_cdn_status" value="0" <?php echo (!$wx_cdn_status) ? 'checked="checked"' : ''; ?> /><?php echo $text_disabled; ?>
+					</td>
+				</tr>
+				<tr>
+					<td><?php echo $entry_cdn_account; ?></td>
+					<td><span id="wx_cdn_account" class="help"><?php echo $wx_cdn_account; ?></span></td>
+				</tr>
+				<tr>
+					<td><?php echo $entry_cdn_http; ?></td>
+					<td><span id="wx_cdn_http" class="help"><?php echo $wx_cdn_http; ?></span></td>
+				</tr>
+				<tr>
+					<td><?php echo $entry_cdn_https; ?></td>
+					<td><span id="wx_cdn_https_status" class="help"><?php echo $wx_cdn_https_status; ?></span></td>
+				</tr>
+				<tr>
+					<td><?php echo $entry_cdn_images; ?></td>
+					<td>
+						<input type="radio" name="wx_cdn_images" value="1" <?php echo ($wx_cdn_images) ? 'checked="checked"' : ''; ?> /><?php echo $text_yes; ?>
+						<input type="radio" name="wx_cdn_images" value="0" <?php echo (!$wx_cdn_images) ? 'checked="checked"' : ''; ?> /><?php echo $text_no; ?>
+					</td>
+				</tr>
+				<tr>
+					<td><?php echo $entry_cdn_css; ?></td>
+					<td>
+						<input type="radio" name="wx_cdn_css" value="1" <?php echo ($wx_cdn_css) ? 'checked="checked"' : ''; ?> /><?php echo $text_yes; ?>
+						<input type="radio" name="wx_cdn_css" value="0" <?php echo (!$wx_cdn_css) ? 'checked="checked"' : ''; ?> /><?php echo $text_no; ?>
+					</td>
+				</tr>
+				<tr>
+					<td><?php echo $entry_cdn_js; ?></td>
+					<td>
+						<input type="radio" name="wx_cdn_js" value="1" <?php echo ($wx_cdn_js) ? 'checked="checked"' : ''; ?> /><?php echo $text_yes; ?>
+						<input type="radio" name="wx_cdn_js" value="0" <?php echo (!$wx_cdn_js) ? 'checked="checked"' : ''; ?> /><?php echo $text_no; ?>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top"><?php echo $entry_cdn_network_settings; ?></td>
+					<td>
+						<span id="btn_cdn_get_settings" class="btn-advanced" onclick="get_cdn_settings();"><?php echo $text_cdn_get_settings; ?></span>
+						<div id="loading_cdn_get_settings" style="display:none;"><img src="data:image/gif;base64,R0lGODlhgAAPAPIAAP///wAAAMbGxrKyskJCQgAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAgAAPAAAD5wiyC/6sPRfFpPGqfKv2HTeBowiZGLORq1lJqfuW7Gud9YzLud3zQNVOGCO2jDZaEHZk+nRFJ7R5i1apSuQ0OZT+nleuNetdhrfob1kLXrvPariZLGfPuz66Hr8f8/9+gVh4YoOChYhpd4eKdgwDkJEDE5KRlJWTD5iZDpuXlZ+SoZaamKOQp5wAm56loK6isKSdprKotqqttK+7sb2zq6y8wcO6xL7HwMbLtb+3zrnNycKp1bjW0NjT0cXSzMLK3uLd5Mjf5uPo5eDa5+Hrz9vt6e/qosO/GvjJ+sj5F/sC+uMHcCCoBAAh+QQJCgAAACwAAAAAgAAPAAAD/wi0C/4ixgeloM5erDHonOWBFFlJoxiiTFtqWwa/Jhx/86nKdc7vuJ6mxaABbUaUTvljBo++pxO5nFQFxMY1aW12pV+q9yYGk6NlW5bAPQuh7yl6Hg/TLeu2fssf7/19Zn9meYFpd3J1bnCMiY0RhYCSgoaIdoqDhxoFnJ0FFAOhogOgo6GlpqijqqKspw+mrw6xpLCxrrWzsZ6duL62qcCrwq3EsgC0v7rBy8PNorycysi3xrnUzNjO2sXPx8nW07TRn+Hm3tfg6OLV6+fc37vR7Nnq8Ont9/Tb9v3yvPu66Xvnr16+gvwO3gKIIdszDw65Qdz2sCFFiRYFVmQFIAEBACH5BAkKAAAALAAAAACAAA8AAAP/CLQL/qw9J2qd1AoM9MYeF4KaWJKWmaJXxEyulI3zWa/39Xh6/vkT3q/DC/JiBFjMSCM2hUybUwrdFa3Pqw+pdEVxU3AViKVqwz30cKzmQpZl8ZlNn9uzeLPH7eCrv2l1eXKDgXd6Gn5+goiEjYaFa4eOFopwZJh/cZCPkpGAnhoFo6QFE6WkEwOrrAOqrauvsLKttKy2sQ+wuQ67rrq7uAOoo6fEwsjAs8q1zLfOvAC+yb3B0MPHD8Sm19TS1tXL4c3jz+XR093X28ao3unnv/Hv4N/i9uT45vqr7NrZ89QFHMhPXkF69+AV9OeA4UGBDwkqnFiPYsJg7jBktMXhD165jvk+YvCoD+Q+kRwTAAAh+QQJCgAAACwAAAAAgAAPAAAD/wi0C/6sPRfJdCLnC/S+nsCFo1dq5zeRoFlJ1Du91hOq3b3qNo/5OdZPGDT1QrSZDLIcGp2o47MYheJuImmVer0lmRVlWNslYndm4Jmctba5gm9sPI+gp2v3fZuH78t4Xk0Kg3J+bH9vfYtqjWlIhZF0h3qIlpWYlJpYhp2DjI+BoXyOoqYaBamqBROrqq2urA8DtLUDE7a1uLm3s7y7ucC2wrq+wca2sbIOyrCuxLTQvQ680wDV0tnIxdS/27TND+HMsdrdx+fD39bY6+bX3um14wD09O3y0e77+ezx8OgAqutnr5w4g/3e4RPIjaG+hPwc+stV8NlBixAzSlT4bxqhx46/MF5MxUGkPA4BT15IyRDlwG0uG55MAAAh+QQJCgAAACwAAAAAgAAPAAAD/wi0C/6sPRfJpPECwbnu3gUKH1h2ZziNKVlJWDW9FvSuI/nkusPjrF0OaBIGfTna7GaTNTPGIvK4GUZRV1WV+ssKlE/G0hmDTqVbdPeMZWvX6XacAy6LwzAF092b9+GAVnxEcjx1emSIZop3g16Eb4J+kH+ShnuMeYeHgVyWn56hakmYm6WYnaOihaCqrh0FsbIFE7Oytba0D7m6DgO/wAMTwcDDxMIPx8i+x8bEzsHQwLy4ttWz17fJzdvP3dHfxeG/0uTjywDK1Lu52bHuvenczN704Pbi+Ob66MrlA+scBAQwcKC/c/8SIlzI71/BduysRcTGUF49i/cw5tO4jytjv3keH0oUCJHkSI8KG1Y8qLIlypMm312ASZCiNA0X8eHMqPNCTo07iyUAACH5BAkKAAAALAAAAACAAA8AAAP/CLQL/qw9F8mk8ap8hffaB3ZiWJKfmaJgJWHV5FqQK9uPuDr6yPeTniAIzBV/utktVmPCOE8GUTc9Ia0AYXWXPXaTuOhr4yRDzVIjVY3VsrnuK7ynbJ7rYlp+6/u2vXF+c2tyHnhoY4eKYYJ9gY+AkYSNAotllneMkJObf5ySIphpe3ajiHqUfENvjqCDniIFsrMFE7Sztre1D7q7Dr0TA8LDA8HEwsbHycTLw83ID8fCwLy6ubfXtNm40dLPxd3K4czjzuXQDtID1L/W1djv2vHc6d7n4PXi+eT75v3oANSxAzCwoLt28P7hC2hP4beH974ZTEjwYEWKA9VBdBixLSNHhRPlIRR5kWTGhgz1peS30l9LgBojUhzpa56GmSVr9tOgcueFni15styZAAAh+QQJCgAAACwAAAAAgAAPAAAD/wi0C/6sPRfJpPGqfKsWIPiFwhia4kWWKrl5UGXFMFa/nJ0Da+r0rF9vAiQOH0DZTMeYKJ0y6O2JPApXRmxVe3VtSVSmRLzENWm7MM+65ra93dNXHgep71H0mSzdFec+b3SCgX91AnhTeXx6Y2aOhoRBkllwlICIi49liWmaapGhbKJuSZ+niqmeN6SWrYOvIAWztAUTtbS3uLYPu7wOvrq4EwPFxgPEx8XJyszHzsbQxcG9u8K117nVw9vYD8rL3+DSyOLN5s/oxtTA1t3a7dzx3vPwAODlDvjk/Orh+uDYARBI0F29WdkQ+st3b9zCfgDPRTxWUN5AgxctVqTXUDNix3QToz0cGXIaxo32UCo8+OujyJIM95F0+Y8mMov1NODMuPKdTo4hNXgMemGoS6HPEgAAIfkECQoAAAAsAAAAAIAADwAAA/8ItAv+rD0XyaTxqnyr9pcgitpIhmaZouMGYq/LwbPMTJVE34/Z9j7BJCgE+obBnAWSwzWZMaUz+nQQkUfjyhrEmqTQGnins5XH5iU3u94Crtpfe4SuV9NT8R0Nn5/8RYBedHuFVId6iDyCcX9vXY2Bjz52imeGiZmLk259nHKfjkSVmpeWanhhm56skIyABbGyBROzsrW2tA+5ug68uLbAsxMDxcYDxMfFycrMx87Gv7u5wrfTwdfD2da+1A/Ky9/g0OEO4MjiytLd2Oza7twA6/Le8LHk6Obj6c/8xvjzAtaj147gO4Px5p3Dx9BfOQDnBBaUeJBiwoELHeaDuE8uXzONFu9tE2mvF0KSJ00q7Mjxo8d+L/9pRKihILyaB29esEnzgkt/Gn7GDPosAQAh+QQJCgAAACwAAAAAgAAPAAAD/wi0C/6sPRfJpPGqfKv2HTcJJKmV5oUKJ7qBGPyKMzNVUkzjFoSPK9YjKHQQgSve7eeTKZs7ps4GpRqDSNcQu01Kazlwbxp+ksfipezY1V5X2ZI5XS1/5/j7l/12A/h/QXlOeoSGUYdWgXBtJXEpfXKFiJSKg5V2a1yRkIt+RJeWk6KJmZhogKmbniUFrq8FE7CvsrOxD7a3Drm1s72wv7QPA8TFAxPGxcjJx8PMvLi2wa7TugDQu9LRvtvAzsnL4N/G4cbY19rZ3Ore7MLu1N3v6OsAzM0O9+XK48Xn/+notRM4D2C9c/r6Edu3UOEAgwMhFgwoMR48awnzMWOIzyfeM4ogD4aMOHJivYwexWlUmZJcPXcaXhKMORDmBZkyWa5suE8DuAQAIfkECQoAAAAsAAAAAIAADwAAA/8ItAv+rD0XyaTxqnyr9h03gZNgmtqJXqqwka8YM2NlQXYN2ze254/WyiF0BYU8nSyJ+zmXQB8UViwJrS2mlNacerlbSbg3E5fJ1WMLq9KeleB3N+6uR+XEq1rFPtmfdHd/X2aDcWl5a3t+go2AhY6EZIZmiACWRZSTkYGPm55wlXqJfIsmBaipBROqqaytqw+wsQ6zr623qrmusrATA8DBA7/CwMTFtr24yrrMvLW+zqi709K0AMkOxcYP28Pd29nY0dDL5c3nz+Pm6+jt6uLex8LzweL35O/V6fv61/js4m2rx01buHwA3SWEh7BhwHzywBUjOGBhP4v/HCrUyJAbXUSDEyXSY5dOA8l3Jt2VvHCypUoAIetpmJgAACH5BAkKAAAALAAAAACAAA8AAAP/CLQL/qw9F8mk8ap8q/YdN4Gj+AgoqqVqJWHkFrsW5Jbzbee8yaaTH4qGMxF3Rh0s2WMUnUioQygICo9LqYzJ1WK3XiX4Na5Nhdbfdy1mN8nuLlxMTbPi4be5/Jzr+3tfdSdXbYZ/UX5ygYeLdkCEao15jomMiFmKlFqDZz8FoKEFE6KhpKWjD6ipDqunpa+isaaqqLOgEwO6uwO5vLqutbDCssS0rbbGuMqsAMHIw9DFDr+6vr/PzsnSx9rR3tPg3dnk2+LL1NXXvOXf7eHv4+bx6OfN1b0P+PTN/Lf98wK6ExgO37pd/pj9W6iwIbd6CdP9OmjtGzcNFsVhDHfxDELGjxw1Xpg4kheABAAh+QQJCgAAACwAAAAAgAAPAAAD/wi0C/6sPRfJpPGqfKv2HTeBowiZjqCqG9malYS5sXXScYnvcP6swJqux2MMjTeiEjlbyl5MAHAlTEarzasv+8RCu9uvjTuWTgXedFhdBLfLbGf5jF7b30e3PA+/739ncVp4VnqDf2R8ioBTgoaPfYSJhZGIYhN0BZqbBROcm56fnQ+iow6loZ+pnKugpKKtmrGmAAO2twOor6q7rL2up7C/ssO0usG8yL7KwLW4tscA0dPCzMTWxtXS2tTJ297P0Nzj3t3L3+fmzerX6M3hueTp8uv07ezZ5fa08Piz/8UAYhPo7t6+CfDcafDGbOG5hhcYKoz4cGIrh80cPAOQAAAh+QQJCgAAACwAAAAAgAAPAAAD5wi0C/6sPRfJpPGqfKv2HTeBowiZGLORq1lJqfuW7Gud9YzLud3zQNVOGCO2jDZaEHZk+nRFJ7R5i1apSuQ0OZT+nleuNetdhrfob1kLXrvPariZLGfPuz66Hr8f8/9+gVh4YoOChYhpd4eKdgwFkJEFE5KRlJWTD5iZDpuXlZ+SoZaamKOQp5wAm56loK6isKSdprKotqqttK+7sb2zq6y8wcO6xL7HwMbLtb+3zrnNycKp1bjW0NjT0cXSzMLK3uLd5Mjf5uPo5eDa5+Hrz9vt6e/qosO/GvjJ+sj5F/sC+uMHcCCoBAA7AAAAAAAAAAAA" /></div>
+						<div id="advanced_cdn_settings" style="display:none;">
+							<table class="form">
+								<tr>
+									<td><?php echo $entry_cdn_compress; ?></td>
+									<td>
+										<input type="radio" name="wx_cdn_compress" value="1" /><?php echo $text_yes; ?>
+										<input type="radio" name="wx_cdn_compress" value="0" /><?php echo $text_no; ?>
+									</td>
+								</tr>
+								<tr>
+									<td><?php echo $entry_cdn_backend_compress; ?></td>
+									<td>
+										<input type="radio" name="wx_cdn_backend_compress" value="1" /><?php echo $text_yes; ?>
+										<input type="radio" name="wx_cdn_backend_compress" value="0" /><?php echo $text_no; ?>
+									</td>
+								</tr>
+								<tr>
+									<td><?php echo $entry_cdn_queries; ?></td>
+									<td>
+										<input type="radio" name="wx_cdn_queries" value="1" /><?php echo $text_yes; ?>
+										<input type="radio" name="wx_cdn_queries" value="0" /><?php echo $text_no; ?>
+									</td>
+								</tr>
+								<tr>
+									<td><?php echo $entry_cdn_cache_valid; ?></td>
+									<td>
+										<select name="wx_cdn_cache_valid">
+											<option value=""><?php echo $text_cdn_no_override; ?></option>
+											<option value="1d">1 <?php echo $text_day; ?></option>
+											<option value="7d">7 <?php echo $text_days; ?></option>
+											<option value="1M">1 <?php echo $text_month; ?></option>
+											<option value="12M">12 <?php echo $text_months; ?></option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td><?php echo $entry_cdn_ignore_setcookie_header; ?></td>
+									<td>
+										<input type="radio" name="wx_cdn_ignore_setcookie_header" value="1" /><?php echo $text_yes; ?>
+										<input type="radio" name="wx_cdn_ignore_setcookie_header" value="0" /><?php echo $text_no; ?>
+									</td>
+								</tr>
+								<tr>
+									<td><?php echo $entry_cdn_ignore_cache_control; ?></td>
+									<td>
+										<input type="radio" name="wx_cdn_ignore_cache_control" value="1" /><?php echo $text_yes; ?>
+										<input type="radio" name="wx_cdn_ignore_cache_control" value="0" /><?php echo $text_no; ?>
+									</td>
+								</tr>
+								<tr>
+									<td><?php echo $entry_cdn_use_stale; ?></td>
+									<td>
+										<input type="radio" name="wx_cdn_use_stale" value="1" /><?php echo $text_yes; ?>
+										<input type="radio" name="wx_cdn_use_stale" value="0" /><?php echo $text_no; ?>
+									</td>
+								</tr>
+								<tr>
+									<td><?php echo $entry_cdn_proxy_cache_lock; ?></td>
+									<td>
+										<input type="radio" name="wx_cdn_proxy_cache_lock" value="1" /><?php echo $text_yes; ?>
+										<input type="radio" name="wx_cdn_proxy_cache_lock" value="0" /><?php echo $text_no; ?>
+									</td>
+								</tr>
+								<tr>
+									<td><?php echo $entry_cdn_canonical_link_headers; ?></td>
+									<td>
+										<input type="radio" name="wx_cdn_canonical_link_headers" value="1" /><?php echo $text_yes; ?>
+										<input type="radio" name="wx_cdn_canonical_link_headers" value="0" /><?php echo $text_no; ?>
+									</td>
+								</tr>
+								<tr>
+									<td><?php echo $entry_cdn_expires; ?></td>
+									<td>
+										<select name="wx_cdn_expires">
+											<option value=""><?php echo $text_cdn_no_override; ?></option>
+											<option value="1d">1 <?php echo $text_day; ?></option>
+											<option value="7d">7 <?php echo $text_days; ?></option>
+											<option value="1M">1 <?php echo $text_month; ?></option>
+											<option value="12M">12 <?php echo $text_months; ?></option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td><?php echo $entry_cdn_set_host_header; ?></td>
+									<td><input type="input" name="wx_cdn_set_host_header" value="" /></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="border-bottom: 0px;">
+									<div style="width:450px;">
+										<span class="help">NOTE: CDN Network Settings are retrieved/updated live on our CDN network and not stored within your OpenCart installation.  In order for Network Setting changes to take effect you must click the update button below.  It may take up to 3 minutes for settings changes to be applied across our global network.</span>
+									</div>
+									<br />
+									<span id="btn_cdn_update_settings" class="btn-advanced" onclick="update_cdn_settings();"><?php echo $text_cdn_update_settings; ?></span>
+									<div id="loading_cdn_update_settings" style="display:none;"><img src="data:image/gif;base64,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" /></div>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td><?php echo $entry_cdn_api_change; ?></td>
+					<td><span class="btn-advanced" onclick="$('#cdn-settings').slideUp('slow'); $('#validate-cdn').slideDown('slow');"><?php echo $text_cdn_change_api; ?></span></td>
+				</tr>
+			</table>
+		</div>
+	</div>

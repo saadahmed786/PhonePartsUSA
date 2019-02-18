@@ -1,0 +1,646 @@
+
+
+
+* Hostname was NOT found in DNS cache
+*   Trying 176.32.98.70...
+* Connected to mws.amazonservices.com (176.32.98.70) port 443 (#0)
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using TLSv1.0 / DES-CBC3-SHA
+* Server certificate:
+* 	 subject: C=US; ST=Washington; L=Seattle; O=Amazon.com, Inc.; CN=mws.amazonservices.com
+* 	 start date: 2015-09-16 00:00:00 GMT
+* 	 expire date: 2015-12-30 23:59:59 GMT
+* 	 issuer: C=US; O=VeriSign, Inc.; OU=VeriSign Trust Network; OU=Terms of use at https://www.verisign.com/rpa (c)10; CN=VeriSign Class 3 Secure Server CA - G3
+* 	 SSL certificate verify ok.
+> POST /?Action=GetFeedSubmissionResult&Merchant=A2F9CYJ8SEM063&FeedSubmissionId=56534016695&AWSAccessKeyId=AKIAIRY7JGVESX55L62A&Timestamp=2015-09-17T22%3A17%3A31Z&Version=2009-01-01&SignatureVersion=2&SignatureMethod=HmacSHA256&Signature=sLoiMwzMcqzVSvpJAYx89Qq2gi7uUeGTMWQznEz16MQ%3D HTTP/1.1
+User-Agent: <Your Application Name>/<Your Application Version or Build Number> (Language=PHP/5.5.22; Platform=Linux/x86_64/2.6.32-504.8.1.el6.x86_64; MWSClientVersion=2011-08-01)
+Host: mws.amazonservices.com
+Transfer-Encoding: chunked
+
+< HTTP/1.1 400 Bad Request
+< Date: Thu, 17 Sep 2015 22:17:31 GMT
+* Server AmazonMWS is not blacklisted
+< Server: AmazonMWS
+< x-mws-quota-max: 60.0
+< x-mws-quota-remaining: 60.0
+< x-mws-quota-resetsOn: 2015-09-17T22:42:00.000Z
+< x-mws-response-context: 87iwxMdVigqox0/vscL8N3yX5dWPSUOahnRSFP1ozELZE2f/gJfqQk6LqDTONvz9XworSd2ZWpth oKczcEwUT9ve1BuC7O0V
+< x-mws-response-context: vJIHKPLYQS0cT5pdOkkJ9yMQstt9ms+vgAoowWkETL2yr+jro230bM3dF+jko751tBXYaQldKWE=
+< nnCoection: close
+< x-mws-request-id: d40f20df-72bd-4b9e-8560-26d1aca2a438
+< x-mws-timestamp: 2015-09-17T22:17:32.270Z
+< Vary: Accept-Encoding,User-Agent
+< Cneonction: close
+< Transfer-Encoding: chunked
+< 
+* Connection #0 to host mws.amazonservices.com left intact
+
+
+
+* Hostname was NOT found in DNS cache
+*   Trying 176.32.100.48...
+* Connected to mws.amazonservices.com (176.32.100.48) port 443 (#0)
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using TLSv1.0 / DES-CBC3-SHA
+* Server certificate:
+* 	 subject: C=US; ST=Washington; L=Seattle; O=Amazon.com, Inc.; CN=mws.amazonservices.com
+* 	 start date: 2015-09-16 00:00:00 GMT
+* 	 expire date: 2015-12-30 23:59:59 GMT
+* 	 issuer: C=US; O=VeriSign, Inc.; OU=VeriSign Trust Network; OU=Terms of use at https://www.verisign.com/rpa (c)10; CN=VeriSign Class 3 Secure Server CA - G3
+* 	 SSL certificate verify ok.
+> POST /?Action=GetFeedSubmissionResult&Merchant=A2F9CYJ8SEM063&FeedSubmissionId=56535016695&AWSAccessKeyId=AKIAIRY7JGVESX55L62A&Timestamp=2015-09-17T22%3A17%3A33Z&Version=2009-01-01&SignatureVersion=2&SignatureMethod=HmacSHA256&Signature=dGgqcwWTFfwL%2BzhBY3868EsY%2BtqqMI9eIkQiaMlmo%2Fs%3D HTTP/1.1
+User-Agent: <Your Application Name>/<Your Application Version or Build Number> (Language=PHP/5.5.22; Platform=Linux/x86_64/2.6.32-504.8.1.el6.x86_64; MWSClientVersion=2011-08-01)
+Host: mws.amazonservices.com
+Transfer-Encoding: chunked
+
+< HTTP/1.1 400 Bad Request
+< Date: Thu, 17 Sep 2015 22:17:34 GMT
+* Server AmazonMWS is not blacklisted
+< Server: AmazonMWS
+< x-mws-quota-max: 60.0
+< x-mws-quota-remaining: 60.0
+< x-mws-quota-resetsOn: 2015-09-17T22:42:00.000Z
+< x-mws-response-context: n5dMLkgDK5tfPN7KWp5tmxb/oMyYmw7M+3TqrkKhpGHg+V0h43GYjUbV7lJWR8t7BQZzaW6lrMPx Xx2CJ5tbERxdwbi+Udk3
+< x-mws-response-context: hi4N1VJi5IyRwnckJ4UXdCZYhYimFMRgtO4Z54daDWQ9BngrNw4QaKtw4gO5Eky1ydGH7buP2Gq8 1Xt512QYlw==
+< nnCoection: close
+< x-mws-request-id: b7d8ee46-2543-47f3-b361-bc7a7f62cbbf
+< x-mws-timestamp: 2015-09-17T22:17:35.024Z
+< Vary: Accept-Encoding,User-Agent
+< nnCoection: close
+< Transfer-Encoding: chunked
+< 
+* Connection #0 to host mws.amazonservices.com left intact
+
+
+
+* Hostname was NOT found in DNS cache
+*   Trying 176.32.98.70...
+* Connected to mws.amazonservices.com (176.32.98.70) port 443 (#0)
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using TLSv1.0 / DES-CBC3-SHA
+* Server certificate:
+* 	 subject: C=US; ST=Washington; L=Seattle; O=Amazon.com, Inc.; CN=mws.amazonservices.com
+* 	 start date: 2015-09-16 00:00:00 GMT
+* 	 expire date: 2015-12-30 23:59:59 GMT
+* 	 issuer: C=US; O=VeriSign, Inc.; OU=VeriSign Trust Network; OU=Terms of use at https://www.verisign.com/rpa (c)10; CN=VeriSign Class 3 Secure Server CA - G3
+* 	 SSL certificate verify ok.
+> POST /?Action=GetFeedSubmissionResult&Merchant=A2F9CYJ8SEM063&FeedSubmissionId=147490016695&AWSAccessKeyId=AKIAIRY7JGVESX55L62A&Timestamp=2015-09-17T22%3A17%3A36Z&Version=2009-01-01&SignatureVersion=2&SignatureMethod=HmacSHA256&Signature=5qy3FSAyNfcVUYGzPa8qfHpXECAyWgZALbc1jA1xvp0%3D HTTP/1.1
+User-Agent: <Your Application Name>/<Your Application Version or Build Number> (Language=PHP/5.5.22; Platform=Linux/x86_64/2.6.32-504.8.1.el6.x86_64; MWSClientVersion=2011-08-01)
+Host: mws.amazonservices.com
+Transfer-Encoding: chunked
+
+< HTTP/1.1 200 OK
+< Date: Thu, 17 Sep 2015 22:17:37 GMT
+* Server AmazonMWS is not blacklisted
+< Server: AmazonMWS
+< x-mws-quota-max: 60.0
+< x-mws-quota-remaining: 60.0
+< x-mws-quota-resetsOn: 2015-09-17T22:42:00.000Z
+< Content-MD5: i19VOscEcBw+JePHJEhv/A==
+< x-mws-response-context: MR5v/aoDTso/rnMZY4KNZisN5rM8Mhk49MzieC7EPaKQqeJBw0K58ODw+MToWO83paz6yiq5Zism DUFLztN8FolocsjU0H5w
+< x-mws-response-context: qAlBVO2yPKAstKeL4U7Km8bX45wNG+Wrg4Qzs00SXzOtjLJEvWt9kAzmtISxZct9cSbrrqdfCcup 4gRDKN5LLQ==
+< x-amz-request-id: 9fae1f98-1a55-4614-bbaa-088780dff5cb
+< x-mws-request-id: 9fae1f98-1a55-4614-bbaa-088780dff5cb
+< x-mws-timestamp: 2015-09-17T22:17:37.260Z
+< Content-Type: text/xml
+< Content-Length: 1208
+< Vary: Accept-Encoding,User-Agent
+< 
+* Connection #0 to host mws.amazonservices.com left intact
+
+
+
+* Hostname was NOT found in DNS cache
+*   Trying 176.32.98.70...
+* Connected to mws.amazonservices.com (176.32.98.70) port 443 (#0)
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using TLSv1.0 / AES128-SHA
+* Server certificate:
+* 	 subject: C=US; ST=Washington; L=Seattle; O=Amazon.com, Inc.; CN=mws.amazonservices.com
+* 	 start date: 2015-09-12 00:00:00 GMT
+* 	 expire date: 2016-09-12 23:59:59 GMT
+* 	 issuer: C=US; O=Symantec Corporation; OU=Symantec Trust Network; CN=Symantec Class 3 Secure Server CA - G4
+* 	 SSL certificate verify ok.
+> POST /?Action=GetFeedSubmissionResult&Merchant=A2F9CYJ8SEM063&FeedSubmissionId=196555016834&AWSAccessKeyId=AKIAIRY7JGVESX55L62A&Timestamp=2016-02-03T07%3A48%3A34Z&Version=2009-01-01&SignatureVersion=2&SignatureMethod=HmacSHA256&Signature=HOl75Sh3ifNxOMSejI6iD1KZsyiFJhIKnSETK29Gc48%3D HTTP/1.1
+User-Agent: <Your Application Name>/<Your Application Version or Build Number> (Language=PHP/5.5.30; Platform=Linux/x86_64/2.6.32-604.30.3.lve1.3.63.el6.x86_64; MWSClientVersion=2011-08-01)
+Host: mws.amazonservices.com
+Transfer-Encoding: chunked
+
+< HTTP/1.1 200 OK
+< Date: Wed, 03 Feb 2016 07:48:35 GMT
+* Server AmazonMWS is not blacklisted
+< Server: AmazonMWS
+< x-mws-quota-max: 60.0
+< x-mws-quota-remaining: 60.0
+< x-mws-quota-resetsOn: 2016-02-03T08:42:00.000Z
+< Content-MD5: KpFKSDKi35pQKSF+/MOtpg==
+< x-mws-response-context: 8QvMuwhlMzsv5mgr0MlKaz33HspoHt6j+2xKRHKfcGKA0LX4cEaif/mGxIktorljVb3mGFeybB2H psHsip/gJfyF7vmjr5PP
+< x-mws-response-context: YGZYMkMOtmBZO1jbMrmBjgU6QurcU/z+tSTmYxncSzIizdzPu8RB7XskHzDm58Sc6CPXLXL3m7ZA b4LL2Q4i8A==
+< x-amz-request-id: 9cfc1703-5683-4589-b245-34ec5f88330a
+< x-mws-request-id: 9cfc1703-5683-4589-b245-34ec5f88330a
+< x-mws-timestamp: 2016-02-03T07:48:35.570Z
+< Content-Type: text/xml
+< Content-Length: 1644
+< Vary: Accept-Encoding,User-Agent
+< 
+* Connection #0 to host mws.amazonservices.com left intact
+
+
+
+* Hostname was NOT found in DNS cache
+*   Trying 54.239.25.189...
+* Connected to mws.amazonservices.com (54.239.25.189) port 443 (#0)
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using unknown / ECDHE-RSA-AES128-GCM-SHA256
+* Server certificate:
+* 	 subject: C=US; ST=Washington; L=Seattle; O=Amazon.com, Inc.; CN=mws.amazonservices.com
+* 	 start date: 2015-09-12 00:00:00 GMT
+* 	 expire date: 2016-09-12 23:59:59 GMT
+* 	 issuer: C=US; O=Symantec Corporation; OU=Symantec Trust Network; CN=Symantec Class 3 Secure Server CA - G4
+* 	 SSL certificate verify ok.
+> POST /?Action=GetFeedSubmissionResult&Merchant=A5Z18TAP43UVA&FeedSubmissionId=215858016864&AWSAccessKeyId=AKIAIRY7JGVESX55L62A&Timestamp=2016-03-04T12%3A55%3A55Z&Version=2009-01-01&SignatureVersion=2&SignatureMethod=HmacSHA256&Signature=Iuzfsh%2BGH%2F1t%2FBDNlH1jakTHF03k3zuJBF%2BZ7RcwTTk%3D HTTP/1.1
+User-Agent: <Your Application Name>/<Your Application Version or Build Number> (Language=PHP/5.5.30; Platform=Linux/x86_64/2.6.32-604.30.3.lve1.3.63.el6.x86_64; MWSClientVersion=2011-08-01)
+Host: mws.amazonservices.com
+Transfer-Encoding: chunked
+
+< HTTP/1.1 401 Unauthorized
+* Server Server is not blacklisted
+< Server: Server
+< Date: Fri, 04 Mar 2016 12:55:56 GMT
+< Content-Type: text/xml
+< Content-Length: 314
+< Connection: keep-alive
+< x-mws-request-id: 3d273216-a9a1-443f-b011-630f6ee772a2
+< x-mws-timestamp: 2016-03-04T12:55:56.872Z
+< x-mws-response-context: /nLC+vuNbXlOiuqMtTNU/tKhU9UK7MrDdh+TKYsrmFpFCwATevy3PX+zEFwvzGuqVh/4PYZ44mrp Ihji2HKiqA==
+< Vary: Accept-Encoding,User-Agent
+< 
+* Connection #0 to host mws.amazonservices.com left intact
+
+
+
+* Hostname was found in DNS cache
+*   Trying 54.239.25.189...
+* Connected to mws.amazonservices.com (54.239.25.189) port 443 (#0)
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using unknown / ECDHE-RSA-AES128-GCM-SHA256
+* Server certificate:
+* 	 subject: C=US; ST=Washington; L=Seattle; O=Amazon.com, Inc.; CN=mws.amazonservices.com
+* 	 start date: 2015-09-12 00:00:00 GMT
+* 	 expire date: 2016-09-12 23:59:59 GMT
+* 	 issuer: C=US; O=Symantec Corporation; OU=Symantec Trust Network; CN=Symantec Class 3 Secure Server CA - G4
+* 	 SSL certificate verify ok.
+> POST /?Action=GetFeedSubmissionResult&Merchant=A5Z18TAP43UVA&FeedSubmissionId=100209016864&AWSAccessKeyId=AKIAIRY7JGVESX55L62A&Timestamp=2016-03-04T12%3A56%3A01Z&Version=2009-01-01&SignatureVersion=2&SignatureMethod=HmacSHA256&Signature=qcWdooGQCEz0PjXRZWj6j0HNMiO32UDRfDH%2BxdfyvX4%3D HTTP/1.1
+User-Agent: <Your Application Name>/<Your Application Version or Build Number> (Language=PHP/5.5.30; Platform=Linux/x86_64/2.6.32-604.30.3.lve1.3.63.el6.x86_64; MWSClientVersion=2011-08-01)
+Host: mws.amazonservices.com
+Transfer-Encoding: chunked
+
+< HTTP/1.1 401 Unauthorized
+* Server Server is not blacklisted
+< Server: Server
+< Date: Fri, 04 Mar 2016 12:56:02 GMT
+< Content-Type: text/xml
+< Content-Length: 314
+< Connection: keep-alive
+< x-mws-request-id: da51eb30-a3ab-478a-8622-644742c599bf
+< x-mws-timestamp: 2016-03-04T12:56:02.306Z
+< x-mws-response-context: /nLC+vuNbXlOiuqMtTNU/tKhU9UK7MrDdh+TKYsrmFpFCwATevy3PX+zEFwvzGuqVh/4PYZ44mrp Ihji2HKiqA==
+< Vary: Accept-Encoding,User-Agent
+< 
+* Connection #0 to host mws.amazonservices.com left intact
+
+
+
+* Hostname was NOT found in DNS cache
+*   Trying 54.239.25.189...
+* Connected to mws.amazonservices.com (54.239.25.189) port 443 (#0)
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using unknown / ECDHE-RSA-AES128-GCM-SHA256
+* Server certificate:
+* 	 subject: C=US; ST=Washington; L=Seattle; O=Amazon.com, Inc.; CN=mws.amazonservices.com
+* 	 start date: 2015-09-12 00:00:00 GMT
+* 	 expire date: 2016-09-12 23:59:59 GMT
+* 	 issuer: C=US; O=Symantec Corporation; OU=Symantec Trust Network; CN=Symantec Class 3 Secure Server CA - G4
+* 	 SSL certificate verify ok.
+> POST /?Action=GetFeedSubmissionResult&Merchant=A5Z18TAP43UVA&FeedSubmissionId=215857016864&AWSAccessKeyId=AKIAIRY7JGVESX55L62A&Timestamp=2016-03-04T12%3A56%3A06Z&Version=2009-01-01&SignatureVersion=2&SignatureMethod=HmacSHA256&Signature=vFGk1mR%2BU1kwlTD778eGIU55OKw2UpZYUULCVdUV4%2Bs%3D HTTP/1.1
+User-Agent: <Your Application Name>/<Your Application Version or Build Number> (Language=PHP/5.5.30; Platform=Linux/x86_64/2.6.32-604.30.3.lve1.3.63.el6.x86_64; MWSClientVersion=2011-08-01)
+Host: mws.amazonservices.com
+Transfer-Encoding: chunked
+
+< HTTP/1.1 401 Unauthorized
+* Server Server is not blacklisted
+< Server: Server
+< Date: Fri, 04 Mar 2016 12:56:07 GMT
+< Content-Type: text/xml
+< Content-Length: 314
+< Connection: keep-alive
+< x-mws-request-id: 348d66ad-6308-4ab1-b231-d6ca015b6e36
+< x-mws-timestamp: 2016-03-04T12:56:07.422Z
+< x-mws-response-context: ZEuLq+8onnKgCp7wuw6YDEOq5JJg0yZpAGbKJ5fxyb2rDbq7cnqaMcsTM2zJ96Tp6HygJg1YLQhG ZXxcpVzJyA==
+< Vary: Accept-Encoding,User-Agent
+< 
+* Connection #0 to host mws.amazonservices.com left intact
+
+
+
+* Hostname was NOT found in DNS cache
+*   Trying 54.239.25.189...
+* Connected to mws.amazonservices.com (54.239.25.189) port 443 (#0)
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using unknown / ECDHE-RSA-AES128-GCM-SHA256
+* Server certificate:
+* 	 subject: C=US; ST=Washington; L=Seattle; O=Amazon.com, Inc.; CN=mws.amazonservices.com
+* 	 start date: 2015-09-12 00:00:00 GMT
+* 	 expire date: 2016-09-12 23:59:59 GMT
+* 	 issuer: C=US; O=Symantec Corporation; OU=Symantec Trust Network; CN=Symantec Class 3 Secure Server CA - G4
+* 	 SSL certificate verify ok.
+> POST /?Action=GetFeedSubmissionResult&Merchant=A5Z18TAP43UVA&FeedSubmissionId=100200016864&AWSAccessKeyId=AKIAIRY7JGVESX55L62A&Timestamp=2016-03-04T12%3A56%3A11Z&Version=2009-01-01&SignatureVersion=2&SignatureMethod=HmacSHA256&Signature=yTD%2FqpBu5fPmsk8yQqWJHTbD9o0QfdaXXWo8k9zZpNY%3D HTTP/1.1
+User-Agent: <Your Application Name>/<Your Application Version or Build Number> (Language=PHP/5.5.30; Platform=Linux/x86_64/2.6.32-604.30.3.lve1.3.63.el6.x86_64; MWSClientVersion=2011-08-01)
+Host: mws.amazonservices.com
+Transfer-Encoding: chunked
+
+< HTTP/1.1 401 Unauthorized
+* Server Server is not blacklisted
+< Server: Server
+< Date: Fri, 04 Mar 2016 12:56:12 GMT
+< Content-Type: text/xml
+< Content-Length: 314
+< Connection: keep-alive
+< x-mws-request-id: 3238045c-8333-431c-baf7-cd468ee10c1e
+< x-mws-timestamp: 2016-03-04T12:56:12.592Z
+< x-mws-response-context: 9xAWqrHIwPRJ+QOGpRAmR3OJhVAYJzRMh+DNuJZYXftkpQ/RbX7+6ecMKlLcdUG4w2z/FKKEPWGq nSthEz7bJw==
+< Vary: Accept-Encoding,User-Agent
+< 
+* Connection #0 to host mws.amazonservices.com left intact
+
+
+
+* Hostname was found in DNS cache
+* Hostname in DNS cache was stale, zapped
+*   Trying 54.239.25.189...
+* Connected to mws.amazonservices.com (54.239.25.189) port 443 (#0)
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using unknown / ECDHE-RSA-AES128-GCM-SHA256
+* Server certificate:
+* 	 subject: C=US; ST=Washington; L=Seattle; O=Amazon.com, Inc.; CN=mws.amazonservices.com
+* 	 start date: 2015-09-12 00:00:00 GMT
+* 	 expire date: 2016-09-12 23:59:59 GMT
+* 	 issuer: C=US; O=Symantec Corporation; OU=Symantec Trust Network; CN=Symantec Class 3 Secure Server CA - G4
+* 	 SSL certificate verify ok.
+> POST /?Action=GetFeedSubmissionResult&Merchant=A5Z18TAP43UVA&FeedSubmissionId=215858016864&AWSAccessKeyId=AKIAIRY7JGVESX55L62A&Timestamp=2016-03-04T13%3A01%3A07Z&Version=2009-01-01&SignatureVersion=2&SignatureMethod=HmacSHA256&Signature=nO12PW03VzWzXHAYVHFSMryp2l29QZ2e8SBFR8jDejo%3D HTTP/1.1
+User-Agent: <Your Application Name>/<Your Application Version or Build Number> (Language=PHP/5.5.30; Platform=Linux/x86_64/2.6.32-604.30.3.lve1.3.63.el6.x86_64; MWSClientVersion=2011-08-01)
+Host: mws.amazonservices.com
+Transfer-Encoding: chunked
+
+< HTTP/1.1 401 Unauthorized
+* Server Server is not blacklisted
+< Server: Server
+< Date: Fri, 04 Mar 2016 13:01:08 GMT
+< Content-Type: text/xml
+< Content-Length: 314
+< Connection: keep-alive
+< x-mws-request-id: 41432307-2f08-4c7a-85ca-585d16082db9
+< x-mws-timestamp: 2016-03-04T13:01:08.430Z
+< x-mws-response-context: aKEAzKhFuZvH5JD8mLf46/RCoATuXNhdVBgvFz9jaSbC6swnZLIHXL+pPCDoKHy4YTNIKarT1thx VyZKu98Gzg==
+< Vary: Accept-Encoding,User-Agent
+< 
+* Connection #0 to host mws.amazonservices.com left intact
+
+
+
+* Hostname was found in DNS cache
+*   Trying 54.239.25.189...
+* Connected to mws.amazonservices.com (54.239.25.189) port 443 (#0)
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using unknown / ECDHE-RSA-AES128-GCM-SHA256
+* Server certificate:
+* 	 subject: C=US; ST=Washington; L=Seattle; O=Amazon.com, Inc.; CN=mws.amazonservices.com
+* 	 start date: 2015-09-12 00:00:00 GMT
+* 	 expire date: 2016-09-12 23:59:59 GMT
+* 	 issuer: C=US; O=Symantec Corporation; OU=Symantec Trust Network; CN=Symantec Class 3 Secure Server CA - G4
+* 	 SSL certificate verify ok.
+> POST /?Action=GetFeedSubmissionResult&Merchant=A5Z18TAP43UVA&FeedSubmissionId=214561016862&AWSAccessKeyId=AKIAIRY7JGVESX55L62A&Timestamp=2016-03-04T13%3A01%3A22Z&Version=2009-01-01&SignatureVersion=2&SignatureMethod=HmacSHA256&Signature=ciDwoZ1kx7FGMQsDJ9Ri8HEk6h5CdmFvDSjr1dMFhB0%3D HTTP/1.1
+User-Agent: <Your Application Name>/<Your Application Version or Build Number> (Language=PHP/5.5.30; Platform=Linux/x86_64/2.6.32-604.30.3.lve1.3.63.el6.x86_64; MWSClientVersion=2011-08-01)
+Host: mws.amazonservices.com
+Transfer-Encoding: chunked
+
+< HTTP/1.1 401 Unauthorized
+* Server Server is not blacklisted
+< Server: Server
+< Date: Fri, 04 Mar 2016 13:01:23 GMT
+< Content-Type: text/xml
+< Content-Length: 314
+< Connection: keep-alive
+< x-mws-request-id: 4509f677-cbc6-4563-a84d-8fbb2a358a6a
+< x-mws-timestamp: 2016-03-04T13:01:23.632Z
+< x-mws-response-context: LsHWpjLTW13yCziMtakV2L7eOQZTVXrcK38rBxNKmpBMfWOGn30ig9LW13MSaBjEMqo1KMm83Pdu s84NXxxBtA==
+< Vary: Accept-Encoding,User-Agent
+< 
+* Connection #0 to host mws.amazonservices.com left intact
+
+
+
+* Hostname was NOT found in DNS cache
+*   Trying 54.239.25.238...
+* Connected to mws.amazonservices.com (54.239.25.238) port 443 (#0)
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using unknown / ECDHE-RSA-AES128-GCM-SHA256
+* Server certificate:
+* 	 subject: C=US; ST=Washington; L=Seattle; O=Amazon.com, Inc.; CN=mws.amazonservices.com
+* 	 start date: 2015-09-12 00:00:00 GMT
+* 	 expire date: 2016-09-12 23:59:59 GMT
+* 	 issuer: C=US; O=Symantec Corporation; OU=Symantec Trust Network; CN=Symantec Class 3 Secure Server CA - G4
+* 	 SSL certificate verify ok.
+> POST /?Action=GetFeedSubmissionResult&Merchant=A2F9CYJ8SEM063&FeedSubmissionId=214561016862&AWSAccessKeyId=AKIAIRY7JGVESX55L62A&Timestamp=2016-03-04T13%3A03%3A03Z&Version=2009-01-01&SignatureVersion=2&SignatureMethod=HmacSHA256&Signature=frhFVv2qyTbZ8qvHRtI9iIOrLnu1WPiqsJXr1MEI6eQ%3D HTTP/1.1
+User-Agent: <Your Application Name>/<Your Application Version or Build Number> (Language=PHP/5.5.30; Platform=Linux/x86_64/2.6.32-604.30.3.lve1.3.63.el6.x86_64; MWSClientVersion=2011-08-01)
+Host: mws.amazonservices.com
+Transfer-Encoding: chunked
+
+< HTTP/1.1 200 OK
+* Server Server is not blacklisted
+< Server: Server
+< Date: Fri, 04 Mar 2016 13:03:04 GMT
+< Content-Type: text/xml
+< Content-Length: 769
+< Connection: keep-alive
+< x-mws-quota-max: 60.0
+< x-mws-quota-remaining: 55.0
+< x-mws-quota-resetsOn: 2016-03-04T13:42:00.000Z
+< Content-MD5: uAXFSk3UfDPoYMFEbuybzw==
+< x-mws-response-context: rOCaMbRg86z5bV0t/5iOhWo+0CXOuBRQ7gN1FGjmgkurGgS6eRF1coqv5vtQP6KCB1aFGtbo2IZG UZSNxohYZJK+lSDcxtAf
+< x-mws-response-context: HhgAKEVAYTZiBAlFTjAoxebdPhzny3hK2PBTy38mCJBob5nkm/np/qE4ZxS6XwrAJxlCwazX3//4 bX4WWgPfbA==
+< x-amz-request-id: 3f555c0b-5f66-4679-9b75-4870dcb01092
+< x-mws-request-id: 3f555c0b-5f66-4679-9b75-4870dcb01092
+< x-mws-timestamp: 2016-03-04T13:03:04.523Z
+< Vary: Accept-Encoding,User-Agent
+< 
+* Connection #0 to host mws.amazonservices.com left intact
+
+
+
+* Hostname was NOT found in DNS cache
+*   Trying 54.239.25.189...
+* Connected to mws.amazonservices.com (54.239.25.189) port 443 (#0)
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* Server certificate:
+* 	 subject: C=US; ST=Washington; L=Seattle; O=Amazon.com, Inc.; CN=mws.amazonservices.com
+* 	 start date: 2015-09-12 00:00:00 GMT
+* 	 expire date: 2016-09-12 23:59:59 GMT
+* 	 issuer: C=US; O=Symantec Corporation; OU=Symantec Trust Network; CN=Symantec Class 3 Secure Server CA - G4
+* 	 SSL certificate verify ok.
+> POST /?Action=GetFeedSubmissionResult&Merchant=A2F9CYJ8SEM063&FeedSubmissionId=285804016995&AWSAccessKeyId=AKIAIRY7JGVESX55L62A&Timestamp=2016-07-13T18%3A59%3A59Z&Version=2009-01-01&SignatureVersion=2&SignatureMethod=HmacSHA256&Signature=opaVogefuKfSs5PqbN2p0BuWi29stfzzoxY00xXHDe8%3D HTTP/1.1
+User-Agent: <Your Application Name>/<Your Application Version or Build Number> (Language=PHP/5.5.37; Platform=Linux/x86_64/2.6.32-604.30.3.lve1.3.63.el6.x86_64; MWSClientVersion=2011-08-01)
+Host: mws.amazonservices.com
+Transfer-Encoding: chunked
+
+< HTTP/1.1 404 Not Found
+* Server Server is not blacklisted
+< Server: Server
+< Date: Wed, 13 Jul 2016 19:00:01 GMT
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< x-mws-quota-max: 60.0
+< x-mws-quota-remaining: 60.0
+< x-mws-quota-resetsOn: 2016-07-13T19:42:00.000Z
+< x-mws-response-context: T+z8OY9fZYAmuBaSurG5IUPB8gadYzjZZAGyxyyO4/gekeeF9BszuMoFrCU4a0Qz3DcEAVhM/Ls5 8T3+ORYD+aKZ+UFsO8oh
+< x-mws-response-context: WkQzxN+t4OMVM8pA/klyHU5l7cPAgf7iGQp/0Iggi/9tJpqG59U+RUj2ECGrRIVt2c07fgTrkb5Q /o7oFQzvGQ==
+< x-mws-request-id: 82be5df0-5377-4104-9662-b83b061c06a9
+< x-mws-timestamp: 2016-07-13T19:00:01.799Z
+< Vary: Accept-Encoding,User-Agent
+< 
+* Connection #0 to host mws.amazonservices.com left intact
+
+
+
+* Hostname was NOT found in DNS cache
+*   Trying 54.239.25.238...
+* Connected to mws.amazonservices.com (54.239.25.238) port 443 (#0)
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* Server certificate:
+* 	 subject: C=US; ST=Washington; L=Seattle; O=Amazon.com, Inc.; CN=mws.amazonservices.com
+* 	 start date: 2015-09-12 00:00:00 GMT
+* 	 expire date: 2016-09-12 23:59:59 GMT
+* 	 issuer: C=US; O=Symantec Corporation; OU=Symantec Trust Network; CN=Symantec Class 3 Secure Server CA - G4
+* 	 SSL certificate verify ok.
+> POST /?Action=GetFeedSubmissionResult&Merchant=A2F9CYJ8SEM063&FeedSubmissionId=285804016995&AWSAccessKeyId=AKIAIRY7JGVESX55L62A&Timestamp=2016-07-13T19%3A03%3A46Z&Version=2009-01-01&SignatureVersion=2&SignatureMethod=HmacSHA256&Signature=wjRTJ0GPLqLhOT3lMye3KHR06B92Pv7lMSFPGKxe%2Bw8%3D HTTP/1.1
+User-Agent: <Your Application Name>/<Your Application Version or Build Number> (Language=PHP/5.5.37; Platform=Linux/x86_64/2.6.32-604.30.3.lve1.3.63.el6.x86_64; MWSClientVersion=2011-08-01)
+Host: mws.amazonservices.com
+Transfer-Encoding: chunked
+
+< HTTP/1.1 200 OK
+* Server Server is not blacklisted
+< Server: Server
+< Date: Wed, 13 Jul 2016 19:03:48 GMT
+< Content-Type: text/xml;charset=UTF-8
+< Content-Length: 1039
+< Connection: keep-alive
+< x-mws-quota-max: 60.0
+< x-mws-quota-remaining: 60.0
+< x-mws-quota-resetsOn: 2016-07-13T19:42:00.000Z
+< Content-MD5: 8bMiSZopJ4hzAypOcFN9CQ==
+< x-mws-response-context: QjSGdZvwRQgL441bZvhDfKQrk4kAg6olWJqSBnmk9oC28zwSbq32Ivcr2+uORHJ/7yQ7qGQhOJw=
+< x-mws-response-context: ZG7JLz1kyHqqKIRywxWbnMNKS8Jhtx6RhjfuO2Jx8+jpMOEGpGsfFh3bvnImk3b79/9D8xL3ksZa HeNrVBVCtA==
+< x-amz-request-id: bb029a13-d35a-4eee-9985-45e8d0745394
+< x-mws-request-id: bb029a13-d35a-4eee-9985-45e8d0745394
+< x-mws-timestamp: 2016-07-13T19:03:48.660Z
+< Vary: Accept-Encoding,User-Agent
+< 
+* Connection #0 to host mws.amazonservices.com left intact
+
+
+
+*   Trying 52.94.234.210...
+* TCP_NODELAY set
+* Connected to mws.amazonservices.com (52.94.234.210) port 443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: C=US; ST=Washington; L=Seattle; O=Amazon.com, Inc.; CN=mws.amazonservices.com
+*  start date: Aug 30 00:00:00 2016 GMT
+*  expire date: Aug 31 23:59:59 2017 GMT
+*  issuer: C=US; O=Symantec Corporation; OU=Symantec Trust Network; CN=Symantec Class 3 Secure Server CA - G4
+*  SSL certificate verify ok.
+> POST /?Action=GetFeedSubmissionResult&Merchant=A2F9CYJ8SEM063&FeedSubmissionId=292278017361&AWSAccessKeyId=AKIAIRY7JGVESX55L62A&Timestamp=2017-07-14T15%3A49%3A43Z&Version=2009-01-01&SignatureVersion=2&SignatureMethod=HmacSHA256&Signature=8ZA1HLBX%2F9F9N7jZq1YBuBRogRTWTv9uYoOAx8p%2Fpqg%3D HTTP/1.1
+Host: mws.amazonservices.com
+User-Agent: <Your Application Name>/<Your Application Version or Build Number> (Language=PHP/5.5.38; Platform=Linux/x86_64/2.6.32-604.30.3.lve1.3.63.el6.x86_64; MWSClientVersion=2011-08-01)
+Transfer-Encoding: chunked
+
+< HTTP/1.1 400 Bad Request
+< Server: Server
+< Date: Fri, 14 Jul 2017 15:49:45 GMT
+< Content-Type: text/xml
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< x-mws-quota-max: 60.0
+< x-mws-quota-remaining: 60.0
+< x-mws-quota-resetsOn: 2017-07-14T16:42:00.000Z
+< x-mws-response-context: RimPUiVz5/H7dWmBLEtX+RMjBkmiHOpvamDHZlXzapuIif1n4ajjR6QJp4F6u/B7e5qSQv1Ipps=
+< x-mws-response-context: f1uF2YwcFmFuPj9BbL1M1yu1yAjuO8yQMx9oxBbOVG3YQeaJ1pkzPwCfNxfID2K8KFmsnYu3f6E=
+< Cneonction: close
+< x-mws-request-id: 7541364e-01f1-42a3-b228-dae922cb1fa5
+< x-mws-timestamp: 2017-07-14T15:49:45.466Z
+< Vary: Accept-Encoding,User-Agent
+< 
+* Connection #0 to host mws.amazonservices.com left intact
+
+
+
+*   Trying 54.239.25.189...
+* TCP_NODELAY set
+* Connected to mws.amazonservices.com (54.239.25.189) port 443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: C=US; ST=Washington; L=Seattle; O=Amazon.com, Inc.; CN=mws.amazonservices.com
+*  start date: Aug 30 00:00:00 2016 GMT
+*  expire date: Aug 31 23:59:59 2017 GMT
+*  issuer: C=US; O=Symantec Corporation; OU=Symantec Trust Network; CN=Symantec Class 3 Secure Server CA - G4
+*  SSL certificate verify ok.
+> POST /?Action=GetFeedSubmissionResult&Merchant=A2F9CYJ8SEM063&FeedSubmissionId=506297017361&AWSAccessKeyId=AKIAIRY7JGVESX55L62A&Timestamp=2017-07-14T15%3A49%3A51Z&Version=2009-01-01&SignatureVersion=2&SignatureMethod=HmacSHA256&Signature=KKs7z9%2FSjQ1cK7CZOijl5FtUfgs6XlHK3BuGsSguYh4%3D HTTP/1.1
+Host: mws.amazonservices.com
+User-Agent: <Your Application Name>/<Your Application Version or Build Number> (Language=PHP/5.5.38; Platform=Linux/x86_64/2.6.32-604.30.3.lve1.3.63.el6.x86_64; MWSClientVersion=2011-08-01)
+Transfer-Encoding: chunked
+
+< HTTP/1.1 200 OK
+< Server: Server
+< Date: Fri, 14 Jul 2017 15:49:53 GMT
+< Content-Type: text/xml;charset=UTF-8
+< Content-Length: 1206
+< Connection: keep-alive
+< x-mws-quota-max: 60.0
+< x-mws-quota-remaining: 59.0
+< x-mws-quota-resetsOn: 2017-07-14T16:42:00.000Z
+< Content-MD5: QZbFTCzTvbJCH42nUQ1UZw==
+< x-mws-response-context: j8usfFuSovTefmoSV9Ggng0+uO6EcUPaw8W0fMsoXrZsKYcWFLZZdMntBAJ2zwJ3oOyX9wTg040=
+< x-mws-response-context: zbnO9jLbxhfvSfxxkIzLJS0/68pLQg6qFzq8f8GAzaXZlPs4PfOXtU0rCvE0Mo5pvFKD8awCoyw=
+< x-amz-request-id: 26d8f53b-81d7-4cdd-905f-7229d1dbf270
+< x-mws-request-id: 26d8f53b-81d7-4cdd-905f-7229d1dbf270
+< x-mws-timestamp: 2017-07-14T15:49:53.486Z
+< Vary: Accept-Encoding,User-Agent
+< 
+* Connection #0 to host mws.amazonservices.com left intact
+
+
+
+*   Trying 54.239.25.189...
+* TCP_NODELAY set
+* Connected to mws.amazonservices.com (54.239.25.189) port 443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: C=US; ST=Washington; L=Seattle; O=Amazon.com, Inc.; CN=mws.amazonservices.com
+*  start date: Aug  9 00:00:00 2017 GMT
+*  expire date: May  9 23:59:59 2018 GMT
+*  issuer: C=US; O=Symantec Corporation; OU=Symantec Trust Network; CN=Symantec Class 3 Secure Server CA - G4
+*  SSL certificate verify ok.
+> POST /?Action=GetFeedSubmissionResult&Merchant=A2F9CYJ8SEM063&FeedSubmissionId=561565017560&AWSAccessKeyId=AKIAIRY7JGVESX55L62A&Timestamp=2018-01-29T21%3A22%3A28Z&Version=2009-01-01&SignatureVersion=2&SignatureMethod=HmacSHA256&Signature=yvMh6asCY779jXl8t1oobydpWyp37m%2FR9H9pJg6kiEA%3D HTTP/1.1
+Host: mws.amazonservices.com
+User-Agent: <Your Application Name>/<Your Application Version or Build Number> (Language=PHP/5.5.38; Platform=Linux/x86_64/2.6.32-604.30.3.lve1.3.63.el6.x86_64; MWSClientVersion=2011-08-01)
+Transfer-Encoding: chunked
+
+* Signaling end of chunked upload via terminating chunk.
+< HTTP/1.1 200 OK
+< Server: Server
+< Date: Mon, 29 Jan 2018 21:22:31 GMT
+< Content-Type: text/xml;charset=UTF-8
+< Content-Length: 2353
+< Connection: keep-alive
+< x-mws-quota-max: 60.0
+< x-mws-quota-remaining: 60.0
+< x-mws-quota-resetsOn: 2018-01-29T21:42:00.000Z
+< Content-MD5: buGNBdhLhtH+p5T8I9JARQ==
+< x-mws-response-context: e/Ryr51qyC3L2nTKAppT+HjP9o4oA+zPLShPkcchmh/ot8Nqa5D67nUifIL6tr/9t8sOqVGM6wk=
+< x-mws-response-context: vLMESaYsnCDAUIo8H/Nls3tdzVaGsJ5Pdy91ZVyhi5b4EOaRxdykbhfVl2Ju5dUmPT2F+Mnepqs=
+< x-amz-request-id: ee8e2811-6b33-465d-8ec8-8a10ec640f6c
+< x-mws-request-id: ee8e2811-6b33-465d-8ec8-8a10ec640f6c
+< x-mws-timestamp: 2018-01-29T21:22:30.939Z
+< Vary: Accept-Encoding,User-Agent
+< 
+* Connection #0 to host mws.amazonservices.com left intact
+
+
+
+*   Trying 52.94.234.210...
+* TCP_NODELAY set
+* Connected to mws.amazonservices.com (52.94.234.210) port 443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: CN=mws.amazonservices.com
+*  start date: May 14 00:00:00 2018 GMT
+*  expire date: May 14 12:00:00 2019 GMT
+*  issuer: C=US; O=Amazon; OU=Server CA 1B; CN=Amazon
+*  SSL certificate verify ok.
+> POST /?Action=GetFeedSubmissionResult&Merchant=A2F9CYJ8SEM063&FeedSubmissionId=634191017780&AWSAccessKeyId=AKIAIRY7JGVESX55L62A&Timestamp=2018-10-16T18%3A26%3A41Z&Version=2009-01-01&SignatureVersion=2&SignatureMethod=HmacSHA256&Signature=gDkZLkP9qicDQmM51LdAA5U9w%2F21qwyFErCIJDm16rs%3D HTTP/1.1
+Host: mws.amazonservices.com
+User-Agent: <Your Application Name>/<Your Application Version or Build Number> (Language=PHP/5.5.38; Platform=Linux/x86_64/2.6.32-604.30.3.lve1.3.63.el6.x86_64; MWSClientVersion=2011-08-01)
+Transfer-Encoding: chunked
+
+* Signaling end of chunked upload via terminating chunk.
+< HTTP/1.1 200 OK
+< Server: Server
+< Date: Tue, 16 Oct 2018 18:26:44 GMT
+< Content-Type: text/xml;charset=UTF-8
+< Content-Length: 11341
+< Connection: keep-alive
+< x-mws-quota-max: 60.0
+< x-mws-quota-remaining: 60.0
+< x-mws-quota-resetsOn: 2018-10-16T18:42:00.000Z
+< Content-MD5: 39GytblzsnrnbMJWQ5ujZw==
+< x-mws-response-context: vLbxi6vDmo1/P7uxr4IVzCKP3DVIrTOZyqviLxmrZugDk6pCrcQaufvDbS+MyxvA2i6cxvIBE5I=
+< x-mws-response-context: V3ls8ywIE5NpDMBa2MGhduPtPqY/+OLGvb3YogibznJfzJu7zq9C6ULwbdFfxN4sHP53dZXsv2U=
+< x-amz-request-id: 2834939a-229e-4fb8-a34a-170f9b62feb6
+< x-mws-request-id: 2834939a-229e-4fb8-a34a-170f9b62feb6
+< x-mws-timestamp: 2018-10-16T18:26:44.014Z
+< x-amz-rid: MW4MC1ZJS7VVVX6M40GR
+< Vary: Accept-Encoding,X-Amazon-CDN-Cache,User-Agent
+< 
+* Connection #0 to host mws.amazonservices.com left intact

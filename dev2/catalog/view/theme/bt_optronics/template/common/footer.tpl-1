@@ -1,0 +1,90 @@
+</div>
+</div>
+</div>
+<div class="frame_footer">
+<div class="container">
+<div class="partner">
+<div id="footer" class="sixteen columns">
+<?php echo $footer_top; ?>
+<?php if (false) { ?>
+  
+  
+
+  <div class="column">
+    <h3><?php echo $text_information; ?></h3>
+    <ul>
+      <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
+      <li><a href="<?php echo $affiliate; ?>"><?php echo $text_affiliate; ?></a></li>
+      <li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
+      <li><a href="<?php echo $voucher; ?>"><?php echo $text_voucher; ?></a></li>
+      <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
+      <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
+      <?php foreach ($informations as $information) { ?>
+      <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
+      <?php } ?>
+      <li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
+    </ul>
+  </div>
+
+  <?php } ?>
+
+<?php $this->document->addScript('catalog/view/javascript/page_speed/jquery.viewport.min.js'); ?>
+<div id="facebook">
+  <div class="facebook-inner" id="facebookHolder">
+    <script type="text/javascript">
+    $(document).ready(function() { 
+      function checkForFacebookWidget(event) { 
+        $('#facebookHolder:in-viewport').each(function() { 
+          $('#facebookHolder').append('<div id="fb-root"></div>'); 
+          $('#facebookHolder').append('<div style="float: right; display: block;" class="fb-like-box" id="facebook-box" data-href="https://www.facebook.com/PhonepartsUSA" data-width="260" data-height="230" data-show-faces="true" data-stream="true" data-show-border="true" data-header="true"></div>');
+            jQuery.getScript('http://connect.facebook.net/en_US/all.js#xfbml=1', function() { 
+              FB.init({status: true, cookie: true, xfbml: true}); 
+            }); 
+          $(window).unbind('scroll', checkForFacebookWidget); 
+        });
+      }
+      $(window).bind('scroll', checkForFacebookWidget); 
+    });
+    </script>
+  </div>
+</div>
+<!--   <div class="column">
+    <h3><?php echo $text_extra; ?></h3>
+    <ul>
+      <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
+      <li><a href="<?php echo $voucher; ?>"><?php echo $text_voucher; ?></a></li>
+      <li><a href="<?php echo $affiliate; ?>"><?php echo $text_affiliate; ?></a></li>
+      <li><a href="<?php echo $special; ?>"><?php echo $text_special; ?></a></li>
+      <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
+      <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
+      <li><a href="<?php echo $newsletter; ?>"><?php echo $text_newsletter; ?></a></li>
+    </ul>
+  </div> -->
+
+	<?php echo $footer_bottom; ?>
+
+  <table id="norton" fwidth="135" border="0" cellpadding="2" cellspacing="0" title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications.">
+<tr>
+<td width="135" align="center" valign="top"><script type="text/javascript" src="https://seal.verisign.com/getseal?host_name=phonepartsusa.com&amp;size=XS&amp;use_flash=NO&amp;use_transparent=NO&amp;lang=en"></script><br />
+<a href="http://www.symantec.com/ssl-certificates" target="_blank"  style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">ABOUT SSL CERTIFICATES</a></td>
+</tr>
+</table>
+  	  <!-----------------------------------------------
+------------------------------------------------------->
+</div>
+</div>
+
+
+<!--
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
+Please donate via PayPal to donate@opencart.com
+//-->
+<!--
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
+Please donate via PayPal to donate@opencart.com
+//-->
+
+
+</div>
+</div>
+</body></html>

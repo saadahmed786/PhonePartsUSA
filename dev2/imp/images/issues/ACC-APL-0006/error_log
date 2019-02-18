@@ -1,0 +1,8 @@
+[17-Jul-2014 01:20:10 America/New_York] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/phonerep/public_html/qc/serviceFiles/register.php on line 79
+[17-Jul-2014 01:20:17 America/New_York] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/phonerep/public_html/qc/serviceFiles/register.php on line 79
+[17-Jul-2014 01:21:59 America/New_York] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/phonerep/public_html/qc/serviceFiles/register.php on line 80
+[17-Jul-2014 01:22:00 America/New_York] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/phonerep/public_html/qc/serviceFiles/register.php on line 80
+[17-Jul-2014 01:22:01 America/New_York] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/phonerep/public_html/qc/serviceFiles/register.php on line 80
+[17-Jul-2014 01:22:01 America/New_York] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/phonerep/public_html/qc/serviceFiles/register.php on line 80
+[17-Jul-2014 01:23:50 America/New_York] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/phonerep/public_html/qc/serviceFiles/register.php on line 80
+[17-Jul-2014 01:25:17 America/New_York] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/phonerep/public_html/qc/serviceFiles/register.php on line 80

@@ -1,0 +1,7 @@
+php /home/phonerep/public_html/rma/fetch_orders.php
+
+php-cli /home/phonerep/public_html/rma/update_status.php
+
+php-cli /home/phonerep/public_html/rma/store_orders.php
+
+php-cli /home/phonerep/public_html/rma/paypal_orders.php

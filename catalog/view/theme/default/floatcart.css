@@ -1,0 +1,22 @@
+/*
+Floating cart by Stan @ BigPayout
+*/
+
+#divTopright{
+position:fixed;
+top: 200px;
+right: 10px;
+z-index:9999;
+max-height: 540px;
+
+}
+#floatCart{
+
+/*border:1px solid #B3B3B3;
+padding:12px;*/
+background:#fff;
+width:324px;
+max-height: 530px;
+overflow-y:auto;
+overflow-x: hidden;
+}

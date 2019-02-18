@@ -1,0 +1,11 @@
+div.top-bar .right form { float:right; }
+.box-product > div { display:inline;text-align:left; }
+.box-product > div .name, .box-product > div .ratings, .box-product > div .price, .box-product > div .cart, .box-product > div .wish-list, .box-product > div .image { text-align:center; }
+.grid-3 .box-product > div { width:220px;text-align:left; }
+.grid-3 .box-product > div .right { float:left;width:150px;text-align:left; }
+.grid-3 .box-product > div .right .name, .grid-3 .box-product > div .right .price { text-align:left;padding-left:5px; }
+
+div.categories ul li .column-2 > ul > li, div.categories ul li .column-3 > ul > li, div.categories ul li .column-4 > ul > li { float:left; }
+
+div.category-list ul { overflow:auto; }
+div.category-list ul li { float:left;display:block; }

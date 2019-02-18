@@ -1,0 +1,23 @@
+[05-Apr-2016 07:38:21 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home/phonerep/public_html/imp/inc/db.php on line 314
+[28-Jun-2016 19:26:08 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[28-Jun-2016 19:26:08 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[28-Jun-2016 19:26:14 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[28-Jun-2016 19:26:14 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[28-Jun-2016 19:26:14 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[28-Jun-2016 19:26:54 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[28-Jun-2016 19:30:28 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[28-Jun-2016 19:34:11 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[28-Jun-2016 19:39:30 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[28-Jun-2016 19:39:31 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[28-Jun-2016 19:41:28 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[28-Jun-2016 19:43:39 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[28-Jun-2016 19:43:39 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[28-Jun-2016 19:43:39 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[28-Jun-2016 19:45:51 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[28-Jun-2016 19:48:45 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[29-Jun-2016 14:45:03 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[29-Jun-2016 14:45:10 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[25-Jan-2018 01:13:03 America/Chicago] PHP Warning:  PHP Startup: Unable to load dynamic library '/opt/cpanel/ea-php55/root/usr/lib64/php/modules/dom.so' - /usr/lib64/libxml2.so.2: version `LIBXML2_2.9.0' not found (required by /opt/cpanel/ea-php55/root/usr/lib64/php/modules/dom.so) in Unknown on line 0
+[25-Jan-2018 01:13:03 America/Chicago] PHP Warning:  PHP Startup: Unable to load dynamic library '/opt/cpanel/ea-php55/root/usr/lib64/php/modules/simplexml.so' - /usr/lib64/libxml2.so.2: version `LIBXML2_2.9.0' not found (required by /opt/cpanel/ea-php55/root/usr/lib64/php/modules/simplexml.so) in Unknown on line 0
+[25-Jan-2018 01:13:03 America/Chicago] PHP Warning:  PHP Startup: Unable to load dynamic library '/opt/cpanel/ea-php55/root/usr/lib64/php/modules/xmlreader.so' - /opt/cpanel/ea-php55/root/usr/lib64/php/modules/xmlreader.so: undefined symbol: dom_node_class_entry in Unknown on line 0
+[25-Jan-2018 01:13:03 America/Chicago] PHP Warning:  PHP Startup: Unable to load dynamic library '/opt/cpanel/ea-php55/root/usr/lib64/php/modules/xsl.so' - /opt/cpanel/ea-php55/root/usr/lib64/php/modules/xsl.so: undefined symbol: dom_node_class_entry in Unknown on line 0
