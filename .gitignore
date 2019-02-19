@@ -2,3 +2,4 @@ config.php
 index.php
 admin/config.php
 admin/index.php
+system/logs/zaman_log.txt
