@@ -1,29 +1,66 @@
 <?php
+
 // Version
-define('VERSION', '1.5.6.3');
+define('VERSION', '1.5.3.1');
+//if your php doesn't support apache_request_headers
+if( !function_exists('apache_request_headers') ) {
+    function apache_request_headers() {
+        $arh = array();
+        $rx_http = '/\AHTTP_/';
+
+        foreach($_SERVER as $key => $val) {
+            if( preg_match($rx_http, $key) ) {
+                $arh_key = preg_replace($rx_http, '', $key);
+                $rx_matches = array();
+           // do some nasty string manipulations to restore the original letter case
+           // this should work in most cases
+                $rx_matches = explode('_', $arh_key);
+
+                if( count($rx_matches) > 0 and strlen($arh_key) > 2 ) {
+                    foreach($rx_matches as $ak_key => $ak_val) {
+                        $rx_matches[$ak_key] = ucfirst($ak_val);
+                    }
+
+                    $arh_key = implode('-', $rx_matches);
+                }
+
+                $arh[$arh_key] = $val;
+            }
+        }
+        
+        return( $arh );
+    }
+}
+
+
+
 
 // Configuration
-if (file_exists('config.php')) {
-	require_once('config.php');
-}  
-
+require_once('config.php');
+require('wx/caching.php');
+   
 // Install 
 if (!defined('DIR_APPLICATION')) {
 	header('Location: install/index.php');
 	exit;
 }
 
-// Startup
-require_once(DIR_SYSTEM . 'startup.php');
+// VirtualQMOD
+require_once('./vqmod/vqmod.php');
+VQMod::bootup();
+
+// VQMODDED Startup
+require_once(VQMod::modCheck(DIR_SYSTEM . 'startup.php'));
 
 // Application Classes
-require_once(DIR_SYSTEM . 'library/customer.php');
-require_once(DIR_SYSTEM . 'library/affiliate.php');
-require_once(DIR_SYSTEM . 'library/currency.php');
-require_once(DIR_SYSTEM . 'library/tax.php');
-require_once(DIR_SYSTEM . 'library/weight.php');
-require_once(DIR_SYSTEM . 'library/length.php');
-require_once(DIR_SYSTEM . 'library/cart.php');
+require_once(VQMod::modCheck(DIR_SYSTEM . 'library/customer.php'));
+require_once(VQMod::modCheck(DIR_SYSTEM . 'library/affiliate.php'));
+require_once(VQMod::modCheck(DIR_SYSTEM . 'library/currency.php'));
+require_once(VQMod::modCheck(DIR_SYSTEM . 'library/tax.php'));
+require_once(VQMod::modCheck(DIR_SYSTEM . 'library/weight.php'));
+require_once(VQMod::modCheck(DIR_SYSTEM . 'library/length.php'));
+require_once(VQMod::modCheck(DIR_SYSTEM . 'library/cart.php'));
+require_once(VQMod::modCheck(DIR_SYSTEM . 'library/device.php'));
 
 // Registry
 $registry = new Registry();
@@ -70,7 +107,7 @@ if (!$store_query->num_rows) {
 }
 
 // Url
-$url = new Url($config->get('config_url'), $config->get('config_secure') ? $config->get('config_ssl') : $config->get('config_url'));	
+$url = new Url($config->get('config_url'), $config->get('config_use_ssl') ? $config->get('config_ssl') : $config->get('config_url'));	
 $registry->set('url', $url);
 
 // Log 
@@ -98,6 +135,7 @@ function error_handler($errno, $errstr, $errfile, $errline) {
 			break;
 	}
 		
+		//echo '<b>' . $error . '</b>: ' . $errstr . ' in <b>' . $errfile . '</b> on line <b>' . $errline . '</b>';
 	if ($config->get('config_error_display')) {
 		echo '<b>' . $error . '</b>: ' . $errstr . ' in <b>' . $errfile . '</b> on line <b>' . $errline . '</b>';
 	}
@@ -108,32 +146,32 @@ function error_handler($errno, $errstr, $errfile, $errline) {
 
 	return true;
 }
-
+	
 // Error Handler
 set_error_handler('error_handler');
 
 // Request
 $request = new Request();
 $registry->set('request', $request);
-
+ 
 // Response
 $response = new Response();
 $response->addHeader('Content-Type: text/html; charset=utf-8');
 $response->setCompression($config->get('config_compression'));
 $registry->set('response', $response); 
-
+		
 // Cache
 $cache = new Cache();
 $registry->set('cache', $cache); 
 
 // Session
 $session = new Session();
-$registry->set('session', $session);
+$registry->set('session', $session); 
 
 // Language Detection
 $languages = array();
 
-$query = $db->query("SELECT * FROM `" . DB_PREFIX . "language` WHERE status = '1'"); 
+$query = $db->query("SELECT * FROM " . DB_PREFIX . "language WHERE status = '1'"); 
 
 foreach ($query->rows as $result) {
 	$languages[$result['code']] = $result;
@@ -141,7 +179,7 @@ foreach ($query->rows as $result) {
 
 $detect = '';
 
-if (isset($request->server['HTTP_ACCEPT_LANGUAGE']) && $request->server['HTTP_ACCEPT_LANGUAGE']) { 
+if (isset($request->server['HTTP_ACCEPT_LANGUAGE']) && ($request->server['HTTP_ACCEPT_LANGUAGE'])) { 
 	$browser_languages = explode(',', $request->server['HTTP_ACCEPT_LANGUAGE']);
 	
 	foreach ($browser_languages as $browser_language) {
@@ -156,6 +194,22 @@ if (isset($request->server['HTTP_ACCEPT_LANGUAGE']) && $request->server['HTTP_AC
 		}
 	}
 }
+
+//Language modification
+$headers = apache_request_headers();
+
+$osc_lang = "";
+
+if(isset($headers['X-Oc-Merchant-Language'])){
+    $osc_lang = $headers['X-Oc-Merchant-Language'];
+}else if(isset($headers['X-OC-MERCHANT-LANGUAGE'])){
+    $osc_lang = $headers['X-OC-MERCHANT-LANGUAGE'];
+}
+
+if($osc_lang != ""){
+	$session->data['language'] = $osc_lang;
+}	
+
 
 if (isset($session->data['language']) && array_key_exists($session->data['language'], $languages) && $languages[$session->data['language']]['status']) {
 	$code = $session->data['language'];
@@ -192,12 +246,15 @@ $registry->set('customer', new Customer($registry));
 // Affiliate
 $registry->set('affiliate', new Affiliate($registry));
 
-if (isset($request->get['tracking'])) {
+if (isset($request->get['tracking']) && !isset($request->cookie['tracking'])) {
 	setcookie('tracking', $request->get['tracking'], time() + 3600 * 24 * 1000, '/');
 }
 		
 // Currency
 $registry->set('currency', new Currency($registry));
+// Device
+$registry->set('device', new Device($registry));
+
 
 // Tax
 $registry->set('tax', new Tax($registry));
@@ -210,11 +267,11 @@ $registry->set('length', new Length($registry));
 
 // Cart
 $registry->set('cart', new Cart($registry));
+$registry->set('ebaylog', new Log('ebaylog.log'));
+$registry->set('ebay', new Ebay($registry));
 
-//OpenBay Pro
-//$registry->set('openbay', new Openbay($registry));
 
-// Encryption
+//  Encryption
 $registry->set('encryption', new Encryption($config->get('config_encryption')));
 		
 // Front Controller 
@@ -232,6 +289,8 @@ if (isset($request->get['route'])) {
 } else {
 	$action = new Action('common/home');
 }
+// init authorizenet_cim settings
+include_once DIR_SYSTEM . 'library/authorizenet/include.AuthorizeNet.php'; 
 
 // Dispatch
 $controller->dispatch($action, new Action('error/not_found'));
