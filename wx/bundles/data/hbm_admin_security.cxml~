@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<sql><![CDATA[]]></sql>
+	<id><![CDATA[Admin Panel Security Lockdown]]></id>
+	<version><![CDATA[3.2]]></version>
+	<vqmver><![CDATA[2.1]]></vqmver>
+	<author><![CDATA[<a onclick="window.open('http://www.opencart.com/index.php?route=extension/extension&filter_username=Tcalp');" title="View all OpenCart Mods by Tcalp">Jeff Hunter aka Tcalp</a>]]></author>
+
+	<file name="system/library/user.php">
+		<operation> <!-- ADD AUTO USER LOGIN FUNCTIONALITY -->
+			<search position="before"><![CDATA[public function login]]></search>
+			<add><![CDATA[
+		  	public function autologin($username) {
+		    	$user_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "user WHERE username = '" . $this->db->escape($username) . "' AND status = '1'");
+
+		    	if ($user_query->num_rows) {
+					$this->session->data['user_id'] = $user_query->row['user_id'];
+
+					$this->user_id = $user_query->row['user_id'];
+					$this->username = $user_query->row['username'];
+
+      				$user_group_query = $this->db->query("SELECT permission FROM " . DB_PREFIX . "user_group WHERE user_group_id = '" . (int)$user_query->row['user_group_id'] . "'");
+
+			  		$permissions = unserialize($user_group_query->row['permission']);
+
+					if (is_array($permissions)) {
+						foreach ($permissions as $key => $value) {
+							$this->permission[$key] = $value;
+						}
+					}
+
+      				return true;
+    			} else {
+      				return false;
+    			}
+  			}
+			]]></add>
+ 		</operation>
+	</file>
+
+	<file name="admin/controller/common/login.php">
+		<operation> <!-- ADD CHECK TO SEE IF LOGIN POST IS AN OVERRIDE VERIFICATION -->
+  			<search position="replace"><![CDATA[&& $this->validate()]]></search>
+  			<add><![CDATA[&& $this->validate() && $this->overrideCheck()]]></add>
+		</operation>
+
+		<operation> <!-- CHANGE LOGIN TEMPLATE TO SECURITY DETECTED TEMPLATE -->
+			<search position="replace"><![CDATA['common/login.tpl']]></search>
+			<add><![CDATA[$this->detectSecurity()]]></add>
+		</operation>
+
+		<operation> <!-- ADD READ FOR SECURITY OVERRIDE -->
+			<search position="before"><![CDATA[isset($this->request->post['username'])]]></search>
+			<add><![CDATA[
+			$security_key_sequence = join('+', array($this->config->get('config_security_key_sequence1'),$this->config->get('config_security_key_sequence2'), $this->config->get('config_security_key_sequence3')));
+			$security_key_sequence = str_replace('++','+',$security_key_sequence);
+			$security_key_sequence = str_replace('++','+',$security_key_sequence);
+			$security_key_sequence = preg_replace('/^\+/', '', $security_key_sequence);
+			$this->data['security_sequence'] = $security_key_sequence;
+			$this->data['security_override'] = $this->config->get('config_security_404_passkey');
+  			]]></add>
+  		</operation>
+
+		<operation> <!-- ADD AUTO LOGIN BY IP FUNCTIONALITY TO LOGIN CONTROLLER -->
+			<search position="before"><![CDATA[&& $this->validate()]]></search>
+			<add><![CDATA[
+			if ($this->config->get('config_security_enabled') && $this->autoLogin()) {
+
+				$this->session->data['token'] = md5(mt_rand());
+
+				if (isset($this->request->post['redirect'])) {
+					$this->redirect($this->request->post['redirect'] . '&token=' . $this->session->data['token']);
+				} else {
+					$this->redirect($this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'));
+				}
+			}
+	  		]]></add>
+		</operation>
+
+ 		<operation>
+    		<search position="before"><![CDATA[function validate]]></search>
+    		<add><![CDATA[
+    		private function autoLogin() {
+    			$auto_logins = $this->config->get('config_security_auto_logins');
+				if (!empty($auto_logins)) {
+	    			foreach($auto_logins as $auto_login) {
+	    				$login_data = explode(',',$auto_login);
+						if ($login_data[1] == $_SERVER['REMOTE_ADDR']) {
+							return $this->user->autologin($login_data[0]);
+						}
+	   				}
+  				}
+   				return false;
+   			}
+
+			private function detectSecurity() {
+				if (!$this->config->get('config_security_enabled')) { return 'common/login.tpl'; }
+
+				$passkey = $this->config->get('config_security_404_passkey');
+				$allowed_ips = $this->config->get('config_security_ipgrants');
+				if (isset($this->request->post['security_passkey']) && $this->request->post['security_passkey'] == $passkey) {
+					return 'common/login.tpl';
+				}
+				if (!empty($allowed_ips)) {
+					foreach($allowed_ips as $allowed_ip) {
+						if ($this->netMatch($allowed_ip, $_SERVER['REMOTE_ADDR'])) {
+							return 'common/login.tpl';
+						}
+					}
+				}
+				header("HTTP/1.0 404 Not Found");
+				return $this->config->get('config_security_404_behavior');
+			}
+
+			private function overrideCheck() {
+				if (isset($this->request->post['security_passkey'])) {
+					return false; // WE ARE CHECKING TO SHOW PROPER LOGIN SCREEN
+				} else {
+					return true;
+				}
+			}
+
+			private function netMatch($network, $ip) {
+			    $network=trim($network);
+			    $orig_network = $network;
+			    $ip = trim($ip);
+			    $network = str_replace(' ', '', $network);
+
+				// MATCH EXACT IP ADDRESS
+			    if ($ip == $network) {
+			        return TRUE;
+			    }
+
+			    // PREPARE .* DELIGATED IP RANGE TO USE /32 MATCHING
+			    if (strpos($network, '*') !== FALSE) {
+			        if (strpos($network, '/') !== FALSE) {
+			            $asParts = explode('/', $network);
+			            $network = @ $asParts[0];
+			        }
+			        $nCount = substr_count($network, '*');
+			        $network = str_replace('*', '0', $network);
+			        if ($nCount == 1) {
+			            $network .= '/24';
+			        } else if ($nCount == 2) {
+			            $network .= '/16';
+			        } else if ($nCount == 3) {
+			            $network .= '/8';
+			        } else if ($nCount > 3) {
+			            return TRUE; // if *.*.*.*, then all, so matched
+			        }
+			    }
+
+			    // IP MATCHING BY RANGE - SEPERATION AND BY /32
+				$d = strpos($network, '-');
+			    if ($d === FALSE) {
+			    	if (strpos($network, '/') !== FALSE) {
+				        $ip_arr = explode('/', $network);
+				        if (!preg_match("@\d*\.\d*\.\d*\.\d*@", $ip_arr[0], $matches)){
+				            $ip_arr[0].=".0";    // Alternate form 194.1.4/24
+				        }
+				        $network_long = ip2long($ip_arr[0]);
+				        $x = ip2long($ip_arr[1]);
+				        $mask = long2ip($x) == $ip_arr[1] ? $x : (0xffffffff << (32 - $ip_arr[1]));
+				        $ip_long = ip2long($ip);
+				        return ($ip_long & $mask) == ($network_long & $mask);
+        			} else {
+        				return false;
+       				}
+			    } else {
+			        $from = trim(ip2long(substr($network, 0, $d)));
+			        $to = trim(ip2long(substr($network, $d+1)));
+			        $ip = ip2long($ip);
+			        return ($ip>=$from and $ip<=$to);
+			    }
+			}
+
+			function ech($b) {
+			    if ($b) {
+			        echo "MATCHED\n";
+			    } else {
+			        echo "DID NOT MATCH\n";
+			    }
+			}
+			]]></add>
+    	</operation>
+	</file>
+
+<!--  ==============================================================================================================================================================================  -->
+<!--  STORE SETTINGS PANEL CONTROLS      STORE SETTINGS PANEL CONTROLS      STORE SETTINGS PANEL CONTROLS      STORE SETTINGS PANEL CONTROLS      STORE SETTINGS PANEL CONTROLS       -->
+<!--  ==============================================================================================================================================================================  -->
+
+
+	<file name="admin/language/*/setting/setting.php">
+		<operation> <!-- ADD LANGUAGE ENTRIES FOR STORE SETTINGS -->
+			<search position="after"><![CDATA[?php]]></search>
+			<add><![CDATA[
+			$_['tab_admin_security']             = 'Admin Security';
+			$_['entry_security_enabled']         = 'Enhanced Security Enabled:<br /><span class="help">Global On/Off if enhanced login security should be in effect.</span>';
+			$_['entry_security_current_address'] = 'Detected IP Address:<br /><span class="help">Your current/detected IP address.</span>';
+			$_['entry_security_ipgrants']        = 'Allowed IP Grants:<br /><span class="help">A List of allowed IP address ranges to connect to admin panel.</span>';
+			$_['entry_security_ipauto']          = 'Automated IP Login Grants:<br /><span class="help">If your home/office has a static (never changing) internet address, you may specify automated login permissions (leave blank for none).</span>';
+			$_['entry_security_404_behavior']    = 'Error Page 404:<br /><span class="help">Display type behavior for 404 page display for unauthorized users.</span>';
+			$_['entry_security_404_passkey']     = 'Error Password Override:<br /><span class="help">A password used to override 404 page to reach to login page (blank == disabled).</span>';
+			$_['entry_security_key_sequence']    = 'Security Key Sequence:<br /><span class="help">Keypress comination sequence which will bring up the password prompt (requires password to be set).</span>';
+			]]></add>
+		</operation>
+	</file>
+
+	<file name="admin/controller/setting/setting.php">
+		<operation> <!-- READ LANGUAGE FOR GLOBAL SETTINGS -->
+			<search position="before"><![CDATA[$this->data['entry_logo']]]></search>
+			<add><![CDATA[
+			$this->data['tab_admin_security']             = $this->language->get('tab_admin_security');
+			$this->data['entry_category_counts']          = $this->language->get('entry_category_counts');
+			$this->data['entry_security_enabled']         = $this->language->get('entry_security_enabled');
+			$this->data['entry_security_current_address'] = $this->language->get('entry_security_current_address');
+			$this->data['entry_memory_cache']             = $this->language->get('entry_memory_cache');
+			$this->data['entry_security_ipauto']          = $this->language->get('entry_security_ipauto');
+			$this->data['entry_security_ipgrants']        = $this->language->get('entry_security_ipgrants');
+			$this->data['entry_security_404_behavior']    = $this->language->get('entry_security_404_behavior');
+			$this->data['entry_security_404_passkey']     = $this->language->get('entry_security_404_passkey');
+			$this->data['entry_security_key_sequence']    = $this->language->get('entry_security_key_sequence');
+			]]></add>
+		</operation>
+
+		<operation> <!-- READ FORM / DATA -->
+			<search position="before"><![CDATA[isset($this->request->post['config_name'])]]></search>
+			<add><![CDATA[
+		if (isset($this->request->post['config_security_enabled'])) {
+			$this->data['config_security_enabled'] = $this->request->post['config_security_enabled'];
+		} elseif ($this->config->get('config_security_enabled')) {
+			$this->data['config_security_enabled'] = $this->config->get('config_security_enabled');
+		} else {
+			$this->data['config_security_enabled'] = 0;
+		}
+
+		if (isset($this->request->post['config_security_ipgrants'])) {
+			$this->data['config_security_ipgrants'] = $this->request->post['config_security_ipgrants'];
+		} elseif ($this->config->get('config_security_ipgrants')) {
+			$this->data['config_security_ipgrants'] = $this->config->get('config_security_ipgrants');
+		} else {
+			$this->data['config_security_ipgrants'] = array();
+		}
+
+		if (isset($this->request->post['config_security_auto_logins'])) {
+			$this->data['config_security_auto_logins'] = $this->request->post['config_security_auto_logins'];
+		} elseif ($this->config->get('config_security_auto_logins')) {
+			$this->data['config_security_auto_logins'] = $this->config->get('config_security_auto_logins');
+		} else {
+			$this->data['config_security_auto_logins'] = array();
+		}
+
+		if (isset($this->request->post['config_security_404_behavior'])) {
+			$this->data['config_security_404_behavior'] = $this->request->post['config_security_404_behavior'];
+		} elseif ($this->config->get('config_security_404_behavior')) {
+			$this->data['config_security_404_behavior'] = $this->config->get('config_security_404_behavior');
+		} else {
+			$this->data['config_security_404_behavior'] = 'common/login_404.tpl';
+		}
+
+		if (isset($this->request->post['config_security_404_passkey'])) {
+			$this->data['config_security_404_passkey'] = $this->request->post['config_security_404_passkey'];
+		} elseif ($this->config->get('config_security_404_passkey')) {
+			$this->data['config_security_404_passkey'] = $this->config->get('config_security_404_passkey');
+		} else {
+			$this->data['config_security_404_passkey'] = '';
+		}
+
+		if (isset($this->request->post['config_security_key_sequence1'])) {
+			$this->data['config_security_key_sequence1'] = $this->request->post['config_security_key_sequence1'];
+		} elseif ($this->config->get('config_security_key_sequence1')) {
+			$this->data['config_security_key_sequence1'] = $this->config->get('config_security_key_sequence1');
+		} else {
+			$this->data['config_security_key_sequence1'] = '';
+		}
+
+		if (isset($this->request->post['config_security_key_sequence2'])) {
+			$this->data['config_security_key_sequence2'] = $this->request->post['config_security_key_sequence2'];
+		} elseif ($this->config->get('config_security_key_sequence2')) {
+			$this->data['config_security_key_sequence2'] = $this->config->get('config_security_key_sequence2');
+		} else {
+			$this->data['config_security_key_sequence2'] = '';
+		}
+
+		if (isset($this->request->post['config_security_key_sequence3'])) {
+			$this->data['config_security_key_sequence3'] = $this->request->post['config_security_key_sequence3'];
+		} elseif ($this->config->get('config_security_key_sequence3')) {
+			$this->data['config_security_key_sequence3'] = $this->config->get('config_security_key_sequence3');
+		} else {
+			$this->data['config_security_key_sequence3'] = '';
+		}
+			]]></add>
+		</operation>
+	</file>
+
+	<file name="admin/view/template/setting/setting.tpl">
+		<operation> <!-- ADD INCREASE PAGE SPEED TAB TO TABS LIST -->
+			<search position="replace"><![CDATA[<a href="#tab-server"><?php echo $tab_server; ?></a>]]></search>
+			<add><![CDATA[<a href="#tab-server"><?php echo $tab_server; ?></a><a href="#tab-admin-security"><?php echo $tab_admin_security; ?></a>]]></add>
+		</operation>
+		<operation> <!-- ADD INCREASE PAGE SPEED TAB FORM CONTENT -->
+			<search position="before"><![CDATA[</form>]]></search>
+			<add><![CDATA[
+			<div id="tab-admin-security">
+			<table class="form">
+				<tr>
+					<td><?php echo $entry_security_enabled; ?></td>
+					<td>
+						<input type="radio" name="config_security_enabled" value="1" <?php echo ($config_security_enabled) ? 'checked="checked"' : ''; ?> /><?php echo $text_yes; ?>
+						<input type="radio" name="config_security_enabled" value="0" <?php echo (!$config_security_enabled) ? 'checked="checked"' : ''; ?> /><?php echo $text_no; ?>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" style="border-bottom: 0px;"><?php echo $entry_security_ipgrants; ?></td>
+					<td style="border-bottom: 0px;">
+						<div id="security-ipgrants" class="scrollbox">
+						<?php $class = 'odd'; ?>
+						<?php foreach ($config_security_ipgrants as $config_security_ipgrant) { ?>
+							<?php $class = ($class == 'even' ? 'odd' : 'even'); ?>
+							<div id="config-security-ipgrants<?php echo $config_security_ipgrant; ?>" class="<?php echo $class; ?>"> <?php echo $config_security_ipgrant; ?><img src="view/image/delete.png" />
+								<input type="hidden" name="config_security_ipgrants[]" value="<?php echo $config_security_ipgrant; ?>" />
+							</div>
+						<?php } ?>
+						</div>
+					</td>
+					</tr><tr>
+						<td style="border-bottom: 0px;">&nbsp;</td>
+						<td style="border-bottom: 0px;"><label>Add an IP Address/Range:&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" name="new-security-ipgrant" value="" /></td>
+
+						<script type="text/javascript"><!--
+						$('input[name=\'new-security-ipgrant\']').keypress(function(e) {
+							if (e.which == 13) {
+								//$('#security-ipgrants' + ui.item.value).remove();
+								$('#security-ipgrants').append('<div id="config-security-ipgrants' + '22' + '">' + $('input[name=\'new-security-ipgrant\']').val() + '<img src="view/image/delete.png" /><input type="hidden" name="config_security_ipgrants[]" value="' + $('input[name=\'new-security-ipgrant\']').val() + '" /></div>');
+								$('#security-ipgrants div:odd').attr('class', 'odd');
+								$('#security-ipgrants div:even').attr('class', 'even');
+								$('input[name=\'new-security-ipgrant\']').val('');
+								return false;
+							}
+						});
+
+						$('#security-ipgrants div img').live('click', function() {
+							$(this).parent().remove();
+							$('#config-security-ipgrants div:odd').attr('class', 'odd');
+							$('#config-security-ipgrants div:even').attr('class', 'even');
+						});
+						//--></script>
+					</tr><tr>
+						<td>&nbsp;</td>
+						<td>
+							<span class="help" style="width:400px;">
+							Supported IP Adress Formatting:<br />
+							Full/Static IP: 255.255.255.255<br />
+							Asterix Deligated Range: 255.255.*.*<br />
+							From/To Specified Range: 255.255.255.10 - 255.255.255.80<br />
+							ARIN IP Assigment Range: 255.255.0.0/32
+							</span>
+						</td>
+				</tr>
+				<tr>
+					<td style="border-bottom: 0px;"><?php echo $entry_security_ipauto; ?></td>
+					<td style="border-bottom: 0px;">
+						<div id="security-ipautos" class="scrollbox">
+						<?php $class = 'odd'; ?>
+						<?php $ald_index = 0; ?>
+						<?php foreach ($config_security_auto_logins as $config_security_auto_login) { ?>
+							<?php $ald_index++; ?>
+							<?php $ald = explode(',',$config_security_auto_login); ?>
+							<?php $class = ($class == 'even' ? 'odd' : 'even'); ?>
+							<div id="config-security-ipautos<?php echo $ald_index; ?>" class="<?php echo $class; ?>"> <?php echo $ald[0] . '  -  ' . $ald[1]; ?><img src="view/image/delete.png" />
+								<input type="hidden" name="config_security_auto_logins[]" value="<?php echo $config_security_auto_login; ?>" />
+							</div>
+						<?php } ?>
+						</div>
+					</td>
+					</tr><tr>
+						<td style="border-bottom: 0px;">&nbsp;</td>
+						<td style="border-bottom: 0px;">
+							<label>Username/Login:&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" name="new-security-auto-login" value="" /><br />
+							<label>Static IP Address:&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" name="new-security-auto-ip" value="" />
+						</td>
+
+						<script type="text/javascript"><!--
+						$('input[name=\'new-security-auto-ip\']').keypress(function(e) {
+							if (e.which == 13) {
+								//$('#security-ipautos' + ui.item.value).remove();
+								$('#security-ipautos').append('<div id="config-security-ipautos' + '22' + '">' + $('input[name=\'new-security-auto-login\']').val() + '  -  ' + $('input[name=\'new-security-auto-ip\']').val() + '<img src="view/image/delete.png" /><input type="hidden" name="config_security_auto_logins[]" value="' + $('input[name=\'new-security-auto-login\']').val() + ',' + $('input[name=\'new-security-auto-ip\']').val() + '" /></div>');
+								$('#security-ipautos div:odd').attr('class', 'odd');
+								$('#security-ipautos div:even').attr('class', 'even');
+								$('input[name=\'new-security-auto-login\']').val('');
+								$('input[name=\'new-security-auto-ip\']').val('');
+								return false;
+							}
+						});
+
+						$('#security-ipautos div img').live('click', function() {
+							$(this).parent().remove();
+							$('#config-security-ipautos div:odd').attr('class', 'odd');
+							$('#config-security-ipautos div:even').attr('class', 'even');
+						});
+						//--></script>
+					</tr><tr>
+						<td>&nbsp;</td>
+						<td>
+							<span class="help" style="width:400px;">
+							Supported IP Adress Formatting:<br />
+							Full/Static IP: 255.255.255.255
+							</span>
+						</td>
+				</tr>
+				<tr>
+					<td><?php echo $entry_security_404_behavior; ?></td>
+					<td>
+						<input type="radio" name="config_security_404_behavior" value="common/login_404.tpl" <?php echo ($config_security_404_behavior == 'common/login_404.tpl') ? 'checked="checked"' : '';?>>Apache Style
+						<input type="radio" name="config_security_404_behavior" value="common/login_404styled.tpl" <?php echo ($config_security_404_behavior == 'common/login_404styled.tpl') ? 'checked="checked"' : '';?>>HTML/Styled 404
+					</td>
+				</tr>
+				<tr>
+					<td><?php echo $entry_security_404_passkey; ?></td>
+					<td><input type="text" name="config_security_404_passkey" value="<?php echo $config_security_404_passkey; ?>"></td>
+				</tr>
+				<tr>
+					<td><?php echo $entry_security_key_sequence; ?></td>
+					<td>
+						<select name="config_security_key_sequence1">
+							<option value=""><?php echo $text_none; ?></option>
+							<option value="ctrl" <?php echo ($config_security_key_sequence1 == 'ctrl') ? 'selected="selected"' : '';?>>CTRL</option>
+							<!-- <option value="alt" <?php echo ($config_security_key_sequence1 == 'alt') ? 'selected="selected"' : '';?>>ALT</option> -->
+							<option value="shift" <?php echo ($config_security_key_sequence1 == 'shift') ? 'selected="selected"' : '';?>>SHIFT</option>
+						</select>
+						&nbsp;+&nbsp;
+						<select name="config_security_key_sequence2">
+							<option value=""><?php echo $text_none; ?></option>
+							<option value="ctrl" <?php echo ($config_security_key_sequence2 == 'ctrl') ? 'selected="selected"' : '';?>>CTRL</option>
+							<!-- <option value="alt" <?php echo ($config_security_key_sequence2 == 'alt') ? 'selected="selected"' : '';?>>ALT</option> -->
+							<option value="shift" <?php echo ($config_security_key_sequence2 == 'shift') ? 'selected="selected"' : '';?>>SHIFT</option>
+						</select>
+						&nbsp;+&nbsp;
+						<select name="config_security_key_sequence3">
+							<option value="a" <?php echo ($config_security_key_sequence3 == 'a') ? 'selected="selected"' : '';?>>A</option>
+							<option value="b" <?php echo ($config_security_key_sequence3 == 'b') ? 'selected="selected"' : '';?>>B</option>
+							<option value="c" <?php echo ($config_security_key_sequence3 == 'c') ? 'selected="selected"' : '';?>>C</option>
+							<option value="d" <?php echo ($config_security_key_sequence3 == 'd') ? 'selected="selected"' : '';?>>D</option>
+							<option value="e" <?php echo ($config_security_key_sequence3 == 'e') ? 'selected="selected"' : '';?>>E</option>
+							<option value="f" <?php echo ($config_security_key_sequence3 == 'f') ? 'selected="selected"' : '';?>>F</option>
+							<option value="g" <?php echo ($config_security_key_sequence3 == 'g') ? 'selected="selected"' : '';?>>G</option>
+							<option value="h" <?php echo ($config_security_key_sequence3 == 'h') ? 'selected="selected"' : '';?>>H</option>
+							<option value="i" <?php echo ($config_security_key_sequence3 == 'i') ? 'selected="selected"' : '';?>>I</option>
+							<option value="j" <?php echo ($config_security_key_sequence3 == 'j') ? 'selected="selected"' : '';?>>J</option>
+							<option value="k" <?php echo ($config_security_key_sequence3 == 'k') ? 'selected="selected"' : '';?>>K</option>
+							<option value="l" <?php echo ($config_security_key_sequence3 == 'l') ? 'selected="selected"' : '';?>>L</option>
+							<option value="m" <?php echo ($config_security_key_sequence3 == 'm') ? 'selected="selected"' : '';?>>M</option>
+							<option value="n" <?php echo ($config_security_key_sequence3 == 'n') ? 'selected="selected"' : '';?>>N</option>
+							<option value="o" <?php echo ($config_security_key_sequence3 == 'o') ? 'selected="selected"' : '';?>>O</option>
+							<option value="p" <?php echo ($config_security_key_sequence3 == 'p') ? 'selected="selected"' : '';?>>P</option>
+							<option value="q" <?php echo ($config_security_key_sequence3 == 'q') ? 'selected="selected"' : '';?>>Q</option>
+							<option value="r" <?php echo ($config_security_key_sequence3 == 'r') ? 'selected="selected"' : '';?>>R</option>
+							<option value="s" <?php echo ($config_security_key_sequence3 == 's') ? 'selected="selected"' : '';?>>S</option>
+							<option value="t" <?php echo ($config_security_key_sequence3 == 't') ? 'selected="selected"' : '';?>>T</option>
+							<option value="u" <?php echo ($config_security_key_sequence3 == 'u') ? 'selected="selected"' : '';?>>U</option>
+							<option value="v" <?php echo ($config_security_key_sequence3 == 'v') ? 'selected="selected"' : '';?>>V</option>
+							<option value="w" <?php echo ($config_security_key_sequence3 == 'w') ? 'selected="selected"' : '';?>>W</option>
+							<option value="x" <?php echo ($config_security_key_sequence3 == 'x') ? 'selected="selected"' : '';?>>X</option>
+							<option value="y" <?php echo ($config_security_key_sequence3 == 'y') ? 'selected="selected"' : '';?>>Y</option>
+							<option value="z" <?php echo ($config_security_key_sequence3 == 'z') ? 'selected="selected"' : '';?>>Z</option>
+						</select>
+						&nbsp;&nbsp;&nbsp&nbsp;
+			</table>
+			</div>
+			]]></add>
+		</operation>
+	</file>
+
+</modification>

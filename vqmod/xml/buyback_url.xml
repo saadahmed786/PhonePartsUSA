@@ -1,0 +1,24 @@
+<modification>
+
+	<id>Buyback URLs</id>
+	<version>1.0.0</version>
+	<vqmver>2.1.5</vqmver>
+	<author>Jeff Hunter</author>
+	
+	<file name="catalog/controller/common/seo_url.php">
+		<operation>
+			<search position="before"><![CDATA[elseif (isset($this->request->get['path']))]]></search>
+			<add><![CDATA[
+			} elseif ($this->request->get['_route_'] ==  'buyback') { $this->request->get['route'] =  'buyback/buyback';
+			]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[$key == 'path']]></search>
+			<add><![CDATA[
+			} elseif (isset($data['route']) && $data['route'] ==   'buyback/buyback' && $key != 'remove') { $url .=  '/buyback';
+			]]></add>
+		</operation>
+	</file>
+	
+</modification>
+

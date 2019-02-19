@@ -1,0 +1,13 @@
+<modification>
+	<id>Checkout - Rename State/Region to Region/State</id>
+	<version>1.0</version>
+	<vqmver>2.1.5</vqmver>
+	<author>Jeff Hunter aka Tcalp</author>
+	
+	<file name="catalog/language/english/checkout/checkout.php">
+		<operation>
+            <search position="replace"><![CDATA[Region / State]]></search>
+            <add><![CDATA[State / Region]]></add>
+		</operation>
+	</file>
+</modification>

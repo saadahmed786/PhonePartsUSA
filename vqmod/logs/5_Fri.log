@@ -1,0 +1,15 @@
+---------- Date: 2018-09-28 16:09:37 ~ IP : 39.45.199.186 ----------
+REQUEST URI : /admin/index.php?route=sale/order&amp;token=10c6b3c01d40b5908ada178aa287a276
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/GCAutoPrint.xml
+   id        : Uber Auto Print
+   version   : 1.5.0
+   vqmver    : 2.1
+   author    : crojo
+
+File Name    : admin/controller/sale/order.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->data['invoice'] = $this->url->link('sale/order/invoice', 'token=' . $this->session->data['token'] . '&order_id=' . (int)$this->request->get['order_id'], 'SSL');
+
+----------------------------------------------------------------------
+
+

@@ -1,0 +1,99 @@
+<modification>
+  <id>Fix for payment method swap</id>
+  <version>1.0</version>
+  <vqmver>2.1.7</vqmver>
+  <author>Bigpayout Development Team</author>
+
+  <file name="catalog/controller/payment/*.php">
+    <operation>
+      <search position="before"><![CDATA[
+      function index
+      ]]></search>
+      <add><![CDATA[
+      // Start Fix for payment method swap
+      private $payment_code;
+
+      public function __construct($registry) {
+        parent::__construct($registry);
+
+        $this->payment_code = preg_replace('/vq2-catalog_controller_payment_/', '', pathinfo(__FILE__, PATHINFO_FILENAME));
+
+      }
+      // End Fix for payment method swap
+      ]]></add>
+    </operation>
+    <operation error="skip">
+      <search position="after"><![CDATA[
+      function confirm()
+      ]]></search>
+      <add><![CDATA[
+      // Start Fix for payment method swap
+      
+      if (empty($this->session->data['order_id']) || !$this->config->get($this->payment_code . '_status') || empty($this->session->data['payment_method']['code']) || $this->session->data['payment_method']['code'] != $this->payment_code) {
+        $this->response->setOutput(json_encode(array(
+          'error' => 'There was an issue processing your payment, please try again. If the issue persists, please contact us.'
+        )));
+        return;
+      }
+      // End Fix for payment method swap
+      ]]></add>
+    </operation>
+    <operation error="skip">
+      <search position="after"><![CDATA[
+      function send()
+      ]]></search>
+      <add><![CDATA[
+      // Start Fix for payment method swap
+      if (empty($this->session->data['order_id']) || !$this->config->get($this->payment_code . '_status') || empty($this->session->data['payment_method']['code']) || $this->session->data['payment_method']['code'] != $this->payment_code) {
+        $this->response->setOutput(json_encode(array(
+          'error' => 'There was an issue processing your payment, please try again. If the issue persists, please contact us.'
+        )));
+        return;
+      }
+      // End Fix for payment method swap
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="catalog/controller/payment/moneybookers.php" error="skip">
+    <operation>
+      <search position="replace"><![CDATA[
+      if ($order_info) {
+      ]]></search>
+      <add><![CDATA[
+      // Start Fix for payment method swap
+      if ($order_info && $order_info['payment_code'] == $this->payment_code) {
+      // End Fix for payment method swap
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="catalog/controller/payment/paypoint.php" error="skip">
+    <operation>
+      <search position="replace"><![CDATA[
+      if ($order_info) {
+      ]]></search>
+      <add><![CDATA[
+      // Start Fix for payment method swap
+      if ($order_info && $order_info['payment_code'] == $this->payment_code) {
+      // End Fix for payment method swap
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="catalog/view/theme/*/template/payment/*.tpl">
+    <operation error="skip">
+      <search position="replace"><![CDATA[
+      success: function() {
+      ]]></search>
+      <add><![CDATA[
+      dataType: 'json',
+      success: function(json) {
+        if (json && json['error']) {
+          alert(json['error']);
+          return;
+        }
+      ]]></add>
+    </operation>
+  </file>
+</modification>

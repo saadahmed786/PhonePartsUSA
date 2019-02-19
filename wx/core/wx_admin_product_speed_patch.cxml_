@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<sql><![CDATA[
+	ALTER TABLE `product` ADD `display_name` VARCHAR(255) NOT NULL DEFAULT '';
+	]]></sql>
+	<id>WXHosting.com Admin Large Category Structure</id>
+	<version>1.0.0</version>
+	<vqmver>2.1.5</vqmver>
+	<author>Jeff Hunter</author>
+	
+	<file name="admin/model/catalog/product.php">
+
+		<operation error="skip">
+			<search position="before"><![CDATA[$sql = "SELECT * FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE pd.language_id]]></search>
+			<add><![CDATA[
+			$products = $this->db->query("SELECT product_id FROM " . DB_PREFIX . "product WHERE display_name = ''");
+			foreach ($products->rows as $product) {
+				$this->db->query("UPDATE " . DB_PREFIX . "product p INNER JOIN product_description pd ON p.product_id = pd.product_id SET p.display_name = pd.name WHERE p.product_id = '" . $product['product_id'] . "'");
+			}
+			]]></add>
+		</operation>
+
+		<operation error="skip"> <!-- CHANGE name TO display_name for product filtering -->
+		
+			<search position="replace"><![CDATA[AND pd.name LIKE]]></search>
+			<add><![CDATA[AND p.display_name LIKE]]></add>
+		</operation>
+		
+		<operation error="skip">
+			<search position="replace"><![CDATA[$sql = "SELECT * FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE pd.language_id]]></search>
+			<add><![CDATA[$sql = "SELECT *, p.display_name name FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE pd.language_id]]></add>
+		</operation>
+		
+
+		<operation error="skip">
+			<search position="replace"><![CDATA[$sql .= " ORDER BY pd.name";]]></search>
+			<add><![CDATA[$sql .= " ORDER BY display_name";]]></add>
+		</operation>
+		
+		<operation error="skip">
+			<search position="replace"><![CDATA[$sql .= " ORDER BY " . $data['sort'];]]></search>
+			<add><![CDATA[
+			if ($data['sort'] == 'pd.name') {
+				$sql .= " ORDER BY p.display_name";
+			} else {
+				$sql .= " ORDER BY " . $data['sort'];
+			}
+			]]></add>
+		</operation>
+		
+		
+		<operation error="skip"> <!-- remove product_description join from getProducts() -->
+			<search position="replace"><![CDATA[LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "'"]]></search>
+			<add><![CDATA[WHERE"]]></add>
+		</operation>
+		
+		<operation>
+			<search position="before" offset="2" index="1"><![CDATA[return $query->rows;]]></search>
+			<add><![CDATA[
+			
+			$sql    = str_replace("WHERE GROUP BY", "GROUP BY", $sql);
+			$sql    = str_replace("WHERE AND", "WHERE", $sql);
+			$pieces = explode(' ', $sql);
+			$last   = array_pop($pieces);
+			if ($last == "WHERE") {
+				$sql = str_replace("WHERE", "", $sql);
+			}
+			]]></add>
+		</operation>
+			
+		<operation error="skip">
+			<search position="replace"><![CDATA[LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id)";]]></search>
+			<add><![CDATA[";]]></add>
+		</operation>
+		
+		<operation error="skip">
+			<search position="replace"><![CDATA[$sql .= " WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "'";]]></search>
+			<add><![CDATA[$sql .= " WHERE 1=1";]]></add>
+		</operation>
+		
+		
+	</file>
+</modification>

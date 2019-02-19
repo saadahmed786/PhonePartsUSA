@@ -1,0 +1,22 @@
+<modification>
+        <id>Disable Cart Load If Products Already In Cart</id>
+        <version>1.0</version>
+        <vqmver>1.2.3</vqmver>
+        <author>Jeff Hunter aka Tcalp</author>
+
+		<file name="system/library/customer.php">
+			<operation> <!-- COUNT ITEMS IN CART -->
+				<search position="before"><![CDATA[if ($customer_query->row['cart']]]></search>
+				<add><![CDATA[
+				$cartCount = 0;
+				foreach ($this->session->data['cart'] as $key => $quantity) {
+					$cartCount++;
+				}
+				]]></add>			
+			</operation>
+			<operation> <!-- ADD CHECK TO SEE THAT CART IS EMPTY -->
+				<search position="replace"><![CDATA[if ($customer_query->row['cart']]]></search>
+				<add><![CDATA[if ($cartCount == 0 && $customer_query->row['cart']]]></add>			
+			</operation>
+		</file>	
+</modification>

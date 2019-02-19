@@ -1,0 +1,18 @@
+<modification>
+  <id>Hide Out of Stock Products when location is 1</id>
+  <version>1.0</version>
+  <vqmver>2.4.1</vqmver>
+  <author>Qphoria@gmail.com</author>
+
+  <file name="catalog/model/*/*.php">
+    <operation error="skip">
+      <search position="replace"><![CDATA[
+      p.status = '1'
+      ]]></search>
+      <add trim="true"><![CDATA[
+	  p.status = '1' AND ( (p.quantity > '0') OR (p.quantity <= '0' and p.location <> '1'))
+      ]]></add>
+    </operation>
+  </file>
+
+</modification>

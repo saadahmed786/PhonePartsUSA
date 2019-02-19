@@ -1,0 +1,67 @@
+<modification>
+    <id>Single Product Redirect</id>
+    <version>156.1</version>
+    <vqmver>2.4.1</vqmver>
+    <author>Qphoria</author>
+
+    <file name="catalog/controller/product/category.php">
+        <operation info="If category only has one product, go right to it">
+            <search position="before"><![CDATA[
+            $this->data['sorts'] = array();
+            ]]></search>
+            <add><![CDATA[
+			if (count($this->data['products']) == 1) {
+				foreach ($this->data['products'] as $product) {
+					$this->redirect($product['href']);
+				}
+			}
+			]]></add>
+        </operation>
+    </file>
+
+    <file name="catalog/controller/product/manufacturer.php">
+        <operation info="If manufacturer only has one product, go right to it">
+            <search position="before"><![CDATA[
+            $this->data['sorts'] = array();
+            ]]></search>
+            <add><![CDATA[
+			if (count($this->data['products']) == 1) {
+				foreach ($this->data['products'] as $product) {
+					$this->redirect($product['href']);
+				}
+			}
+			]]></add>
+        </operation>
+    </file>
+
+    <file name="catalog/controller/product/special.php">
+        <operation info="If special only has one product, go right to it">
+            <search position="before"><![CDATA[
+            $this->data['sorts'] = array();
+            ]]></search>
+            <add><![CDATA[
+			if (count($this->data['products']) == 1) {
+				foreach ($this->data['products'] as $product) {
+					$this->redirect($product['href']);
+				}
+			}
+			]]></add>
+        </operation>
+    </file>
+
+    <file name="catalog/controller/product/search.php">
+        <operation info="If search only has one product, go right to it">
+            <search position="before"><![CDATA[
+            $this->data['sorts'] = array();
+            ]]></search>
+            <add><![CDATA[
+			if (count($this->data['products']) == 1) {
+				foreach ($this->data['products'] as $product) {
+					$this->redirect($product['href']);
+				}
+			}
+			]]></add>
+        </operation>
+    </file>
+
+</modification>

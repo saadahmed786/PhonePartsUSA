@@ -1,0 +1,342 @@
+<modification>
+	<id>Category Quantity</id>
+	<version>1.3</version>
+	<vqmver>2.1.7</vqmver>
+	<author>Tamas Kesmarki - opencartgeek.com</author>
+
+	<file name="catalog/controller/product/category.php">
+		<operation>
+			<search position="after"><![CDATA[function index() {]]></search>
+			<add><![CDATA[
+			$this->load->model('setting/setting');
+		
+			$category_quantity = $this->model_setting_setting->getSetting('category_quantity', $this->request->post);
+			
+			if (!empty($category_quantity)) {				
+				$this -> data['category_quantity'] = $category_quantity['category_quantity_module']['1']['enable_on_views']['category'];
+				
+				$this->document->addScript('catalog/view/javascript/category_quantity.js');
+				$this->document->addStyle('catalog/view/theme/'.(($this->session->data['temp_theme'])? $this->session->data['temp_theme'] : $this->config->get('config_template')).'/stylesheet/category_quantity.css');
+			}
+			]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[$this->data['products'][] = array(]]></search>
+			<add><![CDATA[
+			'min' => $result['minimum'],
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/product/search.php">
+		<operation>
+			<search position="after"><![CDATA[function index() {]]></search>
+			<add><![CDATA[
+			$this->load->model('setting/setting');
+		
+			$category_quantity = $this->model_setting_setting->getSetting('category_quantity', $this->request->post);
+			
+			if (!empty($category_quantity)) {				
+				$this -> data['category_quantity'] = $category_quantity['category_quantity_module']['1']['enable_on_views']['search'];
+				
+				$this->document->addScript('catalog/view/javascript/category_quantity.js');
+				$this->document->addStyle('catalog/view/theme/'.(($this->session->data['temp_theme'])? $this->session->data['temp_theme'] : $this->config->get('config_template')).'/stylesheet/category_quantity.css');
+			}
+			]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[$this->data['products'][] = array(]]></search>
+			<add><![CDATA[
+			'min' => $result['minimum'],
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/product/product.php">
+		<operation>
+			<search position="after"><![CDATA[function index() {]]></search>
+			<add><![CDATA[
+			$this->load->model('setting/setting');
+		
+			$category_quantity = $this->model_setting_setting->getSetting('category_quantity', $this->request->post);
+			if (!empty($category_quantity)) {
+				$this -> data['category_quantity'] = $category_quantity['category_quantity_module']['1']['enable_on_views']['product'];
+				
+				$this->document->addScript('catalog/view/javascript/category_quantity.js');
+				$this->document->addStyle('catalog/view/theme/'.(($this->session->data['temp_theme'])? $this->session->data['temp_theme'] : $this->config->get('config_template')).'/stylesheet/category_quantity.css');
+			}
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/checkout/cart.php">
+		<operation>
+			<search position="after"><![CDATA[function index() {]]></search>
+			<add><![CDATA[
+			$this->load->model('setting/setting');
+		
+			$category_quantity = $this->model_setting_setting->getSetting('category_quantity', $this->request->post);
+
+			if (!empty($category_quantity)) {	
+				$this -> data['category_quantity'] = $category_quantity['category_quantity_module']['1']['enable_on_views']['cart'];
+				
+				$this->document->addScript('catalog/view/javascript/category_quantity.js');
+				$this->document->addStyle('catalog/view/theme/'.(($this->session->data['temp_theme'])? $this->session->data['temp_theme'] : $this->config->get('config_template')).'/stylesheet/category_quantity.css');
+			}
+			]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[$this->data['products'][] = array(]]></search>
+			<add><![CDATA[
+			'min' => $product['minimum'],
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/module/bestseller.php">
+		<operation>
+			<search position="after"><![CDATA[function index($setting) {]]></search>
+			<add><![CDATA[
+			$this->load->model('setting/setting');
+		
+			$category_quantity = $this->model_setting_setting->getSetting('category_quantity', $this->request->post);
+			
+			if (!empty($category_quantity)) {
+				$this -> data['category_quantity'] = $category_quantity['category_quantity_module']['1']['enable_on_modules']['bestseller'];
+				
+				$this->document->addScript('catalog/view/javascript/category_quantity.js');
+				$this->document->addStyle('catalog/view/theme/'.(($this->session->data['temp_theme'])? $this->session->data['temp_theme'] : $this->config->get('config_template')).'/stylesheet/category_quantity.css');
+			}
+			]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[$this->data['products'][] = array(]]></search>
+			<add><![CDATA[
+			'min' => $result['minimum'],
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/module/latest.php">
+		<operation>
+			<search position="after"><![CDATA[function index($setting) {]]></search>
+			<add><![CDATA[
+			$this->load->model('setting/setting');
+		
+			$category_quantity = $this->model_setting_setting->getSetting('category_quantity', $this->request->post);
+			
+			if (!empty($category_quantity)) {
+				$this -> data['category_quantity'] = $category_quantity['category_quantity_module']['1']['enable_on_modules']['latest'];
+				
+				$this->document->addScript('catalog/view/javascript/category_quantity.js');
+				$this->document->addStyle('catalog/view/theme/'.(($this->session->data['temp_theme'])? $this->session->data['temp_theme'] : $this->config->get('config_template')).'/stylesheet/category_quantity.css');
+			}
+			]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[$this->data['products'][] = array(]]></search>
+			<add><![CDATA[
+			'min' => $result['minimum'],
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/module/special.php">
+		<operation>
+			<search position="after"><![CDATA[function index($setting) {]]></search>
+			<add><![CDATA[
+			$this->load->model('setting/setting');
+		
+			$category_quantity = $this->model_setting_setting->getSetting('category_quantity', $this->request->post);
+			
+			if (!empty($category_quantity)) {
+				$this -> data['category_quantity'] = $category_quantity['category_quantity_module']['1']['enable_on_modules']['special'];
+				
+				$this->document->addScript('catalog/view/javascript/category_quantity.js');
+				$this->document->addStyle('catalog/view/theme/'.(($this->session->data['temp_theme'])? $this->session->data['temp_theme'] : $this->config->get('config_template')).'/stylesheet/category_quantity.css');
+			}
+			]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[$this->data['products'][] = array(]]></search>
+			<add><![CDATA[
+			'min' => $result['minimum'],
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/module/featured.php">
+		<operation>
+			<search position="after"><![CDATA[function index($setting) {]]></search>
+			<add><![CDATA[
+			$this->load->model('setting/setting');
+		
+			$category_quantity = $this->model_setting_setting->getSetting('category_quantity', $this->request->post);
+			
+			if (!empty($category_quantity)) {
+				$this -> data['category_quantity'] = $category_quantity['category_quantity_module']['1']['enable_on_modules']['featured'];
+				
+				$this->document->addScript('catalog/view/javascript/category_quantity.js');
+				$this->document->addStyle('catalog/view/theme/'.(($this->session->data['temp_theme'])? $this->session->data['temp_theme'] : $this->config->get('config_template')).'/stylesheet/category_quantity.css');
+			}
+			]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[$this->data['products'][] = array(]]></search>
+			<add><![CDATA[
+			'min' => $product_info['minimum'],
+			]]></add>
+		</operation>
+	</file>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<file name="catalog/view/theme/*/template/product/category.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>]]></search>
+			<add>
+			<![CDATA[
+				<?php if(!empty($category_quantity) && $category_quantity==1) { ?>
+				<div class="category_quantity" style="height: 20px; display: inline-block;">
+				
+				<div style="vertical-align: middle;">
+				Quantity: <input type="text" id="qty<?php echo $product['product_id']; ?>" value="<?php echo $product['min']; ?>" data-min="<?php echo $product['min']; ?>" size="1"  name="quantity_<?php echo $product['product_id']; ?>" style="width: 60px; height: 17px; font-size: 12px; background: #fff; color: #8c8c8c;  border: 1px solid #8c8c8c;vertical-align: middle; line-height: 17px;"><br/>&nbsp;<br/>
+				</div>
+				<span class="button_pink" ><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCartQty('<?php echo $product['product_id']; ?>', this);" class="button"/></span>
+				</div>
+				<?php } else {	?>
+				<br/>&nbsp;<br/>&nbsp;<br/>
+			        <?php } ?>
+			]]>
+			</add>
+		</operation>
+	</file>
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<file name="catalog/view/theme/*/template/product/search.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>]]></search>
+			<add>
+			<![CDATA[
+				<?php if(!empty($category_quantity) && $category_quantity==1) { ?>
+				<div class="category_quantity" style="height: 20px; display: inline-block;">
+				
+				<div style="vertical-align: middle;">
+				Quantity: <input type="text" id="qty<?php echo $product['product_id']; ?>" value="<?php echo $product['min']; ?>" data-min="<?php echo $product['min']; ?>" size="1"  name="quantity_<?php echo $product['product_id']; ?>" style="width: 60px; height: 17px; font-size: 12px; background: #fff; color: #8c8c8c;  border: 1px solid #8c8c8c;vertical-align: middle; line-height: 17px;"><br/>&nbsp;<br/>
+				</div>
+				<span class="button_pink" ><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCartQty('<?php echo $product['product_id']; ?>', this);" class="button"/></span>
+				</div>
+				<?php } else {	?>
+			        <span class="button_pink" ><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+				<?php } ?>
+			]]>
+			</add>
+		</operation>
+	</file>
+	
+
+	
+
+	
+	<file name="catalog/view/theme/*/template/module/bestseller.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>]]></search>
+			<add>
+			<![CDATA[
+				<?php if(!empty($category_quantity) && $category_quantity==1) { ?>
+				<div class="category_quantity" style="height: 20px; display: inline-block;">
+				
+				<div style="vertical-align: middle;">
+				Quantity: <input type="text" id="qty<?php echo $product['product_id']; ?>" value="<?php echo $product['min']; ?>" data-min="<?php echo $product['min']; ?>" size="1"  name="quantity_<?php echo $product['product_id']; ?>" style="width: 60px; height: 17px; font-size: 12px; background: #fff; color: #8c8c8c;  border: 1px solid #8c8c8c;vertical-align: middle; line-height: 17px;"><br/>&nbsp;<br/>
+				</div>
+				<span class="button_pink" ><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCartQty('<?php echo $product['product_id']; ?>', this);" class="button"/></span>
+				</div>
+				<?php } else {	?>
+			        <span class="button_pink" ><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+				<?php } ?>
+			]]>
+			</add>
+		</operation>
+	</file>
+	
+	<file name="catalog/view/theme/*/template/module/latest.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>]]></search>
+			<add>
+			<![CDATA[
+				<?php if(!empty($category_quantity) && $category_quantity==1) { ?>
+				<div class="category_quantity" style="height: 20px; display: inline-block;">
+				
+				<div style="vertical-align: middle;">
+				Quantity: <input type="text" id="qty<?php echo $product['product_id']; ?>" value="<?php echo $product['min']; ?>" data-min="<?php echo $product['min']; ?>" size="1"  name="quantity_<?php echo $product['product_id']; ?>" style="width: 60px; height: 17px; font-size: 12px; background: #fff; color: #8c8c8c;  border: 1px solid #8c8c8c;vertical-align: middle; line-height: 17px;"><br/>&nbsp;<br/>
+				</div>
+				<span class="button_pink" ><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCartQty('<?php echo $product['product_id']; ?>', this);" class="button"/></span>
+				</div>
+				<?php } else {	?>
+			        <span class="button_pink" ><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+				<?php } ?>
+			]]>
+			</add>
+		</operation>
+	</file>
+	
+	<file name="catalog/view/theme/*/template/module/special.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>]]></search>
+			<add>
+			<![CDATA[
+				<?php if(!empty($category_quantity) && $category_quantity==1) { ?>
+				<div class="category_quantity" style="height: 20px; display: inline-block;">
+				
+				<div style="vertical-align: middle;">
+				Quantity: <input type="text" id="qty<?php echo $product['product_id']; ?>" value="<?php echo $product['min']; ?>" data-min="<?php echo $product['min']; ?>" size="1"  name="quantity_<?php echo $product['product_id']; ?>" style="width: 60px; height: 17px; font-size: 12px; background: #fff; color: #8c8c8c;  border: 1px solid #8c8c8c;vertical-align: middle; line-height: 17px;"><br/>&nbsp;<br/>
+				</div>
+				<span class="button_pink" ><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCartQty('<?php echo $product['product_id']; ?>', this);" class="button"/></span>
+				</div>
+				<?php } else {	?>
+			        <span class="button_pink" ><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+				<?php } ?>
+			]]>
+			</add>
+		</operation>
+	</file>
+	
+	<file name="catalog/view/theme/*/template/module/featured.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>]]></search>
+			<add>
+			<![CDATA[
+				<?php if(!empty($category_quantity) && $category_quantity==1) { ?>
+				<div class="category_quantity" style="height: 20px; display: inline-block;">
+				
+				<div style="vertical-align: middle;">
+				Quantity: <input type="text" id="qty<?php echo $product['product_id']; ?>" value="<?php echo $product['min']; ?>" data-min="<?php echo $product['min']; ?>" size="1"  name="quantity_<?php echo $product['product_id']; ?>" style="width: 60px; height: 17px; font-size: 12px; background: #fff; color: #8c8c8c;  border: 1px solid #8c8c8c;vertical-align: middle; line-height: 17px;"><br/>&nbsp;<br/>
+				</div>
+				<span class="button_pink" ><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCartQty('<?php echo $product['product_id']; ?>', this);" class="button"/></span>
+				</div>
+				<?php } else {	?>
+			        <span class="button_pink" ><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+				<?php } ?>
+			]]>
+			</add>
+		</operation>
+	</file>
+</modification>

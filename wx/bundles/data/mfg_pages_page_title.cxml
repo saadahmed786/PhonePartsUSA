@@ -1,0 +1,84 @@
+<modification>
+	<sql><![CDATA[
+		ALTER TABLE `manufacturer` ADD `mfg_page_title` VARCHAR( 255 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+	]]></sql>
+	<id>Custom Page Title for Manufacturer Pages</id>
+	<version>1.0</version>
+	<vqmver>1.2.3</vqmver>
+	<author>Jeff Hunter aka Tcalp</author>
+
+<!--  ADMIN PANEL  =======================================================================================  ADMIN PANEL  -->
+<!--  ADMIN PANEL      ADMIN PANEL      ADMIN PANEL      ADMIN PANEL      ADMIN PANEL      ADMIN PANEL      ADMIN PANEL  -->
+<!--  ADMIN PANEL  =======================================================================================  ADMIN PANEL  -->
+
+	<file name="admin/controller/catalog/manufacturer.php">
+        <operation> <!-- READ ADMIN LANGUAGE -->
+            <search position="after"><![CDATA[$this->data['entry_name']]]></search>
+            <add><![CDATA[$this->data['entry_mfg_page_title'] = $this->language->get('entry_mfg_page_title');]]></add>
+        </operation>
+		<operation> <!-- ADD READ OF PAGE TITLE -->
+			<search position="before"><![CDATA[isset($this->request->post['keyword'])]]></search>
+			<add><![CDATA[
+			if (isset($this->request->post['mfg_page_title'])) {
+				$this->data['mfg_page_title'] = $this->request->post['mfg_page_title'];
+			} elseif (!empty($manufacturer_info)) {
+				$this->data['mfg_page_title'] = $manufacturer_info['mfg_page_title'];
+			} else {
+				$this->data['mfg_page_title'] = '';
+			}
+			]]></add>
+		</operation>
+	</file>
+
+	<file name="admin/model/catalog/manufacturer.php">
+        <operation> <!-- ALTER DATA MODEL -->
+            <search position="replace"><![CDATA[name = '" . $this->db->escape($data['name'])]]></search>
+            <add><![CDATA[name = '" . $this->db->escape($data['name']) . "', mfg_page_title = '" . $this->db->escape($data['mfg_page_title'])]]></add>
+        </operation>
+	</file>
+	
+	<file name="admin/view/template/catalog/manufacturer_form.tpl">
+        <operation> <!-- ADD SEO PAGE TITLE AND COUNT JS TO FORM -->
+            <search position="before" offset="1"><![CDATA[echo $entry_store;]]></search>
+            <add><![CDATA[
+              <tr>
+                <td><?php echo $entry_mfg_page_title; ?></td>
+                <td>
+				<table>
+					<tr>
+					<td><input type="text" id="mfg_page_title_text" name="mfg_page_title" size="100" value="<?php echo $mfg_page_title; ?>" /></td>
+					<td><span id="mfg_page_title_count" class="help"></span></td>
+					</tr>
+				</table>
+				</td>
+              </tr>
+				<script type="text/javascript">
+				$(document).ready(function() {
+					$('input#mfg_page_title_text').keyup(function() {
+						$('span#mfg_page_title_count').html(this.value.length + '/70 characters (255 max)');      
+					});
+					$('span#mfg_page_title_count').html($('input#mfg_page_title_text').val().length + '/70 characters (255 max)');      
+				});
+				</script>
+            ]]></add>
+        </operation>
+	</file>
+
+	<file name="admin/language/english/catalog/manufacturer.php">
+        <operation> <!-- ADD NEW LANGUAGE ENTRY -->
+            <search position="after"><![CDATA[?php]]></search>
+            <add><![CDATA[$_['entry_mfg_page_title'] = 'Page Title:';]]></add>
+        </operation>
+	</file>	
+
+	
+	<file name="catalog/controller/product/manufacturer.php">
+		<operation> <!-- ALTER SET PAGE TITLE ON INFORMATION CONTROLLER -->
+			<search position="replace"><![CDATA[$this->document->setTitle($manufacturer_info['name']);]]></search>
+			<add><![CDATA[
+			$set_title = ($manufacturer_info['mfg_page_title']) ? $manufacturer_info['mfg_page_title'] : $manufacturer_info['name'];
+			$this->document->setTitle($set_title);
+			]]></add>
+		</operation>
+	</file>	
+</modification>

@@ -1,0 +1,87 @@
+<modification>
+	<id>VQMOD SEO CANONICAL LINKS</id>
+	<version>1.2</version>
+	<vqmver>2.X</vqmver>
+	<author>WEBGURUINDIA</author>
+
+	<!-- CATEGORY SEO -->
+	<file name="catalog/controller/product/category.php">
+		
+		<operation error="log">
+            <search position="after"><![CDATA[$this->document->setKeywords($category_info['meta_keyword']);]]></search>
+            <add>
+                <![CDATA[$parts = explode('_', (string)$this->request->get['path']);
+				$pagenum = '';
+			foreach ($parts as $part){
+				$path=$part;
+			}
+			if (isset($this->request->get['page'])){
+                $pagenum= '&page='.$this->request->get['page'];
+            }
+			$this->document->addLink($this->url->link('product/category', 'path=' . $path. $pagenum), 'canonical');]]>
+            </add>
+        </operation>
+		
+		<operation error="log">
+            <search position="after"><![CDATA[$this->data['pagination'] = $pagination->render();]]></search>
+            <add>
+                <![CDATA[
+				if ($pagination->limit && ceil($pagination->total / $pagination->limit) > $pagination->page) {
+				$this->document->addLink($this->url->link('product/category', 'path=' . $this->request->get['path'] . '&page=' . ($pagination->page + 1)), 'next');
+			}
+
+			if ($pagination->page > 1) {
+				$this->document->addLink($this->url->link('product/category', 'path=' . $this->request->get['path']. '&page=' . ($pagination->page - 1)), 'prev');
+			}
+				]]>
+            </add>
+        </operation>
+
+    </file>
+	
+	<!-- BRAND SEO -->
+	<file name="catalog/controller/product/manufacturer.php">
+		
+		<operation error="log">
+            <search position="after"><![CDATA[$this->document->setTitle($manufacturer_info['name']);]]></search>
+            <add>
+                <![CDATA[$pagebnum = '';
+				if (isset($this->request->get['page'])){
+                 $pagebnum= '&page='.$this->request->get['page'];
+                }
+				$this->document->addLink($this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'].$pagebnum), 'canonical');]]>
+            </add>
+        </operation>
+		
+		<operation error="log">
+            <search position="after"><![CDATA[$this->data['pagination'] = $pagination->render();]]></search>
+            <add>
+                <![CDATA[
+				if ($pagination->limit && ceil($pagination->total / $pagination->limit) > $pagination->page) {
+				$this->document->addLink($this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . '&page=' . ($pagination->page + 1)), 'next');
+			}
+
+			if ($pagination->page > 1) {
+				$this->document->addLink($this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id']. '&page=' . ($pagination->page - 1)), 'prev');
+			}
+				]]>
+            </add>
+        </operation>
+		
+		
+    </file>
+	
+	<!-- INFORMATION SEO -->
+	<file name="catalog/controller/information/information.php">
+		
+		<operation error="log">
+            <search position="after"><![CDATA[$this->document->setTitle($information_info['title']);]]></search>
+            <add>
+                <![CDATA[
+				$this->document->addLink($this->url->link('information/information', 'information_id=' . $information_id), 'canonical');]]>
+            </add>
+        </operation>
+		
+		
+    </file>
+</modification>

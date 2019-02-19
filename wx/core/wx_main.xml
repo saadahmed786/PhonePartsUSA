@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>WXHosting.com Speed Optimization Settings</id>
+	<version>2.0</version>
+	<vqmver>2.1</vqmver>
+	<author>Jeff Hunter aka Tcalp</author>
+
+<!--  ==============================================================================================================================================================================  -->
+<!--  SYSTEM CORE MODIFICATIONS      SYSTEM CORE MODIFICATIONS      SYSTEM CORE MODIFICATIONS      SYSTEM CORE MODIFICATIONS      SYSTEM CORE MODIFICATIONS      SYSTEM CORE MODIFIC  -->
+<!--  ==============================================================================================================================================================================  -->
+<file error="log" name="system/framework.php">
+	<operation>
+		<search position="replace"><![CDATA[$response = new Response();]]></search>
+		<add><![CDATA[$response = new Response($registry);]]></add>
+	</operation>
+	
+	<operation> <!-- ADD BLOCK LEVEL CACHER TO REGISTRY -->
+		<search position="before"><![CDATA[$controller = new Front]]></search>
+		<add><![CDATA[$registry->set('blc', new Blc($registry));]]></add>
+	</operation>
+</file>
+
+<file name="system/startup.php">
+<operation> <!-- ADD NEW SYSTEM LIBRARIES -->
+	<search position="after" index="1"><![CDATA[?php]]></search>
+	<add><![CDATA[
+	define('OPTIMIZATION_PREFIX', 'wx');
+	if(!defined('OPTIMIZER_VERSION')) define('OPTIMIZER_VERSION', trim(file_get_contents(DIR_SYSTEM . '../' . OPTIMIZATION_PREFIX . '/.version')));
+	require_once(DIR_SYSTEM . '../' . OPTIMIZATION_PREFIX . '/library/minify.php');
+	require_once(DIR_SYSTEM . '../' . OPTIMIZATION_PREFIX . '/library/blc.php');
+	]]></add>
+</operation>
+</file>
+
+<file error="log" name="system/library/db.php">
+<operation error="ignore">
+	<search position="after"><![CDATA[class DB]]></search>
+	<add><![CDATA[public $cacheDir;]]></add>
+</operation>
+
+<operation error="ignore">
+	<search position="after"><![CDATA[function __construct]]></search>
+	<add><![CDATA[$this->cacheDir = 'general';]]></add>
+</operation>
+<operation> <!-- ADD QUERY CACHE SUPPORT -->
+	<search position="before" index="1"><![CDATA[public function query]]></search>
+	<add><![CDATA[
+	public function cachedQuery($sql) {
+		
+		$folder = DIR_CACHE . 'sql/' . $this->cacheDir . '/';
+		if (!is_dir($folder)) {
+			mkdir($folder, 0777, true);
+		}
+			
+		$filename = $folder . md5($sql);
+
+		if (!file_exists($filename)) {
+			$query =  $this->query($sql);
+			$handle = fopen($filename, 'w');
+			fwrite($handle, serialize($query));
+			fclose($handle);
+			return $query;	
+		} else {
+			$cache = unserialize(file_get_contents($filename));
+			return $cache;
+		}
+	}
+	]]></add>
+</operation>
+</file>
+
+<file error="ignore" name="system/library/cart.php,system/library/cart/cart.php">
+<operation>
+	<search position="before"><![CDATA[function __construct(]]></search>
+	<add><![CDATA[
+	function __destruct() {
+		if (version_compare(VERSION, '2.2.0') >= 0) {
+			if (isset($this->db)) {
+				$db = new \DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
+				$cart_query = $db->query("SELECT * FROM " . DB_PREFIX . "cart WHERE customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $db->escape($this->session->getId()) . "'");
+				$_SESSION[OPTIMIZATION_PREFIX . '_cache_basket'] = $cart_query->num_rows ? 1 : 0;
+			} else {
+				//$db = new DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
+				//$cart_query = $db->query("SELECT * FROM " . DB_PREFIX . "cart WHERE customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $db->escape($this->session->getId()) . "'");
+				//$_SESSION[OPTIMIZATION_PREFIX . '_cache_basket'] = $cart_query->num_rows ? 1 : 0;
+			}
+		}
+	}]]></add>
+</operation>
+</file>
+
+	
+<!--  ==============================================================================================================================================================================  -->
+<!--  BLOCK LEVEL CACHING    BLOCK LEVEL CACHING    BLOCK LEVEL CACHING    BLOCK LEVEL CACHING    BLOCK LEVEL CACHING    BLOCK LEVEL CACHING    BLOCK LEVEL CACHING    BLOCK LEVEL    -->
+<!--  ==============================================================================================================================================================================  -->
+
+<file error="ignore" name="system/engine/controller.php"> <!-- BLOCK LEVEL CACHING ADD -->
+<operation error="ignore"> <!-- ADD PRECURSOR CACHE LOAD -->
+	<search position="after" index="1"><![CDATA[if (file_exists(]]></search>
+	<add><![CDATA[
+	global $cache;
+	$styles['pre']   = $this->document->getStyles();
+	$scripts['pre']  = $this->document->getScripts();
+	
+	$cached_children = $this->config->get('optimizer_page_cached_routes');
+	if (!is_array($cached_children)) {
+		$cached_children = array();
+	}
+	$cached_output = false;
+	if (!defined("DIR_CATALOG")) {
+		$https = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443) ? 1 : 0;
+		$cached_name = 'wxblc.' . str_replace('/', '-', $child)  . '.' . $https . '.' . $this->config->get('config_template') . '.' . (int)$this->currency->getCode() . '.' . $this->customer->getCustomerGroupId() . '.' . (int)$this->config->get('config_language_id') . '.' . (int)$this->config->get('config_store_id') . (!empty($args) ? '.' . md5(serialize($args)) : '');
+		$cached_output = $this->cache->get($cached_name);
+	}
+	
+	if (!defined("DIR_CATALOG") && in_array($child, $cached_children) && $cached_output) {
+	
+		$style_cache = $cache->get($cached_name . ".styles");
+		if (isset($style_cache['scripts'])) {
+			foreach($style_cache['scripts'] as $script) {
+				$this->document->addScript($script);
+			}
+		}
+		if (isset($style_cache['styles'])) {
+			foreach($style_cache['styles'] as $style) {
+				$this->document->addStyle($style['href'], $style['rel'], $style['media']);
+			}
+		}
+
+		return $cached_output;
+	} else {
+	]]></add>
+</operation>
+
+<operation error="ignore"> <!-- ADD CACHE WRITE -->
+	<search position="replace"><![CDATA[return $controller->output;]]></search>
+	<add><![CDATA[
+		if (!defined("DIR_CATALOG") && in_array($child, $cached_children)) {
+			$cache->set($cached_name, $controller->output);
+
+			$style_cache      = array();
+			$styles['post']   = $this->document->getStyles();
+			$scripts['post']  = $this->document->getScripts();
+			
+			if (count($styles['post']) !==  count($styles['pre'])) {
+				foreach ($styles['pre'] as $key => $style) {
+					unset($styles['post'][$key]);
+				}
+				if (!empty($styles['post'])) {
+					$style_cache['styles'] = $styles['post'];
+				}
+			}
+			
+			if  (count($scripts['post']) !==  count($scripts['pre'])) {
+				$style_cache['scripts'] = array_diff($scripts['post'],$scripts['pre']);
+			}
+			
+			if (!empty($style_cache)) {
+				$cache->set($cached_name . ".styles", $style_cache);			
+			}					
+		}
+		return $controller->output;
+	}
+	]]></add>
+</operation>
+</file>	
+
+<file error="log" name="system/engine/loader.php"> <!-- BLOCK LEVEL CACHING ADD -->
+	<operation error="ignore">
+		<ignoreif><![CDATA[public function __get]]></ignoreif>
+		<search position="before"><![CDATA[public function controller]]></search>
+		<add><![CDATA[
+	public function __get($key) {
+		return $this->registry->get($key);
+	}
+		]]></add>
+	</operation>
+		
+	<operation error="ignore">
+		<ignoreif><![CDATA[public function __set]]></ignoreif>
+		<search position="before"><![CDATA[public function controller]]></search>
+		<add><![CDATA[
+	public function __set($key, $value) {
+		$this->registry->set($key, $value);
+	}
+		]]></add>
+	</operation>
+
+	<operation error="ignore">
+		<search position="after"><![CDATA[public function controller]]></search>
+		<add><![CDATA[
+		//var_dump($this->blc->cached_routes);
+		if (!defined("DIR_CATALOG") && in_array($route, $this->blc->cached_routes)&& $this->blc->has($route, (isset($args) ? $args : $data))) {
+			return $this->blc->get($route,(isset($args) ? $args : $data));
+		}
+		]]></add>
+	</operation>	
+	<operation error="ignore">
+		<ignoreif><![CDATA[OPTIMIZATION FRAMEWORK]]></ignoreif>
+		<search position="replace" index="1"><![CDATA[return $action->execute($this->registry);]]></search>
+		<add><![CDATA[
+		$output = $action->execute($this->registry);
+		if (!defined("DIR_CATALOG") && in_array($route, $this->blc->cached_routes)) {
+			$this->blc->set($route, (isset($args) ? $args : $data), $output);
+		}		
+		return $output;
+		]]></add>
+	</operation>
+	
+	<operation error="ignore">
+		<search position="after"><![CDATA[$output = $action->execute($this->registry, array(&$data));]]></search>
+		<add><![CDATA[
+		if (!defined("DIR_CATALOG") && in_array($route, $this->blc->cached_routes)) {
+			$this->blc->set($route, (isset($args) ? $args : $data), $output);
+		}		
+		]]></add>
+	</operation>	
+</file>	
+
+
+<file error="log" name="system/library/response.php">
+	<operation>
+		<search position="after"><![CDATA[class Response]]></search>
+		<add><![CDATA[protected $registry;]]></add>
+	</operation>
+	<operation>
+		<search position="before" index="1"><![CDATA[public function]]></search>
+		<add><![CDATA[
+	public function __construct($reg = '') {
+		$this->registry = $reg;
+		if (version_compare(VERSION, '2.2.0', '<')) {
+			global $registry;
+			$this->registry = $registry;
+		}
+	}
+	
+	public function __get($key) {
+		return $this->registry->get($key);
+	}
+
+	public function __set($key, $value) {
+		$this->registry->set($key, $value);
+	}		
+		]]></add>
+	</operation>
+
+	<operation error="ignore">
+		<search position="before"><![CDATA[$output = $this->level]]></search>
+		<add><![CDATA[				if (!defined('DIR_CATALOG')) $this->output = $this->getOptimizedOutput($this->output);]]></add>
+	</operation>
+	<operation error="ignore">
+		<search position="after"><![CDATA[$output = $this->output;]]></search>
+		<add><![CDATA[				if (!defined('DIR_CATALOG')) $output = $this->getOptimizedOutput($output);]]></add>
+	</operation>
+	<operation error="ignore">
+		<search position="after"><![CDATA[function compress(]]></search>
+		<add><![CDATA[		if (!defined('DIR_CATALOG')) $data = $this->getOptimizedOutput($data);]]></add>
+	</operation>
+	<operation error="ignore">
+		<search position="before"><![CDATA[echo $ouput;]]></search>
+		<add><![CDATA[if (!defined('DIR_CATALOG')) $ouput = $this->getOptimizedOutput($ouput);]]></add>
+	</operation>
+	
+	<operation> <!-- ADD MINIFICATION PROCCESSING TO OUTPUT RESPONSE -->
+		<ignoreif><![CDATA[function getOptimizedOutput]]></ignoreif>
+		<search position="before"><![CDATA[function output()]]></search>
+		<add><![CDATA[
+		function getOptimizedOutput($output) {
+
+			$min = new OC_Minify;
+
+			if (defined('OPTIMIZER_MINIFY_JAVASCRIPT') && OPTIMIZER_MINIFY_JAVASCRIPT == true) $output = $min->minifyJavascript($output);
+			if (defined('OPTIMIZER_MINIFY_CSS') && OPTIMIZER_MINIFY_CSS == true) $output = $min->minifyCSS($output);
+		
+			if (defined('WX_CDN_STATUS') && WX_CDN_STATUS == true) {
+				$cdn_domain = (isset($_SERVER['HTTPS']) && (($_SERVER['HTTPS'] == 'on') || ($_SERVER['HTTPS'] == '1'))) ? WX_CDN_HTTPS : WX_CDN_HTTP;
+				$http_image = (isset($_SERVER['HTTPS']) && (($_SERVER['HTTPS'] == 'on') || ($_SERVER['HTTPS'] == '1'))) ? HTTPS_SERVER . 'image/' : HTTP_SERVER . 'image/';
+				$cdn_path = parse_url(HTTP_SERVER, PHP_URL_PATH);
+				if (strlen($cdn_path) > 1) {
+					$cdn_domain .= $cdn_path;
+					$cdn_domain = trim($cdn_domain, '/');
+				}
+				
+				if (defined('WX_CDN_IMAGES') && WX_CDN_IMAGES == true) {
+					$output = str_replace($http_image, $cdn_domain . '/image/', $output);
+					$output = str_replace('src="image/', 'src="' . $cdn_domain . '/image/', $output);
+					if ($this->config->get('config_store_id')) {
+						if ($this->config->get('config_ssl')) {
+							$output = str_replace($this->config->get('config_ssl') . 'image/', $cdn_domain . '/image/', $output);
+							$output = str_replace('src="image/', 'src="' . $cdn_domain . '/image/', $output);
+						}
+						if ($this->config->get('config_url')) {
+							$output = str_replace($this->config->get('config_url') . 'image/', $cdn_domain . '/image/', $output);
+							$output = str_replace('src="image/', 'src="' . $cdn_domain . '/image/', $output);
+						}
+					}
+					$output = str_replace('src="/image/data', 'src="' . $cdn_domain . '/image/data', $output);
+					$output = str_replace('src="catalog/view/theme/' . $this->config->get("config_template") . '/image/', 'src="' . $cdn_domain . '/catalog/view/theme/' . $this->config->get("config_template") . '/image/', $output);
+					$output = str_replace('src="catalog/view/theme/default/image/', 'src="' . $cdn_domain . '/catalog/view/theme/default/image/', $output);
+				}
+				if (WX_CDN_JS) {
+					$output = str_replace('src="catalog/view/javascript/', 'src="' . $cdn_domain . '/catalog/view/javascript/', $output);
+				}
+				if (WX_CDN_CSS) {
+					$output = str_replace('href="catalog/view/theme/' . $this->config->get("config_template") . '/stylesheet/', 'href="' . $cdn_domain . '/catalog/view/theme/' . $this->config->get("config_template") . '/stylesheet/', $output);
+					$output = str_replace('href="catalog/view/theme/default/stylesheet/', 'href="' . $cdn_domain . '/catalog/view/theme/default/stylesheet/', $output);
+				}
+			}
+
+			if (defined('OPTIMIZER_MINIFY_HTML') && OPTIMIZER_MINIFY_HTML == true && json_decode($output) == null) {
+				preg_match_all('!(<script.*?>.*?</script>)!is',$output,$pre);
+				$output = preg_replace('!(<script.*?>.*?</script>)!is', '#pre#', $output);
+				$output = preg_replace('/[\r\n\t]+/', ' ', $output);
+				$output = preg_replace('/>\s+</', '><', $output);
+				$output = preg_replace('/\s+/', ' ', $output);
+				if (!empty($pre[0])) {
+					foreach ($pre[0] as $original) {
+						$output = preg_replace('!#pre#!', $original, $output,1);
+					}
+				}
+			}
+
+			$current_route = isset($this->request->get['route']) ? $this->request->get['route'] : (isset($this->request->get['_route_']) ? $this->request->get['_route_'] : '');
+			if (OptimizerPageCache::cachable($current_route)) {
+				OptimizerPageCache::write($output);
+				
+
+			}
+			
+			if (defined('OPTIMIZER_JAVASCRIPT_DEFER') && OPTIMIZER_JAVASCRIPT_DEFER) {
+				$output = preg_replace('~type="text\/javascript"~', 'type="text/psajs" pagespeed_orig_type="text/javascript"', $output );
+				$output = str_replace('<script>', '<script type="text/psajs">', $output);
+				$output = str_replace('text/psa-donotdefer', 'text/javascript', $output);
+				$output = str_replace('</body>', '<script type="text/javascript" src="catalog/view/javascript/page_speed/js_defer.js" async defer></script></body>',$output);
+			}
+			
+			return $output;
+		}
+		]]></add>
+	</operation>
+</file>
+
+
+<!--  ==============================================================================================================================================================================  -->
+<!--  ADMIN MENU AREA     ADMIN MENU AREA     ADMIN MENU AREA     ADMIN MENU AREA     ADMIN MENU AREA     ADMIN MENU AREA     ADMIN MENU AREA     ADMIN MENU AREA     ADMIN MENU ARE  -->
+<!--  ==============================================================================================================================================================================  -->
+
+<file error="log" name="admin/controller/common/header.php">
+<operation> <!-- READ LANGUAGE DATA FOR CACHE CLEARING -->
+	<search position="before" index="1"><![CDATA['text_customer']]]></search>
+	<add><![CDATA[
+	$dataset = array();
+	$dataset = array_merge($dataset, $this->load->language(OPTIMIZATION_PREFIX . '/menu'));
+	$dataset = array_merge($dataset, $this->load->language(OPTIMIZATION_PREFIX . '/' . OPTIMIZATION_PREFIX . 'branding'));
+	
+	if (isset($this->session->data['token'])) {
+
+		$this->load->model(OPTIMIZATION_PREFIX . '/update');
+		if ($this->model_wx_update->getLatestVersion() > $this->model_wx_update->getCurrentVersion()) {
+			$dataset['new_optimizer_version']   = true;
+		} else {
+			$dataset['new_optimizer_version']   = false;
+		}
+		
+		$dataset['url_clear_all']           = $this->url->link(OPTIMIZATION_PREFIX . '/clearcache', 'token=' . $this->session->data['token'], 'SSL');
+		$dataset['url_clear_vqmod']         = $this->url->link(OPTIMIZATION_PREFIX . '/clearcache/vqmod', 'token=' . $this->session->data['token'], 'SSL');
+		$dataset['url_clear_system']        = $this->url->link(OPTIMIZATION_PREFIX . '/clearcache/system', 'token=' . $this->session->data['token'], 'SSL');
+		$dataset['url_clear_minify']        = $this->url->link(OPTIMIZATION_PREFIX . '/clearcache/minify', 'token=' . $this->session->data['token'], 'SSL');
+		$dataset['url_clear_sql']           = $this->url->link(OPTIMIZATION_PREFIX . '/clearcache/sql', 'token=' . $this->session->data['token'], 'SSL');
+		$dataset['url_clear_page']          = $this->url->link(OPTIMIZATION_PREFIX . '/clearcache/page', 'token=' . $this->session->data['token'], 'SSL');			
+		
+		if (file_exists(DIR_SYSTEM . "../" . OPTIMIZATION_PREFIX . "/core/wx_smart_caching.cxml") || file_exists(DIR_SYSTEM . "../" . OPTIMIZATION_PREFIX . "/core/wx_smart_caching.xml")) {
+			$dataset['url_clear_pagehome']      = $this->url->link(OPTIMIZATION_PREFIX . '/clearcache/pagehome', 'token=' . $this->session->data['token'], 'SSL');			
+			$dataset['url_clear_pageproduct']   = $this->url->link(OPTIMIZATION_PREFIX . '/clearcache/pageproduct', 'token=' . $this->session->data['token'], 'SSL');			
+			$dataset['url_clear_pagecategory']  = $this->url->link(OPTIMIZATION_PREFIX . '/clearcache/pagecategory', 'token=' . $this->session->data['token'], 'SSL');			
+		}
+		
+		$dataset['url_optimization_settings'] = $this->url->link(OPTIMIZATION_PREFIX . '/settings', 'token=' . $this->session->data['token'], 'SSL');
+		
+		$dataset['url_clear_cdn']           = $this->config->get(OPTIMIZATION_PREFIX . '_cdn_api_valid') ? $this->url->link(OPTIMIZATION_PREFIX . '/clearcache/cdn', 'token=' . $this->session->data['token'], 'SSL') : false;	
+		$dataset['url_cdn_reports']         = $this->config->get(OPTIMIZATION_PREFIX . '_cdn_api_valid') ? $this->url->link(OPTIMIZATION_PREFIX . '/contentdelivery/reports', 'token=' . $this->session->data['token'], 'SSL') : false;
+		
+		$dataset['sql_caches'][] = array(
+			'url'  => $this->url->link(OPTIMIZATION_PREFIX . '/clearcache/sql', 'token=' . $this->session->data['token'], 'SSL'),
+			'text' => $this->language->get('text_clear_page_all'),
+		);
+		$sql_caches = glob(DIR_CACHE . 'sql/*', GLOB_ONLYDIR);
+		foreach ($sql_caches as $sql_cache) {
+			$cache_name = str_replace(DIR_CACHE . 'sql/', '', $sql_cache);
+			if ($sql_cache !== '.' && $sql_cache !== '..') {
+				$dataset['sql_caches'][] = array(
+					'url'  => $this->url->link(OPTIMIZATION_PREFIX . '/clearcache/sql', 'path=' . $cache_name . '&token=' . $this->session->data['token'], 'SSL'),
+					'text' => ucwords(strtolower($cache_name)),
+				);
+			}
+		}
+		
+	}
+	
+	if (isset($this->data)) {
+		$this->data = array_merge($this->data, $dataset);
+	} else {
+		$data = array_merge($data, $dataset);
+	}
+	]]></add>
+</operation>
+</file>
+
+<file name="admin/view/template/common/header.tpl">
+	<operation error="ignore">
+		<search position="replace"><![CDATA[<script type="text/javascript" src="view/javascript/jquery/jquery-1.7.1.min.js"></script>]]></search>
+		<add><![CDATA[
+		<script type="text/javascript" src="view/javascript/jquery/jquery-1.7.1.min.js"></script>
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.0.min.js"></script> -->
+		<style type="text/css">
+	#menu > ul ul li.divider { padding: 0px; }
+	#menu > ul ul li.dropdown-header { padding: 2px 7px; }
+	li.divider {
+		background-color: #3b3b3b;
+		height: 1px;
+		margin: 7.5px 0;
+		overflow: hidden;
+		padding: 0px;
+		width: 100%;
+	}
+
+	li.dropdown-header {
+		color: #777;
+		display: block;
+		font-size: 11px;
+		line-height: 1.42857;
+		padding: 3px 20px;
+		white-space: nowrap;
+	}	
+		</style>
+		]]></add>
+	</operation>
+	<operation error="log"> <!-- ADD USER MENU -->
+		<search position="after"><![CDATA[<ul class="nav pull-right">]]></search>
+		<add><![CDATA[
+		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><img src="<?php echo $branding_icon; ?>" width="24" title="" /><?php if ($new_optimizer_version) { ?><span class="label label-success pull-left">1</span><?php } ?></a>
+			<ul class="dropdown-menu dropdown-menu-right">
+				<li class="dropdown-header"><?php echo $text_configuration; ?> <i class="fa fa-cog"></i></li>
+				<li><a href="<?php echo $url_optimization_settings; ?>"><?php if ($new_optimizer_version) { ?><span class="label label-success pull-right">Update Available</span><?php } ?><?php echo $text_settings; ?></a></li>
+				<?php if($url_cdn_reports) { ?><li><a href="<?php echo $url_cdn_reports; ?>"><?php echo $text_cdn_usage; ?></a></li> <?php } ?>
+				<li class="divider"></li>
+				<li class="dropdown-header"><?php echo $text_clear_caches; ?> <i class="fa fa-trash"></i></li>
+				<li><a href="<?php echo $url_clear_all;?>"><?php echo $text_clear_all; ?></a></li>
+				<li><a href="<?php echo $url_clear_vqmod; ?>"><?php echo $text_clear_vqmod; ?></a></li>
+				<li><a href="<?php echo $url_clear_system; ?>"><?php echo $text_clear_system; ?></a></li>
+				<li><a href="<?php echo $url_clear_minify; ?>"><?php echo $text_clear_minify; ?></a></li>
+				<li class="dropdown-submenu"><a class="dropdown-toggle" data-toggle="dropdown"><?php echo $text_clear_sql; ?></a>
+					<ul class="dropdown-menu dropdown-menu-left">
+						<?php foreach ($sql_caches as $sql_cache) { ?>
+						<li><a href="<?php echo $sql_cache['url']; ?>"><?php echo $sql_cache['text']; ?></a></li>
+						<?php } ?>
+					</ul>
+				</li>
+				<?php if (isset($url_clear_pagehome)) { ?>
+				<li class="dropdown-submenu"><a class="dropdown-toggle" data-toggle="dropdown"><?php echo $text_clear_page; ?></a>
+					<ul class="dropdown-menu dropdown-menu-left">
+						<li><a href="<?php echo $url_clear_page; ?>"><?php echo $text_clear_page_all; ?></a></li>
+						<li><a href="<?php echo $url_clear_pagehome; ?>"><?php echo $text_clear_page_home; ?></a></li>
+						<li><a href="<?php echo $url_clear_pageproduct; ?>"><?php echo $text_clear_page_product; ?></a></li>
+						<li><a href="<?php echo $url_clear_pagecategory; ?>"><?php echo $text_clear_page_category; ?></a></li>
+					</ul>
+				</li>
+				<?php } else { ?>
+				<li><a href="<?php echo $url_clear_page; ?>"><?php echo $text_clear_page; ?></a></li>
+				<?php } ?>
+				<?php if($url_clear_cdn) { ?><li><a href="<?php echo $url_clear_cdn; ?>"><?php echo $text_flush_cdn; ?></a></li> <?php } ?>
+			</ul>
+		</li>
+		<style type="text/css">
+			.dropdown-submenu {
+				position:relative;
+			}
+			.dropdown-submenu>.dropdown-menu {
+				top:0;
+				left:100%;
+				margin-top:-6px;
+				margin-left:-1px;
+				-webkit-border-radius:0 6px 6px 6px;
+				-moz-border-radius:0 6px 6px 6px;
+				border-radius:0 6px 6px 6px;
+			}
+			.dropdown-submenu:hover>.dropdown-menu {
+				display:block;
+			}
+			.dropdown-submenu>a:after {
+				display:block;
+				content:" ";
+				float:right;
+				width:0;
+				height:0;
+				border-color:transparent;
+				border-style:solid;
+				border-width:5px 0 5px 5px;
+				border-left-color:#cccccc;
+				margin-top:5px;
+				margin-right:-10px;
+			}
+			.dropdown-submenu:hover>a:after {
+				border-left-color:#ffffff;
+			}
+			.dropdown-submenu.pull-left {
+				float:none;
+			}
+			.dropdown-submenu.pull-left>.dropdown-menu {
+				left:-100%;
+				margin-left:10px;
+				-webkit-border-radius:6px 0 6px 6px;
+				-moz-border-radius:6px 0 6px 6px;
+				border-radius:6px 0 6px 6px;
+			}	
+		</style>
+		]]></add>
+	</operation>
+
+	<operation error="ignore"> <!-- ADD USER MENU 1.5x -->
+		<search position="after"><![CDATA[<ul class="right]]></search>
+		<add><![CDATA[
+		<li id="optimizer-main1" style="width: 45px; height: 34px; background-repeat: no-repeat; background-position: center;  background-image:url(<?php echo $branding_icon; ?>);">
+			<a class="top" style="background-image: none;">&nbsp;</a>
+			<ul style="margin: 0 0 0 -115px;">
+				<li><a href="<?php echo $url_optimization_settings; ?>"><?php echo $text_settings; ?></a></li>
+				<?php if($url_cdn_reports) { ?><li><a href="<?php echo $url_cdn_reports; ?>"><?php echo $text_cdn_usage; ?></a></li> <?php } ?>
+				<li class="divider"></li>
+				<li class="dropdown-header"><?php echo $text_clear_caches; ?> <i class="fa fa-trash"></i></li>
+				<li><a href="<?php echo $url_clear_all;?>"><?php echo $text_clear_all; ?></a></li>
+				<li><a href="<?php echo $url_clear_vqmod; ?>"><?php echo $text_clear_vqmod; ?></a></li>
+				<li><a href="<?php echo $url_clear_system; ?>"><?php echo $text_clear_system; ?></a></li>
+				<li><a href="<?php echo $url_clear_minify; ?>"><?php echo $text_clear_minify; ?></a></li>
+				<li><a><?php echo $text_clear_sql; ?></a>
+					<ul style="margin: -29px 0 0 -165px;" class="dropdown-menu dropdown-menu-right">
+						<?php foreach ($sql_caches as $sql_cache) { ?>
+						<li><a href="<?php echo $sql_cache['url']; ?>"><?php echo $sql_cache['text']; ?></a></li>
+						<?php } ?>
+					</ul>
+				</li>
+				<?php if (isset($url_clear_pagehome)) { ?>
+				<li><a><?php echo $text_clear_page; ?></a>
+					<ul style="margin: -29px 0 0 -165px;" class="dropdown-menu dropdown-menu-right">
+						<li><a href="<?php echo $url_clear_page; ?>"><?php echo $text_clear_page_all; ?></a></li>
+						<li><a href="<?php echo $url_clear_pagehome; ?>"><?php echo $text_clear_page_home; ?></a></li>
+						<li><a href="<?php echo $url_clear_pageproduct; ?>"><?php echo $text_clear_page_product; ?></a></li>
+						<li><a href="<?php echo $url_clear_pagecategory; ?>"><?php echo $text_clear_page_category; ?></a></li>
+					</ul>
+				</li>
+				<?php } else { ?>
+				<li><a href="<?php echo $url_clear_page; ?>"><?php echo $text_clear_page; ?></a></li>
+				<?php } ?>
+				<?php if($url_clear_cdn) { ?><li><a href="<?php echo $url_clear_cdn; ?>"><?php echo $text_flush_cdn; ?></a></li> <?php } ?>
+			</ul>
+		</li>
+		]]></add>
+	</operation>
+</file>
+
+<!--  DASHBOARD (OC 2x) & HOME (OC 1x) SUCCESS OUTPUT    DASHBOARD (OC 2x) & HOME (OC 1x) SUCCESS OUTPUT    DASHBOARD (OC 2x) & HOME (OC 1x) SUCCESS OUTPUT  -->
+<!--  DASHBOARD (OC 2x) & HOME (OC 1x) SUCCESS OUTPUT    DASHBOARD (OC 2x) & HOME (OC 1x) SUCCESS OUTPUT    DASHBOARD (OC 2x) & HOME (OC 1x) SUCCESS OUTPUT  -->
+<file error="ignore" name="admin/controller/common/dashboard.php">
+<operation> <!-- ADD SUCCESS SESSION DATA READ -->
+	<search position="before" offset="1"><![CDATA[if (is_dir(dirname(DIR_APPLICATION) . '/install')) {]]></search>
+	<add><![CDATA[
+	if (isset($this->session->data['success'])) {
+		$data['success'] = $this->session->data['success'];
+		unset($this->session->data['success']);
+	} else {
+		$data['success'] = '';
+	}]]></add>
+</operation>	
+</file>
+
+<file error="ignore" name="admin/view/template/common/dashboard.tpl">
+<operation> <!-- ADD SUCCESS NOTIFICATION OUTPUT TO HOME -->
+	<search position="before"><![CDATA[<?php if ($error_install) { ?>]]></search>
+	<add><![CDATA[
+	<?php if ($success) { ?>
+	<div class="alert alert-success"><i class="fa fa-check-circle"></i> <?php echo $success; ?>
+	  <button type="button" class="close" data-dismiss="alert">&times;</button>
+	</div>
+	<?php } ?>
+	]]></add>
+</operation>
+</file>
+
+<file error="ignore" name="admin/controller/common/home.php">
+<operation> <!-- ADD SUCCESS SESSION DATA READ -->
+	<search position="before" offset="1"><![CDATA[if (is_dir(dirname(DIR_APPLICATION) . '/install')) {]]></search>
+	<add><![CDATA[
+	if (isset($this->session->data['success'])) {
+		$this->data['success'] = $this->session->data['success'];
+		unset($this->session->data['success']);
+	} else {
+		$this->data['success'] = '';
+	}]]></add>
+</operation>
+</file>
+
+<file error="ignore" name="admin/view/template/common/home.tpl">
+<operation> <!-- ADD SUCCESS NOTIFICATION OUTPUT TO HOME -->
+	<search position="before"><![CDATA[<?php if ($error_logs) { ?>]]></search>
+	<add><![CDATA[
+	<?php if ($success) { ?>
+	<div class="success"><?php echo $success; ?></div>
+	<?php } ?>
+	]]></add>
+</operation>
+</file>
+
+<file error="log" name="admin/model/catalog/category.php">
+<operation>
+	<search position="before" index="1"><![CDATA[public function getTotalCategories]]></search>
+	<add><![CDATA[
+	public function getCronCategoriesByParentId($category_id, $store_id) {
+		$category_data = array();
+		$category_query = $this->db->query("SELECT c.category_id FROM " . DB_PREFIX . "category c LEFT JOIN " . DB_PREFIX . "category_to_store c2s ON (c.category_id = c2s.category_id) WHERE c2s.store_id = '" . (int)$store_id . "' AND status = '1' AND parent_id = '" . (int)$category_id . "'");
+
+		foreach ($category_query->rows as $category) {
+			$category_data[] = $category['category_id'];
+			$children = $this->getCronCategoriesByParentId($category['category_id'], $store_id);
+			if ($children) { $category_data = array_merge($children, $category_data); }
+		}
+		return $category_data;
+	}
+
+
+	public function getCronTotalProducts($category_id, $store_id) {
+		$sql = "SELECT COUNT(DISTINCT p.product_id) AS total FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id)";
+
+		if (!empty($category_id)) {
+			$sql .= " LEFT JOIN " . DB_PREFIX . "product_to_category p2c ON (p.product_id = p2c.product_id)";			
+		}
+		
+		$sql .= " WHERE p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . $store_id . "'";
+
+		
+		if (!empty($category_id)) {
+			$implode_data = array();
+			$implode_data[] = "p2c.category_id = '" . (int)$category_id . "'";
+			
+			$categories = $this->getCronCategoriesByParentId($category_id, $store_id);
+				
+			foreach ($categories as $category_id) {
+				$implode_data[] = "p2c.category_id = '" . (int)$category_id . "'";
+			}
+						
+			$sql .= " AND (" . implode(' OR ', $implode_data) . ")";			
+		}		
+				
+		$query = $this->db->query($sql);
+		
+		$this->db->query("UPDATE " . DB_PREFIX . "category_to_store SET product_count = '" . $query->row['total'] . "' WHERE category_id = '" . $category_id . "' AND store_id = '" . $store_id . "'");
+	}			
+	]]></add>
+</operation>
+<operation>
+	<search position="after"><![CDATA[$this->db->query("INSERT INTO " . DB_PREFIX . "category_to_store]]></search>
+	<add><![CDATA[$this->getCronTotalProducts((int)$category_id, (int)$store_id);]]></add>
+</operation>
+</file>
+	
+
+<!--  ==============================================================================================================================================================================  -->
+<!--  CATEGORY COUNT CACHES      CATEGORY COUNT CACHES      CATEGORY COUNT CACHES      CATEGORY COUNT CACHES      CATEGORY COUNT CACHES      CATEGORY COUNT CACHES      CATEGORY COU  -->
+<!--  ==============================================================================================================================================================================  -->
+<file error="log" name="catalog/controller/common/header.php">
+<operation error="ignore"> <!-- READ CATEGORY COUNTS ENABLED STATUS -->
+	<search position="before" index="1"><![CDATA[data['styles']]]></search>
+	<add><![CDATA[$category_counts_enabled = $this->config->get('optimizer_category_counts');]]></add>
+</operation>
+<operation error="ignore">
+	<search position="replace"><![CDATA[' (' . $product_total . ')']]></search>
+	<add><![CDATA[(($category_counts_enabled) ? ' (' . $child['product_count'] . ')' : '')]]></add>
+</operation>
+<operation error="ignore">
+	<search position="replace" index="1"><![CDATA[$product_total =]]></search>
+	<add><![CDATA[$product_total = $child['product_count']; //]]></add>
+</operation>
+<operation error="ignore">
+	<search position="replace" index="1"><![CDATA[$this->model_catalog_product->getTotalProducts($filter_data)]]></search>
+	<add><![CDATA[$child['product_count']]]></add>
+</operation>
+</file>
+
+
+<file error="ignore" name="catalog/controller/module/category.php">
+<operation error="ignore"> <!-- READ CATEGORY COUNTS ENABLED STATUS -->
+	<search position="before"><![CDATA[foreach ($categories]]></search>
+	<add><![CDATA[$category_counts_enabled = $this->config->get('optimizer_category_counts');]]></add>
+</operation>
+<operation error="ignore">
+	<search position="replace"><![CDATA[$category['name'] . ' (' . $product_total . ')',]]></search>
+	<add><![CDATA[($category_counts_enabled) ? $category['name'] . ' (' . $category['product_count'] . ')' : $category['name'],]]></add>
+</operation>
+<operation error="ignore">
+	<search position="replace"><![CDATA[$child['name'] . ' (' . $product_total . ')',]]></search>
+	<add><![CDATA[($category_counts_enabled) ? $child['name'] . ' (' . $child['product_count'] . ')' : $child['name'],]]></add>
+</operation>
+<operation error="ignore">
+	<search position="replace" index="1"><![CDATA[$product_total = $this->model_catalog_product->getTotalProducts($data);]]></search>
+	<add><![CDATA[$product_total = isset($child['product_count']) ? $child['product_count'] : $category['product_count'];]]></add>
+</operation>
+<operation error="ignore"> <!-- OPENCART 1.5.4.x+ -->
+	<search position="replace"><![CDATA[$total = $this->model_catalog_product->getTotalProducts]]></search>
+	<add><![CDATA[$total = $category['product_count']; //$this->model_catalog_product->getTotalProducts]]></add>
+</operation>
+<operation error="ignore"> <!-- OPENCART 1.5.4.x+ -->
+	<search position="replace"><![CDATA[$total += $product_total]]></search>
+	<add><![CDATA[//$total += $product_total]]></add>
+</operation>
+</file>
+
+<!-- TEMPLATE
+
+<file error="log" name="">
+<operation>
+	<search position="after"><![CDATA[]]></search>
+	<add><![CDATA[]]></add>
+</operation>
+</file>
+-->	
+</modification>

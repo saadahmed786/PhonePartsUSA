@@ -1,0 +1,7 @@
+2018-05-07 23:07:13 - PHP Warning:  unlink(/home/phonerep/public_html/system/cache/cache.filterproducts.1.0.008c470a2ce29ddccf8351501163a302.1525734432): No such file or directory in /home/phonerep/public_html/system/library/cache.php on line 14
+2018-05-07 23:08:25 - PHP Warning:  unlink(/home/phonerep/public_html/system/cache/cache.filterproducts.1.0.306ef28079620c5e38cbb9ab6b7e4740.1525734504): No such file or directory in /home/phonerep/public_html/system/library/cache.php on line 14
+2018-09-04 21:08:09 - PHP Warning:  unlink(/home/phonerep/public_html/system/cache/cache.filterproducts.1.0.2ed21f31cd3276c100416c227eee0360.1536095288): No such file or directory in /home/phonerep/public_html/system/library/cache.php on line 14
+2018-10-29 17:02:06 - PHP Warning:  mysqli::query(): MySQL server has gone away in /home/phonerep/public_html/system/database/mysqli.php on line 16
+2018-10-29 17:02:06 - PHP Warning:  mysqli::query(): Error reading result set's header in /home/phonerep/public_html/system/database/mysqli.php on line 16
+2018-11-08 20:28:19 - PHP Warning:  mysqli::query(): MySQL server has gone away in /home/phonerep/public_html/system/database/mysqli.php on line 16
+2018-11-08 20:28:19 - PHP Warning:  mysqli::query(): Error reading result set's header in /home/phonerep/public_html/system/database/mysqli.php on line 16

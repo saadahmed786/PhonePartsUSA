@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+        <id>ccl_admin</id>
+        <version>1.1</version>
+        <vqmver>2.3</vqmver>
+        <author>Haris Ahmed</author>
+        <file name="admin/language/english/english.php">
+            <operation>
+                <search position="before"><![CDATA[
+                    $_['error_upload_999']
+                ]]></search>
+                <add><![CDATA[
+                    $_['ccl_incompatible'] = 'CCL is Incompatible with Current Version of Opencart. Please install compatible version of CCL.';
+                ]]></add>
+            </operation>
+        </file>
+        <file name="admin/controller/common/header.php">
+                <operation>
+                        <search position="before"><![CDATA[
+                        $this->data['stores'] = array();
+                        ]]></search>
+                        <add><![CDATA[
+                        $ccl_error = FALSE;
+                        unset($this->session->data['ccl_error']);
+                        $this->config->set('MIN_VERSION_CCL','1.5.3');
+                        $this->config->set('MAX_VERSION_CCL','1.5.7');
+                        if(!(version_compare(VERSION,$this->config->get('MIN_VERSION_CCL'),'>=') && version_compare(VERSION,$this->config->get('MAX_VERSION_CCL'),'<='))){
+                            $this->load->model('setting/extension');
+                            $this->load->model('setting/setting');
+                            $ccl_name='combat_cart_loss';
+                            $installed_modules = $this->model_setting_extension->getInstalled('module');
+                            foreach($installed_modules as $module_name){
+                                if($module_name=='combat_cart_loss'){
+
+                                    $this->model_setting_extension->uninstall('module', $ccl_name);
+                                    $this->model_setting_setting->deleteSetting($ccl_name);
+                                    require_once(DIR_APPLICATION . 'controller/module/' . $ccl_name . '.php');
+                                    $class = 'ControllerModule' . str_replace('_', '', $ccl_name);
+                                    $class = new $class($this->registry);
+
+                                    if (method_exists($class, 'uninstall')) {
+                                            $class->uninstall();
+                                    }
+                                    $ccl_error = 'CCL UNINSTALLED: ';
+                                    break;
+                                }
+                            }
+
+                            $ccl_error = $ccl_error?$ccl_error.$this->language->get('ccl_incompatible'):$this->language->get('ccl_incompatible');
+                        }
+                        $this->data['ccl_error'] = $ccl_error;
+                        $this->session->data['ccl_error'] = $ccl_error;
+
+                        $this->load->model('setting/extension');
+                        $extensions = $this->model_setting_extension->getInstalled('module');
+                        $file = DIR_APPLICATION . 'controller/module/combat_cart_loss.php';
+                        $extension = basename($file, '.php');
+						if(method_exists($this->load,'language')){
+							$this->load->language('module/' . $extension);
+						}else{
+							$this->language->load('module/' . $extension);
+						}
+
+
+                        $this->data['menu'] = array();
+                        $this->data['menu']['extension'] = array();
+                        if (in_array($extension, $extensions)) { //CCL is installed. We can add it to Main Menu
+                                $this->data['menu']['extension'][] = array(
+                                        'text' => $this->language->get('heading_title'),
+                                        'href' => HTTPS_SERVER . 'index.php?route=module/' . $extension.'&token=' . $this->session->data['token']
+                                );
+                        }
+                        ]]></add>
+                </operation>
+        </file>
+
+		<file name="admin/controller/common/home.php">
+                <operation>
+                        <search position="after"><![CDATA[
+                        $this->data['text_total_order'] = $this->language->get('text_total_order');
+                        ]]></search>
+                        <add><![CDATA[
+                        $this->data['text_total_unconfirmed_order'] = $this->language->get('text_total_unconfirmed_order');
+                        ]]></add>
+                </operation>
+		<operation>
+                        <search position="after"><![CDATA[
+                        $this->data['total_order'] = $this->model_sale_order->getTotalOrders();
+                        ]]></search>
+                        <add><![CDATA[
+                        $this->load->model('tool/combat_cart_loss');
+				$this->data['total_unconfirmed_order'] = $this->model_tool_combat_cart_loss->getTotalUnconfirmedOrders();
+                        ]]></add>
+                </operation>
+
+        </file>
+
+		<file name="admin/language/english/common/home.php">
+                <operation>
+                        <search position="before"><![CDATA[
+                        $_['text_total_order']
+                        ]]></search>
+                        <add><![CDATA[
+                        $_['text_total_unconfirmed_order']              = 'Total Unconfirmed Orders:';
+                        ]]></add>
+                </operation>
+        </file>
+
+		<file name="admin/view/template/common/header.tpl">
+                <operation>
+                        <search position="after"><![CDATA[
+                        <li><a href="<?php echo $feed; ?>"><?php echo $text_feed; ?></a></li>
+                        ]]></search>
+                        <add><![CDATA[
+                        <?php if( isset($menu) && is_array($menu) && is_array($menu['extension'])) { ?>
+							<?php foreach($menu['extension'] as $extension){ ?>
+								<li><a href="<?php echo $extension['href']; ?>"><?php echo $extension['text']; ?></a></li>
+							<?php } ?>
+						<?php } ?>
+                        ]]></add>
+                </operation>
+        </file>
+
+		<file name="admin/view/template/common/home.tpl">
+                <operation>
+                        <search position="replace"><![CDATA[
+                        <td><?php echo $total_order; ?></td>
+                        ]]></search>
+                        <add><![CDATA[
+                        <td><?php echo $total_order; ?></td>
+						</tr>
+						<tr>
+						  <td><?php echo $text_total_unconfirmed_order; ?></td>
+						  <td><?php echo $total_unconfirmed_order; ?></td>
+                        ]]></add>
+                </operation>
+                <operation>
+                    <search position="before"><![CDATA[
+                        <?php if ($error_image) { ?>
+                    ]]></search>
+                    <add><![CDATA[
+                        <?php
+                        $ccl_error = (isset($this->session->data['ccl_error'])?$this->session->data['ccl_error']:FALSE);
+                        if (isset($ccl_error) && $ccl_error) { ?>
+                            <div class="warning"><?php echo $ccl_error; ?></div>
+                        <?php } ?>
+                    ]]></add>
+                </operation>
+        </file>
+</modification>

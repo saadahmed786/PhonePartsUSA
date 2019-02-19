@@ -1,0 +1,539 @@
+<modification> 
+	<id>ProductBundles</id>
+	<version>1.5.x</version>
+	<vqmver>1.0</vqmver>
+	<author>iSenseLabs</author>
+	
+	<file name="admin/view/template/common/header.tpl">
+		<operation error="log">
+			<search position="after"><![CDATA[<li><a href="<?php echo $product; ?>"><?php echo $text_product; ?></a></li>]]></search>
+			<add><![CDATA[
+				<li><a href="index.php?route=module/productbundles&token=<?php echo $this->request->get['token']; ?>">Product Bundles</a></li>
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/controller/catalog/product.php">
+		<operation error="log">
+			<search position="after"><![CDATA[public function update() {]]></search>
+			<add><![CDATA[
+				$this->language->load('module/productbundles');
+				
+				$price = $this->currency->getSymbolRight($this->config->get('config_currency'));
+				if (!empty($price)) {
+					$this->data['currencyAlignment'] = "R";
+					$this->data['currency'] = $this->currency->getSymbolRight($this->config->get('config_currency'));
+				} else {
+					$this->data['currencyAlignment'] = "L";
+					$this->data['currency'] = $this->currency->getSymbolLeft($this->config->get('config_currency'));
+				}
+				
+				if ($this->config->get('productbundles_custom')) { 
+					$this->data['CustomBundles'] = $this->config->get('productbundles_custom');
+				}
+				
+				$this->load->model('catalog/product');
+				$this->load->model('catalog/category');
+			]]></add>
+		</operation>
+		
+		<operation error="log">
+			<search position="after"><![CDATA[public function insert() {]]></search>
+			<add><![CDATA[
+				$this->language->load('module/productbundles');
+				
+				$price = $this->currency->getSymbolRight($this->config->get('config_currency'));
+				if (!empty($price)) {
+					$this->data['currencyAlignment'] = "R";
+					$this->data['currency'] = $this->currency->getSymbolRight($this->config->get('config_currency'));
+				} else {
+					$this->data['currencyAlignment'] = "L";
+					$this->data['currency'] = $this->currency->getSymbolLeft($this->config->get('config_currency'));
+				}
+				
+				if ($this->config->get('productbundles_custom')) { 
+					$this->data['CustomBundles'] = $this->config->get('productbundles_custom');
+				}
+				
+				$this->load->model('catalog/product');
+				$this->load->model('catalog/category');
+			]]></add>
+		</operation>
+		
+		<operation error="log">
+			<search position="after" index="2"><![CDATA[if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {]]></search>
+			<add><![CDATA[
+				if (isset($this->request->post['productbundles_custom'])) {
+				$this->load->model('setting/setting');
+				$newBundles = $this->config->get('productbundles_custom');
+
+				foreach ($this->request->post['productbundles_custom'] as $bundle) {
+					if ((isset($bundle['remove'])) && ($bundle['remove']==1)) {
+						unset($newBundles[$bundle['id']]);
+					} else {
+						$newBundles[$bundle['id']] = $bundle;
+					}
+					if (!isset($bundle['products'])) {
+						unset($newBundles[$bundle['id']]);	
+					}
+				}
+			
+				$this->model_catalog_product->editSettingValue('ProductBundles', 'productbundles_custom', $newBundles);	
+				}
+			]]></add>
+		</operation>
+	</file>
+	
+	
+	<file name="admin/model/catalog/product.php">
+		<operation error="log">
+			<search position="before"><![CDATA[public function addProduct($data) {]]></search>
+			<add>
+				public function editSettingValue($group = '', $key = '', $value = '', $store_id = 0) {
+					if (!is_array($value)) {
+						$this->db->query("UPDATE " . DB_PREFIX . "setting SET `value` = '" . $this->db->escape($value) . "' WHERE `group` = '" . $this->db->escape($group) . "' AND `key` = '" . $this->db->escape($key) . "' AND store_id = '" . (int)$store_id . "'");
+					} else {
+						$this->db->query("UPDATE " . DB_PREFIX . "setting SET `value` = '" . $this->db->escape(serialize($value)) . "', serialized = '1' WHERE `group` = '" . $this->db->escape($group) . "' AND `key` = '" . $this->db->escape($key) . "' AND store_id = '" . (int)$store_id . "'");
+						 
+					}
+				}
+			</add>
+		</operation>
+	</file>
+
+	<file name="admin/view/template/catalog/product_form.tpl">
+		<operation error="log">
+			<search position="replace"><![CDATA[<a href="#tab-attribute"><?php echo $tab_attribute; ?></a>]]></search>
+			<add><![CDATA[<a href="#tab-product_bundles">Product Bundles</a><a href="#tab-attribute"><?php echo $tab_attribute; ?></a>]]></add>
+		</operation>
+		
+		<operation error="log">
+			<search position="before"><![CDATA[<div id="tab-data">]]></search>
+			<add><![CDATA[
+				<div id="tab-product_bundles">
+					<!---->
+					<?php $PRODUCT_ID = isset($this->request->get['product_id']) ? $this->request->get['product_id'] : '0'; ?>
+					
+					<?php $token = $_GET['token']; ?>
+					<table id="module" class="list" width="100%" >
+						<thead>
+							<tr class="table-header">
+								<td class="left" width="20%"><h3>Product Bundles:</h3></td>
+								<td class="left" width="17%"><h3>Bundle Details:</h3></td>
+								<td class="left" width="50%"><h3>Display Positions:</h3></td>
+								<td width="8%"><h3>Actions:</h3></td>
+							</tr>
+						</thead>
+							<tr>
+								<td class="left" width="20%">Here you should add the products that you want to offer in a bundle. <strong>NOTE:</strong> Products with <span style="color:#ab9a87;font-size:15px;">*</span> have options.</td>
+								<td class="left" width="17%">Choose the discount you want to apply to a given bundle.</td>
+								<td class="left" width="50%">Choose the products/categories where you want the bundle to be displayed. <br /><strong>NOTE:</strong> If there is more than one bundle associated with a product/category, they will show up randomly.</td>
+								<td width="8%"></td>
+							</tr>
+						<?php $module_row = 0; ?>
+						<?php if (isset($CustomBundles)) { 
+								foreach ($CustomBundles as $module) { ?>
+								<?php if (in_array($PRODUCT_ID, $module['products'])) { ?>
+								 <?php if (!isset($module['id'])) { $module['id']=mt_rand(10000, 99999);} ?>
+									<tbody id="module-row<?php echo $module['id']; ?>">
+										<tr>
+											<td class="left">
+												<input type="hidden" class="bundle_id" name="productbundles_custom[<?php echo $module['id']; ?>][id]" value="<?php echo $module['id']; ?>" />
+												<span style="vertical-align:middle;">Add product:</span> <input type="text" name="productsInput" value="" />
+												<div id="product-bundle_<?php echo $module['id']; ?>" class="scrollbox first">
+													<?php $class1 = 'odd'; ?>
+													<?php if (!empty($module['products'])) {
+														foreach ($module['products'] as $pr) { ?>
+															 <?php $class1 = ($class1 == 'even' ? 'odd' : 'even'); ?>
+															 <?php $product = $this->model_catalog_product->getProduct($pr); ?>
+															 <?php $PB_product_options = $this->model_catalog_product->getProductOptions($pr); ?>
+															 <?php $product_specials = $this->model_catalog_product->getProductSpecials($pr); 
+															 $special = false;
+															 foreach ($product_specials  as $product_special) {
+																if (($product_special['date_start'] == '0000-00-00' || $product_special['date_start'] < date('Y-m-d')) && ($product_special['date_end'] == '0000-00-00' || $product_special['date_end'] > date('Y-m-d'))) {
+																	$special = $product_special['price'];
+																	break;
+																}					
+														}
+													?>
+													<?php $final_price = ($special) ? $special : $product['price'] ?>
+													<div id="product-bundle_<?php echo $module['id']; ?>_<?php echo $pr; ?>" class="<?php echo $class1; ?>"> 
+														<?php if (!empty($PB_product_options)) echo '<span style="color:#ab9a87;font-size:15px;">*</span> '; ?><?php echo $product['name']; ?> - <?php echo $this->currency->format($final_price); ?><img src="view/image/delete.png" product_price="<?php echo $final_price ?>" alt="" />
+														<input type="hidden" name="productbundles_custom[<?php echo $module['id']; ?>][products][]" value="<?php echo $pr; ?>" />
+													</div>
+														<?php }
+													} ?>
+												</div>
+											</td>
+											<td class="left">
+												<div id="product-bundle-prices_<?php echo $module['id']; ?>">
+													<label>Total Price: <?php if ($currencyAlignment=="L") {  echo $currency; } ?><span id="product-bundle-totalprice_<?php echo $module['id']; ?>"><?php echo (!empty($module['totalprice'])) ? $module['totalprice'] : '0' ; ?></span><input type="hidden" name="productbundles_custom[<?php echo $module['id']; ?>][totalprice]" value="<?php echo (!empty($module['totalprice'])) ? $module['totalprice'] : '0' ; ?>" /><?php if ($currencyAlignment=="R") {  echo $currency; } ?></label>
+													<br /><br /><label>Bundle Price: <?php if ($currencyAlignment=="L") {  echo $currency; } ?><span id="product-bundle-price_<?php echo $module['id']; ?>"><?php echo (!empty($module['price'])) ? $module['price'] : '0' ; ?></span><input type="hidden" name="productbundles_custom[<?php echo $module['id']; ?>][price]" value="<?php echo (!empty($module['price'])) ? $module['price'] : '0' ; ?>" /><?php if ($currencyAlignment=="R") {  echo $currency; } ?></label>
+													 <br /><br /><label>Discount: 
+													<?php if ($currencyAlignment=="L") {  ?>
+														<div style="display:inline;" class="input-prepend"><span class="add-on"><?php echo $currency; ?></span><input class="input-mini voucherPrice" name="productbundles_custom[<?php echo $module['id']; ?>][voucherprice]" id="product-bundle-voucherprice<?php echo $module['id']; ?>" type="text" value="<?php echo (!empty($module['voucherprice'])) ? $module['voucherprice'] : '0' ; ?>"></div>
+													<?php } else { ?>
+														<div style="display:inline;" class="input-append"><input class="input-mini voucherPrice" name="productbundles_custom[<?php echo $module['id']; ?>][voucherprice]" id="product-bundle-voucherprice<?php echo $module['id']; ?>" type="text" value="<?php echo (!empty($module['voucherprice'])) ? $module['voucherprice'] : '0' ; ?>"><span class="add-on"><?php echo $currency; ?></span></div>
+													<?php } ?>
+													</label>
+												</div>
+											</td>
+											<td class="left" style="vertical-align:middle;">
+												<div style="float:left;padding-right:15px;padding-bottom:5px;">
+													<span style="vertical-align:middle;">&nbsp;Product:</span> <input type="text" name="productsShow_Input" value="" />
+													<div id="product-bundle-productsShow_<?php echo $module['id']; ?>" class="scrollbox second" style="width:270px;">
+														<?php $class1 = 'odd'; ?>
+														<?php if (!empty($module['productsShow'])) {
+															foreach ($module['productsShow'] as $pr) { ?>
+																 <?php $class1 = ($class1 == 'even' ? 'odd' : 'even'); ?>
+																 <?php $product = $this->model_catalog_product->getProduct($pr); ?>
+																 <?php $product_specials = $this->model_catalog_product->getProductSpecials($pr); 
+																 $special = false;
+																 foreach ($product_specials  as $product_special) {
+																	if (($product_special['date_start'] == '0000-00-00' || $product_special['date_start'] < date('Y-m-d')) && ($product_special['date_end'] == '0000-00-00' || $product_special['date_end'] > date('Y-m-d'))) {
+																		$special = $product_special['price'];
+																		break;
+																	}					
+																}
+														?>
+														<?php $final_price = ($special) ? $special : $product['price'] ?>
+														<div id="product-bundle-productsShow_<?php echo $module['id']; ?>_<?php echo $pr; ?>" class="<?php echo $class1; ?>"><?php echo $product['name']; ?><img src="view/image/delete.png" product_price="<?php echo $final_price ?>" alt="" />
+															<input type="hidden" name="productbundles_custom[<?php echo $module['id']; ?>][productsShow][]" value="<?php echo $pr; ?>" />
+														</div>
+															<?php }
+														} ?>
+													</div>
+												</div>
+												<div style="float:left;">
+													<span style="vertical-align:middle;">Category:</span> <input type="text" name="categoriesShow_Input" value="" />
+													<div id="product-bundle-categoriesShow_<?php echo $module['id']; ?>" class="scrollbox third" style="width:275px;">
+														  <?php $class = 'odd'; ?>
+														  <?php if (!empty($module['categoriesShow'])) {
+															  foreach ($module['categoriesShow'] as $product_category) { ?>
+																<?php $class = ($class == 'even' ? 'odd' : 'even'); ?>
+																<?php $category_info = $this->model_catalog_category->getCategory($product_category);
+																$CategoryName = $category_info['path'] ? $category_info['path'] . ' &gt; ' . $category_info['name'] : $category_info['name']; ?>
+																<div id="product-bundle-categoriesShow_<?php echo $module['id']; ?>_<?php echo $product_category; ?>" class="<?php echo $class; ?>"><?php echo $CategoryName; ?><img src="view/image/delete.png" alt="" />
+																	<input type="hidden" name="productbundles_custom[<?php echo $module['id']; ?>][categoriesShow][]" value="<?php echo $product_category; ?>" />
+																</div>
+															  <?php }
+														  } ?>
+													</div>
+												</div>
+											</td>
+										<td class="left" style="vertical-align:middle;"><a onclick="removeBundle(<?php echo $module['id']; ?>)" class="button" style="text-decoration:none;"><?php echo $button_remove; ?></a></td>
+									</tr>
+								</tbody>
+								<?php } ?>
+								<?php $module_row++; ?>
+								<?php } } ?>
+						<tfoot>
+							<tr>
+								<td colspan="3"></td>
+								<td class="left"><a onclick="addModule();" class="button">Add New</a></td>
+							</tr>
+						</tfoot>
+					</table>
+					<div class="removedBundles"></div>
+					<script>
+					function removeBundle(bundleID) {
+						$('.removedBundles').append('<input type="hidden" class="bundle_id" name="productbundles_custom[' + bundleID + '][id]" value="' + bundleID + '" /><input type="hidden" class="bundle_id" name="productbundles_custom[' + bundleID + '][remove]" value="1" />');
+						$('#module-row'+bundleID).remove();
+					}
+					
+					function addModule() {
+						var module_row=Math.floor(Math.random() * 99999) + 10000;
+						html  = '<tbody style="display:none;" id="module-row' + module_row + '">';
+						html += '  <tr>';
+						html += '    <td class="left">';
+						html += '<input type="hidden" class="bundle_id" name="productbundles_custom[' + module_row + '][id]" value="' + module_row + '" />';
+						html += '<span style="vertical-align:middle;">Add product:</span> <input type="text" name="productsInput" value="" />';
+						html += '<div id="product-bundle_' + module_row + '" class="scrollbox first">';
+						html += '</div>';	
+						html += ' ';
+						html += '    </td>';
+						html += '    <td class="left">';
+						html += '<label>Total Price: <?php if ($currencyAlignment=="L") {  echo $currency; } ?><span id="product-bundle-totalprice_' + module_row + '">0.0</span><input type="hidden" name="productbundles_custom[' + module_row + '][totalprice]" value="0.0" /><?php if ($currencyAlignment=="R") {  echo $currency; } ?></label>';
+						html += '<br /><br /><label>Bundle Price: <?php if ($currencyAlignment=="L") {  echo $currency; } ?><span id="product-bundle-price_' + module_row + '">0.0</span><input type="hidden" name="productbundles_custom[' + module_row + '][price]" value="0" /><?php if ($currencyAlignment=="R") {  echo $currency; } ?></label>';
+						html += '<br /><br /><label>Discount: ';
+						 <?php if ($currencyAlignment=="L") {  ?>
+						html += '<div style="display:inline;" class="input-prepend"><span class="add-on"><?php echo $currency; ?></span><input class="input-small voucherPrice" name="productbundles_custom[' + module_row + '][voucherprice]" id="product-bundle-voucherprice' + module_row + '" type="text" value="0"></div>';
+						  <?php } else { ?>
+						 html += '<div style="display:inline;" class="input-append"><input class="input-mini voucherPrice" name="productbundles_custom[' + module_row + '][voucherprice]" id="product-bundle-voucherprice' + module_row + '" type="text" value="0"><span class="add-on"><?php echo $currency; ?></span></div>';
+						  <?php } ?>
+						html += '</label>';
+						html += '    </td>';
+						html += '    <td class="left">';
+						html += '		<div style="float:left;padding-right:15px;padding-bottom:5px;"><span style="vertical-align:middle;">Product:</span> <input type="text" name="productsShow_Input" value="" />';
+						html += '			<div id="product-bundle-productsShow_' + module_row + '" class="scrollbox second" style="width:270px;"></div>';
+						html += '		</div>';	
+						html += '		<div style="float:left;padding-right:15px;padding-bottom:5px;"><span style="vertical-align:middle;">Category:</span> <input type="text" name="categoriesShow_Input" value="" />';
+						html += '			<div id="product-bundle-categoriesShow_' + module_row + '" class="scrollbox third" style="width:270px;"></div>';
+						html += '		</div>';	
+						html += '    </td>';
+						html += '    <td class="left" style="vertical-align:middle;"><a onclick="$(\'#module-row' + module_row + '\').remove();" class="button" style="text-decoration:none;"><?php echo $button_remove; ?></a></td>';
+						html += '  </tr>';
+						html += '</tbody>';
+						
+						$('#module tfoot').before(html);
+						$('#module-row' + module_row).fadeIn();
+						initializeAutocomplete();
+					}
+					
+					// Add Products
+					var initializeAutocomplete = function () {
+						// Calculate Bundle Price
+						$('.voucherPrice').live('keyup',function(){
+							var bundle_id = $(this).parents('tr').find('.bundle_id').val();
+							if ($('#product-bundle-voucherprice' + bundle_id).val) {
+								var VoucherPrice = parseFloat( $('#product-bundle-totalprice_' + bundle_id).html() ) - parseFloat($('#product-bundle-voucherprice'+ bundle_id).val()).toFixed(2);
+								$('#product-bundle-price_' + bundle_id).html(VoucherPrice);
+								$('input[name=\'productbundles_custom['+bundle_id+'][price]\']').val(VoucherPrice);
+							}
+						});
+					
+						$('input[name=\'productsInput\']').autocomplete({
+							delay: 500,
+							source: function(request, response) {
+								$.ajax({
+									url: 'index.php?route=catalog/product/autocomplete&token=<?php echo $token; ?>&filter_name=' +  encodeURIComponent(request.term),
+									dataType: 'json',
+									success: function(json) {		
+										response($.map(json, function(item) {
+											return {
+												label: item.name,
+												value: item.product_id,
+												price: item.price,
+												special: item.special,
+												option: item.option
+											}
+										}));
+									}
+								});
+							}, 
+							select: function(event, ui) {
+								var bundle_id = $(this).parents('tr').find('.bundle_id').val();
+								
+								var textOption="";
+								if (ui.item.option!="")
+								{
+									textOption = '<span style="color:#ab9a87;font-size:15px;">*</span> ';	
+								}
+								var real_price=0;
+								if (ui.item.special==0) { real_price=ui.item.price } else { real_price=ui.item.special; }
+								
+							//	$(this).parent().find('#product-bundle_' + bundle_id + '_' + ui.item.value).remove();
+								$(this).parent().find('.scrollbox').append('<div id="product-bundle_' + bundle_id + '_' + ui.item.value + '">' + textOption + ui.item.label + ' - <?php if ($currencyAlignment=="L") {  echo $currency; } ?>' + parseFloat(real_price).toFixed(2) + '<?php if ($currencyAlignment=="R") {  echo $currency; } ?><img src="view/image/delete.png" alt="" product_price="' + real_price + '" /><input type="hidden" name="productbundles_custom['+bundle_id+'][products][]" value="' + ui.item.value +'" /></div>');
+							
+								$(this).parent().find('#product-bundle_' + bundle_id + ' div:odd').attr('class', 'odd');
+								$(this).parent().find('#product-bundle_' + bundle_id + ' div:even').attr('class', 'even');					
+								
+								var TotalPrice = ( parseFloat( $('#product-bundle-totalprice_' + bundle_id).html() ) + parseFloat(real_price) ).toFixed(2);
+								$('#product-bundle-totalprice_' + bundle_id).html(TotalPrice);
+								$('input[name=\'productbundles_custom[' + bundle_id + '][totalprice]\']').val(TotalPrice);
+								
+								return false;
+							},
+							focus: function(event, ui) {
+							  return false;
+							}
+						});
+						
+						$('.scrollbox.first div img').live('click', function() {
+							var bundle_id = $(this).parents('tr').find('.bundle_id').val();
+							var remove_price = ($(this).attr("product_price"));
+							$(this).parent().remove();
+							var RemovePrice = ( parseFloat( $('#product-bundle-totalprice_' + bundle_id).html() )-parseFloat(remove_price) ).toFixed(2);
+							$('#product-bundle-totalprice_' + bundle_id).html(RemovePrice);
+							$('input[name=\'productbundles_custom[' + bundle_id + '][totalprice]\']').val(RemovePrice);
+							$(this).parent().find('#product-bundle_' + bundle_id + ' div:odd').attr('class', 'odd');
+							$(this).parent().find('#product-bundle_' + bundle_id + ' div:even').attr('class', 'even');	
+						});
+						
+						// Show in Products
+						$('input[name=\'productsShow_Input\']').autocomplete({
+							delay: 500,
+							source: function(request, response) {
+								$.ajax({
+									url: 'index.php?route=catalog/product/autocomplete&token=<?php echo $token; ?>&filter_name=' +  encodeURIComponent(request.term),
+									dataType: 'json',
+									success: function(json) {		
+										response($.map(json, function(item) {
+											return {
+												label: item.name,
+												value: item.product_id,
+												price: item.price,
+												special: item.special
+											}
+										}));
+									}
+								});
+							}, 
+							select: function(event, ui) {
+								var bundle_id = $(this).parents('tr').find('.bundle_id').val();
+								$(this).parent().find('#product-bundle-productsShow_' + bundle_id + '_' + ui.item.value).remove();
+								$(this).parent().find('.second').append('<div id="product-bundle-productsShow_' + bundle_id + '_' + ui.item.value + '">' + ui.item.label + '<img src="view/image/delete.png" alt="" /><input type="hidden" name="productbundles_custom[' + bundle_id + '][productsShow][]" value="' + ui.item.value +'" /></div>');
+								$(this).parent().find('#product-bundle-productsShow_' + bundle_id + ' div:odd').attr('class', 'odd');
+								$(this).parent().find('#product-bundle-productsShow_' + bundle_id + ' div:even').attr('class', 'even');		
+								return false;
+							},
+							focus: function(event, ui) {
+							  return false;
+						   }
+						});
+									
+						$('.scrollbox.second div img').live('click', function() {
+							var bundle_id = $(this).parents('tr').find('.bundle_id').val();
+							$(this).parent().remove();
+							$(this).parent().find('#product-bundle-productsShow_' + bundle_id + ' div:odd').attr('class', 'odd');
+							$(this).parent().find('#product-bundle-productsShow_' + bundle_id + ' div:even').attr('class', 'even');	
+						});
+						
+						// Show in Categories
+						$('input[name=\'categoriesShow_Input\']').autocomplete({
+							delay: 500,
+							source: function(request, response) {
+								$.ajax({
+									url: 'index.php?route=catalog/category/autocomplete&token=<?php echo $token; ?>&filter_name=' +  encodeURIComponent(request.term),
+									dataType: 'json',
+									success: function(json) {		
+										response($.map(json, function(item) {
+											return {
+												label: item.name,
+												value: item.category_id
+											}
+										}));
+									}
+								});
+							}, 
+							select: function(event, ui) {
+								var bundle_id = $(this).parents('tr').find('.bundle_id').val();
+								$(this).parent().find('#product-bundle-categoriesShow_' + bundle_id + '_' + ui.item.value).remove();
+								$(this).parent().find('.third').append('<div id="product-bundle-categoriesShow_' + bundle_id + '_' + ui.item.value + '">' + ui.item.label + '<img src="view/image/delete.png" alt="" /><input type="hidden" name="productbundles_custom[' + bundle_id + '][categoriesShow][]" value="' + ui.item.value +'" /></div>');
+								$(this).parent().find('#product-bundle-categoriesShow_' + bundle_id + ' div:odd').attr('class', 'odd');
+								$(this).parent().find('#product-bundle-categoriesShow_' + bundle_id + ' div:even').attr('class', 'even');	
+								return false;
+							},
+							focus: function(event, ui) {
+							  return false;
+						   }
+						});
+						
+						$('.scrollbox.third div img').live('click', function() {
+							var bundle_id = $(this).parents('tr').find('.bundle_id').val();
+							$(this).parent().remove();
+							$(this).parent().find('#product-bundle-categoriesShow_' + bundle_id + ' div:odd').attr('class', 'odd');
+							$(this).parent().find('#product-bundle-categoriesShow_' + bundle_id + ' div:even').attr('class', 'even');	
+						});
+					}
+					initializeAutocomplete();
+					</script>
+					</div>			
+			]]></add>
+		</operation>		
+	</file>
+	
+	<file name="admin/controller/catalog/product.php">
+		<operation>
+			<search position="before"><![CDATA[$json[] = array(]]></search>
+			<add><![CDATA[
+				$special = false;
+				$product_specials = $this->model_catalog_product->getProductSpecials($result['product_id']);
+				foreach ($product_specials  as $product_special) {
+					if (($product_special['date_start'] == '0000-00-00' || $product_special['date_start'] < date('Y-m-d')) && ($product_special['date_end'] == '0000-00-00' || $product_special['date_end'] > date('Y-m-d'))) {
+						$special = $product_special['price'];
+						break;
+					}					
+				}
+			]]></add>
+		</operation>
+		
+		<operation>
+			<search position="after"><![CDATA[$json[] = array(]]></search>
+			<add><![CDATA[
+				'special' => (float)$special, 
+			]]></add>
+		</operation>
+	</file>
+	
+		
+	<file name="catalog/controller/common/header.php">
+		<operation error="skip">
+			<search position="before" index="1"><![CDATA['name'     => $category['name'],]]></search>
+			<add><![CDATA[
+				'sort_order' => $category['sort_order'],
+			]]></add>
+		</operation>	
+
+	
+		<operation error="skip">
+			<search position="before"><![CDATA[$this->children = array(]]></search>
+			<add><![CDATA[
+				$ProductBundles = $this->config->get('ProductBundles');
+				
+				if  ((isset($ProductBundles)) && ($ProductBundles['Enabled']== 'yes') && ($ProductBundles['MainLinkEnabled']== 'yes') && (!empty($ProductBundles['LinkTitle'][$this->config->get('config_language_id')]))) {
+					$this->data['categories'][] = array(
+						'name'     => $ProductBundles['LinkTitle'][$this->config->get('config_language_id')],
+						'children' => array(),
+						'column'   => 1,
+						'sort_order' => $ProductBundles['LinkSortOrder'],
+						'href'     => $this->url->link('module/productbundles/listing')
+					);
+				}
+			
+				if (!function_exists('cmpCategoriesOrder')) {
+					function cmpCategoriesOrder($a, $b) {
+						if ($a['sort_order'] == $b['sort_order']) {
+							return 0;
+						}
+						return ($a['sort_order'] < $b['sort_order']) ? -1 : 1;
+					}
+				}
+
+				uasort($this->data['categories'], 'cmpCategoriesOrder');
+
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/common/seo_url.php">
+		<operation>
+			<search position="after"><![CDATA[$parts = explode('/',]]></search>
+			<add><![CDATA[
+			$ProductBundles = $this->config->get('ProductBundles');
+			$pbSeoSlug = isset($ProductBundles['SeoURL']) ? $ProductBundles['SeoURL'] : array('bundles');
+			$parts = array_filter($parts);
+			foreach ($pbSeoSlug as $pb_slug) { 
+				if (count($parts) == 1 && ($parts[0] == $pb_slug)) {
+					$this->request->get['route'] = 'module/productbundles/listing';
+					return $this->forward($this->request->get['route']);
+				}
+			}
+			]]></add>
+		</operation>
+			
+		<operation error="skip">
+			<search position="after"><![CDATA[parse_str($url_data['query'], $data);]]></search>
+			<add><![CDATA[
+			$ProductBundles = $this->config->get('ProductBundles');
+			$pbSeoSlug = isset($ProductBundles['SeoURL'][$this->config->get('config_language_id')]) ? $ProductBundles['SeoURL'][$this->config->get('config_language_id')] : 'bundles';
+			if (isset($data['route']) && $data['route'] == 'module/productbundles/listing') {
+				$url .= '/'.$pbSeoSlug;
+			}
+			]]></add>
+		</operation>
+		
+		<operation error="skip">
+			<search position="after"><![CDATA[parse_str($url_info['query'], $data);]]></search>
+			<add><![CDATA[
+			$ProductBundles = $this->config->get('ProductBundles');
+			$pbSeoSlug = isset($ProductBundles['SeoURL'][$this->config->get('config_language_id')]) ? $ProductBundles['SeoURL'][$this->config->get('config_language_id')] : 'bundles';
+			if (isset($data['route']) && $data['route'] == 'module/productbundles/listing') {
+				$url .= '/'.$pbSeoSlug;
+			}
+			]]></add>
+		</operation>
+	</file>
+
+
+</modification>

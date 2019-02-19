@@ -1,0 +1,464 @@
+<modification>
+	<id>Add coupon or voucher during checkout</id>
+	<version>1.5.2.x+</version>
+	<vqmver>1.3.0</vqmver>
+	<author>g-white</author>
+
+	<file name="catalog/language/english/checkout/checkout.php">
+		<operation>
+			<search position="after"><![CDATA[$_['text_payment_method']]]></search>
+			<add><![CDATA[
+				$_['text_payment_coupon']           = 'Enter your coupon code here:';
+				$_['text_payment_couponEntered']    = 'Entered Coupon Code:';
+				$_['button_coupon']                 = 'Apply Coupon';
+				$_['button_coupon_remove']          = 'Remove Coupon';
+				$_['text_payment_voucher']          = 'Enter your gift voucher code here:';
+				$_['text_payment_voucherEntered']   = 'Entered Voucher Code:';
+				$_['button_voucher']                = 'Apply Voucher';
+				$_['button_voucher_remove']         = 'Remove Voucher';
+			]]></add>
+		</operation>
+	</file>
+	<file name="catalog/language/english/checkout/cart.php">
+				<operation>
+						<search position="after"><![CDATA[$_['text_use_voucher']       = 'Use Gift Voucher';]]></search>
+                        <add><![CDATA[
+						$_['text_coupon_success_remove']  = 'Success: Your coupon has been removed!';
+						$_['text_voucher_success_remove']  = 'Success: Your voucher has been removed!';
+						$_['text_voucher_remaining']      = 'Your remaining balance is ';
+						]]></add>
+				</operation>
+        </file>
+	<file name="catalog/controller/checkout/payment_method.php">
+		<operation>
+			<search position="after"><![CDATA[$this->data['text_payment_method'] = $this->language->get('text_payment_method');]]></search>
+			<add><![CDATA[
+				$this->data['text_payment_coupon'] = $this->language->get('text_payment_coupon');
+				$this->data['text_payment_couponEntered'] = $this->language->get('text_payment_couponEntered');
+				$this->data['button_coupon'] = $this->language->get('button_coupon');
+				$this->data['button_coupon_remove'] = $this->language->get('button_coupon_remove');
+				$this->data['coupon_status'] = $this->config->get('coupon_status');
+				$this->data['text_payment_voucher'] = $this->language->get('text_payment_voucher');
+				$this->data['text_payment_voucherEntered'] = $this->language->get('text_payment_voucherEntered');
+				$this->data['button_voucher'] = $this->language->get('button_voucher');
+				$this->data['button_voucher_remove'] = $this->language->get('button_voucher_remove');
+				$this->data['voucher_status'] = $this->config->get('voucher_status');
+			]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/checkout/payment_method.tpl">
+		<operation>
+			<search position="after" ><![CDATA[</table>]]></search>
+			<add><![CDATA[
+				<?php if ($coupon_status){?>
+					<div id="coupon" style="margin-right:80px;margin-top:10px;height:60px;margin-bottom:20px;">
+					<?php if(!isset($this->session->data['coupon'])){?>
+					  <strong>Apply a code:</strong><br/><br/>
+					  <input type="text" name="coupon" value="<?php  if(isset($this->session->data['voucher'])) echo trim($this->session->data['voucher']);?>" />
+					  &nbsp;<span class="button_pink"><input id="button-coupon" class="button" type="button" value="Apply Code"></span><br/>
+					  <?php }else{?>
+					  <?php echo $text_payment_couponEntered; ?>&nbsp; <strong><?php  echo $this->session->data['coupon'];?></strong><br/><br/>
+					  <div style="padding-top:6px;"><a id="button-coupon-remove" class="button"><span><?php echo $button_coupon_remove; ?></span></a></div>
+					  <?php }?>
+					</div>
+				<?php }?>
+				<?php if ($voucher_status){?>
+				<!--	<div id="voucher" style="display:inline-block;margin-top:10px;margin-bottom:20px;height:60px;">
+					<?php if(!isset($this->session->data['voucher'])){?>
+					  <strong><?php echo $text_payment_voucher; ?></strong><br/><br/>
+					  <input type="text" name="voucher" value="" />
+					  &nbsp;<a id="button-voucher" class="button"><span><?php echo $button_voucher; ?></span></a><br/>
+					  <?php }else{?>
+					  <?php echo $text_payment_voucherEntered; ?>&nbsp; <strong><?php echo $this->session->data['voucher'];?></strong><br/><br/>
+					  <div style="padding-top:6px;"><a id="button-voucher-remove" class="button"><span><?php echo $button_voucher_remove; ?></span></a></div>
+					  <?php }?>
+					</div> -->
+				<?php }?>
+			]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[<script type="text/javascript"><!--]]></search>
+			<add><![CDATA[
+				<script type="text/javascript"><!--
+				$('#button-coupon').bind('click', function() {
+					$.ajax({
+						type: 'POST',
+						url: 'index.php?route=checkout/cart/addCoupon',
+						data: {coupon:$('#coupon :input').val(),payment_code:$('input:radio[name=payment_method]:checked').val(),comment:$('#payment-method textarea').val()},
+						dataType: 'json',		
+						beforeSend: function() {
+							$('#button-coupon').attr('disabled', true);
+							$('#button-coupon').after('<span class="wait">&nbsp;<img src="catalog/view/theme/default/image/loading.gif" alt="" /></span>');
+						},
+						complete: function() {
+							$('#button-coupon').attr('disabled', false);
+							$('.wait').remove();
+						},		
+						success: function(json) {
+							$('.success, .warning, .attention, .error').remove();
+							if (json['warning']) {
+								$("input[name=coupon]").val("");
+								$('#notification').html('<div class="warning" style="display: none;">' + json['warning'] + '<img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>');	
+								$('.warning').fadeIn('slow');
+								//$('html, body').animate({ scrollTop: 0 }, 'slow'); 
+							} else {
+								$('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>');	
+								$('.success').fadeIn('slow');
+								//$('html, body').animate({ scrollTop: 0 }, 'slow');
+								$.ajax({
+									url: 'index.php?route=checkout/payment_method',
+									dataType: 'html',
+									beforeSend: function() {
+										$('#payment-method .checkout-content').slideUp('slow');
+									},
+									success: function(html) {
+										$('#payment-method .checkout-content').html(html);									
+										$('#payment-method .checkout-content').slideDown('slow');	
+									},
+									error: function(xhr, ajaxOptions, thrownError) {
+										alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+									}
+								});
+							}
+						}
+					});
+				});
+				$('#button-voucher').bind('click', function() {
+					$.ajax({
+						type: 'POST',
+						url: 'index.php?route=checkout/cart/addVoucher',
+						data: {voucher:$('#voucher :input').val(),payment_code:$('input:radio[name=payment_method]:checked').val(),comment:$('#payment-method textarea').val()},
+						dataType: 'json',		
+						beforeSend: function() {
+							$('#button-voucher').attr('disabled', true);
+							$('#button-voucher').after('<span class="wait">&nbsp;<img src="catalog/view/theme/default/image/loading.gif" alt="" /></span>');
+						},
+						complete: function() {
+							$('#button-voucher').attr('disabled', false);
+							$('.wait').remove();
+						},		
+						success: function(json) {
+							$('.success, .warning, .attention, .error').remove();
+							if (json['warning']) {
+								$("input[name=voucher]").val("");
+								$('#notification').html('<div class="warning" style="display: none;">' + json['warning'] + '<img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>');	
+								$('.warning').fadeIn('slow');
+								$('html, body').animate({ scrollTop: 0 }, 'slow'); 
+							} else {
+								$('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>');	
+								$('.success').fadeIn('slow');
+								$('html, body').animate({ scrollTop: 0 }, 'slow'); 
+								$.ajax({
+									url: 'index.php?route=checkout/payment_method',
+									dataType: 'html',
+									beforeSend: function() {
+										$('#payment-method .checkout-content').slideUp('slow');
+									},
+									success: function(html) {
+										$('#payment-method .checkout-content').html(html);									
+										$('#payment-method .checkout-content').slideDown('slow');	
+									},
+									error: function(xhr, ajaxOptions, thrownError) {
+										alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+									}
+								});
+							}	
+						}
+					});
+				});
+				$('#button-coupon-remove').bind('click', function() {
+					$.ajax({
+						type: 'POST',
+						url: 'index.php?route=checkout/cart/removeCoupon',
+						data: {payment_code:$('input:radio[name=payment_method]:checked').val(),comment:$('#payment-method textarea').val()},
+						dataType: 'json',		
+						beforeSend: function() {
+							$('#button-coupon-remove').attr('disabled', true);
+							$('#button-coupon-remove').after('<span class="wait">&nbsp;<img src="catalog/view/theme/default/image/loading.gif" alt="" /></span>');
+						},
+						complete: function() {
+							$('#button-coupon-remove').attr('disabled', false);
+							$('.wait').remove();
+						},		
+						success: function(json) {
+							$('.success, .warning, .attention, .error').remove();
+							$("input[name=coupon]").val("");
+							$('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>');	
+							$('.success').fadeIn('slow');
+							$('html, body').animate({ scrollTop: 0 }, 'slow'); 
+
+							$.ajax({
+								url: 'index.php?route=checkout/payment_method',
+								dataType: 'html',
+								beforeSend: function() {
+									$('#payment-method .checkout-content').slideUp('slow');
+								},
+								success: function(html) {
+									$('#payment-method .checkout-content').html(html);									
+									$('#payment-method .checkout-content').slideDown('slow');	
+								},
+								error: function(xhr, ajaxOptions, thrownError) {
+									alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+								}
+							});	
+						}
+					});
+				});
+				$('#button-voucher-remove').bind('click', function() {
+					$.ajax({
+						type: 'POST',
+						url: 'index.php?route=checkout/cart/removeVoucher',
+						data: {payment_code:$('input:radio[name=payment_method]:checked').val(),comment:$('#payment-method textarea').val()},
+						dataType: 'json',		
+						beforeSend: function() {
+							$('#button-voucher-remove').attr('disabled', true);
+							$('#button-voucher-remove').after('<span class="wait">&nbsp;<img src="catalog/view/theme/default/image/loading.gif" alt="" /></span>');
+						},
+						complete: function() {
+							$('#button-voucher-remove').attr('disabled', false);
+							$('.wait').remove();
+						},		
+						success: function(json) {
+							$('.success, .warning, .attention, .error').remove();
+							$("input[name=voucher]").val("");
+							$('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>');	
+							$('.success').fadeIn('slow');
+							$('html, body').animate({ scrollTop: 0 }, 'slow'); 
+
+							$.ajax({
+								url: 'index.php?route=checkout/payment_method',
+								dataType: 'html',
+								beforeSend: function() {
+									$('#payment-method .checkout-content').slideUp('slow');
+								},
+								success: function(html) {
+									$('#payment-method .checkout-content').html(html);									
+									$('#payment-method .checkout-content').slideDown('slow');	
+								},
+								error: function(xhr, ajaxOptions, thrownError) {
+									alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+								}
+							});	
+						}
+					});
+				});
+				//--></script> 
+			]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/checkout/cart.php">
+		
+		<operation>
+				<search position="replace"><![CDATA[if (isset($this->request->post['coupon']) && $this->validateCoupon()) {]]></search>
+				<add><![CDATA[
+				if (isset($this->request->post['coupon']) && $this->validateCoupon() && !($this->request->post['coupon'] == '')) {
+				]]></add>
+		</operation>
+		<operation>
+				<search position="before" offset= "2"><![CDATA[if (isset($this->request->post['voucher']) && $this->validateVoucher()) { ]]></search>
+				<add><![CDATA[
+				if (isset($this->request->post['coupon'])&& isset($this->session->data['coupon']) && $this->request->post['coupon'] == '') {
+					unset($this->session->data['coupon']);
+					$this->session->data['success'] = $this->language->get('text_coupon_success_remove');
+					$this->redirect($this->url->link('checkout/cart'));
+				}
+				]]></add>
+		</operation>
+		<operation>
+				<search position="replace"><![CDATA[if (isset($this->request->post['voucher']) && $this->validateVoucher()) { ]]></search>
+				<add><![CDATA[
+				if (isset($this->request->post['voucher']) && $this->validateVoucher() && !($this->request->post['voucher'] == '')) { 
+				]]></add>
+		</operation>
+		<operation>
+				<search position="before" offset= "2"><![CDATA[if (isset($this->request->post['reward']) && $this->validateReward()) { ]]></search>
+				<add><![CDATA[
+				if (isset($this->request->post['voucher'])&& isset($this->session->data['voucher']) && $this->request->post['voucher'] == '') {
+					unset($this->session->data['voucher']);
+					$this->session->data['success'] = $this->language->get('text_voucher_success_remove');
+					$this->redirect($this->url->link('checkout/cart'));
+				}
+				]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/checkout/checkout.tpl">
+		<operation>
+			<search position="before"><![CDATA[$('#button-payment-method').attr('disabled', false);]]></search>
+			<add><![CDATA[
+				$('.success, .warning, .attention, .error').remove();
+			]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/checkout/cart.tpl">
+		<operation>
+			<search position="replace"><![CDATA[
+			<td class="right"><b><?php echo $total['title']; ?>:</b></td>
+			]]></search>
+			<add><![CDATA[
+				<td class="right"><b><?php echo $total['title']; 
+					if($total['code']=='coupon'){
+						echo " <a href=\"#\" name=\"RemoveCoupon\" ><img src=\"catalog/view/theme/default/image/remove.png\" alt=\"Remove\" title=\"Remove\" width=\"10px\"></a> ";
+					}
+					if($total['code']=='voucher'){
+						echo " <a href=\"#\" name=\"RemoveVoucher\" ><img src=\"catalog/view/theme/default/image/remove.png\" alt=\"Remove\" title=\"Remove\" width=\"10px\"></a> ";
+					}
+				?>:</b></td>
+			]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[
+			<?php echo $footer; ?>
+			]]></search>
+			<add><![CDATA[
+				<script type="text/javascript"><!--
+				
+				$('a[name=\'RemoveCoupon\']').bind('click', function() {
+					$.ajax({
+						type: 'POST',
+						url: 'index.php?route=checkout/cart/removeCoupon',
+						data: {saveMessageToSession:true},
+						dataType: 'json',		
+						complete: function() {
+							document.location.reload(true);
+						},		
+					});
+					return false;
+				});
+				
+				$('a[name=\'RemoveVoucher\']').bind('click', function() {
+					$.ajax({
+						type: 'POST',
+						url: 'index.php?route=checkout/cart/removeVoucher',
+						data: {saveMessageToSession:true},
+						dataType: 'json',		
+						complete: function() {
+							document.location.reload(true);
+						},		
+					});
+					return false;
+				});				
+				//--></script>
+			]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/checkout/confirm.tpl">
+		<operation>
+			<search position="replace"><![CDATA[
+			<td colspan="4" class="price"><b><?php echo $total['title']; ?>:</b></td>
+			]]></search>
+			<add><![CDATA[
+				<td colspan="4" class="price"><b><?php echo $total['title'];  
+					if($total['code']=='coupon'){
+						echo " <a href=\"#\" name=\"RemoveCoupon\" ><img src=\"catalog/view/theme/default/image/remove.png\" alt=\"Remove\" title=\"Remove\" width=\"10px\"></a> ";
+					}
+					if($total['code']=='voucher'){
+						echo " <a href=\"#\" name=\"RemoveVoucher\" ><img src=\"catalog/view/theme/default/image/remove.png\" alt=\"Remove\" title=\"Remove\" width=\"10px\"></a> ";
+					}
+				?>:</b></td>
+			]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[
+			<div class="payment"><?php echo $payment; ?></div>
+			]]></search>
+			<add><![CDATA[
+				<script type="text/javascript"><!--
+				
+				$('a[name=\'RemoveCoupon\']').bind('click', function() {
+					$.ajax({
+						type: 'POST',
+						url: 'index.php?route=checkout/cart/removeCoupon',
+						dataType: 'json',		
+						success: function(json) {
+							$('.success, .warning, .attention, .error').remove();
+							if (json['warning']) {
+								$("input[name=coupon]").val("");
+								$('#notification').html('<div class="warning" style="display: none;">' + json['warning'] + '<img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>');	
+								$('.warning').fadeIn('slow');
+								$('html, body').animate({ scrollTop: 0 }, 'slow'); 
+							} else {
+								$('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>');	
+								$('.success').fadeIn('slow');
+								$('html, body').animate({ scrollTop: 0 }, 'slow');
+								$.ajax({
+									url: 'index.php?route=checkout/confirm',
+									dataType: 'html',
+									beforeSend: function() {
+										$('#confirm .checkout-content').slideUp('slow');
+									},
+									success: function(html) {
+										$('#confirm .checkout-content').html(html);										
+									},
+									error: function(xhr, ajaxOptions, thrownError) {
+										alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+									}
+								});
+								$.ajax({
+									url: 'index.php?route=checkout/payment_method',
+									dataType: 'html',
+									success: function(html) {
+										$('#payment-method .checkout-content').html(html);	
+										$('#payment-method .checkout-content').slideDown('slow');
+									},
+									error: function(xhr, ajaxOptions, thrownError) {
+										alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+									}
+								});
+							}
+						}
+					});
+					return false;
+				});
+				
+				$('a[name=\'RemoveVoucher\']').bind('click', function() {
+					$.ajax({
+						type: 'POST',
+						url: 'index.php?route=checkout/cart/removeVoucher',
+						dataType: 'json',		
+						success: function(json) {
+							$('.success, .warning, .attention, .error').remove();
+							if (json['warning']) {
+								$("input[name=coupon]").val("");
+								$('#notification').html('<div class="warning" style="display: none;">' + json['warning'] + '<img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>');	
+								$('.warning').fadeIn('slow');
+								$('html, body').animate({ scrollTop: 0 }, 'slow'); 
+							} else {
+								$('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>');	
+								$('.success').fadeIn('slow');
+								$('html, body').animate({ scrollTop: 0 }, 'slow');
+								$.ajax({
+									url: 'index.php?route=checkout/confirm',
+									dataType: 'html',
+									beforeSend: function() {
+										$('#confirm .checkout-content').slideUp('slow');
+									},
+									success: function(html) {
+										$('#confirm .checkout-content').html(html);										
+									},
+									error: function(xhr, ajaxOptions, thrownError) {
+										alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+									}
+								});
+								$.ajax({
+									url: 'index.php?route=checkout/payment_method',
+									dataType: 'html',
+									success: function(html) {
+										$('#payment-method .checkout-content').html(html);	
+										$('#payment-method .checkout-content').slideDown('slow');										
+									},
+									error: function(xhr, ajaxOptions, thrownError) {
+										alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+									}
+								});
+							}
+						}		
+					});
+					return false;
+				});
+
+				//--></script>
+			]]></add>
+		</operation>
+	</file>
+	
+</modification>

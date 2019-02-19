@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>WXHosting.com Advanced Search</id>
+	<version>2.0</version>
+	<vqmver>2.1</vqmver>
+	<author>Jeff Hunter</author>
+	<file name="catalog/model/catalog/product.php">
+		<operation>
+			<search position="replace"><![CDATA[public function getProducts]]></search>
+			<add><![CDATA[public function getProductsOld]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[public function getTotalProducts]]></search>
+			<add><![CDATA[public function getTotalProductsOld]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[public function getTotalProductsOld]]></search>
+			<add><![CDATA[	public function getTotalProducts($data = array()) {
+		//Keyword:
+		$keyword = (isset($data['filter_name'])) ? $data['filter_name'] : '';
+		
+		if (strlen($keyword) < 4) {
+			$keyword = str_replace('*', '', $keyword);
+		}
+		if (!$keyword) {
+			return $this->getTotalProductsOld($data);
+		}
+		
+		//INIT INDEX
+		ini_set('include_path', ini_get('include_path') . ':' . DIR_APPLICATION . '../wx/library/');
+		require_once('Zend/Search/Lucene.php');
+		require_once('Zend/StandardAnalyzer/Analyzer/Standard/English.php');
+	
+		$index = Zend_Search_Lucene::open(DIR_APPLICATION . '../wx/library/Zend/Indexes/search_index');
+		
+		//FILTER BY CATEGORY?
+		$keyword .= (isset($data['filter_category_id']) && $data['filter_category_id']) ? ' catid:' . $data['filter_category_id'] : '';
+		
+		//FILTER BY MANUFACTURER?
+		$keyword .= (isset($data['filter_manufacturer_id']) && $data['filter_manufacturer_id']) ? ' manuid:' . $data['filter_manufacturer_id'] : '';
+		
+		// Boolean AND as default, instead of OR
+		Zend_Search_Lucene_Search_QueryParser::setDefaultOperator(Zend_Search_Lucene_Search_QueryParser::B_AND);
+		//if ($this->config->get('asearch_english')) {
+			Zend_Search_Lucene_Analysis_Analyzer::setDefault(new StandardAnalyzer_Analyzer_Standard_English());
+		//} else {
+		//	Zend_Search_Lucene_Analysis_Analyzer::setDefault(new Zend_Search_Lucene_Analysis_Analyzer_Common_Utf8Num_CaseInsensitive());
+		//}		
+		
+		$hits = $index->find($keyword);
+		if (!count($hits) && strlen($keyword) >= 3 && !strstr($keyword, ' ') && !preg_match('/\*$/s', $keyword)) {
+			if (preg_match('/\*$/s', $keyword)) {
+				$data['filter_name'] = '*' . $data['filter_name'];
+			} else {
+				$data['filter_name'] .= '*';
+			}
+			return $this->getTotalProducts($data);
+		}
+		return count($hits);
+	}	
+	
+	public function getProducts($data = array()) {
+		//Keyword:
+		$keyword = (isset($data['filter_name'])) ? $data['filter_name'] : '';
+		
+		if (strlen($keyword) < 4) {
+			$keyword = str_replace('*', '', $keyword);
+		}
+		if (!$keyword) {
+			return $this->getProductsOld($data);
+		}
+		//INIT INDEX
+		ini_set('include_path', ini_get('include_path') . ':' . DIR_APPLICATION . '../wx/library/');
+		require_once('Zend/Search/Lucene.php');
+		require_once('Zend/StandardAnalyzer/Analyzer/Standard/English.php');
+	
+		$index = Zend_Search_Lucene::open(DIR_APPLICATION . '..wx/library/Zend/Indexes/search_index');
+		
+		switch ($data['sort']) {
+			case ('p.sort_order'): 
+				break;
+			case ('pd.name'): 
+				$sort_field = 'hj_name';
+				$sort_type = SORT_STRING;
+				break;
+			case ('p.price'): 
+				$sort_field = 'price';
+				$sort_type = SORT_NUMERIC;
+				break;
+			case ('p.model'): 
+				$sort_field = 'model';
+				$sort_type = SORT_STRING;
+				break;
+		}
+		
+		if (isset($data['order']) && ($data['order'] == 'DESC')) {
+			$sort_order = SORT_DESC;
+		} else {
+			$sort_order = SORT_ASC;
+		}
+	
+		$start = 0;
+		$limit = 20;
+		if (isset($data['start']) || isset($data['limit'])) {
+			if ($data['start'] < 0) {
+				$start = 0;
+			} else {
+				$start = $data['start'];
+			}				
+
+			if ($data['limit'] < 1) {
+				$limit = 20;
+			} else {
+				$limit = $data['limit'];
+			}
+		}
+		
+		//return array of products:
+		$product_data = array();
+				
+		//FILTER BY CATEGORY?
+		if (isset($data['filter_category_id']) && $data['filter_category_id']) {
+			$keyword .= ' catid:' . $data['filter_category_id'];
+		}
+		
+		//MODEL SEARCH
+		if (isset($data['filter_manufacturer_id']) && $data['filter_manufacturer_id']) {
+			$keyword .= ' manuid:' . $data['filter_manufacturer_id'];
+		}
+		
+		// Boolean AND as default, instead of OR
+		Zend_Search_Lucene_Search_QueryParser::setDefaultOperator(Zend_Search_Lucene_Search_QueryParser::B_AND);
+		//if ($this->config->get('asearch_english')) {
+			Zend_Search_Lucene_Analysis_Analyzer::setDefault(new StandardAnalyzer_Analyzer_Standard_English());
+		//} else {
+		//	Zend_Search_Lucene_Analysis_Analyzer::setDefault(new Zend_Search_Lucene_Analysis_Analyzer_Common_Utf8Num_CaseInsensitive());
+		//}		
+		if (isset($sort_field)) {
+			$hits = $index->find($keyword, $sort_field, $sort_type, $sort_order);
+		}
+		else {
+			$hits = $index->find($keyword);
+		}
+		
+		if (!count($hits) && strlen($keyword) >= 3 && !strstr($keyword, ' ') && !preg_match('/\*$/s', $keyword)) {
+			if (preg_match('/\*$/s', $keyword)) {
+				$data['filter_name'] = '*' . $data['filter_name'];
+			} else {
+				$data['filter_name'] .= '*';
+			}
+			return $this->getProducts($data);
+		}
+		for ($i=$start; $i<($start+$limit) && isset($hits[$i]); $i++) {
+			$product_data[$hits[$i]->prodid] = $this->getProduct($hits[$i]->prodid);
+		}
+		return $product_data;
+	}]]></add>
+		</operation>
+	</file>
+
+</modification>

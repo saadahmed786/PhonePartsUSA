@@ -1,0 +1,126 @@
+<modification>
+  <id>Highlight Pickup at store orders in the admin section</id>
+  <version>1.0</version>
+  <vqmver>2.2.1</vqmver>
+  <author>Bigpayout Development Team</author>
+
+  <file name="admin/controller/common/home.php">
+    <operation>
+      <search position="after"><![CDATA[
+      $this->data['orders'][] = array(
+      ]]></search>
+      <add trim="true"><![CDATA[
+      'shipping_code' => $result['shipping_code'],
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="admin/controller/sale/manageorder.php">
+    <operation>
+      <search position="after"><![CDATA[
+      $orders_data[] = array(
+      ]]></search>
+      <add trim="true"><![CDATA[
+      'shipping_code' => $orderinfo['shipping_code'],
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="admin/controller/sale/order.php">
+    <operation>
+      <search position="after" index="1"><![CDATA[
+      $this->data['orders'][] = array(
+      ]]></search>
+      <add trim="true"><![CDATA[
+      'shipping_code' => $result['shipping_code'],
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="admin/model/sale/order.php">
+    <operation>
+      <search position="replace"><![CDATA[
+      , o.date_modified
+      ]]></search>
+      <add trim="true"><![CDATA[
+      , o.date_modified, o.shipping_code
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="admin/view/template/common/home.tpl">
+    <operation>
+      <search position="top" ><![CDATA[]]></search>
+      <add><![CDATA[
+      <style type="text/css">
+      .list tr.highlight td {
+        background-color: #119302;
+      }
+      </style>
+      ]]></add>
+    </operation>
+    <operation>
+      <search position="replace" offset="1"><![CDATA[
+      <?php foreach ($orders as $order) { ?>
+      ]]></search>
+      <add><![CDATA[
+      <?php foreach ($orders as $order) { ?>
+      <?php if ($order['shipping_code'] == 'pickup.pickup' || $order['shipping_code'] == 'multiflatrate.multiflatrate_0' || $order['shipping_code'] == 'multiflatrate.multiflatrate_18') { ?>
+      <tr class="highlight">
+      <?php } else { ?>
+      <tr>
+      <?php } ?>
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="admin/view/template/sale/manageorder_list.tpl">
+    <operation>
+      <search position="top" ><![CDATA[]]></search>
+      <add><![CDATA[
+      <style type="text/css">
+      .list tr.highlight td {
+        background-color: #119302;
+      }
+      </style>
+      ]]></add>
+    </operation>
+    <operation>
+      <search position="replace" index="2"><![CDATA[
+      <tr>
+      ]]></search>
+      <add><![CDATA[
+      <?php if ($order['shipping_code'] == 'pickup.pickup' || $order['shipping_code'] == 'multiflatrate.multiflatrate_0' || $order['shipping_code'] == 'multiflatrate.multiflatrate_18') { ?>
+      <tr class="highlight">
+      <?php } else { ?>
+      <tr>
+      <?php } ?>
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="admin/view/template/sale/order_list.tpl">
+    <operation>
+      <search position="top" ><![CDATA[]]></search>
+      <add><![CDATA[
+      <style type="text/css">
+      .list tr.highlight td {
+        background-color: #119302;
+      }
+      </style>
+      ]]></add>
+    </operation>
+    <operation>
+      <search position="replace" index="2"><![CDATA[
+      <tr>
+      ]]></search>
+      <add><![CDATA[
+      <?php if ($order['shipping_code'] == 'pickup.pickup' || $order['shipping_code'] == 'multiflatrate.multiflatrate_0' || $order['shipping_code'] == 'multiflatrate.multiflatrate_18') { ?>
+      <tr class="highlight">
+      <?php } else { ?>
+      <tr>
+      <?php } ?>
+      ]]></add>
+    </operation>
+  </file>
+</modification>

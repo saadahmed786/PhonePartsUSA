@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>WXHosting.com Image Dimensions (Carousel)</id>
+	<version>2.0</version>
+	<vqmver>2.1</vqmver>
+	<author>Jeff Hunter aka Tcalp</author>
+
+	<file name="catalog/controller/module/carousel.php">
+		<operation error="skip"> <!-- ADD DATA VARIABLES FOR IMAGE WIDTH AND HEIGHT FOR CAROUSEL MODULE -->
+			<search position="before"><![CDATA[$this->data['banners']]]></search>
+			<add><![CDATA[
+			$this->data['image_width'] = $setting['width'];
+			$this->data['image_height'] = $setting['height'];
+			]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/module/carousel.tpl">
+		<operation error="skip"> <!-- ADD DATA VARIABLES FOR IMAGE WIDTH AND HEIGHT FOR CAROUSEL MODULE -->
+			<search position="replace"><![CDATA[src="<?php echo $banner['image']; ?>"]]></search>
+			<add><![CDATA[src="<?php echo $banner['image']; ?>" width="<?php echo $image_width; ?>" height="<?php echo $image_height; ?>"]]></add>
+		</operation>
+	</file>
+	
+</modification>

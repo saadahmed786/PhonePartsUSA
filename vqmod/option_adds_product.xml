@@ -1,0 +1,272 @@
+<modification>
+
+	<id>Option Adds Product</id>
+	<version>156.4</version>
+	<vqmver>2.4.1</vqmver>
+	<author>Qphoria</author>
+
+	<file name="admin/controller/catalog/product.php">
+
+		<operation><!-- Add new db column -->
+			<search position="after"><![CDATA[
+			function index
+			]]></search>
+			<add><![CDATA[
+			//Q: Option Adds Product
+			$query = $this->db->query("DESC `".DB_PREFIX."product_option_value` `o2p_ids`");
+			if (!$query->num_rows) {
+				$this->db->query("ALTER TABLE `" . DB_PREFIX . "product_option_value` ADD `o2p_ids` text");
+			}
+			$query = $this->db->query("DESC `".DB_PREFIX."product_option_value` `o2p_override`");
+			if (!$query->num_rows) {
+				$this->db->query("ALTER TABLE `" . DB_PREFIX . "product_option_value` ADD `o2p_override` tinyint(1)");
+			}
+			]]></add>
+		</operation>
+
+		<operation info="add new controller info for Option Adds Product">
+			<search position="after"><![CDATA[
+			$product_option_value_data[] = array(
+			]]></search>
+			<add trim="false"><![CDATA[
+			'o2p_ids'           => $product_option_value['o2p_ids'], //Q: Option Adds Product
+			'o2p_override'      => $product_option_value['o2p_override'], //Q: Option Adds Product
+			]]></add>
+		</operation>
+
+		<operation info="add new controller language for Option Adds Product">
+			<search position="after"><![CDATA[
+			$this->data['entry_option_points']
+			]]></search>
+			<add trim="false"><![CDATA[
+			$this->data['entry_o2p_ids'] = $this->language->get('entry_o2p_ids'); //Q: Option Adds Product
+			$this->data['entry_o2p_override'] = $this->language->get('entry_o2p_override'); //Q: Option Adds Product
+			]]></add>
+		</operation>
+
+	</file>
+
+	<file name="admin/language/*/catalog/product.php">
+		<operation info="add new language entry">
+			<search position="after"><![CDATA[
+			$_['entry_status']
+			]]></search>
+			<add trim="false"><![CDATA[
+			$_['entry_o2p_ids']  = 'Option Adds Product IDs:<br /><span class="help">Products added to cart when this option is chosen.<br/> The actual option gets removed when the products are added.<br/>Comma separated list of product ids.</span>'; //Q: Option Adds Product
+			$_['entry_o2p_override']  = 'Option Adds Product Override:<br /><span class="help">If checked the name, price, image, and stock display info will be pulled from the product itself. This is only for use on the product page display, the actual item added to cart will always follow the actual product. Only works for single products! Will be ignored if more than one products linked. Image only used for the "image" option type.</span>'; //Q: Option Adds Product
+			]]></add>
+		</operation>
+	</file>
+
+	<file name="admin/model/catalog/product.php">
+		<operation info="add new model data to add and edit. Matches twice.">
+			<search position="replace"><![CDATA[
+			product_option_value SET
+			]]></search>
+			<add trim="true"><![CDATA[
+			product_option_value SET o2p_ids = '" . $this->db->escape($product_option_value['o2p_ids']) . "', o2p_override = '" . (int)(isset($product_option_value['o2p_override']) ? 1 : 0) . "',
+			]]></add>
+		</operation>
+
+		<operation info="add new field to GET data.">
+			<search position="after"><![CDATA[
+			$product_option_value_data[] = array(
+			]]></search>
+			<add><![CDATA[
+			'o2p_ids'           => $product_option_value['o2p_ids'], //Q: Option Adds Product
+			'o2p_override'      => $product_option_value['o2p_override'], //Q: Option Adds Product
+			]]></add>
+		</operation>
+
+	</file>
+
+	<file name="admin/view/template/catalog/product_form.tpl">
+		<operation info="add new form entry">
+			<search position="replace"><![CDATA[
+			value="<?php echo $product_option_value['product_option_value_id']; ?>" />
+			]]></search>
+			<add trim="true"><![CDATA[
+			value="<?php echo $product_option_value['product_option_value_id']; ?>" /><br/><br/>
+			<?php echo $entry_o2p_ids; ?><br/>&nbsp;&nbsp;<input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][o2p_ids]" value="<?php echo $product_option_value['o2p_ids']; ?>" size="20" /><br/>
+			&nbsp;&nbsp;<input type="checkbox" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][o2p_override]" value="1" <?php echo $product_option_value['o2p_override'] ? 'checked="checked"' : ''; ?> /> <?php echo $entry_o2p_override; ?>
+			]]></add>
+		</operation>
+
+		<operation info="add new dynamic form entry">
+			<search position="replace"><![CDATA[
+			[' + option_value_row + '][product_option_value_id]" value="" />
+			]]></search>
+			<add trim="true"><![CDATA[
+			[' + option_value_row + '][product_option_value_id]" value="" /><br/><br/><?php echo $entry_o2p_ids; ?><br/>&nbsp;&nbsp;<input type="text" name="product_option[' + option_row + '][product_option_value][' + option_value_row + '][o2p_ids]" value="" size="20" /><br/><input type="checkbox" name="product_option[' + option_row + '][product_option_value][' + option_value_row + '][o2p_override]" value="1" /><?php echo $entry_o2p_override; ?>
+			]]></add>
+		</operation>
+	</file>
+
+	<file name="catalog/model/catalog/product.php">
+		<operation info="add new field to GET data.">
+			<search position="after"><![CDATA[
+			$product_option_value_data[] = array(
+			]]></search>
+			<add><![CDATA[
+			'o2p_ids'           => $product_option_value['o2p_ids'], //Q: Option Adds Product
+			'o2p_override'      => $product_option_value['o2p_override'], //Q: Option Adds Product
+			]]></add>
+		</operation>
+	</file>
+
+	<file name="catalog/controller/product/product.php">
+		<operation info="override option data with product info if set">
+			<search position="after"><![CDATA[
+			foreach ($option['option_value'] as $option_value) {
+			]]></search>
+			<add><![CDATA[
+			//Q: Option Adds Product - Check for override
+			if (strpos($option_value['o2p_ids'], ",") === false && $option_value['o2p_override']) {
+				if ($product_info) {
+					$product_option_info = $this->model_catalog_product->getProduct($option_value['o2p_ids']);
+					$option_value['name'] = $product_option_info['name'];
+					$option_value['price'] = $product_option_info['price'];
+					$option_value['price_prefix'] = '+';
+					$option_value['weight'] = $product_option_info['weight'];
+					$option_value['weight_prefix'] = '+';
+					$option_value['image'] = $product_option_info['image'];
+					$option_value['quantity'] = $product_option_info['quantity'];
+					$option_value['subtract'] = $product_option_info['subtract'];
+					$option_value['points'] = $product_option_info['points'];
+					if ($option['type'] == 'radio' || $option['type'] == 'image' || $option['type'] == 'checkbox') {
+						$option_value['href'] =  $this->url->link('product/product', 'product_id=' . $option_value['o2p_ids']);
+					}
+				}
+			}
+			]]></add>
+		</operation>
+
+		<operation info="override option data with product info if set">
+			<search position="after"><![CDATA[
+			$option_value_data[] = array(
+			]]></search>
+			<add><![CDATA[
+			'href'  => (!empty($option_value['href']) ? $option_value['href'] : ''),//Q: Option Adds Product - Add href to option
+			]]></add>
+		</operation>
+
+	</file>
+
+	<file name="catalog/view/theme/*/template/product/product.tpl">
+		<operation info="Add href link to actual product for radio, checkbox, and image. This may vary per theme.">
+			<search position="replace"><![CDATA[
+			<?php echo $option_value['name']; ?>
+			]]></search>
+			<add><![CDATA[
+			<?php if (!empty($option_value['href'])) { echo '<a href="'.$option_value['href'].'">'.$option_value['name'].'</a>'; } else { echo $option_value['name']; } ?>
+			]]></add>
+		</operation>
+	</file>
+
+	<!-- not needed since the option is deleted anyway -->
+	<!--file name="system/library/cart.php">
+		<operation info="override option data with product info if set. matches twice">
+			<search position="after"><![CDATA[
+			if ($option_value_query->num_rows) {
+			]]></search>
+			<add><![CDATA[
+			//Q: Option Adds Product - Check for override
+			if (strpos($option_value['o2p_ids'], ",") === false && $option_value['o2p_override']) {
+				$product_info = $this->model_catalog_product->getProduct($option_value['o2p_ids']);
+				if ($product_info) {
+					$option_value['name'] = $product_info['name'];
+					$option_value['price'] = $product_info['price'];
+					$option_value['price_prefix'] = '+';
+					$option_value['weight'] = $product_info['weight'];
+					$option_value['weight_prefix'] = '+';
+					$option_value['image'] = $product_info['image'];
+					$option_value['quantity'] = $product_info['quantity'];
+					$option_value['subtract'] = $product_info['subtract'];
+					$option_value['points'] = $product_info['points'];
+				}
+			}
+			]]></add>
+		</operation>
+	</file-->
+
+
+	<file name="catalog/controller/checkout/cart.php">
+		<operation info="add code to replace options with linked products to cart.">
+			<search position="before"><![CDATA[
+			$this->cart->add($this->request->post['product_id'], $quantity, $option
+			]]></search>
+			<add trim="false"><![CDATA[
+	//Q: Option Adds Product
+	$bFoundOneMatch = false;
+	$this->load->model('catalog/product');
+	foreach ($product_options as $product_option) {
+		foreach ($product_option['option_value'] as $option_value) {
+			if (in_array($option_value['product_option_value_id'], $option)) {
+				if (trim($option_value['o2p_ids']) != "") {
+					// Explode on comma
+					$o2p_product_ids = explode(",", $option_value['o2p_ids']);
+
+					foreach ($o2p_product_ids as $o2p_product_id) {
+
+						// Check that product exists and is active
+						if ($this->model_catalog_product->getProduct($o2p_product_id)) {
+							$o2p_quantity = 1;
+							$o2p_option = array();
+							$this->cart->add($o2p_product_id, $o2p_quantity, $o2p_option, 0);
+							$bFoundOneMatch = true;
+						}
+					}
+					if ($bFoundOneMatch) {
+						unset($option[$product_option['product_option_id']]); // Unset the original option now that it has been replaced by an actual product
+					}
+				}
+			}
+		}
+	}
+	//
+			]]></add>
+		</operation>
+	</file>
+
+
+
+
+
+	<!-- QUICKCHECKOUT SUPPORT -->
+
+	<file name="catalog/controller/quickcheckout/cart.php" error="skip">
+		<operation info="add free products to cart if not already there.">
+			<search position="before"><![CDATA[
+			$this->cart->add($this->request->post['product_id'], $quantity, $option
+			]]></search>
+			<add trim="false"><![CDATA[
+
+	//Q: Option Adds Product
+	$this->load->model('catalog/product');
+	foreach ($product_options as $product_option) {
+		foreach ($product_option['option_value'] as $option_value) {
+			if (trim($option_value['o2p_ids']) != "") {
+				// Explode on comma
+				$o2p_product_ids = explode(",", $option_value['o2p_ids']);
+
+				foreach ($o2p_product_ids as $o2p_product_id) {
+
+					// Check that product exists and is active
+					if ($this->model_catalog_product->getProduct($o2p_product_id)) {
+						$o2p_quantity = 1;
+						$o2p_option = array();
+						$this->cart->add($o2p_product_id, $o2p_quantity, $o2p_option, 0);
+						$option = array(); // Unset the original option now that it has been replaced by an actual product
+					}
+				}
+			}
+		}
+	}
+	//
+
+			]]></add>
+		</operation>
+
+	</file>
+
+</modification>

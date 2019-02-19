@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<sql><![CDATA[
+	ALTER TABLE `category` ADD `list_name` VARCHAR(255) NOT NULL DEFAULT '';
+	]]></sql>
+	<id>WXHosting.com Admin Large Category Structure</id>
+	<version>1.0.0</version>
+	<vqmver>2.1.5</vqmver>
+	<author>Jeff Hunter</author>
+	
+	<file name="admin/controller/catalog/product.php">
+		<operation error="skip">
+			<search position="replace"><![CDATA[$this->model_catalog_category->getCategories(0)]]></search>
+			<add><![CDATA[$this->model_catalog_category->getCategoriesNew(0, true)]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/model/catalog/category.php">
+		<operation> <!-- INSERT list_name CACHE GEN -->
+			<search position="after"><![CDATA[$category_id = $this->db->getLastId();]]></search>
+			<add><![CDATA[$this->db->query("UPDATE " . DB_PREFIX . "category SET list_name = '" . $this->db->escape($this->getPath($category_id, $this->config->get('config_language_id'))) . "' WHERE category_id = '" . $category_id . "'");]]></add>
+		</operation>
+
+		<operation> <!-- UPDATE list_name CACHE GEN -->
+			<search position="after"><![CDATA[$this->db->query("UPDATE " . DB_PREFIX . "category SET parent_id]]></search>
+			<add><![CDATA[$this->db->query("UPDATE " . DB_PREFIX . "category SET list_name = '" . $this->db->escape($this->getPath($data['category_id'], $this->config->get('config_language_id'))) . "' WHERE category_id = '" . $data['category_id'] . "'");]]></add>
+		</operation>
+		
+		<operation>
+			<search position="before"><![CDATA[public function getCategories(]]></search>
+			<add><![CDATA[
+
+			public function getCategoriesNew($data, $limitless = false) {
+
+				$categories = $this->db->query("SELECT category_id FROM " . DB_PREFIX . "category WHERE list_name = ''");
+				foreach ($categories->rows as $category) {
+					$this->db->query("UPDATE " . DB_PREFIX . "category SET list_name = '" . $this->db->escape($this->getPath($category['category_id'], $this->config->get('config_language_id')))  . "' WHERE category_id = '" . $category['category_id'] . "'");
+					$this->db->query("UPDATE " . DB_PREFIX . "category SET page_name = '" . $this->db->escape($this->getCategoryUrl($category['category_id'], $this->config->get('config_language_id')))  . "' WHERE category_id = '" . $category['category_id'] . "'");
+				}
+			
+				$sql = "SELECT category_id, status, sort_order, list_name AS name FROM " . DB_PREFIX . "category c"; 
+
+				if (!empty($data['filter_name'])) {
+					$sql .= " WHERE LOWER(list_name) LIKE '%" . $this->db->escape(strtolower($data['filter_name'])) . "%'";
+				}
+			
+				if (isset($data['filter_sort']) && trim($data['filter_sort']) != '' && !empty($data['filter_name'])) {
+					$sql .= " AND sort_order = '" . (int) $data['filter_sort'] . "'";
+				} else if (isset($data['filter_sort']) && trim($data['filter_sort']) != '') {
+					$sql .= " WHERE sort_order = '" . (int)$data['filter_sort'] . "'";
+				}
+	
+				$sql .= " ORDER BY list_name ASC";
+			
+				$sql .= " LIMIT " . (empty($data['start']) ? 0 : (int) $data['start']) . ", " . ($limitless ? 999999 : (empty($data['limit']) ? 20 : (int) $data['limit']));
+		
+				$result = $this->db->query($sql);		
+				return $result->rows;
+			}
+	
+			public function getCategoriesNewTotal($data) {
+				$sql = "SELECT COUNT(category_id) as counter FROM " . DB_PREFIX . "category";
+
+				if(!empty($data['filter_name'])) {
+					$sql .= " WHERE LOWER(list_name) LIKE '%" . $this->db->escape(strtolower($data['filter_name'])) . "%'";
+				}
+				
+				if(isset($data['filter_sort']) && trim($data['filter_sort']) != '' && !empty($data['filter_name'])) {
+					$sql .= " AND sort_order` = '" . (int) $data['filter_sort'] . "'";				
+				} else if (isset($data['filter_sort']) && trim($data['filter_sort']) != '') {
+					$sql .= " WHERE sort_order` = '" . (int) $data['filter_sort'] . "'";
+				}
+			
+				$sql .= " LIMIT " . (empty($data['start']) ? 0 : (int) $data['start']) . ", " . (empty($data['limit']) ? 20 : (int) $data['limit']);				
+				
+				$result = $this->db->query($sql);
+				
+				return $result->row['counter'];
+			}
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/controller/catalog/category.php">
+		<operation error="skip">
+			<search position="replace"><![CDATA[$results = $this->model_catalog_category->getCategories($filter_data);]]></search>
+			<add><![CDATA[$results = $this->model_catalog_category->getCategoriesNew($filter_data);]]></add>
+		</operation>
+	</file>
+</modification>

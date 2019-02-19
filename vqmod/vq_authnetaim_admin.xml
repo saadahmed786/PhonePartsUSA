@@ -1,0 +1,368 @@
+<modification>
+
+	<id>Authorize.net Refund/Void/Capture from Admin - Full vQmod</id>
+	<version>154.5</version>
+	<vqmver>2.2.1</vqmver>
+	<author>Qphoria</author>
+
+	<file name="catalog/controller/common/home.php">
+		<operation>
+            <search position="after"><![CDATA[
+			function index
+            ]]></search>
+            <add trim="true"><![CDATA[
+			// Create new db if needed for authnet admin tools
+			$sql = "
+			CREATE TABLE IF NOT EXISTS `" . DB_PREFIX . "authnetaim_admin` (
+			`order_id` int(11) NOT NULL default '0',
+			`trans_id` varchar(32) NOT NULL,
+			`auth_code` varchar(32) NOT NULL,
+			`last_four` varchar(4) NOT NULL,
+			PRIMARY KEY  (`order_id`)
+			) ENGINE=MyISAM DEFAULT CHARSET=utf8";
+			$this->db->query($sql);
+			//
+            ]]></add>
+        </operation>
+	</file>
+	
+	<file name="catalog/controller/payment/authorizenet_aim.php">
+
+		<!-- Save last four, trans id and auth code to new table -->
+		<operation>
+            <search position="before"><![CDATA[
+			if (strtoupper($response
+            ]]></search>
+            <add><![CDATA[
+
+			//Q: Authnet Admin Tools
+			if (!isset($response_info)) { $response_info = $response_data; }
+			file_put_contents(DIR_LOGS . 'authnetaim_admin_debug.txt', print_r($response_info, 1), FILE_APPEND);
+			$trans_id = (isset($response_info['7'])) ? $response_info['7'] : 0;
+			$auth_code = (isset($response_info['5'])) ? $response_info['5'] : 0;
+			$last_four = substr($data['x_card_num'], strlen($data['x_card_num'])-4);
+			$aat_order_query = $this->db->query("SELECT order_id from " . DB_PREFIX . "authnetaim_admin where order_id = '" . $order_info['order_id'] . "'");
+			if (!$aat_order_query->num_rows) {
+				$this->db->query("INSERT INTO " . DB_PREFIX . "authnetaim_admin SET `order_id` = '" . $order_info['order_id'] . "', trans_id = '" . $this->db->escape($trans_id) . "', auth_code = '" . $this->db->escape($auth_code) . "', last_four = '" . (int)$last_four . "'");
+			} else {
+				$this->db->query("UPDATE " . DB_PREFIX . "authnetaim_admin SET trans_id = '" . $this->db->escape($trans_id) . "', auth_code = '" . $this->db->escape($auth_code) . "', last_four = '" . (int)$last_four . "' WHERE `order_id` = '" . $order_info['order_id'] . "'");
+			}
+			//
+
+            ]]></add>
+        </operation>
+
+	</file>
+	
+	<file name="catalog/controller/payment/authorizenet_cim.php" error="skip">
+
+		<!-- Save last four, trans id and auth code to new table -->
+		<operation>
+            <search position="after"><![CDATA[
+			$transactionResponse = $response->getTransactionResponse();
+            ]]></search>
+            <add><![CDATA[
+
+			//Q: Authnet Admin Tools - CIM
+			$trans_id = $transactionResponse->transaction_id;
+			$auth_code = $transactionResponse->authorization_code;
+			$last_four = substr($transactionResponse->account_number, strlen($transactionResponse->account_number)-4);
+			$aat_order_query = $this->db->query("SELECT order_id from " . DB_PREFIX . "authnetaim_admin where order_id = '" . $order_info['order_id'] . "'");
+			if (!$aat_order_query->num_rows) {
+				$this->db->query("INSERT INTO " . DB_PREFIX . "authnetaim_admin SET `order_id` = '" . $order_info['order_id'] . "', trans_id = '" . $this->db->escape($trans_id) . "', auth_code = '" . $this->db->escape($auth_code) . "', last_four = '" . (int)$last_four . "'");
+			} else {
+				$this->db->query("UPDATE " . DB_PREFIX . "authnetaim_admin SET trans_id = '" . $this->db->escape($trans_id) . "', auth_code = '" . $this->db->escape($auth_code) . "', last_four = '" . (int)$last_four . "' WHERE `order_id` = '" . $order_info['order_id'] . "'");
+			}
+			//
+
+            ]]></add>
+        </operation>
+
+	</file>
+
+	<file name="admin/view/template/sale/order_info.tpl">
+
+		<!-- Add new fields to form -->
+		<operation>
+            <search position="after"><![CDATA[
+			<td><?php echo $payment_method; ?></td>
+            ]]></search>
+            <add><![CDATA[
+            </tr>
+            <?php //Q: Authnet Admin Tools ?>
+			<?php if ($payment_code == 'authorizenet_aim' || $payment_code == 'authorizenet_cim') { ?>
+            <tr>
+            <td>Authorize.net Admin Tools: </td>
+			<td>
+			<form id="payment_method">
+			<table>
+			  <tr>
+				<td>Action:</td>
+				<td>
+					<select name="aat_action" onchange="$('#aat_response').html(''); if (this.value == 'CREDIT' || this.value == 'PRIOR_AUTH_CAPTURE') { $('input[name=aat_amount]').show(); } else { $('input[name=aat_amount]').hide(); }">
+					  <option value="FALSE">---</option>
+					  <option value="PRIOR_AUTH_CAPTURE">Capture</option>
+					  <option value="VOID">Void</option>
+					  <option value="CREDIT">Refund</option>
+					</select>
+					<input style="display:none;" type="text" size="5" name="aat_amount" value="<?php echo preg_replace("/[^0-9.]/", "", $total); ?>" />
+					<input type="hidden" name="aat_order_id" value="<?php echo $order_id; ?>" />
+					<input type="button" value="Submit" id="aat_submit" />
+				</td>
+			  </tr>
+			  <tr>
+				<td>Environment:</td>
+				<td><select name="aat_env"><option value="live" <?php if($aat_env == 'live'){ echo 'selected="selected"'; } ?> >Live</option><option value="test" <?php if($aat_env == 'test'){ echo 'selected="selected"'; } ?>>Test</option></td>
+			  </tr>
+			  <tr>
+				<td>Merchant ID:</td>
+				<td><input type="text" name="aat_merchant_id" value="<?php echo $aat_merchant_id; ?>" /></td>
+			  </tr>
+			  <tr>
+				<td>Transaction Key:</td>
+				<td><input type="text" name="aat_transaction_key" value="<?php echo $aat_transaction_key; ?>" /></td>
+			  </tr>
+			</table>
+			<script type="text/javascript"><!--//
+	$('#aat_submit').live('click', function() {
+		if (!confirm('Are you sure?')) {
+			return false;
+		}
+		$.ajax({
+			url: 'index.php?route=sale/order/aat_doaction&token=<?php echo $token; ?>',
+			type: 'post',
+			data: $('#payment_method').serialize(),
+			dataType: 'json',
+			beforeSend: function() {
+				$('#aat_submit').attr('disabled', 'disabled');
+			},
+			complete: function() {
+				$('#aat_submit').removeAttr('disabled');
+			},
+			success: function(json) {
+				$('.success, .warning').remove();
+
+				if (json['error']) {
+					$('#aat_response').html('<div class="warning" style="display: none;">' + json['error'] + '</div>');
+
+					$('.warning').fadeIn('slow');
+				}
+
+				if (json['success']) {
+	                $('#aat_response').html('<div class="success" style="display: none;">' + json['success'] + '</div>');
+
+					$('.success').fadeIn('slow');
+				}
+	
+				if (json['sent']) {
+					$('#msgsent').val(json['sent']);
+				}
+
+				if (json['rcvd']) {
+					$('#msgrcvd').val(json['rcvd']);
+				}
+	
+			},
+			error: function(xhr, ajaxOptions, thrownError) {
+				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+			}
+		});
+	});
+			//--></script>
+			</form>
+
+			</td>
+			</tr>
+			<?php } ?>
+			<tr>
+			  <td colspan="2" id="aat_response"></td>
+			</tr>
+			<tr>
+			  <td colspan="2" id="msgsent"></td>
+			</tr>
+			<tr>
+			  <td colspan="2" id="msgrcvd"></td>
+            ]]></add>
+        </operation>
+
+	</file>
+
+
+	<file name="admin/controller/sale/order.php">
+
+		<!-- Pass the payment code to the view -->
+		<operation>
+            <search position="before"><![CDATA[
+			$this->data['payment_method'] = $order_info['payment_method'];
+            ]]></search>
+            <add><![CDATA[
+			if (isset($order_info['payment_code'])) {
+				$this->data['payment_code'] = $order_info['payment_code'];
+			} elseif (strpos($order_info['payment_method'], 'Authorize') !== false) {
+				$this->data['payment_code'] = 'authorizenet_aim';
+			} else {
+				$this->data['payment_code'] = 'xxx';
+			}
+			$this->data['aat_env'] = $this->config->get('aat_env') ? $this->config->get('aat_env') : '';
+			$this->data['aat_merchant_id'] = $this->config->get('aat_merchant_id') ? $this->config->get('aat_merchant_id') : '';
+			$this->data['aat_transaction_key'] = $this->config->get('aat_transaction_key') ? $this->config->get('aat_transaction_key') : '';
+            ]]></add>
+        </operation>
+
+
+		<!-- Save last four, trans id and auth code to new table -->
+		<operation>
+            <search position="before"><![CDATA[
+			function index
+            ]]></search>
+            <add><![CDATA[
+
+	//Q: Authnet Admin Tools
+	public function aat_doaction() {
+
+		$json = array();
+		$json['error'] = false;
+
+		if (empty($this->request->post['aat_order_id'])) { $json['error'] = $this->language->get('error_order_id'); }
+		if (empty($this->request->post['aat_action'])) { $json['error'] = $this->language->get('error_action'); }
+		if (empty($this->request->post['aat_merchant_id'])) { $json['error'] = 'Error: Merchant ID required!'; }
+		if (empty($this->request->post['aat_transaction_key'])) { $json['error'] = 'Error: Transaction Key required!'; }
+		$classname = str_replace('vq2-admin_controller_sale_', '', basename(__FILE__, '.php'));
+		
+		if (!$json['error']) {
+			
+			// Save API details to settings db
+			$savefields = array('aat_merchant_id', 'aat_transaction_key', 'aat_env');
+			$savearr = array();
+			foreach ($this->request->post as $key => $value) {
+				if (in_array($key, $savefields)) {
+					$savearr[$key] = $value;
+				}
+			}
+			$this->load->model('setting/setting');
+			$this->model_setting_setting->editSetting($classname, $savearr);
+			//
+
+		
+			$query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "authnetaim_admin` ana LEFT JOIN `" . DB_PREFIX . "order` o ON (ana.order_id = o.order_id) WHERE ana.order_id = '" . (int)$this->request->post['aat_order_id'] . "'");
+
+			if (!$query->num_rows) { $json['error'] = 'Necessary transaction details missing. This order will need to be adjusted manually from your Authorize.net Account!'; }
+
+			if (!$json['error']) {
+
+				// Common Data setup:
+				$data['x_login'] = $this->config->get('authorizenet_aim_login');
+				$data['x_tran_key'] = $this->config->get('authorizenet_aim_key');
+				$data['x_version'] = '3.1';
+				$data['x_delim_data'] = 'true';
+				$data['x_delim_char'] = ',';
+				$data['x_encap_char'] = '"';
+				$data['x_relay_response'] = 'false';
+				$data['x_type'] = $this->request->post['aat_action'];
+
+				// Specific Data setup:
+				Switch ($this->request->post['aat_action']) {
+					Case "CREDIT":
+						if (empty($this->request->post['aat_amount'])) { $json['error'] = 'Amount Required!'; }
+						if (empty($query->row['last_four'])) { $json['error'] = 'Last 4 digits not found on original order!'; }
+						if (!$json['error']) {
+							$data['x_amount'] = $this->request->post['aat_amount'];
+							$data['x_card_num'] = $query->row['last_four'];
+							$data['x_trans_id'] = $query->row['trans_id'];
+							//$data['x_ref_trans_id'] = $query->row['trans_id'];
+						}
+						break;
+					Case "PRIOR_AUTH_CAPTURE":
+						if (!isset($query->row['auth_code'])) { $json['error'] = 'Auth Code not found on original order!'; }
+						if (!$json['error']) {
+							if (!empty($this->request->post['aat_amount'])) {
+								$data['x_amount'] = $this->request->post['aat_amount'];
+							}
+							$data['x_auth_code'] = $query->row['auth_code'];
+							$data['x_trans_id'] = $query->row['trans_id'];
+						}
+						break;
+					Case "VOID":
+						if (!isset($query->row['auth_code'])) { $json['error'] = 'Auth Code not found on original order!'; }
+						if (!$json['error']) {
+							$data['x_trans_id'] = $query->row['trans_id'];
+						}
+						break;
+				}
+
+				if (!$json['error']) {
+					if ($this->config->get('authorizenet_aim_server') == 'live') {
+						$url = 'https://secure.authorize.net/gateway/transact.dll'; // PROD
+					} else {
+						$url = 'https://test.authorize.net/gateway/transact.dll'; // DEV
+					}
+
+					$response = $this->curl_post($url, $data);
+
+					$results = explode(',', $response['data']);
+
+					foreach ($results as $i => $result) {
+						if (trim($result, '"') != "") {
+							$response_info[$i+1] = trim($result, '"');
+						}
+					}
+
+					$json['sent'] = print_r($data, 1);
+					$json['rcvd'] = print_r($response_info, 1);
+										
+					if ($response_info[1] == 1) {
+						if ($this->request->post['aat_action'] == "PRIOR_AUTH_CAPTURE") {
+							$auth_code = (isset($response_info['5'])) ? $response_info['5'] : 0;
+							$this->db->query("UPDATE " . DB_PREFIX . "authnetaim_admin SET auth_code = '" . $this->db->escape($auth_code) . "' WHERE `order_id` = '" . (int)$this->request->post['aat_order_id'] . "'");
+						}
+						$xComment = ("Action: " . $this->request->post['aat_action'] . "\r\nResult: " . $response_info[4] . "\r\nRAW: " . print_r($response_info, 1));
+						$order_status_info = $this->db->query("SELECT order_status_id FROM `" . DB_PREFIX . "order` WHERE order_id = '" . (int)$this->request->post['aat_order_id'] . "'");
+						$this->db->query("INSERT INTO " . DB_PREFIX . "order_history SET order_id = '" . (int)$this->request->post['aat_order_id'] . "', order_status_id = '" . (int)$order_status_info->row['order_status_id'] . "', notify = '0', comment = '" . $this->db->escape($xComment) . "', date_added = NOW()");
+						
+						$this->load->model('sale/order');
+	$this->model_sale_order->updateOrderProductAndHistory($this->request->post['aat_order_id']);
+						
+						
+						//$this->db->query("UPDATE " . DB_PREFIX . "order SET old_total=total, total_edits = total_edits+1 WHERE order_id = '" . (int)$this->request->post['aat_order_id'] . "'");
+						
+						$json['success'] = $response_info[4];
+					} else {
+						$json['error'] = $response_info[4];
+					}
+				}
+			}
+		}
+		$this->response->setOutput(json_encode($json));
+	}
+
+	private function curl_post($url, $data) {
+		$ch = curl_init($url);
+		curl_setopt($ch, CURLOPT_PORT, 443);
+		curl_setopt($ch, CURLOPT_HEADER, 0);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_FORBID_REUSE, 1);
+		curl_setopt($ch, CURLOPT_FRESH_CONNECT, 1);
+		curl_setopt($ch, CURLOPT_POST, 1);
+		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+		curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data, '', '&'));
+		$response = array();
+
+		if (curl_error($ch)) {
+			$response['error'] = curl_error($ch) . '(' . curl_errno($ch) . ')';
+		} else {
+			$response['data'] = curl_exec($ch);
+		}
+		curl_close($ch);
+
+		return $response;
+	}
+	//
+
+            ]]></add>
+        </operation>
+
+	</file>
+
+</modification>

@@ -1,0 +1,808 @@
+<modification>
+    <id>Product Label Features Rich 1.5.0 - Coded by waabay.com</id>
+    <version>1.0.0</version>
+    <vqmver>2.1.5</vqmver>
+    <author>waabay</author>
+	<email>waabay@gmail.com</email>
+	<website>http://www.waabay.com</website>
+	
+	<!--Edit User Library-->
+	<file name="admin/controller/catalog/product.php">
+		<operation error="skip">
+			<search position="before"><![CDATA[
+			$this->data['button_save'] = $this->language->get('button_save');
+			]]></search>
+			<add><![CDATA[
+			$this->data['entry_promo_banner'] = $this->language->get('entry_promo_banner');
+			$this->data['entry_promo_date'] = $this->language->get('entry_promo_date');
+			]]></add>
+		</operation>
+		
+		<operation error="skip">
+			<search position="before"><![CDATA[
+			if (isset($this->request->post['price'])) {
+			]]></search>
+			<add><![CDATA[
+			$this->data['promotags'] = $this->model_catalog_product->getPromoTags();
+
+			if (isset($this->request->post['promo_top_right'])) {
+				$this->data['promo_top_right'] = $this->request->post['promo_top_right'];
+			} elseif (isset($product_info)) {
+				$this->data['promo_top_right'] = $product_info['promo_top_right'];
+			} else {
+				$this->data['promo_top_right'] = 0;
+			}
+			
+			if (isset($this->request->post['promo_top_left'])) {
+				$this->data['promo_top_left'] = $this->request->post['promo_top_left'];
+			} elseif (isset($product_info)) {
+				$this->data['promo_top_left'] = $product_info['promo_top_left'];
+			} else {
+				$this->data['promo_top_left'] = 0;
+			}
+			
+			if (isset($this->request->post['promo_bottom_right'])) {
+				$this->data['promo_bottom_right'] = $this->request->post['promo_bottom_right'];
+			} elseif (isset($product_info)) {
+				$this->data['promo_bottom_right'] = $product_info['promo_bottom_right'];
+			} else {
+				$this->data['promo_bottom_right'] = 0;
+			}
+			
+			if (isset($this->request->post['promo_bottom_left'])) {
+				$this->data['promo_bottom_left'] = $this->request->post['promo_bottom_left'];
+			} elseif (isset($product_info)) {
+				$this->data['promo_bottom_left'] = $product_info['promo_bottom_left'];
+			} else {
+				$this->data['promo_bottom_left'] = 0;
+			}
+			
+			if (isset($this->request->post['promo_date_start'])) {
+				$this->data['promo_date_start'] = $this->request->post['promo_date_start'];
+			} elseif (isset($product_info)) {
+				$this->data['promo_date_start'] = $product_info['promo_date_start'];
+			} else {
+				$this->data['promo_date_start'] = '0000-00-00';
+			}
+			
+			if (isset($this->request->post['promo_date_end'])) {
+				$this->data['promo_date_end'] = $this->request->post['promo_date_end'];
+			} elseif (isset($product_info)) {
+				$this->data['promo_date_end'] = $product_info['promo_date_end'];
+			} else {
+				$this->data['promo_date_end'] = '0000-00-00';
+			}
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/controller/common/header.php">
+		<operation error="skip">
+			<search position="after"><![CDATA[
+			$this->data['text_product'] = $this->language->get('text_product');
+			]]></search>
+			<add><![CDATA[
+			$this->data['text_tags'] = $this->language->get('text_tags');  
+			]]></add>
+		</operation>
+		
+		<operation error="skip">
+			<search position="after"><![CDATA[
+			$this->data['product'] = $this->url->link('catalog/product', 'token=' . $this->session->data['token'], 'SSL');
+			]]></search>
+			<add><![CDATA[
+			$this->data['tags'] = $this->url->link('catalog/promotags', 'token=' . $this->session->data['token'], 'SSL');
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/language/english/catalog/product.php">
+		<operation error="skip">
+			<search position="after"><![CDATA[
+			$_['entry_price']            = 'Price:';
+			]]></search>
+			<add><![CDATA[
+			$_['entry_promo_banner']     = 'Promotional Tags:<br/><span class="help">1st = Top-Right <br/> 2nd = Top-Left <br /> 3rd = Bottom-Left <br /> 4th = Bottom-Right</span>'; 
+			$_['entry_promo_date']    	 = 'Promotional Date Start / Date End : <br/><span class="help">Set to 0000-00-00 for end less promotion. Set date to auto turn off promotion label.</span>'; 
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/language/english/common/header.php">
+		<operation error="skip">
+			<search position="after"><![CDATA[
+			$_['text_product']                     = 'Products';
+			]]></search>
+			<add><![CDATA[
+			$_['text_tags'] 					   = 'Promotional Tags';
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/language/english/english.php">
+		<operation error="skip">
+			<search position="after"><![CDATA[
+			$_['button_insert']           = 'Insert';
+			]]></search>
+			<add><![CDATA[
+			$_['button_update']           = 'Update'; 
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/model/catalog/product.php">
+		<operation error="skip">
+			<search position="replace"><![CDATA[
+			$this->db->query("INSERT INTO " . DB_PREFIX . "product SET model = '" . $this->db->escape($data['model']) . "', sku = '" . $this->db->escape($data['sku']) . "', upc = '" . $this->db->escape($data['upc']) . "', location = '" . $this->db->escape($data['location']) . "', quantity = '" . (int)$data['quantity'] . "', minimum = '" . (int)$data['minimum'] . "', subtract = '" . (int)$data['subtract'] . "', stock_status_id = '" . (int)$data['stock_status_id'] . "', date_available = '" . $this->db->escape($data['date_available']) . "', manufacturer_id = '" . (int)$data['manufacturer_id'] . "', shipping = '" . (int)$data['shipping'] . "', price = '" . (float)$data['price'] . "', points = '" . (int)$data['points'] . "', weight = '" . (float)$data['weight'] . "', weight_class_id = '" . (int)$data['weight_class_id'] . "', length = '" . (float)$data['length'] . "', width = '" . (float)$data['width'] . "', height = '" . (float)$data['height'] . "', length_class_id = '" . (int)$data['length_class_id'] . "', status = '" . (int)$data['status'] . "', tax_class_id = '" . $this->db->escape($data['tax_class_id']) . "', sort_order = '" . (int)$data['sort_order'] . "', date_added = NOW()");
+			]]></search>
+			<add><![CDATA[
+			$this->db->query("INSERT INTO " . DB_PREFIX . "product SET model = '" . $this->db->escape($data['model']) . "', sku = '" . $this->db->escape($data['sku']) . "', upc = '" . $this->db->escape($data['upc']) . "', location = '" . $this->db->escape($data['location']) . "', quantity = '" . (int)$data['quantity'] . "', minimum = '" . (int)$data['minimum'] . "', subtract = '" . (int)$data['subtract'] . "', stock_status_id = '" . (int)$data['stock_status_id'] . "', date_available = '" . $this->db->escape($data['date_available']) . "', manufacturer_id = '" . (int)$data['manufacturer_id'] . "', shipping = '" . (int)$data['shipping'] . "', price = '" . (float)$data['price'] . "', promo_top_right = '" . (int)$data['promo_top_right'] . "', promo_top_left = '" . (int)$data['promo_top_left'] . "', promo_bottom_right = '" . (int)$data['promo_bottom_right'] . "', promo_bottom_left = '" . (int)$data['promo_bottom_left'] . "', promo_date_start = '" . $this->db->escape($data['promo_date_start']) . "', promo_date_end = '" . $this->db->escape($data['promo_date_end']) . "', points = '" . (int)$data['points'] . "', weight = '" . (float)$data['weight'] . "', weight_class_id = '" . (int)$data['weight_class_id'] . "', length = '" . (float)$data['length'] . "', width = '" . (float)$data['width'] . "', height = '" . (float)$data['height'] . "', length_class_id = '" . (int)$data['length_class_id'] . "', status = '" . (int)$data['status'] . "', tax_class_id = '" . $this->db->escape($data['tax_class_id']) . "', sort_order = '" . (int)$data['sort_order'] . "', date_added = NOW()");
+			]]></add>
+		</operation>
+		
+		<operation error="skip">
+			<search position="replace"><![CDATA[
+			$this->db->query("UPDATE " . DB_PREFIX . "product SET model = '" . $this->db->escape($data['model']) . "', sku = '" . $this->db->escape($data['sku']) . "', upc = '" . $this->db->escape($data['upc']) . "', location = '" . $this->db->escape($data['location']) . "', quantity = '" . (int)$data['quantity'] . "', minimum = '" . (int)$data['minimum'] . "', subtract = '" . (int)$data['subtract'] . "', stock_status_id = '" . (int)$data['stock_status_id'] . "', date_available = '" . $this->db->escape($data['date_available']) . "', manufacturer_id = '" . (int)$data['manufacturer_id'] . "', shipping = '" . (int)$data['shipping'] . "', price = '" . (float)$data['price'] . "', points = '" . (int)$data['points'] . "', weight = '" . (float)$data['weight'] . "', weight_class_id = '" . (int)$data['weight_class_id'] . "', length = '" . (float)$data['length'] . "', width = '" . (float)$data['width'] . "', height = '" . (float)$data['height'] . "', length_class_id = '" . (int)$data['length_class_id'] . "', status = '" . (int)$data['status'] . "', tax_class_id = '" . $this->db->escape($data['tax_class_id']) . "', sort_order = '" . (int)$data['sort_order'] . "', date_modified = NOW() WHERE product_id = '" . (int)$product_id . "'");
+			]]></search>
+			<add><![CDATA[
+			$this->db->query("UPDATE " . DB_PREFIX . "product SET model = '" . $this->db->escape($data['model']) . "', sku = '" . $this->db->escape($data['sku']) . "', upc = '" . $this->db->escape($data['upc']) . "', location = '" . $this->db->escape($data['location']) . "', quantity = '" . (int)$data['quantity'] . "', minimum = '" . (int)$data['minimum'] . "', subtract = '" . (int)$data['subtract'] . "', stock_status_id = '" . (int)$data['stock_status_id'] . "', date_available = '" . $this->db->escape($data['date_available']) . "', manufacturer_id = '" . (int)$data['manufacturer_id'] . "', shipping = '" . (int)$data['shipping'] . "', price = '" . (float)$data['price'] . "', promo_top_right = '" . (int)$data['promo_top_right'] . "', promo_top_left = '" . (int)$data['promo_top_left'] . "', promo_bottom_right = '" . (int)$data['promo_bottom_right'] . "', promo_bottom_left = '" . (int)$data['promo_bottom_left'] . "', promo_date_start = '" . $this->db->escape($data['promo_date_start']) . "', promo_date_end = '" . $this->db->escape($data['promo_date_end']) . "', points = '" . (int)$data['points'] . "', weight = '" . (float)$data['weight'] . "', weight_class_id = '" . (int)$data['weight_class_id'] . "', length = '" . (float)$data['length'] . "', width = '" . (float)$data['width'] . "', height = '" . (float)$data['height'] . "', length_class_id = '" . (int)$data['length_class_id'] . "', status = '" . (int)$data['status'] . "', tax_class_id = '" . $this->db->escape($data['tax_class_id']) . "', sort_order = '" . (int)$data['sort_order'] . "', date_modified = NOW() WHERE product_id = '" . (int)$product_id . "'");
+			]]></add>
+		</operation>
+		
+		<operation error="skip">
+			<search position="before"><![CDATA[
+			public function getProducts($data = array()) {
+			]]></search>
+			<add><![CDATA[
+			public function getPromoTags($data = array()) {
+			if ($data) {
+				$sql = "SELECT * FROM " . DB_PREFIX . "promo_tags";
+				
+				$sort_data = array(
+					'promo_text',
+					'sort_order'
+				);	
+				
+				if (isset($data['sort']) && in_array($data['sort'], $sort_data)) {
+					$sql .= " ORDER BY " . $data['sort'];	
+				} else {
+					$sql .= " ORDER BY promo_tags_id";	
+				}
+				
+				if (isset($data['order']) && ($data['order'] == 'DESC')) {
+					$sql .= " DESC";
+				} else {
+					$sql .= " ASC";
+				}
+				
+				if (isset($data['start']) || isset($data['limit'])) {
+					if ($data['start'] < 0) {
+						$data['start'] = 0;
+					}					
+
+					if ($data['limit'] < 1) {
+						$data['limit'] = 20;
+					}	
+				
+					$sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
+				}				
+				
+				$query = $this->db->query($sql);
+			
+				return $query->rows;
+			} else {
+				$promotags_data = $this->cache->get('promotags');
+			
+				if (!$promotags_data) {
+					$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "promo_tags ORDER BY promo_tags_id");
+		
+					$promotags_data = $query->rows;
+				
+					$this->cache->set('promotags', $promotags_data);
+				}
+			 
+				return $promotags_data;
+			}
+		}
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/view/template/catalog/product_form.tpl">
+		<operation error="skip">
+			<search position="before" offset="1"><![CDATA[
+			<td><?php echo $entry_keyword; ?></td>
+			]]></search>
+			<add><![CDATA[
+			<tr>
+				<td><?php echo $entry_promo_banner; ?></td>
+				<td><select name="promo_top_right" style="width:220px">
+					<option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+					<?php foreach ($promotags as $promotag) { ?>
+					   <?php if ($promotag['promo_direction'] == '0') { ?> 
+						<?php if ($promotag['promo_tags_id'] == $promo_top_right) { ?>
+							<option value="<?php echo $promotag['promo_tags_id']; ?>" selected="selected"><?php echo $promotag['promo_text']; ?></option>
+						<?php } else { ?>
+							<option value="<?php echo $promotag['promo_tags_id']; ?>"><?php echo $promotag['promo_text']; ?></option>
+						<?php } ?>
+						<?php } ?>
+					<?php } ?>
+				  </select><br />
+				  <span><select name="promo_top_left" style="width:220px">
+					<option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+					<?php foreach ($promotags as $promotag) { ?>
+					   <?php if ($promotag['promo_direction'] == '1') { ?> 
+						 <?php if ($promotag['promo_tags_id'] == $promo_top_left) { ?>
+							<option value="<?php echo $promotag['promo_tags_id']; ?>" selected="selected"><?php echo $promotag['promo_text']; ?></option>
+						 <?php } else { ?>
+							<option value="<?php echo $promotag['promo_tags_id']; ?>"><?php echo $promotag['promo_text']; ?></option>
+						 <?php } ?>
+						<?php } ?>
+					<?php } ?>
+				  </select>
+				  </span><br />
+				  <span><select name="promo_bottom_left" style="width:220px">
+					<option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+					<?php foreach ($promotags as $promotag) { ?>
+					  <?php if ($promotag['promo_direction'] == '2') { ?> 
+						  <?php if ($promotag['promo_tags_id'] == $promo_bottom_left) { ?>
+							  <option value="<?php echo $promotag['promo_tags_id']; ?>" selected="selected"><?php echo $promotag['promo_text']; ?></option>
+						<?php } else { ?>
+							  <option value="<?php echo $promotag['promo_tags_id']; ?>"><?php echo $promotag['promo_text']; ?></option>
+						  <?php } ?>
+					  <?php } ?>
+					<?php } ?>
+				  </select>
+				  </span><br />
+				  <span><select name="promo_bottom_right" style="width:220px">
+					<option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+					<?php foreach ($promotags as $promotag) { ?>
+					  <?php if ($promotag['promo_direction'] == '3') { ?> 
+						  <?php if ($promotag['promo_tags_id'] == $promo_bottom_right) { ?>
+							  <option value="<?php echo $promotag['promo_tags_id']; ?>" selected="selected"><?php echo $promotag['promo_text']; ?></option>
+						<?php } else { ?>
+							  <option value="<?php echo $promotag['promo_tags_id']; ?>"><?php echo $promotag['promo_text']; ?></option>
+						  <?php } ?>
+					  <?php } ?>
+					<?php } ?>
+				  </select></span>					  
+				  </td>
+			  </tr>     
+			  <tr>
+			  <td><?php echo $entry_promo_date; ?></td><td><input type="text" name="promo_date_start" value="<?php echo $promo_date_start; ?>" size="12" class="date" /><?php echo " / "; ?><input type="text" name="promo_date_end" value="<?php echo $promo_date_end; ?>" size="12" class="date" /></td>
+			  </tr>
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/view/template/common/header.tpl">
+		<operation error="skip">
+			<search position="after"><![CDATA[
+			<li><a href="<?php echo $product; ?>"><?php echo $text_product; ?></a></li>
+			]]></search>
+			<add><![CDATA[
+			<li><a href="<?php echo $tags; ?>"><?php echo $text_tags; ?></a></li>
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/common/header.php">
+		<operation error="skip">
+			<search position="before" offset="1"><![CDATA[
+			$this->load->model('catalog/category');
+			]]></search>
+			<add><![CDATA[
+			if (isset($this->request->get['product_id'])) {
+				$this->data['product_id'] = $this->request->get['product_id'];
+				$this->load->model('catalog/product');
+				$product_info = $this->model_catalog_product->getProduct($this->request->get['product_id']);
+				$this->data['product_name'] = $product_info['name'];
+				$this->data['product_url'] = $this->url->link('product/product', 'product_id=' . $product_info['product_id']);
+				$this->load->model('tool/image');
+				if ($product_info['image']) {
+					$this->data['product_thumb'] = $this->model_tool_image->resize($product_info['image'], $this->config->get('config_image_thumb_width'), $this->config->get('config_image_thumb_height'));
+				} else {
+					$this->data['product_thumb'] = '';
+				}
+			} else {
+				$this->data['product_id'] = 0;
+			}
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/module/featured.php">
+			
+		<operation error="skip">
+			<search position="after" offset="1"><![CDATA[
+			$rating = false;
+			]]></search>
+			<add><![CDATA[
+			if((strtotime(date('Y-m-d')) >= strtotime($product_info['promo_date_start'])) && (strtotime(date('Y-m-d')) <= strtotime($product_info['promo_date_end'])) || (($product_info['promo_date_start'] == '0000-00-00') && ($product_info['promo_date_end'] == '0000-00-00'))) {
+				$promo_on = TRUE;
+			} else {
+				$promo_on = FALSE;
+			}
+				
+			$promo_top_right = $this->model_catalog_product->getPromo($product_info['product_id'],$product_info['promo_top_right']);
+			if (!empty($promo_top_right['promo_text']) && $promo_on) {
+				$promo_tag_top_right = '<span class="promotags" style="width:100%;height:100%;z-index:9999;background: url(\'' . 'image/' . $promo_top_right['image'] . '\') no-repeat;background-position:top right"></span>';
+			} else {
+				$promo_tag_top_right = '';
+			}
+					
+			$promo_top_left = $this->model_catalog_product->getPromo($product_info['product_id'],$product_info['promo_top_left']);
+			if (!empty($promo_top_left['promo_text']) && $promo_on) {
+				$promo_tag_top_left = '<span class="promotags" style="width:100%;height:100%;z-index:9999;background: url(\'' . 'image/' . $promo_top_left['image'] . '\') no-repeat;background-position:top left"></span>';
+			} else {
+				$promo_tag_top_left = '';
+			}
+					
+			$promo_bottom_left = $this->model_catalog_product->getPromo($product_info['product_id'],$product_info['promo_bottom_left']);
+			if (!empty($promo_bottom_left['promo_text']) && $promo_on) {
+				$promo_tag_bottom_left = '<span class="promotags" style="width:100%;height:100%;z-index:9999;background: url(\'' . 'image/' . $promo_bottom_left['image'] . '\') no-repeat;background-position:bottom left"></span>';
+			} else {
+				$promo_tag_bottom_left = '';
+			}
+					
+			$promo_bottom_right = $this->model_catalog_product->getPromo($product_info['product_id'],$product_info['promo_bottom_right']);
+			if (!empty($promo_bottom_right['promo_text']) && $promo_on) {
+				$promo_tag_bottom_right = '<span class="promotags" style="width:100%;height:100%;z-index:9999;background: url(\'' . 'image/' . $promo_bottom_right['image'] . '\') no-repeat;background-position:bottom right"></span>';
+			} else {
+				$promo_tag_bottom_right = '';
+			}
+			]]></add>
+		</operation>
+		
+		<operation error="skip">
+			<search position="after"><![CDATA[
+			'rating'     => $rating,
+			]]></search>
+			<add><![CDATA[
+			'promo_tag_top_right'		=> $promo_tag_top_right,
+			'promo_tag_top_left'		=> $promo_tag_top_left,
+			'promo_tag_bottom_left'		=> $promo_tag_bottom_left,
+			'promo_tag_bottom_right'	=> $promo_tag_bottom_right,
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/module/bestseller.php">
+		<operation error="skip">
+			<search position="after" offset="1"><![CDATA[
+			$rating = false;
+			]]></search>
+			<add><![CDATA[
+			if((strtotime(date('Y-m-d')) >= strtotime($result['promo_date_start'])) && (strtotime(date('Y-m-d')) <= strtotime($result['promo_date_end'])) || (($result['promo_date_start'] == '0000-00-00') && ($result['promo_date_end'] == '0000-00-00'))) {
+				$promo_on = TRUE;
+			} else {
+				$promo_on = FALSE;
+			}
+				
+			$promo_top_right = $this->model_catalog_product->getPromo($result['product_id'],$result['promo_top_right']);
+			if (!empty($promo_top_right['promo_text']) && $promo_on) {
+				$promo_tag_top_right = '<span class="promotags" style="width:100%;height:100%;z-index:9999;background: url(\'' . 'image/' . $promo_top_right['image'] . '\') no-repeat;background-position:top right"></span>';
+			} else {
+				$promo_tag_top_right = '';
+			}
+					
+			$promo_top_left = $this->model_catalog_product->getPromo($result['product_id'],$result['promo_top_left']);
+			if (!empty($promo_top_left['promo_text']) && $promo_on) {
+				$promo_tag_top_left = '<span class="promotags" style="width:100%;height:100%;z-index:9999;background: url(\'' . 'image/' . $promo_top_left['image'] . '\') no-repeat;background-position:top left"></span>';
+			} else {
+				$promo_tag_top_left = '';
+			}
+					
+			$promo_bottom_left = $this->model_catalog_product->getPromo($result['product_id'],$result['promo_bottom_left']);
+			if (!empty($promo_bottom_left['promo_text']) && $promo_on) {
+				$promo_tag_bottom_left = '<span class="promotags" style="width:100%;height:100%;z-index:9999;background: url(\'' . 'image/' . $promo_bottom_left['image'] . '\') no-repeat;background-position:bottom left"></span>';
+			} else {
+				$promo_tag_bottom_left = '';
+			}
+					
+			$promo_bottom_right = $this->model_catalog_product->getPromo($result['product_id'],$result['promo_bottom_right']);
+			if (!empty($promo_bottom_right['promo_text']) && $promo_on) {
+				$promo_tag_bottom_right = '<span class="promotags" style="width:100%;height:100%;z-index:9999;background: url(\'' . 'image/' . $promo_bottom_right['image'] . '\') no-repeat;background-position:bottom right"></span>';
+			} else {
+				$promo_tag_bottom_right = '';
+			}
+			]]></add>
+		</operation>
+		
+		<operation error="skip">
+			<search position="after"><![CDATA[
+			'rating'     => $rating,
+			]]></search>
+			<add><![CDATA[
+			'promo_tag_top_right'		=> $promo_tag_top_right,
+			'promo_tag_top_left'		=> $promo_tag_top_left,
+			'promo_tag_bottom_left'		=> $promo_tag_bottom_left,
+			'promo_tag_bottom_right'	=> $promo_tag_bottom_right,
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/module/latest.php">
+		<operation error="skip">
+			<search position="after" offset="1"><![CDATA[
+			$rating = false;
+			]]></search>
+			<add><![CDATA[
+			if((strtotime(date('Y-m-d')) >= strtotime($result['promo_date_start'])) && (strtotime(date('Y-m-d')) <= strtotime($result['promo_date_end'])) || (($result['promo_date_start'] == '0000-00-00') && ($result['promo_date_end'] == '0000-00-00'))) {
+				$promo_on = TRUE;
+			} else {
+				$promo_on = FALSE;
+			}
+				
+			$promo_top_right = $this->model_catalog_product->getPromo($result['product_id'],$result['promo_top_right']);
+			if (!empty($promo_top_right['promo_text']) && $promo_on) {
+				$promo_tag_top_right = '<span class="promotags" style="width:100%;height:100%;z-index:9999;background: url(\'' . 'image/' . $promo_top_right['image'] . '\') no-repeat;background-position:top right"></span>';
+			} else {
+				$promo_tag_top_right = '';
+			}
+					
+			$promo_top_left = $this->model_catalog_product->getPromo($result['product_id'],$result['promo_top_left']);
+			if (!empty($promo_top_left['promo_text']) && $promo_on) {
+				$promo_tag_top_left = '<span class="promotags" style="width:100%;height:100%;z-index:9999;background: url(\'' . 'image/' . $promo_top_left['image'] . '\') no-repeat;background-position:top left"></span>';
+			} else {
+				$promo_tag_top_left = '';
+			}
+					
+			$promo_bottom_left = $this->model_catalog_product->getPromo($result['product_id'],$result['promo_bottom_left']);
+			if (!empty($promo_bottom_left['promo_text']) && $promo_on) {
+				$promo_tag_bottom_left = '<span class="promotags" style="width:100%;height:100%;z-index:9999;background: url(\'' . 'image/' . $promo_bottom_left['image'] . '\') no-repeat;background-position:bottom left"></span>';
+			} else {
+				$promo_tag_bottom_left = '';
+			}
+					
+			$promo_bottom_right = $this->model_catalog_product->getPromo($result['product_id'],$result['promo_bottom_right']);
+			if (!empty($promo_bottom_right['promo_text']) && $promo_on) {
+				$promo_tag_bottom_right = '<span class="promotags" style="width:100%;height:100%;z-index:9999;background: url(\'' . 'image/' . $promo_bottom_right['image'] . '\') no-repeat;background-position:bottom right"></span>';
+			} else {
+				$promo_tag_bottom_right = '';
+			}
+			]]></add>
+		</operation>
+		
+		<operation error="skip">
+			<search position="after"><![CDATA[
+			'rating'     => $rating,
+			]]></search>
+			<add><![CDATA[
+			'promo_tag_top_right'		=> $promo_tag_top_right,
+			'promo_tag_top_left'		=> $promo_tag_top_left,
+			'promo_tag_bottom_left'		=> $promo_tag_bottom_left,
+			'promo_tag_bottom_right'	=> $promo_tag_bottom_right,
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/product/category.php">
+		<operation error="skip">
+			<search position="after" offset="1"><![CDATA[
+			$rating = false;
+			]]></search>
+			<add><![CDATA[
+			if((strtotime(date('Y-m-d')) >= strtotime($result['promo_date_start'])) && (strtotime(date('Y-m-d')) <= strtotime($result['promo_date_end'])) || (($result['promo_date_start'] == '0000-00-00') && ($result['promo_date_end'] == '0000-00-00'))) {
+				$promo_on = TRUE;
+			} else {
+				$promo_on = FALSE;
+			}
+					
+			$promo_top_right = $this->model_catalog_product->getPromo($result['product_id'],$result['promo_top_right']);
+			if (!empty($promo_top_right['promo_text']) && $promo_on) {
+				$promo_tag_top_right = '<span class="promotags" style="width:100%;height:100%;z-index:9999;background: url(\'' . 'image/' . $promo_top_right['image'] . '\') no-repeat;background-position:top right"></span>';
+			} else {
+				$promo_tag_top_right = '';
+			}
+					
+			$promo_top_left = $this->model_catalog_product->getPromo($result['product_id'],$result['promo_top_left']);
+			if (!empty($promo_top_left['promo_text']) && $promo_on) {
+				$promo_tag_top_left = '<span class="promotags" style="width:100%;height:100%;z-index:9999;background: url(\'' . 'image/' . $promo_top_left['image'] . '\') no-repeat;background-position:top left"></span>';
+			} else {
+				$promo_tag_top_left = '';
+			}
+					
+			$promo_bottom_left = $this->model_catalog_product->getPromo($result['product_id'],$result['promo_bottom_left']);
+			if (!empty($promo_bottom_left['promo_text']) && $promo_on) {
+				$promo_tag_bottom_left = '<span class="promotags" style="width:100%;height:100%;z-index:9999;background: url(\'' . 'image/' . $promo_bottom_left['image'] . '\') no-repeat;background-position:bottom left"></span>';
+			} else {
+				$promo_tag_bottom_left = '';
+			}
+						
+			$promo_bottom_right = $this->model_catalog_product->getPromo($result['product_id'],$result['promo_bottom_right']);
+			if (!empty($promo_bottom_right['promo_text']) && $promo_on) {
+				$promo_tag_bottom_right = '<span class="promotags" style="width:100%;height:100%;z-index:9999;background: url(\'' . 'image/' . $promo_bottom_right['image'] . '\') no-repeat;background-position:bottom right"></span>';
+			} else {
+				$promo_tag_bottom_right = '';
+			}
+			]]></add>
+		</operation>
+		
+		<operation error="skip">
+			<search position="after"><![CDATA[
+			'rating'      => $result['rating'],
+			]]></search>
+			<add><![CDATA[
+			'promo_tag_top_right'		=> $promo_tag_top_right,
+			'promo_tag_top_left'		=> $promo_tag_top_left,
+			'promo_tag_bottom_left'		=> $promo_tag_bottom_left,
+			'promo_tag_bottom_right'	=> $promo_tag_bottom_right,
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/product/search.php">
+		<operation error="skip">
+			<search position="after" offset="1"><![CDATA[
+			$rating = false;
+			]]></search>
+			<add><![CDATA[
+			if((strtotime(date('Y-m-d')) >= strtotime($result['promo_date_start'])) && (strtotime(date('Y-m-d')) <= strtotime($result['promo_date_end'])) || (($result['promo_date_start'] == '0000-00-00') && ($result['promo_date_end'] == '0000-00-00'))) {
+				$promo_on = TRUE;
+			} else {
+				$promo_on = FALSE;
+			}
+					
+			$promo_top_right = $this->model_catalog_product->getPromo($result['product_id'],$result['promo_top_right']);
+			if (!empty($promo_top_right['promo_text']) && $promo_on) {
+				$promo_tag_top_right = '<span class="promotags" style="width:100%;height:100%;z-index:9999;background: url(\'' . 'image/' . $promo_top_right['image'] . '\') no-repeat;background-position:top right"></span>';
+			} else {
+				$promo_tag_top_right = '';
+			}
+					
+			$promo_top_left = $this->model_catalog_product->getPromo($result['product_id'],$result['promo_top_left']);
+			if (!empty($promo_top_left['promo_text']) && $promo_on) {
+				$promo_tag_top_left = '<span class="promotags" style="width:100%;height:100%;z-index:9999;background: url(\'' . 'image/' . $promo_top_left['image'] . '\') no-repeat;background-position:top left"></span>';
+			} else {
+				$promo_tag_top_left = '';
+			}
+					
+			$promo_bottom_left = $this->model_catalog_product->getPromo($result['product_id'],$result['promo_bottom_left']);
+			if (!empty($promo_bottom_left['promo_text']) && $promo_on) {
+				$promo_tag_bottom_left = '<span class="promotags" style="width:100%;height:100%;z-index:9999;background: url(\'' . 'image/' . $promo_bottom_left['image'] . '\') no-repeat;background-position:bottom left"></span>';
+			} else {
+				$promo_tag_bottom_left = '';
+			}
+						
+			$promo_bottom_right = $this->model_catalog_product->getPromo($result['product_id'],$result['promo_bottom_right']);
+			if (!empty($promo_bottom_right['promo_text']) && $promo_on) {
+				$promo_tag_bottom_right = '<span class="promotags" style="width:100%;height:100%;z-index:9999;background: url(\'' . 'image/' . $promo_bottom_right['image'] . '\') no-repeat;background-position:bottom right"></span>';
+			} else {
+				$promo_tag_bottom_right = '';
+			}
+			]]></add>
+		</operation>
+		
+		<operation error="skip">
+			<search position="after"><![CDATA[
+			'rating'      => $result['rating'],
+			]]></search>
+			<add><![CDATA[
+			'promo_tag_top_right'		=> $promo_tag_top_right,
+			'promo_tag_top_left'		=> $promo_tag_top_left,
+			'promo_tag_bottom_left'		=> $promo_tag_bottom_left,
+			'promo_tag_bottom_right'	=> $promo_tag_bottom_right,
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/product/product.php">
+		<operation error="skip">
+			<search position="after"><![CDATA[
+			$product_info = $this->model_catalog_product->getProduct($product_id);
+			]]></search>
+			<add><![CDATA[
+			if((strtotime(date('Y-m-d')) >= strtotime($product_info['promo_date_start'])) && (strtotime(date('Y-m-d')) <= strtotime($product_info['promo_date_end'])) || (($product_info['promo_date_start'] == '0000-00-00') && ($product_info['promo_date_end'] == '0000-00-00'))) {
+				$promo_on = TRUE;
+			} else {
+				$promo_on = FALSE;
+			}
+			]]></add>
+		</operation>
+	
+		<operation error="skip">
+			<search position="after" offset="1"><![CDATA[
+			$this->data['minimum'] = 1;
+			]]></search>
+			<add><![CDATA[
+			$promo_top_right = $this->model_catalog_product->getPromo($product_info['product_id'],$product_info['promo_top_right']);
+					
+			if (!empty($promo_top_right['promo_text']) && $promo_on) {
+				if (!empty($promo_top_right['promo_link'])){
+					$promo_tags = '<span>Notes: </span><span style="color:red"><a href="' . $promo_top_right['promo_link'] . '" Title="Click Me">' . $promo_top_right['promo_text'] . '</a></span>';
+					if (!empty($promo_top_right['pimage'])){
+						$promo_tags = $promo_tags . '<br /><tr><td colspan="2"><a href="' . $promo_top_right['promo_link'] . '" Title="Click Me"><img src="image/' . $promo_top_right['pimage'] . '" /></a></td></tr>';
+					}
+				} else {
+					$promo_tags = '<span>Notes: </span><span style="color: red; font-weight:bold;">' . $promo_top_right['promo_text'] . '</span>';
+					if (!empty($promo_top_right['pimage'])){
+						$promo_tags = $promo_tags . '<br /><tr><td colspan="2"><img src="image/' . $promo_top_right['pimage'] . '" /></td></tr>';
+					}
+				}
+			} else {
+				$promo_tags = '';
+			}
+			
+			if (!empty($promo_top_right['promo_text']) && $promo_on) {
+				$promo_tag_product_top_right = '<div class="promotags" style="width:70px;height:70px;top:0px;right:0px;z-index:9999;background: url(\'' . 'image/' . $promo_top_right['image'] . '\') no-repeat;background-position:top right"></div>';
+			} else {
+				$promo_tag_product_top_right = '';
+			}
+			
+			$promo_top_left = $this->model_catalog_product->getPromo($product_info['product_id'],$product_info['promo_top_left']);
+			if (!empty($promo_top_left['promo_text']) && $promo_on) {
+				$promo_tag_product_top_left = '<div class="promotags" style="width:70px;height:70px;top:0px;left:0px;z-index:9999;background: url(\'' . 'image/' . $promo_top_left['image'] . '\') no-repeat;background-position:top left"></div>';
+			} else {
+				$promo_tag_product_top_left = '';
+			}
+			
+			$promo_bottom_left = $this->model_catalog_product->getPromo($product_info['product_id'],$product_info['promo_bottom_left']);
+			if (!empty($promo_bottom_left['promo_text']) && $promo_on) {
+				$promo_tag_product_bottom_left = '<div class="promotags" style="width:70px;height:70px;bottom:0px;left:0px;z-index:9999;background: url(\'' . 'image/' . $promo_bottom_left['image'] . '\') no-repeat;background-position:bottom left"></div>';
+			} else {
+				$promo_tag_product_bottom_left = '';
+			}
+			
+			$promo_bottom_right = $this->model_catalog_product->getPromo($product_info['product_id'],$product_info['promo_bottom_right']);
+			if (!empty($promo_bottom_right['promo_text']) && $promo_on) {
+				$promo_tag_product_bottom_right = '<div class="promotags" style="width:70px;height:70px;bottom:0px;right:0px;z-index:9999;background: url(\'' . 'image/' . $promo_bottom_right['image'] . '\') no-repeat;background-position:bottom right"></div>';
+			} else {
+				$promo_tag_product_bottom_right = '';
+			}
+			]]></add>
+		</operation>
+		
+		<operation error="skip">
+			<search position="after"><![CDATA[
+			$this->data['attribute_groups'] = $this->model_catalog_product->getProductAttributes($this->request->get['product_id']);
+			]]></search>
+			<add><![CDATA[
+			$this->data['promo_tags'] = $promo_tags;
+			$this->data['promo_tag_product_top_right'] = $promo_tag_product_top_right;
+			$this->data['promo_tag_product_top_left'] = $promo_tag_product_top_left;
+			$this->data['promo_tag_product_bottom_left'] = $promo_tag_product_bottom_left;
+			$this->data['promo_tag_product_bottom_right'] = $promo_tag_product_bottom_right;
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/model/catalog/product.php">
+		<operation error="skip">
+			<search position="before"><![CDATA[
+			public function getTotalProductSpecials() {
+			]]></search>
+			<add><![CDATA[
+			/*public function getPromo($product_id,$data) {
+				$query = $this->db->query("SELECT pt.promo_text, pt.promo_link, pt.image, pt.pimage FROM " . DB_PREFIX . "promo_tags pt, " . DB_PREFIX . "product p WHERE pt.promo_tags_id = '" . (int)$data . "' AND p.product_id = '" . (int)$product_id . "'");
+				return $query->row;	
+			}*/
+			]]></add>
+		</operation>
+	</file>
+	
+	<!--Delete for custom template integration-->
+	<file name="catalog/view/theme/default/template/common/header.tpl">
+		<operation error="skip">
+			<search position="before"><![CDATA[
+			<head>
+			]]></search>
+			<add><![CDATA[
+			<?php if ($product_id) { ?>
+			<meta property="og:title" content="<?php echo $product_name; ?>" />
+			<meta property="og:url" content="<?php echo $product_url; ?>" />
+			<meta property="og:image" content="<?php echo $product_thumb; ?>" />
+			<meta property="og:site_name" content="site.com" />
+			<meta property="fb:admins" content=""/>
+			<?php } ?>
+			]]></add>
+		</operation>
+		
+		<operation error="skip">
+			<search position="replace"><![CDATA[
+			<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+			]]></search>
+			<add><![CDATA[
+			<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet_vQmod.css" />
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/view/theme/default/template/module/bestseller.tpl">
+		<operation error="skip">
+			<search position="replace"><![CDATA[
+			<div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
+        	]]></search>
+			<add><![CDATA[
+			<div class="image"><div class="banner-square"><a href="<?php echo $product['href']; ?>">
+			<?php echo $product['promo_tag_top_right']; ?>
+			<?php echo $product['promo_tag_top_left']; ?>
+			<?php echo $product['promo_tag_bottom_left']; ?>
+			<?php echo $product['promo_tag_bottom_right']; ?>
+			<img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a></div></div>
+			]]></add>
+		</operation>
+
+	</file>
+	
+	<file name="catalog/view/theme/default/template/module/featured.tpl">
+		<operation error="skip">
+			<search position="replace"><![CDATA[
+			<div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
+        	]]></search>
+			<add><![CDATA[
+			<div class="image"><div class="banner-square"><a href="<?php echo $product['href']; ?>">
+			<?php echo $product['promo_tag_top_right']; ?>
+			<?php echo $product['promo_tag_top_left']; ?>
+			<?php echo $product['promo_tag_bottom_left']; ?>
+			<?php echo $product['promo_tag_bottom_right']; ?>
+			<img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a></div></div>
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/view/theme/default/template/module/latest.tpl">
+		<operation error="skip">
+			<search position="replace"><![CDATA[
+			<div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
+        	]]></search>
+			<add><![CDATA[
+			<div class="image"><div class="banner-square"><a href="<?php echo $product['href']; ?>">
+			<?php echo $product['promo_tag_top_right']; ?>
+			<?php echo $product['promo_tag_top_left']; ?>
+			<?php echo $product['promo_tag_bottom_left']; ?>
+			<?php echo $product['promo_tag_bottom_right']; ?>
+			<img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a></div></div>
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/view/theme/default/template/product/search.tpl">
+		<operation error="skip">
+			<search position="replace"><![CDATA[
+			<div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" title="<?php echo $product['name']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
+        	]]></search>
+			<add><![CDATA[
+			<div class="image"><div class="banner-square"><a href="<?php echo $product['href']; ?>">
+			<?php echo $product['promo_tag_top_right']; ?>
+			<?php echo $product['promo_tag_top_left']; ?>
+			<?php echo $product['promo_tag_bottom_left']; ?>
+			<?php echo $product['promo_tag_bottom_right']; ?>
+			<img src="<?php echo $product['thumb']; ?>" title="<?php echo $product['name']; ?>" alt="<?php echo $product['name']; ?>" /></a></div></div>
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/view/theme/default/template/product/category.tpl">
+		<operation error="skip">
+			<search position="replace"><![CDATA[
+			<div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" title="<?php echo $product['name']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
+			]]></search>
+			<add><![CDATA[
+			<div class="image"><div class="banner-square"><a href="<?php echo $product['href']; ?>">
+			<?php echo $product['promo_tag_top_right']; ?>
+			<?php echo $product['promo_tag_top_left']; ?>
+			<?php echo $product['promo_tag_bottom_left']; ?>
+			<?php echo $product['promo_tag_bottom_right']; ?>
+			<img src="<?php echo $product['thumb']; ?>" title="<?php echo $product['name']; ?>" alt="<?php echo $product['name']; ?>" /></a></div></div>
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/view/theme/default/template/product/product.tpl">
+		<operation error="skip">
+			<search position="replace"><![CDATA[
+			<div class="image"><a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox" rel="colorbox"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image" /></a></div>
+      		]]></search>
+			<add><![CDATA[
+			<div class="image" style="position: relative"><a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="fancybox" rel="fancybox">
+			<?php echo $promo_tag_product_top_right; ?>
+			<?php echo $promo_tag_product_top_left; ?>
+			<?php echo $promo_tag_product_bottom_left; ?>
+			<?php echo $promo_tag_product_bottom_right; ?>
+			<img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image" /></div></a>
+			]]></add>
+		</operation>
+	</file>
+	<!--End delete for custom template integration-->
+</modification>

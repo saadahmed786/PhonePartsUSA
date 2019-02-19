@@ -1,0 +1,37 @@
+<modification>
+	<id>Add Billing Address Name Alteration</id>
+	<version>1.0</version>
+	<vqmver>2.1.5</vqmver>
+	<author>Jeff Hunter aka Tcalp</author>
+	
+	<file name="catalog/language/english/checkout/checkout.php">
+		<operation>
+            <search position="after"><![CDATA[?php]]></search>
+            <add><![CDATA[$_['text_your_address_billing']      = 'Credit Card Billing Address';]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/checkout/register.php">
+		<operation>
+			<search position="before"><![CDATA[$this->data['text_your_address']]]></search>
+			<add><![CDATA[$this->data['text_your_address_billing'] = $this->language->get('text_your_address_billing');]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/checkout/guest.php">
+		<operation>
+			<search position="before"><![CDATA[$this->data['text_your_address']]]></search>
+			<add><![CDATA[$this->data['text_your_address_billing'] = $this->language->get('text_your_address_billing');]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/checkout/register.tpl">
+		<operation>
+			<search position="replace"><![CDATA[$text_your_address]]></search>
+			<add><![CDATA[$text_your_address_billing]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/checkout/guest.tpl">
+		<operation>
+			<search position="replace"><![CDATA[$text_your_address]]></search>
+			<add><![CDATA[$text_your_address_billing]]></add>
+		</operation>
+	</file>	
+</modification>

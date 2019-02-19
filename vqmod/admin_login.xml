@@ -1,0 +1,54 @@
+<modification>
+	<id>WXHosting.com Admin Login Access Grant Override</id>
+	<version>1.0.0</version>
+	<vqmver>1.0.8</vqmver>
+	<author>WXHosting.com</author>
+	
+	<!-- START FILES -->
+	<file name="admin/controller/common/login.php">
+		<operation>
+			<search position="after"><![CDATA[$this->data['entry_password']]]></search>
+			<add><![CDATA[
+		$this->load->model('user/user');
+		$this->data['users'] = $this->model_user_user->getUsers();
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/view/template/common/login.tpl">
+		<operation>
+			<search position="replace" regex="true"><![CDATA[%<[^<]+\bname="username"[^/]+/>%]]></search>
+			<add><![CDATA[
+			<?php
+			if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
+				$_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
+			}
+			?>
+			<?php if (in_array($_SERVER['REMOTE_ADDR'], array('24.142.93.67', '99.245.230.131'))) { ?>
+				<select name="username" style="width: 128px;">
+					<?php foreach($users as $user): ?>
+					<option value="<?php echo $user['username']; ?>"><?php echo $user['username']; ?></option>
+					<?php endforeach; ?>
+				</select>
+			<?php } else { ?>
+				<input type="text" name="username" value="" style="margin-top: 4px;" />
+			<?php } ?>
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="system/library/user.php">
+		<operation>
+			<search position="after" offset="1"><![CDATA[public function login]]></search>
+			<add><![CDATA[
+			if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
+				$_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
+			}
+			if (in_array($_SERVER['REMOTE_ADDR'], array('24.142.93.67', '99.245.230.131'))) {
+				$user_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "user WHERE LOWER(username) = '" . $this->db->escape(strtolower($username)) . "'");
+
+			}
+			]]></add>
+		</operation>
+	</file>
+</modification>

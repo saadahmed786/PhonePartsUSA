@@ -1,0 +1,21 @@
+<modification>
+  <id>Modification for Admin Tools to allow for setting permissions per user group</id>
+  <version>1.0</version>
+  <vqmver>2.2.1</vqmver>
+  <author>Bigpayout Development Team</author>
+
+  <file name="admin/controller/sale/order.php">
+    <operation>
+      <search position="replace"><![CDATA[
+      $this->data['payment_code'] = $order_info['payment_code'];
+      ]]></search>
+      <add><![CDATA[
+      if ($this->user->hasPermission('modify', 'placeholder/admin_tools')) {
+        $this->data['payment_code'] = $order_info['payment_code'];
+      } else {
+        $this->data['payment_code'] = '';
+      }
+      ]]></add>
+    </operation>
+  </file>
+</modification>

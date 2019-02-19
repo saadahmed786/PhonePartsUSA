@@ -1,0 +1,71 @@
+<modification>
+	<sql><![CDATA[
+		ALTER TABLE `category_description` ADD `page_title` VARCHAR( 255 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+	]]></sql>
+	<id>Custom Page Title for Category</id>
+	<version>1.0</version>
+	<vqmver>1.2.3</vqmver>
+	<author>Jeff Hunter aka Tcalp</author>
+	<file name="admin/language/*/catalog/category.php">
+		<operation>
+			<search position="before"><![CDATA[$_['entry_meta_keyword']]]></search>
+			<add><![CDATA[$_['entry_page_title'] 	 = 'Page Title:';]]></add>
+		</operation>
+	</file>
+	<file name="admin/controller/catalog/category.php">
+		<operation>
+			<search position="before"><![CDATA[$this->data['entry_meta_keyword']]]></search>
+			<add><![CDATA[$this->data['entry_page_title'] = $this->language->get('entry_page_title');]]></add>
+		</operation>
+	</file>
+	<file name="admin/model/catalog/category.php">
+		<operation>
+			<search position="replace"><![CDATA[name = '" . $this->db->escape($value['name']) . "', ]]></search>
+			<add><![CDATA[name = '" . $this->db->escape($value['name']) . "', page_title = '" . $this->db->escape($value['page_title']) . "', ]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[$result['name'],]]></search>
+			<add><![CDATA['page_title'             => $result['page_title'],]]></add>
+		</operation>
+	</file>
+	<file name="admin/view/template/catalog/category_form.tpl">
+		<operation>
+			<search position="before" offset="1"><![CDATA[
+                <td><?php echo $entry_meta_description; ?></td>
+			]]></search>
+			<add><![CDATA[
+              <tr>
+                <td><?php echo $entry_page_title; ?></td>
+                <td>
+				<table>
+					<tr>
+					<td><input type="text" id="category_description_<?php echo $language['language_id']; ?>_page_title_text" name="category_description[<?php echo $language['language_id']; ?>][page_title]" size="100" value="<?php echo isset($category_description[$language['language_id']]) ? $category_description[$language['language_id']]['page_title'] : ''; ?>" /></td>
+					<td><span id="category_description_<?php echo $language['language_id']; ?>_page_title_count" class="help"></span></td>
+					</tr>
+				</table>
+				</td>
+              </tr>
+				<script type="text/javascript">
+				$(document).ready(function() {
+					$('input#category_description_<?php echo $language['language_id']; ?>_page_title_text').keyup(function() {
+						$('span#category_description_<?php echo $language['language_id']; ?>_page_title_count').html(this.value.length + '/70 characters (255 max)');      
+					});
+					$('span#category_description_<?php echo $language['language_id']; ?>_page_title_count').html($('input#category_description_<?php echo $language['language_id']; ?>_page_title_text').val().length + '/70 characters (255 max)');      
+				});
+				</script>
+			]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/product/category.php">
+		<operation>
+			<search position="replace"><![CDATA[$this->document->setTitle($category_info['name']);]]></search>
+			<add><![CDATA[
+			if($category_info['page_title']){
+				$this->document->setTitle($category_info['page_title']);
+			} else {
+				$this->document->setTitle($category_info['name']);
+			}
+			]]></add>
+		</operation>
+	</file>
+</modification>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>WXHosting.com Image Dimensions (Slideshow)</id>
+	<version>2.0</version>
+	<vqmver>2.1</vqmver>
+	<author>Jeff Hunter aka Tcalp</author>
+
+	<file name="catalog/view/theme/*/template/module/slideshow.tpl">
+		<operation error="skip"> <!-- ADD DATA VARIABLES FOR IMAGE WIDTH AND HEIGHT FOR SLIDESHOW MODULE -->
+			<search position="replace"><![CDATA[src="<?php echo $banner['image']; ?>"]]></search>
+			<add><![CDATA[src="<?php echo $banner['image']; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>"]]></add>
+		</operation>
+	</file>
+	
+</modification>

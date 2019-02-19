@@ -1,0 +1,23 @@
+<modification>
+
+	<id>General vQmod for PhoneParts</id>
+	<version>1.0</version>
+	<vqmver>2.4</vqmver>
+	<author>Zaman</author>
+	
+	<file name="catalog/controller/payment/*.php">
+        <operation error="skip"><!-- CHANGE CHECKOUT SUCCESS PAGE TO HTTPS FOR GOOGLE TRUSTED SITES -->
+            <search regex="true" position="replace"><![CDATA[/\$this->url->link\('checkout\/success'\);/]]></search>
+            <add><![CDATA[($this->config->get('config_gts_status')) ? $this->url->link('checkout/success', '', 'SSL') : $this->url->link('checkout/success');]]></add>
+        </operation>
+	</file>
+	
+	
+	<file name="catalog/controller/common/home.php">
+    <operation>
+            <search position="replace"><![CDATA[$image = false;]]></search>
+            <add><![CDATA[$image = $this->model_tool_image->resize('data/image-coming-soon.jpg', $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));]]></add>
+    </operation>
+    
+    </file>
+</modification>

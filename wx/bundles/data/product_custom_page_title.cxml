@@ -1,0 +1,79 @@
+<modification>
+	<activation>
+		<check type="field" table="product_description" field="page_title">
+			<sql><![CDATA[ALTER TABLE {prefix}product_description ADD page_title VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general NOT NULL DEFAULT '';]]></sql>
+		</check>
+	</activation>
+	<id>Custom Page Title for Products</id>
+	<version>1.0</version>
+	<vqmver>1.2.3</vqmver>
+	<author>Jeff Hunter aka Tcalp</author>
+	<file name="admin/language/*/catalog/product.php">
+		<operation>
+			<search position="before"><![CDATA[$_['entry_meta_keyword']]]></search>
+			<add><![CDATA[$_['entry_page_title'] 	 = 'Page Title:';]]></add>
+		</operation>
+	</file>
+	<file name="admin/controller/catalog/product.php">
+		<operation>
+			<search position="before"><![CDATA[$this->data['entry_meta_keyword']]]></search>
+			<add><![CDATA[$this->data['entry_page_title'] = $this->language->get('entry_page_title');]]></add>
+		</operation>
+	</file>
+	<file name="admin/model/catalog/product.php">
+		<operation>
+			<search position="replace"><![CDATA[name = '" . $this->db->escape($value['name']) . "', ]]></search>
+			<add><![CDATA[name = '" . $this->db->escape($value['name']) . "', page_title = '" . $this->db->escape($value['page_title']) . "', ]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[$result['name'],]]></search>
+			<add><![CDATA['page_title'             => $result['page_title'],]]></add>
+		</operation>
+	</file>
+	<file name="admin/view/template/catalog/product_form.tpl">
+		<operation>
+			<search position="before" offset="1"><![CDATA[
+                <td><?php echo $entry_meta_description; ?></td>
+			]]></search>
+			<add><![CDATA[
+              <tr>
+                <td><?php echo $entry_page_title; ?></td>
+                <td>
+				<table>
+					<tr>
+					<td><input type="text" id="product_description_<?php echo $language['language_id']; ?>_page_title_text" name="product_description[<?php echo $language['language_id']; ?>][page_title]" size="100" value="<?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['page_title'] : ''; ?>" /></td>
+					<td><span id="product_description_<?php echo $language['language_id']; ?>_page_title_count" class="help"></span></td>
+					</tr>
+				</table>
+				</td>
+              </tr>
+				<script type="text/javascript">
+				$(document).ready(function() {
+					$('input#product_description_<?php echo $language['language_id']; ?>_page_title_text').keyup(function() {
+						$('span#product_description_<?php echo $language['language_id']; ?>_page_title_count').html(this.value.length + '/70 characters (255 max)');      
+					});
+					$('span#product_description_<?php echo $language['language_id']; ?>_page_title_count').html($('input#product_description_<?php echo $language['language_id']; ?>_page_title_text').val().length + '/70 characters (255 max)');      
+				});
+				</script>
+			]]></add>
+		</operation>
+	</file>
+	<file name="catalog/model/catalog/product.php" error="skip">
+		<operation error="skip">
+			<search position="before"><![CDATA[$query->row['sku'],]]></search>
+			<add><![CDATA['page_title' => $query->row['page_title'],]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/product/product.php">
+		<operation>
+			<search position="replace"><![CDATA[$this->document->setTitle($product_info['name']);]]></search>
+			<add><![CDATA[
+			if($product_info['page_title']){
+				$this->document->setTitle($product_info['page_title']);
+			} else {
+				$this->document->setTitle($product_info['name']);
+			}
+			]]></add>
+		</operation>
+	</file>
+</modification>

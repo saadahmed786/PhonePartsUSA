@@ -1,0 +1,333 @@
+<modification>
+
+	<id>additional_product</id>
+	<version>1.0.0</version>
+	<vqmver>2.1.5</vqmver>
+	<author>ovife21</author>
+	
+	<file name="admin/view/template/common/header.tpl">
+		<operation>
+			<search position="after"><![CDATA[<li><a href="<?php echo $stock_status; ?>"><?php echo $text_stock_status; ?></a></li>]]></search>
+			<add><![CDATA[<li><a href="<?php echo $additional_product; ?>"><?php echo $text_additionalproduct; ?></a></li>]]></add>
+		</operation>		
+	</file>	
+	
+	<file name="admin/controller/common/header.php">
+		<operation>
+			<search position="after"><![CDATA[$this->data['text_product'] = $this->language->get('text_product');]]></search>
+			<add><![CDATA[$this->data['text_additionalproduct'] = $this->language->get('text_additionalproduct');]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[$this->data['product'] = $this->url->link('catalog/product', 'token=' . $this->session->data['token'], 'SSL');]]></search>
+			<add><![CDATA[$this->data['additional_product'] = $this->url->link('localisation/additional_product', 'token=' . $this->session->data['token'], 'SSL');]]></add>
+		</operation>		
+	</file>	
+	
+	<file name="admin/language/english/common/header.php">
+		<operation>
+			<search position="after"><![CDATA[$_['text_product']                     = 'Products';]]></search>
+			<add><![CDATA[$_['text_additionalproduct']                     = 'Additional Product Fields';]]></add>
+		</operation>		
+	</file>		
+	
+	<file name="admin/model/catalog/product.php">
+		<operation>
+			<search position="before"><![CDATA[if (isset($data['product_attribute'])) {]]></search>
+			<add><![CDATA[
+			
+			if (isset($data['product_to_field'])) {
+			$this->db->query("DELETE FROM " . DB_PREFIX . "product_to_field WHERE product_id = '" . (int)$product_id . "'");
+			foreach ($data['product_to_field'] as $language_id => $product_to_field) {
+				foreach ($product_to_field as $additional_product_id => $product_to_field_value) {
+					
+						$dropdown_query = $this->db->query("SELECT dropdown FROM " . DB_PREFIX . "additional_product WHERE language_id = '" . (int)$this->config->get('config_language_id') . "' and additional_product_id = '" . (int)$additional_product_id . "'");
+						
+						$dropdown = $dropdown_query->row['dropdown'];
+						
+												
+						if (!($dropdown))
+							{								
+							$this->db->query("INSERT IGNORE INTO " . DB_PREFIX . "product_to_field SET product_id = '" . (int)$product_id . "', additional_product_id = '" . (int)$additional_product_id . "', language_id = '" . (int)$language_id . "', name = '" .  $this->db->escape($product_to_field_value['name']) . "'");
+							}
+							else {
+							$this->db->query("INSERT IGNORE INTO " . DB_PREFIX . "product_to_field SELECT '" . (int)$product_id . "', '" . (int)$additional_product_id . "', language_id, value from " . DB_PREFIX . "additional_product_value WHERE additional_product_id = '" . (int)$additional_product_id . "' and additional_product_value_id = '" .  $product_to_field_value['name'] . "'");
+							}
+					
+				}
+			}
+		}
+			
+			]]></add>
+		</operation>		
+		
+		<operation>
+			<search position="before"><![CDATA[$this->db->query("DELETE FROM " . DB_PREFIX . "product_attribute WHERE product_id = '" . (int)$product_id . "'");]]></search>
+			<add><![CDATA[
+			
+			$this->db->query("DELETE FROM " . DB_PREFIX . "product_to_field WHERE product_id = '" . (int)$product_id . "'");
+			
+			if (isset($data['product_to_field'])) {
+			
+			foreach ($data['product_to_field'] as $language_id => $product_to_field) {
+				foreach ($product_to_field as $additional_product_id => $product_to_field_value) {
+					
+						$dropdown_query = $this->db->query("SELECT dropdown FROM " . DB_PREFIX . "additional_product WHERE language_id = '" . (int)$this->config->get('config_language_id') . "' and additional_product_id = '" . (int)$additional_product_id . "'");
+						
+						$dropdown = $dropdown_query->row['dropdown'];
+						
+												
+						if (!($dropdown))
+							{								
+							$this->db->query("INSERT IGNORE INTO " . DB_PREFIX . "product_to_field SET product_id = '" . (int)$product_id . "', additional_product_id = '" . (int)$additional_product_id . "', language_id = '" . (int)$language_id . "', name = '" .  $this->db->escape($product_to_field_value['name']) . "'");
+							}
+							else {
+							$this->db->query("INSERT IGNORE INTO " . DB_PREFIX . "product_to_field SELECT '" . (int)$product_id . "', '" . (int)$additional_product_id . "', language_id, value from " . DB_PREFIX . "additional_product_value WHERE additional_product_id = '" . (int)$additional_product_id . "' and additional_product_value_id = '" .  $product_to_field_value['name'] . "'");
+							}
+					
+				}
+			}
+			
+			/*foreach ($data['product_to_field'] as $language_id => $product_to_field) {
+				foreach ($product_to_field as $additional_product_id => $product_to_field_value) {
+								
+						$this->db->query("INSERT IGNORE INTO " . DB_PREFIX . "product_to_field SET product_id = '" . (int)$product_id . "', additional_product_id = '" . (int)$additional_product_id . "', language_id = '" . (int)$language_id . "', name = '" .  $this->db->escape($product_to_field_value['name']) . "'");
+					
+				}
+			}*/
+		}
+			
+			]]></add>
+		</operation>		
+		<operation>
+			<search position="before"><![CDATA[$data = array_merge($data, array('product_attribute' => $this->getProductAttributes($product_id)));]]></search>
+			<add><![CDATA[
+			$this->load->model('localisation/additional_product');
+			$data = array_merge($data, array('product_to_field' => $this->model_localisation_additional_product->getAdditionalProductDescriptionsbyProductId($product_id)));
+			
+			]]></add>
+		</operation>		
+		<operation>
+			<search position="after"><![CDATA[$this->db->query("DELETE FROM " . DB_PREFIX . "product WHERE]]></search>
+			<add><![CDATA[
+			$this->db->query("DELETE FROM " . DB_PREFIX . "product_to_field WHERE product_id = '" . (int)$product_id . "'");
+			]]></add>
+		</operation>		
+	</file>		
+	
+	<file name="admin/controller/catalog/product.php">
+		<operation>
+			<search position="before"><![CDATA[if (isset($this->request->post['shipping'])) {]]></search>
+			<add><![CDATA[
+			
+			$this->load->model('localisation/additional_product');
+		
+			if (isset($this->request->post['additional_product'])) {
+					$additional_products = $this->request->post['additional_product'];
+				} else {
+					$additional_products = $this->model_localisation_additional_product->getAdditionalProductes();
+				} 
+			
+			foreach ($additional_products as $additional_product) {
+				if (!(isset($additional_product['dropdown'])) || !($additional_product['dropdown'])) {
+					$this->data['additional_products'][] = array(
+						'field' => $additional_product['name'],
+						'id' => $additional_product['additional_product_id'],
+						'dropdown' => 0
+					);
+				} else {
+					$this->data['additional_products'][] = array(
+						'field' => $additional_product['name'],
+						'id' => $additional_product['additional_product_id'],
+						'dropdown' => $additional_product['dropdown'],
+						'values' => $this->model_localisation_additional_product->getAdditionalProductValues($additional_product['additional_product_id'])
+					);
+				}
+			}
+			
+			if (isset($this->request->post['product_to_field'])) {
+					$this->data['product_to_field'] = $this->request->post['product_to_field'];
+				} elseif (isset($this->request->get['product_id'])) {
+					$this->data['product_to_field'] = $this->model_localisation_additional_product->getAdditionalProductDescriptionsbyProductId($this->request->get['product_id']);
+				} else {
+					$this->data['product_to_field'] = array();
+				}
+			
+			//print_r($this->data['additional_products']);
+			
+			]]></add>
+		</operation>		
+	</file>		
+	
+	<file name="admin/view/template/catalog/product_form.tpl">
+		<operation>
+			<search position="before"><![CDATA[<td><?php echo $entry_location; ?></td>]]></search>
+			<add><![CDATA[
+			<?php if (isset($additional_products)) {foreach ($additional_products as $additional_product) { ?>
+			  <td><?php echo $additional_product['field']; ?>:</td>
+			  <?php if (!(isset($additional_product['dropdown'])) || !($additional_product['dropdown'])) { ?>
+              <td><?php foreach ($languages as $language) { ?>
+				  <input type="text" name="product_to_field[<?php echo $language['language_id']; ?>][<?php echo $additional_product['id']; ?>][name]" 
+				  value="<?php echo isset($product_to_field[$language['language_id']][$additional_product['id']]) ? $product_to_field[$language['language_id']][$additional_product['id']]['name'] : ''; ?>" />
+				  <img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /><br />
+				  <?php if (isset($error_name[$language['language_id']])) { ?>
+				  <span class="error"><?php echo $error_name[$language['language_id']]; ?></span><br />
+				  <?php } ?>
+				  <?php } ?>
+			  </td>
+			  <?php } else { ?>
+			  <td>
+			  <select name="product_to_field[<?php echo $this->config->get('config_language_id'); ?>][<?php echo $additional_product['id']; ?>][name]">
+              <option value="-1"></option>
+			  <?php foreach ($additional_product['values'] as $additional_product_value_id => $value) { ?>			
+                 				
+				<?php if ((!empty($product_to_field) && !empty($value) && (isset($value[$this->config->get('config_language_id')])) && (isset($product_to_field[$this->config->get('config_language_id')][$additional_product['id']]))) && ($value[$this->config->get('config_language_id')]['value'] == $product_to_field[$this->config->get('config_language_id')][$additional_product['id']]['name'])) { ?>			
+                  <option value="<?php echo $additional_product_value_id; ?>" selected="selected"><?php echo $value[$this->config->get('config_language_id')]['value']; ?></option>
+                  <?php } else { ?>
+                  <option value="<?php echo $additional_product_value_id; ?>"><?php echo $value[$this->config->get('config_language_id')]['value']; ?></option>
+                  <?php } ?>                 
+                
+			  <?php } ?>
+			  </select>
+			  </td>
+			  <?php } ?>
+            </tr>
+            <tr>
+			<?php } } ?>
+			]]></add>
+		</operation>		
+	</file>		
+	
+	<file name="catalog/model/catalog/product.php">
+		<operation>
+			<search position="replace"><![CDATA[LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id)]]></search>
+			<add><![CDATA[LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_field ptf ON (p.product_id = ptf.product_id)]]></add>
+		</operation>
+		<operation error="skip">
+			<search position="replace"><![CDATA[LCASE(pd.name) LIKE '%" . $this->db->escape(utf8_strtolower($word)) . "%']]></search>
+			<add><![CDATA[LCASE(pd.name) LIKE '%" . $this->db->escape(utf8_strtolower($word)) . "%' OR LCASE(ptf.name) LIKE '%" . $this->db->escape(utf8_strtolower($word)) . "%']]></add>
+		</operation>
+		<operation error="skip">
+			<search position="replace"><![CDATA[LCASE(pd.name) LIKE '%" . $this->db->escape(utf8_strtolower($data['filter_name'])) . "%']]></search>
+			<add><![CDATA[LCASE(pd.name) LIKE '%" . $this->db->escape(utf8_strtolower($data['filter_name'])) . "%' OR LCASE(ptf.name) LIKE '%" . $this->db->escape(utf8_strtolower($data['filter_name'])) . "%']]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[public function getProductImages($product_id) {]]></search>
+			<add><![CDATA[
+			public function getAdditionalProductes($data = array()) {
+				
+						$query = $this->db->query("SELECT additional_product_id, name, display FROM " . DB_PREFIX . "additional_product WHERE language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY sort");
+			
+						$additional_product_data = $query->rows;
+						
+						return $additional_product_data;						
+			}
+			
+			public function getAdditionalProductDescriptionsbyProductId($product_id) {
+				$product_to_field = array();
+				
+				$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_to_field WHERE product_id = '" . (int)$product_id . "' and language_id = '" . (int)$this->config->get('config_language_id') . "'");
+				
+				foreach ($query->rows as $result) {
+					$product_to_field[$result['additional_product_id']] = array('name' => $result['name']);
+				}
+				return $product_to_field;
+			}
+
+			
+			]]></add>
+		</operation>		
+	</file>		
+	
+	<file name="catalog/controller/product/product.php">
+		<operation>
+			<search position="before"><![CDATA[$this->data['images'] = array();]]></search>
+			<add><![CDATA[
+			
+			$this->data['additional_products'] = array();
+			
+			$additional_products = $this->model_catalog_product->getAdditionalProductes();
+						
+			foreach ($additional_products as $additional_product) {
+				
+				$this->data['additional_products'][] = array(
+					'field' => $additional_product['name'],
+					'id' => $additional_product['additional_product_id'],
+					'display' => $additional_product['display']
+				);
+			}
+			
+			$this->data['product_to_field'] = $this->model_catalog_product->getAdditionalProductDescriptionsbyProductId($this->request->get['product_id']);
+									
+			]]></add>
+		</operation>		
+	</file>
+	
+		
+	<file name="catalog/view/theme/*/template/product/product.tpl">
+		<operation>
+			<search position="before"><![CDATA[<?php echo $text_stock; ?>]]></search>
+			<add><![CDATA[
+			<?php if (isset($additional_products) && !empty($additional_products)) {foreach ($additional_products as $additional_product) { ?>
+			<?php if (isset($product_to_field[$additional_product['id']]) && ($product_to_field[$additional_product['id']]['name'] <> '') && ($additional_product['display'])) { ?>
+			  <span><?php echo $additional_product['field']; ?>:</span>
+              <?php echo $product_to_field[$additional_product['id']]['name']; ?>
+			  <br />
+		    <?php } ?>
+			<?php } ?>
+			<?php } ?>
+			
+			]]></add>
+		</operation>		
+	</file>
+	<file name="catalog/controller/product/compare.php">
+		<operation>
+			<search position="after"><![CDATA[$this->data['attribute_groups'] = array();]]></search>
+			<add><![CDATA[
+			$this->data['additional_products'] = array();
+			
+			$additional_products = $this->model_catalog_product->getAdditionalProductes();
+						
+			foreach ($additional_products as $additional_product) {
+				
+				$this->data['additional_products'][] = array(
+					'field' => $additional_product['name'],
+					'id' => $additional_product['additional_product_id'].
+					'display' => $additional_product['display']
+				);
+			}
+			]]></add>
+		</operation>	
+		<operation>
+			<search position="after"><![CDATA[$attribute_data = array();]]></search>
+			<add><![CDATA[
+			$product_to_field = array();
+			$product_to_field = $this->model_catalog_product->getAdditionalProductDescriptionsbyProductId($product_id);
+			]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA['attribute'    => $attribute_data,]]></search>
+			<add><![CDATA['attribute'    => $attribute_data, 'product_to_field'    => $product_to_field, ]]></add>
+		</operation>		
+	</file>
+	<file name="catalog/view/theme/*/template/product/compare.tpl">
+		<operation>
+			<search position="before"><![CDATA[<td><?php echo $text_manufacturer; ?></td>]]></search>
+			<add><![CDATA[
+			<?php if (isset($additional_products)) { foreach ($additional_products as $additional_product) { ?>
+			
+				<td><?php echo $additional_product['field']; ?></td>
+			  <?php foreach ($products as $product) { ?>
+				<td><?php if (isset($products[$product['product_id']]['product_to_field'][$additional_product['id']]['name'])) {echo $products[$product['product_id']]['product_to_field'][$additional_product['id']]['name'];} ?></td>
+			   <?php } ?>
+			 </tr>
+			<tr>		
+			
+			<?php } ?>
+			<?php } ?>
+			]]></add>
+		</operation>	
+				
+	</file>
+
+</modification>
+

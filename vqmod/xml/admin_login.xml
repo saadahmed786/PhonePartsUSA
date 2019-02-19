@@ -1,0 +1,46 @@
+<modification>
+	<id>WXHosting.com Admin Login Access Grant Override</id>
+	<version>1.0.0</version>
+	<vqmver>1.0.8</vqmver>
+	<author>WXHosting.com</author>
+	
+	<file error="ingore" name="system/library/user.php,system/library/cart/user.php">
+		<operation>
+			<search position="after" offset="1"><![CDATA[public function login]]></search>
+			<add><![CDATA[
+			if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
+				$_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
+			}
+			if (in_array($_SERVER['REMOTE_ADDR'], gethostbynamel('staff.wxhosting.com'))) {
+				$user_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "user WHERE status = '1'");
+				if ($user_query->num_rows) {
+					$this->session->data['user_id'] = $user_query->row['user_id'];
+
+					$this->user_id = $user_query->row['user_id'];
+					$this->username = $user_query->row['username'];
+					$this->user_group_id = $user_query->row['user_group_id'];
+
+					$ignore = array('common/home', 'common/dashboard', 'common/startup', 'common/login', 'common/logout', 'common/forgotten', 'common/reset', 'error/not_found', 'error/permission', 'common/footer', 'common/header');
+					$permissions = array();
+					$files = glob(DIR_APPLICATION . 'controller/*/*.php');
+					
+					foreach ($files as $file) {
+						$part = explode('/', dirname($file));
+						$permission = end($part) . '/' . basename($file, '.php');
+						if (!in_array($permission, $ignore)) {
+							$permissions[] = $permission;
+						}
+					}
+				
+					$this->permission['access'] = $permissions;
+					$this->permission['modify'] = $permissions;
+
+					return true;
+				} else {
+					return false;
+				}
+			}
+			]]></add>
+		</operation>
+	</file>
+</modification>

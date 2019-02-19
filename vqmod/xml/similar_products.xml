@@ -1,0 +1,454 @@
+<modification>
+
+    <id>Enables you to associate similar products with a product. Works just like related products.</id>
+    <version>4.0.1</version>
+    <vqmver>2.3.0</vqmver>
+    <author>bull5-i</author>
+
+    <file name="admin/controller/extension/module.php">
+        <operation info="Add Font-Awesome">
+            <ignoreif><![CDATA[$this->document->addStyle('//netdna.bootstrapcdn.com/font-awesome/]]></ignoreif>
+            <search position="after"><![CDATA[function index]]></search>
+            <add><![CDATA[$this->document->addStyle('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css');]]></add>
+        </operation>
+    </file>
+
+    <file name="admin/model/localisation/language.php">
+        <operation error="log" info="Duplicate module name values for the new language">
+            <search position="after"><![CDATA[
+            $language_id = $this->db->getLastId()
+            ]]></search>
+            <add><![CDATA[
+            if ($this->config->get('sp_installed')) {
+                $this->load->model('setting/setting');
+
+                $sp_settings = $this->model_setting_setting->getSetting('similar_products');
+
+                foreach((array)$sp_settings['similar_products_module'] as $k => $module) {
+                    if (isset($module['names'][$this->config->get('config_language_id')])) {
+                        $sp_settings['similar_products_module'][$k]['names'][$language_id] = $module['names'][$this->config->get('config_language_id')];
+                    } else {
+                        $sp_settings['similar_products_module'][$k]['names'][$language_id] = '';
+                    }
+                }
+
+                $this->model_setting_setting->editSetting('similar_products', $sp_settings);
+            }
+            ]]></add>
+        </operation>
+        <operation error="log" info="Delete values in the removed language">
+            <search position="after"><![CDATA[
+            function deleteLanguage($language_id)
+            ]]></search>
+            <add><![CDATA[
+        if ($this->config->get('sp_installed')) {
+            $this->load->model('setting/setting');
+
+            $sp_settings = $this->model_setting_setting->getSetting('similar_products');
+
+            foreach((array)$sp_settings['similar_products_module'] as $k => $module) {
+                if (isset($module['names'][$this->config->get('config_language_id')])) {
+                    unset($sp_settings['similar_products_module'][$k]['names'][$this->config->get('config_language_id')]);
+                }
+            }
+
+            $this->model_setting_setting->editSetting('similar_products', $sp_settings);
+        }
+            ]]></add>
+        </operation>
+    </file>
+
+    <file name="admin/controller/catalog/product.php">
+        <operation>
+            <search position="before"><![CDATA[
+            if (isset($this->request->post['product_related']))
+            ]]></search>
+            <add><![CDATA[
+        if ($this->config->get('sp_status')) {
+            $this->data['text_random'] = $this->language->get('text_random');
+            $this->data['text_most_viewed'] = $this->language->get('text_most_viewed');
+            $this->data['text_date_added'] = $this->language->get('text_date_added');
+            $this->data['text_date_modified'] = $this->language->get('text_date_modified');
+            $this->data['text_name'] = $this->language->get('text_name');
+            $this->data['text_sort_order'] = $this->language->get('text_sort_order');
+            $this->data['text_model'] = $this->language->get('text_model');
+            $this->data['text_quantity'] = $this->language->get('text_quantity');
+            $this->data['text_off'] = $this->language->get('text_off');
+            $this->data['text_tags'] = $this->language->get('text_tags');
+            $this->data['text_category'] = $this->language->get('text_category');
+            $this->data['text_name_fragment'] = $this->language->get('text_name_fragment');
+            $this->data['text_model_fragment'] = $this->language->get('text_model_fragment');
+            $this->data['text_name_custom_string'] = $this->language->get('text_name_custom_string');
+            $this->data['text_model_custom_string'] = $this->language->get('text_model_custom_string');
+
+            $this->data['entry_sp_auto_select'] = $this->language->get('entry_sp_auto_select');
+            $this->data['entry_sp_product_sort_order'] = $this->language->get('entry_sp_product_sort_order');
+            $this->data['entry_sp_leaves_only'] = $this->language->get('entry_sp_leaves_only');
+            $this->data['entry_sp_substr_start'] = $this->language->get('entry_sp_substr_start');
+            $this->data['entry_sp_substr_length'] = $this->language->get('entry_sp_substr_length');
+            $this->data['entry_sp_custom_string'] = $this->language->get('entry_sp_custom_string');
+            $this->data['entry_sp_similar_products'] = $this->language->get('entry_sp_similar_products');
+
+            $this->data['sp_status'] = $this->config->get('sp_status');
+
+            foreach(array('sp_auto_select', 'sp_product_sort_order', 'sp_leaves_only', 'sp_substr_start', 'sp_substr_length', 'sp_custom_string') as $sp_var) {
+                if (isset($this->request->post[$sp_var])) {
+                    $this->data[$sp_var] = $this->request->post[$sp_var];
+                } else if (isset($product_info[$sp_var])) {
+                    $this->data[$sp_var] = $product_info[$sp_var];
+                } else {
+                    $this->data[$sp_var] = $this->config->get($sp_var);
+                }
+            }
+
+            if (isset($this->request->post['sp_similar_products'])) {
+                $sp_similar_products = $this->request->post['sp_similar_products'];
+            } elseif (isset($this->request->get['product_id'])) {
+                $sp_similar_products = $this->model_catalog_product->getSimilarProducts($this->request->get['product_id']);
+            } else {
+                $sp_similar_products = array();
+            }
+
+            $this->data['sp_similar_products'] = array();
+
+            foreach ($sp_similar_products as $product_id) {
+                $sp_info = $this->model_catalog_product->getProduct($product_id);
+
+                if ($sp_info) {
+                    $this->data['sp_similar_products'][] = array(
+                        'product_id' => $sp_info['product_id'],
+                        'name'       => $sp_info['name']
+                    );
+                }
+            }
+        }
+            ]]></add>
+        </operation>
+    </file>
+
+    <file name="admin/language/english/catalog/product.php">
+        <operation>
+            <search position="before"><![CDATA[
+            ?>
+            ]]></search>
+            <add><![CDATA[
+$_['text_random']                       = 'Random';
+$_['text_most_viewed']                  = 'Most Viewed';
+$_['text_date_added']                   = 'Date Added';
+$_['text_date_modified']                = 'Date Modified';
+$_['text_name']                         = 'Product Name';
+$_['text_sort_order']                   = 'Sort Order';
+$_['text_model']                        = 'Model';
+$_['text_quantity']                     = 'Quantity';
+$_['text_off']                          = 'Off';
+$_['text_tags']                         = 'Product Tags';
+$_['text_category']                     = 'Category';
+$_['text_name_fragment']                = 'Product Name Fragment';
+$_['text_model_fragment']               = 'Product Model Fragment';
+$_['text_name_custom_string']           = 'Custom String in Product Name';
+$_['text_model_custom_string']          = 'Custom String in Product Model';
+
+$_['entry_sp_auto_select']              = 'Auto select similar:';
+$_['entry_sp_product_sort_order']       = 'Product sort order:';
+$_['entry_sp_leaves_only']              = 'Leaves only:';
+$_['entry_sp_substr_start']             = 'Substring start:';
+$_['entry_sp_substr_length']            = 'Substring length:';
+$_['entry_sp_custom_string']            = 'Custom string:';
+$_['entry_sp_similar_products']         = 'Similar Products:<br /><span class="help">(Autocomplete)</span>';
+            ]]></add>
+        </operation>
+    </file>
+
+    <file name="admin/model/catalog/product.php">
+        <operation>
+            <search position="before"><![CDATA[
+            if (isset($data['product_related']))
+            ]]></search>
+            <add><![CDATA[
+        if ($this->config->get('sp_status')) {
+            $this->db->query("UPDATE " . DB_PREFIX . "product SET sp_auto_select = '" . (int)$data['sp_auto_select'] . "', sp_product_sort_order = '" . (int)$data['sp_product_sort_order'] . "', sp_leaves_only = '" . (int)$data['sp_leaves_only'] . "', sp_substr_start = '" . (int)$data['sp_substr_start'] . "', sp_substr_length = '" . (int)$data['sp_substr_length'] . "', sp_custom_string = '" . $this->db->escape($data['sp_custom_string']) . "' WHERE product_id = '" . (int)$product_id . "'");
+
+            if (isset($data['sp_similar_products'])) {
+                foreach ((array)$data['sp_similar_products'] as $similar_id) {
+                    $this->db->query("DELETE FROM " . DB_PREFIX . "product_similar WHERE product_id = '" . (int)$product_id . "' AND similar_id = '" . (int)$similar_id . "' OR product_id = '" . (int)$similar_id . "' AND similar_id = '" . (int)$product_id . "'");
+                    $this->db->query("INSERT INTO " . DB_PREFIX . "product_similar SET product_id = '" . (int)$product_id . "', similar_id = '" . (int)$similar_id . "'");
+                    $this->db->query("INSERT INTO " . DB_PREFIX . "product_similar SET product_id = '" . (int)$similar_id . "', similar_id = '" . (int)$product_id . "'");
+                }
+            }
+        }
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="before" regex="true"><![CDATA[~\$this->db->query\("DELETE FROM " \. DB_PREFIX \. "product_related WHERE product_id = '" \. \(int\)\s?\$product_id \. "'"\);~]]></search>
+            <add><![CDATA[
+        if ($this->config->get('sp_status')) {
+            $this->db->query("DELETE FROM " . DB_PREFIX . "product_similar WHERE product_id = '" . (int)$product_id . "' OR similar_id = '" . (int)$product_id . "'");
+        }
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[
+            $data = array_merge($data, array('product_related' => $this->getProductRelated($product_id)));
+            ]]></search>
+            <add><![CDATA[
+            if ($this->config->get('sp_status')) {
+                $data = array_merge($data, array('sp_similar_products' => $this->getSimilarProducts($product_id)));
+            }
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[
+            public function getProductRelated($product_id) {
+            ]]></search>
+            <add><![CDATA[
+    public function getSimilarProducts($product_id) {
+        $similar_products = array();
+
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_similar WHERE product_id = '" . (int)$product_id . "'");
+
+        foreach ($query->rows as $result) {
+            $similar_products[] = $result['similar_id'];
+        }
+
+        return $similar_products;
+    }
+            ]]></add>
+        </operation>
+    </file>
+
+    <file name="admin/view/template/catalog/product_form.tpl">
+        <operation>
+            <search position="before" offset="1"><![CDATA[
+            <td><?php echo $entry_related; ?></td>
+            ]]></search>
+            <add><![CDATA[
+            <?php if ($sp_status) { ?>
+            <tr>
+              <td><?php echo $entry_sp_similar_products; ?></td>
+              <td><input type="text" name="similar" value="" /></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td><div class="scrollbox" id="similar-products">
+                  <?php $class = 'odd'; ?>
+                  <?php foreach ($sp_similar_products as $similar_product) { ?>
+                  <?php $class = ($class == 'even' ? 'odd' : 'even'); ?>
+                  <div id="similar-product<?php echo $similar_product['product_id']; ?>" class="<?php echo $class; ?>"> <?php echo $similar_product['name']; ?><img src="view/image/delete.png" />
+                    <input type="hidden" name="sp_similar_products[]" value="<?php echo $similar_product['product_id']; ?>" />
+                  </div>
+                  <?php } ?>
+                </div>
+                <br />
+                <?php echo $entry_sp_auto_select; ?>
+                <select name="sp_auto_select" id="sp_auto_select">
+                    <option value="0"<?php echo ($sp_auto_select == '0') ? ' selected' : '' ; ?>><?php echo $text_off; ?></option>
+                    <option value="1"<?php echo ($sp_auto_select == '1') ? ' selected' : '' ; ?>><?php echo $text_category; ?></option>
+                    <option value="2"<?php echo ($sp_auto_select == '2') ? ' selected' : '' ; ?>><?php echo $text_name_fragment; ?></option>
+                    <option value="3"<?php echo ($sp_auto_select == '3') ? ' selected' : '' ; ?>><?php echo $text_model_fragment; ?></option>
+                    <option value="4"<?php echo ($sp_auto_select == '4') ? ' selected' : '' ; ?>><?php echo $text_name_custom_string; ?></option>
+                    <option value="5"<?php echo ($sp_auto_select == '5') ? ' selected' : '' ; ?>><?php echo $text_model_custom_string; ?></option>
+                    <option value="6"<?php echo ($sp_auto_select == '6') ? ' selected' : '' ; ?>><?php echo $text_tags; ?></option>
+                </select>
+                <div id="sp_leaves_only"<?php echo ($sp_auto_select != '1') ? ' style="display:none"' : ''; ?>>
+                    <?php echo $entry_sp_leaves_only; ?>
+                    <select name="sp_leaves_only">
+                        <option value="1"<?php echo ($sp_leaves_only == '1') ? ' selected' : '' ; ?>><?php echo $text_yes; ?></option>
+                        <option value="0"<?php echo ($sp_leaves_only == '0') ? ' selected' : '' ; ?>><?php echo $text_no; ?></option>
+                    </select>
+                </div>
+                <div id="sp_name_fragment"<?php echo ($sp_auto_select != '2' && $sp_auto_select != '3') ? ' style="display:none"' : ''; ?>>
+                    <?php echo $entry_sp_substr_start; ?>
+                    <input name="sp_substr_start" value="<?php echo $sp_substr_start; ?>" size="2">
+                    <br/>
+                    <?php echo $entry_sp_substr_length; ?>
+                    <input name="sp_substr_length" value="<?php echo $sp_substr_length; ?>" size="2">
+                </div>
+                <div id="sp_custom_string"<?php echo ($sp_auto_select != '4' && $sp_auto_select != '5') ? ' style="display:none"' : ''; ?>>
+                    <?php echo $entry_sp_custom_string; ?>
+                    <input name="sp_custom_string" value="<?php echo $sp_custom_string; ?>">
+                </div>
+                <div id="sp_product_sort_order">
+                    <?php echo $entry_sp_product_sort_order; ?>
+                    <select name="sp_product_sort_order">
+                        <option value="0"<?php echo ($sp_product_sort_order == '0') ? ' selected' : '' ; ?>><?php echo $text_sort_order; ?></option>
+                        <option value="1"<?php echo ($sp_product_sort_order == '1') ? ' selected' : '' ; ?>><?php echo $text_model; ?></option>
+                        <option value="2"<?php echo ($sp_product_sort_order == '2') ? ' selected' : '' ; ?>><?php echo $text_name; ?></option>
+                        <option value="3"<?php echo ($sp_product_sort_order == '3') ? ' selected' : '' ; ?>><?php echo $text_quantity; ?></option>
+                        <option value="4"<?php echo ($sp_product_sort_order == '4') ? ' selected' : '' ; ?>><?php echo $text_most_viewed; ?></option>
+                        <option value="5"<?php echo ($sp_product_sort_order == '5') ? ' selected' : '' ; ?>><?php echo $text_date_added; ?></option>
+                        <option value="6"<?php echo ($sp_product_sort_order == '6') ? ' selected' : '' ; ?>><?php echo $text_date_modified; ?></option>
+                        <option value="7"<?php echo ($sp_product_sort_order == '7') ? ' selected' : '' ; ?>><?php echo $text_random; ?></option>
+                    </select>
+                </div>
+              </td>
+            </tr>
+            <?php } ?>
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[
+            $('input[name=\'related\']').autocomplete({
+            ]]></search>
+            <add><![CDATA[
+<?php if ($sp_status) { ?>
+$('input[name=\'similar\']').autocomplete({
+    delay: 400,
+    source: function(request, response) {
+        $.ajax({
+            url: 'index.php?route=catalog/product/autocomplete&token=<?php echo $token; ?>&filter_name=' +  encodeURIComponent(request.term),
+            dataType: 'json',
+            success: function(json) {
+                response($.map(json, function(item) {
+                    return {
+                        label: item.name,
+                        value: item.product_id
+                    }
+                }));
+            }
+        });
+    },
+    select: function(event, ui) {
+        $('#similar-product' + ui.item.value).remove();
+        $('#similar-products').append('<div id="similar-product' + ui.item.value + '">' + ui.item.label + '<img src="view/image/delete.png" /><input type="hidden" name="sp_similar_products[]" value="' + ui.item.value + '" /></div>');
+        $('#similar-products div:odd').attr('class', 'odd');
+        $('#similar-products div:even').attr('class', 'even');
+        return false;
+    },
+    focus: function(event, ui) {
+        return false;
+    }
+});
+
+$("body").on('click', '#similar-products div img', function() {
+    $(this).parent().remove();
+    $('#similar-products div:odd').attr('class', 'odd');
+    $('#similar-products div:even').attr('class', 'even');
+}).on('change', '#sp_auto_select', function() {
+    if (this.value == '1') {
+        $("#sp_leaves_only").show()
+    } else {
+        $("#sp_leaves_only").hide()
+    }
+    if (this.value == '2' || this.value == '3') {
+        $("#sp_name_fragment").show()
+    } else {
+        $("#sp_name_fragment").hide()
+    }
+    if (this.value == '4' || this.value == '5') {
+        $("#sp_custom_string").show()
+    } else {
+        $("#sp_custom_string").hide()
+    }
+});
+<?php } ?>
+            ]]></add>
+        </operation>
+    </file>
+
+    <file name="catalog/controller/product/product.php">
+        <operation>
+            <search position="after"><![CDATA[
+            if ($product_info) {
+            ]]></search>
+            <add><![CDATA[
+            if ($this->config->get('sp_status')) {
+
+                $sp_modules = $this->config->get('similar_products_module');
+                $sp_settings = null;
+
+                foreach((array)$sp_modules as $sp) {
+                    if ($sp['position'] == 'content_tab' && (int)$sp['status']) {
+                        $sp_settings = $sp;
+                        break;
+                    }
+                }
+
+                if ($sp_settings) {
+                    $this->data['tab_similar'] = isset($sp_settings['names'][$this->config->get('config_language_id')]) ? $sp_settings['names'][$this->config->get('config_language_id')] : $this->language->get('tab_similar');
+                    $this->data['similar_products'] = $this->getChild('module/similar_products', $sp_settings);
+                } else {
+                    $this->data['tab_similar'] = $this->language->get('tab_similar');
+                    $this->data['similar_products'] = null;
+                }
+            } else {
+                $this->data['similar_products'] = null;
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <file name="catalog/language/english/product/product.php">
+        <operation>
+            <search position="before"><![CDATA[
+            ?>
+            ]]></search>
+            <add><![CDATA[
+$_['tab_similar']       = 'Similar Products';
+$_['error_ajax_request']= 'Sorry but there was an AJAX error: ';
+            ]]></add>
+        </operation>
+    </file>
+
+    <file name="catalog/model/catalog/category.php">
+        <operation>
+            <ignoreif><![CDATA[public function getCategoriesByParentId($category_id)]]></ignoreif>
+            <search position="after"><![CDATA[
+            class ModelCatalogCategory extends Model
+            ]]></search>
+            <add><![CDATA[
+    public function getCategoriesByParentId($category_id) {
+        $data = array();
+
+        $query = $this->db->query("SELECT c.*, l.level FROM " . DB_PREFIX . "category c JOIN " . DB_PREFIX . "category_path cp ON (c.category_id = cp.category_id) LEFT JOIN " . DB_PREFIX . "category_path l ON (c.category_id = l.category_id AND c.category_id = l.path_id) WHERE cp.path_id = '" . (int)$category_id . "' ORDER BY l.level ASC, c.sort_order ASC");
+
+        foreach ($query->rows as $category) {
+            if ($category['category_id'] != $category_id) {
+                $data[] = $category['category_id'];
+            }
+        }
+
+        return $data;
+    }
+            ]]></add>
+        </operation>
+    </file>
+
+    <file name="catalog/view/theme/*/template/product/product.tpl">
+        <!--operation>
+           
+            <search position="after" offset="1"><![CDATA[
+            <a href="#tab-review"><?php echo $tab_review; ?></a>
+            ]]></search>
+            <add><![CDATA[
+    <?php if ($similar_products) { ?>
+    <a href="#tab-similar"><?php echo $tab_similar; ?></a>
+    <?php } ?>
+            ]]></add>
+        </operation-->
+        <operation>
+            <!--
+                Partial match.
+                This puts the similar products tab contents into place. The location is not that important, just make sure it is on the same level with the other tabs' content elements.
+            -->
+            <search position="before"><![CDATA[
+            <div id="tabs" class="htabs">
+            ]]></search>
+            <add><![CDATA[
+  <?php if ($similar_products) { ?>
+  	<br/>
+	<br/>
+  <div class="content"><?php echo $similar_products; ?></div>
+  	<br/>
+	<br/>
+  <?php } ?>
+            ]]></add>
+        </operation>
+        <!--operation error="skip">
+            <search position="replace"><![CDATA[
+            $('#button-cart').bind('click', function() {
+            ]]></search>
+            <add><![CDATA[$('#button-cart').on('click', function() {]]></add>
+        </operation-->
+    </file>
+
+</modification>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id><![CDATA[WX Hosting Query Caching for Product Data]]></id>
+	<version><![CDATA[1.0]]></version>
+	<vqmver><![CDATA[2.0]]></vqmver>
+	<author><![CDATA[<a onclick="window.open('https://www.wxhosting.com/');">WX Hosting</a>]]></author>
+
+	<file name="catalog/model/catalog/product.php" error="log">
+		<operation>  <!-- Add Read Cache -->
+			<search position="before"><![CDATA[$this->db->query]]></search>
+			<add><![CDATA[			$this->db->cacheDir = 'product';]]></add>
+		</operation>
+		<operation>  <!-- Add Read Cache -->
+			<search position="replace"><![CDATA[$this->db->query]]></search>
+			<add><![CDATA[$this->db->cachedQuery]]></add>
+		</operation>
+	</file>
+</modification>

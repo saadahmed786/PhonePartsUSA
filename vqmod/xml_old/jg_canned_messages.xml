@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>Canned Messages</id>
+	<version>1.1.1</version>
+	<vqmver>2.X</vqmver>
+	<author>Jay Gilford - jay@jaygilford.com</author>
+    
+    <!-- ADD MENU ITEM TO LOCALISATION -->
+	<file name="admin/controller/common/header.php">
+		<operation>
+			<search position="after"><![CDATA[$this->data['text_length_class'] =]]></search>
+			<add><![CDATA[		$this->data['text_canned_messages'] = $this->language->get('text_canned_messages');]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[$this->data['length_class'] =]]></search>
+			<add><![CDATA[$this->data['canned_messages'] = $this->url->link('localisation/canned_messages', 'token=' . $this->session->data['token'], 'SSL');]]></add>
+		</operation>
+	</file>
+    
+	<file name="admin/language/english/common/header.php">
+		<operation>
+			<search position="after"><![CDATA[$_['text_length_class']]]></search>
+			<add><![CDATA[$_['text_canned_messages'] = 'Canned Messages';]]></add>
+		</operation>
+	</file>
+    
+	<file name="admin/view/template/common/header.tpl">
+		<operation>
+			<search position="before"><![CDATA[<?php echo $language; ?>]]></search>
+			<add><![CDATA[              <li><a href="<?php echo $canned_messages; ?>"><?php echo $text_canned_messages; ?></a></li>]]></add>
+		</operation>
+	</file>
+	<!-- /ADD MENU ITEM TO LOCALISATION -->
+	
+	<!-- ADD DROPDOWN TO ORDER PAGE -->
+    
+	<file name="admin/controller/sale/order.php">
+		<operation>
+			<search position="after"><![CDATA[$this->data['entry_notify']]]></search>
+			<add><![CDATA[			$this->data['entry_canned_message'] = $this->language->get('entry_canned_message');
+			$this->data['text_select'] = $this->language->get('text_select');
+			
+			$this->load->model('localisation/canned_messages');
+			$canned_messages = $this->model_localisation_canned_messages->getCannedMessages();
+			
+			foreach($canned_messages as $k => $canned_message) {
+				$canned_messages[$k]['message'] = $this->model_localisation_canned_messages->orderMergeMessage($canned_messages[$k]['message'], $order_info['order_id']);
+			}
+			
+			$this->data['canned_messages'] = $this->getJSON($canned_messages);
+			
+			]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[public function index()]]></search>
+			<add><![CDATA[	private function getJSON($data) {
+		if(file_exists(DIR_SYSTEM . 'library/json.php')){
+			$this->load->library('json');
+			return JSON::encode($data);
+		} else {
+			return json_encode($data);
+		}
+	}
+	]]></add>
+		</operation>
+	</file>
+    
+	<file name="admin/language/english/sale/order.php">
+		<operation>
+			<search position="after"><![CDATA[$_['entry_notify']]]></search>
+			<add><![CDATA[$_['entry_canned_message'] = 'Canned Message:';]]></add>
+		</operation>
+	</file>
+    
+	<file name="admin/view/template/sale/order_info.tpl">
+		<operation>
+			<search position="before"><![CDATA[<?php echo $footer; ?>]]></search>
+			<add><![CDATA[<script type="text/javascript"><!--
+var canned_messages = <?php echo empty($canned_messages) ? "''" : $canned_messages; ?>;
+var msgs = {};
+$(function() {
+	if(canned_messages.length) {
+		$.each(canned_messages, function(i, msg) {
+			msgs[msg.canned_message_id] = msg.message;
+			$('#canned_message').append('<option value="' + msg.canned_message_id + '">' + msg.title + '</option>');
+		});
+	}
+	
+	$('#canned_message').change(function() {
+		var id = $(this).val();
+		if(id > 0) {
+			$('input[name=notify]').attr('checked', 'checked');
+			if(typeof CKEDITOR !== 'undefined' && typeof CKEDITOR.instances.comment == 'object') {
+				CKEDITOR.instances.comment.setData(msgs[id]);
+			} else {
+				$('.comment-box').val(msgs[id]);
+			}
+		}
+	});
+
+	
+	$('#canned_message').keyup(function() {
+		$(this).change();
+	});
+});
+--></script>]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[<textarea name="comment"]]></search>
+			<add><![CDATA[<textarea name="comment" class="comment-box"]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[<?php echo $entry_comment; ?>]]></search>
+			<add><![CDATA[<?php echo $entry_canned_message; ?></td>
+            <td>
+			  <select id="canned_message">
+			    <option value=""><?php echo $text_select; ?></option>
+			  </select>
+			</td>
+          </tr>
+          <tr>
+            <td><?php echo $entry_comment; ?>]]></add>
+		</operation>
+	</file>
+	<!-- /ADD DROPDOWN TO ORDER PAGE -->
+    
+    <!-- TEMPLATE
+    
+	<file name="">
+		<operation>
+			<search position="before"><![CDATA[]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+	</file>
+    
+	<file name="">
+		<operation>
+			<search position="after"><![CDATA[]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+	</file>
+    
+    -->
+    
+</modification>

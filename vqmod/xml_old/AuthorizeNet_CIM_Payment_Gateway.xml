@@ -1,0 +1,136 @@
+<modification>
+	<id>Adds AuthorizeNet CIM Link in Account Module(Account Page)</id>
+	<version>1.0.0</version>
+	<vqmver>2.X</vqmver>
+	<author>memiso</author>
+	<file name="catalog/controller/module/account.php">
+		<operation>
+			<search position="after"><![CDATA[
+    	$this->data['heading_title'] = $this->language->get('heading_title');
+]]></search>
+			<add><![CDATA[
+			
+		$this->data['text_cimpaymentprofiles'] = $this->language->get('text_cimpaymentprofiles');
+		$this->data['cimpaymentprofiles'] = $this->url->link('account/authorizenetcim', '', 'SSL');
+
+]]></add>
+		</operation>
+	</file>
+		<file name="catalog/language/*/module/account.php">
+		<operation>
+			<search position="bottom"><![CDATA[]]></search>
+			<add><![CDATA[
+<?php			
+$_['text_cimpaymentprofiles']  = 'Payment Profiles';
+?>
+]]></add>
+		</operation>
+	</file>
+			<file name="catalog/view/theme/*/template/module/account.tpl">
+		<operation>
+			<search position="before"><![CDATA[
+<li><a href="<?php echo $wishlist; ?>"><?php echo $text_wishlist; ?></a></li>
+			]]></search>
+			<add><![CDATA[
+      <li><a href="<?php echo $cimpaymentprofiles; ?>"><?php echo $text_cimpaymentprofiles; ?></a></li>
+]]></add>
+		</operation>
+	</file>
+	
+	
+	<file name="/catalog/controller/account/address.php">
+		<operation>
+			<search position="after"><![CDATA[
+			$this->session->data['success'] = $this->language->get('text_update');
+]]></search>
+			<add><![CDATA[
+			if ( $this->config->get('authorizenet_cim_use_shipping_address') == 'usecimshippingaddress' ) {
+				// update cim shipping address if created
+				$this->updateCimAddress($this->request->get['address_id']);
+			}
+			
+]]></add>
+		</operation>
+	</file>
+	
+	<file name="/catalog/controller/account/address.php">
+		<operation>
+			<search position="before"><![CDATA[
+  	public function delete() {
+]]></search>
+			<add><![CDATA[
+			
+			/*
+  	private function deleteCimAddress($address_id) {
+  		$this->load->model('authorizenet/cim_customer');
+  		$this->load->model('account/address');
+  		
+  		$cim_customerID = $this->model_authorizenet_cim_customer->getCimCustomerCimID($this->customer->getId());
+  		if (!$cim_customerID) {
+  			return true;
+  		}
+  		$customerShippingAdressId = $this->model_authorizenet_cim_customer->getCustomerCimShippingAddressId($this->customer->getId(),$address_id);
+  		if (!$customerShippingAdressId) {
+  			return true;
+  		}
+
+  		$request = new AuthorizeNetCIM();
+  		$response = $request->deleteCustomerShippingAddress($cim_customerID, $customerShippingAdressId);
+  		if (trim($response->xml->messages->message->code) == "I00001") {
+  			return true;
+  		}else{
+  			$this->authorizenet_cim_log->write('CIM deleteCimAddress('.$cim_customerID.') Failed. Error Code:'.$response->xml->messages->message->code.' Error Message'.$response->xml->messages->message->text.'');
+  			return false;
+  		}  		
+  	}
+  	*/
+  	private function updateCimAddress($address_id) {
+  		
+		$this->load->model('authorizenet/cim_customer');
+		$this->load->model('account/address');
+		
+		$cim_customerID = $this->model_authorizenet_cim_customer->getCimCustomerCimID($this->customer->getId());
+		if (!$cim_customerID) {
+			return true;
+		}
+  		$customerShippingAdressId = $this->model_authorizenet_cim_customer->getCustomerCimShippingAddressId($this->customer->getId(),$address_id);
+  		if (!$customerShippingAdressId) {
+  			return true;
+  		}
+  		$address_info = $this->model_account_address->getAddress($address_id);  		
+  		if (!$address_info) {
+  			return false;
+  		}
+  		$cim_address = new AuthorizeNetAddress();
+  		
+  		$cim_address->firstName = $address_info['firstname'] ;
+  		$cim_address->lastName = $address_info['lastname'] ;
+  		if(isset($address_info['company']) && $address_info['company']) { $cim_address->company = $address_info['company'] ;}
+  		$cim_address->address = $address_info['address_1'].' '.$address_info['address_2'] ;
+  		$cim_address->city = $address_info['city'] ;
+  		$cim_address->state = $address_info['zone'] ;
+  		$cim_address->zip = $address_info['postcode'] ;
+  		$cim_address->country = $address_info['country'] ;
+  		//$cim_address->phoneNumber = $address_info['telephone'] ;
+  		//$cim_address->faxNumber = $address_info['fax'] ;
+  		//$cim_address->customerAddressId = $address_id ;
+  		
+  		$request = new AuthorizeNetCIM();
+  		$response = $request->updateCustomerShippingAddress($cim_customerID, $customerShippingAdressId,$cim_address);
+  		if (trim($response->xml->messages->message->code) == "I00001") {
+  			return true;
+  		}else{
+  			$this->authorizenet_cim_log->write('CIM updateCimAddress('.$cim_customerID.') Failed. Error Code:'.$response->xml->messages->message->code.' Error Message'.$response->xml->messages->message->text.'');
+  			// remove cim shipping adress id
+  			$this->model_authorizenet_cim_customer->addCustomerCimShippingAddressId($this->customer->getId(),$address_id,'0');
+  			return false;
+  		}  		
+  	}
+			
+]]></add>
+		</operation>
+	</file>
+	
+	
+	
+</modification>

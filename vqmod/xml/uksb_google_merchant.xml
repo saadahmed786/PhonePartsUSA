@@ -1,0 +1,901 @@
+<modification>
+	<id>UKSB Google Merchant</id>
+	<version>4.0.2</version>
+	<vqmver>2.4.1</vqmver>
+	<author>http://www.opencart-extensions.co.uk</author>
+	<file name="admin/controller/catalog/category.php">
+		<operation>
+			<search position="after"><![CDATA[		$this->data['tab_design'] = $this->language->get('tab_design');]]></search>
+			<add><![CDATA[		
+		if (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1'))) {
+			$this->data['uksbhome'] = 'https://www.secureserverssl.co.uk/opencart-extensions/google-merchant/';
+		}else{
+			$this->data['uksbhome'] = 'http://www.opencart-extensions.co.uk/google-merchant/';
+		}
+
+		$this->language->load('feed/uksb_google_merchant');
+		// Google Merchant
+		$this->data['tab_google'] = $this->language->get('tab_google');
+		$this->data['entry_p_google_category'] = $this->language->get('entry_p_google_category');
+		$this->data['entry_choose_google_category'] = $this->language->get('entry_choose_google_category');
+		$this->data['entry_choose_google_category_xml'] = $this->language->get('entry_choose_google_category_xml');
+		$this->data['help_p_google_category'] = $this->language->get('help_p_google_category');
+		$this->data['warning_nogpc'] = $this->language->get('warning_nogpc');
+		$this->language->load('catalog/category');]]></add>
+		</operation>
+		<operation>
+			<search position="after" offset="1"><![CDATA[			$this->data['status'] = 1;]]></search>
+			<add><![CDATA[		
+		if (isset($this->request->post['google_category_gb'])) {
+			$this->data['google_category_gb'] = $this->request->post['google_category_gb'];
+			$this->data['google_category_us'] = $this->request->post['google_category_us'];
+			$this->data['google_category_au'] = $this->request->post['google_category_au'];
+			$this->data['google_category_fr'] = $this->request->post['google_category_fr'];
+			$this->data['google_category_de'] = $this->request->post['google_category_de'];
+			$this->data['google_category_it'] = $this->request->post['google_category_it'];
+			$this->data['google_category_nl'] = $this->request->post['google_category_nl'];
+			$this->data['google_category_es'] = $this->request->post['google_category_es'];
+			$this->data['google_category_pt'] = $this->request->post['google_category_pt'];
+			$this->data['google_category_cz'] = $this->request->post['google_category_cz'];
+			$this->data['google_category_jp'] = $this->request->post['google_category_jp'];
+			$this->data['google_category_dk'] = $this->request->post['google_category_dk'];
+			$this->data['google_category_no'] = $this->request->post['google_category_no'];
+			$this->data['google_category_pl'] = $this->request->post['google_category_pl'];
+			$this->data['google_category_ru'] = $this->request->post['google_category_ru'];
+			$this->data['google_category_sv'] = $this->request->post['google_category_sv'];
+			$this->data['google_category_tr'] = $this->request->post['google_category_tr'];
+		} elseif (!empty($category_info)) {
+			$this->data['google_category_gb'] = $category_info['google_category_gb'];
+			$this->data['google_category_us'] = $category_info['google_category_us'];
+			$this->data['google_category_au'] = $category_info['google_category_au'];
+			$this->data['google_category_fr'] = $category_info['google_category_fr'];
+			$this->data['google_category_de'] = $category_info['google_category_de'];
+			$this->data['google_category_it'] = $category_info['google_category_it'];
+			$this->data['google_category_nl'] = $category_info['google_category_nl'];
+			$this->data['google_category_es'] = $category_info['google_category_es'];
+			$this->data['google_category_pt'] = $category_info['google_category_pt'];
+			$this->data['google_category_cz'] = $category_info['google_category_cz'];
+			$this->data['google_category_jp'] = $category_info['google_category_jp'];
+			$this->data['google_category_dk'] = $category_info['google_category_dk'];
+			$this->data['google_category_no'] = $category_info['google_category_no'];
+			$this->data['google_category_pl'] = $category_info['google_category_pl'];
+			$this->data['google_category_ru'] = $category_info['google_category_ru'];
+			$this->data['google_category_sv'] = $category_info['google_category_sv'];
+			$this->data['google_category_tr'] = $category_info['google_category_tr'];
+		} else {
+			$this->data['google_category_gb'] = '';
+			$this->data['google_category_us'] = '';
+			$this->data['google_category_au'] = '';
+			$this->data['google_category_fr'] = '';
+			$this->data['google_category_de'] = '';
+			$this->data['google_category_it'] = '';
+			$this->data['google_category_nl'] = '';
+			$this->data['google_category_es'] = '';
+			$this->data['google_category_pt'] = '';
+			$this->data['google_category_cz'] = '';
+			$this->data['google_category_jp'] = '';
+			$this->data['google_category_dk'] = '';
+			$this->data['google_category_no'] = '';
+			$this->data['google_category_pl'] = '';
+			$this->data['google_category_ru'] = '';
+			$this->data['google_category_sv'] = '';
+			$this->data['google_category_tr'] = '';
+		}]]></add>
+		</operation>
+	</file>
+	<file name="admin/controller/catalog/product.php">
+		<operation>
+			<search position="after" offset="1"><![CDATA[		$this->data['tab_design'] = $this->language->get('tab_design');]]></search>
+			<add><![CDATA[		
+		if (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1'))) {
+			$this->data['uksbhome'] = 'https://www.secureserverssl.co.uk/opencart-extensions/google-merchant/';
+		}else{
+			$this->data['uksbhome'] = 'http://www.opencart-extensions.co.uk/google-merchant/';
+		}
+
+		$this->language->load('feed/uksb_google_merchant');
+		// Google Merchant
+		$this->data['tab_google'] = $this->language->get('tab_google');
+		$this->data['entry_p_on_google'] = $this->language->get('entry_p_on_google');
+		$this->data['help_p_on_google'] = $this->language->get('help_p_on_google');
+		$this->data['entry_p_expiry_date'] = $this->language->get('entry_p_expiry_date');
+		$this->data['entry_p_identifier_exists'] = $this->language->get('entry_p_identifier_exists');
+		$this->data['entry_p_condition'] = $this->language->get('entry_p_condition');
+		$this->data['entry_p_brand'] = $this->language->get('entry_p_brand');
+		$this->data['entry_p_mpn'] = $this->language->get('entry_p_mpn');
+		$this->data['entry_p_gtin'] = $this->language->get('entry_p_gtin');
+		$this->data['entry_p_google_category'] = $this->language->get('entry_p_google_category');
+		$this->data['entry_choose_google_category'] = $this->language->get('entry_choose_google_category');
+		$this->data['entry_choose_google_category_xml'] = $this->language->get('entry_choose_google_category_xml');
+		$this->data['help_p_google_category'] = $this->language->get('help_p_google_category');
+		$this->data['entry_p_multipack'] = $this->language->get('entry_p_multipack');
+		$this->data['entry_p_is_bundle'] = $this->language->get('entry_p_is_bundle');
+		$this->data['entry_p_adult'] = $this->language->get('entry_p_adult');
+		$this->data['entry_p_energy_efficiency_class'] = $this->language->get('entry_p_energy_efficiency_class');
+		$this->data['entry_p_unit_pricing_measure'] = $this->language->get('entry_p_unit_pricing_measure');
+		$this->data['entry_p_unit_pricing_base_measure'] = $this->language->get('entry_p_unit_pricing_base_measure');
+		$this->data['entry_p_gender'] = $this->language->get('entry_p_gender');
+		$this->data['entry_p_age_group'] = $this->language->get('entry_p_age_group');
+		$this->data['entry_p_size_type'] = $this->language->get('entry_p_size_type');
+		$this->data['entry_p_size_system'] = $this->language->get('entry_p_size_system');
+		$this->data['entry_variant_section'] = $this->language->get('entry_variant_section');
+		$this->data['entry_p_colour'] = $this->language->get('entry_p_colour');
+		$this->data['entry_p_size'] = $this->language->get('entry_p_size');
+		$this->data['entry_p_material'] = $this->language->get('entry_p_material');
+		$this->data['entry_p_pattern'] = $this->language->get('entry_p_pattern');
+		$this->data['entry_v_mpn'] = $this->language->get('entry_v_mpn');
+		$this->data['entry_v_gtin'] = $this->language->get('entry_v_gtin');
+		$this->data['entry_v_prices'] = $this->language->get('entry_v_prices');
+		$this->data['button_remove'] = $this->language->get('button_remove');
+		$this->data['button_add_variant'] = $this->language->get('button_add_variant');
+		$this->data['entry_adwords_section'] = $this->language->get('entry_adwords_section');
+		$this->data['help_p_custom_label'] = $this->language->get('help_p_custom_label');
+		$this->data['entry_p_custom_label_0'] = $this->language->get('entry_p_custom_label_0');
+		$this->data['entry_p_custom_label_1'] = $this->language->get('entry_p_custom_label_1');
+		$this->data['entry_p_custom_label_2'] = $this->language->get('entry_p_custom_label_2');
+		$this->data['entry_p_custom_label_3'] = $this->language->get('entry_p_custom_label_3');
+		$this->data['entry_p_custom_label_4'] = $this->language->get('entry_p_custom_label_4');
+		$this->data['entry_p_adwords_redirect'] = $this->language->get('entry_p_adwords_redirect');
+		$this->data['entry_help_section'] = $this->language->get('entry_help_section');
+		$this->data['help_google_help'] = $this->language->get('help_google_help');
+		$this->data['text_condition_new'] = $this->language->get('text_condition_new');
+		$this->data['text_condition_used'] = $this->language->get('text_condition_used');
+		$this->data['text_condition_ref'] = $this->language->get('text_condition_ref');
+		$this->data['text_male'] = $this->language->get('text_male');
+		$this->data['text_female'] = $this->language->get('text_female');
+		$this->data['text_unisex'] = $this->language->get('text_unisex');
+		$this->data['text_newborn'] = $this->language->get('text_newborn');
+		$this->data['text_infant'] = $this->language->get('text_infant');
+		$this->data['text_toddler'] = $this->language->get('text_toddler');
+		$this->data['text_kids'] = $this->language->get('text_kids');
+		$this->data['text_adult'] = $this->language->get('text_adult');
+		$this->data['text_regular'] = $this->language->get('text_regular');
+		$this->data['text_petite'] = $this->language->get('text_petite');
+		$this->data['text_plus'] = $this->language->get('text_plus');
+		$this->data['text_big_and_tall'] = $this->language->get('text_big_and_tall');
+		$this->data['text_maternity'] = $this->language->get('text_maternity');
+		$this->data['warning_mpn_model'] = $this->language->get('warning_mpn_model');
+		$this->data['warning_mpn_sku'] = $this->language->get('warning_mpn_sku');
+		$this->data['warning_mpn_location'] = $this->language->get('warning_mpn_location');
+		$this->data['warning_gtin_upc'] = $this->language->get('warning_gtin_upc');
+		$this->data['warning_gtin_sku'] = $this->language->get('warning_gtin_sku');
+		$this->data['warning_gtin_location'] = $this->language->get('warning_gtin_location');
+		$this->data['warning_nogpc'] = $this->language->get('warning_nogpc');
+		$this->language->load('catalog/product');
+		
+]]></add>
+		</operation>
+		<operation>
+			<search position="after" offset="1"><![CDATA[      		$this->data['location'] = '';]]></search>
+			<add><![CDATA[
+		if (isset($this->request->post['g_mpn'])) {
+      		$this->data['g_mpn'] = $this->request->post['g_mpn'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_mpn'] = $product_info['g_mpn'];
+		} else {
+      		$this->data['g_mpn'] = '';
+    	}
+
+		if (isset($this->request->post['g_gtin'])) {
+      		$this->data['g_gtin'] = $this->request->post['g_gtin'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_gtin'] = $product_info['g_gtin'];
+		} else {
+      		$this->data['g_gtin'] = '';
+    	}
+
+		if (isset($this->request->post['google_category_gb'])) {
+			$this->data['google_category_gb'] = $this->request->post['google_category_gb'];
+			$this->data['google_category_us'] = $this->request->post['google_category_us'];
+			$this->data['google_category_au'] = $this->request->post['google_category_au'];
+			$this->data['google_category_fr'] = $this->request->post['google_category_fr'];
+			$this->data['google_category_de'] = $this->request->post['google_category_de'];
+			$this->data['google_category_it'] = $this->request->post['google_category_it'];
+			$this->data['google_category_nl'] = $this->request->post['google_category_nl'];
+			$this->data['google_category_es'] = $this->request->post['google_category_es'];
+			$this->data['google_category_pt'] = $this->request->post['google_category_pt'];
+			$this->data['google_category_cz'] = $this->request->post['google_category_cz'];
+			$this->data['google_category_jp'] = $this->request->post['google_category_jp'];
+			$this->data['google_category_dk'] = $this->request->post['google_category_dk'];
+			$this->data['google_category_no'] = $this->request->post['google_category_no'];
+			$this->data['google_category_pl'] = $this->request->post['google_category_pl'];
+			$this->data['google_category_ru'] = $this->request->post['google_category_ru'];
+			$this->data['google_category_sv'] = $this->request->post['google_category_sv'];
+			$this->data['google_category_tr'] = $this->request->post['google_category_tr'];
+		} elseif (!empty($product_info)) {
+			$this->data['google_category_gb'] = $product_info['google_category_gb'];
+			$this->data['google_category_us'] = $product_info['google_category_us'];
+			$this->data['google_category_au'] = $product_info['google_category_au'];
+			$this->data['google_category_fr'] = $product_info['google_category_fr'];
+			$this->data['google_category_de'] = $product_info['google_category_de'];
+			$this->data['google_category_it'] = $product_info['google_category_it'];
+			$this->data['google_category_nl'] = $product_info['google_category_nl'];
+			$this->data['google_category_es'] = $product_info['google_category_es'];
+			$this->data['google_category_pt'] = $product_info['google_category_pt'];
+			$this->data['google_category_cz'] = $product_info['google_category_cz'];
+			$this->data['google_category_jp'] = $product_info['google_category_jp'];
+			$this->data['google_category_dk'] = $product_info['google_category_dk'];
+			$this->data['google_category_no'] = $product_info['google_category_no'];
+			$this->data['google_category_pl'] = $product_info['google_category_pl'];
+			$this->data['google_category_ru'] = $product_info['google_category_ru'];
+			$this->data['google_category_sv'] = $product_info['google_category_sv'];
+			$this->data['google_category_tr'] = $product_info['google_category_tr'];
+		} else {
+			$this->data['google_category_gb'] = '';
+			$this->data['google_category_us'] = '';
+			$this->data['google_category_au'] = '';
+			$this->data['google_category_fr'] = '';
+			$this->data['google_category_de'] = '';
+			$this->data['google_category_it'] = '';
+			$this->data['google_category_nl'] = '';
+			$this->data['google_category_es'] = '';
+			$this->data['google_category_pt'] = '';
+			$this->data['google_category_cz'] = '';
+			$this->data['google_category_jp'] = '';
+			$this->data['google_category_dk'] = '';
+			$this->data['google_category_no'] = '';
+			$this->data['google_category_pl'] = '';
+			$this->data['google_category_ru'] = '';
+			$this->data['google_category_sv'] = '';
+			$this->data['google_category_tr'] = '';
+		}
+
+		if (isset($this->request->post['g_expiry_date'])) {
+      		$this->data['g_expiry_date'] = $this->request->post['g_expiry_date'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_expiry_date'] = $product_info['g_expiry_date'];
+		} else {
+      		$this->data['g_expiry_date'] = '';
+    	}
+
+		if (isset($this->request->post['g_gender'])) {
+      		$this->data['g_gender'] = $this->request->post['g_gender'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_gender'] = $product_info['g_gender'];
+		} else {
+      		$this->data['g_gender'] = '';
+    	}
+
+		if (isset($this->request->post['g_age_group'])) {
+      		$this->data['g_age_group'] = $this->request->post['g_age_group'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_age_group'] = $product_info['g_age_group'];
+		} else {
+      		$this->data['g_age_group'] = '';
+    	}
+
+		if (isset($this->request->post['g_colour'])) {
+      		$this->data['g_colour'] = $this->request->post['g_colour'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_colour'] = $product_info['g_colour'];
+		} else {
+      		$this->data['g_colour'] = '';
+    	}
+
+		if (isset($this->request->post['g_size'])) {
+      		$this->data['g_size'] = $this->request->post['g_size'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_size'] = $product_info['g_size'];
+		} else {
+      		$this->data['g_size'] = '';
+    	}
+
+		if (isset($this->request->post['g_size_type'])) {
+      		$this->data['g_size_type'] = $this->request->post['g_size_type'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_size_type'] = $product_info['g_size_type'];
+		} else {
+      		$this->data['g_size_type'] = '';
+    	}
+
+		if (isset($this->request->post['g_size_system'])) {
+      		$this->data['g_size_system'] = $this->request->post['g_size_system'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_size_system'] = $product_info['g_size_system'];
+		} else {
+      		$this->data['g_size_system'] = '';
+    	}
+
+		if (isset($this->request->post['g_material'])) {
+      		$this->data['g_material'] = $this->request->post['g_material'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_material'] = $product_info['g_material'];
+		} else {
+      		$this->data['g_material'] = '';
+    	}
+
+		if (isset($this->request->post['g_pattern'])) {
+      		$this->data['g_pattern'] = $this->request->post['g_pattern'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_pattern'] = $product_info['g_pattern'];
+		} else {
+      		$this->data['g_pattern'] = '';
+    	}
+
+		if (isset($this->request->post['g_condition'])) {
+      		$this->data['g_condition'] = $this->request->post['g_condition'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_condition'] = $product_info['g_condition'];
+		} else {
+      		$this->data['g_condition'] = '';
+    	}
+
+		if (isset($this->request->post['g_brand'])) {
+      		$this->data['g_brand'] = $this->request->post['g_brand'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_brand'] = $product_info['g_brand'];
+		} else {
+      		$this->data['g_brand'] = '';
+    	}
+
+		if (isset($this->request->post['variant'])) {
+			$variants = $this->request->post['variant'];
+		} elseif (!empty($product_info)) {
+			$xcolour = explode(",", $product_info['g_colour']);
+			$xsize = explode(",", $product_info['g_size']);
+			$xmaterial = explode(",", $product_info['g_material']);
+			$xpattern = explode(",", $product_info['g_pattern']);
+			$xmpn = explode(",", $product_info['v_mpn']);
+			$xgtin = explode(",", $product_info['v_gtin']);
+			$xprices = explode(",", $product_info['v_prices']);
+			$ximages = explode(",", $product_info['v_images']);
+			
+			foreach (array_keys($xcolour) as $key){
+				$variants[$key]['g_colour'] = (array_key_exists($key, $xcolour)?$xcolour[$key]:'');
+				$variants[$key]['g_size'] = (array_key_exists($key, $xsize)?$xsize[$key]:'');
+				$variants[$key]['g_material'] = (array_key_exists($key, $xmaterial)?$xmaterial[$key]:'');
+				$variants[$key]['g_pattern'] = (array_key_exists($key, $xpattern)?$xpattern[$key]:'');
+				$variants[$key]['v_mpn'] = (array_key_exists($key, $xmpn)?$xmpn[$key]:'');
+				$variants[$key]['v_gtin'] = (array_key_exists($key, $xgtin)?$xgtin[$key]:'');
+				$variants[$key]['v_prices'] = (array_key_exists($key, $xprices)?$xprices[$key]:'');
+				$variants[$key]['v_images'] = (array_key_exists($key, $ximages)?$ximages[$key]:'');
+			}
+		} else {
+			$variants = array();
+		}
+
+		$this->load->model('tool/image');
+
+		$this->data['variants'] = array();
+
+		foreach ($variants as $variant) {
+			if ($variant['v_images'] && file_exists(DIR_IMAGE . $variant['v_images'])) {
+				$v_images = $variant['v_images'];
+			} else {
+				$v_images = 'no_image.jpg';
+			}
+
+			$this->data['variants'][] = array(
+				'g_colour'               => $variant['g_colour'],
+				'g_size'               => $variant['g_size'],
+				'g_material'               => $variant['g_material'],
+				'g_pattern'               => $variant['g_pattern'],
+				'v_mpn'               => $variant['v_mpn'],
+				'v_gtin'               => $variant['v_gtin'],
+				'v_prices'               => $variant['v_prices'],
+				'v_images'                    => $v_images,
+				'thumb'                    => $this->model_tool_image->resize($v_images, 100, 100)
+			);
+		}
+
+		$this->data['no_image'] = $this->model_tool_image->resize('no_image.jpg', 100, 100);
+
+		if (isset($this->request->post['v_mpn'])) {
+      		$this->data['v_mpn'] = $this->request->post['v_mpn'];
+    	} elseif (!empty($product_info)) {
+			$this->data['v_mpn'] = $product_info['v_mpn'];
+		} else {
+      		$this->data['v_mpn'] = '';
+    	}
+
+		if (isset($this->request->post['v_gtin'])) {
+      		$this->data['v_gtin'] = $this->request->post['v_gtin'];
+    	} elseif (!empty($product_info)) {
+			$this->data['v_gtin'] = $product_info['v_gtin'];
+		} else {
+      		$this->data['v_gtin'] = '';
+    	}
+
+		if (isset($this->request->post['v_prices'])) {
+      		$this->data['v_prices'] = $this->request->post['v_prices'];
+    	} elseif (!empty($product_info)) {
+			$this->data['v_prices'] = $product_info['v_prices'];
+		} else {
+      		$this->data['v_prices'] = '';
+    	}
+
+		if (isset($this->request->post['v_images'])) {
+      		$this->data['v_images'] = $this->request->post['v_images'];
+    	} elseif (!empty($product_info)) {
+			$this->data['v_images'] = $product_info['v_images'];
+		} else {
+      		$this->data['v_images'] = '';
+    	}
+
+		if (isset($this->request->post['g_on_google'])) {
+      		$this->data['g_on_google'] = $this->request->post['g_on_google'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_on_google'] = $product_info['g_on_google'];
+		} else {
+      		$this->data['g_on_google'] = '';
+    	}
+		
+		if (isset($this->request->post['g_adwords_redirect'])){
+			$this->data['g_adwords_redirect'] = $this->request->post['g_adwords_redirect'];
+		} elseif (!empty($product_info)) {
+			$this->data['g_adwords_redirect'] = $product_info['g_adwords_redirect'];
+		} else {
+			$this->data['g_adwords_redirect'] = '';
+		}
+				
+		if (isset($this->request->post['g_identifier_exists'])) {
+      		$this->data['g_identifier_exists'] = $this->request->post['g_identifier_exists'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_identifier_exists'] = $product_info['g_identifier_exists'];
+		} else {
+      		$this->data['g_identifier_exists'] = '';
+    	}
+				
+		if (isset($this->request->post['g_multipack'])) {
+      		$this->data['g_multipack'] = $this->request->post['g_multipack'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_multipack'] = $product_info['g_multipack'];
+		} else {
+      		$this->data['g_multipack'] = '';
+    	}
+				
+		if (isset($this->request->post['g_is_bundle'])) {
+      		$this->data['g_is_bundle'] = $this->request->post['g_is_bundle'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_is_bundle'] = $product_info['g_is_bundle'];
+		} else {
+      		$this->data['g_is_bundle'] = '';
+    	}
+				
+		if (isset($this->request->post['g_adult'])) {
+      		$this->data['g_adult'] = $this->request->post['g_adult'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_adult'] = $product_info['g_adult'];
+		} else {
+      		$this->data['g_adult'] = '';
+    	}
+				
+		if (isset($this->request->post['g_custom_label_0'])) {
+      		$this->data['g_custom_label_0'] = $this->request->post['g_custom_label_0'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_custom_label_0'] = $product_info['g_custom_label_0'];
+		} else {
+      		$this->data['g_custom_label_0'] = '';
+    	}
+				
+		if (isset($this->request->post['g_custom_label_1'])) {
+      		$this->data['g_custom_label_1'] = $this->request->post['g_custom_label_1'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_custom_label_1'] = $product_info['g_custom_label_1'];
+		} else {
+      		$this->data['g_custom_label_1'] = '';
+    	}
+				
+		if (isset($this->request->post['g_custom_label_2'])) {
+      		$this->data['g_custom_label_2'] = $this->request->post['g_custom_label_2'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_custom_label_2'] = $product_info['g_custom_label_2'];
+		} else {
+      		$this->data['g_custom_label_2'] = '';
+    	}
+				
+		if (isset($this->request->post['g_custom_label_3'])) {
+      		$this->data['g_custom_label_3'] = $this->request->post['g_custom_label_3'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_custom_label_3'] = $product_info['g_custom_label_3'];
+		} else {
+      		$this->data['g_custom_label_3'] = '';
+    	}
+				
+		if (isset($this->request->post['g_custom_label_4'])) {
+      		$this->data['g_custom_label_4'] = $this->request->post['g_custom_label_4'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_custom_label_4'] = $product_info['g_custom_label_4'];
+		} else {
+      		$this->data['g_custom_label_4'] = '';
+    	}
+				
+		if (isset($this->request->post['g_unit_pricing_measure'])) {
+      		$this->data['g_unit_pricing_measure'] = $this->request->post['g_unit_pricing_measure'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_unit_pricing_measure'] = $product_info['g_unit_pricing_measure'];
+		} else {
+      		$this->data['g_unit_pricing_measure'] = '';
+    	}
+				
+		if (isset($this->request->post['g_unit_pricing_base_measure'])) {
+      		$this->data['g_unit_pricing_base_measure'] = $this->request->post['g_unit_pricing_base_measure'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_unit_pricing_base_measure'] = $product_info['g_unit_pricing_base_measure'];
+		} else {
+      		$this->data['g_unit_pricing_base_measure'] = '';
+    	}
+				
+		if (isset($this->request->post['g_energy_efficiency_class'])) {
+      		$this->data['g_energy_efficiency_class'] = $this->request->post['g_energy_efficiency_class'];
+    	} elseif (!empty($product_info)) {
+			$this->data['g_energy_efficiency_class'] = $product_info['g_energy_efficiency_class'];
+		} else {
+      		$this->data['g_energy_efficiency_class'] = '';
+    	}]]></add>
+		</operation>
+	</file>
+	<file name="admin/model/catalog/category.php">
+		<operation>
+			<search position="after"><![CDATA[$category_id = $this->db->getLastId();]]></search>
+			<add><![CDATA[
+		$this->db->query("INSERT INTO " . DB_PREFIX . "uksb_google_merchant_categories VALUES ('".(int)$category_id."', '" . $this->db->escape($data['google_category_gb']) . "', '" . $this->db->escape($data['google_category_us']) . "', '" . $this->db->escape($data['google_category_au']) . "', '" . $this->db->escape($data['google_category_fr']) . "', '" . $this->db->escape($data['google_category_de']) . "', '" . $this->db->escape($data['google_category_it']) . "', '" . $this->db->escape($data['google_category_nl']) . "', '" . $this->db->escape($data['google_category_es']) . "', '" . $this->db->escape($data['google_category_pt']) . "', '" . $this->db->escape($data['google_category_cz']) . "', '" . $this->db->escape($data['google_category_jp']) . "', '" . $this->db->escape($data['google_category_dk']) . "', '" . $this->db->escape($data['google_category_no']) . "', '" . $this->db->escape($data['google_category_pl']) . "', '" . $this->db->escape($data['google_category_ru']) . "', '" . $this->db->escape($data['google_category_sv']) . "', '" . $this->db->escape($data['google_category_tr']) . "')");]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[date_modified = NOW() WHERE category_id = '" . (int)$category_id . "'");]]></search>
+			<add><![CDATA[
+		$this->db->query("UPDATE " . DB_PREFIX . "uksb_google_merchant_categories SET google_category_gb = '" . $this->db->escape($data['google_category_gb']) . "', google_category_us = '" . $this->db->escape($data['google_category_us']) . "', google_category_au = '" . $this->db->escape($data['google_category_au']) . "', google_category_fr = '" . $this->db->escape($data['google_category_fr']) . "', google_category_de = '" . $this->db->escape($data['google_category_de']) . "', google_category_it = '" . $this->db->escape($data['google_category_it']) . "', google_category_nl = '" . $this->db->escape($data['google_category_nl']) . "', google_category_es = '" . $this->db->escape($data['google_category_es']) . "', google_category_pt = '" . $this->db->escape($data['google_category_pt']) . "', google_category_cz = '" . $this->db->escape($data['google_category_cz']) . "', google_category_jp = '" . $this->db->escape($data['google_category_jp']) . "', google_category_dk = '" . $this->db->escape($data['google_category_dk']) . "', google_category_no = '" . $this->db->escape($data['google_category_no']) . "', google_category_pl = '" . $this->db->escape($data['google_category_pl']) . "', google_category_ru = '" . $this->db->escape($data['google_category_ru']) . "', google_category_sv = '" . $this->db->escape($data['google_category_sv']) . "', google_category_tr = '" . $this->db->escape($data['google_category_tr']) . "' WHERE category_id = '".(int)$category_id."'");]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[$this->db->query("DELETE FROM " . DB_PREFIX . "category WHERE category_id = '" . (int)$category_id . "'");]]></search>
+			<add><![CDATA[		$this->db->query("DELETE FROM " . DB_PREFIX . "uksb_google_merchant_categories WHERE category_id = '" . (int)$category_id . "'");]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[SELECT DISTINCT *, (SELECT keyword FROM " . DB_PREFIX . "url_alias WHERE query = 'category_id=" . (int)$category_id . "') AS keyword FROM " . DB_PREFIX . "category WHERE category_id = '" . (int)$category_id . "']]></search>
+			<add><![CDATA[SELECT DISTINCT *, (SELECT keyword FROM " . DB_PREFIX . "url_alias WHERE query = 'category_id=" . (int)$category_id . "') AS keyword FROM " . DB_PREFIX . "category c LEFT JOIN " . DB_PREFIX . "uksb_google_merchant_categories cg ON (cg.category_id = c.category_id) WHERE c.category_id = '" . (int)$category_id . "']]></add>
+		</operation>
+	</file>
+	<file name="admin/model/catalog/product.php">
+		<operation>
+			<search position="after"><![CDATA[$product_id = $this->db->getLastId();]]></search>
+			<add><![CDATA[
+		if(isset($data['variant'])){
+			foreach($data['variant'] as $key => $val){
+				foreach($data['variant'][$key] as $key2 => $val2){
+						$data[$key2.'x'][] = ($val2!='no_image.jpg'?$val2:'');
+				}
+			}
+		}
+			
+		$data['g_colour'] = (isset($data['variant'])?implode(',', $data['g_colourx']):'');
+		$data['g_size'] = (isset($data['variant'])?implode(',', $data['g_sizex']):'');
+		$data['g_material'] = (isset($data['variant'])?implode(',', $data['g_materialx']):'');
+		$data['g_pattern'] = (isset($data['variant'])?implode(',', $data['g_patternx']):'');
+		$data['v_mpn'] = (isset($data['variant'])?implode(',', $data['v_mpnx']):'');
+		$data['v_gtin'] = (isset($data['variant'])?implode(',', $data['v_gtinx']):'');
+		$data['v_prices'] = (isset($data['variant'])?implode(',', $data['v_pricesx']):'');
+		$data['v_images'] = (isset($data['variant'])?implode(',', $data['v_imagesx']):'');
+		
+		$this->db->query("INSERT INTO " . DB_PREFIX . "uksb_google_merchant_products VALUES ('".(int)$product_id."', '".(int)$data['g_on_google']."', '" . $this->db->escape($data['google_category_gb']) . "', '" . $this->db->escape($data['google_category_us']) . "', '" . $this->db->escape($data['google_category_au']) . "', '" . $this->db->escape($data['google_category_fr']) . "', '" . $this->db->escape($data['google_category_de']) . "', '" . $this->db->escape($data['google_category_it']) . "', '" . $this->db->escape($data['google_category_nl']) . "', '" . $this->db->escape($data['google_category_es']) . "', '" . $this->db->escape($data['google_category_pt']) . "', '" . $this->db->escape($data['google_category_cz']) . "', '" . $this->db->escape($data['google_category_jp']) . "', '" . $this->db->escape($data['google_category_dk']) . "', '" . $this->db->escape($data['google_category_no']) . "', '" . $this->db->escape($data['google_category_pl']) . "', '" . $this->db->escape($data['google_category_ru']) . "', '" . $this->db->escape($data['google_category_sv']) . "', '" . $this->db->escape($data['google_category_tr']) . "', '" . $this->db->escape($data['g_condition']) . "', '" . $this->db->escape($data['g_brand']) . "', '" . $this->db->escape($data['g_gtin']) . "', '".(int)$data['g_identifier_exists'] . "', '" . $this->db->escape($data['g_gender']) . "', '" . $this->db->escape($data['g_age_group']) . "', '" . $this->db->escape($data['g_colour']) . "', '" . $this->db->escape($data['g_size']) . "', '" . $this->db->escape($data['g_size_type']) . "', '" . $this->db->escape($data['g_size_system']) . "', '" . $this->db->escape($data['g_material']) . "', '" . $this->db->escape($data['g_pattern']) . "', '".$this->db->escape($data['g_mpn'])."', '" . $this->db->escape($data['v_mpn']) . "', '" . $this->db->escape($data['v_gtin']) . "', '" . $this->db->escape($data['v_prices']) . "', '" . $this->db->escape($data['v_images']) . "', '".(int)$data['g_multipack'] . "', '".(int)$data['g_is_bundle'] . "', '".(int)$data['g_adult'] . "', '" . $this->db->escape($data['g_adwords_redirect']) . "', '" . $this->db->escape($data['g_custom_label_0']) . "', '" . $this->db->escape($data['g_custom_label_1']) . "', '" . $this->db->escape($data['g_custom_label_2']) . "', '" . $this->db->escape($data['g_custom_label_3']) . "', '" . $this->db->escape($data['g_custom_label_4']) . "', '" . $this->db->escape($data['g_expiry_date']) . "', '" . $this->db->escape($data['g_unit_pricing_measure']) . "', '" . $this->db->escape($data['g_unit_pricing_base_measure']) . "', '" . $this->db->escape($data['g_energy_efficiency_class']) . "')");]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[date_modified = NOW() WHERE product_id = '" . (int)$product_id . "'");]]></search>
+			<add><![CDATA[
+		if(isset($data['variant'])){
+			foreach($data['variant'] as $key => $val){
+				foreach($data['variant'][$key] as $key2 => $val2){
+						$data[$key2.'x'][] = ($val2!='no_image.jpg'?$val2:'');
+				}
+			}
+		}
+			
+		$data['g_colour'] = (isset($data['variant'])?implode(',', $data['g_colourx']):'');
+		$data['g_size'] = (isset($data['variant'])?implode(',', $data['g_sizex']):'');
+		$data['g_material'] = (isset($data['variant'])?implode(',', $data['g_materialx']):'');
+		$data['g_pattern'] = (isset($data['variant'])?implode(',', $data['g_patternx']):'');
+		$data['v_mpn'] = (isset($data['variant'])?implode(',', $data['v_mpnx']):'');
+		$data['v_gtin'] = (isset($data['variant'])?implode(',', $data['v_gtinx']):'');
+		$data['v_prices'] = (isset($data['variant'])?implode(',', $data['v_pricesx']):'');
+		$data['v_images'] = (isset($data['variant'])?implode(',', $data['v_imagesx']):'');
+		
+		$this->db->query("UPDATE " . DB_PREFIX . "uksb_google_merchant_products SET g_on_google = '" . (int)$data['g_on_google']."', google_category_gb = '" . $this->db->escape($data['google_category_gb']) . "', google_category_us = '" . $this->db->escape($data['google_category_us']) . "', google_category_au = '" . $this->db->escape($data['google_category_au']) . "', google_category_fr = '" . $this->db->escape($data['google_category_fr']) . "', google_category_de = '" . $this->db->escape($data['google_category_de']) . "', google_category_it = '" . $this->db->escape($data['google_category_it']) . "', google_category_nl = '" . $this->db->escape($data['google_category_nl']) . "', google_category_es = '" . $this->db->escape($data['google_category_es']) . "', google_category_pt = '" . $this->db->escape($data['google_category_pt']) . "', google_category_cz = '" . $this->db->escape($data['google_category_cz']) . "', google_category_jp = '" . $this->db->escape($data['google_category_jp']) . "', google_category_dk = '" . $this->db->escape($data['google_category_dk']) . "', google_category_no = '" . $this->db->escape($data['google_category_no']) . "', google_category_pl = '" . $this->db->escape($data['google_category_pl']) . "', google_category_ru = '" . $this->db->escape($data['google_category_ru']) . "', google_category_sv = '" . $this->db->escape($data['google_category_sv']) . "', google_category_tr = '" . $this->db->escape($data['google_category_tr']) . "', g_condition = '" . $this->db->escape($data['g_condition']) . "', g_brand = '" . $this->db->escape($data['g_brand']) . "', g_gtin = '" . $this->db->escape($data['g_gtin']) . "', g_identifier_exists = '" . (int)$data['g_identifier_exists'] . "', g_gender = '" . $this->db->escape($data['g_gender']) . "', g_age_group = '" . $this->db->escape($data['g_age_group']) . "', g_colour = '" . $this->db->escape($data['g_colour']) . "', `g_size` = '" . $this->db->escape($data['g_size']) . "', g_size_type = '" . $this->db->escape($data['g_size_type']) . "', g_size_system = '" . $this->db->escape($data['g_size_system']) . "', g_material = '" . $this->db->escape($data['g_material']) . "', `g_pattern` = '" . $this->db->escape($data['g_pattern']) . "', g_mpn = '" . $this->db->escape($data['g_mpn']) . "', v_mpn = '" . $this->db->escape($data['v_mpn']) . "', v_gtin = '" . $this->db->escape($data['v_gtin']) . "', v_prices = '" . $this->db->escape($data['v_prices']) . "', v_images = '" . $this->db->escape($data['v_images']) . "', g_multipack = '" . (int)$data['g_multipack'] . "', g_is_bundle = '" . (int)$data['g_is_bundle'] . "', g_adult = '" . (int)$data['g_adult'] . "', g_adwords_redirect = '" . $this->db->escape($data['g_adwords_redirect']) . "', g_custom_label_0 = '" . $this->db->escape($data['g_custom_label_0']) . "', g_custom_label_1 = '" . $this->db->escape($data['g_custom_label_1']) . "', g_custom_label_2 = '" . $this->db->escape($data['g_custom_label_2']) . "', g_custom_label_3 = '" . $this->db->escape($data['g_custom_label_3']) . "', g_custom_label_4 = '" . $this->db->escape($data['g_custom_label_4']) . "', g_expiry_date = '" . $this->db->escape($data['g_expiry_date']) . "', g_unit_pricing_measure = '" . $this->db->escape($data['g_unit_pricing_measure']) . "', g_unit_pricing_base_measure = '" . $this->db->escape($data['g_unit_pricing_base_measure']) . "', g_energy_efficiency_class = '" . $this->db->escape($data['g_energy_efficiency_class']) . "' WHERE product_id = '".(int)$product_id."'");]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[public function deleteProduct($product_id) {]]></search>
+			<add><![CDATA[		$this->db->query("DELETE FROM " . DB_PREFIX . "uksb_google_merchant_products WHERE product_id = '" . (int)$product_id . "'");]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[WHERE p.product_id = '" . (int)$product_id . "']]></search>
+			<add><![CDATA[LEFT JOIN " . DB_PREFIX . "uksb_google_merchant_products pg ON (pg.product_id = p.product_id) WHERE p.product_id = '" . (int)$product_id . "']]></add>
+		</operation>
+	</file>
+	<file name="admin/view/template/catalog/category_form.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<?php echo $tab_data; ?></a>]]></search>
+			<add><![CDATA[<?php echo $tab_data; ?></a><a href="#tab-google"><?php echo $tab_google; ?></a>]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[        <div id="tab-design">]]></search>
+			<add><![CDATA[        <div id="tab-google">
+          <table class="form">
+          <tr>
+            <td valign="top"><?php echo $entry_p_google_category; ?><br /><span class="help"><?php echo $help_p_google_category; ?><br /><br /><?php echo $entry_choose_google_category_xml; ?></span></td>
+            <td><?php $nogpc = 17; if($this->config->get('uksb_google_merchant_google_category_gb') != ''){ ?><img src="view/image/flags/gb.png" /> <input type="text" name="google_category_gb" value="<?php echo $google_category_gb; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_gb" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_us') != ''){ ?><img src="view/image/flags/us.png" /> <input type="text" name="google_category_us" value="<?php echo $google_category_us; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=en-US','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_us" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_au') != ''){ ?><img src="view/image/flags/au.png" /> <input type="text" name="google_category_au" value="<?php echo $google_category_au; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=en-AU','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_au" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_fr') != ''){ ?><img src="view/image/flags/fr.png" /> <input type="text" name="google_category_fr" value="<?php echo $google_category_fr; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=fr-FR','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_fr" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_de') != ''){ ?><img src="view/image/flags/de.png" /> <input type="text" name="google_category_de" value="<?php echo $google_category_de; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=de-DE','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_de" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_it') != ''){ ?><img src="view/image/flags/it.png" /> <input type="text" name="google_category_it" value="<?php echo $google_category_it; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=it-IT','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_it" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_nl') != ''){ ?><img src="view/image/flags/nl.png" /> <input type="text" name="google_category_nl" value="<?php echo $google_category_nl; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=nl-NL','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_nl" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_es') != ''){ ?><img src="view/image/flags/es.png" /> <input type="text" name="google_category_es" value="<?php echo $google_category_es; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=es-ES','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_es" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_pt') != ''){ ?><img src="view/image/flags/br.png" /> <input type="text" name="google_category_pt" value="<?php echo $google_category_pt; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=pt-BR','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_pt" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_cz') != ''){ ?><img src="view/image/flags/cz.png" /> <input type="text" name="google_category_cz" value="<?php echo $google_category_cz; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=cs-CZ','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_cz" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_jp') != ''){ ?><img src="view/image/flags/jp.png" /> <input type="text" name="google_category_jp" value="<?php echo $google_category_jp; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=ja-JP','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_jp" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_dk') != ''){ ?><img src="view/image/flags/dk.png" /> <input type="text" name="google_category_dk" value="<?php echo $google_category_dk; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=da-DK','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_dk" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_no') != ''){ ?><img src="view/image/flags/no.png" /> <input type="text" name="google_category_no" value="<?php echo $google_category_no; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=no-NO','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_no" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_pl') != ''){ ?><img src="view/image/flags/pl.png" /> <input type="text" name="google_category_pl" value="<?php echo $google_category_pl; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=pl-PL','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_pl" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_ru') != ''){ ?><img src="view/image/flags/ru.png" /> <input type="text" name="google_category_ru" value="<?php echo $google_category_ru; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=ru-RU','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_ru" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_sv') != ''){ ?><img src="view/image/flags/se.png" /> <input type="text" name="google_category_sv" value="<?php echo $google_category_sv; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=sv-SE','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_sv" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_tr') != ''){ ?><img src="view/image/flags/tr.png" /> <input type="text" name="google_category_tr" value="<?php echo $google_category_tr; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=tr-TR','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_tr" value="" /><?php } ?><?php if($nogpc === 0){ echo $warning_nogpc; } ?></td>
+          </tr>
+          </table>
+        </div>]]></add>
+		</operation>
+	</file>
+	<file name="admin/view/template/catalog/product_form.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<?php echo $tab_data; ?></a>]]></search>
+			<add><![CDATA[<?php echo $tab_data; ?></a><a href="#tab-google"><?php echo $tab_google; ?></a>]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[        <div id="tab-links">]]></search>
+			<add><![CDATA[        <div id="tab-google">
+          <table class="form">
+            <tr>
+              <td><?php echo $entry_p_on_google; ?></td>
+              <td><select name="g_on_google">
+                  <option value="1"<?php if ($g_on_google=='1') { ?> selected="selected"<?php } ?>><?php echo $text_yes; ?></option>
+                  <option value="0"<?php if ($g_on_google=='0') { ?> selected="selected"<?php } ?>><?php echo $text_no; ?></option>
+                </select><br /><?php echo $help_p_on_google; ?></td>
+            </tr>
+            <tr>
+              <td><?php echo $entry_p_expiry_date; ?></td>
+              <td><input type="text" id="g_expiry_date" name="g_expiry_date" value="<?php echo $g_expiry_date; ?>" size="10" /></td>
+            </tr>
+            <tr>
+              <td><?php echo $entry_p_identifier_exists; ?></td>
+              <td><select name="g_identifier_exists">
+                  <option value="1"<?php if ($g_identifier_exists=='1') { ?> selected="selected"<?php } ?>><?php echo $text_yes; ?></option>
+                  <option value="0"<?php if ($g_identifier_exists=='0') { ?> selected="selected"<?php } ?>><?php echo $text_no; ?></option>
+                </select></td>
+            </tr>
+            <tr>
+              <td><?php echo $entry_p_condition; ?></td>
+              <td><select name="g_condition">
+                  <option value="new"<?php if ($g_condition=='new'||($g_condition==''&&$this->config->get('uksb_google_merchant_condition')=='new')) { ?> selected="selected"<?php } ?>><?php echo $text_condition_new; ?></option>
+                  <option value="used"<?php if ($g_condition=='used'||($g_condition==''&&$this->config->get('uksb_google_merchant_condition')=='used')) { ?> selected="selected"<?php } ?>><?php echo $text_condition_used; ?></option>
+                  <option value="refurbished"<?php if ($g_condition=='refurbished'||($g_condition==''&&$this->config->get('uksb_google_merchant_condition')=='refurbished')) { ?> selected="selected"<?php } ?>><?php echo $text_condition_ref; ?></option>
+                  </select></td>
+            </tr>
+            <tr>
+              <td><?php echo $entry_p_brand; ?></td>
+              <td><input type="text" name="g_brand" value="<?php echo $g_brand; ?>" />
+                </td>
+            </tr>
+            <tr>
+              <td><?php echo $entry_p_mpn; ?></td>
+              <td><input type="text" name="g_mpn" value="<?php echo $g_mpn; ?>"<?php echo ($this->config->get('uksb_google_merchant_mpn')=='model'?' onclick="javascript:alert(\''.$warning_mpn_model.'\');"':($this->config->get('uksb_google_merchant_mpn')=='location'?' onclick="javascript:alert(\''.$warning_mpn_location.'\');"':($this->config->get('uksb_google_merchant_mpn')=='sku'?' onclick="javascript:alert(\''.$warning_mpn_sku.'\');"':''))); ?> />
+                </td>
+            </tr>
+            <tr>
+              <td><?php echo $entry_p_gtin; ?></td>
+              <td><input type="text" name="g_gtin" value="<?php echo $g_gtin; ?>"<?php echo ($this->config->get('uksb_google_merchant_g_gtin')=='upc'?' onclick="javascript:alert(\''.$warning_gtin_upc.'\');"':($this->config->get('uksb_google_merchant_g_gtin')=='location'?' onclick="javascript:alert(\''.$warning_gtin_location.'\');"':($this->config->get('uksb_google_merchant_g_gtin')=='sku'?' onclick="javascript:alert(\''.$warning_gtin_sku.'\');"':''))); ?> />
+                </td>
+            </tr>
+          <tr>
+            <td valign="top"><?php echo $entry_p_google_category; ?><br /><span class="help"><?php echo $help_p_google_category; ?><br /><br /><?php echo $entry_choose_google_category_xml; ?></span></td>
+            <td><?php $nogpc = 17; if($this->config->get('uksb_google_merchant_google_category_gb') != ''){ ?><img src="view/image/flags/gb.png" /> <input type="text" name="google_category_gb" value="<?php echo $google_category_gb; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_gb" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_us') != ''){ ?><img src="view/image/flags/us.png" /> <input type="text" name="google_category_us" value="<?php echo $google_category_us; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=en-US','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_us" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_au') != ''){ ?><img src="view/image/flags/au.png" /> <input type="text" name="google_category_au" value="<?php echo $google_category_au; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=en-AU','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_au" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_fr') != ''){ ?><img src="view/image/flags/fr.png" /> <input type="text" name="google_category_fr" value="<?php echo $google_category_fr; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=fr-FR','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_fr" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_de') != ''){ ?><img src="view/image/flags/de.png" /> <input type="text" name="google_category_de" value="<?php echo $google_category_de; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=de-DE','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_de" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_it') != ''){ ?><img src="view/image/flags/it.png" /> <input type="text" name="google_category_it" value="<?php echo $google_category_it; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=it-IT','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_it" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_nl') != ''){ ?><img src="view/image/flags/nl.png" /> <input type="text" name="google_category_nl" value="<?php echo $google_category_nl; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=nl-NL','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_nl" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_es') != ''){ ?><img src="view/image/flags/es.png" /> <input type="text" name="google_category_es" value="<?php echo $google_category_es; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=es-ES','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_es" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_pt') != ''){ ?><img src="view/image/flags/br.png" /> <input type="text" name="google_category_pt" value="<?php echo $google_category_pt; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=pt-BR','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_pt" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_cz') != ''){ ?><img src="view/image/flags/cz.png" /> <input type="text" name="google_category_cz" value="<?php echo $google_category_cz; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=cs-CZ','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_cz" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_jp') != ''){ ?><img src="view/image/flags/jp.png" /> <input type="text" name="google_category_jp" value="<?php echo $google_category_jp; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=ja-JP','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_jp" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_dk') != ''){ ?><img src="view/image/flags/dk.png" /> <input type="text" name="google_category_dk" value="<?php echo $google_category_dk; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=da-DK','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_dk" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_no') != ''){ ?><img src="view/image/flags/no.png" /> <input type="text" name="google_category_no" value="<?php echo $google_category_no; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=no-NO','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_no" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_pl') != ''){ ?><img src="view/image/flags/pl.png" /> <input type="text" name="google_category_pl" value="<?php echo $google_category_pl; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=pl-PL','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_pl" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_ru') != ''){ ?><img src="view/image/flags/ru.png" /> <input type="text" name="google_category_ru" value="<?php echo $google_category_ru; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=ru-RU','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_ru" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_sv') != ''){ ?><img src="view/image/flags/se.png" /> <input type="text" name="google_category_sv" value="<?php echo $google_category_sv; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=sv-SE','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><br /><br /><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_sv" value="" /><?php } ?>
+            <?php if($this->config->get('uksb_google_merchant_google_category_tr') != ''){ ?><img src="view/image/flags/tr.png" /> <input type="text" name="google_category_tr" value="<?php echo $google_category_tr; ?>" style="width:400px; font-size:9px;" /> <a onclick="window.open('<?php echo $uksbhome; ?>taxonomy.php?lang=tr-TR','google');"><img src="view/image/add.png" border="0" alt="" title="<?php echo $entry_choose_google_category; ?>"></a><?php }else{ $nogpc --; ?><input type="hidden" name="google_category_tr" value="" /><?php } ?><?php if($nogpc === 0){ echo $warning_nogpc; } ?></td>
+          </tr>
+            <tr>
+              <td><?php echo $entry_p_multipack; ?></td>
+              <td><input type="text" name="g_multipack" value="<?php echo ($g_multipack==0?'':$g_multipack); ?>" />
+                </td>
+            </tr>
+            <tr>
+              <td><?php echo $entry_p_is_bundle; ?></td>
+              <td><select name="g_is_bundle">
+                  <option value="1"<?php if ($g_is_bundle) { ?> selected="selected"<?php } ?>><?php echo $text_yes; ?></option>
+                  <option value="0"<?php if (!$g_is_bundle) { ?> selected="selected"<?php } ?>><?php echo $text_no; ?></option>
+                </select></td>
+            </tr>
+            <tr>
+              <td><?php echo $entry_p_adult; ?></td>
+              <td><select name="g_adult">
+                  <option value="1"<?php if ($g_adult) { ?> selected="selected"<?php } ?>><?php echo $text_yes; ?></option>
+                  <option value="0"<?php if (!$g_adult) { ?> selected="selected"<?php } ?>><?php echo $text_no; ?></option>
+                </select></td>
+            </tr>
+            <tr>
+              <td><?php echo $entry_p_energy_efficiency_class; ?></td>
+              <td><select name="g_energy_efficiency_class">
+                  <option value="0"<?php if (!$g_energy_efficiency_class||$g_energy_efficiency_class=='0') { ?> selected="selected"<?php } ?>><?php echo $text_none; ?></option>
+                  <option value="A+++"<?php if ($g_energy_efficiency_class=='A+++') { ?> selected="selected"<?php } ?>>A+++</option>
+                  <option value="A++"<?php if ($g_energy_efficiency_class=='A++') { ?> selected="selected"<?php } ?>>A++</option>
+                  <option value="A+"<?php if ($g_energy_efficiency_class=='A+') { ?> selected="selected"<?php } ?>>A+</option>
+                  <option value="A"<?php if ($g_energy_efficiency_class=='A') { ?> selected="selected"<?php } ?>>A</option>
+                  <option value="B"<?php if ($g_energy_efficiency_class=='B') { ?> selected="selected"<?php } ?>>B</option>
+                  <option value="C"<?php if ($g_energy_efficiency_class=='C') { ?> selected="selected"<?php } ?>>C</option>
+                  <option value="D"<?php if ($g_energy_efficiency_class=='D') { ?> selected="selected"<?php } ?>>D</option>
+                  <option value="E"<?php if ($g_energy_efficiency_class=='E') { ?> selected="selected"<?php } ?>>E</option>
+                  <option value="F"<?php if ($g_energy_efficiency_class=='F') { ?> selected="selected"<?php } ?>>F</option>
+                  <option value="G"<?php if ($g_energy_efficiency_class=='G') { ?> selected="selected"<?php } ?>>G</option>
+                </select></td>
+            </tr>
+            <tr>
+              <td valign="top"><?php echo $entry_p_unit_pricing_measure; ?></td>
+              <td><input type="text" name="g_unit_pricing_measure" value="<?php echo $g_unit_pricing_measure; ?>" /></td>
+            </tr>
+            <tr>
+              <td valign="top"><?php echo $entry_p_unit_pricing_base_measure; ?></td>
+              <td><input type="text" name="g_unit_pricing_base_measure" value="<?php echo $g_unit_pricing_base_measure; ?>" /></td>
+            </tr>
+            <tr>
+              <td><?php echo $entry_p_gender; ?></td>
+              <td><select name="g_gender">
+                  <option value="0"<?php if ($g_gender=='0'||($g_gender==''&&$this->config->get('uksb_google_merchant_gender')=='0')) { ?> selected="selected"<?php } ?>><?php echo $text_none; ?></option>
+                  <option value="male"<?php if ($g_gender=='male'||($g_gender==''&&$this->config->get('uksb_google_merchant_gender')=='male')) { ?> selected="selected"<?php } ?>><?php echo $text_male; ?></option>
+                  <option value="female"<?php if ($g_gender=='female'||($g_gender==''&&$this->config->get('uksb_google_merchant_gender')=='female')) { ?> selected="selected"<?php } ?>><?php echo $text_female; ?></option>
+                  <option value="unisex"<?php if ($g_gender=='unisex'||($g_gender==''&&$this->config->get('uksb_google_merchant_gender')=='unisex')) { ?> selected="selected"<?php } ?>><?php echo $text_unisex; ?></option>
+                </select></td>
+            </tr>
+            <tr>
+              <td><?php echo $entry_p_age_group; ?></td>
+              <td><select name="g_age_group">
+                  <option value="0"<?php if ($g_age_group=='0'||($g_age_group==''&&$this->config->get('uksb_google_merchant_age_group')=='0')) { ?> selected="selected"<?php } ?>><?php echo $text_none; ?></option>
+                  <option value="newborn"<?php if ($g_age_group=='newborn'||($g_age_group==''&&$this->config->get('uksb_google_merchant_age_group')=='newborn')) { ?> selected="selected"<?php } ?>><?php echo $text_newborn; ?></option>
+                  <option value="infant"<?php if ($g_age_group=='infant'||($g_age_group==''&&$this->config->get('uksb_google_merchant_age_group')=='infant')) { ?> selected="selected"<?php } ?>><?php echo $text_infant; ?></option>
+                  <option value="toddler"<?php if ($g_age_group=='toddler'||($g_age_group==''&&$this->config->get('uksb_google_merchant_age_group')=='toddler')) { ?> selected="selected"<?php } ?>><?php echo $text_toddler; ?></option>
+                  <option value="kids"<?php if ($g_age_group=='kids'||($g_age_group==''&&$this->config->get('uksb_google_merchant_age_group')=='kids')) { ?> selected="selected"<?php } ?>><?php echo $text_kids; ?></option>
+                  <option value="adult"<?php if ($g_age_group=='adult'||($g_age_group==''&&$this->config->get('uksb_google_merchant_age_group')=='adult')) { ?> selected="selected"<?php } ?>><?php echo $text_adult; ?></option>
+                </select></td>
+            </tr>
+            <tr>
+              <td><?php echo $entry_p_size_type; ?></td>
+              <td><select name="g_size_type">
+                  <option value="0"<?php if (!$g_size_type||$g_size_type=='0') { ?> selected="selected"<?php } ?>><?php echo $text_none; ?></option>
+                  <option value="regular"<?php if ($g_size_type=='regular') { ?> selected="selected"<?php } ?>><?php echo $text_regular; ?></option>
+                  <option value="petite"<?php if ($g_size_type=='petite') { ?> selected="selected"<?php } ?>><?php echo $text_petite; ?></option>
+                  <option value="plus"<?php if ($g_size_type=='plus') { ?> selected="selected"<?php } ?>><?php echo $text_plus; ?></option>
+                  <option value="big and tall"<?php if ($g_size_type=='big and tall') { ?> selected="selected"<?php } ?>><?php echo $text_big_and_tall; ?></option>
+                  <option value="maternity"<?php if ($g_size_type=='maternity') { ?> selected="selected"<?php } ?>><?php echo $text_maternity; ?></option>
+                </select></td>
+            </tr>
+            <tr>
+              <td valign="top"><?php echo $entry_p_size_system; ?></td>
+              <td><select name="g_size_system">
+                  <option value="0"<?php if (!$g_size_system||$g_size_system=='0') { ?> selected="selected"<?php } ?>><?php echo $text_none; ?></option>
+                  <option value="US"<?php if ($g_size_system=='US') { ?> selected="selected"<?php } ?>>US</option>
+                  <option value="UK"<?php if ($g_size_system=='UK') { ?> selected="selected"<?php } ?>>UK</option>
+                  <option value="EU"<?php if ($g_size_system=='EU') { ?> selected="selected"<?php } ?>>EU</option>
+                  <option value="DE"<?php if ($g_size_system=='DE') { ?> selected="selected"<?php } ?>>DE</option>
+                  <option value="FR"<?php if ($g_size_system=='FR') { ?> selected="selected"<?php } ?>>FR</option>
+                  <option value="JP"<?php if ($g_size_system=='JP') { ?> selected="selected"<?php } ?>>JP</option>
+                  <option value="CN (China)"<?php if ($g_size_system=='CN (China)') { ?> selected="selected"<?php } ?>>CN (China)</option>
+                  <option value="IT"<?php if ($g_size_system=='IT') { ?> selected="selected"<?php } ?>>IT</option>
+                  <option value="BR"<?php if ($g_size_system=='BR') { ?> selected="selected"<?php } ?>>BR</option>
+                  <option value="MEX"<?php if ($g_size_system=='MEX') { ?> selected="selected"<?php } ?>>MEX</option>
+                  <option value="AU"<?php if ($g_size_system=='AU') { ?> selected="selected"<?php } ?>>AU</option>
+                </select></td>
+            </tr>
+            <tr>
+              <td colspan="2"><h2><?php echo $entry_variant_section; ?></h2></td>
+            </tr>
+        </table>
+        <table id="variants" class="list">
+          <?php $variant_row = 0; ?>
+          <?php foreach ($variants as $variant) { ?>
+          <tbody id="variant-row<?php echo $variant_row; ?>">
+            <tr>
+              <td class="left"><?php echo $entry_p_size; ?><br /><input type="text" name="variant[<?php echo $variant_row; ?>][g_size]" value="<?php echo $variant['g_size']; ?>" /><br /><br />
+              <?php echo $entry_v_mpn; ?><br /><input type="text" name="variant[<?php echo $variant_row; ?>][v_mpn]" value="<?php echo $variant['v_mpn']; ?>" /><br /><br />
+              <?php echo $entry_p_material; ?><br /><input type="text" name="variant[<?php echo $variant_row; ?>][g_material]" value="<?php echo $variant['g_material']; ?>" /></td>
+              <td class="left"><?php echo $entry_p_colour; ?><br /><input type="text" name="variant[<?php echo $variant_row; ?>][g_colour]" value="<?php echo $variant['g_colour']; ?>" /><br /><br />
+              <?php echo $entry_v_gtin; ?><br /><input type="text" name="variant[<?php echo $variant_row; ?>][v_gtin]" value="<?php echo $variant['v_gtin']; ?>" /><br /><br />
+              <?php echo $entry_p_pattern; ?><br /><input type="text" name="variant[<?php echo $variant_row; ?>][g_pattern]" value="<?php echo $variant['g_pattern']; ?>" /></td>
+              <td class="left"><?php echo $entry_v_prices; ?><br /><input type="text" name="variant[<?php echo $variant_row; ?>][v_prices]" value="<?php echo $variant['v_prices']; ?>" size="12" /></td>
+              <td class="left"><div class="image"><img src="<?php echo $variant['thumb']; ?>" alt="" id="thumb<?php echo $variant_row; ?>" />
+                  <input type="hidden" name="variant[<?php echo $variant_row; ?>][v_images]" value="<?php echo $variant['v_images']; ?>" id="v_images<?php echo $variant_row; ?>"  />
+                  <br />
+                  <a onclick="image_upload('v_images<?php echo $variant_row; ?>', 'thumb<?php echo $variant_row; ?>');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb<?php echo $variant_row; ?>').attr('src', '<?php echo $no_image; ?>'); $('#v_images<?php echo $variant_row; ?>').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
+              <td class="left"><a onclick="$('#variant-row<?php echo $variant_row; ?>').remove();" class="button"><?php echo $button_remove; ?></a></td>
+            </tr>
+          </tbody>
+          <?php $variant_row++; ?>
+          <?php } ?>
+          <tfoot>
+            <tr>
+              <td colspan="4"></td>
+              <td class="left"><a onclick="addVariant();" class="button"><?php echo $button_add_variant; ?></a></td>
+            </tr>
+          </tfoot>
+        </table>
+        <table class="form">
+            <tr>
+              <td colspan="2"><h2><?php echo $entry_adwords_section; ?></h2></td>
+            </tr>
+            <tr>
+              <td valign="top">&nbsp;</td>
+              <td><?php echo $help_p_custom_label; ?></td>
+            </tr>
+            <tr>
+              <td valign="top"><?php echo $entry_p_custom_label_0; ?></td>
+              <td><input type="text" name="g_custom_label_0" style="width:400px;" value="<?php echo $g_custom_label_0; ?>" /></td>
+            </tr>
+            <tr>
+              <td valign="top"><?php echo $entry_p_custom_label_1; ?></td>
+              <td><input type="text" name="g_custom_label_1" style="width:400px;" value="<?php echo $g_custom_label_1; ?>" /></td>
+            </tr>
+            <tr>
+              <td valign="top"><?php echo $entry_p_custom_label_2; ?></td>
+              <td><input type="text" name="g_custom_label_2" style="width:400px;" value="<?php echo $g_custom_label_2; ?>" /></td>
+            </tr>
+            <tr>
+              <td valign="top"><?php echo $entry_p_custom_label_3; ?></td>
+              <td><input type="text" name="g_custom_label_3" style="width:400px;" value="<?php echo $g_custom_label_3; ?>" /></td>
+            </tr>
+            <tr>
+              <td valign="top"><?php echo $entry_p_custom_label_4; ?></td>
+              <td><input type="text" name="g_custom_label_4" style="width:400px;" value="<?php echo $g_custom_label_4; ?>" /></td>
+            </tr>
+            <tr>
+              <td valign="top"><?php echo $entry_p_adwords_redirect; ?></td>
+              <td><input type="text" name="g_adwords_redirect" style="width:400px;" value="<?php echo $g_adwords_redirect; ?>" /></td>
+            </tr>
+          </table>
+        <table class="form">
+            <tr>
+              <td colspan="2"><h2><?php echo $entry_help_section; ?></h2><p><span class="help"><?php echo $help_google_help; ?></span></p></td>
+            </tr>
+          </table>
+		  <div class="buttons"><a onclick="$('#form').submit();" class="button">Save</a></div>
+        </div>]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[var attribute_row = <?php echo $attribute_row; ?>;]]></search>
+			<add><![CDATA[// UKSB Google Shopping Variants
+var variant_row = <?php echo $variant_row; ?>;
+
+function addVariant() {
+	html  = '<tbody id="variant-row' + variant_row + '">';
+	html += '  <tr>';	
+	html += '    <td class="left"><?php echo $entry_p_size; ?><br /><input type="text" name="variant[' + variant_row + '][g_size]" value="" /><br /><br />';
+	html += '    <?php echo $entry_v_mpn; ?><br /><input type="text" name="variant[' + variant_row + '][v_mpn]" value="" /><br /><br />';
+	html += '    <?php echo $entry_p_material; ?><br /><input type="text" name="variant[' + variant_row + '][g_material]" value="" /></td>';
+	html += '    <td class="left"><?php echo $entry_p_colour; ?><br /><input type="text" name="variant[' + variant_row + '][g_colour]" value="" /><br /><br />';
+	html += '    <?php echo $entry_v_gtin; ?><br /><input type="text" name="variant[' + variant_row + '][v_gtin]" value="" /><br /><br />';
+	html += '    <?php echo $entry_p_pattern; ?><br /><input type="text" name="variant[' + variant_row + '][g_pattern]" value="" /></td>';
+	html += '    <td class="left"><?php echo $entry_v_prices; ?><br /><input type="text" name="variant[' + variant_row + '][v_prices]" value="" /></td>';
+    html += '    <td class="left"><div class="image"><img src="<?php echo $no_image; ?>" alt="" id="thumb' + variant_row + '" /><input type="hidden" name="variant[' + variant_row + '][v_images]" value="" id="v_images' + variant_row + '" /><br /><a onclick="image_upload(\'v_images' + variant_row + '\', \'thumb' + variant_row + '\');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$(\'#thumb' + variant_row + '\').attr(\'src\', \'<?php echo $no_image; ?>\'); $(\'#v_images' + variant_row + '\').attr(\'value\', \'\');"><?php echo $text_clear; ?></a></div></td>';
+	html += '    <td class="left"><a onclick="$(\'#variant-row' + variant_row + '\').remove();" class="button"><?php echo $button_remove; ?></a></td>';
+	html += '  </tr>';	
+    html += '</tbody>';
+	
+	$('#variants tfoot').before(html);
+	
+	variant_row++;
+}
+
+]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[$('.date').datepicker({dateFormat: 'yy-mm-dd'});]]></search>
+			<add><![CDATA[$( "#g_expiry_date" ).datepicker({ dateFormat: 'yy-mm-dd', minDate: 2 });]]></add>
+		</operation>
+	</file>
+</modification>

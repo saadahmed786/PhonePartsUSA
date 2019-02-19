@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+<id>OpenCart Performance Analyzer</id>
+<version>1.0.0</version>
+<vqmver>2.1.5</vqmver>
+<author>Jeff Hunter</author>
+
+<!--  ==============================================================================================================================================================================  -->
+<!--  PERFORMANCE ANALYZER      PERFORMANCE ANALYZER      PERFORMANCE ANALYZER      PERFORMANCE ANALYZER      PERFORMANCE ANALYZER      PERFORMANCE ANALYZER      PERFORMANCE ANALYZ  -->
+<!--  ==============================================================================================================================================================================  -->
+<file name="system/startup.php">
+<operation error="ignore">
+	<search position="after"><![CDATA[?php]]></search>
+	<add><![CDATA[
+	$time = microtime();
+	$GLOBALS['start'] = $time;
+	if (is_dir(DIR_SYSTEM . '../wx/')) {
+		require_once(DIR_SYSTEM . '../wx/library/fb.php');
+		//if (!headers_sent()) {
+			FB::log('WXHOSTING.COM PERFORMANCE ANALYZER V1.1');
+		//}
+	} else {
+		require_once(DIR_SYSTEM . '../ips/library/fb.php');
+		if (!headers_sent()) {
+			FB::log('INCREASE PAGE SPEED PERFORMANCE ANALYZER V1.1');
+		}
+	}
+	FB::log('URL ::' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+	]]></add>
+</operation>
+</file>
+	
+<file name="system/library/response.php">
+<operation error="ignore">
+	<search position="before"><![CDATA[echo $ou]]></search>
+	<add><![CDATA[
+	if (!headers_sent()) {
+		$time = microtime();
+		$time = explode(' ', $time);
+		$time = $time[1] + $time[0];
+		$finish = $time;
+		$start = explode(' ', $GLOBALS['start']);
+		$start = $start[1] + $start[0];
+		$GLOBALS['total_time'] = round($finish - $start, 3) * 1000;
+		FB::info('Total Database Queries : ' . $this->db->total_queries);
+		FB::info('Time Spent Database Querying : ' . (round($this->db->total_query_time, 3) * 1000) . 'ms.');
+		if ($this->db->total_slow_queries) {
+			FB::error('Slow Database Queries : ' . round($this->db->total_slow_queries, 4));
+		}
+		FB::log('Page Generation Time : ' . $GLOBALS['total_time'] . 'ms.');
+		FB::log('  ');
+		FB::log(' ');
+	
+		if ($this->config->get('optimizer_firebug_queries') && !empty($this->db->query_data)) {
+			FB::log($this->db->query_data);
+		}
+	}
+	]]></add>
+</operation>
+</file>
+	
+<file name="system/library/db.php">
+	<operation error="ignore">
+		<search position="after"><![CDATA[class DB]]></search>
+		<add><![CDATA[
+		public $total_queries;
+		public $total_query_time;
+		public $total_slow_queries;
+		public $query_data;
+		]]></add>
+	</operation>
+
+	<operation error="ignore">
+		<search position="after"><![CDATA[function __construct]]></search>
+		<add><![CDATA[$this->total_query_time = 0; $this->total_queries = 0; $this->total_slow_queries = 0; $this->query_data = array();]]></add>
+	</operation>
+
+	<operation error="ignore">
+		<search position="after"><![CDATA[public function query]]></search>
+		<add><![CDATA[$this->total_queries++;]]></add>
+	</operation>
+
+	<operation error="ignore"> <!-- OPENCART 1.5x+ -->
+		<search error="ignore" regex="true" position="replace"><![CDATA[return \$this->(.*?)->query\(\$sql\);]]></search>
+		<add><![CDATA[
+		// Log Time
+		$trace = debug_backtrace();
+		$filename = (isset($trace[0]['file'])) ? $trace[0]['file'] : '---';
+		$query_time = (time() + microtime());
+		$result = $this->$1->query($sql);
+		$exec_time = (time() + microtime()) - $query_time;
+		$this->total_query_time = $this->total_query_time + $exec_time;
+		if ($exec_time > 0.1) {
+			$this->total_slow_queries = $this->total_slow_queries + 1;
+			$this->query_data[] = array('filename' => $filename, 'exec_time' => $exec_time, 'sql' => $sql);
+		}
+
+		return $result;
+		]]></add>
+	</operation>
+		
+</file>
+	
+	<file error="ignore" name="system/engine/loader.php"> <!-- OPENCART 2.0+ -->
+		<operation error="ignore">
+			<ignoreif><![CDATA[public function __get]]></ignoreif>
+			<search position="before"><![CDATA[public function controller]]></search>
+			<add><![CDATA[
+	public function __get($key) {
+		return $this->registry->get($key);
+	}
+			]]></add>
+		</operation>
+		
+		<operation error="ignore">
+			<ignoreif><![CDATA[public function __set]]></ignoreif>
+			<search position="before"><![CDATA[public function controller]]></search>
+			<add><![CDATA[
+	public function __set($key, $value) {
+		$this->registry->set($key, $value);
+	}
+			]]></add>
+		</operation>
+		
+		<operation error="ignore">
+			<search position="after"><![CDATA[class Loader]]></search>
+			<add><![CDATA[	protected $starttime;]]></add>
+		</operation>
+	
+		<operation error="ignore">
+			<search regex="true" position="before"><![CDATA[~\$action = new Action|\$output = call_user_func~]]></search>
+			<add><![CDATA[
+			$this->starttime[$route] = microtime(true);
+			$query_count     = $this->db->total_queries;
+			]]></add>
+		</operation>
+		<operation error="ignore">
+			<search regex="true" position="after"><![CDATA[~\$action->execute|\$output = call_user_func~]]></search>
+			<add><![CDATA[
+			$runtime = explode(' ', microtime());
+			$runtime = $runtime[1] + $runtime[0];
+			if ((round((microtime(true) - $this->starttime[$route]), 3) * 1000) > 0)
+			FB::info($route . ' => Time To Render: ' . (round((microtime(true) - $this->starttime[$route]), 3) * 1000) . 'ms | SQL Queries Executed: ' . ($this->db->total_queries - $query_count));
+			]]></add>
+		</operation>
+			
+		<operation error="ignore"> <!-- IF DIRECT RETURN ACTION EXECUTE -->
+			<search position="replace"><![CDATA[return $action->execute]]></search>
+			<add><![CDATA[$output = $action->execute]]></add>
+		</operation>
+		
+		<operation error="ignore"> <!-- IF DIRECT RETURN ACTION EXECUTE -->
+			<ignoreif><![CDATA[return $output;]]></ignoreif>
+			<search position="after"><![CDATA[FB::info($route]]></search>
+			<add><![CDATA[return $output;]]></add>
+		</operation>
+		
+		<operation error="ignore">
+			<search position="before"><![CDATA[return $cached_output;]]></search>
+			<add><![CDATA[				FB::info($route . ' => Cached Render: ' . (round((microtime(true) - $this->starttime[$route]), 3) * 1000) . 'ms | SQL Queries Executed: ' . ($this->db->total_queries - $query_count));]]></add>
+		</operation>
+	</file>
+
+	<file error="ignore" name="system/engine/controller.php">
+		<operation error="ignore">
+			<search position="before"><![CDATA[protected $output]]></search>
+			<add><![CDATA[	protected $starttime;]]></add>
+		</operation>
+	
+		<operation error="ignore">
+			<search position="after"><![CDATA[protected function getChild]]></search>
+			<add><![CDATA[
+			global $db;
+			$query_count = $db->total_queries;
+			$this->starttime[$child] = microtime(true);
+			]]></add>
+		</operation>
+		<operation error="ignore">
+			<search position="before"><![CDATA[return $controller->output;]]></search>
+			<add><![CDATA[
+			$runtime = explode(' ', microtime());
+			$runtime = $runtime[1] + $runtime[0];
+			
+			FB::info($child . ' => Time To Render: ' . (round((microtime(true) - $this->starttime[$child]), 3) * 1000) . 'ms | SQL Queries Executed: ' . ($db->total_queries - $query_count));
+			]]></add>
+		</operation>
+		<operation error="ignore">
+			<search position="before"><![CDATA[return $cached_output;]]></search>
+			<add><![CDATA[				FB::info($child . ' => Cached Render: ' . (round((microtime(true) - $this->starttime[$child]), 3) * 1000) . 'ms | SQL Queries Executed: ' . ($db->total_queries - $query_count));]]></add>
+		</operation>
+	</file>
+	
+</modification>

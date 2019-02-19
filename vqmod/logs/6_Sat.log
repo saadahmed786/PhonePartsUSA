@@ -1,0 +1,639 @@
+---------- Date: 2017-08-05 01:47:09 ~ IP : 157.55.39.100 ----------
+REQUEST URI : /Galaxy-s4-i9500-i9505-i337-m919-i545-l720/Galaxy-S4-i9500/Galaxy-S4-i9500-Midframes-and-Back-Covers/Galaxy-S4-i9500-Midframes?sort=p.price&amp;order=DESC
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/vqmod_youtube_product.xml
+   id        : Youtube Product (twitter:@esopen)
+   version   : 1.5.3.x
+   vqmver    : 1.2.3
+   author    : Hilde
+
+File Name    : catalog/model/catalog/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $query = $this->db->query("SELECT DISTINCT *, pd.name AS name, p.image, m.name AS manufacturer, (SELECT price FROM " . DB_PREFIX . "product_discount pd2 WHERE pd2.product_id = p.product_id AND pd2.customer_group_id = '" . (int)$customer_group_id . "' AND pd2.quantity = '1' AND ((pd2.date_start = '0000-00-00' OR pd2.date_start < NOW()) AND (pd2.date_end = '0000-00-00' OR pd2.date_end > NOW())) ORDER BY pd2.priority ASC, pd2.price ASC LIMIT 1) AS discount, (SELECT price FROM " . DB_PREFIX . "product_special ps WHERE ps.product_id = p.product_id AND ps.customer_group_id = '" . (int)$customer_group_id . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW())) ORDER BY ps.priority ASC, ps.price ASC LIMIT 1) AS special, (SELECT points FROM " . DB_PREFIX . "product_reward pr WHERE pr.product_id = p.product_id AND customer_group_id = '" . (int)$customer_group_id . "') AS reward, (SELECT ss.name FROM " . DB_PREFIX . "stock_status ss WHERE ss.stock_status_id = p.stock_status_id AND ss.language_id = '" . (int)$this->config->get('config_language_id') . "') AS stock_status, (SELECT wcd.unit FROM " . DB_PREFIX . "weight_class_description wcd WHERE p.weight_class_id = wcd.weight_class_id AND wcd.language_id = '" . (int)$this->config->get('config_language_id') . "') AS weight_class, (SELECT lcd.unit FROM " . DB_PREFIX . "length_class_description lcd WHERE p.length_class_id = lcd.length_class_id AND lcd.language_id = '" . (int)$this->config->get('config_language_id') . "') AS length_class, (SELECT AVG(rating) AS total FROM " . DB_PREFIX . "review r1 WHERE r1.product_id = p.product_id AND r1.status = '1' GROUP BY r1.product_id) AS rating, (SELECT COUNT(*) AS total FROM " . DB_PREFIX . "review r2 WHERE r2.product_id = p.product_id AND r2.status = '1' GROUP BY r2.product_id) AS reviews, p.sort_order FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) LEFT JOIN " . DB_PREFIX . "manufacturer m ON (p.manufacturer_id = m.manufacturer_id) WHERE p.product_id = '" . (int)$product_id . "' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'");
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/float_cart.xml
+   id        : Float Cart
+   version   : 1.0
+   vqmver    : 2.1.5
+   author    : BigPayout - Stan
+
+File Name    : catalog/view/theme/*/template/common/header.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <div id="notification"></div>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 01:47:12 ~ IP : 157.55.39.91 ----------
+REQUEST URI : /iphone-6-Plus-Color-LCD-Digitizer-Assemblies/3mm-wide-double-sided-adhesive-sticky-foam-tape-gasket-for-phone-repair-acc-zrt-390
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/additional_product_fields.xml
+   id        : additional_product
+   version   : 1.0.0
+   vqmver    : 2.1.5
+   author    : ovife21
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php echo $text_stock; ?>
+
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/option_adds_product.xml
+   id        : Option Adds Product
+   version   : 156.4
+   vqmver    : 2.4.1
+   author    : Qphoria
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php echo $option_value['name']; ?>
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/similar_products.xml
+   id        : Enables you to associate similar products with a product. Works just like related products.
+   version   : 4.0.1
+   vqmver    : 2.3.0
+   author    : bull5-i
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <div id="tabs" class="htabs">
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/vqmod_youtube_product.xml
+   id        : Youtube Product (twitter:@esopen)
+   version   : 1.5.3.x
+   vqmver    : 1.2.3
+   author    : Hilde
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php echo $header; ?>
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 01:59:29 ~ IP : 103.255.4.64 ----------
+REQUEST URI : /index.php?route=checkout/cart/add
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/ApplyCouponVoucherDuringCheckout.xml
+   id        : Add coupon or voucher during checkout
+   version   : 1.5.2.x+
+   vqmver    : 1.3.0
+   author    : g-white
+
+File Name    : catalog/controller/checkout/cart.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): if (isset($this->request->post['coupon']) && $this->validateCoupon()) {
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 01:59:38 ~ IP : 103.255.4.64 ----------
+REQUEST URI : /index.php?route=checkout/cart
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/ApplyCouponVoucherDuringCheckout.xml
+   id        : Add coupon or voucher during checkout
+   version   : 1.5.2.x+
+   vqmver    : 1.3.0
+   author    : g-white
+
+File Name    : catalog/view/theme/*/template/checkout/cart.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <td class="right"><b><?php echo $total['title']; ?>:</b></td>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 02:01:01 ~ IP : 103.255.4.64 ----------
+REQUEST URI : /index.php?route=checkout/checkout
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/checkout_region_state_to_state_region.xml
+   id        : Checkout - Rename State/Region to Region/State
+   version   : 1.0
+   vqmver    : 2.1.5
+   author    : Jeff Hunter aka Tcalp
+
+File Name    : catalog/language/english/checkout/checkout.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): Region / State
+
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/ApplyCouponVoucherDuringCheckout.xml
+   id        : Add coupon or voucher during checkout
+   version   : 1.5.2.x+
+   vqmver    : 1.3.0
+   author    : g-white
+
+File Name    : catalog/view/theme/*/template/checkout/checkout.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $('#button-payment-method').attr('disabled', false);
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 02:06:42 ~ IP : 180.76.15.139 ----------
+REQUEST URI : /skullcandy-1?limit=75
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/huntbee_seo_canonical.xml
+   id        : VQMOD SEO CANONICAL LINKS
+   version   : 1.2
+   vqmver    : 2.X
+   author    : WEBGURUINDIA
+
+File Name    : catalog/controller/product/manufacturer.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): $this->document->setTitle($manufacturer_info['name']);
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 02:06:44 ~ IP : 103.255.4.64 ----------
+REQUEST URI : /index.php?route=checkout/shipping_address
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/google_analytics_expert.xml
+   id        : Google Analytics Expert
+   version   : 1.5.2 - 1.5.4x
+   vqmver    : 3.7
+   author    : spitos
+
+File Name    : catalog/view/theme/*/template/checkout/shipping_address.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php if ($addresses) { ?>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 02:07:59 ~ IP : 103.255.4.64 ----------
+REQUEST URI : /index.php?route=checkout/payment_method
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/ApplyCouponVoucherDuringCheckout.xml
+   id        : Add coupon or voucher during checkout
+   version   : 1.5.2.x+
+   vqmver    : 1.3.0
+   author    : g-white
+
+File Name    : catalog/view/theme/*/template/checkout/payment_method.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): </table>
+
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/google_analytics_expert.xml
+   id        : Google Analytics Expert
+   version   : 1.5.2 - 1.5.4x
+   vqmver    : 3.7
+   author    : spitos
+
+File Name    : catalog/view/theme/*/template/checkout/payment_method.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php if ($error_warning) { ?>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 02:16:49 ~ IP : 103.255.4.64 ----------
+REQUEST URI : /accessories
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/float_cart.xml
+   id        : Float Cart
+   version   : 1.0
+   vqmver    : 2.1.5
+   author    : BigPayout - Stan
+
+File Name    : catalog/view/theme/*/template/common/header.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <div id="notification"></div>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 02:18:21 ~ IP : 157.55.39.100 ----------
+REQUEST URI : /Nokia-lumia-620/bintektm-small-quick-charge-lipstick-powerbank-battery-charger-2000-mah-btp610001
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/float_cart.xml
+   id        : Float Cart
+   version   : 1.0
+   vqmver    : 2.1.5
+   author    : BigPayout - Stan
+
+File Name    : catalog/view/theme/*/template/common/header.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <div id="notification"></div>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 02:18:54 ~ IP : 207.46.13.83 ----------
+REQUEST URI : /repair-parts/samsung/galaxy-note-3
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/float_cart.xml
+   id        : Float Cart
+   version   : 1.0
+   vqmver    : 2.1.5
+   author    : BigPayout - Stan
+
+File Name    : catalog/view/theme/*/template/common/header.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <div id="notification"></div>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 02:20:04 ~ IP : 40.77.167.98 ----------
+REQUEST URI : /Galaxy-s3-i9300-t999-i747-i535-l710/Galaxy-S3-i9305/samsung-galaxy-s3-i9300-t999-i747-i535-l710-vibrator-flex-cable001105
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/float_cart.xml
+   id        : Float Cart
+   version   : 1.0
+   vqmver    : 2.1.5
+   author    : BigPayout - Stan
+
+File Name    : catalog/view/theme/*/template/common/header.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <div id="notification"></div>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 02:20:37 ~ IP : 103.255.4.64 ----------
+REQUEST URI : /accessories
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/float_cart.xml
+   id        : Float Cart
+   version   : 1.0
+   vqmver    : 2.1.5
+   author    : BigPayout - Stan
+
+File Name    : catalog/view/theme/*/template/common/header.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <div id="notification"></div>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 02:20:51 ~ IP : 157.55.39.91 ----------
+REQUEST URI : /index.php?route=common/home
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/float_cart.xml
+   id        : Float Cart
+   version   : 1.0
+   vqmver    : 2.1.5
+   author    : BigPayout - Stan
+
+File Name    : catalog/view/theme/*/template/common/header.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <div id="notification"></div>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 02:39:33 ~ IP : 40.77.167.98 ----------
+REQUEST URI : /Galaxy-s3-i9300-t999-i747-i535-l710/Galaxy-S3-L710/samsung-galaxy-s3-l710-rear-housing-frame-white-bty-cov-456
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/float_cart.xml
+   id        : Float Cart
+   version   : 1.0
+   vqmver    : 2.1.5
+   author    : BigPayout - Stan
+
+File Name    : catalog/view/theme/*/template/common/header.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <div id="notification"></div>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 04:43:41 ~ IP : 103.255.4.64 ----------
+REQUEST URI : /admin/index.php?route=common/home&amp;token=7dee1e4bf199275ccbc577da49959dd6
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/pos.xml
+   id        : POS Menu Item
+   version   : 1.0
+   vqmver    : 2.x
+   author    : Krafty Solutions
+
+File Name    : admin/model/sale/order.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): 'shipping_firstname'      => $order_query->row['shipping_firstname'
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/wx/core/wx_main.xml
+   id        : WXHosting.com Speed Optimization Settings
+   version   : 2.0
+   vqmver    : 2.1
+   author    : Jeff Hunter aka Tcalp
+
+File Name    : admin/view/template/common/header.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): <ul class="nav pull-right">
+
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/vqmod_admin_elfinder.xml
+   id        : ElFinder Uploading and Selection Support
+   version   : 2.1.7b
+   vqmver    : 2.1.6
+   author    : fpdesign
+
+File Name    : admin/view/template/common/footer.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <div id="footer"><?php echo $text_footer; ?></div>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 04:44:18 ~ IP : 34.196.177.85 ----------
+REQUEST URI : /iPad-Mini-with-Retina-Display%20/ipad-mini-with-retina-display-replacement-parts?product_id=14846
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/wx/core/wx_main.xml
+   id        : WXHosting.com Speed Optimization Settings
+   version   : 2.0
+   vqmver    : 2.1
+   author    : Jeff Hunter aka Tcalp
+VQModObject::parseMods - Could not resolve path for [system/framework.php] (SKIPPED)
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/vqmod_youtube_product.xml
+   id        : Youtube Product (twitter:@esopen)
+   version   : 1.5.3.x
+   vqmver    : 1.2.3
+   author    : Hilde
+
+File Name    : catalog/model/catalog/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $query = $this->db->query("SELECT DISTINCT *, pd.name AS name, p.image, m.name AS manufacturer, (SELECT price FROM " . DB_PREFIX . "product_discount pd2 WHERE pd2.product_id = p.product_id AND pd2.customer_group_id = '" . (int)$customer_group_id . "' AND pd2.quantity = '1' AND ((pd2.date_start = '0000-00-00' OR pd2.date_start < NOW()) AND (pd2.date_end = '0000-00-00' OR pd2.date_end > NOW())) ORDER BY pd2.priority ASC, pd2.price ASC LIMIT 1) AS discount, (SELECT price FROM " . DB_PREFIX . "product_special ps WHERE ps.product_id = p.product_id AND ps.customer_group_id = '" . (int)$customer_group_id . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW())) ORDER BY ps.priority ASC, ps.price ASC LIMIT 1) AS special, (SELECT points FROM " . DB_PREFIX . "product_reward pr WHERE pr.product_id = p.product_id AND customer_group_id = '" . (int)$customer_group_id . "') AS reward, (SELECT ss.name FROM " . DB_PREFIX . "stock_status ss WHERE ss.stock_status_id = p.stock_status_id AND ss.language_id = '" . (int)$this->config->get('config_language_id') . "') AS stock_status, (SELECT wcd.unit FROM " . DB_PREFIX . "weight_class_description wcd WHERE p.weight_class_id = wcd.weight_class_id AND wcd.language_id = '" . (int)$this->config->get('config_language_id') . "') AS weight_class, (SELECT lcd.unit FROM " . DB_PREFIX . "length_class_description lcd WHERE p.length_class_id = lcd.length_class_id AND lcd.language_id = '" . (int)$this->config->get('config_language_id') . "') AS length_class, (SELECT AVG(rating) AS total FROM " . DB_PREFIX . "review r1 WHERE r1.product_id = p.product_id AND r1.status = '1' GROUP BY r1.product_id) AS rating, (SELECT COUNT(*) AS total FROM " . DB_PREFIX . "review r2 WHERE r2.product_id = p.product_id AND r2.status = '1' GROUP BY r2.product_id) AS reviews, p.sort_order FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) LEFT JOIN " . DB_PREFIX . "manufacturer m ON (p.manufacturer_id = m.manufacturer_id) WHERE p.product_id = '" . (int)$product_id . "' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'");
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/float_cart.xml
+   id        : Float Cart
+   version   : 1.0
+   vqmver    : 2.1.5
+   author    : BigPayout - Stan
+
+File Name    : catalog/view/theme/*/template/common/header.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <div id="notification"></div>
+
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/additional_product_fields.xml
+   id        : additional_product
+   version   : 1.0.0
+   vqmver    : 2.1.5
+   author    : ovife21
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php echo $text_stock; ?>
+
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/option_adds_product.xml
+   id        : Option Adds Product
+   version   : 156.4
+   vqmver    : 2.4.1
+   author    : Qphoria
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php echo $option_value['name']; ?>
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/similar_products.xml
+   id        : Enables you to associate similar products with a product. Works just like related products.
+   version   : 4.0.1
+   vqmver    : 2.3.0
+   author    : bull5-i
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <div id="tabs" class="htabs">
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 04:44:19 ~ IP : 103.255.4.64 ----------
+REQUEST URI : /admin/index.php?route=common/home&amp;token=7dee1e4bf199275ccbc577da49959dd6
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/pos.xml
+   id        : POS Menu Item
+   version   : 1.0
+   vqmver    : 2.x
+   author    : Krafty Solutions
+
+File Name    : admin/model/sale/order.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): 'shipping_firstname'      => $order_query->row['shipping_firstname'
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/wx/core/wx_main.xml
+   id        : WXHosting.com Speed Optimization Settings
+   version   : 2.0
+   vqmver    : 2.1
+   author    : Jeff Hunter aka Tcalp
+
+File Name    : admin/view/template/common/header.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): <ul class="nav pull-right">
+
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/vqmod_admin_elfinder.xml
+   id        : ElFinder Uploading and Selection Support
+   version   : 2.1.7b
+   vqmver    : 2.1.6
+   author    : fpdesign
+
+File Name    : admin/view/template/common/footer.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <div id="footer"><?php echo $text_footer; ?></div>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 04:44:49 ~ IP : 157.55.39.91 ----------
+REQUEST URI : /Product-Type-replacement-lcd-screen?product_id=13286
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/vqmod_youtube_product.xml
+   id        : Youtube Product (twitter:@esopen)
+   version   : 1.5.3.x
+   vqmver    : 1.2.3
+   author    : Hilde
+
+File Name    : catalog/model/catalog/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $query = $this->db->query("SELECT DISTINCT *, pd.name AS name, p.image, m.name AS manufacturer, (SELECT price FROM " . DB_PREFIX . "product_discount pd2 WHERE pd2.product_id = p.product_id AND pd2.customer_group_id = '" . (int)$customer_group_id . "' AND pd2.quantity = '1' AND ((pd2.date_start = '0000-00-00' OR pd2.date_start < NOW()) AND (pd2.date_end = '0000-00-00' OR pd2.date_end > NOW())) ORDER BY pd2.priority ASC, pd2.price ASC LIMIT 1) AS discount, (SELECT price FROM " . DB_PREFIX . "product_special ps WHERE ps.product_id = p.product_id AND ps.customer_group_id = '" . (int)$customer_group_id . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW())) ORDER BY ps.priority ASC, ps.price ASC LIMIT 1) AS special, (SELECT points FROM " . DB_PREFIX . "product_reward pr WHERE pr.product_id = p.product_id AND customer_group_id = '" . (int)$customer_group_id . "') AS reward, (SELECT ss.name FROM " . DB_PREFIX . "stock_status ss WHERE ss.stock_status_id = p.stock_status_id AND ss.language_id = '" . (int)$this->config->get('config_language_id') . "') AS stock_status, (SELECT wcd.unit FROM " . DB_PREFIX . "weight_class_description wcd WHERE p.weight_class_id = wcd.weight_class_id AND wcd.language_id = '" . (int)$this->config->get('config_language_id') . "') AS weight_class, (SELECT lcd.unit FROM " . DB_PREFIX . "length_class_description lcd WHERE p.length_class_id = lcd.length_class_id AND lcd.language_id = '" . (int)$this->config->get('config_language_id') . "') AS length_class, (SELECT AVG(rating) AS total FROM " . DB_PREFIX . "review r1 WHERE r1.product_id = p.product_id AND r1.status = '1' GROUP BY r1.product_id) AS rating, (SELECT COUNT(*) AS total FROM " . DB_PREFIX . "review r2 WHERE r2.product_id = p.product_id AND r2.status = '1' GROUP BY r2.product_id) AS reviews, p.sort_order FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) LEFT JOIN " . DB_PREFIX . "manufacturer m ON (p.manufacturer_id = m.manufacturer_id) WHERE p.product_id = '" . (int)$product_id . "' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'");
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/float_cart.xml
+   id        : Float Cart
+   version   : 1.0
+   vqmver    : 2.1.5
+   author    : BigPayout - Stan
+
+File Name    : catalog/view/theme/*/template/common/header.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <div id="notification"></div>
+
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/additional_product_fields.xml
+   id        : additional_product
+   version   : 1.0.0
+   vqmver    : 2.1.5
+   author    : ovife21
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php echo $text_stock; ?>
+
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/option_adds_product.xml
+   id        : Option Adds Product
+   version   : 156.4
+   vqmver    : 2.4.1
+   author    : Qphoria
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php echo $option_value['name']; ?>
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/similar_products.xml
+   id        : Enables you to associate similar products with a product. Works just like related products.
+   version   : 4.0.1
+   vqmver    : 2.3.0
+   author    : bull5-i
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <div id="tabs" class="htabs">
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 04:44:50 ~ IP : 103.255.4.64 ----------
+REQUEST URI : /admin/index.php?route=common/home&amp;token=7dee1e4bf199275ccbc577da49959dd6
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/pos.xml
+   id        : POS Menu Item
+   version   : 1.0
+   vqmver    : 2.x
+   author    : Krafty Solutions
+
+File Name    : admin/model/sale/order.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): 'shipping_firstname'      => $order_query->row['shipping_firstname'
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/wx/core/wx_main.xml
+   id        : WXHosting.com Speed Optimization Settings
+   version   : 2.0
+   vqmver    : 2.1
+   author    : Jeff Hunter aka Tcalp
+
+File Name    : admin/view/template/common/header.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): <ul class="nav pull-right">
+
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/vqmod_admin_elfinder.xml
+   id        : ElFinder Uploading and Selection Support
+   version   : 2.1.7b
+   vqmver    : 2.1.6
+   author    : fpdesign
+
+File Name    : admin/view/template/common/footer.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <div id="footer"><?php echo $text_footer; ?></div>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 04:44:50 ~ IP : 157.55.39.91 ----------
+REQUEST URI : /iphone-4s-replacement-parts/iphone-4s-back-glass-housing-rear-plate-cover-no-logo-orange-apl-002-0972
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/wx/core/wx_main.xml
+   id        : WXHosting.com Speed Optimization Settings
+   version   : 2.0
+   vqmver    : 2.1
+   author    : Jeff Hunter aka Tcalp
+VQModObject::parseMods - Could not resolve path for [system/framework.php] (SKIPPED)
+
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/vqmod_youtube_product.xml
+   id        : Youtube Product (twitter:@esopen)
+   version   : 1.5.3.x
+   vqmver    : 1.2.3
+   author    : Hilde
+
+File Name    : catalog/model/catalog/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $query = $this->db->query("SELECT DISTINCT *, pd.name AS name, p.image, m.name AS manufacturer, (SELECT price FROM " . DB_PREFIX . "product_discount pd2 WHERE pd2.product_id = p.product_id AND pd2.customer_group_id = '" . (int)$customer_group_id . "' AND pd2.quantity = '1' AND ((pd2.date_start = '0000-00-00' OR pd2.date_start < NOW()) AND (pd2.date_end = '0000-00-00' OR pd2.date_end > NOW())) ORDER BY pd2.priority ASC, pd2.price ASC LIMIT 1) AS discount, (SELECT price FROM " . DB_PREFIX . "product_special ps WHERE ps.product_id = p.product_id AND ps.customer_group_id = '" . (int)$customer_group_id . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW())) ORDER BY ps.priority ASC, ps.price ASC LIMIT 1) AS special, (SELECT points FROM " . DB_PREFIX . "product_reward pr WHERE pr.product_id = p.product_id AND customer_group_id = '" . (int)$customer_group_id . "') AS reward, (SELECT ss.name FROM " . DB_PREFIX . "stock_status ss WHERE ss.stock_status_id = p.stock_status_id AND ss.language_id = '" . (int)$this->config->get('config_language_id') . "') AS stock_status, (SELECT wcd.unit FROM " . DB_PREFIX . "weight_class_description wcd WHERE p.weight_class_id = wcd.weight_class_id AND wcd.language_id = '" . (int)$this->config->get('config_language_id') . "') AS weight_class, (SELECT lcd.unit FROM " . DB_PREFIX . "length_class_description lcd WHERE p.length_class_id = lcd.length_class_id AND lcd.language_id = '" . (int)$this->config->get('config_language_id') . "') AS length_class, (SELECT AVG(rating) AS total FROM " . DB_PREFIX . "review r1 WHERE r1.product_id = p.product_id AND r1.status = '1' GROUP BY r1.product_id) AS rating, (SELECT COUNT(*) AS total FROM " . DB_PREFIX . "review r2 WHERE r2.product_id = p.product_id AND r2.status = '1' GROUP BY r2.product_id) AS reviews, p.sort_order FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) LEFT JOIN " . DB_PREFIX . "manufacturer m ON (p.manufacturer_id = m.manufacturer_id) WHERE p.product_id = '" . (int)$product_id . "' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'");
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 04:47:33 ~ IP : 51.255.65.78 ----------
+REQUEST URI : /index.php?route=product/manufacturer/product&amp;manufacturer_id=48
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/huntbee_seo_canonical.xml
+   id        : VQMOD SEO CANONICAL LINKS
+   version   : 1.2
+   vqmver    : 2.X
+   author    : WEBGURUINDIA
+
+File Name    : catalog/controller/product/manufacturer.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): $this->document->setTitle($manufacturer_info['name']);
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 05:12:36 ~ IP : 103.255.4.64 ----------
+REQUEST URI : /index.php?route=checkout/cart/add
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/ApplyCouponVoucherDuringCheckout.xml
+   id        : Add coupon or voucher during checkout
+   version   : 1.5.2.x+
+   vqmver    : 1.3.0
+   author    : g-white
+
+File Name    : catalog/controller/checkout/cart.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): if (isset($this->request->post['coupon']) && $this->validateCoupon()) {
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 05:13:03 ~ IP : 103.255.4.64 ----------
+REQUEST URI : /index.php?route=checkout/checkout
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/checkout_region_state_to_state_region.xml
+   id        : Checkout - Rename State/Region to Region/State
+   version   : 1.0
+   vqmver    : 2.1.5
+   author    : Jeff Hunter aka Tcalp
+
+File Name    : catalog/language/english/checkout/checkout.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): Region / State
+
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/ApplyCouponVoucherDuringCheckout.xml
+   id        : Add coupon or voucher during checkout
+   version   : 1.5.2.x+
+   vqmver    : 1.3.0
+   author    : g-white
+
+File Name    : catalog/view/theme/*/template/checkout/checkout.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $('#button-payment-method').attr('disabled', false);
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 05:15:06 ~ IP : 103.255.4.64 ----------
+REQUEST URI : /index.php?route=checkout/shipping_address
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/google_analytics_expert.xml
+   id        : Google Analytics Expert
+   version   : 1.5.2 - 1.5.4x
+   vqmver    : 3.7
+   author    : spitos
+
+File Name    : catalog/view/theme/*/template/checkout/shipping_address.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php if ($addresses) { ?>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 05:15:10 ~ IP : 103.255.4.64 ----------
+REQUEST URI : /index.php?route=checkout/cart
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/ApplyCouponVoucherDuringCheckout.xml
+   id        : Add coupon or voucher during checkout
+   version   : 1.5.2.x+
+   vqmver    : 1.3.0
+   author    : g-white
+
+File Name    : catalog/view/theme/*/template/checkout/cart.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <td class="right"><b><?php echo $total['title']; ?>:</b></td>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 05:21:44 ~ IP : 103.255.4.64 ----------
+REQUEST URI : /index.php?route=checkout/payment_method
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/ApplyCouponVoucherDuringCheckout.xml
+   id        : Add coupon or voucher during checkout
+   version   : 1.5.2.x+
+   vqmver    : 1.3.0
+   author    : g-white
+
+File Name    : catalog/view/theme/*/template/checkout/payment_method.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): </table>
+
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/google_analytics_expert.xml
+   id        : Google Analytics Expert
+   version   : 1.5.2 - 1.5.4x
+   vqmver    : 3.7
+   author    : spitos
+
+File Name    : catalog/view/theme/*/template/checkout/payment_method.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php if ($error_warning) { ?>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-05 06:10:18 ~ IP : 172.58.232.149 ----------
+REQUEST URI : /index.php?route=checkout/guest_shipping
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/google_analytics_expert.xml
+   id        : Google Analytics Expert
+   version   : 1.5.2 - 1.5.4x
+   vqmver    : 3.7
+   author    : spitos
+
+File Name    : catalog/view/theme/*/template/checkout/guest_shipping.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <table class="form">
+
+----------------------------------------------------------------------
+
+

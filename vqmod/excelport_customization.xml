@@ -1,0 +1,133 @@
+<modification>
+	<id>ExcelPort Discount Price Customization</id>
+	<version>1.0.0</version>
+	<vqmver>2.x</vqmver>
+	<author>iSenseLabs Team</author>
+	
+	<file name="admin/model/module/excelport.php">
+
+		<operation>
+			<search position="after"><![CDATA[/* {EXTRA_PRODUCT_FIELDS} */]]></search>   
+      <add><![CDATA[
+
+      	array(
+					'title' => 'Adwords Publish',
+					'column_full' => 'R',
+					'column_light' => 'AN',
+					'name' => 'custom_ongoogle',
+					'select_sql' => "SELECT p.product_id, p.ongoogle as value FROM {DB_PREFIX}product p",
+					'select_eval' => NULL,
+					'eval_add' => '
+						$this->db->query("UPDATE " . DB_PREFIX . "product SET ongoogle=\'" . (int)$this->db->escape(trim($data["custom_ongoogle"])) . "\' WHERE product_id=\'" . (int)$product_id . "\'");
+					',
+					'eval_edit' => '
+						$this->db->query("UPDATE " . DB_PREFIX . "product SET ongoogle=\'" . (int)$this->db->escape(trim($data["custom_ongoogle"])) . "\' WHERE product_id=\'" . (int)$product_id . "\'");
+					'
+				),
+				array(
+					'title' => 'Adwords Grouping',
+					'column_full' => 'S',
+					'column_light' => 'AO',
+					'name' => 'custom_google_adwords_grouping',
+					'select_sql' => "SELECT p.product_id, p.google_adwords_grouping as value FROM {DB_PREFIX}product p",
+					'select_eval' => NULL,
+					'eval_add' => '
+						$this->db->query("UPDATE " . DB_PREFIX . "product SET google_adwords_grouping=\'" . $this->db->escape(trim($data["custom_google_adwords_grouping"])) . "\' WHERE product_id=\'" . (int)$product_id . "\'");
+					',
+					'eval_edit' => '
+						$this->db->query("UPDATE " . DB_PREFIX . "product SET google_adwords_grouping=\'" . $this->db->escape(trim($data["custom_google_adwords_grouping"])) . "\' WHERE product_id=\'" . (int)$product_id . "\'");
+					'
+				),
+				array(
+					'title' => 'Adwords Labels',
+					'column_full' => 'T',
+					'column_light' => 'AP',
+					'name' => 'custom_google_adwords_labels',
+					'select_sql' => "SELECT p.product_id, p.google_adwords_labels as value FROM {DB_PREFIX}product p",
+					'select_eval' => NULL,
+					'eval_add' => '
+						$this->db->query("UPDATE " . DB_PREFIX . "product SET google_adwords_labels=\'" . $this->db->escape(trim($data["custom_google_adwords_labels"])) . "\' WHERE product_id=\'" . (int)$product_id . "\'");
+					',
+					'eval_edit' => '
+						$this->db->query("UPDATE " . DB_PREFIX . "product SET google_adwords_labels=\'" . $this->db->escape(trim($data["custom_google_adwords_labels"])) . "\' WHERE product_id=\'" . (int)$product_id . "\'");
+					'
+				)
+
+    	]]></add>
+    </operation>
+
+		<operation>
+			<search position="after"><![CDATA[/* {EXTRA_FUNCTIONS} */]]></search>   
+      <add><![CDATA[
+      		public function num_to_letter($num, $uppercase = FALSE) { // Credit to korexus: http://studiokoi.com/blog/article/converting_numbers_to_letters_quickly_in_php
+						// Map numbers 1 - 26 on to character codes 97 - 122.
+						// For higher numbers build recursively from the right.
+						$num -= 1;
+						$letter = chr($num % 26 + 97);
+						if ($num >= 26) {
+							$letter = $this->num_to_letter(floor($num/26),$uppercase).$letter;
+						}
+						return ($uppercase ? strtoupper($letter) : $letter);
+					}
+
+					public function add_extra_fields() {
+						$allowed = array("default", "local", "wholesale small", "wholesale big"); // LOWER CASE!
+						$quantities = array(1, 3, 10);
+						$start_full = 21; // Column R
+						$start_light = 43; // Column AN
+
+						$customer_groups_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "customer_group_description WHERE language_id = '" . $this->config->get('config_language_id') . "' GROUP BY customer_group_id ORDER BY customer_group_id ASC");
+
+						if (!empty($customer_groups_query->num_rows)) {
+							foreach ($customer_groups_query->rows as $row) {
+								foreach ($quantities as $quantity) {
+									if (empty($row['name']) || !in_array(strtolower($row['name']), $allowed)) continue;
+
+									$key = 'custom_discount_' . $row['customer_group_id'] . '_' . $quantity;
+
+									$this->extraGeneralFields['Products'][] = array(
+										'title' => 'Discount ' . $row['name'] . ' ' . $quantity,
+										'column_full' => $this->num_to_letter($start_full, true),
+										'column_light' => $this->num_to_letter($start_light, true),
+										'name' => $key,
+										'select_sql' => "SELECT pd.product_id, pd.price as value FROM {DB_PREFIX}product_discount pd WHERE customer_group_id=" . $row['customer_group_id'] . " AND quantity=" . $quantity . " GROUP BY pd.product_id",
+										'select_eval' => NULL,
+										'eval_add' => '
+
+											$discount_price = (float)str_replace(\',\', \'.\', trim($data[\'' . $key . '\']));
+
+											$this->db->query("DELETE FROM " . DB_PREFIX . "product_discount WHERE product_id = \'" . (int)$product_id . "\' AND quantity=\'' . $quantity . '\'  AND customer_group_id=\'' . $row['customer_group_id'] . '\'");
+
+											if (!empty($discount_price)) {
+													$this->db->query("INSERT INTO " . DB_PREFIX . "product_discount SET product_id = \'" . (int)$product_id . "\', customer_group_id = \'' . $row['customer_group_id'] . '\', quantity = \'' . $quantity . '\', priority = \'0\', price = \'" . (float)$discount_price . "\', date_start = \'0000-00-00\', date_end = \'0000-00-00\'");
+											}
+										',
+										'eval_edit' => '
+
+											$discount_price = (float)str_replace(\',\', \'.\', trim($data[\'' . $key . '\']));
+
+											$this->db->query("DELETE FROM " . DB_PREFIX . "product_discount WHERE product_id = \'" . (int)$product_id . "\' AND quantity=\'' . $quantity . '\'  AND customer_group_id=\'' . $row['customer_group_id'] . '\'");
+
+											if (!empty($discount_price)) {
+													$this->db->query("INSERT INTO " . DB_PREFIX . "product_discount SET product_id = \'" . (int)$product_id . "\', customer_group_id = \'' . $row['customer_group_id'] . '\', quantity = \'' . $quantity . '\', priority = \'0\', price = \'" . (float)$discount_price . "\', date_start = \'0000-00-00\', date_end = \'0000-00-00\'");
+											}
+
+										'
+									);
+
+									$start_full++;
+									$start_light++;
+								}
+							}
+						}
+					}
+			]]></add>
+    </operation>
+    <operation>
+			<search position="after"><![CDATA[parent::__construct($register);]]></search>   
+      	<add><![CDATA[
+					$this->add_extra_fields();
+			]]></add>
+    </operation>
+	</file>
+</modification>
