@@ -14,26 +14,18 @@ if (!defined('DIR_APPLICATION')) {
 }
 
 //VirtualQMOD
-//require_once('../vqmod/vqmod.php');
-//VQMod::bootup();
+require_once('../vqmod/vqmod.php');
+VQMod::bootup();
 
 // VQMODDED Startup
-//require_once(VQMod::modCheck(DIR_SYSTEM . 'startup.php'));
+require_once(VQMod::modCheck(DIR_SYSTEM . 'startup.php'));
 
 // Application Classes
-//require_once(VQMod::modCheck(DIR_SYSTEM . 'library/currency.php'));
-//require_once(VQMod::modCheck(DIR_SYSTEM . 'library/user.php'));
-//require_once(VQMod::modCheck(DIR_SYSTEM . 'library/weight.php'));
-//require_once(VQMod::modCheck(DIR_SYSTEM . 'library/length.php'));
-//require_once(VQMod::modCheck(DIR_SYSTEM . 'library/ebay.php'));
-
-require_once(DIR_SYSTEM . 'startup.php');
-
-// Application Classes
-require_once(DIR_SYSTEM . 'library/currency.php');
-require_once(DIR_SYSTEM . 'library/user.php');
-require_once(DIR_SYSTEM . 'library/weight.php');
-require_once(DIR_SYSTEM . 'library/length.php');
+require_once(VQMod::modCheck(DIR_SYSTEM . 'library/currency.php'));
+require_once(VQMod::modCheck(DIR_SYSTEM . 'library/user.php'));
+require_once(VQMod::modCheck(DIR_SYSTEM . 'library/weight.php'));
+require_once(VQMod::modCheck(DIR_SYSTEM . 'library/length.php'));
+require_once(VQMod::modCheck(DIR_SYSTEM . 'library/ebay.php'));
 
 // Registry
 $registry = new Registry();
@@ -152,7 +144,7 @@ $registry->set('length', new Length($registry));
 // User
 $registry->set('user', new User($registry));
 $registry->set('log', new Log('ebaylog.log'));
-//$registry->set('ebay', new Ebay($registry));
+$registry->set('ebay', new Ebay($registry));
 
 						
 // Front Controller
