@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<sql><![CDATA[
+	ALTER TABLE product ADD cached_name VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '';
+	UPDATE product, product_description SET product.cached_name = LCASE(product_description.name) where product.product_id = product_description.product_id;
+	]]></sql>
+	<id>WX Single Language Optimizer</id>
+	<version>1.0.0</version>
+	<vqmver>2.1.5</vqmver>
+	<author>Jeff Hunter</author>
+	
+	<file name="catalog/model/catalog/product.php">
+		<operation> <!-- REMOVE JOIN OF product_description TABLE -->
+			<search position="replace" index="2,3,4,5"><![CDATA[LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id)]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip"> <!-- CHANGE SEARCH PARAMS TO USE cached_name -->
+			<search position="replace"><![CDATA[pd.name LIKE]]></search>
+			<add><![CDATA[cached_name LIKE]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[LCASE(pd.name)]]></search>
+			<add><![CDATA[cached_name]]></add>
+		</operation>
+		<operation>
+			<search position="replace" index="2,3,4,5,6"><![CDATA[pd.name]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		
+		<operation>
+			<search position="replace" index="2,3,4,5"><![CDATA[pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND]]></search>
+			<add><![CDATA[]]></add>
+		</operation> 
+		
+		<operation error="skip"> <!-- REMOVE TAG SEARCHING FROM SEARCH -->
+			<search position="replace"><![CDATA[&& !empty($data['filter_tag'])]]></search>
+			<add><![CDATA[&& !empty($data['filter_tag']) && false]]></add>
+		</operation>
+		
+		<operation error="skip"> <!-- REMOVE TAG SEARCHING FROM SEARCH -->
+			<search position="replace"><![CDATA[&& $data['filter_tag']]]></search>
+			<add><![CDATA[&& !empty($data['filter_tag']) && false]]></add>
+		</operation>
+		
+		<operation error="skip"> <!-- REMOVE TAG SEARCHING FROM SEARCH -->
+			<search position="replace"><![CDATA[(!empty($data['filter_tag']))]]></search>
+			<add><![CDATA[(!empty($data['filter_tag']) && false)]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/controller/tool/csv_import.php" error="skip">
+		<operation>
+			<search position="before"><![CDATA[fclose($this->fh);]]></search>
+			<add><![CDATA[
+			$this->db->query("UPDATE " . DB_PREFIX . "product, " . DB_PREFIX . "product_description SET " . DB_PREFIX . "product.cached_name = LCASE(" . DB_PREFIX . "product_description.name) where " . DB_PREFIX . "product.product_id = " . DB_PREFIX . "product_description.product_id");
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/common/seo_mega_pack_pro_url.php" error="skip">
+		<operation>
+			<search position="replace"><![CDATA[smp_language_id IS NULL OR smp_language_id = ' . (int) $this->_config_language_id . ']]></search>
+			<add><![CDATA[1 = 1]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[$q .= ' ORDER BY smp_language_id ASC';]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+	</file>
+</modification>

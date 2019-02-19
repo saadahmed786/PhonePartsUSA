@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>WXHosting.com Speed Optimization Settings Post Run</id>
+	<version>2.0</version>
+	<vqmver>2.1</vqmver>
+	<author>Jeff Hunter aka Tcalp</author>
+
+<!--  ==============================================================================================================================================================================  -->
+<!--  SEO URL CACHING HANDLERS      SEO URL CACHING HANDLERS      SEO URL CACHING HANDLERS      SEO URL CACHING HANDLERS      SEO URL CACHING HANDLERS      SEO URL CACHING HANDLERS  -->
+<!--  ==============================================================================================================================================================================  -->	
+	<file name="catalog/controller/common/seo_url.php">
+		<operation>
+			<search position="replace"><![CDATA[$this->db->query]]></search>
+			<add><![CDATA[$this->queryHandler]]></add>
+		</operation>
+		<operation> <!-- ADD CACHE CONSTRUCT -->
+			<search position="after"><![CDATA[class ControllerCommonSeoUrl]]></search>
+			<add><![CDATA[
+			private function queryHandler($sql) {
+				if ($this->config->get('optimizer_seo_cache')) {
+					return $this->db->cachedQuery($sql, 'seo');
+				} else {
+					return $this->db->query($sql);
+				}
+			}
+			]]></add>
+		</operation>
+	</file>	
+</modification>

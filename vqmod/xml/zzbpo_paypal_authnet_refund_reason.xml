@@ -1,0 +1,70 @@
+<modification>
+  <id>Add refund reason to PayPal Admin Tools and Authorize.net Admin Tools</id>
+  <version>1.0</version>
+  <vqmver>2.2.1</vqmver>
+  <author>Bigpayout Development Team</author>
+
+  <file name="admin/controller/sale/order.php">
+    <operation>
+      <search position="after"><![CDATA[
+      $json['success'] = $response_info[4];
+      ]]></search>
+      <add><![CDATA[
+      $this->load->model('sale/order');
+
+      $this->model_sale_order->addOrderHistory($this->request->post['aat_order_id'], array(
+        'order_status_id' => 11,
+        'comment'         => $this->request->post['aat_comment']
+      ));
+      ]]></add>
+    </operation>
+    <operation>
+      <search position="replace"><![CDATA[
+      $memo = $type . ' ' . $amount;
+      ]]></search>
+      <add><![CDATA[
+      $memo = $type . ' ' . $amount . "\n\n" . $this->request->post['ppat_note'];
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="admin/view/template/sale/order_info.tpl">
+    <operation>
+      <search position="before"><![CDATA[
+      <input style="display:none;" type="text" size="5" name="aat_amount" value="<?php echo preg_replace("/[^0-9.]/", "", $total); ?>" />
+      ]]></search>
+      <add><![CDATA[
+      <br />
+      Reason:<br />
+      <textarea name="aat_comment" cols="80" rows="8"></textarea>
+      <br />
+      ]]></add>
+    </operation>
+    <operation>
+      <search position="before" offset="1"><![CDATA[
+      <td>Environment:</td>
+      ]]></search>
+      <add><![CDATA[
+      <tr>
+        <td>Reason:</td>
+        <td><textarea name="ppat_note" cols="80" rows="8"></textarea></td>
+      </tr>
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="catalog/controller/payment/pp_standard.php">
+    <operation>
+      <search position="replace"><![CDATA[
+      $this->model_checkout_order->update($order_id, $order_status_id);
+      ]]></search>
+      <add><![CDATA[
+      if (isset($this->request->post['memo'])) {
+        $this->model_checkout_order->update($order_id, $order_status_id, $this->request->post['memo']);
+      } else {
+        $this->model_checkout_order->update($order_id, $order_status_id);
+      }
+      ]]></add>
+    </operation>
+  </file>
+</modification>

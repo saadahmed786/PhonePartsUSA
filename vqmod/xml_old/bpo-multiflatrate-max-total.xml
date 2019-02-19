@@ -1,0 +1,47 @@
+<modification>
+  <id>Modification for MultiFlateRate to limit by cart total</id>
+  <version>1.0</version>
+  <vqmver>2.2.1</vqmver>
+  <author>Bigpayout Development Team</author>
+
+  <file name="admin/language/english/shipping/multiflatrate.php">
+    <operation>
+      <search position="top" offset="1"><![CDATA[]]></search>
+      <add><![CDATA[
+      $_['text_max_cart_total']	= 'Max Cart Total<br /><span class="help">0 to disable</span>';
+      $_['text_min_cart_total']	= 'Min Cart Total<br /><span class="help">0 to disable</span>';
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="admin/view/template/shipping/multiflatrate.tpl">
+    <operation>
+      <search position="before"><![CDATA[
+      <div><strong><?php echo $text_value_for_total; ?></strong></div>
+      ]]></search>
+      <add><![CDATA[
+      <?php $max_cart_total = (isset($rate['max_cart_total'])) ? $rate['max_cart_total'] : '0'; ?>
+			<div><strong><?php echo $text_max_cart_total; ?></strong></div>
+			<div><input type="text" name="<?php echo $name; ?>_data[<?php echo $row; ?>][max_cart_total]" value="<?php echo $max_cart_total; ?>"></div>
+			<br />
+      <?php $min_cart_total = (isset($rate['min_cart_total'])) ? $rate['min_cart_total'] : '0'; ?>
+			<div><strong><?php echo $text_min_cart_total; ?></strong></div>
+			<div><input type="text" name="<?php echo $name; ?>_data[<?php echo $row; ?>][min_cart_total]" value="<?php echo $min_cart_total; ?>"></div>
+			<br />
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="catalog/model/shipping/multiflatrate.php">
+    <operation>
+      <search position="before"><![CDATA[
+      $quote_data[$this->name . '_' . $row_num] = array(
+      ]]></search>
+      <add><![CDATA[
+      if (((float)$row['max_cart_total'] && $subtotal > (float)$row['max_cart_total']) || ((float)$row['min_cart_total'] && $subtotal < (float)$row['min_cart_total'])) {
+        continue;
+      }
+      ]]></add>
+    </operation>
+  </file>
+</modification>

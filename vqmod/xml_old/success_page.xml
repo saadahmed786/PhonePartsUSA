@@ -1,0 +1,147 @@
+<modification>
+
+	<id>Custom Success Page</id>
+	<version>1.0</version>
+	<vqmver>2.3.x</vqmver>
+	<author>Adikon</author>
+
+	<file name="catalog/controller/*/success.php">
+		<operation>	
+			<search position="after"><![CDATA[if (isset($this->session->data['order_id'])) {]]></search>
+			<add><![CDATA[$this->session->data['last_order_id'] = $this->session->data['order_id'];
+			$this->load->model('checkout/order');
+			
+			$order_info = $this->model_checkout_order->getOrder($this->session->data['order_id']);]]></add>
+		</operation>
+
+		<operation>	
+			<search position="after"><![CDATA[$this->data['continue'] = $this->url->link('common/home');]]></search>
+			<add><![CDATA[
+			if ($this->config->get('success_page_redirect_status')) {
+				$this->redirect($this->config->get('success_page_redirect_url'));
+			} elseif ($this->config->get('success_page_status')) {
+				$this->load->model('checkout/order');
+
+				if (!empty($this->session->data['last_order_id'])) {
+					$order_info = $this->model_checkout_order->getOrder($this->session->data['last_order_id']);
+				}
+				
+				if (isset($order_info) && !empty($order_info)) {
+					$order_id = $order_info['order_id'];
+					$email = $order_info['email'];
+					$date_order = date($this->language->get('date_format_short'), strtotime($order_info['date_added']));
+					$shipping_method = $order_info['shipping_method'];
+					$facebook = '';
+					$is_logged = '';
+
+					if ($order_info['shipping_address_format']) {
+						$format = $order_info['shipping_address_format'];
+					} else {
+						$format = '{firstname} {lastname}' . "\n" . '{company}' . "\n" . '{address_1}' . "\n" . '{address_2}' . "\n" . '{city} {postcode}' . "\n" . '{zone}' . "\n" . '{country}';
+					}
+
+					$find = array(
+						'{firstname}',
+						'{lastname}',
+						'{company}',
+						'{address_1}',
+						'{address_2}',
+						'{city}',
+						'{postcode}',
+						'{zone}',
+						'{zone_code}',
+						'{country}'
+					);
+
+					$replace = array(
+						'firstname' => $order_info['shipping_firstname'],
+						'lastname'  => $order_info['shipping_lastname'],
+						'company'   => $order_info['shipping_company'],
+						'address_1' => $order_info['shipping_address_1'],
+						'address_2' => $order_info['shipping_address_2'],
+						'city'      => $order_info['shipping_city'],
+						'postcode'  => $order_info['shipping_postcode'],
+						'zone'      => $order_info['shipping_zone'],
+						'zone_code' => $order_info['shipping_zone_code'],
+						'country'   => $order_info['shipping_country']  
+					);
+
+					$delivery_address = str_replace(array("\r\n", "\r", "\n"), '<br />', preg_replace(array("/\s\s+/", "/\r\r+/", "/\n\n+/"), '<br />', trim(str_replace($find, $replace, $format))));
+
+					$find = array(
+						'{order_id}',
+						'{email}',
+						'{delivery_address}',
+						'{date_order}',
+						'{shipping_method}',
+						'{facebook}',
+						'{is_logged}'
+					);
+
+					$is_logged = $this->config->get('success_page_is_logged');
+
+					$replace = array(
+						'order_id'         => $order_info['order_id'],
+						'email'            => $order_info['email'],
+						'delivery_address' => $delivery_address,
+						'date_order'       => date($this->language->get('date_format_short'), strtotime($order_info['date_added'])),
+						'shipping_method'  => $order_info['shipping_method'],
+						'facebook'         => ($this->config->get('success_page_facebook_status')) ? '<div class="fb-like-box" data-href="http' . ((isset($_SERVER['HTTPS']) && (($_SERVER['HTTPS'] == 'on') || ($_SERVER['HTTPS'] == '1'))) ? 's' : '') . '://www.facebook.com/' . $this->config->get('success_page_facebook_profile') . '" data-width="' . $this->config->get('success_page_facebook_width') . '" data-height="' . $this->config->get('success_page_facebook_height') . '" border-color="' . $this->config->get('success_page_facebook_border') . '" data-show-faces="true" data-stream="false" data-header="false"></div>' : '',
+						'is_logged'        => ($this->customer->isLogged() && isset($is_logged[$this->config->get('config_language_id')])) ? html_entity_decode($is_logged[$this->config->get('config_language_id')], ENT_QUOTES, 'UTF-8') : ''
+					);
+
+					$description = $this->config->get('success_page_description');
+
+					if (isset($description[$this->config->get('config_language_id')])) {
+						if ($this->config->get('success_page_to_default')) {
+							$this->data['text_message'] .= str_replace($find, $replace, html_entity_decode($description[$this->config->get('config_language_id')], ENT_QUOTES, 'UTF-8'));
+						} else {
+							$this->data['text_message'] = str_replace($find, $replace, html_entity_decode($description[$this->config->get('config_language_id')], ENT_QUOTES, 'UTF-8'));
+						}
+					}
+				}
+			}
+			]]></add>
+		</operation>
+	</file>
+
+	<file name="catalog/view/theme/*/template/*/success.tpl">
+		<operation>	
+			<search position="replace"><![CDATA[<h1><?php echo $heading_title; ?></h1>]]></search>
+			<add><![CDATA[
+			<?php if ($this->config->get('success_page_status')) { ?>
+			  <?php if ($this->config->get('success_page_to_default')) { ?>
+			  <h1><?php echo $heading_title; ?></h1>
+			  <?php } ?>
+			  <?php if ($this->config->get('success_page_facebook_status')) { ?>
+			  <div id="fb-root"></div>
+			  <script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_EN/all.js#xfbml=1";
+			  fjs.parentNode.insertBefore(js, fjs);
+			  }(document, 'script', 'facebook-jssdk'));</script>
+			  <?php } ?>
+			  <script type="text/javascript">
+				var _rrES = {
+					seller_id: 37910,
+					email: "{email}",
+					auto: true
+				};
+				(function(w,o) {
+					o=o||{};w.seller_id=o.seller_id||"";w.__rr_email_pass=o.email||"";w.__rr_inv=o.invoice||"";
+					if(o.auto===false)w.__rr_autoEnroll=false;
+					var s=document.createElement('script');s.type='text/javascript';s.async=true;
+					s.src="https://www.resellerratings.com/popup/include/popup.js";var ss=document.getElementsByTagName('script')[0];
+					ss.parentNode.insertBefore(s,ss);
+				})(window, _rrES);
+				</script>
+			<?php } else { ?>
+			<h1><?php echo $heading_title; ?></h1>
+			<?php } ?>
+			]]></add>
+		</operation>
+	</file>
+
+</modification>

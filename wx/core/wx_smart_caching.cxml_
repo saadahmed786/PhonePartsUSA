@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>WXHosting.com Smart Cache Actions</id>
+	<version>2.0</version>
+	<vqmver>2.1</vqmver>
+	<author>Jeff Hunter aka Tcalp</author>
+
+	<file name="system/library/response.php">
+		<operation>
+			<search position="after"><![CDATA[OptimizerPageCache::write]]></search>
+			<add><![CDATA[
+			// ** SMART CACHING **
+			// ** SMART CACHING **
+			$smart_page_id = 0;
+			if ($current_route == 'product/product') {
+				$smart_page_id = isset($this->request->get['product_id']) ? $this->request->get['product_id'] : 0;
+			} else if ($current_route == 'product/category') {
+				if (isset($this->request->get['path'])) {
+					$parts = explode('_', (string)$this->request->get['path']);
+					$smart_page_id = (int)array_pop($parts);
+				}
+			} else if ($current_route == 'product/manufacturer/info') {
+				$smart_page_id = isset($this->request->get['manufacturer_id']) ? $this->request->get['manufacturer_id'] : 0;
+			} else if ($current_route == 'information/information' || $current_route == 'information/information/info') {
+				$smart_page_id = isset($this->request->get['information_id']) ? $this->request->get['information_id'] : 0;
+			} else if ($current_route == 'common/home') {
+				$smart_page_id = 0;
+			}
+			$this->db->query("INSERT INTO " . DB_PREFIX . "smart_cache SET route = '" . $this->db->escape($current_route) . "', page_id = '" . (int)$smart_page_id . "', cache_file = '" . OptimizerPageCache::getToken() . "'");
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/model/checkout/order.php">
+		<operation>
+			<search position="replace"><![CDATA[foreach ($order_product_query->rows as $order_product) {]]></search>
+			<add><![CDATA[
+			$wx_page_caching = false;
+			if ($this->config->get('wx_page_caching')  && $this->config->get('wx_page_sale')) {
+				$wx_page_caching = true;
+				$this->load->model('wx/smartcache');
+			}
+
+			foreach ($order_product_query->rows as $order_product) {
+				if ($wx_page_caching) {
+					$this->model_wx_smartcache->clear('product/product', $order_product['product_id']);
+				}
+			]]></add>
+		</operation>
+	</file>
+
+	<file name="admin/controller/catalog/product.php">
+		<operation error="log">
+			<search position="before"><![CDATA[$this->model_catalog_product->deleteProduct($product_id);]]></search>
+			<add><![CDATA[
+			
+			$this->load->model('wx/smartcache');
+			//CLEAR MANUFACTURER
+			$product = $this->model_catalog_product->getProduct($product_id);
+			if (isset($product['manufacturer_id'])) {
+				$this->model_wx_smartcache->clear('product/manufacturer/info', $product['manufacturer_id']);
+			}
+			//CLEAR CATEGORY PAGES
+			foreach($this->model_catalog_product->getProductCategories($product_id) as $category_id) {
+				$this->model_wx_smartcache->clear('product/category', $category_id);
+			}
+			if ($this->config->get('wx_page_search')) { $this->model_wx_smartcache->clear('product/search'); }
+
+			$this->model_wx_smartcache->clear('common/home');
+			]]></add>
+		</operation>
+		<operation error="log">
+			<search position="before"><![CDATA[$this->model_catalog_product->addProduct(]]></search>
+			<add><![CDATA[
+			$this->load->model('wx/smartcache');
+			//CLEAR MANUFACTURER
+			if ($this->request->post['manufacturer_id']) {
+				$this->model_wx_smartcache->clear('product/manufacturer/info', $this->request->post['manufacturer_id']);
+			}
+			//CLEAR CATEGORY PAGES
+			if (isset($this->request->post['product_category'])) {
+				foreach ($this->request->post['product_category'] as $category_id) {
+					$this->model_wx_smartcache->clear('product/category', $category_id);
+				}
+			}
+			if ($this->config->get('wx_page_search')) { $this->model_wx_smartcache->clear('product/search'); }
+			$this->model_wx_smartcache->clear('common/home');
+			
+			]]></add>
+		</operation>
+		<operation error="skip"> <!-- ON EDIT CLEAR PRODUCT RELATED CACHES -->
+			<search position="before"><![CDATA[$this->model_catalog_product->editProduct(]]></search>
+			<add><![CDATA[
+			$this->load->model('wx/smartcache');
+			$this->model_wx_smartcache->clear('product/product', (int)$this->request->get['product_id']);
+			//CLEAR MANUFACTURER
+			if ($this->request->post['manufacturer_id']) {
+				$this->model_wx_smartcache->clear('product/manufacturer/info', $this->request->post['manufacturer_id']);
+			}
+			//CLEAR CATEGORY PAGES
+			if (isset($this->request->post['product_category'])) {
+				foreach ($this->request->post['product_category'] as $category_id) {
+					$this->model_wx_smartcache->clear('product/category', $category_id);
+				}
+			}
+			if ($this->config->get('wx_page_search')) { $this->model_wx_smartcache->clear('product/search'); }
+			$this->model_wx_smartcache->clear('common/home');
+			]]></add>
+		</operation>
+	</file>
+
+	<file name="admin/controller/catalog/manufacturer.php">
+		<operation error="skip"> <!-- ON EDIT CLEAR MANUFACTURER RELATED CACHES -->
+			<search position="before"><![CDATA[$this->model_catalog_manufacturer->editManufacturer]]></search>
+			<add><![CDATA[
+			$this->load->model('wx/smartcache');
+			//CLEAR MANUFACTURER
+			if ($this->request->get['manufacturer_id']) {
+				$this->model_wx_smartcache->clear('product/manufacturer/info', $this->request->get['manufacturer_id']);
+			}
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/controller/catalog/category.php">
+		<operation error="skip"> <!-- ON EDIT CLEAR PRODUCT RELATED CACHES -->
+			<search position="before"><![CDATA[$this->model_catalog_product->editProduct(]]></search>
+			<add><![CDATA[
+			$this->load->model('wx/smartcache');
+
+			//CLEAR CATEGORY PAGES
+			if (isset($this->request->get['category_id'])) {
+				$this->model_wx_smartcache->clear('product/category', $this->request->get['category_id']);
+			}
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/controller/catalog/information.php">
+		<operation error="skip"> <!-- ON EDIT CLEAR PRODUCT RELATED CACHES -->
+			<search position="before"><![CDATA[$this->model_catalog_information->editInformation]]></search>
+			<add><![CDATA[
+			$this->load->model('wx/smartcache');
+
+			//CLEAR CATEGORY PAGES
+			if (isset($this->request->get['information_id'])) {
+				$this->model_wx_smartcache->clear('information/information', $this->request->get['information_id']);
+				$this->model_wx_smartcache->clear('information/information/info', $this->request->get['information_id']);
+			}
+			]]></add>
+		</operation>
+	</file>
+</modification>

@@ -1,0 +1,184 @@
+<modification>
+    <id>POS Menu Item</id>
+    <version>1.0</version>
+    <vqmver>2.x</vqmver>
+    <author>Krafty Solutions</author>
+    <file name="admin/view/template/common/header.tpl">
+    <operation>
+            <search position="before"><![CDATA[<script type="text/javascript" src="view/javascript/jquery/tabs.js"></script>]]></search>
+            <add><![CDATA[<link type="text/css" href="view/javascript/pos/keyboard.css" rel="stylesheet" />]]></add>
+    </operation>
+    <operation>
+            <search position="before"><![CDATA[<li id="system"><a class="top"><?php echo $text_system; ?></a>]]></search>
+            <add><![CDATA[
+              <!--<li id="pos" class=""><a class="top">Point Of Sale</a>
+                <ul style="display: none; visibility: hidden;">
+                  <li><a href="index.php?route=pos/pos/index&token=<?php echo $this->session->data['token'] ?>">POS</a></li>
+                  <li><a href="index.php?route=pos/dashboard&token=<?php echo $this->session->data['token'] ?>">Dashboard</a></li><li><a href="<?php echo $voided_items_report; ?>">Voided Items Report</a></li>
+                </ul>
+              </li>-->
+            ]]></add>
+    </operation>
+    </file>
+    
+    <file name="admin/view/template/sale/order_info.tpl">
+    <operation>
+            <search position="after"><![CDATA[<td><?php echo $payment_method; ?></td>]]></search>
+            <add><![CDATA[
+          </tr>
+          <tr>
+            <td>Card no.</td>
+            <td><?php echo $card_no; ?></td>]]></add>
+    </operation>
+    </file>
+    
+    <file name="system/library/tax.php">
+        <operation>
+            <search position="before"><![CDATA[public function getRates(]]></search>
+            <add><![CDATA[
+
+            public function getAllRates(){
+
+                $tax_rates = array();
+
+                $tax_query = $this->db->query("SELECT tr2.tax_rate_id, tr2.name, tr2.rate, tr2.type, tr1.priority FROM " . DB_PREFIX . "tax_rule tr1 LEFT JOIN " . DB_PREFIX . "tax_rate tr2 ON (tr1.tax_rate_id = tr2.tax_rate_id) ORDER BY tr1.priority ASC");
+
+                foreach ($tax_query->rows as $result) {
+                    $tax_rates[$result['tax_rate_id']] = array(
+                        'tax_rate_id' => $result['tax_rate_id'],
+                        'name'        => $result['name'],
+                        'rate'        => $result['rate'],
+                        'type'        => $result['type'],
+                        'priority'    => $result['priority']
+                    );
+                }
+
+                return $tax_rates;     
+            }
+
+            ]]></add>
+        </operation>
+    </file>
+
+    <file name="admin/controller/sale/order.php">
+    <operation>
+            <search position="before"><![CDATA[$this->data['shipping_firstname'] = $order_info['shipping_firstname']]></search>
+            <add><![CDATA[$this->data['card_no'] = $order_info['card_no'];]]></add>
+    </operation>
+    </file>
+    
+    <file name="admin/model/sale/order.php">
+    <operation>
+            <search position="before"><![CDATA['shipping_firstname'      => $order_query->row['shipping_firstname']]></search>
+            <add><![CDATA['card_no' => $order_query->row['card_no'],]]></add>
+    </operation>
+    <operation>
+            <search position="before"><![CDATA[if (!empty($data['filter_total'])) {]]></search>
+            <add><![CDATA[
+                if(!empty($data['filter_user_id'])){
+                    $sql .= " AND user_id = '" . (float)$data['filter_user_id'] . "'";
+                }
+            ]]></add>
+    </operation>    
+    </file>
+    
+    <file name="admin/model/user/user.php">
+    <operation>
+            <search position="before"><![CDATA[public function getTotalUsersByEmail]]></search>
+            <add><![CDATA[
+             public function getUsersByGroupId($user_group_id) {
+		$query = $this->db->query("SELECT user_id, username FROM `" . DB_PREFIX . "user` WHERE user_group_id = '" . (int)$user_group_id."'");
+        	return $query->rows;
+             }
+            ]]></add>
+    </operation>
+    </file>
+    
+   
+    
+    <file name="admin/controller/setting/setting.php">
+    <operation>
+            <search position="before"><![CDATA[$this->template = 'setting/setting.tpl']]></search>
+            <add><![CDATA[
+                $this->load->model('user/user_group');
+                $this->data['user_groups'] = $this->model_user_user_group->getUserGroups();
+                
+                if (isset($this->request->post['pos_user_group_id'])) {
+			$this->data['pos_user_group_id'] = $this->request->post['pos_user_group_id']; 
+		} else {
+			$this->data['pos_user_group_id'] = $this->config->get('pos_user_group_id');
+		} 
+            ]]></add>      
+    </operation>
+    </file>  
+    
+    <file name="admin/view/template/setting/setting.tpl">
+    <operation>
+        <search position="before"><![CDATA[<td><?php echo $entry_fax; ?></td>]]></search>
+        <add><![CDATA[
+            <td>POS user group id</td>
+              <td>
+                 <select name="pos_user_group_id">
+                  <?php foreach ($user_groups as $user_group) { ?>
+                  <?php if ($user_group['user_group_id'] == $pos_user_group_id) { ?>
+                  <option value="<?php echo $user_group['user_group_id']; ?>" selected="selected"><?php echo $user_group['name']; ?></option>
+                  <?php } else { ?>
+                  <option value="<?php echo $user_group['user_group_id']; ?>"><?php echo $user_group['name']; ?></option>
+                  <?php } ?>
+                  <?php } ?>
+                </select>
+              </td>
+            </tr>
+            <tr>
+        ]]></add>      
+    </operation>
+    </file>     
+    
+    <file name="admin/controller/common/login.php">
+    <operation>
+        <search position="after"><![CDATA[$this->session->data['token'] = md5(mt_rand());]]></search>
+        <add><![CDATA[
+            $pos_user_group_id = $this->config->get('pos_user_group_id');
+
+            $this->load->model('user/user');
+            $user = $this->model_user_user->getUser($this->user->getId());
+            $has_permission = $this->user->hasPermission('access','pos/pos');
+            
+            if($pos_user_group_id == $user['user_group_id'] && $has_permission){
+               $this->redirect($this->url->link("pos/pos/index").'&token=' . $this->session->data['token']);
+            }
+        ]]></add>      
+    </operation>
+    </file>    
+    
+    <file name="admin/controller/common/header.php">
+    <operation>
+        <search position="after">$this->data['title'] = $this->document->getTitle(); </search>
+         <add><![CDATA[
+            $pos_user_group_id = $this->config->get('pos_user_group_id');
+
+            $this->load->model('user/user');
+            $user = $this->model_user_user->getUser($this->user->getId());
+            $has_permission = $this->user->hasPermission('access','pos/pos');
+            
+            if(isset($user['user_group_id']) && ($pos_user_group_id == $user['user_group_id']) && $has_permission==1){
+              // $this->redirect($this->url->link("pos/pos/index").'&token=' . $this->session->data['token']);
+            }
+         ]]></add>      
+    </operation>
+    </file>  
+    
+    <file name="admin/model/catalog/option.php">
+    <operation>
+        <search position="before">public function getTotalOptions</search>
+         <add><![CDATA[
+           public function getOptionValue($option_value_id) {
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "option_value ov LEFT JOIN " . DB_PREFIX . "option_value_description ovd ON (ov.option_value_id = ovd.option_value_id) WHERE ov.option_value_id = '" . (int)$option_value_id . "' AND ovd.language_id = '" . (int)$this->config->get('config_language_id') . "'");
+		return $query->row;
+           }
+         ]]></add>      
+    </operation>
+    </file>     
+    
+</modification>
+

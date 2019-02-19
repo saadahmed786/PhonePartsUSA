@@ -13,8 +13,8 @@ Options -Indexes
 RewriteEngine On
 RewriteBase /
 
-RewriteCond %{HTTPS} off
-RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#RewriteCond %{HTTP} off
+#RewriteRule .* http://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 ####################################### OPENCART RESTFUL API START #################################################
 

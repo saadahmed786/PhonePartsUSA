@@ -1,0 +1,54 @@
+<modification>
+  <id>Product Model In Listings</id>
+  <version>1.0</version>
+  <vqmver>2.2.1</vqmver>
+  <author>Bigpayout Development Team</author>
+
+  <file name="catalog/controller/product/category.php">
+    <operation>
+      <search position="after"><![CDATA[
+      $this->data['products'][] = array(
+      ]]></search>
+      <add trim="true"><![CDATA[
+      // Start BPO - Product Model In Listings
+      'model' => $result['model'],
+      // End BPO - Product Model In Listings
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="catalog/controller/product/search.php">
+    <operation>
+      <search position="after"><![CDATA[
+      $this->data['products'][] = array(
+      ]]></search>
+      <add trim="true"><![CDATA[
+      // Start BPO - Product Model In Listings
+      'model' => $result['model'],
+      // End BPO - Product Model In Listings
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="catalog/view/theme/*/template/product/category.tpl">
+    <operation>
+      <search position="replace"><![CDATA[
+      <div class="description"><?php echo $product['description']; ?></div>
+      ]]></search>
+      <add trim="true"><![CDATA[
+      <div class="description"><?php echo $product['model']; ?></div>
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="catalog/view/theme/*/template/product/search.tpl">
+    <operation>
+      <search position="replace"><![CDATA[
+      <div class="description"><?php echo $product['description']; ?></div>
+      ]]></search>
+      <add trim="true"><![CDATA[
+      <div class="description"><?php echo $product['model']; ?></div>
+      ]]></add>
+    </operation>
+  </file>
+</modification>

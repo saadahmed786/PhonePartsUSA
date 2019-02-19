@@ -1,0 +1,32 @@
+---------- Date: 2019-01-31 11:00:51 ~ IP : 103.255.5.64 ----------
+REQUEST URI : /bt-bp-30192-bintek-iphone-6s-battery-replacement
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/option_adds_product.xml
+   id        : Option Adds Product
+   version   : 156.4
+   vqmver    : 2.4.1
+   author    : Qphoria
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php echo $option_value['name']; ?>
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/similar_products.xml
+   id        : Enables you to associate similar products with a product. Works just like related products.
+   version   : 4.0.1
+   vqmver    : 2.3.0
+   author    : bull5-i
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <div id="tabs" class="htabs">
+MOD DETAILS:
+   modFile   : /home/phonerep/public_html/vqmod/xml/vqmod_youtube_product.xml
+   id        : Youtube Product (twitter:@esopen)
+   version   : 1.5.3.x
+   vqmver    : 1.2.3
+   author    : Hilde
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php echo $header; ?>
+----------------------------------------------------------------------
+
+

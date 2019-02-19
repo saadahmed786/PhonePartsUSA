@@ -1,0 +1,28 @@
+<modification>
+  <id>Add notice to header below search bar</id>
+  <version>1.0</version>
+  <vqmver>2.2.1</vqmver>
+  <author>Bigpayout Development Team</author>
+
+  <file name="catalog/view/theme/*/template/common/header.tpl">
+    <operation>
+      <search position="before"><![CDATA[
+      <?php echo $header_bottom; ?>
+      ]]></search>
+      <add><![CDATA[
+	  <p>  
+	  <br>
+	  <br>
+	  <center> We will be closed December 25th & 26th for Christmas Holidays and re-open Monday December 29th. </center></p> 
+	  <br>
+	  </div>
+      <style type="text/css">
+      .home_page #menumove #column-left {
+        position: absolute;
+        top: 218px;
+      }
+      </style>
+      ]]></add>
+    </operation>
+  </file>
+</modification>

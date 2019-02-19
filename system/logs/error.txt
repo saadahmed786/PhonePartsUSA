@@ -1,0 +1,7 @@
+2019-02-18 14:38:03 - PHP Notice:  Undefined index: temp_theme in /var/www/html/ppusa/catalog/controller/common/home.php on line 195
+2019-02-18 14:38:03 - PHP Notice:  Undefined index: temp_theme in /var/www/html/ppusa/catalog/controller/common/home.php on line 258
+2019-02-18 14:38:03 - PHP Notice:  Undefined index: temp_theme in /var/www/html/ppusa/catalog/controller/common/home.php on line 259
+2019-02-18 14:38:03 - PHP Notice:  Undefined index: temp_theme in /var/www/html/ppusa/catalog/controller/common/home.php on line 264
+2019-02-18 14:38:03 - PHP Notice:  Undefined index: append_manufacturer in /var/www/html/ppusa/catalog/model/catalog/catalog.php on line 233
+2019-02-18 14:38:03 - PHP Notice:  Undefined index: page in /var/www/html/ppusa/catalog/model/catalog/catalog.php on line 257
+2019-02-18 14:38:03 - PHP Notice:  Undefined index: record in /var/www/html/ppusa/catalog/model/catalog/catalog.php on line 265

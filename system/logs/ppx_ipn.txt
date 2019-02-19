@@ -1,0 +1,550 @@
+
+----------
+GET: Array
+(
+    [route] => payment/paypal_express_new/callback
+)
+
+POST: Array
+(
+    [item_name10] => LCD and Touch Screen Digitizer for iPhone 6 - Black (Premium)
+    [invoice] => 560637
+    [item_name11] => LCD and Touch Screen Digitizer for iPhone 6 - White (Premium)
+    [item_name12] => 
+    [first_name] => Fahd
+    [discount] => 0.00
+    [mc_shipping] => 0.00
+    [mc_currency] => USD
+    [payer_status] => verified
+    [shipping_discount] => 0.00
+    [payment_fee] => 24.52
+    [address_status] => confirmed
+    [payment_gross] => 1274.57
+    [address_zip] => 03060
+    [tax10] => 0.00
+    [tax11] => 0.00
+    [tax12] => 0.00
+    [address_country_code] => US
+    [mc_handling] => 0.00
+    [num_cart_items] => 12
+    [txn_type] => cart
+    [verify_sign] => Aywt79a3jE4vfB2U7OIJZt.rtuHKAnBK.w36d2Z-c-fda8W6k1F7noi7
+    [payer_id] => 8RUFPGAGWRRR8
+    [charset] => windows-1252
+    [tax1] => 0.00
+    [receiver_id] => WB992XDSEKKMS
+    [tax2] => 0.00
+    [tax3] => 0.00
+    [tax4] => 0.00
+    [tax5] => 0.00
+    [tax6] => 0.00
+    [tax7] => 0.00
+    [tax8] => 0.00
+    [tax9] => 0.00
+    [tax] => 0.00
+    [item_name1] => LCD and Touch Screen Digitizer for Samsung Galaxy S7 - Black (Premium)
+    [item_name2] => LCD and Touch Screen Digitizer for Samsung Galaxy S7 - Gold (Premium)
+    [item_name3] => LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Aftermarket Premium Plus)
+    [item_name4] => LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Aftermarket Premium Plus)
+    [payment_type] => instant
+    [item_name5] => LCD and Touch Screen Digitizer for iPhone 7 - White (Aftermarket Premium Plus)
+    [item_name6] => LCD and Touch Screen Digitizer for iPhone 8 Plus - Black (Aftermarket Premium Plus)
+    [item_name7] => LCD and Touch Screen Digitizer for iPhone 6s Plus - White (Aftermarket Premium Plus)
+    [item_name8] => LCD and Touch Screen Digitizer for iPhone 6s - White (Aftermarket Premium Plus)
+    [address_street] => 310 Daniel Webster Highway
+Kiosk near spencer's
+    [item_name9] => LCD and Touch Screen Digitizer for iPhone 6s - Black (Aftermarket Premium Plus)
+    [txn_id] => 75S20738JG954745V
+    [mc_gross_1] => 257.78
+    [quantity1] => 2
+    [mc_gross_2] => 128.89
+    [quantity2] => 1
+    [item_number1] => SRN-SAM-1633
+    [protection_eligibility] => Eligible
+    [mc_gross_3] => 124.95
+    [quantity3] => 5
+    [item_number2] => SRN-SAM-1632
+    [mc_gross_4] => 174.93
+    [quantity4] => 7
+    [item_number3] => APL-001-2468
+    [custom] => 
+    [mc_gross_5] => 63.87
+    [quantity5] => 3
+    [item_number4] => APL-001-2469
+    [mc_gross_6] => 24.99
+    [quantity6] => 1
+    [item_number5] => APL-001-2466
+    [mc_gross_7] => 116.45
+    [quantity7] => 5
+    [item_number6] => APL-001-2473
+    [quantity8] => 6
+    [business] => paypal@phonepartsusa.com
+    [item_number7] => APL-001-2464
+    [mc_gross_8] => 119.94
+    [mc_gross_9] => 59.97
+    [quantity9] => 3
+    [item_number8] => APL-001-2462
+    [residence_country] => US
+    [last_name] => Issa
+    [item_number9] => APL-001-2463
+    [address_state] => NH
+    [quantity10] => 3
+    [quantity11] => 4
+    [quantity12] => 3
+    [payer_email] => mobrepairworld@gmail.com
+    [address_city] => Nashua
+    [payment_status] => Completed
+    [payment_date] => 14:05:20 Oct 09, 2018 PDT
+    [transaction_subject] => 
+    [receiver_email] => paypal@phonepartsusa.com
+    [mc_fee] => 24.52
+    [notify_version] => 3.9
+    [item_number10] => APL-001-2091
+    [shipping_method] => Default
+    [item_number11] => APL-001-2092
+    [item_number12] => BT-BP-30196
+    [address_country] => United States
+    [mc_gross] => 1274.57
+    [insurance_amount] => 0.00
+    [address_name] => Fahd Issa
+    [mc_gross_10] => 74.07
+    [mc_gross_11] => 98.76
+    [mc_gross_12] => 29.97
+    [ipn_track_id] => 7fb430d5bd522
+)
+
+
+----------
+GET: Array
+(
+    [route] => payment/paypal_express_new/callback
+)
+
+POST: Array
+(
+    [item_name10] => LCD and Touch Screen Digitizer for iPhone 8 - White (Aftermarket Premium / Economy Plus)
+    [invoice] => 560640
+    [item_name11] => LCD and Touch Screen Digitizer for iPhone 8 Plus - Black (Aftermarket Premium / Economy Plus)
+    [first_name] => Anshu
+    [discount] => 0.00
+    [mc_shipping] => 18.00
+    [mc_currency] => USD
+    [payer_status] => verified
+    [shipping_discount] => 0.00
+    [payment_fee] => 6.05
+    [address_status] => confirmed
+    [payment_gross] => 302.80
+    [address_zip] => 31021
+    [tax10] => 0.00
+    [tax11] => 0.00
+    [address_country_code] => US
+    [mc_handling] => 0.00
+    [num_cart_items] => 11
+    [txn_type] => cart
+    [verify_sign] => Ahqtity9z8Q-Q.7jzcTcgaYu.N1tAeEvbM-yjxHis1n13JTms6m-8PIm
+    [payer_id] => MG2XABAENLGC8
+    [charset] => windows-1252
+    [tax1] => 0.00
+    [receiver_id] => WB992XDSEKKMS
+    [tax2] => 0.00
+    [tax3] => 0.00
+    [tax4] => 0.00
+    [tax5] => 0.00
+    [tax6] => 0.00
+    [tax7] => 0.00
+    [tax8] => 0.00
+    [tax9] => 0.00
+    [tax] => 0.00
+    [item_name1] => LCD and Touch Screen Digitizer for iPhone 6 - Black (Aftermarket Premium / Economy Plus)
+    [item_name2] => LCD and Touch Screen Digitizer for iPhone 6 - White (Aftermarket Premium / Economy Plus)
+    [item_name3] => Front Camera with Proximity Sensor Flex Cable for iPhone 6
+    [item_name4] => 
+    [payment_type] => instant
+    [item_name5] => LCD and Touch Screen Digitizer for iPhone 6 Plus - White (Aftermarket Premium / Economy Plus)
+    [item_name6] => LCD and Touch Screen Digitizer for iPhone 6S Plus - White (Aftermarket Premium / Economy Plus)
+    [item_name7] => LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Aftermarket Premium / Economy Plus)
+    [item_name8] => 
+    [address_street] => 204 Brookwood Dr
+    [item_name9] => LCD and Touch Screen Digitizer for iPhone 8 - Black (Aftermarket Premium / Economy Plus)
+    [txn_id] => 5R599908CY476970A
+    [mc_gross_1] => 55.16
+    [quantity1] => 4
+    [mc_gross_2] => 13.79
+    [quantity2] => 1
+    [item_number1] => APL-001-2308
+    [protection_eligibility] => Eligible
+    [mc_gross_3] => 6.78
+    [quantity3] => 2
+    [item_number2] => APL-001-2309
+    [mc_gross_4] => 39.96
+    [quantity4] => 4
+    [item_number3] => APL-003-1532
+    [custom] => 
+    [mc_gross_5] => 16.39
+    [quantity5] => 1
+    [item_number4] => BT-BP-30010
+    [mc_gross_6] => 22.19
+    [quantity6] => 1
+    [item_number5] => APL-001-2136
+    [mc_gross_7] => 46.98
+    [quantity7] => 2
+    [item_number6] => APL-001-2310
+    [quantity8] => 2
+    [business] => paypal@phonepartsusa.com
+    [item_number7] => APL-001-2372
+    [mc_gross_8] => 21.98
+    [mc_gross_9] => 19.29
+    [quantity9] => 1
+    [item_number8] => BT-BP-30290
+    [item_number9] => APL-001-2379
+    [residence_country] => US
+    [last_name] => Patel
+    [address_state] => GA
+    [quantity10] => 1
+    [quantity11] => 1
+    [payer_business_name] => Blitz-PC
+    [payer_email] => admin@blitz-pc.com
+    [address_city] => Dublin
+    [payment_status] => Completed
+    [payment_date] => 14:20:19 Oct 09, 2018 PDT
+    [transaction_subject] => 
+    [receiver_email] => paypal@phonepartsusa.com
+    [mc_fee] => 6.05
+    [notify_version] => 3.9
+    [item_number10] => APL-001-2380
+    [shipping_method] => Default
+    [item_number11] => APL-001-2382
+    [address_country] => United States
+    [mc_gross] => 302.80
+    [insurance_amount] => 0.00
+    [address_name] => Blitz-PC
+    [mc_gross_10] => 19.29
+    [mc_gross_11] => 22.99
+    [ipn_track_id] => 881781af689e9
+)
+
+
+----------
+GET: Array
+(
+    [route] => payment/paypal_express_new/callback
+)
+
+POST: Array
+(
+    [mc_gross] => 16.88
+    [invoice] => 560644
+    [protection_eligibility] => Eligible
+    [address_status] => confirmed
+    [item_number1] => BTY-COV-1753
+    [payer_id] => 9YLLLAPLR77Q6
+    [tax] => 1.29
+    [address_street] => 98 S Martin L King Blvd
+    [payment_date] => 14:45:43 Oct 09, 2018 PDT
+    [payment_status] => Completed
+    [charset] => windows-1252
+    [address_zip] => 89106-4316
+    [mc_shipping] => 0.00
+    [mc_handling] => 0.00
+    [first_name] => Robert
+    [mc_fee] => 0.62
+    [address_country_code] => US
+    [address_name] => Robert Velikov
+    [notify_version] => 3.9
+    [custom] => 
+    [payer_status] => verified
+    [business] => paypal@phonepartsusa.com
+    [address_country] => United States
+    [num_cart_items] => 1
+    [address_city] => Las Vegas
+    [verify_sign] => ANLk1Sm24ctHyPX1ZrIMvOogmlsQAuNQe5V4t6cttT-1u1TNoRJidWhK
+    [payer_email] => rrv_smm@yahoo.com
+    [tax1] => 0.00
+    [txn_id] => 0N392240LN9711614
+    [payment_type] => instant
+    [payer_business_name] => Surreal Ent Productions
+    [last_name] => Velikov
+    [address_state] => NV
+    [item_name1] => Back Cover Battery Door for Samsung Galaxy S9 - Black
+    [receiver_email] => paypal@phonepartsusa.com
+    [payment_fee] => 0.62
+    [shipping_discount] => 0.00
+    [quantity1] => 1
+    [insurance_amount] => 0.00
+    [receiver_id] => WB992XDSEKKMS
+    [txn_type] => cart
+    [discount] => 0.00
+    [mc_gross_1] => 15.59
+    [mc_currency] => USD
+    [residence_country] => US
+    [shipping_method] => Default
+    [transaction_subject] => Back Cover Battery Door for Samsung Galaxy S9 - Black...
+    [payment_gross] => 16.88
+    [ipn_track_id] => 6dd9fd13d09c
+)
+
+
+----------
+GET: Array
+(
+    [route] => payment/paypal_express_new/callback
+)
+
+POST: Array
+(
+    [mc_gross] => 28.63
+    [invoice] => 560643
+    [protection_eligibility] => Eligible
+    [address_status] => confirmed
+    [item_number1] => APL-001-2370
+    [payer_id] => JM8NNJ5N89D7C
+    [tax] => 1.65
+    [address_street] => 6455 winding ridge way
+    [payment_date] => 14:48:51 Oct 09, 2018 PDT
+    [payment_status] => Completed
+    [charset] => windows-1252
+    [address_zip] => 89156
+    [mc_shipping] => 6.99
+    [mc_handling] => 0.00
+    [first_name] => eduardo
+    [mc_fee] => 0.84
+    [address_country_code] => US
+    [address_name] => Azucena Jaramillo
+    [notify_version] => 3.9
+    [custom] => 
+    [payer_status] => verified
+    [business] => paypal@phonepartsusa.com
+    [address_country] => United States
+    [num_cart_items] => 1
+    [address_city] => Las Vegas
+    [verify_sign] => A2MYPTIClXoPUL1bB5gQ.roKs6JqAjblYdOht0BxRj02ljKlMw.4KyvN
+    [payer_email] => Bam1320@yahoo.com
+    [tax1] => 0.00
+    [txn_id] => 62W98790YP011932S
+    [payment_type] => instant
+    [last_name] => jaramillo
+    [address_state] => NV
+    [item_name1] => LCD and Touch Screen Digitizer for iPhone 7 - White (Aftermarket Premium / Economy Plus)
+    [receiver_email] => paypal@phonepartsusa.com
+    [payment_fee] => 0.84
+    [shipping_discount] => 0.00
+    [quantity1] => 1
+    [insurance_amount] => 0.00
+    [receiver_id] => WB992XDSEKKMS
+    [txn_type] => cart
+    [discount] => 0.00
+    [mc_gross_1] => 19.99
+    [mc_currency] => USD
+    [residence_country] => US
+    [shipping_method] => Default
+    [transaction_subject] => LCD and Touch Screen Digitizer for iPhone 7 - White (Aftermarket Premium / Economy Plus)...
+    [payment_gross] => 28.63
+    [ipn_track_id] => a9228a54de42c
+)
+
+
+----------
+GET: Array
+(
+    [route] => payment/paypal_express_new/callback
+)
+
+POST: Array
+(
+    [mc_gross] => 191.96
+    [invoice] => 560646
+    [protection_eligibility] => Eligible
+    [address_status] => confirmed
+    [item_number1] => ACC-ZED-777
+    [tax] => 0.00
+    [item_number2] => SRN-HTC-1162
+    [payer_id] => GKQBFTLRY4W5G
+    [address_street] => 2660 BLOSSOM HILL DR
+    [payment_date] => 14:55:08 Oct 09, 2018 PDT
+    [payment_status] => Completed
+    [charset] => windows-1252
+    [address_zip] => 97031
+    [mc_shipping] => 11.99
+    [mc_handling] => 0.00
+    [first_name] => Clifford
+    [mc_fee] => 3.95
+    [address_country_code] => US
+    [address_name] => Clifford Francis
+    [notify_version] => 3.9
+    [custom] => 
+    [payer_status] => verified
+    [business] => paypal@phonepartsusa.com
+    [address_country] => United States
+    [num_cart_items] => 2
+    [address_city] => HOOD RIVER
+    [verify_sign] => A.2ZI3M4iPTzfaH0jEYaFbvbAZDCA2m45sd4vQC3V0l9aG9QrNiyQLOr
+    [payer_email] => cliffmhg@centurylink.net
+    [tax1] => 0.00
+    [tax2] => 0.00
+    [txn_id] => 70Y26313P4466170S
+    [payment_type] => instant
+    [last_name] => Francis
+    [address_state] => OR
+    [item_name1] => iPhone 6 6S Tempered Glass Screen Protector with Cleaning Kit - Pack of 25
+    [receiver_email] => paypal@phonepartsusa.com
+    [item_name2] => LCD and Touch Screen Digitizer for Google Pixel 2 XL - Black
+    [payment_fee] => 3.95
+    [shipping_discount] => 0.00
+    [quantity1] => 2
+    [insurance_amount] => 0.00
+    [quantity2] => 1
+    [receiver_id] => WB992XDSEKKMS
+    [txn_type] => cart
+    [discount] => 0.00
+    [mc_gross_1] => 29.98
+    [mc_currency] => USD
+    [mc_gross_2] => 149.99
+    [residence_country] => US
+    [shipping_method] => Default
+    [transaction_subject] => iPhone 6 6S Tempered Glass Screen Protector with Cleaning Kit - Pack of 25...LCD and Touch Screen Digitizer for Google Pixel 2 XL - Black...
+    [payment_gross] => 191.96
+    [ipn_track_id] => 23e0f2fdb65a
+)
+
+
+----------
+GET: Array
+(
+    [route] => payment/paypal_express_new/callback
+)
+
+POST: Array
+(
+    [invoice] => 560648
+    [first_name] => young
+    [discount] => 0.00
+    [mc_shipping] => 11.99
+    [mc_currency] => USD
+    [payer_status] => verified
+    [shipping_discount] => 0.00
+    [payment_fee] => 0.93
+    [address_status] => confirmed
+    [payment_gross] => 33.27
+    [address_zip] => 92395-5816
+    [address_country_code] => US
+    [txn_type] => cart
+    [num_cart_items] => 5
+    [mc_handling] => 0.00
+    [verify_sign] => ADQ1wCM22a02RXfgOeyIU1KB54YqAqtl0tTVvPWDG629vc9azUq.qn5Z
+    [num_offers] => 2
+    [payer_id] => 9MD67BT4JW4YS
+    [charset] => windows-1252
+    [tax1] => 0.00
+    [receiver_id] => WB992XDSEKKMS
+    [tax2] => 0.00
+    [tax3] => 0.00
+    [tax4] => 0.00
+    [tax5] => 0.00
+    [item_name1] => Touch Screen Digitizer With Home Button for iPad Air - White (Premium)
+    [tax] => 0.00
+    [item_name2] => Touch Screen Digitizer With Home Button for iPad 3 - Black (Premium)
+    [item_name3] => Touch Screen Digitizer With Home Button for iPad 3 - White (Premium)
+    [item_name4] => 8-Pin Data Cable for iPhone 5 5S 5C 6 6 Plus 7 7 Plus 8 8 Plus X iPad 4 Mini 1 2 Air Pro (Standard)
+    [payment_type] => instant
+    [item_name5] => 
+    [address_street] => 16958 Bear Valley Rd
+    [txn_id] => 1TS51436DK795990A
+    [mc_gross_1] => 14.69
+    [quantity1] => 1
+    [mc_gross_2] => 10.99
+    [quantity2] => 1
+    [item_number1] => APL-001-2201
+    [protection_eligibility] => Eligible
+    [mc_gross_3] => 21.98
+    [quantity3] => 2
+    [item_number2] => APL-001-2197
+    [mc_gross_4] => 21.89
+    [quantity4] => 11
+    [item_number3] => APL-001-2198
+    [mc_gross_5] => 20.70
+    [quantity5] => 30
+    [custom] => 
+    [item_number4] => ACC-ZED-138
+    [item_number5] => ACC-ZED-730
+    [business] => paypal@phonepartsusa.com
+    [residence_country] => US
+    [last_name] => cho
+    [address_state] => CA
+    [payer_business_name] => MC Cellular
+    [payer_email] => kocosearch@hotmail.com
+    [offer_curreny1] => USD
+    [address_city] => Victorville
+    [offer_curreny2] => USD
+    [payment_status] => Completed
+    [payment_date] => 15:24:20 Oct 09, 2018 PDT
+    [transaction_subject] => 
+    [receiver_email] => paypal@phonepartsusa.com
+    [mc_fee] => 0.93
+    [notify_version] => 3.9
+    [shipping_method] => Default
+    [offer_amount1] => 21.99
+    [offer_amount2] => 46.98
+    [address_country] => United States
+    [mc_gross] => 33.27
+    [insurance_amount] => 0.00
+    [address_name] => young cho
+    [offer_id1] => 
+    [offer_id2] => 
+    [ipn_track_id] => af8d9476a985c
+)
+
+
+----------
+GET: Array
+(
+    [route] => payment/paypal_express_new/callback
+)
+
+POST: Array
+(
+    [mc_gross] => 29.18
+    [invoice] => 560649
+    [protection_eligibility] => Eligible
+    [address_status] => confirmed
+    [item_number1] => APL-001-2311
+    [payer_id] => J98GNLP7KCVCJ
+    [tax] => 0.00
+    [address_street] => 2421 Abilene St
+    [payment_date] => 15:25:18 Oct 09, 2018 PDT
+    [payment_status] => Completed
+    [charset] => windows-1252
+    [address_zip] => 76901
+    [mc_shipping] => 6.99
+    [mc_handling] => 0.00
+    [first_name] => Stephen
+    [mc_fee] => 0.85
+    [address_country_code] => US
+    [address_name] => Stephen Gailey
+    [notify_version] => 3.9
+    [custom] => 
+    [payer_status] => verified
+    [business] => paypal@phonepartsusa.com
+    [address_country] => United States
+    [num_cart_items] => 1
+    [address_city] => SAN ANGELO
+    [verify_sign] => A-rokUBeG0YgRVyYzVEiSZ-trqtQA.l6GI5D18bF9DkK2pID.qdnOBtl
+    [payer_email] => BB1226@aol.com
+    [tax1] => 0.00
+    [txn_id] => 6EP85444GJ013222C
+    [payment_type] => instant
+    [last_name] => Gailey
+    [address_state] => TX
+    [item_name1] => LCD and Touch Screen Digitizer for iPhone 6S Plus - Black (Aftermarket Premium / Economy Plus)
+    [receiver_email] => paypal@phonepartsusa.com
+    [payment_fee] => 0.85
+    [quantity1] => 1
+    [receiver_id] => WB992XDSEKKMS
+    [txn_type] => cart
+    [mc_gross_1] => 22.19
+    [mc_currency] => USD
+    [residence_country] => US
+    [transaction_subject] => LCD and Touch Screen Digitizer for iPhone 6S Plus - Black (Aftermarket Premium / Economy Plus)...
+    [payment_gross] => 29.18
+    [ipn_track_id] => 1a676e869dd2b
+)
+

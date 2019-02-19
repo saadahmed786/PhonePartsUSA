@@ -1,0 +1,47 @@
+﻿------------------------------ 
+
+DEBUG SEND DATA (SetExpressCheckout):
+METHOD=SetExpressCheckout
+USER=paypal_api1.phonepartsusa.com
+PWD=A3UTLAF89676LVFW
+SIGNATURE=AWEus9lWHhjbjG6qaUICKluU-eFdAZ2ufK7YWkgbrqeiaBiq1y7wOc0j
+VERSION=60.0
+PAYMENTACTION=Sale
+CURRENCYCODE=USD
+RETURNURL=https%3A%2F%2Fphonepartsusa.com%2Findex.php%3Froute%3Dpayment%2Fpaypal_express_new%2FGetExpressCheckoutDetails
+CANCELURL=https%3A%2F%2Fphonepartsusa.com%2Findex.php%3Froute%3Dcheckout%2Fcart
+BRANDNAME=PhonePartsUSA.com+
+SOLUTIONTYPE=Sole
+LANDINGPAGE=Login
+NOSHIPPING=0
+SHIPTOSTREET=5010+S.+Decatur+STE+G
+SHIPTOSTREET2=
+SHIPTOCITY=Las+Vegas
+SHIPTOSTATE=NV
+SHIPTOCOUNTRYCODE=US
+SHIPTOZIP=89118
+SHIPTOPHONENUM=98080980980
+EMAIL=phonepartusa%40gmail.com
+LOCALECODE=US
+L_NAME0=LCD+and+Touch+Screen+Digitizer+for+iPhone+5S+SE+-+Black+%28Aftermarket+Premium+%2F+Economy+Plus%29
+L_NUMBER0=APL-001-0730
+L_DESC0=LCD+and+Touch+Screen+Digitizer+for+iPhone+5S+SE+-+Black+%28Aftermarket+Premium+%2F+Economy+Plus%29...
+L_AMT0=9.89
+L_QTY0=1
+SHIPPINGAMT=0.00
+TAXAMT=0.00
+ITEMAMT=9.89
+AMT=9.89
+
+
+DEBUG RCV DATA (SetExpressCheckout):
+TIMESTAMP=2018-12-18T23:03:55Z
+CORRELATIONID=41ea082185afb
+ACK=Failure
+VERSION=60.0
+BUILD=50264759
+L_ERRORCODE0=10002
+L_SHORTMESSAGE0=Security error
+L_LONGMESSAGE0=Security header is not valid
+L_SEVERITYCODE0=Error
+

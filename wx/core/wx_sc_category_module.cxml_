@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id><![CDATA[WX Category Module Cache]]></id>
+	<version><![CDATA[1.0]]></version>
+	<vqmver><![CDATA[2.0]]></vqmver>
+	<author><![CDATA[<a onclick="window.open('https://www.wxhosting.com/');">WX Hosting</a>]]></author>
+
+	<file name="catalog/controller/module/category.php" error="log">
+		<operation>  <!-- Add Read Cache -->
+			<search position="replace"><![CDATA[$data['categories'] = array();]]></search>
+			<add><![CDATA[
+			$https = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443) ? 1 : 0;
+			$cm_cache_name = 'category.module.' . $data['category_id'] . '.' . $data['child_id'] . '.' . $https . '.' . (int)$this->currency->getCode() . '.' . $this->customer->getGroupId() . '.' . (int)$this->config->get('config_language_id') . '.' . (int)$this->config->get('config_store_id');
+			if ($this->cache->get($cm_cache_name)) { 
+				$data['categories'] = $this->cache->get($cm_cache_name);
+			} else { 
+				$data['categories'] = array();
+			]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[if (file_exists(DIR_TEMPLATE]]></search>
+			<add><![CDATA[
+				$this->cache->set($cm_cache_name, $data['categories']);
+			}
+			]]></add>
+		</operation>
+	</file>
+</modification>

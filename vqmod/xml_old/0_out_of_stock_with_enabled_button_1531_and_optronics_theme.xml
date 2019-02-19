@@ -1,0 +1,227 @@
+<modification>
+	<id><![CDATA[Out of Stock with enabled button]]></id>
+	<version><![CDATA[]]></version>
+	<vqmver><![CDATA[]]></vqmver>
+	<author><![CDATA[GoGo OpenCart]]></author>
+	<file name="catalog/controller/account/wishlist.php">
+		<operation>
+			<search position="after"><![CDATA['price'      => $price,]]></search>
+			<add><![CDATA[					'quantity'   => $product_info['quantity'],
+					'stock_status'=> $product_info['stock_status'],]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/account/wishlist.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<td class="action"><img src="catalog/view/theme/default/image/cart-add.png" alt="<?php echo $button_cart; ?>" title="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" />&nbsp;&nbsp;<a href="<?php echo $product['remove']; ?>"><img src="catalog/view/theme/default/image/remove.png" alt="<?php echo $button_remove; ?>" title="<?php echo $button_remove; ?>" /></a></td>]]></search>
+			<add><![CDATA[<td class="action"><?php if (($product['quantity'] > 0) || (($product['quantity'] <= 0) && ($product['stock_status'] != 'Out Of Stock'))) { ?><img src="catalog/view/theme/default/image/cart-add.png" alt="<?php echo $button_cart; ?>" title="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" /><?php } ?>&nbsp;&nbsp;<a href="<?php echo $product['remove']; ?>"><img src="catalog/view/theme/default/image/remove.png" alt="<?php echo $button_remove; ?>" title="<?php echo $button_remove; ?>" /></a></td>]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/module/bestseller.php">
+		<operation>
+			<search position="after"><![CDATA['price'   	 => $price,]]></search>
+			<add><![CDATA[				'quantity'   => $result['quantity'],
+				'stock_status'=> $result['stock_status'],]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/module/bestseller.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>]]></search>
+			<add><![CDATA[<?php if (($product['quantity'] <= 0) && ($product['stock_status'] == 'Out Of Stock')) { ?>
+								<span class="button_pink"><input type="button" value="<?php echo $product['stock_status']; ?>" class="button" /></span>
+		<?php } elseif (($product['quantity'] <= 0) && ($product['stock_status'] != 'Out Of Stock')) { ?>
+								<span class="button_pink"><input type="button" value="Pre-Order" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+		<?php } else { ?>
+								<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+		<?php } ?>]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/module/featured.php">
+		<operation>
+			<search position="after"><![CDATA['price'   	 => $price,]]></search>
+			<add><![CDATA[					'quantity'   => $product_info['quantity'],
+					'stock_status'=> $product_info['stock_status'],]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/module/featured.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>]]></search>
+			<add><![CDATA[<?php if (($product['quantity'] <= 0) && ($product['stock_status'] == 'Out Of Stock')) { ?>
+								<span class="button_pink"><input type="button" value="<?php echo $product['stock_status']; ?>" class="button" /></span>
+		<?php } elseif (($product['quantity'] <= 0) && ($product['stock_status'] != 'Out Of Stock')) { ?>
+								<span class="button_pink"><input type="button" value="Pre-Order" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+		<?php } else { ?>
+								<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+		<?php } ?>]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/module/latest.php">
+		<operation>
+			<search position="after"><![CDATA['price'   	 => $price,]]></search>
+			<add><![CDATA[				'quantity'   => $result['quantity'],
+				'stock_status'=> $result['stock_status'],]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/module/latest.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>]]></search>
+			<add><![CDATA[<?php if (($product['quantity'] <= 0) && ($product['stock_status'] == 'Out Of Stock')) { ?>
+								<span class="button_pink"><input type="button" value="<?php echo $product['stock_status']; ?>" class="button" /></span>
+		<?php } elseif (($product['quantity'] <= 0) && ($product['stock_status'] != 'Out Of Stock')) { ?>
+								<span class="button_pink"><input type="button" value="Pre-Order" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+		<?php } else { ?>
+								<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+		<?php } ?>]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/module/special.php">
+		<operation>
+			<search position="after"><![CDATA['price'   	 => $price,]]></search>
+			<add><![CDATA[				'quantity'   => $result['quantity'],
+				'stock_status'=> $result['stock_status'],]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/module/special.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>]]></search>
+			<add><![CDATA[<?php if (($product['quantity'] <= 0) && ($product['stock_status'] == 'Out Of Stock')) { ?>
+								<span class="button_pink"><input type="button" value="<?php echo $product['stock_status']; ?>" class="button" /></span>
+		<?php } elseif (($product['quantity'] <= 0) && ($product['stock_status'] != 'Out Of Stock')) { ?>
+								<span class="button_pink"><input type="button" value="Pre-Order" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+		<?php } else { ?>
+								<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+		<?php } ?>]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/product/category.php">
+		<operation>
+			<search position="after"><![CDATA['price'       => $price,]]></search>
+			<add><![CDATA[					'quantity'    => $result['quantity'],
+					'stock_status'=> $result['stock_status'],]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/product/category.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>]]></search>
+			<add><![CDATA[<?php if (($product['quantity'] <= 0) && ($product['stock_status'] == 'Out Of Stock')) { ?><div id="filler" style="position: relative; width: 100px; height:35px;">&nbsp;</div>
+								<span class="button_pink"><input type="button" value="<?php echo $product['stock_status']; ?>" class="button" style="cursor:default" /></span>
+		<?php } elseif (($product['quantity'] <= 0) && ($product['stock_status'] != 'Out Of Stock')) { ?>
+								<span class="button_pink"><input type="button" value="Pre-Order" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+		<?php } else { ?>
+								<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+		<?php } ?>]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/product/compare.php">
+		<operation>
+			<search position="after"><![CDATA['price'        => $price,]]></search>
+			<add><![CDATA[					'quantity'     => $product_info['quantity'],
+					'stock_status' => $product_info['stock_status'],]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/product/compare.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<td><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" /></td>]]></search>
+			<add><![CDATA[<?php if (($product['quantity'] <= 0) && ($product['stock_status'] == 'Out Of Stock')) { ?><div id="filler" style="position: relative; width: 100px; height:35px;">&nbsp;</div>
+      <td><input type="button" value="<?php echo $product['stock_status']; ?>" style="cursor:default" class="button" /></td>
+	  <?php } elseif (($product['quantity'] <= 0) && ($product['stock_status'] != 'Out Of Stock')) { ?>
+      <td><input type="button" value="<?php echo "Pre-Order"; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" /></td>
+	  <?php } else { ?>
+      <td><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" /></td>
+	  <?php } ?>]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/product/manufacturer.php">
+		<operation>
+			<search position="after"><![CDATA['price'       => $price,]]></search>
+			<add><![CDATA[					'quantity'    => $result['quantity'],
+					'stock_status'=> $result['stock_status'],]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/product/manufacturer_info.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>]]></search>
+			<add><![CDATA[<?php if (($product['quantity'] <= 0) && ($product['stock_status'] == 'Out Of Stock')) { ?><div id="filler" style="position: relative; width: 100px; height:35px;">&nbsp;</div>
+								<span class="button_pink"><input type="button" value="<?php echo $product['stock_status']; ?>" class="button" /></span>
+		<?php } elseif (($product['quantity'] <= 0) && ($product['stock_status'] != 'Out Of Stock')) { ?>
+								<span class="button_pink"><input type="button" value="Pre-Order" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+		<?php } else { ?>
+								<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+		<?php } ?>]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/product/product.php">
+		<operation>
+			<search position="after"><![CDATA[$product_info = $this->model_catalog_product->getProduct($product_id);]]></search>
+			<add><![CDATA[		$this->data['product_info'] = $product_info;]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA['price'   	 => $price,]]></search>
+			<add><![CDATA[					'quantity'   => $result['quantity'],
+					'stock_status'=> $result['stock_status'],]]></add>
+		</operation>
+	</file>
+	<!--file name="catalog/view/theme/*/template/product/product.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>]]></search>
+			<add><![CDATA[
+			<?php if (($product['quantity'] <= 0) && ($product['stock_status'] == 'Out Of Stock')) { ?>
+										<span class="button_pink"><input type="button" value="<?php echo $product['stock_status']; ?>" class="button" /></span>
+			<?php } elseif (($product['quantity'] <= 0) && ($product['stock_status'] != 'Out Of Stock')) { ?>
+										<span class="button_pink"><input type="button" value="Pre-Order" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+			<?php } else { ?>
+										<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+		  <?php } ?>]]></add>
+		</operation>
+		<operation error="skip">
+			<search position="replace"><![CDATA[<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" id="button-cart" class="button" /></span>]]></search>
+			<add><![CDATA[
+			<?php if (($product_info['quantity'] <= 0) && ($stock == 'Out Of Stock')) { ?>
+								<span class="button_pink"><input style="cursor:default" type="button" value="<?php echo $stock; ?>" disabled="disabled" id="button-cart" class="button" /></span>
+			<?php } elseif (($product_info['quantity'] <= 0) && ($stock != 'Out Of Stock')) { ?>
+								<span class="button_pink"><input type="button" value="Pre-Order" id="button-cart" class="button" /></span>
+			<?php } else { ?>
+								<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" id="button-cart" class="button" /></span>
+			<?php } ?>
+			]]></add>
+		</operation>
+	</file-->
+	<file name="catalog/controller/product/search.php">
+		<operation>
+			<search position="after"><![CDATA['price'       => $price,]]></search>
+			<add><![CDATA[					'quantity'    => $result['quantity'],
+					'stock_status'=> $result['stock_status'],]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/product/search.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>]]></search>
+			<add><![CDATA[<?php if (($product['quantity'] <= 0) && ($product['stock_status'] == 'Out Of Stock')) { ?><div id="filler" style="position: relative; width: 100px; height:35px;">&nbsp;</div>
+								<span class="button_pink"><input type="button" value="<?php echo $product['stock_status']; ?>" class="button" /></span>
+		<?php } elseif (($product['quantity'] <= 0) && ($product['stock_status'] != 'Out Of Stock')) { ?>
+								<span class="button_pink"><input type="button" value="Pre-Order" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+		<?php } else { ?>
+								<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+		<?php } ?>]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/product/special.php">
+		<operation>
+			<search position="after"><![CDATA['price'       => $price,]]></search>
+			<add><![CDATA[				'quantity'    => $result['quantity'],
+				'stock_status'=> $result['stock_status'],]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/product/special.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>]]></search>
+			<add><![CDATA[<?php if (($product['quantity'] <= 0) && ($product['stock_status'] == 'Out Of Stock')) { ?><div id="filler" style="position: relative; width: 100px; height:35px;">&nbsp;</div>
+								<span class="button_pink"><input type="button" value="<?php echo $product['stock_status']; ?>" class="button" /></span>
+								<div class="cart"><a style="cursor:default" class="button"><span><?php echo $product['stock_status']; ?></span></a></div>
+		<?php } elseif (($product['quantity'] <= 0) && ($product['stock_status'] != 'Out Of Stock')) { ?>
+								<span class="button_pink"><input type="button" value="Pre-Order" class="button" /></span>
+		<?php } else { ?>
+								<span class="button_pink"><input type="button" value="<?php echo $button_cart; ?>" onclick="boss_addToCart('<?php echo $product['product_id']; ?>');" class="button" /></span>
+		<?php } ?>]]></add>
+		</operation>
+	</file>
+</modification>

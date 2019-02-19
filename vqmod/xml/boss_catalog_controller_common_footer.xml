@@ -1,0 +1,17 @@
+<modification>
+	<id>Bossthemes - catalog - controller - common - footer</id>
+	<version>1.5.4.1</version>
+	<vqmver>2.1.7</vqmver>
+	<author>bossthemes</author>
+	<file name="catalog/controller/common/footer.php">
+		<operation>
+			<search position="before"><![CDATA[
+				if (file_exists(DIR_TEMPLATE . (($this->session->data['temp_theme'])? $this->session->data['temp_theme'] : $this->config->get('config_template')) . '/template/common/footer.tpl')) {
+			]]></search>
+			<add><![CDATA[
+				$this->children[] = 'bossthemes/footer_top';
+				$this->children[] = 'bossthemes/footer_bottom';
+			]]></add>
+		</operation>
+	</file>
+</modification>

@@ -1,0 +1,456 @@
+<modification>
+
+	<id>Paypal Admin Tools (Full vQmod)</id>
+	<version>154.5</version>
+	<vqmver>2.2.1</vqmver>
+	<author>Qphoria</author>
+
+	
+	<file name="catalog/controller/common/home.php">
+		<operation>
+            <search position="after"><![CDATA[
+			function index
+            ]]></search>
+            <add trim="true"><![CDATA[
+			// Create new db if needed for paypal admin tools
+			$sql = "
+			CREATE TABLE IF NOT EXISTS `" . DB_PREFIX . "paypal_admin_tools` (
+			`order_id` int(11) NOT NULL default '0',
+			`transaction_id` varchar(32) NOT NULL,
+			`amount` DECIMAL(15,2) NOT NULL default '0.00',
+			`currency` varchar(3) NOT NULL default 'USD',
+			`authorization_id` varchar(32) NOT NULL default '0',
+			PRIMARY KEY  (`order_id`)
+			) ENGINE=MyISAM DEFAULT CHARSET=utf8";
+			$this->db->query($sql);
+			//
+            ]]></add>
+        </operation>
+	</file>
+	
+	<file name="catalog/controller/payment/pp_standard.php">
+		<operation>
+            <search position="before"><![CDATA[
+			$request = 'cmd=_notify-validate';
+            ]]></search>
+            <add trim="true"><![CDATA[
+			//Q: Paypal Admin Tools
+			$ppat_trans_id = (isset($_POST['txn_id'])) ? $_POST['txn_id'] : 0;
+			$ppat_amount = (isset($_POST['mc_gross'])) ? $_POST['mc_gross'] : 0;
+			$ppat_authid = (isset($_POST['auth_id'])) ? $_POST['auth_id'] : 0;
+			$ppat_currency = (isset($_POST['mc_currency'])) ? $_POST['mc_currency'] : 'USD';
+			$ppat_order_query = $this->db->query("SELECT order_id from " . DB_PREFIX . "paypal_admin_tools where order_id = '" . $order_info['order_id'] . "'");
+			if (!$ppat_order_query->num_rows) {
+				$this->db->query("INSERT INTO " . DB_PREFIX . "paypal_admin_tools SET `order_id` = '" . $order_info['order_id'] . "', transaction_id = '" . $this->db->escape($ppat_trans_id) . "', amount = '" .$this->db->escape($ppat_amount). "', currency = '" .$this->db->escape($ppat_currency). "', authorization_id = '" .$this->db->escape($ppat_authid). "'");
+			} else {
+				$this->db->query("UPDATE " . DB_PREFIX . "paypal_admin_tools SET transaction_id = '" . $this->db->escape($ppat_trans_id) . "', amount = '" .$this->db->escape($ppat_amount). "', currency = '" .$this->db->escape($ppat_currency). "', authorization_id = '" .$this->db->escape($ppat_authid). "' WHERE `order_id` = '" . $order_info['order_id'] . "'");
+			}
+			//
+            ]]></add>
+        </operation>
+	</file>
+
+	<file name="catalog/controller/payment/pp_pro.php">
+		<operation>
+            <search position="after"><![CDATA[
+			parse_str($response, $response_info);
+            ]]></search>
+            <add trim="true"><![CDATA[
+			//Q: Paypal Admin Tools
+			$ppat_trans_id = (isset($response_info['TRANSACTIONID'])) ? $response_info['TRANSACTIONID'] : 0;
+			$ppat_amount = (isset($response_info['AMT'])) ? $response_info['AMT'] : 0;
+			$ppat_authid = (isset($response_info['AUTHORIZATIONID'])) ? $response_info['AUTHORIZATIONID'] : 0;
+			$ppat_currency = (isset($response_info['CURRENCYCODE'])) ? $response_info['CURRENCYCODE'] : 'USD';
+			$ppat_order_query = $this->db->query("SELECT order_id from " . DB_PREFIX . "paypal_admin_tools where order_id = '" . $order_info['order_id'] . "'");
+			if (!$ppat_order_query->num_rows) {
+				$this->db->query("INSERT INTO " . DB_PREFIX . "paypal_admin_tools SET `order_id` = '" . $order_info['order_id'] . "', transaction_id = '" . $this->db->escape($ppat_trans_id) . "', amount = '" .$this->db->escape($ppat_amount). "', currency = '" .$this->db->escape($ppat_currency). "', authorization_id = '" .$this->db->escape($ppat_authid). "'");
+			} else {
+				$this->db->query("UPDATE " . DB_PREFIX . "paypal_admin_tools SET transaction_id = '" . $this->db->escape($ppat_trans_id) . "', amount = '" .$this->db->escape($ppat_amount). "', currency = '" .$this->db->escape($ppat_currency). "', authorization_id = '" .$this->db->escape($ppat_authid). "' WHERE `order_id` = '" . $order_info['order_id'] . "'");
+			}
+			//
+            ]]></add>
+        </operation>
+	</file>
+
+	<file name="catalog/controller/payment/pp_pro_uk.php">
+		<operation>
+            <search position="after"><![CDATA[
+			parse_str($response, $response_info);
+            ]]></search>
+            <add trim="true"><![CDATA[
+			//Q: Paypal Admin Tools
+			$ppat_trans_id = (isset($response_info['TRANSACTIONID'])) ? $response_info['TRANSACTIONID'] : 0;
+			$ppat_amount = (isset($response_info['AMT'])) ? $response_info['AMT'] : 0;
+			$ppat_authid = (isset($response_info['AUTHORIZATIONID'])) ? $response_info['AUTHORIZATIONID'] : 0;
+			$ppat_currency = (isset($response_info['CURRENCYCODE'])) ? $response_info['CURRENCYCODE'] : 'USD';
+			$ppat_order_query = $this->db->query("SELECT order_id from " . DB_PREFIX . "paypal_admin_tools where order_id = '" . $order_info['order_id'] . "'");
+			if (!$ppat_order_query->num_rows) {
+				$this->db->query("INSERT INTO " . DB_PREFIX . "paypal_admin_tools SET `order_id` = '" . $order_info['order_id'] . "', transaction_id = '" . $this->db->escape($ppat_trans_id) . "', amount = '" .$this->db->escape($ppat_amount). "', currency = '" .$this->db->escape($ppat_currency). "', authorization_id = '" .$this->db->escape($ppat_authid). "'");
+			} else {
+				$this->db->query("UPDATE " . DB_PREFIX . "paypal_admin_tools SET transaction_id = '" . $this->db->escape($ppat_trans_id) . "', amount = '" .$this->db->escape($ppat_amount). "', currency = '" .$this->db->escape($ppat_currency). "', authorization_id = '" .$this->db->escape($ppat_authid). "' WHERE `order_id` = '" . $order_info['order_id'] . "'");
+			}
+			//
+            ]]></add>
+        </operation>
+	</file>
+
+	<file name="catalog/controller/payment/paypal_express.php" error="skip">
+		<operation>
+            <search position="before"><![CDATA[
+			$this->redirect($store_url . 'index.php?route=checkout/success');
+            ]]></search>
+            <add trim="true"><![CDATA[
+			//Q: Paypal Admin Tools
+			$ppat_trans_id = (isset($nvp['TRANSACTIONID'])) ? $nvp['TRANSACTIONID'] : 0;
+			$ppat_amount = (isset($nvp['AMT'])) ? $nvp['AMT'] : 0;
+			$ppat_authid = (isset($nvp['AUTHORIZATIONID'])) ? $nvp['AUTHORIZATIONID'] : 0;
+			$ppat_currency = (isset($nvp['CURRENCYCODE'])) ? $nvp['CURRENCYCODE'] : 'USD';
+			$ppat_order_query = $this->db->query("SELECT order_id from " . DB_PREFIX . "paypal_admin_tools where order_id = '" . $order_info['order_id'] . "'");
+			if (!$ppat_order_query->num_rows) {
+				$this->db->query("INSERT INTO " . DB_PREFIX . "paypal_admin_tools SET `order_id` = '" . $order_info['order_id'] . "', transaction_id = '" . $this->db->escape($ppat_trans_id) . "', amount = '" .$this->db->escape($ppat_amount). "', currency = '" .$this->db->escape($ppat_currency). "', authorization_id = '" .$this->db->escape($ppat_authid). "'");
+			} else {
+				$this->db->query("UPDATE " . DB_PREFIX . "paypal_admin_tools SET transaction_id = '" . $this->db->escape($ppat_trans_id) . "', amount = '" .$this->db->escape($ppat_amount). "', currency = '" .$this->db->escape($ppat_currency). "', authorization_id = '" .$this->db->escape($ppat_authid). "' WHERE `order_id` = '" . $order_info['order_id'] . "'");
+			}
+			//
+            ]]></add>
+        </operation>
+	</file>
+
+	<file name="catalog/controller/payment/paypal_hosted.php" error="skip">
+		<operation>
+            <search position="after"><![CDATA[
+			if ($this->order_info) {
+            ]]></search>
+            <add trim="true"><![CDATA[
+			//Q: Paypal Admin Tools
+			$ppat_trans_id = (isset($_REQUEST['txn_id'])) ? $_REQUEST['txn_id'] : 0;
+			$ppat_amount = (isset($_POST['mc_gross'])) ? $_POST['mc_gross'] : 0;
+			$ppat_authid = (isset($_POST['auth_id'])) ? $_POST['auth_id'] : 0;
+			$ppat_currency = (isset($_POST['mc_currency'])) ? $_POST['mc_currency'] : 'USD';
+			$ppat_order_query = $this->db->query("SELECT order_id from " . DB_PREFIX . "paypal_admin_tools where order_id = '" . $order_info['order_id'] . "'");
+			if (!$ppat_order_query->num_rows) {
+				$this->db->query("INSERT INTO " . DB_PREFIX . "paypal_admin_tools SET `order_id` = '" . $order_info['order_id'] . "', transaction_id = '" . $this->db->escape($ppat_trans_id) . "', amount = '" .$this->db->escape($ppat_amount). "', currency = '" .$this->db->escape($ppat_currency). "', authorization_id = '" .$this->db->escape($ppat_authid). "'");
+			} else {
+				$this->db->query("UPDATE " . DB_PREFIX . "paypal_admin_tools SET transaction_id = '" . $this->db->escape($ppat_trans_id) . "', amount = '" .$this->db->escape($ppat_amount). "', currency = '" .$this->db->escape($ppat_currency). "', authorization_id = '" .$this->db->escape($ppat_authid). "' WHERE `order_id` = '" . $order_info['order_id'] . "'");
+			}
+			//
+            ]]></add>
+        </operation>
+	</file>
+
+	<file name="catalog/controller/payment/paypal_advanced.php" error="skip">
+		<operation>
+            <search position="before"><![CDATA[
+			switch($_REQUEST['RESULT']) {
+            ]]></search>
+            <add trim="true"><![CDATA[
+			//Q: Paypal Admin Tools
+			$ppat_trans_id = (isset($_REQUEST['PNREF'])) ? $_REQUEST['PNREF'] : 0;
+			$ppat_amount = (isset($_REQUEST['AMT'])) ? $_REQUEST['AMT'] : 0;
+			$ppat_authid = (isset($_POST['auth_id'])) ? $_POST['auth_id'] : 0; // never happens
+			$ppat_currency = (isset($_POST['mc_currency'])) ? $_POST['mc_currency'] : 'USD'; // always USD
+			$ppat_order_query = $this->db->query("SELECT order_id from " . DB_PREFIX . "paypal_admin_tools where order_id = '" . $order_info['order_id'] . "'");
+			if (!$ppat_order_query->num_rows) {
+				$this->db->query("INSERT INTO " . DB_PREFIX . "paypal_admin_tools SET `order_id` = '" . $order_info['order_id'] . "', transaction_id = '" . $this->db->escape($ppat_trans_id) . "', amount = '" .$this->db->escape($ppat_amount). "', currency = '" .$this->db->escape($ppat_currency). "', authorization_id = '" .$this->db->escape($ppat_authid). "'");
+			} else {
+				$this->db->query("UPDATE " . DB_PREFIX . "paypal_admin_tools SET transaction_id = '" . $this->db->escape($ppat_trans_id) . "', amount = '" .$this->db->escape($ppat_amount). "', currency = '" .$this->db->escape($ppat_currency). "', authorization_id = '" .$this->db->escape($ppat_authid). "' WHERE `order_id` = '" . $order_info['order_id'] . "'");
+			}
+			//
+            ]]></add>
+        </operation>
+	</file>
+
+
+
+	<!-- ADMIN CHANGES -->
+
+	<file name="admin/view/template/sale/order_info.tpl">
+
+		<!-- Add new fields to form -->
+		<operation>
+            <search position="after"><![CDATA[
+			<td><?php echo $payment_method; ?></td>
+            ]]></search>
+            <add><![CDATA[
+            </tr>
+            <?php //Q: Paypal Admin Tools ?>
+			<?php $pp_types = array('pp_standard', 'paypal_express', 'pp_hosted', 'paypal_advanced', 'pp_pro', 'pp_pro_uk'); ?>
+			<?php if (in_array($payment_code, $pp_types)) { ?>
+            <tr>
+            <td>Paypal Admin Tools: <br/><span class="help">Enter your Paypal API Details. See the <a href="http://www.youtube.com/watch?v=TMP2llxOuKo" target="_blank">video tutorial</a> to find this info. Paypal credentials will be saved to the database for next time.<span></td>
+			<td>
+			<form id="payment_method">
+			<table>
+			  <tr>
+				<td>Action:</td>
+				<td>
+				  <select name="ppat_action" onchange="$('#ppat_response').html(''); if (this.value == 'Partial') { $('input[name=ppat_amount]').show(); } else { $('input[name=ppat_amount]').hide(); }">
+			  	    <option value="FALSE">---</option>
+			  		<option value="NotComplete">Capture</option>
+			  		<option value="Void">Void</option>
+			  		<option value="Full">Full Refund</option>
+			  		<option value="Partial">Partial Refund</option>
+				  </select>
+				  <input style="display:none;" type="text" size="5" name="ppat_amount" value="<?php echo preg_replace("/[^0-9.]/", "", $total); ?>" />
+				  <input type="hidden" name="ppat_order_id" value="<?php echo $order_id; ?>" />
+				  <input type="button" value="Submit" id="ppat_submit" />
+				</td>
+			  </tr>
+			  <tr>
+				<td>Environment:</td>
+				<td><select name="ppat_env"><option value="live" <?php if($ppat_env == 'live'){ echo 'selected="selected"'; } ?> >Live</option><option value="sandbox" <?php if($ppat_env == 'sandbox'){ echo 'selected="selected"'; } ?>>Sandbox</option></td>
+			  </tr>
+			  <tr>
+				<td>API User:</td>
+				<td><input type="text" name="ppat_api_user" value="<?php echo $ppat_api_user; ?>" /></td>
+			  </tr>
+			  <tr>
+				<td>API Pass:</td>
+				<td><input type="text" name="ppat_api_pass" value="<?php echo $ppat_api_pass; ?>" /></td>
+			  </tr>
+			  <tr>
+				<td>API Signature:</td>
+				<td><input type="text" name="ppat_api_sig" value="<?php echo $ppat_api_sig; ?>" /></td>
+			  </tr>
+			</table>
+			<script type="text/javascript"><!--//
+	$('#ppat_submit').live('click', function() {
+		if (!confirm('Are you sure?')) {
+			return false;
+		}
+		$.ajax({
+			url: 'index.php?route=sale/order/ppat_doaction&token=<?php echo $token; ?>',
+			type: 'post',
+			data: $('#payment_method').serialize(),
+			dataType: 'json',
+			beforeSend: function() {
+				$('#ppat_submit').attr('disabled', 'disabled');
+			},
+			complete: function() {
+				$('#ppat_submit').removeAttr('disabled');
+			},
+			success: function(json) {
+				$('.success, .warning').remove();
+
+				if (json['error']) {
+					$('#ppat_response').html('<div class="warning" style="display: none;">' + json['error'] + '</div>');
+
+					$('.warning').fadeIn('slow');
+				}
+
+				if (json['success']) {
+	                $('#ppat_response').html('<div class="success" style="display: none;">' + json['success'] + '</div>');
+
+					$('.success').fadeIn('slow');
+				}
+	/*
+				if (json['sent']) {
+					$('#msgsent').val(json['sent']);
+				}
+
+				if (json['rcvd']) {
+					$('#msgrcvd').val(json['rcvd']);
+				}
+	*/
+			},
+			error: function(xhr, ajaxOptions, thrownError) {
+				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+			}
+		});
+	});
+			//--></script>
+			</form>
+
+			</td>
+			</tr>
+			<?php } ?>
+			<tr>
+			  <td colspan="2" id="ppat_response"></td>
+            ]]></add>
+        </operation>
+
+	</file>
+
+
+	<file name="admin/controller/sale/order.php">
+
+		<!-- Pass the payment code to the view -->
+		<operation>
+            <search position="before"><![CDATA[
+			$this->data['payment_method'] = $order_info['payment_method'];
+            ]]></search>
+            <add><![CDATA[
+			$this->data['payment_code'] = $order_info['payment_code'];
+			$this->data['ppat_env'] = $this->config->get('paypal_admin_tools_ppat_env') ? $this->config->get('paypal_admin_tools_ppat_env') : '';
+			$this->data['ppat_api_user'] = $this->config->get('paypal_admin_tools_ppat_api_user') ? $this->config->get('paypal_admin_tools_ppat_api_user') : '';
+			$this->data['ppat_api_pass'] = $this->config->get('paypal_admin_tools_ppat_api_pass') ? $this->config->get('paypal_admin_tools_ppat_api_pass') : '';
+			$this->data['ppat_api_sig']  = $this->config->get('paypal_admin_tools_ppat_api_sig')  ? $this->config->get('paypal_admin_tools_ppat_api_sig')  : '';
+            ]]></add>
+        </operation>
+
+		<!-- Add callback function -->
+		<operation>
+            <search position="before"><![CDATA[
+			function index
+            ]]></search>
+            <add><![CDATA[
+
+	//Q: Paypal Admin Tools
+
+	public function ppat_doaction() {
+
+		$json = array();
+		$json['error'] = false;
+
+		$classname = str_replace('vq2-admin_controller_sale_', '', basename(__FILE__, '.php'));
+		//$this->load->language('module/' . $classname);
+
+		if (empty($this->request->post['ppat_api_user'])) { $json['error'] = 'Error: API User required!'; }
+		if (empty($this->request->post['ppat_api_pass'])) { $json['error'] = 'Error: API Pass required!'; }
+		if (empty($this->request->post['ppat_api_sig'])) { $json['error'] = 'Error: API Sig required!'; }
+
+		if (!$json['error']) {
+			// Save API details to settings db
+			$savefields = array('ppat_api_user', 'ppat_api_pass', 'ppat_api_sig', 'ppat_env');
+			$savearr = array();
+			foreach ($this->request->post as $key => $value) {
+				if (in_array($key, $savefields)) {
+					$savearr['paypal_admin_tools_' . $key] = $value;
+				}
+			}
+			$this->load->model('setting/setting');
+			$this->model_setting_setting->editSetting($classname, $savearr);
+			//
+
+			$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "paypal_admin_tools at LEFT JOIN `" . DB_PREFIX . "order` o ON (at.order_id = o.order_id) WHERE at.order_id = '" . (int)$this->request->post['ppat_order_id'] . "'");
+
+			if (!$query->num_rows) {
+				$json['error'] = 'Error: Order data not found';
+			} else {
+				$transactionID = urlencode($query->row['transaction_id']);
+				$currencyID = urlencode($query->row['currency_code']);
+			}
+
+			if (!$json['error']) {
+
+				// Set request-specific fields.
+				$api_user = ($this->request->post['ppat_api_user']);
+				$api_pass = ($this->request->post['ppat_api_pass']);
+				$api_sig = ($this->request->post['ppat_api_sig']);
+				$env = ($this->request->post['ppat_env']);
+				$type = urlencode($this->request->post['ppat_action']);			// 'Full' or 'Partial'
+				$amount = $this->request->post['ppat_amount'] ? $this->request->post['ppat_amount'] : '';	// required if Partial.
+				$memo = $type . ' ' . $amount;
+
+				if ($type == 'Partial' || $type == 'Full') { //Refund types
+					$method = 'RefundTransaction';
+					// Add request-specific fields to the request string.
+					$nvpStr = "&TRANSACTIONID=$transactionID&REFUNDTYPE=$type&CURRENCYCODE=$currencyID&NOTE=$memo";
+				}
+
+				if(strcasecmp($type, 'Partial') == 0) {
+					if(!isset($amount)) {
+						$json['error'] = ('Error: You must specify amount!');
+					} else {
+						$nvpStr = $nvpStr."&AMT=$amount";
+					}
+				} elseif ($type == 'NotComplete') {
+					$method = 'DoCapture';
+					$amount = urlencode(number_format($query->row['amount'], 2, '.', ''));
+					$currencyID = urlencode($query->row['currency']);
+					$authorizationID = urlencode($query->row['authorization_id']);
+					$memo = empty($memo) ? 'Capture' : $memo;
+					$nvpStr="&AUTHORIZATIONID=$authorizationID&AMT=$amount&COMPLETETYPE=$type&CURRENCYCODE=$currencyID&NOTE=$memo";
+				} elseif ($type == 'Void') {
+					$method = 'DoVoid';
+					$authorizationID = urlencode($query->row['authorization_id']);
+					$memo = empty($memo) ? 'Void' : $memo;
+					$nvpStr="&AUTHORIZATIONID=$authorizationID&NOTE=$memo";
+				}
+
+				if (!$json['error']) {
+					// Execute the API operation; see the PPHttpPost function above.
+					$httpParsedResponseAr = $this->PPHttpPost($method, $nvpStr, $api_user, $api_pass, $api_sig, $env);
+
+					if("SUCCESS" == strtoupper($httpParsedResponseAr["ACK"]) || "SUCCESSWITHWARNING" == strtoupper($httpParsedResponseAr["ACK"])) {
+						$json['success'] = ('Action Completed Successfully');
+					} else  {
+						$json['error'] = ($httpParsedResponseAr['ACK'] . ': ' . urldecode($httpParsedResponseAr['L_LONGMESSAGE0']));
+					}
+
+					$json['sent'] = print_r($nvpStr, 1);
+					$json['rcvd'] = urldecode(print_r($httpParsedResponseAr, 1));
+					
+					if(isset($this->request->post['ppat_order_editing']))
+					{
+					$this->load->model('sale/order');
+	$this->model_sale_order->updateOrderProductAndHistory($order_id);
+					
+					}
+					
+				}
+			}
+		}
+		$this->response->setOutput(json_encode($json));
+	}
+
+	private function PPHttpPost($methodName_, $nvpStr_, $API_UserName, $API_Password, $API_Signature, $environment) {
+
+		// Set up your API credentials, PayPal end point, and API version.
+		$API_UserName = urlencode($API_UserName);
+		$API_Password = urlencode($API_Password);
+		$API_Signature = urlencode($API_Signature);
+		$API_Endpoint = "https://api-3t.paypal.com/nvp";
+		if("sandbox" === $environment || "beta-sandbox" === $environment) {
+			$API_Endpoint = "https://api-3t.$environment.paypal.com/nvp";
+		}
+		$version = urlencode('51.0');
+
+		// Set the curl parameters.
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $API_Endpoint);
+		curl_setopt($ch, CURLOPT_VERBOSE, 1);
+
+		// Turn off the server and peer verification (TrustManager Concept).
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_POST, 1);
+
+		// Set the API operation, version, and API signature in the request.
+		$nvpreq = "METHOD=$methodName_&VERSION=$version&PWD=$API_Password&USER=$API_UserName&SIGNATURE=$API_Signature$nvpStr_";
+
+		// Set the request as a POST FIELD for curl.
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $nvpreq);
+
+		// Get response from the server.
+		$httpResponse = curl_exec($ch);
+
+		if(!$httpResponse) {
+			exit("$methodName_ failed: ".curl_error($ch).'('.curl_errno($ch).')');
+		}
+
+		// Extract the response details.
+		$httpResponseAr = explode("&", $httpResponse);
+
+		$httpParsedResponseAr = array();
+		foreach ($httpResponseAr as $i => $value) {
+			$tmpAr = explode("=", $value);
+			if(sizeof($tmpAr) > 1) {
+				$httpParsedResponseAr[$tmpAr[0]] = $tmpAr[1];
+			}
+		}
+
+		if((0 == sizeof($httpParsedResponseAr)) || !array_key_exists('ACK', $httpParsedResponseAr)) {
+			exit("Invalid HTTP Response for POST request($nvpreq) to $API_Endpoint.");
+		}
+
+		return $httpParsedResponseAr;
+	}
+
+			]]></add>
+        </operation>
+	</file>
+
+</modification>

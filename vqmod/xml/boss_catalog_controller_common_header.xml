@@ -1,0 +1,27 @@
+<modification>
+	<id>Bossthemes - catalog - controller - common - header</id>
+	<version>1.5.4.1</version>
+	<vqmver>2.1.7</vqmver>
+	<author>bossthemes</author>
+	<file name="catalog/controller/common/header.php">
+		<operation>
+			<search position="before"><![CDATA[
+				if (file_exists(DIR_TEMPLATE . (($this->session->data['temp_theme'])? $this->session->data['temp_theme'] : $this->config->get('config_template')) . '/template/common/header.tpl')) {
+			]]></search>
+			<add><![CDATA[
+				$this->children[] = 'bossthemes/header_top';
+				$this->children[] = 'bossthemes/header_bottom';
+				//$this->children[] = 'module/boss_megamenu';
+				$this->children[] = 'module/boss_login';
+                $this->children[] = 'module/boss_search';
+			]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/common/column_left.php">
+		<operation>
+			<search position="before"><![CDATA[$sort_order = array();]]></search>
+			<add><![CDATA[array_unshift($module_data, array('code' => 'boss_megamenu', 'setting'    => array(), 'sort_order' => 0));]]></add>
+		</operation>
+	</file>
+	
+</modification>

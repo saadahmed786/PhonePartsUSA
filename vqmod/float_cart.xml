@@ -1,0 +1,124 @@
+<modification>
+        <id>Float Cart</id>
+        <version>1.0</version>
+        <vqmver>2.1.5</vqmver>
+        <author>BigPayout - Stan</author>
+ 
+ 
+ 
+   
+   <file name="catalog/controller/module/cart.php">
+    <operation>
+	<search position="after"><![CDATA[$this->data['text_items'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total));]]></search>
+	<add><![CDATA[
+$_SESSION['thistextitems'] = $this->data['text_items'];
+      ]]></add>
+	</operation>
+  
+    
+</file>
+   
+   
+   
+   
+   
+        
+        <file name="catalog/view/theme/*/template/common/header.tpl">
+                <operation>
+                        <search position="replace"><![CDATA[
+                        <?php echo $cart; ?>
+                        ]]></search>
+                        <add><![CDATA[
+                       
+		       
+<div id="pc-cart"  onclick="openThecart()"><div id="cart2">
+  <div class="heading">
+    <h4>Shopping Cart</h4>
+			
+    <img src="image/shopcart.png" alt="Shopping Cart" style="position: absolute; top: 10px; left: 7px;"/><a><span id="cart-total2"><?php echo $_SESSION['thistextitems']; ?></span></a>
+			
+			</div>
+  <div class="content">
+  <div class="bg_content2">
+        <div class="empty">Your shopping cart is empty!</div>
+      </div>
+  </div>
+</div>
+		   ]]></add>
+                </operation>
+
+                <operation>
+                        <search position="after"><![CDATA[<div id="notification"></div>]]></search>
+                        <add><![CDATA[
+                   
+				   <div id="divTopright" style="display:none;" >
+<span style="color: #313131; font-size: 14px;  position: absolute; top: 0px; right: 16px; cursor: pointer; background: #fff; border: 1px solid #B3B3B3; z-index: 100000; padding: 3px;" id="closeFloat" ><b>X</b> Dismiss</span>
+<div id="floatCart">
+<?php echo $cart; ?>
+</div>
+</div>
+
+<script type="application/x-javascript">
+$( "#closeFloat" ).click(function() {
+
+ $( "#divTopright" ).fadeOut( "slow", function() {});
+
+});
+</script>
+
+				   
+				   
+                        ]]></add>
+                </operation>
+        </file>
+		
+
+
+
+
+
+
+
+		
+	
+		
+		
+	
+	
+	
+	
+		
+
+<file name="catalog/view/theme/*/template/common/header.tpl">
+    <operation>
+	<search position="after"><![CDATA[<script type="text/javascript" src="catalog/view/javascript/common.js"></script>]]></search>
+	<add><![CDATA[
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/floatcart.css" />
+      ]]></add>
+	</operation>
+  
+    
+</file>
+
+
+
+
+
+
+
+
+
+
+
+<file name="catalog/view/javascript/common.js">
+    <operation>
+			<search position="replace"><![CDATA[$('html, body').animate({ scrollTop: 0 }, 'slow'); ]]></search>
+			<add><![CDATA[
+
+      ]]></add>
+	</operation>
+</file>
+
+
+		
+</modification>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>Social Discount</id>
+	<version>1.0</version>
+	<vqmver>2.0</vqmver>
+	<author>Opcrat</author>
+	<file name="catalog/controller/checkout/success.php">
+		<operation>
+			<search position="after"><![CDATA[unset($this->session->data['coupon']);]]></search>
+			<add><![CDATA[
+			unset($this->session->data['social_discount']);
+			]]></add>
+		</operation>
+	</file>	
+	<file name="catalog/controller/account/logout.php">
+		<operation>
+			<search position="after"><![CDATA[unset($this->session->data['coupon']);]]></search>
+			<add><![CDATA[
+			unset($this->session->data['social_discount']);
+			]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/checkout/manual.php">
+		<operation>
+			<search position="after"><![CDATA[unset($this->session->data['coupon']);]]></search>
+			<add><![CDATA[
+			unset($this->session->data['social_discount']);
+			]]></add>
+		</operation>
+	</file>		
+</modification>	
+
+
+
+			

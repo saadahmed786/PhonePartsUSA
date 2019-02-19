@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id><![CDATA[Add Time Of Day To Order List / Recent Orders / Returns]]></id>
+	<version><![CDATA[1.0]]></version>
+	<vqmver><![CDATA[2.1]]></vqmver>
+	<author><![CDATA[<a onclick="window.open('http://www.opencart.com/index.php?route=extension/extension&filter_username=Tcalp');" title="View all OpenCart Mods by Tcalp">Jeff Hunter aka Tcalp</a>]]></author>
+
+	<file name="admin/controller/common/home.php">
+		<operation> <!-- ALTER ORDER DATE DISPLAY TO USE FORMAT WITH TIME -->
+			<search position="replace"><![CDATA[$this->language->get('date_format_short')]]></search>
+			<add><![CDATA[$this->language->get('date_format_short_with_time')]]></add>
+		</operation>
+	</file>
+
+	<file name="admin/controller/sale/order.php">
+		<operation> <!-- ALTER ORDER DATE DSIPLAY TO USE FORMAT WITH TIME -->
+			<search position="replace" index="1,2,3,4"><![CDATA[$this->language->get('date_format_short')]]></search>
+			<add><![CDATA[$this->language->get('date_format_short_with_time')]]></add>
+		</operation>
+	</file>
+
+	<file name="admin/controller/sale/return.php">
+		<operation> <!-- ALTER ORDER DATE DSIPLAY TO USE FORMAT WITH TIME -->
+			<search position="replace"><![CDATA[$this->language->get('date_format_short')]]></search>
+			<add><![CDATA[$this->language->get('date_format_short_with_time')]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/language/*/common/home.php">
+		<operation>
+			<search position="after"><![CDATA[?php]]></search>
+			<add><![CDATA[$_['date_format_short_with_time'] = 'm/d/Y h:i A';]]></add>
+		</operation>
+	</file>
+
+	<file name="admin/language/*/sale/order.php">
+		<operation>
+			<search position="after"><![CDATA[?php]]></search>
+			<add><![CDATA[$_['date_format_short_with_time'] = 'm/d/Y h:i A';]]></add>
+		</operation>
+	</file>
+
+	<file name="admin/language/*/sale/return.php">
+		<operation>
+			<search position="after"><![CDATA[?php]]></search>
+			<add><![CDATA[$_['date_format_short_with_time'] = 'm/d/Y h:i A';]]></add>
+		</operation>
+	</file>
+</modification>

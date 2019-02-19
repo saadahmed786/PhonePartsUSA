@@ -1,0 +1,34 @@
+<modification>
+  <id>Modification for changing how out of stock displays on the cart page</id>
+  <version>1.0</version>
+  <vqmver>2.2.1</vqmver>
+  <author>Bigpayout Development Team</author>
+
+  <file name="catalog/controller/checkout/cart.php">
+    <operation>
+      <search position="before"><![CDATA[
+      if (file_exists(DIR_TEMPLATE . (($this->session->data['temp_theme'])? $this->session->data['temp_theme'] : $this->config->get('config_template')) . '/template/checkout/cart.tpl')) {
+      ]]></search>
+      <add><![CDATA[
+      $this->data['error_oos'] = $this->language->get('error_oos');
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="catalog/language/english/checkout/cart.php">
+    <operation>
+      <search position="top" offset="1"><![CDATA[]]></search>
+      <add><![CDATA[
+      $_['error_oos'] = 'Not enough quantity in stock';
+      ]]></add>
+    </operation>
+    <operation>
+      <search position="replace"><![CDATA[
+      $_['error_stock']            = 'Products marked with *** are not available in the desired quantity or not in stock!';
+      ]]></search>
+      <add><![CDATA[
+      $_['error_stock']            = 'Some items in your cart are not available in the desired quantity or not in stock!';
+      ]]></add>
+    </operation>
+  </file>
+</modification>

@@ -1,0 +1,6 @@
+2015-05-20 23:29:53 - x_customer_ip=70.173.82.73
+2015-05-20 23:29:54 - AUTHNET CREATE TRANSECTION ERROR: createCimOrder(), Customer:103 customerPaymentProfileId: 149200592 Response Code: Error Message: Error connecting to AuthorizeNet
+2015-05-20 23:31:12 - x_customer_ip=70.173.82.73
+2015-05-20 23:31:12 - AUTHNET CREATE TRANSECTION ERROR: createCimOrder(), Customer:103 customerPaymentProfileId: 149200592 Response Code: Error Message: Error connecting to AuthorizeNet
+2015-05-20 23:42:11 - x_customer_ip=70.173.82.73
+2015-05-20 23:42:15 - AUTHNET CREATE TRANSECTION ERROR: createCimOrder(), Customer:103 customerPaymentProfileId: 149200592 Response Code:2 Error Message: 

@@ -1,0 +1,3 @@
+[29-Apr-2016 05:39:46 America/Chicago] PHP Notice:  Use of undefined constant DIR_SYSTEM - assumed 'DIR_SYSTEM' in /home/phonerep/public_html/system/startup.php on line 74
+[29-Apr-2016 05:39:46 America/Chicago] PHP Warning:  require_once(DIR_SYSTEMhelper/json.php): failed to open stream: No such file or directory in /home/phonerep/public_html/system/startup.php on line 74
+[29-Apr-2016 05:39:46 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'DIR_SYSTEMhelper/json.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/phonerep/public_html/system/startup.php on line 74

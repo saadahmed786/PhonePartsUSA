@@ -1,0 +1,1030 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>ElFinder Uploading and Selection Support</id>
+	<version>2.1.7b</version>
+	<vqmver>2.1.6</vqmver>
+	<author>fpdesign</author>
+
+	<file name="admin/view/template/common/header.tpl" error="log">
+		<operation>
+			<search position="after"><![CDATA[<script type="text/javascript" src="view/javascript/jquery/superfish/js/superfish.js"></script>]]></search>
+			<add><![CDATA[<script type="text/javascript" src="view/javascript/common.js"></script>]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[<li><a href="<?php echo $module; ?>"><?php echo $text_module; ?></a></li>]]></search>
+			<add><![CDATA[
+                <?php if($this->user->hasPermission('access','common/elmanager')) { ?>
+				<li><a onclick="dqis_image_manager('<?php echo $image_manager_token; ?>');"><?php echo $text_image_manager; ?></a></li>
+				<?php } ?>]]></add>
+		</operation>
+	</file>
+	<file name="admin/view/template/common/footer.tpl" error="log">
+		<operation>
+			<search position="after"><![CDATA[<div id="footer"><?php echo $text_footer; ?></div>]]></search>
+			<add><![CDATA[<script type="text/javascript"><!--
+              function dqis_image_manager(token) {
+	                $('#dialog').remove();	
+	                $('#content').prepend('<div id="dialog" style="padding: 3px 0px 0px 0px;"><iframe src="index.php?route=common/elmanager&token=' + token + '&field=imagemanager" style="padding:0; margin: 0; display: block; width: 100%; height: 100%;" frameborder="no" scrolling="auto"></iframe></div>');
+	
+	                $('#dialog').dialog({
+		                title: 'Multi Image Manager',
+		                close: function (event, ui) {			
+		                },	
+		                bgiframe: false,
+		                width: 800,
+		                height: 600,
+		                resizable: false,
+		                modal: false
+	                });
+                };
+
+			//--></script>]]></add>
+		</operation>
+	</file>
+	<file name="admin/language/english/common/header.php" error="log">
+		<operation>
+			<search position="after"><![CDATA[$_['text_front']                       = 'Store Front';]]></search>
+			<add><![CDATA[$_['text_image_manager']                       = 'Multi Image Manager';]]></add>
+		</operation>
+	</file>
+	<file name="admin/controller/common/header.php" error="log">
+		<operation>
+			<search position="after"><![CDATA[$this->data['text_front'] = $this->language->get('text_front');]]></search>
+			<add><![CDATA[$this->data['text_image_manager'] = $this->language->get('text_image_manager');]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[$this->data['module'] = $this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL');]]></search>
+			<add><![CDATA[$this->data['image_manager_token'] = $this->session->data['token'];]]></add>
+		</operation>
+	</file>
+	<file name="admin/view/template/common/filemanager.tpl" error="log">
+		<operation>
+			<search position="after"><![CDATA[<script type="text/javascript" src="view/javascript/jquery/ajaxupload.js"></script>]]></search>
+			<add><![CDATA[<script type="text/javascript" src="view/javascript/common.js"></script>]]></add>
+		</operation>
+	</file>
+    <file name="admin/model/catalog/product.php" error="log">
+        <operation>
+            <search position="replace"><![CDATA[$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_image WHERE product_id = '" . (int)$product_id . "'");]]></search>
+            <add><![CDATA[$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_image WHERE product_id = '" . (int)$product_id . "' order by sort_order");]]></add>
+        </operation>
+    </file>
+    <file name="admin/model/catalog/option.php" error="log">
+        <operation>
+            <search position="replace"><![CDATA[$option_value_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "option_value WHERE option_id = '" . (int)$option_id . "'");]]></search>
+            <add><![CDATA[$option_value_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "option_value WHERE option_id = '" . (int)$option_id . "' order by sort_order");]]></add>
+        </operation>
+    </file>
+	<file name="admin/language/english/catalog/product.php" error="log">
+		<operation>
+			<search position="after"><![CDATA[$_['entry_layout']           = 'Layout Override:';]]></search>
+			<add><![CDATA[$_['entry_primary']          = 'Primary Image:';
+                $_['entry_filename']        = 'Image Filename:';
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/controller/catalog/product.php" error="log">
+		<operation>
+			<search position="after"><![CDATA[    	$this->data['entry_image'] = $this->language->get('entry_image');]]></search>
+			<add><![CDATA[    	$this->data['entry_primary'] = $this->language->get('entry_primary');
+                $this->data['entry_filename'] = $this->language->get('entry_filename');
+                ]]></add>
+		</operation>
+	</file>
+    <file name="catalog/model/design/banner.php" error="log">
+		<operation>
+			<search position="after"><![CDATA[public function getBanner($banner_id) {]]></search>
+			<add><![CDATA[
+				$query = $this->db->query("DESC ".DB_PREFIX."banner_image sort_order");
+				if (!$query->num_rows) {
+						$this->db->query("ALTER TABLE " . DB_PREFIX . "banner_image ADD sort_order int(3);");
+				}
+			]]></add>
+		</operation>
+        <operation>
+            <search position="replace"><![CDATA[$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "banner_image bi LEFT JOIN " . DB_PREFIX . "banner_image_description bid ON (bi.banner_image_id  = bid.banner_image_id) WHERE bi.banner_id = '" . (int)$banner_id . "' AND bid.language_id = '" . (int)$this->config->get('config_language_id') . "'");]]></search>
+            <add><![CDATA[
+				$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "banner_image bi LEFT JOIN " . DB_PREFIX . "banner_image_description bid ON (bi.banner_image_id  = bid.banner_image_id) WHERE bi.banner_id = '" . (int)$banner_id . "' AND bid.language_id = '" . (int)$this->config->get('config_language_id') . "' order by bi.sort_order");
+			]]></add>
+		</operation>
+	</file>
+    <file name="catalog/controller/product/product.php" error="log">
+        <operation>
+            <search position="before"><![CDATA[$this->data['images'][] = array(]]></search>
+            <add><![CDATA[
+            if ($result['image'] == $product_info['image']) {
+              continue;
+            }
+            ]]></add>
+        </operation>
+    </file>    
+    <file name="admin/view/template/catalog/category_form.tpl" error="log">
+        <operation>
+            <search position="replace" offset="3"><![CDATA[<td><?php echo $entry_image; ?></td>]]></search>
+            <add><![CDATA[<td><?php echo $entry_image; ?></td>
+                  <td><div class="image"><img src="<?php echo $thumb; ?>" alt="" id="thumb" /><br />
+                  <input type="hidden" name="image" value="<?php echo $image; ?>" id="image" />
+                  <a onclick="el_uploadSingle('image','thumb');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb').attr('src', '<?php echo $no_image; ?>'); $('#image').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[<script type="text/javascript" src="view/javascript/ckeditor/ckeditor.js"></script>]]></search>
+            <add><![CDATA[
+            <script type="text/javascript"><!--
+
+            function el_uploadSingle(field,thumb) {
+	        $('#dialog').remove();	
+	        $('#content').prepend('<div id="dialog" style="padding: 3px 0px 0px 0px;"><iframe src="index.php?route=common/elmanager&token=<?php echo $token; ?>&field=' + field + '&thumb=' + thumb + '" style="padding:0; margin: 0; display: block; width: 100%; height: 100%;" frameborder="no" scrolling="auto"></iframe></div>');
+	
+	            $('#dialog').dialog({
+		            title: 'File Manager',
+		            close: function (event, ui) {			
+		            },	
+		            bgiframe: false,
+		            width: 800,
+		            height: 600,
+		            resizable: false,
+		            modal: false
+	            });
+            };
+
+
+            function addSingleImage(imageName, field, thumb) {
+                $.ajax({
+			        url: 'index.php?route=common/filemanager/image&token=<?php echo $token; ?>&image=' + encodeURIComponent(imageName),
+			        dataType: 'text',
+			        success: function(text) {
+				        $('#' + thumb).replaceWith('<img src="' + text + '" alt="" id="' + thumb + '" />');
+                        $('#' + field).replaceWith('<input type="hidden" id="' + field +'" value="' + imageName + '" name="' + field + '">');
+			        }
+		        });
+          
+            };
+            //--></script>
+            ]]></add>
+        </operation>
+    </file>    
+    <file name="admin/view/template/catalog/manufacturer_form.tpl" error="log">
+        <operation>
+            <search position="replace" offset="3"><![CDATA[<td><?php echo $entry_image; ?></td>]]></search>
+            <add><![CDATA[<td><?php echo $entry_image; ?></td>
+                  <td><div class="image"><img src="<?php echo $thumb; ?>" alt="" id="thumb" /><br />
+                  <input type="hidden" name="image" value="<?php echo $image; ?>" id="image" />
+                  <a onclick="el_uploadSingle('image','thumb');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb').attr('src', '<?php echo $no_image; ?>'); $('#image').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[<script type="text/javascript">]]></search>
+            <add><![CDATA[
+            <script type="text/javascript"><!--
+
+            function el_uploadSingle(field,thumb) {
+	        $('#dialog').remove();	
+	        $('#content').prepend('<div id="dialog" style="padding: 3px 0px 0px 0px;"><iframe src="index.php?route=common/elmanager&token=<?php echo $token; ?>&field=' + field + '&thumb=' + thumb + '" style="padding:0; margin: 0; display: block; width: 100%; height: 100%;" frameborder="no" scrolling="auto"></iframe></div>');
+	
+	            $('#dialog').dialog({
+		            title: 'File Manager',
+		            close: function (event, ui) {			
+		            },	
+		            bgiframe: false,
+		            width: 800,
+		            height: 600,
+		            resizable: false,
+		            modal: false
+	            });
+            };
+
+
+            function addSingleImage(imageName, field, thumb) {
+                $.ajax({
+			        url: 'index.php?route=common/filemanager/image&token=<?php echo $token; ?>&image=' + encodeURIComponent(imageName),
+			        dataType: 'text',
+			        success: function(text) {
+				        $('#' + thumb).replaceWith('<img src="' + text + '" alt="" id="' + thumb + '" />');
+                        $('#' + field).replaceWith('<input type="hidden" id="' + field +'" value="' + imageName + '" name="' + field + '">');
+			        }
+		        });
+          
+            };
+            //--></script>
+            ]]></add>
+        </operation>
+    </file>
+    <file name="admin/view/template/sale/voucher_theme_form.tpl" error="log">
+        <operation>
+            <search position="replace" offset="6"><![CDATA[<td><?php echo $entry_image; ?></td>]]></search>
+            <add><![CDATA[<td><?php echo $entry_image; ?></td>
+				<td valign="top"><div class="image"><img src="<?php echo $thumb; ?>" alt="" id="thumb" />
+					<input type="hidden" name="image" value="<?php echo $image; ?>" id="image" />
+					<br /><a onclick="el_uploadSingle('image','thumb');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb').attr('src', '<?php echo $no_image; ?>'); $('#image').attr('value', '');"><?php echo $text_clear; ?></a></div>
+				  <?php if ($error_image) { ?>
+				  <span class="error"><?php echo $error_image; ?></span>
+				  <?php } ?></td>
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[<script type="text/javascript">]]></search>
+            <add><![CDATA[
+            <script type="text/javascript"><!--
+
+            function el_uploadSingle(field,thumb) {
+	        $('#dialog').remove();	
+	        $('#content').prepend('<div id="dialog" style="padding: 3px 0px 0px 0px;"><iframe src="index.php?route=common/elmanager&token=<?php echo $token; ?>&field=' + field + '&thumb=' + thumb + '" style="padding:0; margin: 0; display: block; width: 100%; height: 100%;" frameborder="no" scrolling="auto"></iframe></div>');
+	
+	            $('#dialog').dialog({
+		            title: 'File Manager',
+		            close: function (event, ui) {			
+		            },	
+		            bgiframe: false,
+		            width: 800,
+		            height: 600,
+		            resizable: false,
+		            modal: false
+	            });
+            };
+
+
+            function addSingleImage(imageName, field, thumb) {
+                $.ajax({
+			        url: 'index.php?route=common/filemanager/image&token=<?php echo $token; ?>&image=' + encodeURIComponent(imageName),
+			        dataType: 'text',
+			        success: function(text) {
+				        $('#' + thumb).replaceWith('<img src="' + text + '" alt="" id="' + thumb + '" />');
+                        $('#' + field).replaceWith('<input type="hidden" id="' + field +'" value="' + imageName + '" name="' + field + '">');
+			        }
+		        });
+          
+            };
+            //--></script>
+            ]]></add>
+        </operation>
+    </file>
+    <file name="admin/view/template/setting/store_form.tpl" error="log">
+        <operation>
+            <search position="replace" offset="4"><![CDATA[<td><?php echo $entry_logo; ?></td>]]></search>
+            <add><![CDATA[<td><?php echo $entry_logo; ?></td>
+              <td><div class="image"><img src="<?php echo $logo; ?>" alt="" id="thumb-logo" />
+                  <input type="hidden" name="config_logo" value="<?php echo $config_logo; ?>" id="logo" />
+                  <br />
+                  <a onclick="el_uploadSingle('logo', 'thumb-logo');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb-logo').attr('src', '<?php echo $no_image; ?>'); $('#logo').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="replace" offset="4"><![CDATA[<td><?php echo $entry_icon; ?></td>]]></search>
+            <add><![CDATA[<td><?php echo $entry_icon; ?></td>
+              <td><div class="image"><img src="<?php echo $icon; ?>" alt="" id="thumb-icon" />
+                  <input type="hidden" name="config_icon" value="<?php echo $config_icon; ?>" id="icon" />
+                  <br />
+                  <a onclick="el_uploadSingle('icon', 'thumb-icon');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb-icon').attr('src', '<?php echo $no_image; ?>'); $('#icon').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[<script type="text/javascript">]]></search>
+            <add><![CDATA[
+            <script type="text/javascript"><!--
+
+            function el_uploadSingle(field,thumb) {
+	        $('#dialog').remove();	
+	        $('#content').prepend('<div id="dialog" style="padding: 3px 0px 0px 0px;"><iframe src="index.php?route=common/elmanager&token=<?php echo $token; ?>&field=' + field + '&thumb=' + thumb + '" style="padding:0; margin: 0; display: block; width: 100%; height: 100%;" frameborder="no" scrolling="auto"></iframe></div>');
+	
+	            $('#dialog').dialog({
+		            title: 'File Manager',
+		            close: function (event, ui) {			
+		            },	
+		            bgiframe: false,
+		            width: 800,
+		            height: 600,
+		            resizable: false,
+		            modal: false
+	            });
+            };
+
+
+            function addSingleImage(imageName, field, thumb) {
+                $.ajax({
+			        url: 'index.php?route=common/filemanager/image&token=<?php echo $token; ?>&image=' + encodeURIComponent(imageName),
+			        dataType: 'text',
+			        success: function(text) {
+						$('#' + thumb).replaceWith('<img src="' + text + '" alt="" id="' + thumb + '" />');
+						if (field == 'logo')
+						{
+							$('#' + field).replaceWith('<input type="hidden" id="logo" value="' + imageName + '" name="config_logo">');
+						} else {
+							$('#' + field).replaceWith('<input type="hidden" id="icon" value="' + imageName + '" name="config_icon">');
+						}
+					}
+		        });
+          
+            };
+            //--></script>
+            ]]></add>
+        </operation>
+    </file>
+    <file name="admin/view/template/setting/setting.tpl" error="log">
+        <operation>
+            <search position="replace" offset="4"><![CDATA[<td><?php echo $entry_logo; ?></td>]]></search>
+            <add><![CDATA[<td><?php echo $entry_logo; ?></td>
+              <td><div class="image"><img src="<?php echo $logo; ?>" alt="" id="thumb-logo" />
+                  <input type="hidden" name="config_logo" value="<?php echo $config_logo; ?>" id="logo" />
+                  <br />
+                  <a onclick="el_uploadSingle('logo', 'thumb-logo');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb-logo').attr('src', '<?php echo $no_image; ?>'); $('#logo').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="replace" offset="4"><![CDATA[<td><?php echo $entry_icon; ?></td>]]></search>
+            <add><![CDATA[<td><?php echo $entry_icon; ?></td>
+              <td><div class="image"><img src="<?php echo $icon; ?>" alt="" id="thumb-icon" />
+                  <input type="hidden" name="config_icon" value="<?php echo $config_icon; ?>" id="icon" />
+                  <br />
+                  <a onclick="el_uploadSingle('icon', 'thumb-icon');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb-icon').attr('src', '<?php echo $no_image; ?>'); $('#icon').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[<script type="text/javascript">]]></search>
+            <add><![CDATA[
+            <script type="text/javascript"><!--
+
+            function el_uploadSingle(field,thumb) {
+	        $('#dialog').remove();	
+	        $('#content').prepend('<div id="dialog" style="padding: 3px 0px 0px 0px;"><iframe src="index.php?route=common/elmanager&token=<?php echo $token; ?>&field=' + field + '&thumb=' + thumb + '" style="padding:0; margin: 0; display: block; width: 100%; height: 100%;" frameborder="no" scrolling="auto"></iframe></div>');
+	
+	            $('#dialog').dialog({
+		            title: 'File Manager',
+		            close: function (event, ui) {			
+		            },	
+		            bgiframe: false,
+		            width: 800,
+		            height: 600,
+		            resizable: false,
+		            modal: false
+	            });
+            };
+
+
+            function addSingleImage(imageName, field, thumb) {
+                $.ajax({
+			        url: 'index.php?route=common/filemanager/image&token=<?php echo $token; ?>&image=' + encodeURIComponent(imageName),
+			        dataType: 'text',
+			        success: function(text) {
+						$('#' + thumb).replaceWith('<img src="' + text + '" alt="" id="' + thumb + '" />');
+						if (field == 'logo')
+						{
+							$('#' + field).replaceWith('<input type="hidden" id="logo" value="' + imageName + '" name="config_logo">');
+						} else {
+							$('#' + field).replaceWith('<input type="hidden" id="icon" value="' + imageName + '" name="config_icon">');
+						}
+					}
+		        });
+          
+            };
+            //--></script>
+            ]]></add>
+        </operation>
+    </file>
+    <file name="admin/view/template/catalog/option_form.tpl" error="log">
+        <operation>
+            <search position="before"><![CDATA[<table id="option-value" class="list">]]></search>
+            <add><![CDATA[
+                <div style="padding:6px 0;">
+          <a style="float:right;margin-right:10px;" onclick="el_upload();" class="button">File Manager</a>              
+            <div style="clear:both;">
+                </div>
+        </div>            
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="replace" offset="37"><![CDATA[<table id="option-value" class="list">]]></search>
+            <add><![CDATA[
+         <table id="option-value" class="list">
+          <thead>
+            <tr>
+              <td class="left"><span class="required">*</span> <?php echo $entry_value; ?></td>
+              <td class="left"><?php echo $entry_image; ?></td>
+              <td class="right"><?php echo $entry_sort_order; ?></td>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody>
+          <?php $option_value_row = 0; ?>
+          <?php foreach ($option_values as $option_value) { ?>
+            <tr class="optionvaluerow" id="option-value-row<?php echo $option_value_row ?>">
+              <td class="left"><input type="hidden" name="option_value[<?php echo $option_value_row; ?>][option_value_id]" value="<?php echo $option_value['option_value_id']; ?>" />
+                <?php foreach ($languages as $language) { ?>
+                <input type="text" name="option_value[<?php echo $option_value_row; ?>][option_value_description][<?php echo $language['language_id']; ?>][name]" value="<?php echo isset($option_value['option_value_description'][$language['language_id']]) ? $option_value['option_value_description'][$language['language_id']]['name'] : ''; ?>" />
+                <img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /><br />
+                <?php if (isset($error_option_value[$option_value_row][$language['language_id']])) { ?>
+                <span class="error"><?php echo $error_option_value[$option_value_row][$language['language_id']]; ?></span>
+                <?php } ?>
+                <?php } ?></td>
+              <td class="left"><div class="image"><img src="<?php echo $option_value['thumb']; ?>" alt="" id="thumb<?php echo $option_value_row; ?>" />
+                  <input type="hidden" name="option_value[<?php echo $option_value_row; ?>][image]" value="<?php echo $option_value['image']; ?>" id="image<?php echo $option_value_row; ?>"  />
+                  <br />
+                  <a onclick="el_uploadSingle('image<?php echo $option_value_row; ?>', 'thumb<?php echo $option_value_row; ?>',<?php echo $option_value_row ?>);"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb<?php echo $option_value_row; ?>').attr('src', '<?php echo $no_image; ?>'); $('#image<?php echo $option_value_row; ?>').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
+              <td class="right"><input class="sortOrder" type="text" name="option_value[<?php echo $option_value_row; ?>][sort_order]" value="<?php echo $option_value['sort_order']; ?>" size="1" /></td>
+              <td class="left"><a onclick="$('#option-value-row<?php echo $option_value_row; ?>').remove();" class="button"><?php echo $button_remove; ?></a></td>
+            </tr>
+          <?php $option_value_row++; ?>
+          <?php } ?>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3"></td>
+              <td class="left"><a onclick="addOptionValue();" class="button"><?php echo $button_add_option_value; ?></a></td>
+            </tr>
+          </tfoot>
+        </table>]]></add>
+        </operation>
+
+	<operation>
+            <search position="before"><![CDATA[<?php echo $footer; ?>]]></search>
+            <add><![CDATA[
+            <script type="text/javascript"><!--
+            
+              function el_upload() {
+	                $('#dialog').remove();	
+	                $('#content').prepend('<div id="dialog" style="padding: 3px 0px 0px 0px;"><iframe src="index.php?route=common/elmanager&token=<?php echo $token; ?>" style="padding:0; margin: 0; display: block; width: 100%; height: 100%;" frameborder="no" scrolling="auto"></iframe></div>');
+	
+	                $('#dialog').dialog({
+		                title: 'File Manager',
+		                close: function (event, ui) {			
+		                },	
+		                bgiframe: false,
+		                width: 800,
+		                height: 600,
+		                resizable: false,
+		                modal: false
+	                });
+                };
+
+                function el_uploadSingle(field,thumb,rows) {
+                    if (arguments.length < 3) {
+                        rows = -1
+                    }
+	                $('#dialog').remove();	
+	                $('#content').prepend('<div id="dialog" style="padding: 3px 0px 0px 0px;"><iframe src="index.php?route=common/elmanager&token=<?php echo $token; ?>&field=' + field + '&thumb=' + thumb + '&rows=' + rows + '" style="padding:0; margin: 0; display: block; width: 100%; height: 100%;" frameborder="no" scrolling="auto"></iframe></div>');
+	
+	                $('#dialog').dialog({
+		                title: 'File Manager',
+		                close: function (event, ui) {			
+		                },	
+		                bgiframe: false,
+		                width: 800,
+		                height: 600,
+		                resizable: false,
+		                modal: false
+	                });
+                };
+
+                var option_value_row = <?php echo $option_value_row; ?>;
+
+                function addImage(imageName) {
+	                html = '<tr class="optionvaluerow" id="option-value-row' + option_value_row + '">';	
+                    html += '<td class="left"><input type="hidden" name="option_value[' + option_value_row + '][option_value_id]" value="" />';
+	                <?php foreach ($languages as $language) { ?>
+	                html += '<input type="text" name="option_value[' + option_value_row + '][option_value_description][<?php echo $language['language_id']; ?>][name]" value="" /> <img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /><br />';
+                    <?php } ?>
+	                html += '</td>';
+                    html += '<td class="left"><div class="image"><img width="100" src="../image/' + imageName + '" alt="' + imageName + '" title="' + imageName + '" id="thumb' + option_value_row + '" /><input type="hidden" name="option_value[' + option_value_row + '][image]" value="' + imageName + '" id="image' + option_value_row + '" /><br /><a onclick="el_uploadSingle(\'image<?php echo $option_value_row; ?>\', \'thumb<?php echo $option_value_row; ?>\',<?php echo $option_value_row ?>);"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$(\'#thumb' + option_value_row + '\').attr(\'src\', \'<?php echo $no_image; ?>\'); $(\'#image' + option_value_row + '\').attr(\'value\', \'\');"><?php echo $text_clear; ?></a></div></td>';
+	                html += '<td class="right"><input class="sortOrder" type="text" name="option_value[' + option_value_row + '][sort_order]" value="' + (option_value_row + 1) + '" size="1" /></td>';
+	                html += '<td class="left"><a onclick="$(\'#option-value-row' + option_value_row + '\').remove();" class="button"><?php echo $button_remove; ?></a></td>';
+	                html += '</tr>';	
+	
+	                $('#option-value tbody').append(html);
+	
+	                option_value_row++;
+                    
+                    $('#option-value').sortable('refresh');
+               };
+
+                    function addSingleImage(imageName, field, thumb, rows) {
+                        $.ajax({
+			                url: 'index.php?route=common/filemanager/image&token=<?php echo $token; ?>&image=' + encodeURIComponent(imageName),
+			                dataType: 'text',
+			                success: function(text) {
+				                $('#' + thumb).replaceWith('<img src="' + text + '" alt="" id="' + thumb + '" />');
+                                if (rows == -1) {
+                                    $('#' + field).replaceWith('<input type="hidden" id="' + field +'" value="' + imageName + '" name="' + field + '">');
+                                } else {
+                                    $('#' + field).replaceWith('<input type="hidden" id="' + field +'" value="' + imageName + '" name="option_value[' + rows + '][image]">');
+                                }
+			                }
+		                });
+          
+                    };
+
+        
+                         $('#option-value').bind('sortupdate', function(event, ui) {
+                            var index = 0;
+                             $('#option-value tbody tr').each(function() {    
+                                index += 1;       
+                                var so = $(this).find('.sortOrder');
+                                so.val(index);
+                             });
+                        });
+        
+                    $(document).ready(function() {
+        
+   
+    
+    
+                        var c = {};
+
+                        $('#option-value tbody').sortable({  items: 'tr.optionvaluerow', 
+                                                   forcePlaceholderSize:true,     
+                                                   cursor: "move", 
+                                                   helper: function(event) {
+	                                                return $('<div class="drag-row"><table></table></div>').find('table').append($(event.target).closest('tr').clone()).end(); },
+                                                   forceHelperSize: true,
+                                                   forcePlaceholderSize: true,
+                                                   scroll: true,
+                                                   scrollSensitivity: 30,
+                                                   scrollSpeed: 30});
+                        
+						$('#option-value tbody').sortable('refresh');
+       
+        
+                    });    
+                //--></script>
+            ]]></add>
+        </operation>
+
+		<operation>
+            <search position="replace" offset="17"><![CDATA[function addOptionValue() {]]></search>
+            <add><![CDATA[
+				function addOptionValue() {
+					html = '<tr class="optionvaluerow" id="option-value-row' + option_value_row + '">';	
+					html += '<td class="left"><input type="hidden" name="option_value[' + option_value_row + '][option_value_id]" value="" />';
+					<?php foreach ($languages as $language) { ?>
+					html += '<input type="text" name="option_value[' + option_value_row + '][option_value_description][<?php echo $language['language_id']; ?>][name]" value="" /> <img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /><br />';
+					<?php } ?>
+					html += '</td>';
+					html += '<td class="left"><div class="image"><img src="<?php echo $no_image; ?>" alt="" id="thumb' + option_value_row + '" /><input type="hidden" name="option_value[' + option_value_row + '][image]" value="" id="image' + option_value_row + '" /><br /><a onclick="el_uploadSingle(\'image<?php echo $option_value_row; ?>\', \'thumb<?php echo $option_value_row; ?>\',<?php echo $option_value_row ?>);"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$(\'#thumb' + option_value_row + '\').attr(\'src\', \'<?php echo $no_image; ?>\'); $(\'#image' + option_value_row + '\').attr(\'value\', \'\');"><?php echo $text_clear; ?></a></div></td>';
+					html += '<td class="right"><input class="sortOrder" type="text" name="option_value[' + option_value_row + '][sort_order]" value="' + (option_value_row + 1) + '" size="1" /></td>';
+					html += '<td class="left"><a onclick="$(\'#option-value-row' + option_value_row + '\').remove();" class="button"><?php echo $button_remove; ?></a></td>';
+					html += '</tr>';	
+					
+					$('#option-value tbody').append(html);
+					
+					option_value_row++;
+
+                    $('#option-value').sortable('refresh');			}
+			]]></add>
+		</operation>
+    </file>
+    <file name="admin/view/template/catalog/product_form.tpl" error="log">
+        <operation>
+            <search position="after"><![CDATA[  <div id="tab-image">]]></search>
+            <add><![CDATA[
+                <div style="padding:6px 0;">
+          <a style="float:right;margin-right:10px;" onclick="el_upload();" class="button">File Manager</a>              
+            <div style="clear:both;">
+                </div>
+        </div>            
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="replace" offset="3"><![CDATA[<td><?php echo $entry_image; ?></td>]]></search>
+            <add><![CDATA[<td><?php echo $entry_image; ?></td>
+                  <td><div class="image"><img src="<?php echo $thumb; ?>" alt="" id="thumb" /><br />
+                  <input type="hidden" name="image" value="<?php echo $image; ?>" id="image" />
+                  <a onclick="el_uploadSingle('image','thumb');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb').attr('src', '<?php echo $no_image; ?>'); $('#image').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="replace" offset="28"><![CDATA[<table id="images" class="list">]]></search>
+            <add><![CDATA[ <table id="images" class="list">
+            <thead>
+              <tr>
+                <td class="left"><?php echo $entry_image; ?></td>
+                <td class="left"><?php echo $entry_filename; ?></td>
+                <td class="right"><?php echo $entry_primary; ?></td>
+                <td class="right"><?php echo $entry_sort_order; ?></td>                
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+            <?php $image_row = 0; ?>
+            
+
+            <?php foreach ($product_images as $product_image) { ?>
+            
+            <?php $image_selected = false; ?>
+            <?php 
+                if($image == $product_image['image'])
+                    $image_selected = true;
+            ?>
+                        
+              <tr class="imagerow" id="image-row<?php echo $image_row; ?>">
+                <td class="left"><div class="image"><img src="<?php echo $product_image['thumb']; ?>" alt="<?php echo $product_image['image']; ?>" title="<?php echo $product_image['image']; ?>" id="thumb<?php echo $image_row; ?>" />
+                    <input type="hidden" name="product_image[<?php echo $image_row; ?>][image]" value="<?php echo $product_image['image']; ?>" id="image<?php echo $image_row; ?>" />
+                    <br /><a onclick="el_uploadSingle('image<?php echo $image_row; ?>','thumb<?php echo $image_row; ?>',<?php echo $image_row; ?>);"><?php echo $text_browse; ?></a>
+                </div></td>
+                <td class="left"><?php echo $product_image['image']; ?></td>
+                <td class="right"><input type="radio" name="primary_product_image" <?php 
+                                                                                        if ($image_selected == true)
+                                                                                         echo 'checked=checked'
+                                                                                    ?>
+                    value="<?php echo $product_image['image']; ?>" /></td>
+                <td class="right"><input class="sortOrder" type="text" name="product_image[<?php echo $image_row; ?>][sort_order]" value="<?php echo $product_image['sort_order']; ?>" size="2" /></td>
+                <td class="left"><a onclick="$('#image-row<?php echo $image_row; ?>').remove();" class="button"><?php echo $button_remove; ?></a></td>
+              </tr>
+            
+            <?php $image_row++; ?>
+            <?php } ?>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3"></td>                
+                <td class="left"><a onclick="el_upload();" class="button">File Manager</a>                                        
+                    </td>
+              </tr>
+            </tfoot>
+          </table>]]></add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[<script type="text/javascript" src="view/javascript/jquery/ui/jquery-ui-timepicker-addon.js"></script> ]]></search>
+            <add><![CDATA[
+            <script type="text/javascript"><!--
+            
+              function el_upload() {
+	$('#dialog').remove();	
+	$('#content').prepend('<div id="dialog" style="padding: 3px 0px 0px 0px;"><iframe src="index.php?route=common/elmanager&token=<?php echo $token; ?>" style="padding:0; margin: 0; display: block; width: 100%; height: 100%;" frameborder="no" scrolling="auto"></iframe></div>');
+	
+	$('#dialog').dialog({
+		title: 'File Manager',
+		close: function (event, ui) {			
+		},	
+		bgiframe: false,
+		width: 800,
+		height: 600,
+		resizable: false,
+		modal: false
+	});
+};
+
+    function el_uploadSingle(field,thumb,rows) {
+    if (arguments.length < 3) {
+        rows = -1
+    }
+	$('#dialog').remove();	
+	$('#content').prepend('<div id="dialog" style="padding: 3px 0px 0px 0px;"><iframe src="index.php?route=common/elmanager&token=<?php echo $token; ?>&field=' + field + '&thumb=' + thumb + '&rows=' + rows + '" style="padding:0; margin: 0; display: block; width: 100%; height: 100%;" frameborder="no" scrolling="auto"></iframe></div>');
+	
+	$('#dialog').dialog({
+		title: 'File Manager',
+		close: function (event, ui) {			
+		},	
+		bgiframe: false,
+		width: 800,
+		height: 600,
+		resizable: false,
+		modal: false
+	});
+};
+
+ var image_row = <?php echo $image_row; ?>;
+    function addImage(imageName) {    
+	html = '  <tr class="imagerow" id="image-row' + image_row + '">';
+	html += '    <td class="left"><div class="image"><img width="100" src="../image/' + imageName + '" alt="' + imageName + '" title="' + imageName + '" id="thumb' + image_row + '" /><input type="hidden" name="product_image[' + image_row + '][image]" value="' + imageName + '" id="image' + image_row + '" /></div></td>';
+    html += '    <td class="left">' + imageName + '</td>';
+    html += '    <td class="right"><input type="radio" name="primary_product_image" value="' + imageName + '" /></td>';
+	html += '    <td class="right"><input class="sortOrder" type="text" name="product_image[' + image_row + '][sort_order]" value="' + (image_row + 1) + '" size="2" /></td>';
+	html += '    <td class="left"><a onclick="$(\'#image-row' + image_row  + '\').remove();" class="button"><?php echo $button_remove; ?></a></td>';
+	html += '  </tr>';	
+	
+	$('#images tbody').append(html);
+	
+	image_row++;
+    
+    $('#images').sortable('refresh');
+};
+
+    function addSingleImage(imageName, field, thumb, rows) {
+        $.ajax({
+			url: 'index.php?route=common/filemanager/image&token=<?php echo $token; ?>&image=' + encodeURIComponent(imageName),
+			dataType: 'text',
+			success: function(text) {
+				$('#' + thumb).replaceWith('<img src="' + text + '" alt="" id="' + thumb + '" />');
+                if (rows == -1) {
+                    $('#' + field).replaceWith('<input type="hidden" id="' + field +'" value="' + imageName + '" name="' + field + '">');
+                } else {
+                    $('#' + field).replaceWith('<input type="hidden" id="' + field +'" value="' + imageName + '" name="product_image[' + rows + '][image]">');
+                }
+			}
+		});
+          
+    };
+
+    $('input[name=primary_product_image]').live("change", function() {
+            $('input[name=image]').val($(this).val());
+        });
+        
+         $('#images').bind('sortupdate', function(event, ui) {
+            var index = 0;
+             $('#images tbody tr').each(function() {    
+                index += 1;       
+                var so = $(this).find('.sortOrder');
+                so.val(index);
+             });
+        });
+        
+    $(document).ready(function() {
+        
+   
+    
+    
+        var c = {};
+
+        $('#images tbody').sortable({  items: 'tr.imagerow', 
+                                   forcePlaceholderSize:true,     
+                                   cursor: "move", 
+                                   helper: function(event) {
+	                                return $('<div class="drag-row"><table></table></div>').find('table').append($(event.target).closest('tr').clone()).end(); },
+                                   forceHelperSize: true,
+                                   forcePlaceholderSize: true,
+                                   scroll: true,
+                                   scrollSensitivity: 30,
+                                   scrollSpeed: 30});
+    
+       
+        
+    });    
+//--></script>
+            ]]></add>
+        </operation>
+    </file>
+    <file name="admin/view/template/design/banner_form.tpl" error="log">
+        <operation>
+            <search position="before"><![CDATA[<table id="images" class="list">]]></search>
+            <add><![CDATA[
+                <div style="padding:6px 0;">
+          <a style="float:right;margin-right:10px;" onclick="el_upload();" class="button">File Manager</a>              
+            <div style="clear:both;">
+                </div>
+        </div>            
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="replace" offset="36"><![CDATA[<table id="images" class="list">]]></search>
+            <add><![CDATA[ <table id="images" class="list">
+				  <thead>
+					<tr>
+					  <td class="left"><?php echo $entry_title; ?></td>
+					  <td class="left"><?php echo $entry_link; ?></td>
+					  <td class="left"><?php echo $entry_image; ?></td>
+					  <td class="right"><?php echo $entry_sort_order; ?></td>
+					  <td></td>
+					</tr>
+				  </thead>
+				  <tbody>
+				  <?php $image_row = 0; ?>
+				  <?php foreach ($banner_images as $banner_image) { ?>
+					<tr class="imagerow" id="image-row<?php echo $image_row; ?>">
+					  <td class="left"><?php foreach ($languages as $language) { ?>
+						<input type="text" name="banner_image[<?php echo $image_row; ?>][banner_image_description][<?php echo $language['language_id']; ?>][title]" value="<?php echo isset($banner_image['banner_image_description'][$language['language_id']]) ? $banner_image['banner_image_description'][$language['language_id']]['title'] : ''; ?>" />
+						<img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /><br />
+						<?php if (isset($error_banner_image[$image_row][$language['language_id']])) { ?>
+						<span class="error"><?php echo $error_banner_image[$image_row][$language['language_id']]; ?></span>
+						<?php } ?>
+						<?php } ?></td>
+					  <td class="left"><input type="text" name="banner_image[<?php echo $image_row; ?>][link]" value="<?php echo $banner_image['link']; ?>" size="50" /></td>
+					  <td class="left"><div class="image"><img src="<?php echo $banner_image['thumb']; ?>" alt="" id="thumb<?php echo $image_row; ?>" />
+						  <input type="hidden" name="banner_image[<?php echo $image_row; ?>][image]" value="<?php echo $banner_image['image']; ?>" id="image<?php echo $image_row; ?>"  />
+						  <br />
+						  <a onclick="el_uploadSingle('image<?php echo $image_row; ?>', 'thumb<?php echo $image_row; ?>',<?php echo $image_row ?>);"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb<?php echo $image_row; ?>').attr('src', '<?php echo $no_image; ?>'); $('#image<?php echo $image_row; ?>').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
+					  <td class="right"><input class="sortOrder" type="text" name="banner_image[<?php echo $image_row; ?>][sort_order]" value="<?php echo $banner_image['sort_order']; ?>" size="2" /></td>
+					  <td class="left"><a onclick="$('#image-row<?php echo $image_row; ?>').remove();" class="button"><?php echo $button_remove; ?></a></td>
+					</tr>
+				  <?php $image_row++; ?>
+				  <?php } ?>
+				  </tbody>
+				  <tfoot>
+					<tr>
+					  <td colspan="3"></td>
+					  <td class="left"><a onclick="el_upload();" class="button">File Manager</a></td>
+					</tr>
+				  </tfoot>
+				</table>
+			]]></add>
+		</operation>
+        <operation>
+            <search position="before"><![CDATA[<?php echo $footer; ?>]]></search>
+            <add><![CDATA[
+            <script type="text/javascript"><!--
+            
+              function el_upload() {
+				$('#dialog').remove();	
+				$('#content').prepend('<div id="dialog" style="padding: 3px 0px 0px 0px;"><iframe src="index.php?route=common/elmanager&token=<?php echo $token; ?>" style="padding:0; margin: 0; display: block; width: 100%; height: 100%;" frameborder="no" scrolling="auto"></iframe></div>');
+				
+				$('#dialog').dialog({
+					title: 'File Manager',
+					close: function (event, ui) {			
+					},	
+					bgiframe: false,
+					width: 800,
+					height: 600,
+					resizable: false,
+					modal: false
+				});
+			};
+
+				function el_uploadSingle(field,thumb,rows) {
+				if (arguments.length < 3) {
+					rows = -1
+				}
+				$('#dialog').remove();	
+				$('#content').prepend('<div id="dialog" style="padding: 3px 0px 0px 0px;"><iframe src="index.php?route=common/elmanager&token=<?php echo $token; ?>&field=' + field + '&thumb=' + thumb + '&rows=' + rows + '" style="padding:0; margin: 0; display: block; width: 100%; height: 100%;" frameborder="no" scrolling="auto"></iframe></div>');
+				
+				$('#dialog').dialog({
+					title: 'File Manager',
+					close: function (event, ui) {			
+					},	
+					bgiframe: false,
+					width: 800,
+					height: 600,
+					resizable: false,
+					modal: false
+				});
+			};
+
+			 var image_row = <?php echo $image_row; ?>;
+				function addImage(imageName) {    
+				html = '  <tr class="imagerow" id="image-row' + image_row + '">';
+				html += '<td class="left">';
+				<?php foreach ($languages as $language) { ?>
+				html += '<input type="text" name="banner_image[' + image_row + '][banner_image_description][<?php echo $language['language_id']; ?>][title]" value="" /> <img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /><br />';
+				<?php } ?>
+				html += '</td>';	
+				html += '<td class="left"><input type="text" name="banner_image[' + image_row + '][link]" value="" size="50" /></td>';	
+				html += '    <td class="left"><div class="image"><img width="100" src="../image/' + imageName + '" alt="' + imageName + '" title="' + imageName + '" id="thumb' + image_row + '" /><input type="hidden" name="banner_image[' + image_row + '][image]" value="' + imageName + '" id="image' + image_row + '" /><br /><a onclick="el_uploadSingle(\'image<?php echo $image_row; ?>\', \'thumb<?php echo $image_row; ?>\',<?php echo $image_row ?>);"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$(\'#thumb' + image_row + '\').attr(\'src\', \'<?php echo $no_image; ?>\'); $(\'#image' + image_row + '\').attr(\'value\', \'\');"><?php echo $text_clear; ?></a></div></td>';
+				html += '    <td class="right"><input class="sortOrder" type="text" name="banner_image[' + image_row + '][sort_order]" value="' + (image_row + 1) + '" size="2" /></td>';
+				html += '    <td class="left"><a onclick="$(\'#image-row' + image_row  + '\').remove();" class="button"><?php echo $button_remove; ?></a></td>';
+				html += '  </tr>';	
+				
+				$('#images tbody').append(html);
+				
+				image_row++;
+				
+				$('#images').sortable('refresh');
+			};
+
+				function addSingleImage(imageName, field, thumb, rows) {
+					$.ajax({
+						url: 'index.php?route=common/filemanager/image&token=<?php echo $token; ?>&image=' + encodeURIComponent(imageName),
+						dataType: 'text',
+						success: function(text) {
+							$('#' + thumb).replaceWith('<img src="' + text + '" alt="" id="' + thumb + '" />');
+							if (rows == -1) {
+								$('#' + field).replaceWith('<input type="hidden" id="' + field +'" value="' + imageName + '" name="' + field + '">');
+							} else {
+								$('#' + field).replaceWith('<input type="hidden" id="' + field +'" value="' + imageName + '" name="banner_image[' + rows + '][image]">');
+							}
+						}
+					});
+					  
+				};
+
+				$('input[name=primary_product_image]').live("change", function() {
+						$('input[name=image]').val($(this).val());
+					});
+					
+					 $('#images').bind('sortupdate', function(event, ui) {
+						var index = 0;
+						 $('#images tbody tr').each(function() {    
+							index += 1;       
+							var so = $(this).find('.sortOrder');
+							so.val(index);
+						 });
+					});
+					
+				$(document).ready(function() {
+					
+			   
+				
+				
+					var c = {};
+
+					$('#images tbody').sortable({  items: 'tr.imagerow', 
+											   forcePlaceholderSize:true,     
+											   cursor: "move", 
+											   helper: function(event) {
+												return $('<div class="drag-row"><table></table></div>').find('table').append($(event.target).closest('tr').clone()).end(); },
+											   forceHelperSize: true,
+											   forcePlaceholderSize: true,
+											   scroll: true,
+											   scrollSensitivity: 30,
+											   scrollSpeed: 30});
+				
+				   
+					
+				});    
+			//--></script>
+            ]]></add>
+        </operation>	
+    </file>
+	<file name="admin/model/design/banner.php" error="log">
+		<operation>
+			<search position="before"><![CDATA[public function getTotalBanners() {]]></search>
+			<add><![CDATA[
+				public function checkTables() {
+				$query = $this->db->query("DESC ".DB_PREFIX."banner_image sort_order");
+				if (!$query->num_rows) {
+						$this->db->query("ALTER TABLE " . DB_PREFIX . "banner_image ADD sort_order int(3);");
+				}
+				}
+			]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[$banner_image_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "banner_image WHERE banner_id = '" . (int)$banner_id . "'");]]></search>
+			<add><![CDATA[
+				$banner_image_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "banner_image WHERE banner_id = '" . (int)$banner_id . "' order by sort_order");
+			]]></add>
+		</operation>
+		<operation>
+			<search position="replace" offset="4"><![CDATA[$banner_image_data[] = array(]]></search>
+			<add><![CDATA[
+				$banner_image_data[] = array(
+				'banner_image_description' => $banner_image_description_data,
+				'link'                     => $banner_image['link'],
+				'image'                    => $banner_image['image'],
+				'sort_order'			   => $banner_image['sort_order']
+			);
+			]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[$this->db->query("INSERT INTO " . DB_PREFIX . "banner_image SET banner_id = '" . (int)$banner_id . "', link = '" .  $this->db->escape($banner_image['link']) . "', image = '" .  $this->db->escape($banner_image['image']) . "'");]]></search>
+			<add><![CDATA[
+				$this->db->query("INSERT INTO " . DB_PREFIX . "banner_image SET banner_id = '" . (int)$banner_id . "', link = '" .  $this->db->escape($banner_image['link']) . "', image = '" .  $this->db->escape($banner_image['image']) . "', sort_order = '" . (int)($this->db->escape($banner_image['sort_order'])) . "'");
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/controller/design/banner.php" error="log">
+		<operation>
+			<search position="after"><![CDATA[$this->load->model('design/banner');]]></search>
+			<add><![CDATA[
+				$this->model_design_banner->checkTables();
+			]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[		$this->data['entry_status'] = $this->language->get('entry_status');]]></search>
+			<add><![CDATA[
+						$this->data['entry_sort_order'] = $this->language->get('entry_sort_order');
+			]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA['thumb'                    => $this->model_tool_image->resize($image, 100, 100)]]></search>
+			<add><![CDATA[
+				'thumb'                    => $this->model_tool_image->resize($image, 100, 100),
+				'sort_order'			   => $banner_image['sort_order']
+			]]></add>
+		</operation>
+		
+	</file>
+	<file name="admin/language/english/design/banner.php" error="log">
+		<operation>
+			<search position="after"><![CDATA[$_['entry_status']       = 'Status:';]]></search>
+			<add><![CDATA[
+				$_['entry_sort_order']       = 'Sort Order:';
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/view/template/catalog/category_form.tpl">
+		<operation>
+			<search position="replace" offset="7"><![CDATA[CKEDITOR.replace('description<?php echo $language['language_id']; ?>', {]]></search>
+			<add><![CDATA[CKEDITOR.replace('description<?php echo $language['language_id']; ?>', {
+	filebrowserBrowseUrl: 'index.php?route=common/elmanager&token=<?php echo $token; ?>',
+	filebrowserImageBrowseUrl: 'index.php?route=common/elmanager&token=<?php echo $token; ?>',
+	filebrowserFlashBrowseUrl: 'index.php?route=common/elmanager&token=<?php echo $token; ?>',
+	filebrowserUploadUrl: 'index.php?route=common/elmanager&token=<?php echo $token; ?>',
+	filebrowserImageUploadUrl: 'index.php?route=common/elmanager&token=<?php echo $token; ?>',
+	filebrowserFlashUploadUrl: 'index.php?route=common/elmanager&token=<?php echo $token; ?>'
+});]]></add>
+		</operation>
+	</file>
+	<file name="admin/view/template/catalog/product_form.tpl">
+		<operation>
+			<search position="replace" offset="7"><![CDATA[CKEDITOR.replace('description<?php echo $language['language_id']; ?>', {]]></search>
+			<add><![CDATA[CKEDITOR.replace('description<?php echo $language['language_id']; ?>', {
+	filebrowserBrowseUrl: 'index.php?route=common/elmanager&token=<?php echo $token; ?>',
+	filebrowserImageBrowseUrl: 'index.php?route=common/elmanager&token=<?php echo $token; ?>',
+	filebrowserFlashBrowseUrl: 'index.php?route=common/elmanager&token=<?php echo $token; ?>',
+	filebrowserUploadUrl: 'index.php?route=common/elmanager&token=<?php echo $token; ?>',
+	filebrowserImageUploadUrl: 'index.php?route=common/elmanager&token=<?php echo $token; ?>',
+	filebrowserFlashUploadUrl: 'index.php?route=common/elmanager&token=<?php echo $token; ?>'
+});]]></add>
+		</operation>
+	</file>
+	<file name="admin/view/template/catalog/information_form.tpl">
+		<operation>
+			<search position="replace" offset="7"><![CDATA[CKEDITOR.replace('description<?php echo $language['language_id']; ?>', {]]></search>
+			<add><![CDATA[CKEDITOR.replace('description<?php echo $language['language_id']; ?>', {
+	filebrowserBrowseUrl: 'index.php?route=common/elmanager&token=<?php echo $token; ?>',
+	filebrowserImageBrowseUrl: 'index.php?route=common/elmanager&token=<?php echo $token; ?>',
+	filebrowserFlashBrowseUrl: 'index.php?route=common/elmanager&token=<?php echo $token; ?>',
+	filebrowserUploadUrl: 'index.php?route=common/elmanager&token=<?php echo $token; ?>',
+	filebrowserImageUploadUrl: 'index.php?route=common/elmanager&token=<?php echo $token; ?>',
+	filebrowserFlashUploadUrl: 'index.php?route=common/elmanager&token=<?php echo $token; ?>'
+});]]></add>
+		</operation>
+	</file>        
+
+</modification>

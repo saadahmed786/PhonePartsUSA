@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>Omtex - Version Control 1521-152,153,1531</id>
+	<version>1.1.2</version>
+	<vqmver>2.0</vqmver>
+	<author>Opcrat Team</author>
+<file name="system/engine/controller.php">
+		<operation>
+			<search position="replace" offset="1"><![CDATA[trigger_error('Error: Could not load template ' . DIR_TEMPLATE . $this->template . '!');]]></search>
+			<add><![CDATA[
+			$file_default = VQMod::modCheck(DIR_DEFAULT_TEMPLATE . $this->template);
+			if (file_exists($file_default)) {
+			extract($this->data);
+			ob_start();
+       		require($file_default);
+       		$this->output = ob_get_contents();
+      		ob_end_clean();
+			return $this->output;
+    		} else {
+			trigger_error('Error: Could not load template ' . DIR_TEMPLATE . $this->template . '!');
+			exit();		
+			}
+			]]></add>
+		</operation>
+</file>
+<file name="catalog/controller/common/footer.php">
+    	<operation>
+			<search position="after" offset="1"><![CDATA[$this->data['newsletter']]]></search>
+			<add><![CDATA[
+     		$this->data['change_device_mode_mobile'] =  $this->config->get('config_change_device_mode_mobile');
+			$this->data['change_device_mode_tablet'] =  $this->config->get('config_change_device_mode_tablet');
+			$this->language->load('common/header');
+			$this->children = array('module/language','module/currency');
+			$this->data['text_nav_info'] = $this->language->get('text_nav_info');
+			$this->data['text_nav_support'] = $this->language->get('text_nav_support');
+			$this->language->load('account/logout');
+			$this->data['text_account'] = $this->language->get('text_account');
+			$this->data['text_logout'] = $this->language->get('text_logout');
+			$this->data['logged'] = $this->customer->isLogged();
+			if(isset($this->request->get['currency_code'])){
+				$this->data['currency_code'] = $this->request->get['currency_code'];
+			}else {
+				$this->data['currency_code'] = '';
+			}
+			if(isset($this->request->get['language_code'])){
+				$this->data['language_code'] = $this->request->get['language_code'];
+			}else {
+				$this->data['language_code'] = '';
+			}
+			]]></add>
+		</operation>
+</file>	
+<file name="catalog/controller/checkout/payment_method.php">
+    	<operation>
+			<search position="after" offset="1"><![CDATA[$this->data['button_continue']]]></search>
+			<add><![CDATA[
+     		$this->language->load('common/header');
+			$this->data['text_i_agree'] = $this->language->get('text_i_agree');
+			]]></add>
+		</operation>
+</file>
+<file name="catalog/controller/checkout/cart.php">
+    <operation>
+      <search position="after">
+        <![CDATA[$this->data['countries'] = $this->model_localisation_country->getCountries();]]>
+      </search>
+      <add>
+        <![CDATA[
+		$this->load->model('localisation/zone');
+   		$this->data['zones'] = $this->model_localisation_zone->getZonesByCountryId($this->data['country_id']);
+		]]>
+      </add>
+    </operation>
+  </file>
+  <file name="catalog/controller/checkout/shipping_address.php">
+    <operation>
+      <search position="after">
+        <![CDATA[$this->data['countries'] = $this->model_localisation_country->getCountries();]]>
+      </search>
+      <add>
+        <![CDATA[
+		$this->load->model('localisation/zone');
+   		$this->data['zones'] = $this->model_localisation_zone->getZonesByCountryId($this->data['country_id']);
+		]]>
+      </add>
+    </operation>
+  </file>
+  <file name="catalog/controller/checkout/payment_address.php">
+    <operation>
+      <search position="after">
+        <![CDATA[$this->data['countries'] = $this->model_localisation_country->getCountries();]]>
+      </search>
+      <add>
+        <![CDATA[
+		$this->load->model('localisation/zone');
+   		$this->data['zones'] = $this->model_localisation_zone->getZonesByCountryId($this->data['country_id']);
+		]]>
+      </add>
+    </operation>
+  </file>	
+</modification>	
+	

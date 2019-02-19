@@ -1,0 +1,196 @@
+﻿<modification>
+	<id>Order Manager</id>
+	<version>3.1</version>
+	<vqmver>2.0</vqmver>
+	<author>www.backonoc.com</author>
+	<file name="admin/model/sale/order.php">
+		<operation>
+			<search position="after"><![CDATA[
+		$order_info = $this->getOrder($order_id);
+			]]></search>
+			<add><![CDATA[
+		if ($this->config->get('config_complete_status_id') == $data['order_status_id']) {
+			if ($order_info['customer_id'] && $order_info['reward']) {
+				$this->load->model('sale/customer');
+
+				$reward_total = $this->model_sale_customer->getTotalCustomerRewardsByOrderId($order_id);
+				
+				if (!$reward_total) {
+					$this->model_sale_customer->addReward($order_info['customer_id'], $this->language->get('text_order_id') . ' #' . $order_id, $order_info['reward'], $order_id);
+				} 
+			}
+			
+			if ($order_info && $order_info['affiliate_id']) {
+				$this->load->model('sale/affiliate');
+				
+				$affiliate_total = $this->model_sale_affiliate->getTotalTransactionsByOrderId($order_id);
+				
+				if (!$affiliate_total) {
+					$this->model_sale_affiliate->addTransaction($order_info['affiliate_id'], $this->language->get('text_order_id') . ' #' . $order_id, $order_info['commission'], $order_id);
+					
+				} 
+			}
+		}
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/controller/sale/order.php">
+		<operation>
+			<search position="after"><![CDATA[public function index() {]]></search>
+			<add><![CDATA[$url = '';
+
+			if (isset($this->request->get['pre_page'])) {
+				$url .= '&pre_page=' . $this->request->get['pre_page'];
+			}
+			
+			if (isset($this->request->get['filter_order_id'])) {
+				$url .= '&filter_order_id=' . $this->request->get['filter_order_id'];
+			}
+			
+			if (isset($this->request->get['filter_invoice_id'])) {
+				$url .= '&filter_invoice_id=' . $this->request->get['filter_invoice_id'];
+			}
+		
+			if (isset($this->request->get['filter_email'])) {
+				$url .= '&filter_email=' . $this->request->get['filter_email'];
+			}
+			
+			if (isset($this->request->get['filter_customer'])) {
+				$url .= '&filter_customer=' . $this->request->get['filter_customer'];
+			}
+												
+			if (isset($this->request->get['filter_order_status_id'])) {
+				$url .= '&filter_order_status_id=' . $this->request->get['filter_order_status_id'];
+			}
+			
+			if (isset($this->request->get['filter_total'])) {
+				$url .= '&filter_total=' . $this->request->get['filter_total'];
+			}
+						
+			if (isset($this->request->get['filter_date_added'])) {
+				$url .= '&filter_date_added=' . $this->request->get['filter_date_added'];
+			}
+			
+			if (isset($this->request->get['filter_date_modified'])) {
+				$url .= '&filter_date_modified=' . $this->request->get['filter_date_modified'];
+			}
+													
+			if (isset($this->request->get['sort'])) {
+				$url .= '&sort=' . $this->request->get['sort'];
+			}
+
+			if (isset($this->request->get['order'])) {
+				$url .= '&order=' . $this->request->get['order'];
+			}
+
+			if (isset($this->request->get['page'])) {
+				$url .= '&page=' . $this->request->get['page'];
+			}
+
+			$this->redirect($this->url->link('sale/manageorder', 'token=' . $this->session->data['token'] . $url, 'SSL'));]]></add>
+		</operation>
+	</file>
+	<file name="admin/controller/localisation/order_status.php">
+		<operation>
+			<search position="after"><![CDATA[
+				$this->data['entry_name'] = $this->language->get('entry_name');
+			]]></search>
+			<add><![CDATA[
+				$this->data['text_comment'] = $this->language->get('text_comment');
+			]]></add>
+		</operation>
+		<operation>
+			<search position="replace" offset="3"><![CDATA[
+				foreach ($this->request->post['order_status'] as $language_id => $value) {
+			]]></search>
+			<add><![CDATA[
+				foreach ($this->request->post['order_status'] as $language_id => $value) {
+      		if ((strlen(utf8_decode($value['name'])) < 3) || (strlen(utf8_decode($value['name'])) > 32)) {
+        		$this->error['name'][$language_id] = $this->language->get('error_name');
+      		}
+			if (strlen(utf8_decode($value['comment'])) < 3) {
+        		$this->error['name'][$language_id] = $this->language->get('error_comment');
+      		}
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/language/english/localisation/order_status.php">
+		<operation>
+			<search position="after"><![CDATA[
+				$_['text_success']     = 'Success: You have modified order statuses!';
+			]]></search>
+			<add><![CDATA[
+				$_['text_comment']     = 'Comment:';
+			]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[
+				$_['column_action']    = 'Action';
+			]]></search>
+			<add><![CDATA[
+				$_['column_comment']   = 'Comment';
+			]]></add>
+		</operation>
+				<operation>
+			<search position="after"><![CDATA[
+				$_['error_name']       = 'Order Status Name must be between 3 and 32 characters!';
+			]]></search>
+			<add><![CDATA[
+				$_['error_comment']    = 'Comment must be more then 3 characters!';
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/view/template/localisation/order_status_form.tpl">
+		<operation>
+			<search position="replace" offset="11"><![CDATA[
+				<table class="form">
+			]]></search>
+			<add><![CDATA[
+				<table class="form">
+          <?php foreach ($languages as $language) { ?>
+		  <tr>
+            <td><span class="required">*</span> <?php echo $entry_name; ?></td>
+            <td>
+              <input type="text" name="order_status[<?php echo $language['language_id']; ?>][name]" value="<?php echo isset($order_status[$language['language_id']]) ? $order_status[$language['language_id']]['name'] : ''; ?>" />
+              <img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /><br />
+              <?php if (isset($error_name[$language['language_id']])) { ?>
+              <span class="error"><?php echo $error_name[$language['language_id']]; ?></span><br />
+              <?php } ?>
+              </td>
+          </tr>
+		  <tr>
+            <td><span class="required">*</span> <?php echo $text_comment; ?></td>
+            <td><textarea name="order_status[<?php echo $language['language_id']; ?>][comment]" cols="40" rows="8" style="width: 99%"><?php echo isset($order_status[$language['language_id']]) ? $order_status[$language['language_id']]['comment'] : ''; ?></textarea>
+          </tr><?php } ?>
+        </table>
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/model/localisation/order_status.php">
+		<operation>
+			<search position="replace"><![CDATA[
+				$this->db->query("INSERT INTO " . DB_PREFIX . "order_status SET order_status_id = '" . (int)$order_status_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "'");
+			]]></search>
+			<add><![CDATA[
+				$this->db->query("INSERT INTO " . DB_PREFIX . "order_status SET order_status_id = '" . (int)$order_status_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', comment = '" . $this->db->escape(strip_tags($value['comment']))  . "'");
+			]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[
+				$this->db->query("INSERT INTO " . DB_PREFIX . "order_status SET language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "'");
+			]]></search>
+			<add><![CDATA[
+				$this->db->query("INSERT INTO " . DB_PREFIX . "order_status SET language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', comment = '" . $this->db->escape(strip_tags($value['comment']))  . "'");
+			]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[
+				$order_status_data[$result['language_id']] = array('name' => $result['name']);
+			]]></search>
+			<add><![CDATA[
+				$order_status_data[$result['language_id']] = array('name' => $result['name'],'comment' => $result['comment']);
+			]]></add>
+		</operation>
+	</file>
+
+</modification>

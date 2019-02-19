@@ -1,0 +1,312 @@
+<modification>
+  <id>Return Types</id>
+  <version>1.0</version>
+  <vqmver>2.1.7</vqmver>
+  <author>Bigpayout Development Team</author>
+
+  <file name="admin/controller/common/header.php">
+    <operation>
+      <search position="before"><![CDATA[
+      $this->template = 'common/header.tpl';
+      ]]></search>
+      <add><![CDATA[
+      // Start Return Types
+      $this->data['text_return_type'] = $this->language->get('text_return_type');
+
+      $this->data['return_type'] = $this->url->link('localisation/return_type', 'token=' . $this->session->data['token'], 'SSL');
+      // End Return Types
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="admin/controller/sale/return.php">
+    <operation>
+      <search position="before"><![CDATA[
+      $this->template = 'sale/return_form.tpl';
+      ]]></search>
+      <add trim="true"><![CDATA[
+      // Start Return Types
+      $this->data['entry_return_type'] = $this->language->get('entry_return_type');
+
+      if (isset($this->request->post['return_type_id'])) {
+        $this->data['return_type_id'] = $this->request->post['return_type_id'];
+      } elseif (!empty($return_info)) {
+        $this->data['return_type_id'] = $return_info['return_type_id'];
+      } else {
+        $this->data['return_type_id'] = '';
+      }
+
+      $this->load->model('localisation/return_type');
+
+      $this->data['return_types'] = $this->model_localisation_return_type->getReturnTypes();
+      // End Return Types
+      ]]></add>
+    </operation>
+    <operation>
+      <search position="before"><![CDATA[
+      $this->template = 'sale/return_info.tpl';
+      ]]></search>
+      <add trim="true"><![CDATA[
+      // Start Return Types
+      $this->data['text_return_type'] = $this->language->get('text_return_type');
+
+      $this->load->model('localisation/return_type');
+
+      $return_type_info = $this->model_localisation_return_type->getReturnType($return_info['return_type_id']);
+
+      if ($return_type_info) {
+        $this->data['return_type'] = $return_type_info['name'];
+      } else {
+        $this->data['return_type'] = '';
+      }
+      // End Return Types
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="admin/language/english/common/header.php">
+    <operation>
+      <search position="bottom" offset="1"><![CDATA[]]></search>
+      <add trim="true"><![CDATA[
+      // Start Return Types
+      $_['text_return_type'] = 'Return Types';
+      // End Return Types
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="admin/language/english/sale/return.php">
+    <operation>
+      <search position="bottom" offset="1"><![CDATA[]]></search>
+      <add trim="true"><![CDATA[
+      // Start Return Types
+      $_['text_return_type']  = 'Return Type:';
+      $_['entry_return_type'] = 'Return Type:';
+      // End Return Types
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="admin/model/sale/return.php">
+    <operation>
+      <search position="replace"><![CDATA[
+      , return_reason_id = '" . (int)$data['return_reason_id'] . "'
+      ]]></search>
+      <add trim="true"><![CDATA[
+      , return_reason_id = '" . (int)$data['return_reason_id'] . "', return_type_id = '" . (int)$data['return_type_id'] . "'
+      ]]></add>
+    </operation>
+    <operation>
+      <search position="bottom" offset="2"><![CDATA[]]></search>
+      <add trim="true"><![CDATA[
+      // Start Return Types
+      public function getTotalReturnsByReturnTypeId($return_type_id) {
+        $query = $this->db->query("SELECT COUNT(*) AS total FROM `" . DB_PREFIX . "return` WHERE return_type_id = '" . (int)$return_type_id . "'");
+
+        return $query->row['total'];
+      }
+
+      public function getTotalReturnHistoriesByReturnTypeId($return_type_id) {
+        $query = $this->db->query("SELECT COUNT(*) AS total FROM `" . DB_PREFIX . "return_history` WHERE return_type_id = '" . (int)$return_type_id . "' GROUP BY return_id");
+
+        return $query->row['total'];
+      }
+      // End Return Types
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="admin/view/template/common/header.tpl">
+    <operation>
+      <search position="after"><![CDATA[
+      <li><a href="<?php echo $return_reason; ?>"><?php echo $text_return_reason; ?></a></li>
+      ]]></search>
+      <add trim="true"><![CDATA[
+      <!-- Start Return Types -->
+      <li><a href="<?php echo $return_type; ?>"><?php echo $text_return_type; ?></a></li>
+      <!-- End Return Types -->
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="admin/view/template/sale/return_form.tpl">
+    <operation>
+      <search position="before" offset="1"><![CDATA[
+      <td><?php echo $entry_reason; ?></td>
+      ]]></search>
+      <add trim="true"><![CDATA[
+      <!-- Start Return Types -->
+      <tr>
+        <td><?php echo $entry_return_type; ?></td>
+        <td><select name="return_type_id">
+            <option value=""></option>
+            <?php foreach ($return_types as $return_type) { ?>
+            <?php if ($return_type['return_type_id'] == $return_type_id) { ?>
+            <option value="<?php echo $return_type['return_type_id']; ?>" selected="selected"><?php echo $return_type['name']; ?></option>
+            <?php } else { ?>
+            <option value="<?php echo $return_type['return_type_id']; ?>"><?php echo $return_type['name']; ?></option>
+            <?php } ?>
+            <?php } ?>
+          </select></td>
+      </tr>
+      <!-- End Return Types -->
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="admin/view/template/sale/return_info.tpl">
+    <operation>
+      <search position="before" offset="1"><![CDATA[
+      <td><?php echo $text_return_reason; ?></td>
+      ]]></search>
+      <add trim="true"><![CDATA[
+      <!-- Start Return Types -->
+      <tr>
+        <td><?php echo $text_return_type; ?></td>
+        <td><?php echo $return_type; ?></td>
+      </tr>
+      <!-- End Return Types -->
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="catalog/controller/account/return.php">
+    <operation>
+      <search position="before"><![CDATA[
+      if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/return_form.tpl')) {
+      ]]></search>
+      <add><![CDATA[
+      // Start Return Types
+      $this->data['entry_type'] = $this->language->get('entry_type');
+
+      if (isset($this->error['type'])) {
+        $this->data['error_type'] = $this->error['type'];
+      } else {
+        $this->data['error_type'] = '';
+      }
+
+      if (isset($this->request->post['return_type_id'])) {
+        $this->data['return_type_id'] = $this->request->post['return_type_id'];
+      } else {
+        $this->data['return_type_id'] = '';
+      }
+
+      $this->load->model('localisation/return_type');
+
+      $this->data['return_types'] = $this->model_localisation_return_type->getReturnTypes();
+      // End Return Types
+      ]]></add>
+    </operation>
+    <operation>
+      <search position="before"><![CDATA[
+      if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/return_info.tpl')) {
+      ]]></search>
+      <add><![CDATA[
+      // Start Return Types
+      $this->data['column_type'] = $this->language->get('column_type');
+
+      $this->data['type'] = $return_info['type'];
+      // End Return Types
+      ]]></add>
+    </operation>
+    <operation>
+      <search position="before"><![CDATA[
+      if (!$this->error) {
+      ]]></search>
+      <add><![CDATA[
+      // Start Return Types
+      if (empty($this->request->post['return_type_id'])) {
+        $this->error['type'] = $this->language->get('error_type');
+      }
+      // End Return Types
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="catalog/language/english/account/return.php">
+    <operation>
+      <search position="bottom" offset="1"><![CDATA[]]></search>
+      <add trim="true"><![CDATA[
+      // Start Return Types
+      $_['column_type'] = 'How To Process';
+      $_['entry_type']  = 'How would you like your return to be processed?';
+      $_['error_type']  = 'You must select how you want your return to be processed!';
+      // End Return Types
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="catalog/model/account/return.php">
+    <operation>
+      <search position="replace"><![CDATA[
+      , return_reason_id = '" . (int)$data['return_reason_id'] . "'
+      ]]></search>
+      <add trim="true"><![CDATA[
+      , return_reason_id = '" . (int)$data['return_reason_id'] . "', return_type_id = '" . (int)$data['return_type_id'] . "'
+      ]]></add>
+    </operation>
+    <operation>
+      <search position="replace"><![CDATA[
+      as reason
+      ]]></search>
+      <add trim="true"><![CDATA[
+      as reason, (SELECT rt.name FROM `" . DB_PREFIX . "return_type` rt WHERE rt.return_type_id = r.return_type_id AND rt.language_id = '" . (int)$this->config->get('config_language_id') . "') AS type
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="catalog/view/theme/*/template/account/return_form.tpl">
+    <operation>
+      <search position="before"><![CDATA[
+      <div class="return-reason">
+      ]]></search>
+      <add trim="true"><![CDATA[
+      <!-- Start Return Types -->
+      <div class="return-type"><span class="required">*</span> <b><?php echo $entry_type; ?></b><br />
+        <table>
+          <?php foreach ($return_types as $return_type) { ?>
+          <?php if ($return_type['return_type_id'] == $return_type_id) { ?>
+          <tr>
+            <td width="1"><input type="radio" name="return_type_id" value="<?php echo $return_type['return_type_id']; ?>" id="return-type-id<?php echo $return_type['return_type_id']; ?>" checked="checked" /></td>
+            <td><label for="return-type-id<?php echo $return_type['return_type_id']; ?>"><?php echo $return_type['name']; ?></label></td>
+          </tr>
+          <?php } else { ?>
+          <tr>
+            <td width="1"><input type="radio" name="return_type_id" value="<?php echo $return_type['return_type_id']; ?>" id="return-type-id<?php echo $return_type['return_type_id']; ?>" /></td>
+            <td><label for="return-type-id<?php echo $return_type['return_type_id']; ?>"><?php echo $return_type['name']; ?></label></td>
+          </tr>
+          <?php  } ?>
+          <?php  } ?>
+        </table>
+        <?php if ($error_type) { ?>
+        <span class="error"><?php echo $error_type; ?></span>
+        <?php } ?>
+      </div>
+      <!-- End Return Types -->
+      ]]></add>
+    </operation>
+  </file>
+
+  <file name="catalog/view/theme/*/template/account/return_info.tpl">
+    <operation>
+      <search position="before"><![CDATA[
+      <td class="left" style="width: 33.3%;"><?php echo $column_reason; ?></td>
+      ]]></search>
+      <add trim="true"><![CDATA[
+      <!-- Start Return Types -->
+      <td class="left" style="width: 33.3%;"><?php echo $column_type; ?></td>
+      <!-- End Return Types -->
+      ]]></add>
+    </operation>
+    <operation>
+      <search position="before"><![CDATA[
+      <td class="left"><?php echo $reason; ?></td>
+      ]]></search>
+      <add trim="true"><![CDATA[
+      <!-- Start Return Types -->
+      <td class="left"><?php echo $type; ?></td>
+      <!-- End Return Types -->
+      ]]></add>
+    </operation>
+  </file>
+</modification>

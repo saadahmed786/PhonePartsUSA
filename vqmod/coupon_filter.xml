@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>Coupon Filter</id>
+	<version>1.0.1</version>
+	<vqmver>2.1.5</vqmver>
+	<author>Jay Gilford - jay@jaygilford.com</author>
+	
+	<file name="system/library/cart.php">
+		<operation>
+			<search position="after"><![CDATA[$product_discount_query =]]></search>
+			<add><![CDATA[				$discount_type = 0; // 0 - None, 1 - Discount, 2 - Special]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[$price = $product_discount_query->row['price'];]]></search>
+			<add><![CDATA[					$discount_type = 1;]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[$price = $product_special_query->row['price'];]]></search>
+			<add><![CDATA[					$discount_type = 2;]]></add>
+		</operation>
+		<operation>
+			<search position="after" regex="true"><![CDATA[~\$(this->|product_)data\[\$key\]~]]></search>
+			<add><![CDATA[        			'discount_type'   => $discount_type,]]></add>
+		</operation>
+	</file>
+    
+	<file name="admin/controller/sale/coupon.php">
+		<operation>
+			<search position="after"><![CDATA[private function getList()]]></search>
+			<add><![CDATA[  		if(empty($this->session->data['coupon_improved_db_check'])) {
+  			$result = $this->db->query("DESCRIBE `" . DB_PREFIX . "coupon`");
+  			if($result->num_rows) {
+  				$done = false;
+  				foreach($result->rows as $row) {
+  					if($row['Field'] == 'filter_special') {
+  						$done = true;
+  						break;
+  					}
+  				}
+  				
+  				if(!$done) {
+  					$queries = array();
+  					$queries[] = <<<END
+ALTER TABLE `%1\$scoupon`
+ADD COLUMN `filter_special`  int NULL DEFAULT 0 AFTER `date_added`,
+ADD COLUMN `filter_discount`  int NULL DEFAULT 0 AFTER `filter_special`,
+ADD COLUMN `filter_category`  int NULL DEFAULT 0 AFTER `filter_discount`,
+ADD COLUMN `filter_manufacturer`  int NULL DEFAULT 0 AFTER `filter_category`;			
+END;
+  					$queries[] = <<<END
+CREATE TABLE `%1\$scoupon_category` (
+  `coupon_category_id` int(11) NOT NULL AUTO_INCREMENT,
+  `coupon_id` int(11) DEFAULT NULL,
+  `category_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`coupon_category_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+END;
+
+  					$queries[] = <<<END
+CREATE TABLE `%1\$scoupon_manufacturer` (
+  `coupon_manufacturer_id` int(11) NOT NULL AUTO_INCREMENT,
+  `coupon_id` int(11) DEFAULT NULL,
+  `manufacturer_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`coupon_manufacturer_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+END;
+					foreach($queries as $sql) {
+						$query = sprintf($sql, DB_PREFIX);
+						$result = $this->db->query($query);
+					}
+  				}
+  			}
+  			$this->session->data['coupon_improved_db_check'] = 1;
+  		}
+		  ]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[$this->data['tab_general']]]></search>
+			<add><![CDATA[		$this->data['tab_extra'] = $this->language->get('tab_extra');
+		$this->data['entry_category_filter'] = $this->language->get('entry_category_filter');
+		$this->data['entry_manufacturer_filter'] = $this->language->get('entry_manufacturer_filter');
+		$this->data['entry_special_filter'] = $this->language->get('entry_special_filter');
+		$this->data['entry_discount_filter'] = $this->language->get('entry_discount_filter');
+		
+		$this->data['text_must_be'] = $this->language->get('text_must_be');
+		$this->data['text_must_not_be'] = $this->language->get('text_must_not_be');
+		]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[if (isset($this->request->post['date_start'])) {]]></search>
+			<add><![CDATA[
+			
+			if(!isset($this->data['categories'])) {
+				$this->load->model('catalog/category');
+				$this->data['categories'] = $this->model_catalog_category->getCategories(0);
+			}
+			
+			$this->load->model('catalog/manufacturer');
+			$this->data['manufacturers'] = $this->model_catalog_manufacturer->getManufacturers();]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[if (isset($this->request->post['name'])) {]]></search>
+			<add><![CDATA[
+		if (isset($this->request->post['filter_special'])) {
+      		$this->data['filter_special'] = $this->request->post['filter_special'];
+    	} elseif (!empty($coupon_info)) {
+			$this->data['filter_special'] = (int) $coupon_info['filter_special'];
+		} else {
+      		$this->data['filter_special'] = 0;
+    	}
+    	
+    	if (isset($this->request->post['filter_discount'])) {
+      		$this->data['filter_discount'] = $this->request->post['filter_discount'];
+    	} elseif (!empty($coupon_info)) {
+			$this->data['filter_discount'] = (int) $coupon_info['filter_discount'];
+		} else {
+      		$this->data['filter_discount'] = 0;
+    	}
+    	
+    	if (isset($this->request->post['filter_category'])) {
+      		$this->data['filter_category'] = $this->request->post['filter_category'];
+    	} elseif (!empty($coupon_info)) {
+			$this->data['filter_category'] = (int) $coupon_info['filter_category'];
+		} else {
+      		$this->data['filter_category'] = 0;
+    	}
+    	
+    	if (isset($this->request->post['filter_manufacturer'])) {
+      		$this->data['filter_manufacturer'] = $this->request->post['filter_manufacturer'];
+    	} elseif (!empty($coupon_info)) {
+			$this->data['filter_manufacturer'] = (int) $coupon_info['filter_manufacturer'];
+		} else {
+      		$this->data['filter_manufacturer'] = 0;
+    	}
+    	
+		if (isset($this->request->post['filter_categories'])) {
+			$this->data['filter_categories'] = $this->request->post['filter_categories'];
+		} elseif (isset($this->request->get['coupon_id'])) {		
+			$this->data['filter_categories'] = $this->model_sale_coupon->getCouponCategories($this->request->get['coupon_id']);
+		} else {
+			$this->data['filter_categories'] = array();
+		}
+    	
+		if (isset($this->request->post['filter_manufacturers'])) {
+			$this->data['filter_manufacturers'] = $this->request->post['filter_manufacturers'];
+		} elseif (isset($this->request->get['coupon_id'])) {		
+			$this->data['filter_manufacturers'] = $this->model_sale_coupon->getCouponManufacturers($this->request->get['coupon_id']);
+		} else {
+			$this->data['filter_manufacturers'] = array();
+		}
+			]]></add>
+		</operation>
+	</file>
+    
+	<file name="admin/language/english/sale/coupon.php">
+		<operation>
+			<search position="before"><![CDATA[// Text]]></search>
+			<add><![CDATA[// Tabs
+$_['tab_extra'] = 'Product Filtering';]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[// Entry]]></search>
+			<add><![CDATA[
+$_['entry_category_filter'] = 'Filter Categories:';
+$_['entry_manufacturer_filter'] = 'Filter Manufacturer:';
+$_['entry_special_filter'] = 'Filter out products on special:';
+$_['entry_discount_filter'] = 'Filter out discounted products:';
+
+
+$_['text_must_be'] = 'Filter out products in the following groups';
+$_['text_must_not_be'] = 'DON\'T filter out products in the following groups';
+]]></add>
+		</operation>
+	</file>
+    
+	<file name="admin/model/sale/coupon.php">
+		<operation>
+			<search position="after"><![CDATA[public function deleteCoupon(]]></search>
+			<add><![CDATA[		$this->db->query("DELETE FROM `" . DB_PREFIX . "coupon_category` WHERE `coupon_id` = '" . (int)$coupon_id . "'");
+		$this->db->query("DELETE FROM `" . DB_PREFIX . "coupon_manufacturer` WHERE `coupon_id` = '" . (int)$coupon_id . "'");]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA["coupon SET name]]></search>
+			<add><![CDATA["coupon SET `filter_special` = '" . (int)$data['filter_special'] . "', `filter_discount` = '" . (int)$data['filter_discount'] . "', `filter_category` = '" . (int)$data['filter_category'] . "', `filter_manufacturer` = '" . (int)$data['filter_manufacturer'] . "', name]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[public function getCouponProducts]]></search>
+			<add><![CDATA[	public function getCouponCategories($coupon_id) {
+		$coupon_product_data = array();
+		
+		$query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "coupon_category` WHERE coupon_id = '" . (int)$coupon_id . "'");
+		
+		foreach ($query->rows as $result) {
+			$coupon_product_data[] = $result['category_id'];
+		}
+		
+		return $coupon_product_data;
+	}
+	
+	public function getCouponManufacturers($coupon_id) {
+		$coupon_product_data = array();
+		
+		$query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "coupon_manufacturer` WHERE coupon_id = '" . (int)$coupon_id . "'");
+		
+		foreach ($query->rows as $result) {
+			$coupon_product_data[] = $result['manufacturer_id'];
+		}
+		
+		return $coupon_product_data;
+	}
+	]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[if (isset($data['coupon_product'])) {]]></search>
+			<add><![CDATA[
+		$this->db->query("DELETE FROM `" . DB_PREFIX . "coupon_category` WHERE `coupon_id` = '" . (int) $coupon_id . "'");
+		$this->db->query("DELETE FROM `" . DB_PREFIX . "coupon_manufacturer` WHERE `coupon_id` = '" . (int) $coupon_id . "'");
+		
+		if(!empty($data['filter_categories'])) {
+			$sql = array();
+			
+			foreach($data['filter_categories'] as $cat) {
+				if((int) $cat) $sql[] = "('" . (int) $cat . "', '" . (int) $coupon_id . "')";
+			}
+			
+			if(!empty($sql)) {
+				$sql = implode(',', $sql);
+				$sql = "INSERT INTO `" . DB_PREFIX . "coupon_category` (`category_id`, `coupon_id`) VALUES " . $sql;
+				$this->db->query($sql);	
+			}
+		}
+		if(!empty($data['filter_manufacturers'])) {
+			$sql = array();
+			
+			foreach($data['filter_manufacturers'] as $man) {
+				if((int) $man) $sql[] = "('" . (int) $man . "', '" . (int) $coupon_id . "')";
+			}
+			
+			if(!empty($sql)) {
+				$sql = implode(',', $sql);
+				$sql = "INSERT INTO `" . DB_PREFIX . "coupon_manufacturer` (`manufacturer_id`, `coupon_id`) VALUES " . $sql;
+				$this->db->query($sql);	
+			}
+		}
+			]]></add>
+		</operation>
+	</file>
+    
+	<file name="admin/view/template/sale/coupon_form.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<?php echo $tab_general; ?>]]></search>
+			<add><![CDATA[<?php echo $tab_general; ?></a><a href="#tab-extra"><?php echo $tab_extra; ?>]]></add>
+		</operation>
+		<operation>
+			<search position="before" offset="1"><![CDATA[id="tab-history"]]></search>
+			<add><![CDATA[
+<div id="tab-extra">
+	<table class="form">
+		<tr>
+			<td><?php echo $entry_category_filter; ?></td>
+			<td>
+				<p>
+					<select name="filter_category">
+						<option value="0"<?php if(empty($filter_category)) echo ' selected="selected"'; ?>><?php echo $text_must_not_be; ?></option>
+						<option value="1"<?php if(!empty($filter_category)) echo ' selected="selected"'; ?>><?php echo $text_must_be; ?></option>
+					</select>
+				</p>
+				<div class="scrollbox">
+<?php $class = 'odd'; ?>
+<?php foreach ($categories as $category) { ?>
+<?php $class = ($class == 'even' ? 'odd' : 'even'); ?>
+							<div class="<?php echo $class; ?>">
+								<input type="checkbox" name="filter_categories[<?php echo $category['category_id']; ?>]" value="<?php echo $category['category_id']; ?>"<?php if(in_array($category['category_id'], $filter_categories)) echo ' checked="checked"'; ?> /> <?php echo $category['name']; ?>
+							</div>
+<?php } ?>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td><?php echo $entry_manufacturer_filter; ?></td>
+			<td>
+				<p>
+					<select name="filter_manufacturer">
+						<option value="0"<?php if(!empty($filter_manufacturer)) echo ' selected="selected"'; ?>><?php echo $text_must_not_be; ?></option>
+						<option value="1"<?php if(!empty($filter_manufacturer)) echo ' selected="selected"'; ?>><?php echo $text_must_be; ?></option>
+					</select>
+				</p>
+				<div class="scrollbox">
+<?php $class = 'odd'; ?>
+<?php foreach ($manufacturers as $manufacturer) { ?>
+<?php $class = ($class == 'even' ? 'odd' : 'even'); ?>
+							<div class="<?php echo $class; ?>">
+								<input type="checkbox" name="filter_manufacturers[<?php echo $manufacturer['manufacturer_id']; ?>]" value="<?php echo $manufacturer['manufacturer_id']; ?>"<?php if(in_array($manufacturer['manufacturer_id'], $filter_manufacturers)) echo ' checked="checked"'; ?> /> <?php echo $manufacturer['name']; ?>
+							</div>
+<?php } ?>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td><?php echo $entry_special_filter; ?></td>
+			<td>
+				<input type="radio" name="filter_special" value="1"<?php if(!empty($filter_special)) echo ' checked="checked"'; ?> /> <?php echo $text_yes; ?>
+				<input type="radio" name="filter_special" value="0"<?php if(empty($filter_special)) echo ' checked="checked"'; ?> /> <?php echo $text_no; ?>
+			</td>
+		</tr>
+		</tr>
+		<tr>
+			<td><?php echo $entry_discount_filter; ?></td>
+			<td>
+				<input type="radio" name="filter_discount" value="1"<?php if(!empty($filter_discount)) echo ' checked="checked"'; ?> /> <?php echo $text_yes; ?>
+				<input type="radio" name="filter_discount" value="0"<?php if(empty($filter_discount)) echo ' checked="checked"'; ?> /> <?php echo $text_no; ?>
+			</td>
+		</tr>
+	</table>
+</div>
+]]></add>
+		</operation>
+	</file>
+    
+	<file name="catalog/model/checkout/coupon.php">
+		<operation>
+			<search position="replace"><![CDATA[< NOW()]]></search>
+			<add><![CDATA[<= DATE(NOW())]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[> NOW()]]></search>
+			<add><![CDATA[>= DATE(NOW())]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[$coupon_product_data = array();]]></search>
+			<add><![CDATA[$coupon_category_data = array();
+				$result = $this->db->query("SELECT DISTINCT `p2c`.`product_id` AS `product_id` FROM `" . DB_PREFIX . "coupon_category` `cc` INNER JOIN `" . DB_PREFIX . "product_to_category` `p2c` ON `p2c`.`category_id` = `cc`.`category_id` WHERE `cc`.`coupon_id` = '" . (int) $coupon_query->row['coupon_id'] . "'");
+				if($result->num_rows) {
+					foreach($result->rows as $row) {
+						$coupon_category_data[$row['product_id']] = (int) $row['product_id'];	
+					}
+				}
+				
+				$coupon_manufacturer_data = array();
+				$result = $this->db->query("SELECT DISTINCT `p`.`product_id` AS `product_id` FROM `" . DB_PREFIX . "coupon_manufacturer` `cm` INNER JOIN `" . DB_PREFIX . "product` `p` ON `p`.`manufacturer_id` = `cm`.`manufacturer_id` WHERE `cm`.`coupon_id` = '" . (int) $coupon_query->row['coupon_id'] . "'");
+				if($result->num_rows) {
+					foreach($result->rows as $row) {
+						$coupon_manufacturer_data[$row['product_id']] = (int) $row['product_id'];	
+					}
+				}
+			]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[return array(]]></search>
+			<add><![CDATA[				'filter_special'        => $coupon_query->row['filter_special'],
+				'filter_discount'       => $coupon_query->row['filter_discount'],
+				'filter_category'       => $coupon_query->row['filter_category'],
+				'filter_manufacturer'   => $coupon_query->row['filter_manufacturer'],
+				'category_products'     => $coupon_category_data,
+				'manufacturer_products' => $coupon_manufacturer_data,
+				]]></add>
+		</operation>
+	</file>
+    
+	<file name="catalog/model/total/coupon.php">
+		<operation>
+			<search position="before"><![CDATA[if ($status) {]]></search>
+			<add><![CDATA[					if($coupon_info['filter_discount']) {
+						if($product['discount_type'] == 1) {
+							$status = false;
+						}
+					}
+					
+					if($coupon_info['filter_special']) {
+						if($product['discount_type'] == 2) {
+							$status = false;
+						}
+					}
+					
+					if(!empty($coupon_info['category_products'])) {
+						if($coupon_info['filter_category']) {
+							if(in_array($product['product_id'], $coupon_info['category_products'])) $status = false;
+						} else {
+							if(!in_array($product['product_id'], $coupon_info['category_products'])) $status = false;
+						}
+					}
+					
+					if(!empty($coupon_info['manufacturer_products'])) {
+						if($coupon_info['filter_manufacturer']) {
+							if(in_array($product['product_id'], $coupon_info['manufacturer_products'])) $status = false;
+						} else {
+							if(!in_array($product['product_id'], $coupon_info['manufacturer_products'])) $status = false;
+						}
+					}
+					]]></add>
+		</operation>
+	</file>
+    
+    <!-- TEMPLATE
+    
+	<file name="">
+		<operation>
+			<search position="after"><![CDATA[]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+	</file>
+    
+    -->
+    
+</modification>
