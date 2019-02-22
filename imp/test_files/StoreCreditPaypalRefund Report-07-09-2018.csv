@@ -1,0 +1,9 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-07-09 12:38:08",Meri,BuyBack,smytelka@yahoo.com,LBB02120/,LBBtmgDPT,813.5000,813.50,,,LBB
+"S Credit","2018-07-09 11:43:55",Meri,BuyBack,nicholashyatt3223@yahoo.com,LBB02153/,LBBTdSgpq,102.0000,102.00,,,LBB
+"S Credit","2018-07-09 10:44:27",meri,POS,lilchrist_mojica01@yahoo.com,553769/PP14062,553769R,14.5900,14.59,APL-001-2408,"Touch Screen Digitizer for Apple iPad Mini 3 - Black (Premium)","(Good For Stock-)"
+"S Credit","2018-07-09 10:43:04",meri,POS,lilchrist_mojica01@yahoo.com,540528-1/,540528-1R,19.9900,19.99,BTE710001,"BinTEK Temperature Adjustable Heat Gun","(Issue Replacement)"
+"S Credit","2018-07-09 04:23:35",Meri,BuyBack,dillonvideo@msn.com,LBB02144/,LBBW9cxkb,102.7500,102.75,,,LBB
+Refund,"2018-07-09 15:30:06",Meri,Order,admin@blitz-pc.com,"554158 /Cancelled Order",4W107033JA571690H,176.06,N/A,N/A,N/A,"Customer Cancel"
+Refund,"2018-07-09 10:20:07",,Order,ultimatewirelessstore@gmail.com,554102,2599330064325334G,142.99,N/A,N/A,N/A,"Cancelled Order"
+Refund,"2018-07-09 09:10:05",Meri,Order,plei_ku7@yahoo.com,"554087 /Cancelled Order",2CK90889L83607610,20.87,N/A,N/A,N/A,"Customer Cancel"

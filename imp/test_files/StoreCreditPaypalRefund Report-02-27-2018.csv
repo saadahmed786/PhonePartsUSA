@@ -1,0 +1,12 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-02-27 15:34:47",Billy,Order,ted@mrphix.com,544417/,544417-RP1,29.7000,29.70,ACC-ZED-831,"iPhone X Tempered Glass Screen Protector with Cleaning Kit","Out Of Stock"
+"S Credit","2018-02-27 14:55:39",billy,POS,societyrepairs@gmail.com,544337-1/,544337-1R,23.9900,23.99,APL-001-2371,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-02-27 14:42:51",Billy,Manual,simpletechny@outlook.com,N/A/,544338GRD,24.8000,,,,"Warehouse - Lower Grade Item"
+"S Credit","2018-02-27 12:30:15",Billy,Manual,mark@phoneaxiom.com,N/A/,544370SH,18.0000,,,,"Delivery - Other Delivery Related"
+"S Credit","2018-02-27 11:59:00",meri,POS,veroromirodri@gmail.com,544301/PP13020,544301R,18.3900,16.99,APL-001-2116,"LCD and Touch Screen Digitizer for iPhone 6 Plus - Black (Economy Plus) ","(Good For Stock-)"
+"S Credit","2018-02-27 10:35:31",meri,POS,davalosls8@yahoo.com,543292-1/,543292-1R,23.9900,23.99,APL-001-2371,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","(Issue Replacement)"
+Refund,"2018-02-27 17:00:16",Billy,Order,Supergirl1@protonmail.com,"544393 /Cancelled Order",77W78931P69271049,34.98,N/A,N/A,N/A,"Possible Fraud"
+Refund,"2018-02-27 17:00:11",Billy,Order,ldgrubio@gmail.com,"544390 /Cancelled Order",8US99396NF764484T,68.98,N/A,N/A,N/A,"Possible Fraud"
+Refund,"2018-02-27 12:40:06",Billy,Order,cellphone_clinic@yahoo.com,542245,79V10996H8785581M,192.99,192.9900,SRN-SAM-1615,"LCD and Touch Screen Digitizer for Samsung Galaxy S7 Edge - Gold Platinum (Standard) ",-
+Refund,"2018-02-27 10:30:12",,Order,BWadsworth@mmelectricinc.net,544408,4EX027009F642590K,60.61,N/A,N/A,N/A,"Cancelled Order"
+Refund,"2018-02-27 10:20:07",Billy,Order,jpkk1407@gmail.com,"544374 /Cancelled Order",3VC65233UV374051G,160.98,N/A,N/A,N/A,"Customer Cancel"

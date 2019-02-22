@@ -1,0 +1,13 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-02-01 14:50:35",meri,POS,galaxycprlv@gmail.com,542202/PP12809,542202R,18.9900,"   18.9900"," SRN-HTC-1148","  LCD and Touch Screen Digitizer for HTC Desire 626","Good For Stock-"
+"S Credit","2018-02-01 12:03:40",meri,POS,galaxycprlv@gmail.com,540833/PP12807,540833R,5.5900,"   5.5900"," FLX-SAM-1443","  Charging Port Flex Cable for Samsung Galaxy S6 G920T","Item Issue-"
+"S Credit","2018-02-01 11:38:07",Billy,Manual,raulordunacelumania@gmail.com,N/A/,542127-OV,2.0100,,,,"Over Payment Credit"
+"S Credit","2018-02-01 11:02:42",meri,POS,Phoneninjass@icloud.com,541260-1/,541260-1R,14.8900,14.89,APL-001-2309,"LCD and Touch Screen Digitizer for iPhone 6 - White (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-02-01 10:16:50",meri,POS,HuyNguyen201090@gmail.com,542111/PP12803,542111R,10.9900,"   10.9900"," APL-001-0728","  LCD and Touch Screen Digitizer for iPhone 5S - White (Economy Plus)","Good For Stock-"
+"S Credit","2018-02-01 02:08:45",Billy,RMA,supercutler@yahoo.com,538753/PP12649,PP12649R,18.4700,8.99,BT-BP-30192,"BinTEK Battery for iPhone 6S 1715mAH Li-Po Premium ","(Good For Stock-)"
+"S Credit","2018-02-01 02:08:45",Billy,RMA,supercutler@yahoo.com,538753/PP12649,PP12649R,18.4700,4.49,APL-003-1573,"Charging Port and Headphone Jack Flex Cable for iPhone 6s  Gray","(Good For Stock-)"
+"S Credit","2018-02-01 02:08:45",Billy,RMA,supercutler@yahoo.com,538753/PP12649,PP12649R,18.4700,4.99,APL-003-1589,"Charging Port and Headphone Jack Flex Cable for iPhone 6s Plus  White","(Good For Stock-)"
+Refund,"2018-02-01 16:50:11",Billy,Order,amanoisaac@gmail.com,"542101 /Cancelled Order",4F504687E51935918,50.98,N/A,N/A,N/A,"Possible Fraud"
+Refund,"2018-02-01 16:50:08",Billy,Order,seanghbird@gmail.com,"542142 /Cancelled Order",40B93035A4583971U,77.37,N/A,N/A,N/A,"Possible Fraud"
+Refund,"2018-02-01 15:20:10",Billy,Order,Rexx7726@gmail.com,"542167 /Cancelled Order",53V09639FB481231M,15.94,N/A,N/A,N/A,"Out of Stock"
+Refund,"2018-02-01 10:30:04",Billy,Order,xavsbud@gmail.com,"538672 /Cancelled Order",19V03229H0169013X,20.98,N/A,N/A,N/A,"Customer Cancel"

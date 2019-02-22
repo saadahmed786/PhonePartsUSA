@@ -1,0 +1,16 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2017-12-26 16:56:45",Billy,Order,sqatester758@gmail.com,539030/,539030-CO1,42.0800,17.49,APL-001-2136,"LCD Touch Screen Digitizer for iPhone 6 Plus - White (Economy Plus) ",
+"S Credit","2017-12-26 16:56:45",Billy,Order,sqatester758@gmail.com,539030/,539030-CO1,42.0800,17.49,APL-001-2116,"LCD Touch Screen Digitizer for iPhone 6 Plus - Black (Economy Plus) ",
+"S Credit","2017-12-26 16:56:45",Billy,Order,sqatester758@gmail.com,539030/,539030-CO1,42.0800,3.89,APL-003-1517,"Front Camera with Proximity Sensor Microphone Module Flex Cable for iPhone 6 Plus",
+"S Credit","2017-12-26 14:20:56",meri,POS,tomerall4you@gmail.com,538906/PP12524,538906R,14.9900,"   14.9900"," APL-001-2201","  Touch Screen Digitizer With Home Button for iPad Air/iPad 5 - White (Premium)","Good For Stock-"
+"S Credit","2017-12-26 14:19:40",meri,POS,tomerall4you@gmail.com,538906-1/,538906-1R,21.3900,21.39,APL-001-2298,"LCD and Touch Screen Digitizer for iPhone 6S - Black (Economy Plus) ","(Issue Replacement)"
+"S Credit","2017-12-26 14:18:48",meri,POS,tomerall4you@gmail.com,535104/PP12522,535104R-A4,6.9900,"   6.9900"," BT-BP-30008","  BinTEK™ Battery for iPhone 5S/5C 1560mAH Li-Ion Premium ","Item Issue-"
+"S Credit","2017-12-26 13:05:34",meri,POS,jim@static18inc.com,539062/PP12519,539062R,249.9800,"   124.9900"," APL-001-2327","  LCD and Touch Screen Digitizer for iPad Pro 12.9 - Black (Standard)","Good For Stock-"
+"S Credit","2017-12-26 13:05:34",meri,POS,jim@static18inc.com,539062/PP12519,539062R,249.9800,"   124.9900"," APL-001-2327","  LCD and Touch Screen Digitizer for iPad Pro 12.9 - Black (Standard)","Good For Stock-"
+"S Credit","2017-12-26 12:37:30",saad,BuyBack,munozventura@yahoo.com,LBB01865/,LBBaFDfGf,25.5000,25.50,,,LBB
+"S Credit","2017-12-26 04:50:04",saad,BuyBack,societyrepairs@gmail.com,LBB01873/,LBBUL5cbO,0.0000,0.00,,,LBB
+"S Credit","2017-12-26 04:49:40",saad,BuyBack,societyrepairs@gmail.com,LBB01872/,LBBwuZLUT,0.0000,0.00,,,LBB
+"S Credit","2017-12-26 01:39:01",saad,BuyBack,Phoneninjass@icloud.com,LBB01871/,LBBkBoT2T,9.0000,9.00,,,LBB
+Refund,"2017-12-26 11:10:07",Billy,Order,mydreamway77@gmail.com,"538967 /Cancelled Order",8W769755EE6331712,261.98,N/A,N/A,N/A,"Possible Fraud"
+Refund,"2017-12-26 11:00:05",Manual,Manual,Mathewshaw76211@gmail.com,,7N356033X2526952L,139.98,N/A,N/A,N/A,"Manually Refunded"
+Refund,"2017-12-26 10:20:05",Manual,Manual,megadeals47@gmail.com,,3H977001YG224122G,91.02,N/A,N/A,N/A,"Manually Refunded"

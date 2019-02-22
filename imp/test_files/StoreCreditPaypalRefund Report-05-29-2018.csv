@@ -1,0 +1,11 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-05-29 16:40:52",Meri,Manual,tomerall4you@gmail.com,N/A/,MOBO52918,45.0000,,,,"Purchase of Goods"
+"S Credit","2018-05-29 16:21:24",Billy,Manual,cellrepair@lynnsaudiovideo.com,N/A/,551427SH,6.9900,,,,"Shipping Charge - Combined Order Compensation"
+"S Credit","2018-05-29 15:02:07",Billy,Order,mobrepairworld@gmail.com,551405/,551405-RP1,15.9900,15.99,APL-001-2202,"Touch Screen Digitizer with Home Button And IC Chip for iPad Mini & iPad Mini 2 - Black (Premium)","Out Of Stock"
+"S Credit","2018-05-29 13:57:58",meri,POS,societyrepairs@gmail.com,551195/PP13787,551195R,10.8100,9.99,BT-BP-30196,"BinTEK Battery for iPhone 6S Plus 2750mAH Li-Po Premium ","(Good For Stock-)"
+"S Credit","2018-05-29 12:57:12",meri,POS,techtimecomputerselectronics@gmail.com,547065/PP13783,547065R-Ea,35.6000,32.89,APL-001-0504,"LCD Screen for iPad 3 4","(Good For Stock-)"
+"S Credit","2018-05-29 12:43:42",meri,POS,lasvegasgadgets@gmail.com,551263-1/,551263-1R,14.2900,14.29,APL-001-2308,"LCD and Touch Screen Digitizer for iPhone 6 - Black (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-05-29 11:31:47",meri,POS,iphonerepairslv@gmail.com,550375/PP13781,550375R,19.9900,19.99,APL-001-2379,"LCD and Touch Screen Digitizer for iPhone 8 - Black (Economy Plus)","(Item Issue-)"
+"S Credit","2018-05-29 11:29:21",meri,POS,iphonerepairslv@gmail.com,550988-1/,550988-1R,19.9900,19.99,APL-001-2369,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-05-29 09:02:13",Meri,Manual,sample@phonepartsusa.com,N/A/,548857SM,241.8000,,,,"Marketing Samples"
+Refund,"2018-05-29 11:00:08",Billy,Order,Katherine4@gmail.com,"551339 /Cancelled Order",823050126C399911L,123.88,N/A,N/A,N/A,"Possible Fraud"

@@ -1,0 +1,17 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-01-08 14:26:58",Billy,Order,test_order@yopmail.com,540160/,540160-CO1,4.8500,2.99,ACC-ZED-790,"Samsung Galaxy Series 2.0A Wall Charger (Premium)",
+"S Credit","2018-01-08 14:26:58",Billy,Order,test_order@yopmail.com,540160/,540160-CO1,4.8500,1.49,ACC-ZED-042,"Universal Gold Plated Auxiliary AUX Audio Cable - 3 Feet Long",
+"S Credit","2018-01-08 14:26:50",Billy,Order,test_order@yopmail.com,540158/,540158-CO1,3.2800,1.49,ACC-ZED-102,"Wall Charger for iPod, iPad, iPhone Models (Standard)",
+"S Credit","2018-01-08 14:26:50",Billy,Order,test_order@yopmail.com,540158/,540158-CO1,3.2800,1.79,ACC-ZED-138,"8-Pin Data Cable for iPhone 5 5S 5C 6 6+ 7 7 Plus 8 8 Plus iPad 4 Mini 1 2 Air Pro (Standard)",
+"S Credit","2018-01-08 13:18:13",meri,POS,tomerall4you@gmail.com,539188-1/,539188-1R,21.3900,21.39,APL-001-2299,"LCD and Touch Screen Digitizer for iPhone 6S - White (Economy Plus) ","(Issue Replacement)"
+"S Credit","2018-01-08 12:13:12",meri,POS,jesse_quezada2014@yahoo.com,539717/PP12618,539717R,48.5800,"   22.9900"," APL-001-2370","  LCD and Touch Screen Digitizer for iPhone 7 - White (Economy Plus)","Item Issue-"
+"S Credit","2018-01-08 12:13:12",meri,POS,jesse_quezada2014@yahoo.com,539717/PP12618,539717R,48.5800,"   21.8900"," APL-001-2310","  LCD and Touch Screen Digitizer for iPhone 6S Plus - White (Economy Plus)","Item Issue-"
+"S Credit","2018-01-08 11:35:57",Billy,Manual,cdye15@gmail.com,N/A/,PP12514R2,6.9900,,,,"RMA - Replacement Shipping Cost"
+"S Credit","2018-01-08 11:17:35",Billy,Manual,fars.1400@gmail.com,N/A/,PP12513R2,6.9900,,,,"RMA - Replacement Shipping Cost"
+"S Credit","2018-01-08 09:38:50",Billy,RMA,austin@renophonerepair.com,534260/PP12585,PP12585R,201.9900,201.99,SRN-SAM-1616,"LCD and Touch Screen Digitizer for Samsung Galaxy S7 Edge - Silver (Standard) ","(Good For Stock-)"
+"S Credit","2018-01-08 04:51:48",saad,BuyBack,z_oatman@yahoo.com,LBB01897/,LBBZ0oLmu,21.0000,21.00,,,LBB
+"S Credit","2018-01-08 02:51:16",saad,BuyBack,societyrepairs@gmail.com,LBB01883/,LBBhj6eGj,20.0000,20.00,,,LBB
+"S Credit","2018-01-08 02:50:44",saad,BuyBack,Payandgorepair@gmail.com,LBB01877/,LBBVF282p,229.0000,229.00,,,LBB
+Refund,"2018-01-08 14:10:06",Manual,Manual,anderson.spencer88@protonmail.com,,7HC53609RE694631L,444.81,N/A,N/A,N/A,"Manually Refunded"
+Refund,"2018-01-08 11:00:12",Billy,Order,isaac@kellerpcs.com,"540049 /Cancelled Order",74K821738F2241231,132.47,N/A,N/A,N/A,"Customer Cancel"
+Refund,"2018-01-08 11:00:05",Billy,Order,nikhilnikl464@gmail.com,"540025 /Cancelled Order",4JM91239VS687720R,85.97,N/A,N/A,N/A,"Customer Cancel"

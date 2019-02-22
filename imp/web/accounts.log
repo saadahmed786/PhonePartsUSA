@@ -1,0 +1,4 @@
+Data: {"description":"8989 Applied @ Order # 566347","credit":0,"debit":"-1.4500","order_id":"566347","type":"store_credit","contra_account_code":"store_credit_issued","date_added":"2019-01-11 14:30:17"}
+Data: {"description":"8989 Applied @ Order # 566347","debit":0,"credit":"-1.4500","order_id":"566347","type":"store_credit_issued","contra_account_code":"store_credit","date_added":"2019-01-11 14:30:17"}
+Data: {"description":"8989 Applied @ Order # 566347","credit":0,"debit":"-1.4500","order_id":"566347","type":"store_credit","contra_account_code":"store_credit_issued","date_added":"2019-01-11 14:30:17"}
+Data: {"description":"8989 Applied @ Order # 566347","debit":0,"credit":"-1.4500","order_id":"566347","type":"store_credit_issued","contra_account_code":"store_credit","date_added":"2019-01-11 14:30:17"}

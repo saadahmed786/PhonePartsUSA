@@ -1,0 +1,84 @@
+[11-Jan-2019 14:51:44 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'e', expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/phonerep/public_html/imp/inc/functions.php on line 2958
+[11-Jan-2019 15:01:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ' = $db-' in /home/phonerep/public_html/imp/inc/functions.php on line 3670
+[14-Jan-2019 07:36:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''net' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /home/phonerep/public_html/imp/inc/functions.php on line 3968
+[14-Jan-2019 11:18:39 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/viewOrderDetail.php on line 2516
+[14-Jan-2019 11:31:15 America/Chicago] PHP Parse error:  syntax error, unexpected 'x' in /home/phonerep/public_html/imp/viewOrderDetail.php on line 1682
+[14-Jan-2019 11:31:16 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/viewOrderDetail.php on line 2375
+[14-Jan-2019 11:32:15 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/viewOrderDetail.php on line 876
+[14-Jan-2019 11:32:16 America/Chicago] PHP Parse error:  syntax error, unexpected end of file, expecting ',' or ';' in /home/phonerep/public_html/imp/viewOrderDetail.php on line 1328
+[14-Jan-2019 11:32:23 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/viewOrderDetail.php on line 3842
+[14-Jan-2019 11:17:04 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/inc/functions.php on line 1124
+[14-Jan-2019 11:17:04 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/inc/functions.php on line 1124
+[14-Jan-2019 11:17:04 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/inc/functions.php on line 1124
+[14-Jan-2019 11:17:04 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/inc/functions.php on line 1124
+[14-Jan-2019 11:17:04 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/inc/functions.php on line 1124
+[14-Jan-2019 11:17:04 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/inc/functions.php on line 1859
+[14-Jan-2019 11:56:16 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/inc/functions.php on line 420
+[14-Jan-2019 11:56:21 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/inc/functions.php on line 3442
+[15-Jan-2019 10:29:32 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/inc/functions.php on line 218
+[15-Jan-2019 10:29:35 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''email'])), '@marketplace.amaz' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /home/phonerep/public_html/imp/inc/functions.php on line 2744
+[15-Jan-2019 10:29:35 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ' = false;' in /home/phonerep/public_html/imp/inc/functions.php on line 3611
+[15-Jan-2019 12:45:13 America/Chicago] PHP Parse error:  syntax error, unexpected '[' in /home/phonerep/public_html/imp/trial_balance.php on line 123
+[15-Jan-2019 14:37:20 America/Los_Angeles] PHP Fatal error:  Call to undefined function page_permission() in /home/phonerep/public_html/imp/devices_new.php on line 5
+[15-Jan-2019 14:46:53 America/Los_Angeles] PHP Fatal error:  Call to a member function display_count() on a non-object in /home/phonerep/public_html/imp/inventory_movement_report.php on line 394
+[17-Jan-2019 09:57:57 America/Los_Angeles] PHP Fatal error:  Call to a member function display_count() on a non-object in /home/phonerep/public_html/imp/inventory_movement_report.php on line 394
+[17-Jan-2019 10:02:14 America/Los_Angeles] PHP Fatal error:  Call to a member function display_count() on a non-object in /home/phonerep/public_html/imp/inventory_movement_report.php on line 394
+[17-Jan-2019 14:25:37 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/inc/header.php on line 891
+[17-Jan-2019 14:25:38 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/inc/header.php on line 1313
+[18-Jan-2019 09:11:39 America/Los_Angeles] PHP Fatal error:  Call to a member function display_count() on a non-object in /home/phonerep/public_html/imp/inventory_movement_report.php on line 394
+[18-Jan-2019 10:09:23 America/Los_Angeles] PHP Fatal error:  Call to a member function display_count() on a non-object in /home/phonerep/public_html/imp/inventory_movement_report.php on line 394
+[18-Jan-2019 11:52:07 America/Los_Angeles] PHP Fatal error:  Call to undefined function getInventoryDetail() in /home/phonerep/public_html/imp/product.php on line 920
+[18-Jan-2019 11:52:08 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/inc/functions.php on line 178
+[18-Jan-2019 11:52:10 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/inc/functions.php on line 3610
+[22-Jan-2019 13:32:49 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/purchasing_metrics.php on line 351
+[23-Jan-2019 09:29:15 America/Los_Angeles] PHP Fatal error:  Call to a member function display_count() on a non-object in /home/phonerep/public_html/imp/inventory_movement_report.php on line 394
+[23-Jan-2019 11:02:07 America/Los_Angeles] PHP Fatal error:  Call to a member function display_count() on a non-object in /home/phonerep/public_html/imp/inventory_movement_report.php on line 394
+[23-Jan-2019 16:27:35 America/Los_Angeles] PHP Fatal error:  Call to a member function display_count() on a non-object in /home/phonerep/public_html/imp/inventory_movement_report.php on line 394
+[24-Jan-2019 13:46:20 America/Los_Angeles] PHP Fatal error:  Call to a member function display_count() on a non-object in /home/phonerep/public_html/imp/inventory_movement_report.php on line 394
+[25-Jan-2019 09:50:52 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/inc/header.php on line 517
+[25-Jan-2019 09:54:19 America/Los_Angeles] PHP Fatal error:  Unsupported operand types in /home/phonerep/public_html/imp/viewOrderDetail.php on line 3181
+[25-Jan-2019 09:55:03 America/Los_Angeles] PHP Fatal error:  Unsupported operand types in /home/phonerep/public_html/imp/viewOrderDetail.php on line 3181
+[25-Jan-2019 12:03:14 America/Chicago] PHP Parse error:  syntax error, unexpected ''payment_detail_2']!=$order['p' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /home/phonerep/public_html/imp/viewOrderDetail.php on line 2036
+[28-Jan-2019 11:06:25 America/Los_Angeles] PHP Fatal error:  Call to a member function display_count() on a non-object in /home/phonerep/public_html/imp/inventory_movement_report.php on line 394
+[30-Jan-2019 11:03:30 America/Los_Angeles] PHP Fatal error:  Call to a member function display_count() on a non-object in /home/phonerep/public_html/imp/inventory_movement_report.php on line 394
+[30-Jan-2019 11:19:08 America/Los_Angeles] PHP Fatal error:  Call to a member function display_count() on a non-object in /home/phonerep/public_html/imp/inventory_movement_report.php on line 394
+[05-Feb-2019 12:43:47 America/Chicago] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/phonerep/public_html/imp/conversion_report_new.php on line 151
+[05-Feb-2019 12:43:48 America/Chicago] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/phonerep/public_html/imp/conversion_report_new.php on line 151
+[05-Feb-2019 12:43:53 America/Chicago] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/phonerep/public_html/imp/conversion_report_new.php on line 151
+[11-Feb-2019 02:17:06 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/sales_related_report.php on line 445
+[11-Feb-2019 02:50:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:50:05 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:51:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:51:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:52:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:52:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:53:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:53:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:54:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:54:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:55:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:55:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:56:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:56:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:57:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:57:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:58:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:58:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:59:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:59:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:00:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:00:03 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:00:08 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:01:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:01:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:02:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:02:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:03:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:03:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:04:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:04:03 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 06:25:15 America/Chicago] PHP Parse error:  syntax error, unexpected ' ' in /home/phonerep/public_html/imp/customers.php on line 958
+[11-Feb-2019 13:22:34 America/Los_Angeles] PHP Fatal error:  Call to a member function display_count() on a non-object in /home/phonerep/public_html/imp/inventory_movement_report.php on line 394
+[11-Feb-2019 18:53:45 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/sales_dashboard_new.php on line 2547
+[12-Feb-2019 13:03:07 America/Los_Angeles] PHP Fatal error:  Call to a member function display_count() on a non-object in /home/phonerep/public_html/imp/inventory_movement_report.php on line 394
+[12-Feb-2019 14:30:26 America/Los_Angeles] PHP Fatal error:  Call to a member function display_count() on a non-object in /home/phonerep/public_html/imp/inventory_movement_report.php on line 394

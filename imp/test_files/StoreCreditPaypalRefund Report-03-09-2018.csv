@@ -1,0 +1,15 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-03-09 16:55:14",Billy,Manual,medinasenda@hotmail.com,N/A/,545405-BF,5.0000,,,,"Payment - Taxes Paid"
+"S Credit","2018-03-09 16:00:41",Billy,Order,test_order@yopmail.com,545357/,545357-CO1,7.1100,1.79,ACC-ZED-138,"8-Pin Data Cable for iPhone 5 5S 5C 6 6 Plus 7 7 Plus 8 8 Plus X iPad 4 Mini 1 2 Air Pro (Standard)",
+"S Credit","2018-03-09 16:00:41",Billy,Order,test_order@yopmail.com,545357/,545357-CO1,7.1100,2.99,ACC-ZED-488,"iPhone 5 and 6 Series Headphones (Aftermarket)",
+"S Credit","2018-03-09 16:00:41",Billy,Order,test_order@yopmail.com,545357/,545357-CO1,7.1100,1.79,ACC-ZED-102,"Wall Charger for iPod, iPad, iPhone Models (Standard)",
+"S Credit","2018-03-09 16:00:26",Billy,Order,test_order@yopmail.com,545353/,545353-CO1,11.4300,3.99,ACC-ZED-642,"Octopus Tripod with Flexible Legs & Adjustable Holder 9 Inches - Black / White",
+"S Credit","2018-03-09 16:00:26",Billy,Order,test_order@yopmail.com,545353/,545353-CO1,11.4300,2.99,ACC-ZED-488,"iPhone 5 and 6 Series Headphones (Aftermarket)",
+"S Credit","2018-03-09 16:00:26",Billy,Order,test_order@yopmail.com,545353/,545353-CO1,11.4300,1.79,ACC-ZED-102,"Wall Charger for iPod, iPad, iPhone Models (Standard)",
+"S Credit","2018-03-09 16:00:26",Billy,Order,test_order@yopmail.com,545353/,545353-CO1,11.4300,1.79,ACC-ZED-138,"8-Pin Data Cable for iPhone 5 5S 5C 6 6 Plus 7 7 Plus 8 8 Plus X iPad 4 Mini 1 2 Air Pro (Standard)",
+"S Credit","2018-03-09 14:18:06",meri,POS,Stuart.L.Merrill@gmail.com,545274/PP13137,545274R,2.7000,2.49,FLX-SAM-1378,"Microphone Flex Cable for Samsung Galaxy Note 5","(Good For Stock-)"
+"S Credit","2018-03-09 12:33:49",Billy,RMA,mobileman@cellvationrepairs.com,545002/PP13130,PP13130R,3.8900,3.89,BTY-COV-1694,"Rear Battery Cover for Samsung Galaxy S6 - Gold Platinum (Standard)","(Not Tested-)"
+Refund,"2018-03-09 16:30:08",Billy,Order,hafifivot@gmail.com,"545132 /Cancelled Order",0N710854KF887384Y,67.98,N/A,N/A,N/A,"Possible Fraud"
+Refund,"2018-03-09 16:30:05",Billy,Order,Joshtonche6693@gmail.com,"545332 /Cancelled Order",49425244EG375292F,167.98,N/A,N/A,N/A,"Possible Fraud"
+Refund,"2018-03-09 12:40:04",Billy,Order,kierasmith26@yahoo.com,541348,0YT965422B999230R,22.99,22.9900,APL-001-2370,"LCD and Touch Screen Digitizer for iPhone 7 - White (Economy Plus)",-
+Refund,"2018-03-09 10:30:07",meri,Order,jessed@ejiff.com,545317,1L054057C5825893C,3.35,3.35,ACC-APL-0564,"Aluminum Plastic Case for iPhone 5 5S Black","Out of Stock"

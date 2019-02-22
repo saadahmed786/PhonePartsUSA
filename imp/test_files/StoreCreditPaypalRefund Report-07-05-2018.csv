@@ -1,0 +1,4 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-07-05 12:55:17",Meri,RMA,johnladuca@icloud.com,552710/PP14034,PP14034R,19.2900,19.29,APL-001-2370,"LCD and Touch Screen Digitizer for iPhone 7 - White (Aftermarket Premium / Economy Plus)","(Good For Stock-)"
+"S Credit","2018-07-05 10:01:53",meri,POS,iknowaguylv@gmail.com,552893/PP14046,552893R,22.9900,22.99,APL-001-2372,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Aftermarket Premium / Economy Plus)","(Item Issue-)"
+Refund,"2018-07-05 15:30:07",Meri,Order,lilshawn888@gmail.com,"553795 /Cancelled Order",18H756187B3275350,96.67,N/A,N/A,N/A,Fraud

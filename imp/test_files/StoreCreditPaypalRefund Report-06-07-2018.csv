@@ -1,0 +1,21 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-06-07 15:36:38",Billy,Manual,mobrepairworld@gmail.com,N/A/,552151SH,29.9900,,,,"Warehouse - Missing Item Order Re-Shipment"
+"S Credit","2018-06-07 15:35:38",Billy,Manual,mobrepairworld@gmail.com,N/A/,551885-NS,574.1500,,,,"Warehouse - Missing Order Item"
+"S Credit","2018-06-07 14:45:57",billy,POS,pooyan.pazargadi@gmail.com,550659/PP13864,550659R,32.0700,10.69,APL-001-0730,"LCD and Touch Screen Digitizer for iPhone 5S SE - Black (Economy Plus)","(Item Issue-)"
+"S Credit","2018-06-07 14:45:57",billy,POS,pooyan.pazargadi@gmail.com,550659/PP13864,550659R,32.0700,10.69,APL-001-0728,"LCD and Touch Screen Digitizer for iPhone 5S SE - White (Economy Plus)","(Item Issue-)"
+"S Credit","2018-06-07 14:45:57",billy,POS,pooyan.pazargadi@gmail.com,550659/PP13864,550659R,32.0700,10.69,APL-001-0728,"LCD and Touch Screen Digitizer for iPhone 5S SE - White (Economy Plus)","(Item Issue-)"
+"S Credit","2018-06-07 11:46:11",meri,POS,Daniel@restorethefuture.com,551920/PP13861,551920R,53.3900,53.39,APL-001-2365,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Premium)","(Item Issue-)"
+"S Credit","2018-06-07 11:06:29",meri,POS,phonepcfixs@gmail.com,551897/PP13860,551897R,40.0000,20.00,APL-001-2310,"LCD and Touch Screen Digitizer for iPhone 6S Plus - White (Economy Plus)","(Item Issue-)"
+"S Credit","2018-06-07 11:06:29",meri,POS,phonepcfixs@gmail.com,551897/PP13860,551897R,40.0000,20.00,APL-001-2311,"LCD and Touch Screen Digitizer for iPhone 6S Plus - Black (Economy Plus)","(Item Issue-)"
+"S Credit","2018-06-07 08:18:15",Meri,RMA,WEIXIONG315@MSN.COM,550156/PP13758,PP13758R,95.6400,22.99,APL-001-2372,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Economy Plus)","(Item Issue - RTV-Digitizer No Touch)"
+"S Credit","2018-06-07 08:18:15",Meri,RMA,WEIXIONG315@MSN.COM,550156/PP13758,PP13758R,95.6400,19.29,APL-001-2369,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Economy Plus)","(Item Issue - RTV-LCD Lines)"
+"S Credit","2018-06-07 08:18:15",Meri,RMA,WEIXIONG315@MSN.COM,550156/PP13758,PP13758R,95.6400,15.99,APL-001-2136,"LCD and Touch Screen Digitizer for iPhone 6 Plus - White (Economy Plus) ","(Item Issue - RTV-Blemish)"
+"S Credit","2018-06-07 08:18:15",Meri,RMA,WEIXIONG315@MSN.COM,550156/PP13758,PP13758R,95.6400,15.99,APL-001-2136,"LCD and Touch Screen Digitizer for iPhone 6 Plus - White (Economy Plus) ","(Item Issue - RTV-Digitizer Ghosting)"
+"S Credit","2018-06-07 08:18:15",Meri,RMA,WEIXIONG315@MSN.COM,550156/PP13758,PP13758R,95.6400,10.69,APL-001-0728,"LCD and Touch Screen Digitizer for iPhone 5S SE - White (Economy Plus)","(Item Issue - RTV-Digitizer Ghosting)"
+"S Credit","2018-06-07 08:18:15",Meri,RMA,WEIXIONG315@MSN.COM,550156/PP13758,PP13758R,95.6400,10.69,APL-001-0728,"LCD and Touch Screen Digitizer for iPhone 5S SE - White (Economy Plus)","(Item Issue - RTV-Digitizer Ghosting)"
+"S Credit","2018-06-07 08:15:55",Meri,RMA,WEIXIONG315@MSN.COM,549397/PP13759,PP13759R,40.9800,22.99,APL-001-2371,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","(Item Issue - RTV-Digitizer Ghosting)"
+"S Credit","2018-06-07 08:15:55",Meri,RMA,WEIXIONG315@MSN.COM,549397/PP13759,PP13759R,40.9800,17.99,APL-001-2298,"LCD and Touch Screen Digitizer for iPhone 6S - Black (Economy Plus) ","(Item Issue - RTV-OCA Separation)"
+"S Credit","2018-06-07 08:11:56",Meri,Manual,jboirie@computecpc.com,N/A/,PP13792E,22.9800,,,,"Customer Appreciation - Angry Customer"
+"S Credit","2018-06-07 01:52:48",Meri,BuyBack,billy@moonlightrambler.net,LBB02111/,LBByAdXHm,2.0000,2.00,,,LBB
+Refund,"2018-06-07 17:10:05",Manual,Manual,sergio.antonio678@outlook.com,,3CA55523R8673393A,246.87,N/A,N/A,N/A,"Manually Refunded"
+Refund,"2018-06-07 15:40:05",Meri,Order,aprillwoodruff080@yahoo.com,"551883 /Cancelled Order",99959131V82678811,141.98,N/A,N/A,N/A,Fraud

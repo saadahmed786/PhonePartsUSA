@@ -1,0 +1,28 @@
+"Store Credits Generated"
+"Date Added","Sent To","Ref Order/Shipment ID","Ref RMA",Source,User,"Voucher Code","Voucher Total","Item Total","Item SKU","Item Name",Reason
+"2017-12-20 23:02:11",test_order@yopmail.com,538756,N/A,Order,kashif.sqa,538756-CO1,131.9900,123.98,APL-001-2365,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Premium)",
+"2017-12-20 23:01:34",test_order@yopmail.com,538757,N/A,Order,kashif.sqa,538757-CO1,14.2700,15.49,APL-001-2309,"LCD and Touch Screen Digitizer for iPhone 6 - White (Economy Plus)",
+"2017-12-20 22:56:17",test_order@yopmail.com,N/A,N/A,Manual,Gohar,tester23,2.5000,,,,"Purchase of Goods"
+"2017-12-20 21:59:44",test_order@yopmail.com,N/A,N/A,Manual,Gohar,tester22,2.2200,,,,"Purchase of Goods"
+"2017-12-20 21:38:13",test_order@yopmail.com,N/A,N/A,Manual,Gohar,test_sqa,1.5600,,,,"Purchase of Goods"
+"2017-12-20 16:18:08",sterjoskitoni@gmail.com,538667-1,N/A,POS,meri,538667-1R,23.7900,23.79,APL-001-2370,"LCD and Touch Screen Digitizer for iPhone 7 - White (Economy Plus)","(Issue Replacement)"
+"2017-12-20 15:26:39",tomerall4you@gmail.com,535104,PP12502,POS,meri,535104R,6.9900,"   6.9900"," BT-BP-30008"," Title:BinTEK™ Battery for iPhone 5S/5C 1560mAH Li-Ion Premium ","Item Issue - RTV-Dead Battery"
+"2017-12-20 14:57:58",dr_miracle_79@hotmail.com,537965-1,N/A,POS,billy,537965-1R,4.9900,4.99,ACC-ZED-806,"Samsung Galaxy Fast Adaptive 2A 5V Charging Adapter - White (Original)","(Issue Replacement)"
+"2017-12-20 13:26:03",test_order@yopmail.com,538703,N/A,Order,Billy,538703-CO1,5.9900,8.95,ACC-ZED-138,"8-Pin Data Cable for iPhone 5 5S 5C 6 6+ 7 7 Plus 8 8 Plus iPad 4 Mini 1 2 Air Pro (Standard)",
+"2017-12-20 12:16:47",test_order@yopmail.com,538689,N/A,Order,Billy,538689-CO1,3.7000,2.99,ACC-ZED-488,"iPhone 5 and 6 Series Headphones (Aftermarket)",
+"2017-12-20 12:16:47",test_order@yopmail.com,538689,N/A,Order,Billy,538689-CO1,3.7000,1.49,ACC-ZED-102,"Wall Charger for iPod, iPad, iPhone Models (Standard)",
+"2017-12-20 11:16:08",nilehalol@yahoo.com,538670,N/A,Order,Billy,538670-RP1,3.7800,3.78,APL-003-1527,"Home Button Flex Cable for iPhone 6","Out Of Stock"
+"2017-12-20 03:01:50",kalimumtaz@gmail.com,N/A,N/A,Manual,Gohar,qa_test_vo,2.0000,,,,"Purchase of Goods"
+"2017-12-20 02:49:30",brad@elkoifix.com,LBB01840,N/A,BuyBack,saad,LBBS0UU2K,561.7500,561.75,,,LBB
+"2017-12-20 02:49:05",glen@teddybearpools.com,LBB01828,N/A,BuyBack,saad,LBBgnFB9z,13.5000,13.50,,,LBB
+"2017-12-20 02:45:50",cellphone.planet@yahoo.com,LBB01846,N/A,BuyBack,saad,LBBQbWvac,364.5000,364.50,,,LBB
+"2017-12-20 02:44:08",HuyNguyen201090@gmail.com,LBB01859,N/A,BuyBack,saad,LBBaaP3j1,13.0000,13.00,,,LBB
+"2017-12-20 02:43:44",dj@starbitrepair.com,LBB01845,N/A,BuyBack,saad,LBBBHQX3F,20.0000,20.00,,,LBB
+"2017-12-20 02:42:48",Nolanj@live.com,LBB01847,N/A,BuyBack,saad,LBBl8oVQv,31.2500,31.25,,,LBB
+"2017-12-20 02:38:03",asamafath37@gmail.com,LBB01841,N/A,BuyBack,saad,LBBdiKP7K,168.7500,168.75,,,LBB
+"2017-12-20 02:04:12",kalimumtaz@gmail.com,N/A,N/A,Manual,Gohar,kashif_sqa,30.4000,,,,"Purchase of Goods"
+"2017-12-20 01:20:47",kalimumtaz@gmail.com,N/A,N/A,Manual,Gohar,kashif_rpm,6.6500,,,,"Purchase of Goods"
+"PayPal Refunds Generated"
+"Refund Date",User,"Transaction ID","Ref ID",Sender,Receiver,"Amount Sent"
+"2017-12-20 14:00:09",N/A,9F636801JM669822E,,paypal@phonepartsusa.com,walkerkemp1@icloud.com,0.99
+"2017-12-20 13:30:05",,8DP326302U196194D,538707,paypal@phonepartsusa.com,jaydeetwo74@gmail.com,58.76

@@ -1,0 +1,61 @@
+[27-Sep-2018 10:48:32 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'EasyPost\Error' with message 'The parameters you provided are invalid.' in /home/phonerep/public_html/imp/easypost/lib/EasyPost/Requestor.php:265
+Stack trace:
+#0 /home/phonerep/public_html/imp/easypost/lib/EasyPost/Requestor.php(249): EasyPost\Requestor->handleApiError('{"error":{"code...', 422, Array)
+#1 /home/phonerep/public_html/imp/easypost/lib/EasyPost/Requestor.php(123): EasyPost\Requestor->_interpretResponse('{"error":{"code...', 422)
+#2 /home/phonerep/public_html/imp/easypost/lib/EasyPost/Resource.php(136): EasyPost\Requestor->request('post', '/trackers', Array)
+#3 /home/phonerep/public_html/imp/easypost/lib/EasyPost/Tracker.php(60): EasyPost\Resource::_create('EasyPost\\Tracke...', Array, NULL)
+#4 /home/phonerep/public_html/imp/crons/shipstation_transactions.php(130): EasyPost\Tracker::create(Array)
+#5 /home/phonerep/public_html/imp/crons/shipstation_transactions.php(10): getOrderShipments('2018-09-25 10:1...', 1)
+#6 {main}
+  thrown in /home/phonerep/public_html/imp/easypost/lib/EasyPost/Requestor.php on line 265
+[10-Oct-2018 12:06:40 America/Chicago] PHP Parse error:  syntax error, unexpected ')' in /home/phonerep/public_html/imp/crons/paypal_ipn_callback.php on line 14
+[29-Oct-2018 08:54:36 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/inc/functions.php on line 1078
+[29-Oct-2018 08:54:36 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''Mozilla/5.0 (iPad; CPU OS 6_0' (T_ENCAPSED_AND_WHITESPACE), expecting ')' in /home/phonerep/public_html/imp/inc/functions.php on line 1106
+[20-Nov-2018 11:04:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '' PhonePartsUSA.com. All Right' (T_ENCAPSED_AND_WHITESPACE) in /home/phonerep/public_html/imp/inc/functions.php on line 2362
+[14-Dec-2018 09:04:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/inc/functions.php on line 1311
+[18-Dec-2018 10:40:07 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'EasyPost\Error' with message 'Insufficient funds. Please check your billing settings at http://www.easypost.com/account#/billing.' in /home/phonerep/public_html/imp/easypost/lib/EasyPost/Requestor.php:265
+Stack trace:
+#0 /home/phonerep/public_html/imp/easypost/lib/EasyPost/Requestor.php(249): EasyPost\Requestor->handleApiError('{"error":{"code...', 402, Array)
+#1 /home/phonerep/public_html/imp/easypost/lib/EasyPost/Requestor.php(123): EasyPost\Requestor->_interpretResponse('{"error":{"code...', 402)
+#2 /home/phonerep/public_html/imp/easypost/lib/EasyPost/Resource.php(136): EasyPost\Requestor->request('post', '/trackers', Array)
+#3 /home/phonerep/public_html/imp/easypost/lib/EasyPost/Tracker.php(60): EasyPost\Resource::_create('EasyPost\\Tracke...', Array, NULL)
+#4 /home/phonerep/public_html/imp/crons/shipstation_transactions.php(125): EasyPost\Tracker::create(Array)
+#5 /home/phonerep/public_html/imp/crons/shipstation_transactions.php(10): getOrderShipments('2018-12-18 10:0...', 1)
+#6 {main in /home/phonerep/public_html/imp/easypost/lib/EasyPost/Requestor.php on line 265
+[31-Dec-2018 13:23:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/inc/functions.php on line 1791
+[02-Jan-2019 21:00:22 America/Los_Angeles] PHP Fatal error:  Call to a member function exec() on a non-object in /home/phonerep/public_html/imp/crons/tier_cron.php on line 21
+[03-Jan-2019 21:00:21 America/Los_Angeles] PHP Fatal error:  Call to a member function exec() on a non-object in /home/phonerep/public_html/imp/crons/tier_cron.php on line 21
+[10-Jan-2019 17:15:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ' . "-" . (' in /home/phonerep/public_html/imp/inc/functions.php on line 330
+[10-Jan-2019 17:15:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''s' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /home/phonerep/public_html/imp/inc/functions.php on line 547
+[10-Jan-2019 17:15:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'e' in /home/phonerep/public_html/imp/inc/functions.php on line 1401
+[11-Feb-2019 02:50:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:50:03 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:50:03 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:50:04 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:50:05 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:51:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:52:03 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:53:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:54:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:55:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:55:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:55:03 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:56:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:57:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:58:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:59:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:00:03 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:00:04 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:00:05 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:00:05 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:00:06 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:00:07 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:00:07 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:00:08 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:00:08 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:00:09 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:00:09 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:01:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:02:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:03:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:04:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116

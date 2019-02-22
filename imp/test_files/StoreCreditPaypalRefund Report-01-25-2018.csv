@@ -1,0 +1,15 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-01-25 14:10:22",meri,POS,lasvegasgadgets@gmail.com,541583/PP12759,541583R,74.9900,"   74.9900"," SRN-SAM-1618","  LCD and Touch Screen Digitizer for Samsung Galaxy S5 - Black (Standard)","Good For Stock-"
+"S Credit","2018-01-25 13:44:22",Billy,Manual,jamesjamesjac@gmail.com,N/A/,PP12600,17.9800,,,,"RMA - Customer Return Exception"
+"S Credit","2018-01-25 13:05:20",meri,POS,tomerall4you@gmail.com,541486-1/,541486-1R,2.2900,2.29,APL-003-1633,"Metal LCD Backplate Shield & Home Extend Flex for iPhone 6 Plus ","(Issue Replacement)"
+"S Credit","2018-01-25 11:36:13",Billy,Manual,jeromystriker@iabcohio.com,N/A/,539638SH,20.9900,,,,"Shipping Charge - Combined Order Compensation"
+"S Credit","2018-01-25 11:19:16",Billy,Manual,acattan@gha-associates.com,N/A/,PO613-RP,100.0000,,,,"Warehouse - Missing Item Order Re-Shipment"
+"S Credit","2018-01-25 10:13:50",meri,POS,morconiano@gmail.com,540888-1/,540888-1R,9.5800,5.59,FLX-SAM-1443,"Charging Port Flex Cable for Samsung Galaxy S6 G920T","(Issue Replacement)"
+"S Credit","2018-01-25 10:13:50",meri,POS,morconiano@gmail.com,540888-1/,540888-1R,9.5800,3.99,FLX-SAM-992,"Home Button Charging Port Flex Cable for Samsung Galaxy S5 SM G900T T Mobile ","(Issue Replacement)"
+"S Credit","2018-01-25 09:27:19",meri,POS,lilchrist_mojica01@yahoo.com,541525/PP12754,541525R,2.4900,"   2.4900"," APL-003-1428","  Home Button Assembly for iPhone 6 & 6 Plus – Black","Item Issue - RTV-Product Wear"
+"S Credit","2018-01-25 05:15:13",saad,BuyBack,joseph.shannon@aarons.com,LBB01916/,LBBNFCZZc,80.0000,80.00,,,LBB
+"S Credit","2018-01-25 05:14:43",saad,BuyBack,societyrepairs@gmail.com,LBB01933/,LBBgqO7o6,9.5000,9.50,,,LBB
+"S Credit","2018-01-25 05:14:25",saad,BuyBack,societyrepairs@gmail.com,LBB01931/,LBBgTmn3S,38.0000,38.00,,,LBB
+"S Credit","2018-01-25 05:13:27",saad,BuyBack,aum728@gmail.com,LBB01902/,LBBMW7EtP,180.2500,180.25,,,LBB
+Refund,"2018-01-25 10:30:04",Billy,Order,dbuchanan1985@gmail.com,"541279 /Cancelled Order",7MB558622K448681F,319.94,N/A,N/A,N/A,"Possible Fraud"
+Refund,"2018-01-25 10:20:10",Billy,Order,vrgorman1983@mail.com,"541238 /Cancelled Order",2HN8781293472324X,137.95,N/A,N/A,N/A,"Possible Fraud"

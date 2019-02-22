@@ -1,0 +1,15 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2017-12-13 16:54:35",Billy,Order,cullmanphone@yahoo.com,538083/,538083-RP1,10.9900,10.99,APL-001-2196,"Touch Screen Digitizer With Home Button for iPad 4 - White (Premium)","Out Of Stock"
+"S Credit","2017-12-13 15:08:40","Amana S.",Manual,simpletechny@outlook.com,N/A/,537692SDE,8.9700,,,,"Warehouse - Missing Item Order Re-Shipment"
+"S Credit","2017-12-13 13:02:22",meri,POS,moego21@hotmail.com,537923/PP12447,537923R,28.6800,"   26.4900"," APL-001-2098","  LCD and Touch Screen Digitizer Assembly for iPhone 6 - Black (Premium) - Grade B","Good For Stock-"
+"S Credit","2017-12-13 05:16:02",saad,BuyBack,invshieldplm@gmail.com,LBB01822/,LBBt5CKz4,98.0000,98.00,,,LBB
+"S Credit","2017-12-13 03:01:21",saad,BuyBack,phoneshop27@yahoo.com,LBB01820/,LBBvyKQcM,418.7500,418.75,,,LBB
+Refund,"2017-12-13 14:30:10","meri merlkonyan",RMA,mm_moreno96@yahoo.com,537424,60R5932410370313K,10.99,3.1700,APL-003-1652,"Loudspeaker Replacement for iPad Mini 1/2",-
+Refund,"2017-12-13 14:30:10","meri merlkonyan",RMA,mm_moreno96@yahoo.com,537424,60R5932410370313K,10.99,4.9900,BTT110002,"BinTEK 4.5 inch Premium Suction Cup",-
+Refund,"2017-12-13 14:30:10","meri merlkonyan",RMA,mm_moreno96@yahoo.com,537424,60R5932410370313K,10.99,1.9900,ACC-APL-1738,"Soft Silicon Protective Case for iPad Mini Blue",-
+Refund,"2017-12-13 14:20:06",Manual,Manual,channon.malkin@us.af.mil,,48B93438RT775962J,177.59,N/A,N/A,N/A,"Manually Refunded"
+Refund,"2017-12-13 13:30:05",,Order,ORBITCELLULAR.NET@GMAIL.COM,538038,3R5341930H138223Y,10.99,N/A,N/A,N/A,"Cancelled Order"
+Refund,"2017-12-13 10:10:05",Manual,Manual,xvps@protonmail.com,,9NH92963HT9931716,243.97,N/A,N/A,N/A,"Manually Refunded"
+Refund,"2017-12-13 10:00:05",Manual,Manual,nelliegis@aol.com,,7LJ04568N9611252G,289.98,N/A,N/A,N/A,"Manually Refunded"
+Refund,"2017-12-13 09:50:09",Manual,Manual,Kingki31@yahoo.com,,2NH81474MX720072S,259.98,N/A,N/A,N/A,"Manually Refunded"
+Refund,"2017-12-13 09:50:05",Manual,Manual,mydreamway77@gmail.com,,7Y520017S6936493J,532.97,N/A,N/A,N/A,"Manually Refunded"

@@ -1,0 +1,11 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2017-12-27 16:14:42",Billy,Order,simpletechny@outlook.com,539229/,539229-RP1,10.9800,10.98,FLX-SAM-1376,"Charging Port Flex Cable for Samsung Galaxy Note 5 N920T ","Out Of Stock"
+"S Credit","2017-12-27 16:11:45",Billy,Order,jassar733@yahoo.com,539220/,539220-RP1,6.9900,6.99,BT-BP-30062,"BinTEKÂ™ Battery for Samsung Galaxy S5 EB-BG900BBC 2800mAH Li-Ion Premium ","Out Of Stock"
+"S Credit","2017-12-27 16:02:16",meri,POS,iphixsmartphones@gmail.com,536176/PP12532,536176R,7.9900,"   7.9900"," BT-BP-30156","  BinTEK™ Battery for Samsung Galaxy S6 Edge 2600mAH Li-Polymer Premium ","Item Issue - RTV-Dead Battery"
+"S Credit","2017-12-27 15:48:51",meri,POS,support@ifixlv.com,533942/PP12531,533942R,9.4900,"   9.4900"," APL-003-1705","  Front Camera with Proximity Sensor and Microphone for iPhone 7","Item Issue - RTV-Product Wear"
+"S Credit","2017-12-27 15:30:39",billy,POS,Djr3693@yahoo.com,537874/PP12530,537874R,24.8310,"   25.4900"," APL-001-2372","  LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Economy Plus)","Good For Stock-"
+"S Credit","2017-12-27 11:17:18",Billy,Order,orders003@quikfixphonerepairs.com,539164/,539164-RP1,18.9900,18.99,APL-001-2080,"LCD and Touch Screen Digitizer for iPhone 5S SE White (Premium)","Out Of Stock"
+Refund,"2017-12-27 17:00:06",Manual,Manual,chasity_1979@yahoo.com,,8J9380101Y3580316,74.99,N/A,N/A,N/A,"Manually Refunded"
+Refund,"2017-12-27 11:50:15",Billy,Order,admin@blitz-pc.com,"539166 /Cancelled Order",7CH173496E4305022,36.98,N/A,N/A,N/A,"Customer Cancel"
+Refund,"2017-12-27 11:50:08",meri,Order,travice12@gmail.com,539179,85Y82345FK373380N,3,3.00,SIGN,"Signature Confirmation","Ordered Wrong Item"
+Refund,"2017-12-27 10:10:05",Manual,Manual,smarttechesco@gmail.com,,1Y432744HC007452P,156.91,N/A,N/A,N/A,"Manually Refunded"

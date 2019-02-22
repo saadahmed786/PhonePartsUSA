@@ -1,0 +1,9 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-02-22 15:17:29",Billy,Order,lindsay@phonerepaircrew.com,544049/,544049-RP1,0.9900,0.99,FLX-TAB-066,"ASUS GOOGLE Nexus 7 ME370T USB Charging Port With Headphone Jack Flex","Out Of Stock"
+"S Credit","2018-02-22 12:58:34",meri,POS,societyrepairs@gmail.com,542811/PP12992,542811R,16.1200,14.89,APL-001-2309,"LCD and Touch Screen Digitizer for iPhone 6 - White (Economy Plus)","(Good For Stock-)"
+"S Credit","2018-02-22 11:16:18",meri,POS,josephbrown.ip@gmail.com,542498/PP12991,542498R,22.7200,20.99,APL-001-2299,"LCD and Touch Screen Digitizer for iPhone 6S - White (Economy Plus) ","(Item Issue-)"
+"S Credit","2018-02-22 10:46:11",Billy,Order,test_order@yopmail.com,544004/,544004-CO1,25.9600,2.99,ACC-ZED-719,"3 Foot Extendable Wireless Selfie Stick With Built-In Bluetooth Remote Shutter",
+"S Credit","2018-02-22 10:46:11",Billy,Order,test_order@yopmail.com,544004/,544004-CO1,25.9600,20.99,APL-001-2299,"LCD and Touch Screen Digitizer for iPhone 6S - White (Economy Plus) ",
+"S Credit","2018-02-22 09:48:30",Billy,BuyBack,nextgenwirelesss@gmail.com,LBB01967/,LBBsiLF2d,121.0000,121.00,,,LBB
+Refund,"2018-02-22 16:20:05",Billy,Order,Valdez052783@gmail.com,"544046 /Cancelled Order",4B5460523T159841B,157.82,N/A,N/A,N/A,"Customer Cancel"
+Refund,"2018-02-22 14:50:06",,Order,support@ifixlv.com,544047,9XR29698K1449032R,11.99,N/A,N/A,N/A,"Cancelled Order"

@@ -1,0 +1,13 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-01-15 14:27:15",billy,POS,info@lasvegasiphonerepair.com,539954/PP12663,539954R,10.9900,"   10.9900"," APL-001-0728","  LCD and Touch Screen Digitizer for iPhone 5S - White (Economy Plus)","Item Issue - RTV-Frame Issue"
+"S Credit","2018-01-15 12:59:20",meri,POS,tomerall4you@gmail.com,535277-1/,535277-1R,12.9900,12.99,APL-001-0411,"LCD and Touch Screen Digitizer for iPhone 5 - White (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-01-15 10:18:27",meri,POS,Phoneninjass@icloud.com,539941/PP12661,539941R,2.7000,"   2.4900"," APL-001-2333","  Metal Shield Backplate with Flex Cable for iPhone 6 ","Good For Stock-"
+"S Credit","2018-01-15 03:16:03",saad,RMA,cellrepair@lynnsaudiovideo.com,530990/PP12562,PP12562R,132.9400,13.99,BT-BP-30066,"BinTEK HTC One M8 2600mAH Li-Ion Premium Battery","(Good For Stock-)"
+"S Credit","2018-01-15 03:16:03",saad,RMA,cellrepair@lynnsaudiovideo.com,530990/PP12562,PP12562R,132.9400,9.99,BT-BP-30068,"BinTEK Battery for Samsung Galaxy Note 3 B800BE 3200mAH Li-Ion Premium ","(Good For Stock-)"
+"S Credit","2018-01-15 03:16:03",saad,RMA,cellrepair@lynnsaudiovideo.com,530990/PP12562,PP12562R,132.9400,30.99,APL-001-2369,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Economy Plus)","(Item Issue - RTV-Digitizer Issues)"
+"S Credit","2018-01-15 03:16:03",saad,RMA,cellrepair@lynnsaudiovideo.com,530990/PP12562,PP12562R,132.9400,28.99,APL-001-2310,"LCD and Touch Screen Digitizer for iPhone 6S Plus - White (Economy Plus)","(Item Issue - RTV-Flex/LCD Connector)"
+"S Credit","2018-01-15 03:16:03",saad,RMA,cellrepair@lynnsaudiovideo.com,530990/PP12562,PP12562R,132.9400,28.99,APL-001-2311,"LCD and Touch Screen Digitizer for iPhone 6S Plus - Black (Economy Plus)","(Item Issue - RTV-Flex/LCD Connector)"
+"S Credit","2018-01-15 03:16:03",saad,RMA,cellrepair@lynnsaudiovideo.com,530990/PP12562,PP12562R,132.9400,19.99,APL-001-2116,"LCD and Touch Screen Digitizer for iPhone 6 Plus - Black (Economy Plus) ","(Item Issue - RTV-Digitizer Issues)"
+Refund,"2018-01-15 16:20:06",Billy,Order,jlharder89@gmail.com,"540514 /Cancelled Order",7WY731450V877673H,180.94,N/A,N/A,N/A,"Possible Fraud"
+Refund,"2018-01-15 15:00:05",Billy,Order,gabrielherrera307@gmail.com,"540717 /Cancelled Order",2BN12128FN369053G,35.69,N/A,N/A,N/A,"Customer Cancel"
+Refund,"2018-01-15 10:10:04",Billy,Order,repairs@cpr-fredericksburg.com,"540667 /Cancelled Order",38B923440E2640644,19.98,N/A,N/A,N/A,"Customer Cancel"

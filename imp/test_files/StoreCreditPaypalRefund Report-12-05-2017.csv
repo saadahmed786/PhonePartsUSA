@@ -1,0 +1,9 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2017-12-05 16:55:16",Billy,Order,sfphonerepair@gmail.com,537374/,537374-RP1,3.1900,3.19,FLX-NOK-012,"Nokia Lumia 920 Charging Port Flex Cable","Out Of Stock"
+"S Credit","2017-12-05 15:54:49",meri,POS,Djr3693@yahoo.com,535722/PP12397,535722R,19.5600,17.99,APL-001-2136,"LCD Touch Screen Digitizer for iPhone 6 Plus - White (Economy Plus) ","(Good For Stock-)"
+"S Credit","2017-12-05 13:13:01",meri,POS,Lviphonerepair102@gmail.com,533941-1/,533941-1R,5.4900,5.49,ACC-ZED-552,"4 Port USB 2.0 Port Data Cable Wall Charger with AC Adapter","(Issue Replacement)"
+"S Credit","2017-12-05 11:24:11",saad,BuyBack,tech915cellrepair@gmail.com,LBB01798/,LBBLgi5Dc,9.0000,9.00,,,LBB
+"S Credit","2017-12-05 11:23:32",saad,BuyBack,jr.cal95@gmail.com,LBB01790/,LBB5jmgD8,23.0000,23.00,,,LBB
+"S Credit","2017-12-05 11:23:02",saad,BuyBack,durayschepker@yahoo.com,LBB01801/,LBBgyzDGL,36.5000,36.50,,,LBB
+"S Credit","2017-12-05 09:53:33",meri,POS,casey@simplecomputerrepair.com,536289-1/,536289-1R,18.9900,18.99,APL-001-2090,"LCD and Touch Screen Digitizer for iPhone 5S SE - Black (Premium) ","(Issue Replacement)"
+Refund,"2017-12-05 11:50:10",Manual,Manual,Jolverson@live.com,,27441115S1753930S,23.49,N/A,N/A,N/A,"Manually Refunded"

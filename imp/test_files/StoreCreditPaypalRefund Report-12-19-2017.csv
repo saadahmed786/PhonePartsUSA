@@ -1,0 +1,16 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2017-12-19 16:49:46",Billy,Order,shatteredimagellc@yahoo.com,538628/,538628-RP1,3.9900,3.99,APL-003-1787,"Rear Camera Lens Glass Cover for iPhone 6/6 Plus - Gold (Pack of 10)","Out Of Stock"
+"S Credit","2017-12-19 16:27:37",Billy,Order,mobrepairworld@gmail.com,538619/,538619-RP1,27.4900,27.49,SRN-LGM-362,"LCD + Touch Screen Digitizer with Frame for LG Google Nexus 5 D820 D821 Black","Out Of Stock"
+"S Credit","2017-12-19 16:18:00",meri,POS,Daniel@restorethefuture.com,538535/PP12497,538535R,69.9900,"   69.9900"," APL-001-2204","  LCD and Touch Screen Digitizer for iPhone 6S Plus - White (Premium)","Good For Stock-"
+"S Credit","2017-12-19 15:55:32",meri,POS,pooyan.pazargadi@gmail.com,538164/PP12496,538164R,21.3900,"   21.3900"," APL-001-2298","  LCD and Touch Screen Digitizer for iPhone 6S - Black (Economy Plus) ","Item Issue-"
+"S Credit","2017-12-19 14:25:09",Billy,Order,test_order@yopmail.com,538589/,538589-CO1,3.2400,2.99,ACC-ZED-488,"iPhone 5 and 6 Series Headphones (Aftermarket)",
+"S Credit","2017-12-19 12:46:08",meri,POS,societyrepairs@gmail.com,538316/PP12492,538316R,10.2600,"   0.9900"," APL-003-1531","  Earpiece Speaker for iPhone 6","Good For Stock-"
+"S Credit","2017-12-19 12:46:08",meri,POS,societyrepairs@gmail.com,538316/PP12492,538316R,10.2600,"   8.4900"," APL-003-1735","  Earpiece Speaker for iPhone 7 Plus","Good For Stock-"
+"S Credit","2017-12-19 10:18:50",meri,POS,phonepcfixs@gmail.com,538498/PP12490,538498R,25.4900,"   25.4900"," APL-001-2371","  LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","Good For Stock-"
+"S Credit","2017-12-19 09:54:17",Billy,Manual,greybeard411@yahoo.com,N/A/,538558SH,6.9900,,,,"RMA - Replacement Shipping Cost"
+Refund,"2017-12-19 23:00:17",Manual,Manual,saadahmed786@gmail.com,,833367712A2960022,0.31,N/A,N/A,N/A,"Manually Refunded"
+Refund,"2017-12-19 23:00:12",Manual,Manual,saadahmed786@gmail.com,,84222575N0062524P,135.3,N/A,N/A,N/A,"Manually Refunded"
+Refund,"2017-12-19 23:00:05",Manual,Manual,saadahmed786@gmail.com,,8H918791E4921351N,1.07,N/A,N/A,N/A,"Manually Refunded"
+Refund,"2017-12-19 22:50:08",Manual,Manual,phonepartusa@gmail.com,,7HD67171Y0887181E,5.4,N/A,N/A,N/A,"Manually Refunded"
+Refund,"2017-12-19 13:10:05",Billy,Order,wicommobile@gmail.com,538549,94371064VD313994P,43.96,43.96,"APL-001-2196 * 4","Touch Screen Digitizer With Home Button for iPad 4 - White (Premium)","Out Of Stock "
+Refund,"2017-12-19 10:20:05",Billy,RMA,cpr.denver.nco@gmail.com,537933,27F91980KL094713C,1.49,1.4900,APL-003-1008,"WiFi & Bluetooth Right Antenna for iPad Mini & iPad Mini 2","Good For Stock-"

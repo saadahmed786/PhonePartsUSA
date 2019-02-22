@@ -1,0 +1,16 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-01-30 16:56:55",Billy,Order,amarkle77@gmail.com,542058/,542058-RP1,1.9800,0.99,ACC-ZRT-512,"iPhone 7 Plus LCD Screen Digitizer Holder Frame Adhesive Sticker Tape","Out Of Stock"
+"S Credit","2018-01-30 15:33:09",meri,POS,tomerall4you@gmail.com,541486/PP12790,541486R-DF,7.9900,"   7.9900"," BT-BP-30156","  BinTEK™ Battery for Samsung Galaxy S6 Edge 2600mAH Li-Polymer Premium ","Item Issue-"
+"S Credit","2018-01-30 13:09:07",meri,POS,galaxycprlv@gmail.com,541897/PP12788,541897R,145.4800,"   5.4900"," FLX-SAM-1446","  Charging Port Flex Cable for Samsung Galaxy S7 G930F","Good For Stock-"
+"S Credit","2018-01-30 13:09:07",meri,POS,galaxycprlv@gmail.com,541897/PP12788,541897R,145.4800,"   139.9900"," SRN-SAM-1611","  LCD and Touch Screen Digitizer for Samsung Galaxy S7  - Black Onyx (Standard)","Good For Stock-"
+"S Credit","2018-01-30 12:47:46",meri,POS,nicholashyatt3223@yahoo.com,541992/PP12787,541992R,1.6100,"   1.4900"," APL-003-1544","  Signal Connecting Cable for iPhone 6 Plus","Good For Stock-"
+"S Credit","2018-01-30 12:32:07",meri,POS,support@ifixlv.com,541758-1/,541758-1R,8.9800,4.49,FLX-SAM-1395,"Charging Port Flex Cable for Galaxy Note 5 N920V","(Issue Replacement)"
+"S Credit","2018-01-30 12:32:07",meri,POS,support@ifixlv.com,541758-1/,541758-1R,8.9800,4.49,FLX-SAM-1395,"Charging Port Flex Cable for Galaxy Note 5 N920V","(Issue Replacement)"
+"S Credit","2018-01-30 09:50:29",meri,POS,puronami@msn.com,541934/PP12785,541934R,22.7200,"   20.9900"," APL-001-2298","  LCD and Touch Screen Digitizer for iPhone 6S - Black (Economy Plus) ","Good For Stock-"
+"S Credit","2018-01-30 09:44:20",Billy,Manual,info@bsrcellular.com,N/A/,541755-RP,679.6000,,,,"Warehouse - Missing Order Item"
+"S Credit","2018-01-30 05:06:57",saad,BuyBack,societyrepairs@gmail.com,LBB01943/,LBBYkONZA,15.0000,15.00,,,LBB
+"S Credit","2018-01-30 05:06:29",saad,BuyBack,freshcells@yahoo.com,LBB01838/,LBBprVWUj,63.5000,63.50,,,LBB
+"S Credit","2018-01-30 05:03:57",saad,BuyBack,dj@starbitrepair.com,LBB01936/,LBBwXHiYk,140.5000,140.50,,,LBB
+Refund,"2018-01-30 17:30:04",,Order,mikesnyder.724@gmail.com,540985,6W4660767Y673533X,27.99,27.9900,APL-001-2091,"LCD and Touch Screen Digitizer for iPhone 6 - Black (Premium)",-
+Refund,"2018-01-30 09:50:08",Manual,Manual,mrjoefunnyre@yahoo.com,,0EV924149U433503S,44.98,N/A,N/A,N/A,"Manually Refunded"
+Refund,"2018-01-30 09:50:04",Manual,Manual,mrjoefunnyre@yahoo.com,,1XR24783LJ0763451,23.98,N/A,N/A,N/A,"Manually Refunded"

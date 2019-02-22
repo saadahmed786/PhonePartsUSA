@@ -1,0 +1,355 @@
+SKU,Title,"Last Received","30 Days Item Sale",Quantity,"True Cost",D1,P1,"Sale Price","Date Updated",Competitor,"Previous Price",Price
+SRN-SAM-1626,"LCD and Touch Screen Digitizer for Samsung Galaxy S7 - Gold Platinum (Standard) (No Logo)","10/10/18 04:00 PM",7,14,103.39,199.99,199.99,104.99,"11/24/18 12:00 AM",mobile_sentrix,126.6,113.33
+SRN-SAM-1627,"LCD and Touch Screen Digitizer for Samsung Galaxy S8 - Midnight Black (Standard) (No Logo)","11/20/18 12:12 PM",42,23,133.99,199.99,0,154.99,"11/24/18 12:00 AM",mobile_sentrix,151.23,146.72
+SRN-SAM-1627,"LCD and Touch Screen Digitizer for Samsung Galaxy S8 - Midnight Black (Standard) (No Logo)","11/20/18 12:12 PM",42,23,133.99,199.99,0,154.99,"11/24/18 12:00 AM",mengtor,159.99,158.99
+SRN-SAM-1627,"LCD and Touch Screen Digitizer for Samsung Galaxy S8 - Midnight Black (Standard) (No Logo)","11/20/18 12:12 PM",42,23,133.99,199.99,0,154.99,"11/24/18 12:00 AM",etrade_supply,213.75,209.38
+SRN-SAM-1629,"LCD and Touch Screen Digitizer for Samsung Galaxy S8 Plus - Midnight Black (Standard) (No Logo)","10/30/18 01:37 PM",14,31,175.63,369.99,0,195.99,"11/24/18 12:00 AM",mobile_sentrix,196.84,204.95
+SRN-SAM-1629,"LCD and Touch Screen Digitizer for Samsung Galaxy S8 Plus - Midnight Black (Standard) (No Logo)","10/30/18 01:37 PM",14,31,175.63,369.99,0,195.99,"11/24/18 12:00 AM",mengtor,206.99,203.99
+SRN-SAM-1630,"LCD and Touch Screen Digitizer for Samsung Galaxy S4 - White (Standard) (No Logo)","09/24/18 12:21 PM",5,8,28.48,83.99,0,33.99,"11/24/18 12:01 AM",mobile_sentrix,30.99,27.99
+SRN-SAM-1632,"LCD and Touch Screen Digitizer for Samsung Galaxy S7 - Gold (Premium)","10/16/18 11:16 AM",10,6,100.35,189.99,0,113.99,"11/24/18 12:20 AM",mobile_sentrix,109.24,109.13
+SRN-SAM-1633,"LCD and Touch Screen Digitizer for Samsung Galaxy S7 - Black (Premium)","11/09/18 01:21 PM",28,14,96,189.99,0,119.99,"11/24/18 12:20 AM",mobile_sentrix,119.4,111.71
+SRN-SAM-1634,"LCD and Touch Screen Digitizer for Samsung Galaxy S7 - White (Premium)","10/11/18 04:27 PM",0,5,96,189.99,189.99,113.99,"11/24/18 12:21 AM",mobile_sentrix,112.82,112.53
+SRN-SAM-1635,"LCD and Touch Screen Digitizer for Samsung Galaxy S6 - Gold (Premium)","08/16/18 11:54 AM",5,3,95.83,159.99,0,110.99,"11/24/18 12:40 AM",mobile_sentrix,104.91,107.22
+SRN-SAM-1635,"LCD and Touch Screen Digitizer for Samsung Galaxy S6 - Gold (Premium)","08/16/18 11:54 AM",5,3,95.83,159.99,0,110.99,"11/24/18 12:40 AM",mengtor,114.99,112.99
+SRN-SAM-1636,"LCD and Touch Screen Digitizer for Samsung Galaxy S6 - Black Sapphire (Premium)","10/11/18 04:27 PM",0,0,98,159.99,0,110.99,"11/24/18 12:40 AM",mobile_sentrix,109.92,108.84
+SRN-SAM-1637,"LCD and Touch Screen Digitizer for Samsung Galaxy S6 - White (Premium)","11/09/18 01:21 PM",3,3,96,159.99,0,109.99,"11/24/18 12:40 AM",mobile_sentrix,108.24,106.07
+SRN-SAM-1637,"LCD and Touch Screen Digitizer for Samsung Galaxy S6 - White (Premium)","11/09/18 01:21 PM",3,3,96,159.99,0,109.99,"11/24/18 12:41 AM",mengtor,114.99,112.99
+SRN-SAM-1647,"LCD and Touch Screen Digitizer for Samsung Galaxy Note 4 - White (Premium)","08/09/18 02:36 PM",0,0,99.37,169.99,0,104.99,"11/24/18 01:00 AM",mobile_sentrix,110,107.26
+SRN-SAM-1647,"LCD and Touch Screen Digitizer for Samsung Galaxy Note 4 - White (Premium)","08/09/18 02:36 PM",0,0,99.37,169.99,0,104.99,"11/24/18 01:00 AM",mengtor,89.99,88.99
+SRN-SAM-1640,"LCD and Touch Screen Digitizer for Samsung Galaxy J3 (2016) - Black (Premium)","11/08/18 11:09 AM",1,1,38,79.99,0,48.89,"11/24/18 01:00 AM",mobile_sentrix,52.69,50.97
+SRN-SAM-1640,"LCD and Touch Screen Digitizer for Samsung Galaxy J3 (2016) - Black (Premium)","11/08/18 11:09 AM",1,1,38,79.99,0,48.89,"11/24/18 01:00 AM",etrade_supply,67.18,65.08
+SRN-SAM-1641,"LCD and Touch Screen Digitizer for Samsung Galaxy J3 (2016) - White (Premium)","06/13/18 12:57 PM",0,0,39,79.99,0,48.89,"11/24/18 01:01 AM",mobile_sentrix,52.33,51.09
+SRN-SAM-1641,"LCD and Touch Screen Digitizer for Samsung Galaxy J3 (2016) - White (Premium)","06/13/18 12:57 PM",0,0,39,79.99,0,48.89,"11/24/18 01:01 AM",etrade_supply,67.18,65.08
+SRN-SAM-1642,"LCD and Touch Screen Digitizer for Samsung Galaxy Note 5 - Black (Premium)","11/14/18 04:45 PM",5,0,115,199.99,0,132.99,"11/24/18 01:20 AM",mobile_sentrix,132.44,126.54
+SRN-SAM-1642,"LCD and Touch Screen Digitizer for Samsung Galaxy Note 5 - Black (Premium)","11/14/18 04:45 PM",5,0,115,199.99,0,132.99,"11/24/18 01:20 AM",mengtor,146.99,145.99
+SRN-SAM-1642,"LCD and Touch Screen Digitizer for Samsung Galaxy Note 5 - Black (Premium)","11/14/18 04:45 PM",5,0,115,199.99,0,132.99,"11/24/18 01:20 AM",cell_parts_hub,135,130
+SRN-SAM-1644,"LCD and Touch Screen Digitizer for Samsung Galaxy Note 5 - Gold (Premium)	","11/09/18 01:21 PM",1,4,115,199.99,0,132.99,"11/24/18 01:20 AM",mobile_sentrix,130.78,130.12
+SRN-SAM-1644,"LCD and Touch Screen Digitizer for Samsung Galaxy Note 5 - Gold (Premium)	","11/09/18 01:21 PM",1,4,115,199.99,0,132.99,"11/24/18 01:20 AM",mengtor,146.99,145.99
+SRN-SAM-1645,"LCD and Touch Screen Digitizer for Samsung Galaxy Note 5 - White (Premium)	","11/09/18 01:21 PM",1,1,115,199.99,0,132.99,"11/24/18 01:21 AM",mobile_sentrix,128.78,126.92
+SRN-SAM-1645,"LCD and Touch Screen Digitizer for Samsung Galaxy Note 5 - White (Premium)	","11/09/18 01:21 PM",1,1,115,199.99,0,132.99,"11/24/18 01:21 AM",mengtor,130.99,129.99
+SRN-SAM-1648,"LCD and Touch Screen Digitizer With Frame for Samsung Galaxy S8 Plus - Midnight Black (Premium)","09/18/18 12:08 PM",7,11,206.35,349.99,0,238.99,"11/24/18 01:21 AM",mobile_sentrix,246.23,230.88
+SRN-SAM-1648,"LCD and Touch Screen Digitizer With Frame for Samsung Galaxy S8 Plus - Midnight Black (Premium)","09/18/18 12:08 PM",7,11,206.35,349.99,0,238.99,"11/24/18 01:40 AM",mengtor,229.99,225.99
+SRN-SAM-1648,"LCD and Touch Screen Digitizer With Frame for Samsung Galaxy S8 Plus - Midnight Black (Premium)","09/18/18 12:08 PM",7,11,206.35,349.99,0,238.99,"11/24/18 01:40 AM",etrade_supply,251.9,247.69
+SRN-SAM-1649,"LCD and Touch Screen Digitizer for Samsung Galaxy S8 With Frame - Midnight Black (Premium)","08/16/18 11:54 AM",0,0,186.83,299.99,0,219.89,"11/24/18 01:40 AM",mobile_sentrix,217.84,210.55
+SRN-SAM-1649,"LCD and Touch Screen Digitizer for Samsung Galaxy S8 With Frame - Midnight Black (Premium)","08/16/18 11:54 AM",0,0,186.83,299.99,0,219.89,"11/24/18 01:40 AM",mengtor,192.99,191.99
+APL-003-1786,"LCD Tester Flex Cable for iPhone 7","07/05/18 04:13 PM",0,12,3.28,8.99,0,4.09,"11/24/18 01:40 AM",mengtor,3.5,2.99
+APL-003-1785,"LCD Tester Flex Cable for iPhone 7 Plus","08/06/18 11:36 AM",0,8,3.06,9.99,0,3.99,"11/24/18 01:41 AM",mengtor,3.5,2.99
+APL-001-2376,"LCD and Touch Screen Digitizer for iPhone 8 Plus - Black (Premium)","09/24/18 12:21 PM",11,20,66.15,149.99,0,69.09,"11/24/18 02:01 AM",mengtor,71.99,70.99
+APL-001-2376,"LCD and Touch Screen Digitizer for iPhone 8 Plus - Black (Premium)","09/24/18 12:21 PM",11,20,66.15,149.99,0,69.09,"11/24/18 02:20 AM",etrade_supply,138.13,134.21
+APL-003-1790,"Rear Camera Module for iPhone 8 Plus ","07/27/18 04:39 PM",1,2,55.72,109.99,109.99,69.99,"11/24/18 02:20 AM",mobile_sentrix,34.41,30.88
+APL-003-1790,"Rear Camera Module for iPhone 8 Plus ","07/27/18 04:39 PM",1,2,55.72,109.99,109.99,69.99,"11/24/18 02:20 AM",mengtor,66.99,65.99
+APL-001-2377,"LCD and Touch Screen Digitizer for iPhone 8 - White (Premium)","11/02/18 02:37 PM",7,49,40.45,129.99,0,54.69,"11/24/18 02:41 AM",mengtor,54.99,53.99
+APL-001-2378,"LCD and Touch Screen Digitizer for iPhone 8 - Black (Premium)","10/23/18 10:12 AM",14,37,47.68,69.9705,129.99,54.69,"11/24/18 03:01 AM",mengtor,54.99,53.99
+APL-001-2381,"LCD and Touch Screen Digitizer for iPhone 8 Plus - White (Premium)","11/02/18 02:37 PM",6,35,54.75,149.99,0,69.09,"11/24/18 03:20 AM",mengtor,71.99,70.99
+APL-001-2382,"LCD and Touch Screen Digitizer for iPhone 8 Plus - Black (Aftermarket Premium / Economy Plus)","11/20/18 03:35 PM",151,108,15,67.99,0,19.49,"11/24/18 03:20 AM",mengtor,19.2,18.99
+APL-001-2382,"LCD and Touch Screen Digitizer for iPhone 8 Plus - Black (Aftermarket Premium / Economy Plus)","11/20/18 03:35 PM",151,108,15,67.99,0,19.49,"11/24/18 03:20 AM",maya_cellular,17.95,16.95
+APL-001-2383,"LCD and Touch Screen Digitizer for iPhone 8 Plus - White (Aftermarket Premium / Economy Plus)","11/20/18 03:35 PM",155,91,15,67.99,0,19.49,"11/24/18 03:20 AM",mengtor,19.2,18.99
+APL-001-2383,"LCD and Touch Screen Digitizer for iPhone 8 Plus - White (Aftermarket Premium / Economy Plus)","11/20/18 03:35 PM",155,91,15,67.99,0,19.49,"11/24/18 03:20 AM",maya_cellular,17.95,16.95
+APL-001-2379,"LCD and Touch Screen Digitizer for iPhone 8 - Black (Aftermarket Premium / Economy Plus)","11/20/18 02:28 PM",96,62,12,37.99,0,15.49,"11/24/18 04:00 AM",mobile_sentrix,21.57,23.98
+APL-001-2379,"LCD and Touch Screen Digitizer for iPhone 8 - Black (Aftermarket Premium / Economy Plus)","11/20/18 02:28 PM",96,62,12,37.99,0,15.49,"11/24/18 04:00 AM",mengtor,15.5,15.3
+APL-001-2379,"LCD and Touch Screen Digitizer for iPhone 8 - Black (Aftermarket Premium / Economy Plus)","11/20/18 02:28 PM",96,62,12,37.99,0,15.49,"11/24/18 04:00 AM",maya_cellular,15.45,14.95
+APL-001-2380,"LCD and Touch Screen Digitizer for iPhone 8 - White (Aftermarket Premium / Economy Plus)","11/05/18 04:19 PM",91,64,12.71,37.99,0,15.49,"11/24/18 04:00 AM",mengtor,15.5,15.3
+APL-001-2380,"LCD and Touch Screen Digitizer for iPhone 8 - White (Aftermarket Premium / Economy Plus)","11/05/18 04:19 PM",91,64,12.71,37.99,0,15.49,"11/24/18 04:00 AM",maya_cellular,15.45,14.95
+APL-003-1802,"Rear Camera for iPhone 8","07/27/18 04:39 PM",1,9,43.69,109.89,109.89,67.89,"11/24/18 04:01 AM",mobile_sentrix,34.41,30.88
+APL-003-1808,"Loudspeaker for iPhone 8","04/17/18 02:12 PM",0,3,17.48,36.99,3.37,18.19,"11/24/18 04:21 AM",fixez,0,21.49
+APL-003-1809,"Wifi Antenna Flex Cable for iPhone 8","07/05/18 04:13 PM",0,5,2.77,11.99,13.99,5.49,"11/24/18 04:21 AM",mengtor,0.99,0.85
+SRN-SAM-1654,"LCD and Touch Screen Digitizer for Samsung Galaxy Note 8 - Midnight Black (Premium)","10/11/18 04:27 PM",4,3,217,313.6375,313.64,261.99,"11/24/18 04:40 AM",mobile_sentrix,241.18,234.28
+SRN-SAM-1654,"LCD and Touch Screen Digitizer for Samsung Galaxy Note 8 - Midnight Black (Premium)","10/11/18 04:27 PM",4,3,217,313.6375,313.64,261.99,"11/24/18 04:40 AM",mobile_defenders,254.99,251.99
+SRN-SAM-1657,"LCD and Touch Screen Digitizer for Samsung Galaxy Note 8 - Midnight Black","11/09/18 11:28 AM",4,16,191.92,299.49,299.49,249.99,"11/24/18 04:40 AM",mobile_sentrix,241.18,234.28
+SRN-SAM-1657,"LCD and Touch Screen Digitizer for Samsung Galaxy Note 8 - Midnight Black","11/09/18 11:28 AM",4,16,191.92,299.49,299.49,249.99,"11/24/18 04:41 AM",mengtor,233.99,228.99
+FLX-SAM-1568,"Charging Port Flex Cable for Samsung Galaxy Note 8 N950F","08/15/18 12:53 PM",0,17,5.4,15.99,15.99,8.09,"11/24/18 05:00 AM",mobile_sentrix,7.89,0
+FLX-SAM-1576,"Home Button Flex Cable for Samsung Galaxy Note 8 - Black","09/25/18 04:36 PM",3,6,8.27,22.99,22.99,11.29,"11/24/18 05:01 AM",mobile_sentrix,10.6,0
+FLX-SAM-1576,"Home Button Flex Cable for Samsung Galaxy Note 8 - Black","09/25/18 04:36 PM",3,6,8.27,22.99,22.99,11.29,"11/24/18 05:01 AM",mengtor,11.99,10.99
+FLX-SAM-1575,"Headphone Jack for Samsung Galaxy Note 8","07/05/18 04:13 PM",0,4,0.95,11.99,11.99,1.99,"11/24/18 05:01 AM",mobile_sentrix,1.02,0
+FLX-SAM-1574,"Vibrator Motor with Flex Cable for Samsung Galaxy S8 G950/ S8 Plus G955/ Note 8 N950/ S9 G960/ S9 Plus G965","10/24/18 04:07 PM",0,3,1.17,3.264,2.52,1.99,"11/24/18 05:01 AM",mobile_sentrix,0.6,0
+FLX-SAM-1573,"Earpiece Speaker for Samsung Galaxy Note 8","05/31/18 01:10 PM",2,3,1.03,2.275,1.91,1.79,"11/24/18 05:20 AM",mobile_sentrix,0.6,0
+FLX-SAM-1572,"Front Camera for Samsung Galaxy Note 8","07/27/18 04:39 PM",0,6,1.89,8.93,7.52,5.99,"11/24/18 05:20 AM",mobile_sentrix,3.87,0
+FLX-SAM-1571,"Dual Rear Camera for Samsung Galaxy Note 8 N950F","06/13/18 01:48 PM",0,2,19.04,33.096,30.73,26.99,"11/24/18 05:20 AM",mobile_sentrix,18.44,0
+FLX-SAM-1569,"Power Button Flex Cable for Samsung Galaxy Note 8","10/24/18 04:07 PM",0,3,1.17,4.99,0,3.99,"11/24/18 05:20 AM",mobile_sentrix,1.04,0
+FLX-SAM-1570,"Volume Button Flex Cable for Samsung Galaxy Note 8","12/01/17 11:33 AM",0,2,2.2,4.99,0,3.99,"11/24/18 05:21 AM",mobile_sentrix,1.22,0
+APL-003-1832,"Proximity Sensor Flex Cable for iPhone X","08/06/18 11:36 AM",0,15,14.32,54.99,0,29.09,"11/24/18 05:21 AM",mobile_sentrix,14.69,0
+APL-002-6460,"Back Glass Cover for iPhone X - White","10/10/18 04:00 PM",0,10,2.06,19.99,0,11.49,"11/24/18 05:40 AM",mobile_sentrix,11.51,0
+APL-003-1835,"Loudspeaker for iPhone X","09/25/18 04:36 PM",0,3,6.79,36.99,0,11.39,"11/24/18 05:40 AM",mobile_sentrix,3.75,0
+APL-001-2403,"LCD and Touch Screen Digitizer for iPhone X - Black (Premium)","11/02/18 02:37 PM",0,2,260.88,349.89,0,299.99,"11/24/18 05:41 AM",mengtor,279.99,259.99
+APL-003-1837,"Sim Card Tray for iPhone X - Silver","11/20/18 12:12 PM",101,14,1.29,3.99,0,1.69,"11/24/18 05:41 AM",mobile_sentrix,0.76,0
+APL-001-2403,"LCD and Touch Screen Digitizer for iPhone X - Black (Premium)","11/02/18 02:37 PM",0,2,260.88,349.89,0,299.99,"11/24/18 05:41 AM",maya_cellular,238.95,218.95
+SRN-SAM-1659,"LCD and Touch Screen Digitizer for Samsung Galaxy S5 - White (Standard) (No Logo)","10/18/18 11:57 AM",8,10,59.18,99.99,0,67.99,"11/24/18 06:00 AM",mobile_sentrix,65.44,0
+SRN-SAM-1659,"LCD and Touch Screen Digitizer for Samsung Galaxy S5 - White (Standard) (No Logo)","10/18/18 11:57 AM",8,10,59.18,99.99,0,67.99,"11/24/18 06:00 AM",mengtor,66.99,64.99
+BTY-COV-1723,"Rear Battery Cover for Samsung Galaxy S8 Plus - Midnight Black","09/13/18 02:02 PM",4,38,3.55,15.99,0,8.99,"11/24/18 06:00 AM",mobile_sentrix,10.23,0
+BTY-COV-1719,"Rear Battery Cover for Samsung Galaxy S8 - Arctic Silver","10/26/18 04:47 PM",1,39,2.89,15.99,0,9.99,"11/24/18 06:01 AM",mobile_sentrix,10.48,0
+BTY-COV-1720,"Rear Battery Cover for Samsung Galaxy S8 - Midnight Black","10/25/18 09:18 AM",13,38,2.49,15.99,0,9.99,"11/24/18 06:20 AM",mobile_sentrix,10.08,0
+BTY-COV-1721,"Rear Battery Cover for Samsung Galaxy S8 - Orchid Grey","07/20/18 05:01 PM",2,32,2.89,15.99,0,9.99,"11/24/18 06:20 AM",mobile_sentrix,10.48,0
+BTY-COV-1722,"Rear Battery Cover for Samsung Galaxy S8 Plus - Arctic Silver","09/07/18 11:38 AM",1,34,3.21,15.99,0,8.99,"11/24/18 06:21 AM",mobile_sentrix,10.42,0
+BTY-COV-1724,"Rear Battery Cover for Samsung Galaxy S8 Plus - Orchid Grey","05/24/18 12:31 PM",0,49,3.59,15.99,0,8.99,"11/24/18 06:40 AM",mobile_sentrix,10.32,0
+ACC-ZRT-537,"Pre Cut Adhesive for Samsung Galaxy S8 Plus","09/25/18 02:49 PM",12,25,0.59,3.99,0,1.09,"11/24/18 06:40 AM",mobile_sentrix,1.07,0
+FLX-SAM-1584,"Wireless Charging Chip with NFC Antenna for Samsung Galaxy Note 8","08/15/18 12:53 PM",0,10,1.98,14.99,14.99,4.49,"11/24/18 06:40 AM",mobile_sentrix,1.66,0
+FLX-SAM-1584,"Wireless Charging Chip with NFC Antenna for Samsung Galaxy Note 8","08/15/18 12:53 PM",0,10,1.98,14.99,14.99,4.49,"11/24/18 06:40 AM",mengtor,2.99,1.65
+FLX-SAM-1585,"Proximity Sensor Flex Cable for Samsung Galaxy Note 8 ","12/01/17 11:33 AM",0,2,1.89,13.99,13.99,2.99,"11/24/18 06:41 AM",mobile_sentrix,2.31,0
+APL-003-1831,"LCD Screen Digitizer Tester Flex Cable Ribbon for iPhone X","10/24/18 04:07 PM",0,10,3.23,19.99,0,5.59,"11/24/18 07:00 AM",mobile_sentrix,4.23,0
+APL-003-1829,"Loud Speaker Antenna Flex Cable for iPhone X","09/25/18 04:36 PM",0,4,2.37,4.99,0,3.29,"11/24/18 07:00 AM",mobile_sentrix,1.1,0
+APL-003-1828,"Volume Flex Cable for iPhone X","09/25/18 04:36 PM",0,4,3.11,18.99,0,5.99,"11/24/18 07:00 AM",mobile_sentrix,3.05,0
+APL-003-1824,"Rear Camera Flex Cable for iPhone X","08/15/18 12:53 PM",0,3,58.23,169.99,0,68.29,"11/24/18 07:20 AM",mengtor,61.99,60.99
+APL-003-1826,"Front Infrared Camera Flex Cable for iPhone X","08/06/18 11:36 AM",0,5,21.79,68.99,0,38.99,"11/24/18 07:20 AM",mobile_sentrix,29.97,0
+APL-003-1824,"Rear Camera Flex Cable for iPhone X","08/15/18 12:53 PM",0,3,58.23,169.99,0,68.29,"11/24/18 07:20 AM",mobile_sentrix,63.89,0
+APL-002-6461,"Back Glass Cover for iPhone X - Black","11/06/18 09:24 AM",1,13,2.2,19.99,0,11.49,"11/24/18 07:20 AM",mobile_sentrix,11.51,0
+APL-003-1827,"Power Flex Cable for iPhone X","08/06/18 11:36 AM",0,4,5.37,11.99,0,10.69,"11/24/18 07:21 AM",mobile_sentrix,5.52,0
+APL-003-1830,"WIFI Flex Cable for iPhone X","02/12/18 01:25 PM",0,2,2.17,4.99,0,2.69,"11/24/18 07:40 AM",mobile_sentrix,0.8,0
+APL-001-2403,"LCD and Touch Screen Digitizer for iPhone X - Black (Premium)","11/02/18 02:37 PM",0,2,260.88,349.89,0,299.99,"11/24/18 07:40 AM",mobile_sentrix,310.62,0
+APL-003-0852,"Camera Front Facing for iPad 2","03/15/18 01:59 PM",0,1,1.34,4.324,3.49,1.69,"11/24/18 07:41 AM",mobile_sentrix,0.82,0
+APL-001-2398,"LCD and Touch Screen Digitizer for Apple Watch Series 2 38mm","08/24/18 10:50 AM",0,4,119.12,234.99,0,146.89,"11/24/18 07:41 AM",mobile_sentrix,138.25,0
+APL-001-2399,"LCD and Touch Screen Digitizer for Apple Watch Series 2 42mm","11/14/18 04:16 PM",0,3,120.15,199.99,0,157.49,"11/24/18 08:00 AM",mobile_sentrix,148.04,0
+APL-003-1834,"Earpiece Speaker Flex Cable for iPhone X","11/20/18 12:12 PM",3,5,2.6,64.99,0,29.09,"11/24/18 08:00 AM",mobile_sentrix,14.69,0
+BT-BP-30295,"Battery for Apple Watch Series 2 42mm","10/01/18 11:35 AM",0,3,4.84,7.99,0,5.99,"11/24/18 08:01 AM",mobile_sentrix,2.45,0
+BT-BP-30294,"Battery for Apple Watch Series 2 38mm","08/07/18 12:31 PM",0,4,5.6,7.99,0,5.99,"11/24/18 08:20 AM",mobile_sentrix,2.59,0
+APL-003-1822,"Charging Port Flex Cable for iPhone X - Gray","08/06/18 11:36 AM",0,11,4.47,19.99,0,11.99,"11/24/18 08:20 AM",mobile_sentrix,11.12,0
+APL-003-1825,"Front Camera Flex Cable for iPhone X","07/05/18 04:13 PM",0,3,49.93,199.99,0,149.49,"11/24/18 08:40 AM",mobile_sentrix,21.36,0
+APL-003-1838,"Wifi Antenna Flex Cable for iPhone X","07/05/18 04:13 PM",3,0,1.26,5.99,0,1.59,"11/24/18 08:40 AM",mobile_sentrix,0.8,0
+APL-003-1839,"Charging Port Antenna Flex Cable for iPhone X","07/05/18 04:13 PM",0,8,1.72,3.99,0,2.29,"11/24/18 08:40 AM",mobile_sentrix,3.22,0
+APL-003-1840,"Wifi Antenna Flex for iPhone X (Next to Rear Camera)","07/05/18 04:13 PM",1,2,1.26,9.77,0,1.69,"11/24/18 08:40 AM",mobile_sentrix,0.9,0
+APL-003-1841,"Home Button Flex Cable for iPad 5 (2017) - White","04/09/18 04:29 PM",0,2,4.19,7.11,0,6.99,"11/24/18 08:41 AM",mobile_sentrix,4.58,0
+APL-003-1842,"Home Button Flex Cable for iPad 5 (2017) - Black","05/08/18 03:18 PM",1,5,4.23,13.99,0,7.89,"11/24/18 09:00 AM",mobile_sentrix,4.57,0
+APL-003-1843,"Home Button Flex Cable for iPad 5 (2017) - Gold","05/31/18 01:10 PM",0,4,4.19,7.11,0,6.99,"11/24/18 09:00 AM",mobile_sentrix,4.88,0
+APL-003-1844,"Back Camera for iPad 5 (2017)","02/12/18 01:25 PM",0,2,4.25,8.11,0,0,"11/24/18 09:00 AM",mobile_sentrix,3.55,0
+APL-003-1846,"Sim Card Reader for iPad 5 (2017)","02/12/18 01:25 PM",0,2,1.69,3.99,0,1.49,"11/24/18 09:01 AM",mobile_sentrix,1.62,0
+APL-003-1845,"Power Button Flex Cable for iPad 5 (2017)","02/12/18 01:25 PM",0,2,1.53,3.99,0,2.09,"11/24/18 09:01 AM",mobile_sentrix,1.66,0
+APL-003-1847,"Charging Port Flex Cable for iPad Pro 10.5 - White","02/12/18 01:25 PM",0,2,3.77,4.22,0,0,"11/24/18 09:01 AM",mobile_sentrix,3.03,0
+APL-001-2406,"LCD and Touch Screen Digitizer for iPad Pro 10.5 - Black (Premium)	","10/10/18 04:00 PM",1,3,138.93,229.99,0,179.99,"11/24/18 09:01 AM",mobile_sentrix,177.85,0
+APL-001-2406,"LCD and Touch Screen Digitizer for iPad Pro 10.5 - Black (Premium)	","10/10/18 04:00 PM",1,3,138.93,229.99,0,179.99,"11/24/18 09:01 AM",mengtor,175.99,172.99
+APL-003-1848,"Charging Port Flex Cable for iPad Pro 10.5 - Black","05/31/18 01:10 PM",0,4,3.08,4.3,0,0,"11/24/18 09:20 AM",mobile_sentrix,3,0
+APL-001-2407,"LCD and Touch Screen Digitizer for iPad Pro 10.5 - White (Premium)","09/17/18 10:51 AM",3,9,145.46,229.99,0,179.99,"11/24/18 09:20 AM",mobile_sentrix,172.49,0
+APL-001-2407,"LCD and Touch Screen Digitizer for iPad Pro 10.5 - White (Premium)","09/17/18 10:51 AM",3,9,145.46,229.99,0,179.99,"11/24/18 09:20 AM",fixez,227.99,217.99
+APL-001-2407,"LCD and Touch Screen Digitizer for iPad Pro 10.5 - White (Premium)","09/17/18 10:51 AM",3,9,145.46,229.99,0,179.99,"11/24/18 09:20 AM",mengtor,175.99,172.99
+APL-003-1849,"Home Button Flex Cable for iPad Pro 10.5 - Gold","05/15/18 10:50 AM",0,2,3.45,14.99,0,7.59,"11/24/18 09:20 AM",mobile_sentrix,6.87,0
+APL-003-1850,"Home Button Flex Cable for iPad Pro 10.5 - Rose Gold","05/15/18 10:50 AM",0,3,3.45,14.99,0,7.59,"11/24/18 09:21 AM",mobile_sentrix,6.56,0
+APL-003-1851,"Home Button Flex Cable for iPad Pro 10.5 - Space Grey","05/15/18 10:50 AM",0,3,3.45,14.99,0,7.59,"11/24/18 09:21 AM",mobile_sentrix,4.43,0
+APL-003-1852,"Home Button Flex Cable for iPad Pro 10.5 - Silver","05/15/18 10:50 AM",0,3,3.45,14.99,0,7.59,"11/24/18 09:21 AM",mobile_sentrix,5.59,0
+APL-003-1853,"Front Facing Camera for iPad Pro 10.5","05/15/18 10:50 AM",0,5,6.93,12.99,0,7.99,"11/24/18 09:40 AM",mobile_sentrix,7.4,0
+APL-003-1854,"Back Camera for iPad Pro 10.5","05/15/18 10:50 AM",0,5,14.51,13.89,0,12.79,"11/24/18 09:40 AM",mobile_sentrix,15.94,0
+APL-003-1858,"Headphone Jack Flex Cable for iPad Pro 10.5 - Black","02/12/18 01:25 PM",0,2,3.77,9.32,0,4.99,"11/24/18 09:40 AM",mobile_sentrix,4.67,0
+APL-003-1859,"Headphone Jack Flex Cable for iPad Pro 10.5 - White","02/12/18 01:25 PM",0,2,3.77,9.32,0,0,"11/24/18 09:40 AM",mobile_sentrix,4.67,0
+APL-003-1856,"Loudspeaker for iPad Pro 10.5 (Top Left)",N/A,0,0,0,3.02,0,0,"11/24/18 09:40 AM",mobile_sentrix,15.29,0
+APL-003-1857,"WIFI Flex Cable for iPad Pro 10.5",N/A,0,0,0,5.37,0,0,"11/24/18 09:41 AM",mobile_sentrix,5.37,0
+APL-001-2408,"Touch Screen Digitizer for Apple iPad Mini 3 - Black (Premium)","10/18/18 11:57 AM",6,0,5.34,19.99,0,14.99,"11/24/18 09:41 AM",mobile_sentrix,15.27,0
+APL-001-2409,"Touch Screen Digitizer for Apple iPad Mini 3 - White (Premium)","08/16/18 10:40 AM",13,5,9.68,19.99,0,14.99,"11/24/18 09:41 AM",mobile_sentrix,15.31,0
+SRN-LGM-699,"LCD and Touch Screen Digitizer with Silver Frame for LG G6 - White (Closeout)","11/01/18 09:16 AM",2,0,82,189.89,0,79.99,"11/24/18 10:00 AM",mobile_sentrix,54.82,0
+BT-BP-30296,"Battery for Samsung Galaxy S7 Edge","10/31/18 02:14 PM",19,19,4.7,11.99,0,8.99,"11/24/18 10:00 AM",mobile_sentrix,11.04,0
+ACC-ZRT-451,"iPhone and iPad Side Wall Repair Repair Tool","10/25/18 11:13 AM",2,4,57.55,149.99,99.99,76.29,"11/24/18 10:00 AM",mobile_sentrix,72.33,0
+APL-003-1408,"Headphone Ground Signal Antenna Inductive Coupling Flex Cable for iPhone 5S","09/13/18 02:02 PM",0,6,0.9,4.89,0.69,1.89,"11/24/18 10:00 AM",mobile_sentrix,0.86,0
+APL-003-1620,"External Buttons for iPhone 6s Plus - Silver","01/10/17 01:01 PM",0,19,1.41,3.38,2.69,1.89,"11/24/18 10:01 AM",mobile_sentrix,1.08,0
+APL-003-1639,"LCD Tester for iPhone 6S Plus","07/27/18 04:39 PM",0,10,3.09,94.6,6.59,3.99,"11/24/18 10:01 AM",mobile_sentrix,3.02,0
+APL-003-1639,"LCD Tester for iPhone 6S Plus","07/27/18 04:39 PM",0,10,3.09,94.6,6.59,3.99,"11/24/18 10:01 AM",mengtor,3.5,2.99
+APL-003-1647,"Home Button Rubber Gasket for iPhone 6s & 6s Plus (Pack of 10)","10/24/18 04:07 PM",1,9,1.76,5.89,2.98,2.89,"11/24/18 10:01 AM",mobile_sentrix,1.2,0
+APL-003-1700,"Wifi Antenna Flex Cable for iPad Mini 3","11/15/17 03:07 PM",0,3,1.6,4.03,3.29,1.99,"11/24/18 10:20 AM",mobile_sentrix,1.18,0
+APL-003-1817,"Wifi Antenna for iPhone 8 Plus","10/10/18 04:00 PM",0,6,1.17,15.99,0,8.09,"11/24/18 10:20 AM",mobile_sentrix,1.14,0
+APL-003-1817,"Wifi Antenna for iPhone 8 Plus","10/10/18 04:00 PM",0,6,1.17,15.99,0,8.09,"11/24/18 10:20 AM",mengtor,0.99,0.85
+FLX-LGM-630,"Rear Camera Lens for LG G6 - Black","09/13/18 02:02 PM",2,2,1.34,2.99,0,1.89,"11/24/18 10:21 AM",mobile_sentrix,0.68,0
+FLX-SAM-1583,"LCD and Touch Screen Digitizer for Samsung Galaxy Note 8 - Orchid Grey ",N/A,0,0,250.91,299.49,299.49,262.19,"11/24/18 10:21 AM",mobile_sentrix,241.18,0
+SRN-HTC-1160,"LCD and Touch Screen Digitizer for Google Pixel XL - Black (No Logo)","10/30/18 01:37 PM",0,4,63.22,149.99,149.99,88.99,"11/24/18 10:40 AM",mobile_sentrix,90.3,0
+SRN-HUA-164,"LCD and Touch Screen Digitizer for Huawei Mate 9 (MHA-L09) - Gold","05/08/18 03:18 PM",0,2,25.66,59.99,0,28.09,"11/24/18 10:40 AM",mobile_sentrix,25.55,0
+SRN-LGM-653,"LCD and Touch Screen Replacement with Frame  for LG G Stylo LS770- Black","09/07/18 11:38 AM",0,4,32.56,74.99,74.99,49.49,"11/24/18 10:40 AM",mobile_sentrix,48.38,0
+SRN-LGM-695,"LCD and Touch Screen Digitizer for LG G Pad 10.1 VK700 - Black",N/A,0,0,65.59,101.99,80.68,0,"11/24/18 10:41 AM",mobile_sentrix,92.07,0
+SRN-SAM-1663,"LCD and Touch Screen Digitizer for Samsung Galaxy S3 - Blue (Standard) (No Logo)","09/24/18 12:21 PM",1,1,37.02,90.99,0,36.39,"11/24/18 10:41 AM",mobile_sentrix,30.28,0
+SRN-SAM-1664,"LCD and Touch Screen Digitizer for Samsung Galaxy J3 (2016) - Gold (Premium)","06/04/18 01:17 PM",0,0,39,79.99,99.99,48.89,"11/24/18 10:41 AM",mobile_sentrix,44.31,0
+SRN-SAM-1667,"LCD and Touch Screen Digitizer With Frame for Samsung Galaxy S8 Plus - Midnight Violet (Premium)","08/16/18 11:54 AM",0,0,200.83,349.99,0,234.99,"11/24/18 10:41 AM",mobile_sentrix,234.12,0
+SRN-SAM-1667,"LCD and Touch Screen Digitizer With Frame for Samsung Galaxy S8 Plus - Midnight Violet (Premium)","08/16/18 11:54 AM",0,0,200.83,349.99,0,234.99,"11/24/18 11:00 AM",mengtor,229.99,0
+TAB-SRN-132,"Touch Screen Digitizer for Samsung Galaxy Tab 8.9 - Black","04/27/15 04:08 PM",0,0,12.1,18.755,16.59,0,"11/24/18 11:00 AM",mobile_sentrix,13.31,0
+TAB-SRN-562,"LCD Screen for Samsung Galaxy Tab 8.9 ",N/A,0,0,0,59.98,24.79,0,"11/24/18 11:00 AM",mobile_sentrix,26.76,0
+TAB-SRN-748,"LCD and Touch Screen Digitizer for Samsung Galaxy Tab S 8.4 - Black",N/A,0,0,0,179.99,0,0,"11/24/18 11:00 AM",mobile_sentrix,160.63,0
+TAB-SRN-761,"LCD and Touch Screen Digitizer for Microsoft Surface Book - Black",N/A,0,0,0,379.99,0,0,"11/24/18 11:01 AM",mobile_sentrix,176.57,0
+BTY-COV-1739,"Midframe Bezel for Samsung Galaxy S6 Edge G925P G925V - White","02/09/18 04:16 PM",0,2,12,15.99,0,0,"11/24/18 11:20 AM",mobile_sentrix,25.53,0
+BTY-COV-1740,"Midframe Bezel for Samsung Galaxy S6 Edge G925P G925V - Gold","02/09/18 04:16 PM",0,2,12,24.99,0,14.59,"11/24/18 11:20 AM",mobile_sentrix,14.61,0
+BTY-COV-1741,"Midframe Bezel for Samsung Galaxy S6 Edge G925A G925T - White","02/09/18 04:16 PM",0,2,12,15.99,0,0,"11/24/18 11:20 AM",mobile_sentrix,25.53,0
+BTY-COV-1742,"Midframe Bezel for Samsung Galaxy S6 Edge G925A G925T - Gold","02/09/18 04:16 PM",0,2,12,15.99,0,0,"11/24/18 11:20 AM",mobile_sentrix,14.61,0
+BTY-COV-1745,"Midframe Bezel for Samsung Galaxy S7 - Black","08/15/18 12:02 PM",3,3,6.11,19.99,0,10.99,"11/24/18 11:20 AM",mobile_sentrix,10.61,0
+BTY-COV-1746,"Midframe Bezel for Samsung Galaxy S7 - Gold","10/10/18 04:00 PM",1,3,6.19,19.99,0,10.99,"11/24/18 11:21 AM",mobile_sentrix,10.61,0
+BTY-COV-1747,"Middle Bezel Frame For Samsung Galaxy S7 Edge - Black","07/05/18 04:13 PM",0,4,5.61,14.99,0,11.09,"11/24/18 11:21 AM",mobile_sentrix,9.56,0
+BTY-COV-1750,"Midframe Bezel for Samsung Galaxy S8 - Black","08/06/18 11:36 AM",0,12,10.59,51.99,0,28.09,"11/24/18 11:40 AM",mobile_sentrix,19.46,0
+BTY-COV-1751,"Midframe Bezel for Samsung Galaxy S8 - Silver","02/09/18 04:16 PM",0,2,27.2,51.99,0,0,"11/24/18 11:40 AM",mobile_sentrix,46.13,0
+FLX-SAM-1336,"Samsung Galaxy S6 G920 Earpiece ","03/07/18 03:39 PM",0,0,1.19,4.99,3.99,1.59,"11/24/18 11:41 AM",mobile_sentrix,1,0
+FLX-SAM-1608,"Charging Port with Flex Cable for Samsung Galaxy S9 Plus G965F (International)","10/18/18 11:57 AM",1,11,4.01,11.99,0,0,"11/24/18 12:00 PM",mobile_sentrix,6.17,0
+APL-001-2422,"LCD and Touch Screen Digitizer with Pre-Installed Daughter Board for iPad Pro 12.9 (1st Gen) - Black (Premium)","08/01/18 11:26 AM",1,2,136.54,309.99,0,144.99,"11/24/18 12:00 PM",mobile_sentrix,219.55,0
+APL-001-2422,"LCD and Touch Screen Digitizer with Pre-Installed Daughter Board for iPad Pro 12.9 (1st Gen) - Black (Premium)","08/01/18 11:26 AM",1,2,136.54,309.99,0,144.99,"11/24/18 12:00 PM",mengtor,121.99,0
+APL-001-2423,"LCD and Touch Screen Digitizer with Pre-Installed Daughter Board for iPad Pro 12.9 (1st Gen) - White (Premium)","10/10/18 04:00 PM",1,3,110.91,309.99,0,144.99,"11/24/18 12:00 PM",mobile_sentrix,251.42,0
+FLX-SAM-1595,"Charging Port with Flex Cable for Samsung Galaxy S9 G960U (USA)","10/30/18 01:37 PM",4,4,5.26,15.99,0,7.39,"11/24/18 12:00 PM",mobile_sentrix,7.41,0
+FLX-SAM-1609,"Charging Port with Flex Cable for Samsung Galaxy S9 Plus G965U (USA)","10/24/18 04:07 PM",4,1,3.96,11.99,0,0,"11/24/18 12:00 PM",mobile_sentrix,6.43,0
+APL-003-1715,"Home Button With Flex Cable for iPad Air 2 - Black","07/27/18 04:39 PM",0,6,2.19,9.99,9.99,4.99,"11/24/18 12:00 PM",mobile_sentrix,2.96,0
+FLX-SAM-1596,"Charging Port with Flex Cable for Samsung Galaxy S9 G960F (International)","08/06/18 11:36 AM",0,2,4.55,15.99,0,7.49,"11/24/18 12:01 PM",mobile_sentrix,5.84,0
+FLX-SAM-1611,"Front Camera with Flex Cable for Samsung Galaxy S9 Plus","08/06/18 11:36 AM",0,3,2.38,5.5,0,0,"11/24/18 12:01 PM",mobile_sentrix,3.22,0
+APL-001-2423,"LCD and Touch Screen Digitizer with Pre-Installed Daughter Board for iPad Pro 12.9 (1st Gen) - White (Premium)","10/10/18 04:00 PM",1,3,110.91,309.99,0,144.99,"11/24/18 12:20 PM",mengtor,139.99,0
+FLX-SAM-1610,"Rear Camera with Flex Cable for Samsung Galaxy S9 Plus","08/06/18 11:36 AM",1,3,16.56,38.99,0,0,"11/24/18 12:20 PM",mobile_sentrix,22.49,0
+FLX-SAM-1597,"Proximity Sensor Flex Cable for Samsung Galaxy S9/S9 Plus","08/06/18 11:36 AM",0,5,1.57,3.99,0,2.89,"11/24/18 12:20 PM",mobile_sentrix,2.37,0
+FLX-SAM-1598,"Volume Flex Cable for Samsung Galaxy S9","08/06/18 11:36 AM",0,5,2.31,3.49,0,2.99,"11/24/18 12:20 PM",mobile_sentrix,1.59,0
+FLX-SAM-1599,"Power Flex Cable for Samsung Galaxy S9/ S9 Plus","08/06/18 11:36 AM",0,5,2.38,2.99,0,0,"11/24/18 12:21 PM",mobile_sentrix,1.55,0
+FLX-SAM-1603,"Front Camera with Flex Cable for Samsung Galaxy S9","08/06/18 11:36 AM",1,4,2.38,4.99,0,0,"11/24/18 12:40 PM",mobile_sentrix,2.71,0
+FLX-SAM-1604,"Loudspeake Buzzer for Samsung Galaxy S9 - Black","08/06/18 11:36 AM",0,5,6.86,19.99,0,0,"11/24/18 12:41 PM",mobile_sentrix,7.43,0
+FLX-SAM-1605,"Sim Card Tray and MicroSD Card Tray for Samsung Galaxy S9 G960/ S9 Plus G965 - Black","08/06/18 11:36 AM",0,7,0.89,2.49,0,1.99,"11/24/18 12:41 PM",mobile_sentrix,0.74,0
+FLX-SAM-1613,"Volume Flex Cable for Samsung Galaxy S9 Plus","08/06/18 11:36 AM",0,5,1.04,2.99,0,0,"11/24/18 12:41 PM",mobile_sentrix,1.59,0
+FLX-SAM-1614,"Earpiece Speaker for Samsung Galaxy S9 Plus","08/06/18 11:36 AM",0,3,0.89,2.99,0,1.5,"11/24/18 12:41 PM",mobile_sentrix,0.9,0
+FLX-SAM-1615,"Vibrator Motor with Flex Cable for Samsung Galaxy S9 Plus","08/06/18 11:36 AM",0,5,1.04,1.5,0,0,"11/24/18 01:00 PM",mobile_sentrix,0.7,0
+FLX-SAM-1616,"Loudspeaker Ringer Buzzer for Samsung Galaxy S9 Plus - Black","08/06/18 11:36 AM",0,5,10.59,19.99,0,0,"11/24/18 01:00 PM",mobile_sentrix,18.76,0
+BTY-COV-1752,"Back Cover Battery Door for Samsung Galaxy S9 Plus - Black","08/06/18 11:36 AM",0,42,3.13,24.99,0,15.49,"11/24/18 01:00 PM",mobile_sentrix,14.95,0
+BT-BP-30298,"BinTEK Battery for iPhone 8 Plus 2691mAH Li Ion Premium","10/22/18 01:57 PM",29,69,7.15,34.99,0,13.99,"11/24/18 01:00 PM",mengtor,14.99,12.99
+BT-BP-30298,"BinTEK Battery for iPhone 8 Plus 2691mAH Li Ion Premium","10/22/18 01:57 PM",29,69,7.15,34.99,0,13.99,"11/24/18 01:01 PM",mobile_sentrix,16.59,0
+APL-001-2426,"LCD and Touch Screen Digitizer for iPhone 6S - White (Aftermarket)","11/02/18 02:37 PM",0,5,11.54,16.79,0,13.79,"11/24/18 01:20 PM",mobile_sentrix,13.87,0
+APL-001-2427,"LCD and Touch Screen Digitizer for iPhone 6S - Black (Aftermarket)","04/30/18 11:00 AM",0,0,13.5,16.79,0,13.79,"11/24/18 01:20 PM",mobile_sentrix,13.81,0
+APL-001-2428,"LCD and Touch Screen Digitizer for iPhone 6S Plus - White (Aftermarket)","11/02/18 02:37 PM",0,105,14.61,19.99,0,16.99,"11/24/18 01:20 PM",mobile_sentrix,17.15,0
+APL-001-2429,"LCD and Touch Screen Digitizer for iPhone 6S Plus - Black (Aftermarket)","04/25/18 12:36 PM",0,100,16.5,19.99,0,16.99,"11/24/18 01:20 PM",mobile_sentrix,17.13,0
+APL-001-2428,"LCD and Touch Screen Digitizer for iPhone 6S Plus - White (Aftermarket)","11/02/18 02:37 PM",0,105,14.61,19.99,0,16.99,"11/24/18 01:20 PM",maya_cellular,16.95,15.95
+APL-001-2429,"LCD and Touch Screen Digitizer for iPhone 6S Plus - Black (Aftermarket)","04/25/18 12:36 PM",0,100,16.5,19.99,0,16.99,"11/24/18 01:20 PM",maya_cellular,15.95,15.45
+APL-001-2430,"LCD and Touch Screen Digitizer for iPhone 7 - White (Aftermarket)","11/02/18 02:37 PM",0,104,11.83,17.39,0,14.39,"11/24/18 01:20 PM",mobile_sentrix,14.82,0
+APL-001-2431,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Aftermarket)","04/25/18 12:47 PM",0,100,14.5,17.39,0,14.39,"11/24/18 01:20 PM",mobile_sentrix,14.64,0
+APL-001-2430,"LCD and Touch Screen Digitizer for iPhone 7 - White (Aftermarket)","11/02/18 02:37 PM",0,104,11.83,17.39,0,14.39,"11/24/18 01:20 PM",maya_cellular,14.95,13.95
+APL-001-2431,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Aftermarket)","04/25/18 12:47 PM",0,100,14.5,17.39,0,14.39,"11/24/18 01:20 PM",maya_cellular,14.95,13.95
+APL-001-2432,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Aftermarket)","11/02/18 02:37 PM",0,105,14.75,20.99,0,17.99,"11/24/18 01:20 PM",mobile_sentrix,18,0
+APL-001-2432,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Aftermarket)","11/02/18 02:37 PM",0,105,14.75,20.99,0,17.99,"11/24/18 01:40 PM",maya_cellular,17.95,16.95
+APL-001-2433,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Aftermarket)","04/25/18 12:47 PM",0,100,17,20.99,0,17.99,"11/24/18 01:40 PM",mobile_sentrix,18.22,0
+APL-001-2433,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Aftermarket)","04/25/18 12:47 PM",0,100,17,20.99,0,17.99,"11/24/18 01:40 PM",maya_cellular,17.95,16.95
+APL-001-2434,"LCD and Touch Screen Digitizer for iPhone 8 - White (Aftermarket)","11/02/18 02:37 PM",0,105,12.12,17.79,0,14.79,"11/24/18 01:40 PM",mobile_sentrix,15.55,0
+APL-001-2434,"LCD and Touch Screen Digitizer for iPhone 8 - White (Aftermarket)","11/02/18 02:37 PM",0,105,12.12,17.79,0,14.79,"11/24/18 01:40 PM",maya_cellular,15.45,14.95
+APL-001-2435,"LCD and Touch Screen Digitizer  for iPhone 8 - Black (Aftermarket)","04/25/18 12:47 PM",0,100,15,17.79,0,14.79,"11/24/18 01:40 PM",mobile_sentrix,15.55,0
+APL-001-2435,"LCD and Touch Screen Digitizer  for iPhone 8 - Black (Aftermarket)","04/25/18 12:47 PM",0,100,15,17.79,0,14.79,"11/24/18 01:40 PM",maya_cellular,15.45,14.95
+APL-001-2436,"LCD and Touch Screen Digitizer for iPhone 8 Plus - White (Aftermarket)","11/02/18 02:37 PM",0,5,15.04,21.29,0,18.29,"11/24/18 01:40 PM",mobile_sentrix,18.38,0
+APL-001-2436,"LCD and Touch Screen Digitizer for iPhone 8 Plus - White (Aftermarket)","11/02/18 02:37 PM",0,5,15.04,21.29,0,18.29,"11/24/18 01:40 PM",maya_cellular,17.95,16.95
+APL-001-2437,"LCD and Touch Screen Digitizer for iPhone 8 Plus - Black (Aftermarket)","04/30/18 11:00 AM",0,0,17.5,21.29,0,18.29,"11/24/18 01:40 PM",mobile_sentrix,18.34,0
+APL-001-2437,"LCD and Touch Screen Digitizer for iPhone 8 Plus - Black (Aftermarket)","04/30/18 11:00 AM",0,0,17.5,21.29,0,18.29,"11/24/18 01:41 PM",maya_cellular,17.95,16.95
+APL-003-1900,"Sim Card Tray for iPhone 7- Silver","10/18/18 11:57 AM",3,9,0.62,1.99,0,1.29,"11/24/18 01:41 PM",mengtor,1.45,0.99
+APL-003-1900,"Sim Card Tray for iPhone 7- Silver","10/18/18 11:57 AM",3,9,0.62,1.99,0,1.29,"11/24/18 01:41 PM",mobile_sentrix,1.01,0
+SRN-SAM-1686,"LCD and Touch Screen Digitizer with Frame for Samsung Galaxy S9 Black Frame - Black (Premium)","11/09/18 01:21 PM",3,2,185,299.99,0,219.99,"11/24/18 02:00 PM",mobile_sentrix,227.38,0
+APL-003-1899,"Sim Card Tray for iPhone 7- Rose Gold","10/18/18 11:57 AM",2,10,0.62,1.99,0,1.29,"11/24/18 02:00 PM",mengtor,1.45,0.99
+APL-003-1899,"Sim Card Tray for iPhone 7- Rose Gold","10/18/18 11:57 AM",2,10,0.62,1.99,0,1.29,"11/24/18 02:00 PM",mobile_sentrix,1.01,0
+APL-003-1898,"Sim Card Tray for iPhone 7- Black","08/24/18 10:50 AM",4,4,0.85,1.99,0,1.29,"11/24/18 02:00 PM",mengtor,1.45,0.99
+APL-003-1888,"Home Button Connector with Flex Cable Ribbon for iPad 5 (2017) - Black","10/18/18 11:57 AM",2,6,3.13,10.99,0,6.99,"11/24/18 02:00 PM",mobile_sentrix,4.57,0
+APL-003-1889,"Home Button Connector with Flex Cable Ribbon for iPad 5 (2017) - White","11/14/18 04:16 PM",3,2,3.36,10.99,0,6.99,"11/24/18 02:01 PM",mobile_sentrix,4.58,0
+APL-003-1890,"Home Button Connector with Flex Cable Ribbon for iPad 5 (2017) - Gold","10/18/18 11:57 AM",2,6,3.13,10.99,0,6.99,"11/24/18 02:20 PM",mobile_sentrix,4.88,0
+APL-003-1892,"Power Flex Cable With Mic for iPad 5 (2017)","10/18/18 11:57 AM",0,10,1.36,5.99,0,2.99,"11/24/18 02:20 PM",mobile_sentrix,1.66,0
+APL-003-1892,"Power Flex Cable With Mic for iPad 5 (2017)","10/18/18 11:57 AM",0,10,1.36,5.99,0,2.99,"11/24/18 02:20 PM",mengtor,1.99,1.65
+APL-003-1893,"LCD Screen Digitizer Testing Flex Cable for iPad Air/iPad 5 (2017)","05/31/18 01:10 PM",0,2,3.4,9.99,0,4.99,"11/24/18 02:20 PM",mobile_sentrix,3.16,0
+APL-003-1893,"LCD Screen Digitizer Testing Flex Cable for iPad Air/iPad 5 (2017)","05/31/18 01:10 PM",0,2,3.4,9.99,0,4.99,"11/24/18 02:20 PM",mengtor,3.99,2.99
+APL-003-1896,"Audio Flex Cable With Headphone Jack for iPad Air/iPad 5 (2017) - Black","10/18/18 11:57 AM",1,14,1.51,8.99,0,4.19,"11/24/18 02:20 PM",mobile_sentrix,1.51,0
+APL-003-1897,"Audio Flex Cable With Headphone Jack for iPad Air/iPad 5 (2017) - White","05/22/18 12:38 PM",0,5,3.72,8.99,0,4.19,"11/24/18 02:21 PM",mobile_sentrix,1.53,0
+APL-003-1898,"Sim Card Tray for iPhone 7- Black","08/24/18 10:50 AM",4,4,0.85,1.99,0,1.29,"11/24/18 02:40 PM",mobile_sentrix,1.01,0
+BT-BP-30297,"BinTEK Battery for iPhone 8 1821mAH Li Ion Premium","10/22/18 01:57 PM",20,71,6.2,29.99,0,12.99,"11/24/18 02:40 PM",mobile_sentrix,13.6,0
+BT-BP-30297,"BinTEK Battery for iPhone 8 1821mAH Li Ion Premium","10/22/18 01:57 PM",20,71,6.2,29.99,0,12.99,"11/24/18 02:40 PM",mengtor,12.99,10.99
+BT-BP-30298,"BinTEK Battery for iPhone 8 Plus 2691mAH Li Ion Premium","10/22/18 01:57 PM",29,69,7.15,34.99,0,13.99,"11/24/18 02:40 PM",maya_cellular,11.99,12.99
+APL-003-1911,"Sim Card Tray for iPhone 7 Plus - Jet Black",N/A,0,0,0,1.99,0,0.99,"11/24/18 03:01 PM",mobile_sentrix,1.1,0
+APL-003-1912,"Sim Card Tray for iPhone 7 Plus - Matte Black","08/24/18 10:50 AM",1,13,0.7,1.99,0,0.99,"11/24/18 03:20 PM",mobile_sentrix,1.13,0
+APL-003-1913,"Sim Card Tray for iPhone 7 Plus - Gold","08/24/18 10:50 AM",1,12,0.7,1.99,0,0.99,"11/24/18 03:20 PM",mobile_sentrix,1.13,0
+APL-003-1914,"Sim Card Tray for iPhone 7 Plus - Rose Gold","05/15/18 10:50 AM",1,1,0.93,1.99,0,0.99,"11/24/18 03:20 PM",mobile_sentrix,1.1,0
+APL-003-1915,"Power Volume Flex Cable for iPhone SE","07/27/18 04:39 PM",0,7,2.34,7.99,0,4.99,"11/24/18 03:21 PM",mobile_sentrix,2.78,0
+APL-003-1915,"Power Volume Flex Cable for iPhone SE","07/27/18 04:39 PM",0,7,2.34,7.99,0,4.99,"11/24/18 03:40 PM",mengtor,0,2.5
+SRN-HTC-1161,"LCD and Touch Screen Digitizer for Google Pixel 2 - Black (No Logo)","11/20/18 12:12 PM",2,3,77.78,189.99,0,134.99,"11/24/18 03:40 PM",mobile_sentrix,99.39,0
+SRN-HTC-1161,"LCD and Touch Screen Digitizer for Google Pixel 2 - Black (No Logo)","11/20/18 12:12 PM",2,3,77.78,189.99,0,134.99,"11/24/18 03:40 PM",mengtor,88.99,83.99
+SRN-HTC-1161,"LCD and Touch Screen Digitizer for Google Pixel 2 - Black (No Logo)","11/20/18 12:12 PM",2,3,77.78,189.99,0,134.99,"11/24/18 03:40 PM",mobile_defenders,0,139.99
+FLX-HTC-620,"Charging Port with PCB Board for Google Pixel 2",N/A,0,0,0,34.99,0,23.49,"11/24/18 03:40 PM",mobile_sentrix,16.64,0
+FLX-HTC-622,"Rear Camera Lens Cover for Google Pixel 2","05/15/18 10:50 AM",1,0,11.35,19.99,0,10.29,"11/24/18 03:41 PM",mobile_sentrix,5.92,0
+SRN-HTC-1162,"LCD and Touch Screen Digitizer for Google Pixel 2 XL - Black","11/13/18 04:48 PM",3,4,104.7,199.99,0,149.99,"11/24/18 04:00 PM",mobile_sentrix,134.8,0
+BTY-HTC-100,"Battery for Google Pixel 2 XL",N/A,0,0,0,17.99,0,9.49,"11/24/18 04:00 PM",mobile_sentrix,9.58,0
+FLX-HTC-623,"Charging Port Flex Cable for Google Pixel 2 XL","05/15/18 10:50 AM",0,3,22.41,25.99,0,0,"11/24/18 04:00 PM",mobile_sentrix,13.49,0
+ACC-ZRT-549,"LCD Bezel Frame Adhesive Tape for iPhone 7 Plus (5.5 inches) - White","10/25/18 11:13 AM",15,9,0.64,2.99,0,0.99,"11/24/18 04:00 PM",mobile_sentrix,0.62,0
+ACC-ZRT-550,"Battery Adhesive Strip Sticker Tape for iPhone 7",N/A,0,0,0,1.99,0,0,"11/24/18 04:01 PM",mobile_sentrix,0.59,0
+ACC-ZRT-551,"Battery Sticker for iPhone 8 (4.7 inches)",N/A,0,0,0,1.99,0,0,"11/24/18 04:01 PM",mobile_sentrix,0.74,0
+ACC-ZRT-553,"LCD Bezel Frame Adhesive Tape for iPhone 6S Plus (5.5 inches) - Black","07/03/18 03:08 PM",4,33,0.66,1.99,0,0,"11/24/18 04:20 PM",mobile_sentrix,0.52,0
+ACC-ZRT-553,"LCD Bezel Frame Adhesive Tape for iPhone 6S Plus (5.5 inches) - Black","07/03/18 03:08 PM",4,33,0.66,1.99,0,0,"11/24/18 04:20 PM",fixez,0,1.49
+ACC-ZRT-554,"LCD Bezel Frame Adhesive Tape for iPhone 6S Plus (5.5 inches) - White","07/03/18 03:08 PM",2,23,0.66,1.99,0,0,"11/24/18 04:20 PM",mobile_sentrix,0.54,0
+ACC-ZRT-555,"Battery Sticker for iPhone 6 Plus/ 6S Plus (5.5 inches)",N/A,0,0,0,1.99,0,0,"11/24/18 04:20 PM",mobile_sentrix,0.62,0
+ACC-ZRT-556,"LCD Bezel Frame Adhesive Tape for iPhone 6S (4.7 inches) - Black","07/03/18 03:08 PM",8,32,0.66,3.19,0,1.99,"11/24/18 04:20 PM",mobile_sentrix,0.51,0
+ACC-ZRT-557,"LCD Bezel Frame Adhesive Tape for iPhone 6S (4.7 inches) - White","07/26/18 01:47 PM",8,6,0.98,1.99,0,0,"11/24/18 04:20 PM",mobile_sentrix,0.57,0
+ACC-ZRT-558,"Battery Sticker for iPhone 6/ 6S (4.7 inches)",N/A,0,0,0,1.99,0,0,"11/24/18 04:21 PM",mobile_sentrix,0.56,0
+APL-001-2444,"LCD and Touch Screen Digitizer for iPad Mini 4 (Sleep/Wake Sensor Flex Pre-Installed) - Black (Premium)","09/26/18 12:05 PM",7,3,74.66,124.99,0,83.89,"11/24/18 04:21 PM",mobile_sentrix,96.87,0
+APL-001-2445,"LCD and Touch Screen Digitizer for iPad Mini 4 (Sleep/Wake Sensor Flex Pre-Installed) - White (Premium)","10/24/18 04:07 PM",9,4,72.35,124.99,0,83.89,"11/24/18 04:40 PM",mobile_sentrix,98.46,0
+APL-003-1917,"Rear Camera with Flex Cable for iPad Mini 4/ Air 2/ Pro (12.9 inches) 1st Gen/ iPad 5 (2017)","05/31/18 01:10 PM",0,4,3.4,9.99,0,5.99,"11/24/18 04:40 PM",mobile_sentrix,3.55,0
+APL-001-2449,"Touch Screen Digitizer With Home Button for iPad Air - Black (Standard)","10/16/18 10:43 AM",12,34,6.96,16.99,0,9.99,"11/24/18 04:40 PM",mobile_sentrix,14.71,0
+APL-001-2446,"Touch Screen Digitizer for iPad Air / iPad 5 (2017) White - Premium","10/10/18 04:00 PM",22,13,8.4,32.99,0,13.99,"11/24/18 04:40 PM",mobile_sentrix,14.19,0
+APL-001-2447,"Touch Screen Digitizer for iPad Air / iPad 5 (2017) Black - Premium","10/24/18 04:07 PM",62,100,8.23,32.99,0,13.99,"11/24/18 04:40 PM",mobile_sentrix,14.12,0
+APL-001-2448,"Touch Screen Digitizer With Home Button for iPad Air - White (Standard)","07/05/18 01:45 PM",12,2,6.52,16.99,0,9.99,"11/24/18 05:00 PM",mobile_sentrix,14.69,0
+APL-003-1918,"Rear Camera Glass Lens for iPhone 7 - Black (Pack of 10)","10/30/18 01:37 PM",1,6,3.36,14.99,0,9.99,"11/24/18 05:00 PM",mobile_sentrix,1.64,0
+APL-003-1921,"Home Button for iPad Pro 12.9 (2nd Generation) - Gold","07/27/18 04:39 PM",0,2,3.39,9.99,0,5.89,"11/24/18 05:20 PM",mobile_sentrix,4.5,0
+APL-003-1923,"Home Button for iPad Pro 12.9 (2nd Generation) - Silver","07/27/18 04:39 PM",0,2,3.39,9.99,0,5.89,"11/24/18 05:40 PM",mobile_sentrix,4.53,0
+APL-003-1924,"Home Button for iPad Pro 12.9 (2nd Generation) - Rose Gold","07/27/18 04:39 PM",0,2,3.39,9.99,0,5.89,"11/24/18 05:40 PM",mobile_sentrix,4.5,0
+APL-003-1925,"Power and Volume Flex cable for iPad Pro 12.9 (2nd Generation) ","07/27/18 04:39 PM",0,5,4.29,11.99,0,6.69,"11/24/18 05:40 PM",mobile_sentrix,6.73,0
+APL-003-1925,"Power and Volume Flex cable for iPad Pro 12.9 (2nd Generation) ","07/27/18 04:39 PM",0,5,4.29,11.99,0,6.69,"11/24/18 05:40 PM",mengtor,5.99,4.99
+APL-003-1926,"Headphone Audio Jack Flex Cable for iPad Pro 12.9 (2nd Generation) - White","07/27/18 04:39 PM",0,2,3.09,9.49,0,4.99,"11/24/18 05:40 PM",mobile_sentrix,4.23,0
+APL-003-1926,"Headphone Audio Jack Flex Cable for iPad Pro 12.9 (2nd Generation) - White","07/27/18 04:39 PM",0,2,3.09,9.49,0,4.99,"11/24/18 05:40 PM",mengtor,4.5,3.99
+APL-003-1927,"Headphone Audio Jack Flex Cable for iPad Pro 12.9 (2nd Generation) - Grey","07/27/18 04:39 PM",0,2,3.09,9.49,0,4.99,"11/24/18 05:40 PM",mengtor,4.5,3.99
+APL-003-1928,"Microphone with Flex Cable for iPad Pro 12.9 (2nd Generation)",N/A,0,0,0,10.99,0,0,"11/24/18 05:41 PM",mengtor,2.99,1.99
+APL-001-2476,"LCD Screen for iPad 6 (2018)","11/14/18 04:16 PM",1,1,38.4,99.99,0,45.69,"11/24/18 06:00 PM",mobile_sentrix,46.95,0
+APL-001-2477,"Touch Screen Digitizer for iPad 6 (2018) - Black (Premium)","11/20/18 12:12 PM",14,13,17.93,73.99,0,30.59,"11/24/18 06:00 PM",mobile_sentrix,32.44,0
+APL-001-2477,"Touch Screen Digitizer for iPad 6 (2018) - Black (Premium)","11/20/18 12:12 PM",14,13,17.93,73.99,0,30.59,"11/24/18 06:00 PM",mengtor,45.99,38.99
+APL-001-2478,"Touch Screen Digitizer for iPad 6 (2018) - White (Premium)","11/14/18 04:16 PM",10,0,15.04,73.99,0,30.59,"11/24/18 06:00 PM",mobile_sentrix,30.68,0
+APL-001-2478,"Touch Screen Digitizer for iPad 6 (2018) - White (Premium)","11/14/18 04:16 PM",10,0,15.04,73.99,0,30.59,"11/24/18 06:00 PM",mengtor,45.99,38.99
+APL-003-1932,"Home Button Test Flex Cable for iPhone 6s /6s Plus","07/27/18 04:39 PM",0,8,3.09,6.99,0,3.99,"11/24/18 06:00 PM",mengtor,3.25,2.99
+APL-003-1933,"Home Button Test Flex Cable for iPhone 7 /7 Plus","09/25/18 04:36 PM",1,3,3.11,6.99,0,3.99,"11/24/18 06:00 PM",mengtor,3.45,2.99
+FLX-SAM-1621,"LCD Screen Digitizer Tester Flex Cable Ribbon for Samsung Galaxy S8 G950  / S8 Plus G955 / Note 8 N950","07/27/18 04:39 PM",0,4,2.79,8.99,0,4.99,"11/24/18 06:00 PM",mobile_sentrix,3.02,0
+APL-003-1935,"Wifi Antenna Flex Cable for iPhone 7","07/20/18 05:01 PM",0,6,0.45,1.99,0,0.99,"11/24/18 06:20 PM",mobile_sentrix,0.54,0
+FLX-SAM-1625,"Earphone Jack with Flex Cable for Samsung Galaxy S8 Plus G955 -  Black","08/15/18 12:53 PM",0,12,1.13,4.99,0,2.49,"11/24/18 06:20 PM",mobile_sentrix,0.9,0
+APL-001-2479,"LCD and Touch Screen Digitizer with Mother Board for iPad Pro 12.9 (2nd Gen) - Black (Premium)","11/14/18 04:16 PM",1,3,219.42,439.99,0,244.99,"11/24/18 06:20 PM",mobile_sentrix,309.71,0
+APL-003-1943,"Vibrator Motor with Flex Cable for iPhone 7","11/20/18 12:12 PM",5,6,1.14,2.49,0,1.19,"11/24/18 06:20 PM",mobile_sentrix,1.16,0
+FLX-SAM-1622,"Earphone Jack with Flex Cable for Samsung Galaxy S8 G950 - White","08/15/18 12:53 PM",0,0,1.38,3.49,0,1.99,"11/24/18 06:20 PM",mobile_sentrix,0.82,0
+BT-BP-30300,"BinTEK Battery for Samsung Galaxy S8 3.85V 3000mAH Li-Polymer Premium ","09/21/18 01:44 PM",8,15,5.47,19.99,19.99,9.99,"11/24/18 06:20 PM",mobile_sentrix,10.83,0
+BT-BP-30301,"BinTEK Battery for Samsung Galaxy S8 Plus 3.85V 3500mAH Li-Polymer Premium","10/31/18 02:14 PM",21,13,5.22,19.99,19.99,13.99,"11/24/18 06:40 PM",mobile_sentrix,11.18,0
+BT-BP-30302,"BinTEK Battery for Samsung Galaxy S9 Plus 3.85V 3500mAH Li-Polymer Premium","08/07/18 12:31 PM",2,11,3.91,24.99,0,13.99,"11/24/18 06:40 PM",mobile_sentrix,13.49,0
+BT-BP-30303,"BinTEK Battery for Samsung Galaxy S9 3.85V 3000mAH Li-Polymer Premium ","08/07/18 12:31 PM",0,20,4.43,22.99,0,9.99,"11/24/18 06:40 PM",mobile_sentrix,11.38,0
+BT-BP-30304,"BinTEK Battery for Samsung Galaxy Note 8 3.85V 3300mAh Li-Ion Premium ","08/07/18 12:31 PM",8,11,4.13,19.99,0,8.99,"11/24/18 07:00 PM",mobile_sentrix,13.9,0
+APL-003-1939,"WiFi Antenna Flex Cable for iPhone 6S",N/A,0,0,0,2.99,0,1.99,"11/24/18 07:00 PM",mobile_sentrix,0.6,0
+APL-003-1940,"Wifi Antenna Retaining Bracket for iPhone 6S","07/20/18 05:01 PM",0,9,0.3,2.29,0,1.29,"11/24/18 07:01 PM",mobile_sentrix,0.99,0
+FLX-SAM-1623,"Earphone Jack with Flex Cable for Samsung Galaxy S8 G950 - Black","08/15/18 12:53 PM",1,12,1.13,3.49,0,1.99,"11/24/18 07:20 PM",mobile_sentrix,0.9,0
+FLX-SAM-1624,"Earphone Jack with Flex Cable for Samsung Galaxy S8 Plus G955 - White","08/15/18 12:53 PM",0,0,1.38,4.99,0,2.49,"11/24/18 07:20 PM",mobile_sentrix,0.82,0
+APL-001-2480,"LCD and Touch Screen Digitizer with Mother Board for iPad Pro 12.9 (2nd Gen) -White (Premium)","08/24/18 10:50 AM",0,0,290,439.99,0,244.99,"11/24/18 07:20 PM",mobile_sentrix,342.1,0
+APL-003-1942,"Charging Port for iPad Pro 12.9 (2nd Generation) 3G Version - Black","07/27/18 04:39 PM",0,5,3.54,9.99,0,5.99,"11/24/18 07:40 PM",mobile_sentrix,3.13,0
+APL-003-1941,"Charging Port for iPad Pro 12.9 (2nd Generation) 3G Version - White","07/27/18 04:39 PM",0,5,3.54,9.99,0,5.99,"11/24/18 07:40 PM",mobile_sentrix,3.57,0
+BTY-COV-1753,"Back Cover Battery Door for Samsung Galaxy S9 - Black","08/03/18 03:39 PM",1,37,3.5,24.99,0,15.59,"11/24/18 07:40 PM",mobile_sentrix,14.94,0
+SRN-SAM-1736,"LCD and Touch Screen Digitizer with Frame for Samsung Galaxy S9 Purple Frame - Black (Premium)","11/09/18 01:21 PM",3,4,185,299.99,0,219.99,"11/24/18 07:41 PM",mobile_sentrix,211.71,0
+SRN-SAM-1737,"LCD and Touch Screen Digitizer with Frame for Samsung Galaxy S9 Blue Frame- Black (Premium)","11/19/18 04:57 PM",2,4,185,299.99,0,214.99,"11/24/18 08:00 PM",mobile_sentrix,227.49,0
+SRN-SAM-1738,"LCD and Touch Screen Digitizer with Frame for Samsung Galaxy S9 Plus (Purple Frame) - Black (Premium)","11/09/18 01:21 PM",0,3,195,319.99,0,229.99,"11/24/18 08:00 PM",mobile_sentrix,239.09,0
+SRN-SAM-1739,"LCD and Touch Screen Digitizer with Frame for Samsung Galaxy S9 Plus (Blue Frame) - Black (Premium)","09/18/18 12:08 PM",0,0,200.83,319.99,0,229.99,"11/24/18 08:00 PM",mobile_sentrix,237.96,0
+BTY-COV-1755,"Back Cover Battery Door for Samsung Galaxy S9 - Blue","08/06/18 11:36 AM",1,40,3.13,19.89,0,15.59,"11/24/18 08:01 PM",mobile_sentrix,14.88,0
+BTY-COV-1756,"Back Cover Battery Door for Samsung Galaxy S9 - Purple","09/27/18 01:33 PM",3,41,3.5,19.99,0,15.59,"11/24/18 08:20 PM",mobile_sentrix,15.05,0
+BTY-COV-1758,"Back Cover Battery Door for Samsung Galaxy S9 Plus - Purple","08/03/18 03:39 PM",4,40,3.5,19.99,0,15.99,"11/24/18 08:20 PM",mobile_sentrix,14.89,0
+SRN-SAM-1740,"LCD and Touch Screen Digitizer with Frame for Samsung Galaxy S9 Plus (Black Frame) - Black (Premium)","11/09/18 01:21 PM",4,0,199,319.99,0,229.99,"11/24/18 08:20 PM",mobile_sentrix,225.69,0
+APL-003-1944,"Vibrator Motor with Flex Cable for iPhone 7 Plus","08/06/18 11:36 AM",0,6,7.91,14.49,0,10.29,"11/24/18 08:20 PM",mobile_sentrix,10.01,0
+FLX-SAM-1627,"Front Infrared Camera for Samsung Galaxy S8 Plus G955/ Note 8 N950",N/A,0,0,0,7.99,0,3.99,"11/24/18 08:40 PM",mobile_sentrix,3.87,0
+ACC-ZED-837,"Full Curved Tempered Glass Screen Protector for Samsung Galaxy Note 8 N950 - Black (Standard)","10/25/18 11:13 AM",6,14,1.37,4.99,0,3.99,"11/24/18 08:40 PM",mobile_sentrix,4.08,0
+APL-001-2488,"LCD and Touch Screen Digitizer for iPhone 6 - Black (Aftermarket Premium Plus)",N/A,0,0,0,9.99,0,0,"11/24/18 08:40 PM",mengtor,13.49,0
+ACC-ZRT-564,"LCD Bezel Frame Adhesive Tape for iPhone 7(4.7 inches) - White","11/20/18 02:29 PM",12,31,1.01,1.99,0,0.99,"11/24/18 08:40 PM",mobile_sentrix,0.51,0
+ACC-ZED-835,"Tempered Glass Screen Protector for iPad Mini/ iPad Mini 2/ iPad Mini 3","08/14/18 10:21 AM",0,8,1.31,8.99,8.99,0,"11/24/18 08:41 PM",mobile_sentrix,2.72,0
+FLX-SAM-1629,"Home Button with Flex Cable for Samsung Galaxy S9 G960/ S9 Plus G965 - Purple","08/24/18 10:50 AM",0,3,11.4,21.99,0,18.99,"11/24/18 09:00 PM",mobile_sentrix,11.24,0
+FLX-SAM-1630,"Home Button with Flex Cable for Samsung Galaxy S9 G960/ S9 Plus G965 - Black","08/24/18 10:50 AM",1,2,11.4,21.99,0,18.99,"11/24/18 09:00 PM",mobile_sentrix,11.04,0
+FLX-SAM-1632,"Earphone Jack with Flex Cable for Samsung Galaxy S9 G960/ S9 Plus G965 - Black","08/24/18 10:50 AM",1,3,1.44,2.89,0,1.99,"11/24/18 09:01 PM",mobile_sentrix,0.96,0
+FLX-SAM-1634,"Sim Card Tray and MicroSD Card Tray for Samsung Galaxy S9 G960/ S9 Plus G965 - Blue","08/24/18 10:50 AM",0,5,1.44,2.49,0,1.99,"11/24/18 09:01 PM",mobile_sentrix,0.9,0
+FLX-SAM-1635,"Sim Card Tray and MicroSD Card Tray for Samsung Galaxy S9 G960/ S9 Plus G965 - Purple","08/24/18 10:50 AM",0,5,1.44,2.49,0,1.99,"11/24/18 09:20 PM",mobile_sentrix,0.96,0
+FLX-SAM-1636,"Sim Card Tray and MicroSD Card Tray for Samsung Galaxy S9 G960/ S9 Plus G965 - Gray","08/24/18 10:50 AM",0,5,1.44,2.49,0,1.99,"11/24/18 09:20 PM",mobile_sentrix,0.92,0
+FLX-SAM-1637,"Sim Card Tray and MicroSD Card Tray for Samsung Galaxy S9 G960/ S9 Plus G965 - Pink","08/24/18 10:50 AM",0,5,1.44,2.49,0,1.99,"11/24/18 09:20 PM",mobile_sentrix,1.2,0
+FLX-SAM-1643,"Rear Camera Glass Lens and Cover Bezel Ring for Samsung Galaxy S9 Plus G965 - Black","10/24/18 04:07 PM",3,6,0.88,2.49,0,1.99,"11/24/18 09:40 PM",mobile_sentrix,5.32,0
+ACC-ZRT-561,"Battery Back Cover Adhesive Tape for Samsung Galaxy S9 Plus G965","08/24/18 10:50 AM",3,10,0.7,1.49,0,0.99,"11/24/18 09:40 PM",mobile_sentrix,1.07,0
+FLX-SAM-1647,"Rear Camera Glass Lens and Cover Bezel Ring for Samsung Galaxy S9 G960 - Black","09/25/18 04:36 PM",2,4,0.75,2.49,0,1.99,"11/24/18 10:00 PM",mobile_sentrix,0.74,0
+APL-003-1947,"Charging Port with Flex Cable for iPad Pro (9.7inches) - Gray",N/A,0,0,0,3.89,0,2.99,"11/24/18 10:20 PM",mobile_sentrix,2.4,0
+ACC-ZRT-568,"LCD Bezel Frame Adhesive Tape for iPhone 8(4.7 inches) - Black","11/20/18 02:29 PM",4,13,1.01,1.99,0,0.99,"11/24/18 10:20 PM",mobile_sentrix,0.56,0
+ACC-ZRT-569,"LCD Bezel Frame Adhesive Tape for iPhone 8(4.7 inches) - White","09/04/18 01:58 PM",2,15,0.62,1.99,0,0.99,"11/24/18 10:20 PM",mobile_sentrix,0.54,0
+ACC-ZRT-570,"LCD Bezel Frame Adhesive Tape for iPhone 8 Plus (5.5 inches) - Black","10/10/18 11:51 AM",5,20,0.52,1.99,0,0.99,"11/24/18 10:21 PM",mobile_sentrix,0.52,0
+ACC-ZRT-571,"LCD Bezel Frame Adhesive Tape for iPhone 8 Plus (5.5 inches) - White","09/04/18 01:58 PM",8,8,0.62,1.99,0,0.99,"11/24/18 10:40 PM",mobile_sentrix,0.6,0
+ACC-ZRT-572,"LCD Bezel Frame Adhesive Tape for iPhone X - Black","09/04/18 01:58 PM",0,13,0.62,1.99,0,0.99,"11/24/18 10:40 PM",mobile_sentrix,0.52,0
+ACC-ZRT-573,"Battery Back Cover Adhesive Tape for iPhone X","09/04/18 01:58 PM",0,10,0.62,1.99,0,0.99,"11/24/18 10:41 PM",mobile_sentrix,0.95,0
+ACC-ZED-839,"Back Tempered Glass Protector for iPhone X","11/20/18 02:29 PM",8,20,0.91,1.99,0,1.69,"11/24/18 10:41 PM",mobile_sentrix,1.68,0
+ACC-ZED-842,"Full Curved Tempered Glass Screen Protector for Samsung Galaxy S8 Plus G955 - Black","10/25/18 11:13 AM",8,2,1.37,9.99,0,6.99,"11/24/18 11:00 PM",mobile_sentrix,7.37,0
+ACC-ZED-841,"Full Curved Tempered Glass Screen Protector for Samsung Galaxy S8 G950 - Black","10/25/18 11:13 AM",6,2,1.37,9.99,0,6.99,"11/24/18 11:00 PM",mobile_sentrix,10.75,0
+APL-001-2488,"LCD and Touch Screen Digitizer for iPhone 6 - Black (Aftermarket Premium Plus)",N/A,0,0,0,9.99,0,0,"11/24/18 11:00 PM",mobile_sentrix,13.69,0
+FLX-SAM-1650,"Charging Port Flex Cable for Samsung Galaxy S8 Plus G955U (USA Version)","10/18/18 11:57 AM",5,6,5.05,12.99,0,8.99,"11/24/18 11:00 PM",mobile_sentrix,6.97,0
+ACC-ZED-840,"Full Curved Tempered Glass Screen Protector for Samsung Galaxy Note 9 N960 - Black","10/25/18 11:13 AM",10,0,1.37,9.99,0,6.99,"11/24/18 11:00 PM",mobile_sentrix,5.26,0
+SRN-SAM-1741,"LCD and Touch Screen Digitizer with Frame for Samsung Galaxy Note 9 - Black (Premium)","10/11/18 04:27 PM",1,1,237,329.99,0,269.99,"11/24/18 11:01 PM",mobile_sentrix,262.5,0
+SRN-SAM-1742,"LCD and Touch Screen Digitizer with Frame for Samsung Galaxy Note 9 - Blue (Premium)","10/11/18 04:27 PM",0,2,237,329.99,0,299.99,"11/24/18 11:01 PM",mobile_sentrix,252.94,0
+SRN-SAM-1743,"LCD and Touch Screen Digitizer with Frame for Samsung Galaxy Note 9 - Purple (Premium)","10/11/18 04:27 PM",0,1,237,329.99,0,299.99,"11/24/18 11:01 PM",mobile_sentrix,256.59,0
+ACC-ZED-843,"iPhone X / XS Full Curved Tempered Glass Screen Protector - Black","10/25/18 11:13 AM",10,0,1.37,9.99,0,6.99,"11/24/18 11:01 PM",mobile_sentrix,1.35,0
+APL-001-2489,"LCD and Touch Screen Digitizer for iPhone 6 Plus - Black (Aftermarket Premium Plus)",N/A,0,0,0,15.99,0,0,"11/24/18 11:20 PM",mobile_sentrix,13.73,0
+APL-001-2489,"LCD and Touch Screen Digitizer for iPhone 6 Plus - Black (Aftermarket Premium Plus)",N/A,0,0,0,15.99,0,0,"11/24/18 11:20 PM",mengtor,16.25,0
+APL-001-2490,"LCD and Touch Screen Digitizer for iPhone 6 Plus  - White (Aftermarket Premium Plus)",N/A,0,0,0,15.99,0,0,"11/24/18 11:20 PM",mobile_sentrix,16.26,0
+APL-001-2490,"LCD and Touch Screen Digitizer for iPhone 6 Plus  - White (Aftermarket Premium Plus)",N/A,0,0,0,15.99,0,0,"11/24/18 11:20 PM",mengtor,16.25,0
+APL-001-2481,"LCD and Touch Screen Digitizer for iPhone X TFT - (Aftermarket)","11/02/18 02:37 PM",2,0,103.22,149.99,0,122.99,"11/24/18 11:20 PM",mobile_sentrix,124.09,0
+APL-001-2482,"LCD and Touch Screen Digitizer for iPhone X OLED - (Aftermarket Premium/Economy Plus)","11/02/18 02:37 PM",2,0,130.96,199.99,0,152.49,"11/24/18 11:20 PM",mobile_sentrix,152.5,0
+APL-001-2482,"LCD and Touch Screen Digitizer for iPhone X OLED - (Aftermarket Premium/Economy Plus)","11/02/18 02:37 PM",2,0,130.96,199.99,0,152.49,"11/24/18 11:21 PM",mengtor,149.99,0
+SRN-LGM-642,"LCD and Touch Screen Digitizer with Frame for LG G3 - Black","10/25/18 09:18 AM",2,16,25.66,59.2213,0,31.49,"11/24/18 11:40 PM",mobile_sentrix,24.07,0
+FLX-LGM-358,"LG Optimus G2 Verizon VS980 Wifi Bluetooth Flex Cable",N/A,0,7,0,10.95,8.19,0.99,"11/24/18 11:40 PM",mobile_sentrix,0.8,0
+FLX-LGM-352,"LG Optimus G2 Verizon VS980 Back Camera Flex",N/A,0,24,0,6.95,11.89,0.99,"11/24/18 11:40 PM",mobile_sentrix,3.1,0
+FLX-LGM-354,"LG Optimus G2 Verizon VS980 Earpiece Speaker Flex","08/26/15 04:44 PM",0,0,1.11,2.664,2.09,0.99,"11/24/18 11:40 PM",mobile_sentrix,2.71,0
+FLX-LGM-573,"LG Optimus G2 ATT D800 D802 Power Volume Rear Button Key Flex Cable",N/A,0,17,0,6.95,0,0.99,"11/24/18 11:41 PM",mobile_sentrix,3.07,0
+FLX-LGM-584,"LG Optimus G2 D800 D801 LS980 Loudspeaker ","01/17/17 02:58 PM",0,4,1.19,3.07,2.39,0.99,"11/24/18 11:41 PM",mobile_sentrix,2.35,0
+FLX-LGM-360,"LG Optimus G2 Verizon VS980 Charging Port Headphone Jack Volume Flex","09/26/17 10:48 AM",0,4,4.82,10.548,9.09,0.99,"11/24/18 11:41 PM",mobile_sentrix,3.92,0

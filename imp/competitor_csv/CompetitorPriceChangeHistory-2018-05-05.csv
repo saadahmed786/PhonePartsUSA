@@ -1,0 +1,578 @@
+SKU,Title,"Last Received","30 Days Item Sale",Quantity,"True Cost",D1,P1,"Sale Price","Date Updated",Competitor,"Previous Price",Price
+BT-BP-30152,"Battery for Samsung Galaxy Tab 8.9 6100mAH Li-Polymer","10/24/17 04:41 PM",0,5,9.32,22.99,22.99,4.99,"05/04/18 12:00 AM",etrade_supply,17.44,17.3
+BT-BP-30158,"BinTEK Battery for iPod Touch 4 980mAH Li-Polymer Premium ","06/30/17 02:35 PM",1,9,3.88,8.99,8.99,4.99,"05/04/18 12:00 AM",etrade_supply,4.6,4.56
+BT-BP-30173,"Battery for Samsung Tab 4 T330 4450mAH Li-Polymer ","09/12/17 01:11 PM",0,4,7.7,18.99,18.99,14.99,"05/04/18 12:00 AM",etrade_supply,19.23,19.08
+BT-BP-30180,"BinTEK Sony XPeria Z L36H 2330mAh Li-Polymer Premium Battery","01/20/17 10:19 AM",0,6,5.19,15.99,15.99,10.99,"05/04/18 12:00 AM",etrade_supply,9.83,9.75
+BT-BP-30182,"BINTEK Sony L39h Xperia Z1 C6902 C6903 C6906 3000 mAH Li-Polymer Premium Battery","01/20/17 04:34 PM",0,3,5.33,15.99,15.99,10.99,"05/04/18 12:00 AM",etrade_supply,9.83,9.75
+BT-BP-30184,"BINTEK Sony Xperia Z3 Dual Battery 3100 mAH Li-Polymer Premium Battery","11/28/16 01:31 PM",3,18,3.4,8.99,8.99,7.99,"05/04/18 12:00 AM",etrade_supply,9.82,9.74
+BT-BP-30188,"BinTEK Battery for Samsung Tab Pro 8.4 4800mAH Li-Polymer Premium ","05/04/17 03:14 PM",0,0,4.9,13.99,13.99,12.99,"05/04/18 12:00 AM",etrade_supply,19.23,19.08
+BT-BP-30192,"BinTEK Battery for iPhone 6S 1715mAH Li-Po Premium ","05/04/18 10:58 AM",319,448,4.95,14.99,9.99,8.99,"05/04/18 12:20 AM",etrade_supply,15.65,15.52
+BT-BP-30194,"BinTEK Battery for LG G4 BL-51YF 3000mAH Li-Ion Premium ",N/A,2,-3,6.05,10.59,8.89,3.99,"05/04/18 12:20 AM",etrade_supply,10.98,11.66
+BT-BP-30204,"BinTEK Battery for iPod Touch 6 1043mAH Li-Polymer Premium ","08/26/16 02:02 PM",1,9,5.6,15.99,15.99,8.99,"05/04/18 12:20 AM",etrade_supply,13.68,13.57
+BT-BP-30208,"Battery Apple iPad 2 6930mAH Li-Polymer","03/22/18 02:31 PM",2,6,10.03,24.99,16.99,12.99,"05/04/18 12:20 AM",etrade_supply,19.57,19.41
+BT-BP-30210,"Battery Apple iPad 3/4 11560mAH Li-Polymer","05/04/18 03:05 PM",11,100,10.57,19.99,19.99,13.99,"05/04/18 12:20 AM",etrade_supply,23.53,23.34
+BT-BP-30216,"Battery for Apple iPad Air 2 7340mAH Li-Polymer","05/04/18 03:05 PM",6,18,14.4,24.99,16.99,16.29,"05/04/18 12:20 AM",etrade_supply,31.35,31.1
+BT-BP-30220,"Battery for Apple iPad Mini 2/3 6470mAH Li-Polymer","05/04/18 03:05 PM",9,9,8.01,16.99,16.99,9.39,"05/04/18 12:40 AM",etrade_supply,19.57,19.41
+BT-BP-30224,"Battery Apple iPad Mini 4 5124mAH Li-Polymer ","05/26/17 01:11 PM",0,8,18.81,29.99,29.99,22.99,"05/04/18 12:40 AM",etrade_supply,23.52,23.33
+BT-BP-30226,"Battery for Apple iPad Pro 12.9 10307mAH Li-Polymer","05/26/17 01:11 PM",0,15,18.81,29.99,29.99,14.49,"05/04/18 12:40 AM",etrade_supply,25.46,25.26
+BT-BP-30252,"BinTEK HTC One M9 2840mAH Li-Polymer Premium Battery",N/A,0,0,0,13.99,0,8.49,"05/04/18 12:40 AM",etrade_supply,11.79,11.7
+BT-BP-30254,"BinTEK Sony Xperia M4 Aqua 2400mAH Li-Polymer Premium Battery",N/A,0,0,0,14.99,0,0,"05/04/18 12:40 AM",etrade_supply,9.83,9.75
+BT-BP-30260,"BinTEK Sony Xperia Z3 Compact 2600mAH Li-Polymer Premium Battery",N/A,0,0,0,14.99,0,0,"05/04/18 12:40 AM",etrade_supply,7.47,7.41
+BT-BP-30262,"BinTEK Sony Xperia T3 2500mAH Li-Polymer Premium Battery",N/A,0,0,0,9.99,0,0,"05/04/18 12:40 AM",etrade_supply,9.84,9.76
+BT-BP-30270,"BinTEK Battery for Samsung Galaxy S4 Mini 1900mAH Li-Polymer Premium ",N/A,0,0,0,14.95,0,0,"05/04/18 12:40 AM",etrade_supply,13.68,13.57
+BT-BP-30274,"BinTEK HTC Desire 626 2000mAH Li-Polymer Premium Battery",N/A,0,0,0,11.99,0,0,"05/04/18 01:00 AM",etrade_supply,7.47,7.41
+BT-BP-30278,"BinTEK HTC Rezound 1620mAH Li-Ion Premium Battery",N/A,0,0,0,9.99,0,0,"05/04/18 01:00 AM",etrade_supply,5.89,5.84
+BT-BP-30284,"BinTEK iPhone SE 1624mAh Li-Polymer Premium Battery","05/02/18 02:54 PM",54,75,4.56,19.99,9.99,7.49,"05/04/18 01:00 AM",etrade_supply,19.57,19.41
+BT-BP-30286,"BinTEK Battery for Apple Watch 42mm 250mAh Li-Polymer Premium ",N/A,0,0,0,16.99,0,0,"05/04/18 01:00 AM",etrade_supply,11.78,11.69
+BT-BP-30288,"BinTEK Battery for Apple Watch 38mm 205mAh Li-Polymer Premium ",N/A,0,0,0,16.99,0,0,"05/04/18 01:00 AM",etrade_supply,11.78,11.69
+BT-BP-30289,"BinTEK iPhone 7 1960mAH Li-Polymer Premium Battery","05/02/18 02:54 PM",101,243,5.75,14.99,7.6,9.99,"05/04/18 01:00 AM",etrade_supply,25.46,25.26
+APL-003-1721,"Rear Camera Flex Cable for iPhone SE","04/09/18 04:29 PM",4,4,19.36,39.99,32.67,26.39,"05/04/18 01:00 AM",maya_cellular,0,25.49
+BTY-COV-446,"Rear Housing Frame for Samsung Galaxy S3 i747 - Black","07/18/17 11:51 AM",0,2,3.1,4.95,0,0.99,"05/04/18 01:00 AM",etrade_supply,4.17,4.14
+BT-BP-30292,"BinTEK Battery for Samsung Galaxy J7 (2016) 3300mAh Premium ",N/A,0,0,0,18.99,0,10.49,"05/04/18 01:00 AM",etrade_supply,16.47,16.34
+BT-BP-30293,"BinTEK Battery for Samsung Galaxy J5 (2016) 3100mAh Premium ",N/A,0,0,0,18.99,0,0,"05/04/18 01:20 AM",etrade_supply,16.47,16.34
+BTY-BKB-006,"Blackberry Bold 9780 9700 9000 Replacement Battery",N/A,0,1,0,3.95,3.49,1.99,"05/04/18 01:20 AM",etrade_supply,1.85,1.84
+BTY-COV-084,"LG Nitro P930 Back Battery Door Cover - Black",N/A,0,1,0,10.95,8.99,0.99,"05/04/18 01:20 AM",etrade_supply,11.3,11.21
+BTY-COV-106,"HTC Sensation Back Battery Cover","01/05/17 12:04 PM",0,0,5.44,9.126,7.89,6.29,"05/04/18 01:20 AM",etrade_supply,7.05,6.99
+BTY-COV-108,"HTC EVO 3D Battery Cover Back Door","03/25/16 11:23 AM",0,0,2.81,6.32,4.69,4.99,"05/04/18 01:20 AM",etrade_supply,5.63,5.58
+BTY-COV-112,"Midframe Bezel for Samsung Galaxy S3 i535 R530 -  Blue",N/A,0,39,0,8.95,6.99,0.99,"05/04/18 01:20 AM",etrade_supply,1.87,1.86
+BTY-COV-114,"Midframe Bezel for Samsung Galaxy S3 i747 T999 -  Blue","07/21/15 11:30 AM",0,11,2.75,6.1875,4.59,0.99,"05/04/18 01:20 AM",etrade_supply,5.25,5.21
+BTY-COV-116,"Midframe Bezel for Samsung Galaxy S3 L710 -  Blue",N/A,0,9,0,7.95,4.99,0.99,"05/04/18 01:40 AM",etrade_supply,5.24,5.2
+BTY-COV-1479,"Front Housing with Bezel Frame for Blackberry Q5-Black",N/A,0,4,3.42,7.182,5.69,0.99,"05/04/18 01:40 AM",etrade_supply,3.76,3.73
+BTY-COV-1481,"Front Housing with Bezel Frame for Blackberry Q5-Red",N/A,0,5,3.42,7.182,5.69,0.99,"05/04/18 02:00 AM",etrade_supply,3.76,3.73
+BTY-COV-1482,"Back Cover with Camera Lens for Blackberry Q5-Black","02/03/15 03:05 PM",0,4,4.56,8.664,7.39,0.99,"05/04/18 02:00 AM",etrade_supply,1.82,1.81
+BTY-COV-1483,"Back Cover with Camera Lens for Blackberry Q5-Red","02/03/15 03:05 PM",0,5,4.56,8.664,7.39,0.99,"05/04/18 02:00 AM",etrade_supply,5.7,5.65
+BTY-COV-1484,"Back Cover with Camera Lens for Blackberry Q5-White","02/03/15 03:05 PM",0,4,4.56,8.664,7.39,0.99,"05/04/18 02:00 AM",etrade_supply,1.79,1.78
+BTY-COV-1517,"Rear Battery Cover for Sony Xperia Z3 - Black","09/15/17 03:00 PM",1,0,3.06,7.119,5.59,0.99,"05/04/18 02:00 AM",etrade_supply,3.46,3.43
+BTY-COV-1520,"Rear Battery Cover for Sony Xperia Z3 - Green",N/A,1,1,2.56,5.76,4.29,0.99,"05/04/18 02:00 AM",etrade_supply,3.46,3.43
+BTY-COV-1523,"HTC Desire 610 Back cover Blue",N/A,0,0,6.15,10.7625,9.09,4.29,"05/04/18 02:20 AM",etrade_supply,4.73,4.69
+BTY-COV-1524,"HTC Desire 610 Back cover White",N/A,0,1,6.15,10.7625,9.09,0.99,"05/04/18 02:20 AM",etrade_supply,5.63,5.58
+BTY-COV-1529,"Back Battery Door Cover with Camera Lens for HTC ONE M8 831C with Verizon Logo - Gunmetal Gray",N/A,0,0,0,29.95,0,19.99,"05/04/18 02:20 AM",etrade_supply,22.87,22.69
+BTY-COV-1557,"Motorola Moto G XT1032 XT1031 XT1028 Rear Back Housing Frame","09/08/15 11:42 AM",0,0,6.99,12.23,0,4.99,"05/04/18 02:20 AM",etrade_supply,5.63,5.58
+BTY-COV-1579,"Battery Cover with NFC Wireless Charging Patch for LG G3 D850  AT&T - White","01/06/16 11:51 AM",0,11,7.78,14.14,11.49,0.99,"05/04/18 02:20 AM",etrade_supply,10.3,10.22
+BTY-COV-1580,"Battery Cover with NFC Wireless Charging for LG G3 - Gold","01/06/16 11:51 AM",0,1,7.78,14.14,11.49,0.99,"05/04/18 02:20 AM",etrade_supply,7.05,6.99
+SRN-SAM-1300,"Front Glass for Samsung Galaxy Note 3 - Jet Black (Premium)","02/13/17 02:13 PM",0,5,1.66,3.82,3.07,2.99,"05/04/18 02:20 AM",etrade_supply,10.76,10.67
+SRN-SAM-1306,"Front Glass for Samsung Galaxy S5 - White","04/11/17 01:30 PM",0,0,1.55,3.29,2.53,2.99,"05/04/18 02:40 AM",etrade_supply,6.15,6.1
+SRN-SAM-132,"LCD and Touch Screen Digitizer for Samsung Galaxy S3 - White","08/24/17 03:36 PM",0,0,43.48,76.11,55.99,47.09,"05/04/18 02:40 AM",etrade_supply,64.85,61.6
+SRN-SAM-1328,"Asus ZenFone 5 LCD With Digitizer Assembly - Black",N/A,1,1,14.52,21.78,19.69,19.99,"05/04/18 02:40 AM",etrade_supply,28.75,28.52
+SRN-SAM-1329,"Asus ZenFone 6 LCD With Digitizer Assembly - Black",N/A,0,2,19.28,27.956,25.69,21.99,"05/04/18 02:40 AM",etrade_supply,18.29,18.14
+SRN-SAM-1332,"LCD and Touch Screen Digitizer for Samsung Galaxy S6 Edge Plus - Silver","03/16/18 04:59 PM",0,2,165.15,227.36,216.49,189.99,"05/04/18 02:40 AM",etrade_supply,187.4,185.9
+SRN-SAM-1342,"LCD and Touch Screen Digitizer for Samsung Galaxy Alpha - White","01/05/16 02:21 PM",0,0,84.33,109.63,102.09,99.99,"05/04/18 03:00 AM",etrade_supply,106.8,105.95
+SRN-SAM-1349,"LCD and Touch Screen Digitizer with Frame for Samsung Galaxy Note Edge - White","02/29/16 12:46 PM",0,0,186.07,232.59,221.49,181.99,"05/04/18 03:00 AM",etrade_supply,251.39,249.38
+SRN-SAM-1350,"LCD and Touch Screen Digitizer for Samsung Galaxy Note Edge - White","12/19/16 03:26 PM",0,0,114.71,154.21,144.59,0,"05/04/18 03:00 AM",etrade_supply,205.68,204.03
+SRN-SAM-1358,"Front Glass for Samsung Galaxy Note 4  - Pink (Premium)",N/A,0,2,2.21,4.97,3.69,2.49,"05/04/18 03:00 AM",etrade_supply,7.67,7.61
+BTY-COV-1589,"Rear Housing for HTC One M8 - Amber Gold",N/A,0,1,14.28,21.42,19.29,19.99,"05/04/18 03:01 AM",etrade_supply,22.54,22.36
+BTY-COV-1590,"Rear Housing for HTC One M8 - Glacial Silver","01/05/17 12:04 PM",0,0,11.27,17.47,15.44,19.99,"05/04/18 03:01 AM",etrade_supply,22.54,22.36
+BTY-COV-1598,"Rear Housing for Samsung Galaxy Note 5 - Black Sapphire","02/09/18 04:16 PM",0,2,9.6,28.67,26.69,6.49,"05/04/18 03:20 AM",etrade_supply,32.58,32.32
+BTY-COV-160,"Rear Housing Frame for Samsung Galaxy S3 i535 - White","02/16/17 04:55 PM",0,55,0,4.95,3.89,0.99,"05/04/18 03:20 AM",etrade_supply,3.48,3.45
+BTY-COV-1601,"Asus Zenfone 2 Back Cover White",N/A,0,1,8.48,14.42,11.69,1.99,"05/04/18 03:20 AM",etrade_supply,9.89,9.81
+BTY-COV-1604,"Back Cover Replacement for Microsoft Lumia 640XL - Orange",N/A,0,5,3.33,6.99,5.49,1.99,"05/04/18 03:20 AM",etrade_supply,4.09,4.06
+BTY-COV-1605,"Back Cover Replacement for Microsoft Lumia 640XL - Black","03/15/18 01:59 PM",0,3,2.93,6.99,5.49,1.99,"05/04/18 03:20 AM",etrade_supply,4.14,4.11
+BTY-COV-1606,"Back Cover Replacement for Microsoft Lumia 640XL - Matte White",N/A,0,4,3.33,6.99,5.49,1.99,"05/04/18 03:20 AM",etrade_supply,4.14,4.11
+BTY-COV-1609,"Back Cover Replacement for Microsoft Lumia 640 - Orange",N/A,0,4,2.86,6.44,4.79,1.99,"05/04/18 03:20 AM",etrade_supply,5.05,5.01
+BTY-COV-1610,"Back Cover Replacement for Microsoft Lumia 640 - White",N/A,0,3,2.86,6.44,4.79,1.99,"05/04/18 03:20 AM",etrade_supply,5.05,5.01
+BTY-COV-1612,"Back Cover Replacement for Sony Xperia Z5 - White",N/A,0,5,1.77,4.07,3.29,1.99,"05/04/18 03:20 AM",etrade_supply,9.87,9.79
+BTY-COV-1613,"Back Cover Replacement for Sony Xperia Z5 - Graphite Black",N/A,0,4,1.77,4.07,3.29,1.99,"05/04/18 03:20 AM",etrade_supply,8.48,8.41
+BTY-COV-1614,"Back Cover Replacement for Sony Xperia Z5 - Gold",N/A,0,5,1.77,4.07,3.29,1.99,"05/04/18 03:20 AM",etrade_supply,9.87,9.79
+BTY-COV-1615,"Back Cover Replacement for Sony Xperia Z5 - Green",N/A,0,4,1.77,4.07,3.29,1.99,"05/04/18 03:20 AM",etrade_supply,9.87,9.79
+BTY-COV-1616,"Rear Housing for Samsung Galaxy S6 Edge - Gold Platinum",N/A,0,3,16.08,23.32,21.39,11.99,"05/04/18 03:20 AM",etrade_supply,31.32,31.07
+BTY-COV-1617,"Rear Housing for Samsung Galaxy S6 Edge - Black Sapphire",N/A,0,3,16.08,23.32,21.39,10.49,"05/04/18 03:20 AM",etrade_supply,31.32,31.07
+BTY-COV-1618,"Rear Housing for Samsung Galaxy S6 Edge - White Pearl",N/A,0,5,20.75,29.05,26.99,11.49,"05/04/18 03:20 AM",etrade_supply,32.56,32.3
+BTY-COV-1640,"Front Bezel Frame for LG G3 - Black","01/09/17 03:24 PM",0,46,5.3,9.35,7.89,8.99,"05/04/18 03:40 AM",etrade_supply,11.27,11.18
+BTY-COV-1642,"Front Bezel Frame for LG G3 - White","01/24/17 12:39 PM",0,4,4.9,9.35,7.89,0,"05/04/18 03:40 AM",etrade_supply,11.28,11.19
+BTY-COV-1645,"Midframe Chassis for Samsung Galaxy Note 4 N910A N910T - Black",N/A,0,0,0,14.99,0,10.99,"05/04/18 03:40 AM",etrade_supply,13.8,13.69
+BTY-COV-1646,"Midframe Chassis for Samsung Galaxy Note 4 N910A N910T - White",N/A,0,0,0,14.99,0,5.49,"05/04/18 03:40 AM",etrade_supply,17.27,17.13
+BTY-COV-1647,"Midframe Chassis for Samsung Galaxy Note 4 N910V N910P - Black","03/21/18 10:59 AM",0,4,10.93,19.99,0,14.19,"05/04/18 03:40 AM",etrade_supply,13.8,13.69
+BTY-COV-1648,"Midframe Chassis for Samsung Galaxy Note 4 N910V N910P - White","02/01/18 02:18 PM",0,3,11.29,16.99,0,14.49,"05/04/18 03:40 AM",etrade_supply,17.27,17.13
+BTY-COV-1661,"Back Cover Replacement for Motorola Droid Turbo",N/A,0,0,0,14.99,0,10.99,"05/04/18 04:00 AM",etrade_supply,12.08,11.98
+BTY-COV-1667,"Midframe for Galaxy S6 Edge G925V G925P - White","07/19/16 01:31 PM",0,1,17.53,25.42,23.39,9.99,"05/04/18 04:00 AM",etrade_supply,32.55,32.29
+BTY-COV-1668,"Midframe Replacement for Samsung Galaxy S6 Edge G925T G925A - White","08/29/17 02:19 PM",0,2,13.2,25.42,0,0,"05/04/18 04:00 AM",etrade_supply,32.56,32.3
+BTY-COV-1670,"Midframe Replacement for Samsung Galaxy S6 Edge G925T G925A - Gold",N/A,0,0,0,25.42,0,0,"05/04/18 04:00 AM",etrade_supply,31.44,31.19
+BTY-COV-1680,"Midframe Bezel for Samsung Galaxy S3 i747 T999 - Black",N/A,0,9,0,9.95,0,0.99,"05/04/18 04:01 AM",etrade_supply,5.25,5.21
+BTY-COV-1688,"BlackBerry Bold 9900 Replacement Battery Cover",N/A,0,0,0,6.99,0,2.99,"05/04/18 04:01 AM",etrade_supply,4.72,4.68
+SRN-SAM-1146,"LCD and Touch Screen Digitizer With Frame for Samsung Galaxy S3 L710 - Blue - New","01/12/17 11:46 AM",0,7,38,92.3,59.99,52.49,"05/04/18 04:01 AM",etrade_supply,84.57,83.89
+SRN-SAM-120,"LCD and Touch Screen Digitizer for Samsung Galaxy S2 - Black","01/17/17 12:00 PM",0,0,14.96,22.38,20.19,0,"05/04/18 04:01 AM",etrade_supply,30.44,30.2
+SRN-SAM-1240,"LCD and Touch Screen Digitizer for Samsung Galaxy Alpha - Black","12/23/15 11:16 AM",0,3,88.52,115.08,107.19,99.99,"05/04/18 04:01 AM",etrade_supply,116.56,115.63
+SRN-SAM-126,"LCD and Touch Screen Digitizer  for Samsung Galaxy S2 - White","06/21/16 04:24 PM",0,1,17.57,41.1,38.19,19.49,"05/04/18 04:20 AM",etrade_supply,41.25,40.92
+SRN-SAM-1281,"Front Glass for Samsung Galaxy Note 4  - Gold (Premium)","02/13/17 02:13 PM",0,20,1.8,16.99,3.33,3.99,"05/04/18 04:20 AM",etrade_supply,7.67,7.61
+SRN-SAM-1282,"Front Glass for Samsung Galaxy Note 4  - White (Premium)","03/01/17 10:09 AM",0,0,1.7,4,3.29,2.99,"05/04/18 04:20 AM",etrade_supply,3.84,3.81
+SRN-SAM-1290,"LCD and Touch Screen Digitizer for Samsung Galaxy Prevail LTE/Core Prime - White",N/A,0,0,21.62,30.268,28.19,0,"05/04/18 04:20 AM",etrade_supply,164.55,163.23
+SRN-SAM-1299,"Front Glass for Samsung Galaxy S5 - Black","04/24/17 11:45 AM",0,0,1.25,3.29,2.53,2.49,"05/04/18 04:20 AM",etrade_supply,6.15,6.1
+SRN-LGM-629,"LG K10 LCD and Touch Screen Digitizer with Frame K10 K420N K410 K430 MS428","03/19/18 10:24 AM",2,2,36.52,57.1863,51.99,49.99,"05/04/18 04:20 AM",etrade_supply,68.07,67.53
+SRN-LGM-632,"LCD and Touch Screen Digitizer Replacement with Frame for LG K7 - White","03/20/18 03:49 PM",2,1,20.46,36.72,34.1,26.99,"05/04/18 04:20 AM",etrade_supply,28.88,28.65
+BTY-COV-170,"Samsung Galaxy S4 i545 Rear Housing Frame - White","03/06/18 02:23 PM",0,2,3.48,6.91,5.49,3.99,"05/04/18 04:40 AM",etrade_supply,3.74,3.71
+BTY-COV-172,"Rear Housing for Samsung Galaxy Note 2 i605  - White","12/11/17 12:12 PM",0,2,3.68,9.59,8.29,0.99,"05/04/18 04:40 AM",etrade_supply,6.92,6.86
+BTY-COV-182,"Rear Housing for Samsung Galaxy Note 2 i605 - Gray","11/30/15 01:02 PM",0,1,5.33,9.59,8.29,0.99,"05/04/18 04:40 AM",etrade_supply,6.92,6.86
+BTY-COV-228,"Motorola Atrix HD MB886 Back Housing",N/A,0,0,0,8.95,4.99,2.89,"05/04/18 05:00 AM",etrade_supply,3.28,3.25
+BTY-COV-230,"Motorola Atrix HD MB886 Front Frame - Black",N/A,0,0,0,8.95,3.99,2.89,"05/04/18 05:00 AM",etrade_supply,3.28,3.25
+BTY-COV-312,"Motorola Droid M XT907 Front Lower Trim Frame Cover - White",N/A,0,0,0,5.95,3.99,1.49,"05/04/18 05:00 AM",etrade_supply,1.74,1.73
+BTY-COV-370,"HTC ONE SV Back Battery Door Cover Red",N/A,0,8,0,4.95,0,0.49,"05/04/18 05:00 AM",etrade_supply,5.63,5.58
+BTY-COV-372,"HTC ONE SV Back Housing",N/A,0,27,0,9.95,0,0.49,"05/04/18 05:00 AM",etrade_supply,4.73,4.69
+BTY-COV-374,"Motorola MOTO X XT1060 Midframe Housing Upper",N/A,0,3,0,9.95,0,0.49,"05/04/18 05:00 AM",etrade_supply,7.05,6.99
+BTY-COV-376,"Motorola MOTO X XT1060 Midframe Housing Lower",N/A,0,3,0,7.95,0,0.49,"05/04/18 05:20 AM",etrade_supply,11.3,11.21
+BTY-COV-380,"Motorola MOTO X XT1060 Back Battery Door Cover Black",N/A,0,0,0,11.95,0,1.99,"05/04/18 05:20 AM",etrade_supply,4.73,4.69
+BTY-COV-392,"LG Google Nexus 4 E960 Back Battery Door Cover with NFC","09/16/15 12:52 PM",0,2,9.79,16.643,13.49,0.49,"05/04/18 05:20 AM",etrade_supply,12.69,12.59
+BTY-COV-402,"Samsung Galaxy S2 EPIC 4G D710 Rear Housing",N/A,0,19,0,8.95,0,0.49,"05/04/18 05:20 AM",etrade_supply,3.21,3.18
+BTY-COV-440,"Midframe Bezel for Samsung Galaxy S3 i535 R530 - Brown",N/A,0,27,0,7.95,4.99,0.99,"05/04/18 05:20 AM",etrade_supply,5.25,5.21
+BTY-COV-442,"Midframe Bezel for Samsung Galaxy S3 i535 R530 - Black",N/A,0,7,0,7.95,5.99,0.99,"05/04/18 05:20 AM",etrade_supply,1.87,1.86
+SRN-NOK-066,"LCD + Touch Screen Digitizer with Frame for Nokia Lumia 1020 Black","11/02/17 03:22 PM",0,2,51.39,70.42,64.19,79.97,"05/04/18 05:20 AM",etrade_supply,73.21,72.62
+SRN-NOK-070,"Touch Screen Digitizer for Nokia Lumia 1520 Black","10/17/16 11:40 AM",0,0,17.64,25.58,23.49,8.97,"05/04/18 05:20 AM",etrade_supply,19.4,19.24
+SRN-NOK-072,"LCD + Touch Screen Digitizer for Nokia Lumia 925 Black","07/13/16 11:32 AM",0,6,34.63,48.3,43.99,49.99,"05/04/18 05:20 AM",etrade_supply,58.94,58.47
+SRN-NOK-074,"LCD + Touch Screen Digitizer for Nokia Lumia 1020 Black","04/12/17 04:26 PM",0,0,51.13,70.21,63.97,59.99,"05/04/18 05:20 AM",etrade_supply,70.03,69.47
+SRN-NOK-078,"LCD + Touch Screen Digitizer with Frame for Nokia Lumia 1320 Black","02/29/16 12:14 PM",0,0,43.52,61.63,56.09,49.97,"05/04/18 05:20 AM",etrade_supply,50.52,50.12
+SRN-NOK-082,"Touch Screen Digitizer for Nokia Lumia 520 Black","05/28/15 12:44 PM",0,5,5.9,10.62,9.19,5.99,"05/04/18 05:20 AM",etrade_supply,5.63,5.58
+SRN-NOK-084,"Touch Screen Digitizer for Nokia Lumia 625 Black","09/15/15 01:48 PM",0,6,5.84,10.512,9.09,3.99,"05/04/18 05:40 AM",etrade_supply,6.23,6.18
+SRN-NOK-086,"Touch Screen Digitizer for Nokia Lumia 820 Black","03/28/16 12:37 PM",0,4,4.19,9.54,8.29,4.49,"05/04/18 05:40 AM",etrade_supply,10.93,10.84
+SRN-NOK-088,"Touch Screen Digitizer for Nokia Lumia 920 Black","07/10/17 01:59 PM",0,2,6.22,11.2525,9.49,6.49,"05/04/18 05:40 AM",etrade_supply,11.75,11.66
+SRN-NOK-153,"Nokia Lumia 1520 LCD With Digitizer Assembly","10/05/17 01:31 PM",0,2,39.65,53.64,48.76,47.49,"05/04/18 05:40 AM",etrade_supply,49.09,48.7
+SRN-NOK-159,"LCD and Touch Screen Digitizer with Frame for Microsoft Lumia 640XL","03/06/17 11:11 AM",0,0,28.97,41.36,37.69,0,"05/04/18 05:40 AM",etrade_supply,36.1,35.81
+SRN-NOK-160,"LCD and Touch Screen Digitizer with Frame for Nokia Lumia 640","08/10/17 02:42 PM",0,0,25.47,41.62,38.65,0,"05/04/18 05:40 AM",etrade_supply,36.1,35.81
+SRN-NOK-165,"LCD and Touch Screen Digitizer for Nokia Lumia 925 - Black",N/A,0,0,0,49.99,0,0,"05/04/18 05:40 AM",etrade_supply,58.94,58.47
+SRN-SAM-018,"LCD and Touch Screen Digitizer for Samsung Epic Touch 2 - White","11/07/16 10:21 AM",0,0,11.98,17.98,15.89,0,"05/04/18 05:40 AM",etrade_supply,17.79,17.65
+SRN-SAM-036,"LCD and Touch Screen Digitizer for Samsung Galaxy Nexus - Black","05/06/15 10:49 AM",0,3,66.51,89.7885,49.99,48.99,"05/04/18 05:40 AM",etrade_supply,70.29,69.73
+SRN-SAM-042,"LCD and Touch Screen Digitizer With Frame for Samsung Galaxy Note 2 i317 T889 - Gray","02/20/17 01:27 PM",0,0,70.08,91.25,84.99,59.99,"05/04/18 05:40 AM",etrade_supply,72.17,71.59
+SRN-SAM-043,"LCD and Touch Screen Digitizer With Frame for Samsung Galaxy Note 2 i605 L900 - Gray","06/05/17 02:22 PM",0,0,52.33,115.34,84.99,55.99,"05/04/18 05:40 AM",etrade_supply,72.17,71.59
+BTY-COV-458,"Back Battery Door Cover for Samsung Galaxy S3 i747 - Red","06/04/15 12:09 PM",0,0,2.76,6.21,4.59,0,"05/04/18 06:00 AM",etrade_supply,4.17,4.14
+BTY-COV-468,"Midframe Bezel for Samsung Galaxy S3 i9300 - Silver",N/A,0,4,0,6.95,0,0.99,"05/04/18 06:00 AM",etrade_supply,6.15,6.1
+BTY-COV-476,"Rear Housing for Samsung Galaxy Note 2 N7105 LTE - Gray",N/A,0,0,0,9.95,0,2.99,"05/04/18 06:00 AM",etrade_supply,7.75,7.69
+BTY-COV-478,"Rear Housing With Black Lens for Samsung Galaxy Note 3 N900A ATT  Black ","01/09/17 04:49 PM",1,2,5.67,10.73,9.29,0,"05/04/18 06:00 AM",etrade_supply,6.91,6.85
+BTY-COV-480,"Rear Housing With White Lens for Samsung Galaxy Note 3 N900A N900T  Black ","06/19/17 03:17 PM",0,1,4.94,11.27,9.49,0,"05/04/18 06:00 AM",etrade_supply,6.91,6.85
+BTY-COV-494,"HTC Inspire Back Battery Door Cover","03/25/15 01:12 PM",0,0,2.63,5.9175,4.39,0,"05/04/18 06:20 AM",etrade_supply,2.87,2.85
+BTY-COV-504,"Rear Housing for Samsung Galaxy S5 - White","04/25/18 04:13 PM",1,4,2.54,9.25,7.79,3.99,"05/04/18 06:20 AM",etrade_supply,10.74,10.65
+BTY-COV-514,"Midframe Bezel for Samsung Galaxy S4 Mini - White",N/A,1,7,0,11.95,0,0.99,"05/04/18 06:40 AM",etrade_supply,6.25,6.2
+BTY-COV-516,"Samsung Galaxy S4 Mini i9195 Rear Housing White",N/A,0,3,0,7.95,0,0.99,"05/04/18 06:40 AM",etrade_supply,5.24,5.2
+BTY-COV-522,"Midframe Bezel for Samsung Galaxy S3 Mini - White","09/01/16 12:00 PM",0,0,2.58,7.791,6.19,0,"05/04/18 06:40 AM",etrade_supply,5.25,5.21
+BTY-COV-526,"Samsung Galaxy S3 Mini i8190 Rear Housing White",N/A,0,8,0,5.95,0,0.99,"05/04/18 06:40 AM",etrade_supply,4.54,4.5
+BTY-COV-536,"Sony Xperia Z1 L39h Front Housing - White",N/A,0,7,0,7.95,0,0.99,"05/04/18 06:40 AM",etrade_supply,4.73,4.69
+BTY-COV-538,"Sony Xperia Z1 L39h Battery Door with Xperia Logo Black","05/11/17 02:29 PM",0,3,2.35,6.909,5.49,0.99,"05/04/18 06:40 AM",etrade_supply,4.08,4.05
+BTY-COV-540,"Sony Xperia Z1 L39h Battery Door with Xperia Logo White","12/18/15 12:18 PM",0,0,1.87,6.35,4.69,0,"05/04/18 06:40 AM",etrade_supply,4.08,4.05
+BTY-COV-542,"Sony Xperia Z1 L39h Rear Housing - Black","05/30/17 03:57 PM",0,0,2.42,5.78,4.29,0,"05/04/18 06:40 AM",etrade_supply,5.63,5.58
+BTY-COV-544,"Sony Xperia Z1 L39h Rear Housing - White",N/A,0,0,0,6.95,0,0,"05/04/18 06:40 AM",etrade_supply,5.63,5.58
+BTY-COV-546,"Sony Xperia Z L36h Front Housing - Black",N/A,0,6,0,8.95,0,0.99,"05/04/18 06:40 AM",etrade_supply,4.73,4.69
+BTY-COV-548,"Sony Xperia Z L36h Front Housing - White",N/A,0,9,0,8.95,0,0.99,"05/04/18 06:40 AM",etrade_supply,4.73,4.69
+BTY-COV-550,"LG G Flex D950 D955 D958 D959 F340 LS995 Back Housing Cover","01/18/16 10:44 AM",2,11,7.96,13.63,10.99,0.99,"05/04/18 06:40 AM",etrade_supply,14.24,14.13
+BTY-COV-552,"LG G2 Mini D620 Back Battery Door Cover LG Logo White",N/A,0,8,0,22.95,0,0.99,"05/04/18 07:00 AM",etrade_supply,5.65,5.6
+BTY-COV-554,"LG G2 Mini D620 Back Battery Door Cover LG Logo Black",N/A,0,9,0,22.95,0,0.99,"05/04/18 07:00 AM",etrade_supply,5.65,5.6
+BTY-COV-556,"Sony Xperia Z L36h Back Battery Cover Xperia Logo White",N/A,0,8,0,4.95,0,0.99,"05/04/18 07:00 AM",etrade_supply,4.08,4.05
+BTY-COV-558,"Sony Xperia Z L36h Back Battery Cover Xperia Logo Black","01/05/17 12:04 PM",0,2,2.52,5.67,4.16,0.99,"05/04/18 07:00 AM",etrade_supply,8.25,8.18
+BTY-COV-560,"Sony Xperia Z1 L39h Front Housing - Purple",N/A,0,4,0,7.95,0,0.99,"05/04/18 07:00 AM",etrade_supply,6.29,6.24
+BTY-COV-562,"Sony Xperia Z1 L39h Front Housing Bezel - Black",N/A,0,6,0,7.95,0,0.99,"05/04/18 07:00 AM",etrade_supply,4.73,4.69
+BTY-COV-572,"Battery Cover with NFC-QI Wireless Charging Patch for LG G3 D850 AT&T - Black","09/16/15 12:52 PM",0,0,6.63,11.6025,9.79,0,"05/04/18 07:00 AM",etrade_supply,8.46,8.39
+BTY-COV-576,"Battery Cover with NFC-QI Wireless Charging Patch for LG G3 D850 AT&T - White","01/18/16 10:44 AM",0,0,6.42,11.85,9.99,0,"05/04/18 07:00 AM",etrade_supply,10.3,10.22
+BTY-COV-580,"Battery Cover with NFC-QI Wireless Charging Verizon for LG G3 VS985 - White","03/25/15 01:12 PM",0,1,11.57,17.9335,15.89,0,"05/04/18 07:20 AM",etrade_supply,11.3,11.21
+BTY-COV-594,"Back Battery Door Cover with Vibrator for LG Google Nexus 5 D820 D821 Black","04/24/17 11:45 AM",0,1,6.05,17.25,15.29,0,"05/04/18 07:20 AM",etrade_supply,12.68,12.58
+BTY-COV-596,"Back Battery Door Cover with Vibrator for LG Google Nexus 5 D820 D821 White","01/06/16 11:51 AM",0,1,11.43,17.25,15.29,0,"05/04/18 07:20 AM",etrade_supply,11.28,11.19
+BTY-COV-602,"Back Battery Door Cover with Antenna for HTC One X+ S728e",N/A,0,5,0,15.95,9.99,2.99,"05/04/18 07:20 AM",etrade_supply,9.9,9.82
+BTY-COV-604,"Back Battery Door Cover with Camera Lens for HTC One M8 831C Gunmetal Gray","12/10/15 01:52 PM",0,0,16.94,24.56,22.59,0,"05/04/18 07:20 AM",etrade_supply,22.54,22.36
+BTY-COV-608,"Rear Housing Frame with Loudspeaker Headphone Jack for Samsung Galaxy S5","03/15/18 01:59 PM",2,0,2.65,11.34,9.59,5.99,"05/04/18 07:40 AM",etrade_supply,7.68,7.62
+BTY-COV-610,"Back Battery Door Cover with Volume Power Buttons for HTC One M7 801e Silver","06/06/16 03:54 PM",0,0,7.42,13.787,11.19,1.99,"05/04/18 07:40 AM",etrade_supply,22.54,22.36
+BTY-COV-614,"Back Battery Door Cover with Volume Power Buttons for HTC One M7 801e Gold","01/06/16 01:04 PM",0,4,11.09,18.41,16.29,1.99,"05/04/18 07:40 AM",etrade_supply,20.83,20.66
+BTY-HTC-006,"HTC Amaze 4G BG86100 Replacement Battery",N/A,0,0,0,6.95,2.99,0,"05/04/18 07:40 AM",etrade_supply,7.82,7.76
+BTY-HTC-036,"HTC Desire S Freestyle BB96100 Replacement Battery",N/A,0,37,0,6.95,2.99,0,"05/04/18 07:40 AM",etrade_supply,7.82,7.76
+BTY-HTC-042,"HTC Hero S BH11100 Replacement Battery",N/A,0,1,0,6.95,2.99,0,"05/04/18 07:40 AM",etrade_supply,9.84,9.76
+BTY-HTC-092,"HTC Wildfire S BD29100 Battery",N/A,0,155,0,11.95,2.99,0.99,"05/04/18 07:40 AM",etrade_supply,3.94,3.91
+BTY-HTC-096,"Replacement Battery for HTC Raider 4G Holiday X710E G19 G20","02/18/15 04:23 PM",0,36,0,12.95,4.99,0,"05/04/18 07:40 AM",etrade_supply,9.02,8.95
+BTY-LG-052,"LG Optimus G Pro E980 E985 F240K BL-48TH Replacement Battery 4000 mAH",N/A,0,0,0,19.95,4.99,0,"05/04/18 07:40 AM",etrade_supply,11.75,11.66
+SRN-MOT-638,"Motorola Moto E 2nd Gen XT1505 XT1511 XT1524 XT1527 XT1528 LCD With Digitizer - Black","04/25/18 10:42 AM",2,4,13.99,21.02,18.99,16.99,"05/04/18 07:40 AM",etrade_supply,21.99,21.81
+SRN-MOT-639,"Motorola Droid Ultra Droid Maxx XT1080 XT1080M LCD With Digitizer and Frame - Black","04/25/18 10:42 AM",5,1,44.3,99.99,55.39,59.89,"05/04/18 07:40 AM",etrade_supply,71.03,70.46
+SRN-MOT-641,"Motorola Moto G XT1031 XT1032 XT1033 LCD Touch Screen Assembly w/ Frame Black","12/19/17 03:54 PM",0,2,18.12,31.7,29.49,20.99,"05/04/18 07:40 AM",etrade_supply,32.43,32.17
+SRN-MOT-660,"LCD and Touch Screen Digitizer for Motorola Moto Z Droid XT1650-01 - Black","03/27/18 03:10 PM",6,7,88.63,137.96,129.3,109.99,"05/04/18 08:00 AM",etrade_supply,127.83,126.81
+SRN-MOT-665,"LCD and Digitizer Replacement with Frame for Motorola Droid Turbo XT1254","04/25/18 10:42 AM",3,0,41.11,144.99,0,54.99,"05/04/18 08:00 AM",etrade_supply,146.42,145.25
+SRN-MOT-666,"LCD and Digitizer Replacement for Droid Maxx 2 XT1565 - Black","04/09/18 04:29 PM",0,2,22.56,42.99,0,29.99,"05/04/18 08:00 AM",etrade_supply,46.54,46.17
+SRN-MOT-667,"LCD and Digitizer Replacement for Droid Maxx 2 XT1565 - White",N/A,0,0,0,42.99,0,28.99,"05/04/18 08:00 AM",etrade_supply,46.53,46.16
+SRN-MOT-668,"LCD and Digitizer Replacement for Droid Ultra Maxx XT1080 XT1080M",N/A,0,0,0,49.99,0,40.99,"05/04/18 08:00 AM",etrade_supply,61.23,60.74
+SRN-MOT-669,"LCD and Digitizer Replacement for Motorola Moto G3 - Black",N/A,0,0,0,28.99,0,18.99,"05/04/18 08:00 AM",etrade_supply,28.86,28.63
+SRN-MOT-670,"LCD and Digitizer Replacement for Motorola Moto G3 - White",N/A,0,0,0,28.99,0,18.99,"05/04/18 08:00 AM",etrade_supply,28.78,28.55
+SRN-MOT-671,"LCD and Digitizer Replacement for Motorola Moto G2 - Black",N/A,0,0,0,24.99,0,17.99,"05/04/18 08:00 AM",etrade_supply,26.45,26.24
+SRN-MOT-673,"LCD and Digitizer Replacement with Frame for Motorola Moto E XT1021 XT1022 XT1025 - Black",N/A,0,0,0,19.99,0,0,"05/04/18 08:00 AM",etrade_supply,24.58,24.38
+SRN-MOT-674,"LCD and Digitizer Replacement with Frame for Motorola Moto X Pure Edition XT1575 - Black","12/21/16 01:09 PM",0,0,0,56.95,0,43.99,"05/04/18 08:00 AM",etrade_supply,62.45,61.95
+SRN-MOT-675,"LCD and Digitizer Replacement with Frame for Motorola Moto X Pure Edition XT1575 - White",N/A,0,0,38.47,89.99,0,47.89,"05/04/18 08:00 AM",etrade_supply,62.45,61.95
+SRN-MOT-676,"LCD and Digitizer Replacement with Frame for Motorola Moto X Play - Black",N/A,0,0,0,49.99,0,32.99,"05/04/18 08:00 AM",etrade_supply,44.5,44.14
+SRN-MOT-677,"LCD and Digitizer Replacement with Frame for Motorola Moto X Play - White",N/A,0,0,0,49.99,0,32.99,"05/04/18 08:00 AM",etrade_supply,43.32,42.97
+SRN-MOT-678,"LCD and Digitizer Replacement with Frame for Motorola Moto X (2nd Gen) - Black","03/06/18 02:23 PM",0,2,51.74,134.99,0,94.99,"05/04/18 08:20 AM",etrade_supply,117.45,116.51
+SRN-MOT-679,"LCD and Digitizer Replacement with Frame for Motorola Moto X (2nd Gen) - White","10/05/17 01:31 PM",0,2,66.93,134.99,0,78.99,"05/04/18 08:20 AM",etrade_supply,127.84,126.82
+SRN-MOT-680,"LCD and Touch Screen Digitizer for Motorola Moto Z Play Droid XT1635-01 ZT1635-02 - Black","04/17/18 02:12 PM",4,0,80.1,137.96,129.3,104.99,"05/04/18 08:20 AM",etrade_supply,120.86,119.89
+SRN-MOT-681,"LCD and Touch Screen Digitizer for Motorola Moto Z Play Droid XT1635-01 ZT1635-02 - White","12/12/16 11:19 AM",0,0,109.14,139.15,130.49,97.99,"05/04/18 08:20 AM",etrade_supply,120.86,119.89
+SRN-MOT-686,"LCD and Touch Screen Digitizer with Frame for Motorola Moto X Force - Black","06/23/17 03:30 PM",0,3,79.97,144.99,0,89.97,"05/04/18 08:20 AM",etrade_supply,146.42,145.25
+SRN-NOK-006,"Nokia Lumia 610 LCD Screen",N/A,0,15,0,36.95,14.89,14.97,"05/04/18 08:20 AM",etrade_supply,9.35,9.28
+SRN-NOK-036,"Nokia Lumia 800 LCD + Touch Screen Digitizer - Black",N/A,1,0,0,81.95,59.39,14.97,"05/04/18 08:20 AM",etrade_supply,15.59,15.47
+SRN-NOK-042,"Nokia Lumia 900 LCD + Touch Screen Digitizer - Black","10/17/16 11:40 AM",1,0,31.27,44.22,40.29,32.97,"05/04/18 08:20 AM",etrade_supply,36.26,35.97
+FLX-MOT-526,"Front Camera Replacement for Motorola Droid Turbo 2",N/A,0,0,0,39.99,0,4.99,"05/04/18 08:20 AM",etrade_supply,13.85,13.74
+FLX-MOT-524,"Rear Camera Replacement for Motorola Droid Turbo 2",N/A,0,0,0,29.99,0,6.99,"05/04/18 08:20 AM",etrade_supply,18.34,18.19
+FLX-LGM-030,"LG G2X Optimus 2X P990 P999 Sim Card Memory Card Flex Cable","07/07/15 11:42 AM",0,5,2.65,5.9625,4.39,0.99,"05/04/18 08:20 AM",etrade_supply,11.3,11.21
+FLX-LGM-160,"LG Galaxy Nexus 4 E960 Charging Port Flex Cable","10/05/15 01:46 PM",0,1,2.98,6.705,4.99,0.99,"05/04/18 08:40 AM",etrade_supply,4.69,4.65
+FLX-LGM-162,"LG Optimus G E970 Charging Port Mic Mirophone Flex Cable",N/A,0,11,0,6.95,4.69,0.99,"05/04/18 08:40 AM",etrade_supply,3.76,3.73
+FLX-LGM-164,"LG Optimus L9 P769 Sim Memory Card Volume Flex Cable","08/24/15 10:48 AM",0,4,2.68,6.03,4.49,0.99,"05/04/18 08:40 AM",etrade_supply,3.76,3.73
+FLX-LGM-168,"LG Optimus 4X HD P880 Sim Memory Card Volume Flex Cable with Vibrator","01/07/16 12:18 PM",0,3,2.67,6.01,4.49,0.99,"05/04/18 08:40 AM",etrade_supply,5.64,5.59
+FLX-LGM-172,"LG Escape P870 Sim Memory Card Flex Cable REV A",N/A,0,19,0,9.95,7.59,0.99,"05/04/18 08:40 AM",etrade_supply,7.5,7.44
+FLX-LGM-176,"LG Galaxy Nexus 4 E960 Loudspeaker Module","08/07/15 02:32 PM",0,5,1.95,4.485,3.69,0.99,"05/04/18 08:40 AM",etrade_supply,6.3,6.25
+FLX-LGM-178,"LG Optimus G LS970 E970 Audio Headphone Jack Flex","05/13/15 01:39 PM",0,3,1.74,4.002,3.29,0.99,"05/04/18 08:40 AM",etrade_supply,3.76,3.73
+FLX-LGM-180,"LG Galaxy Nexus 4 E960 Front Camera","08/07/15 02:32 PM",0,7,2.27,5.1075,3.79,0.99,"05/04/18 08:40 AM",etrade_supply,3.16,3.13
+FLX-LGM-182,"LG Galaxy Nexus 4 E960 Back Camera",N/A,0,2,0,9.95,7.59,0.99,"05/04/18 08:40 AM",etrade_supply,6.79,6.74
+FLX-LGM-184,"LG Optimus G E970 Loudspeaker Module",N/A,0,14,0,8.95,6.39,0.99,"05/04/18 08:40 AM",etrade_supply,4.69,4.65
+FLX-LGM-186,"LG Escape P870 Audio Headphone Jack Flex Cable",N/A,0,3,0,7.95,5.19,0.99,"05/04/18 08:40 AM",etrade_supply,6.79,6.74
+FLX-LGM-188,"LG Optimus L7 P700 Charging Port Flex Cable and Microphone with Home Key Button",N/A,0,4,0,8.95,6.49,0.99,"05/04/18 08:40 AM",etrade_supply,6.79,6.74
+FLX-LGM-190,"LG Spectrum 2 VS930 Charging Port Flex Cable","09/26/16 11:32 AM",0,6,2.78,5.6925,4.19,0.99,"05/04/18 08:40 AM",etrade_supply,4.69,4.65
+FLX-LGM-192,"LG Splendor US730 Charging Port Flex Cable with Home Key Button",N/A,0,25,0,5.95,3.89,0.99,"05/04/18 08:40 AM",etrade_supply,5.96,5.91
+FLX-LGM-196,"LG Optimus L9 P769 Charging Port Flex Cable","01/05/16 02:21 PM",0,4,2.68,5.85,4.29,0.99,"05/04/18 08:40 AM",etrade_supply,4.69,4.65
+FLX-LGM-200,"LG Optimus G Pro E980 Charging Dock Port Connector Flex Cable","01/24/18 11:42 AM",0,0,3.39,9.044,7.69,7.99,"05/04/18 08:40 AM",etrade_supply,6.79,6.74
+FLX-LGM-286,"LG Optimus G LS970 Wifi and Bluetooth Flex",N/A,0,23,0,6.95,4.59,0.99,"05/04/18 09:00 AM",etrade_supply,1.49,1.48
+FLX-LGM-294,"LG Optimus G LS970 Loudspeaker Flex",N/A,0,26,0,6.95,4.49,0.99,"05/04/18 09:00 AM",etrade_supply,1.8,1.79
+FLX-LGM-296,"LG Optimus G LS970 Rear Component Housing",N/A,0,32,0,14.95,12.59,0.99,"05/04/18 09:00 AM",etrade_supply,6.79,6.74
+FLX-LGM-298,"LG Optimus G LS970 Volume Key Flex Cable","09/15/15 01:34 PM",0,5,1.57,3.611,2.99,0.99,"05/04/18 09:00 AM",etrade_supply,1.26,1.25
+FLX-LGM-302,"LG Optimus G LS970 Charging Port Flex","11/05/15 12:03 PM",0,4,3.38,7.098,5.59,0.99,"05/04/18 09:00 AM",etrade_supply,1.8,1.79
+FLX-LGM-336,"LG Optimus G2 Verizon VS980 Loudspeaker Flex","01/26/16 01:44 PM",0,1,5.74,10.5525,8.89,0.99,"05/04/18 09:00 AM",etrade_supply,5.65,5.6
+FLX-LGM-360,"LG Optimus G2 Verizon VS980 Charging Port Headphone Jack Volume Flex","09/26/17 10:48 AM",0,4,4.82,10.548,9.09,0.99,"05/04/18 09:20 AM",etrade_supply,9.88,9.8
+FLX-LGM-386,"LG Optimus G2 D800 D801 D803 Charging Port Headphone Jack Mic Flex Cable","01/17/17 02:58 PM",0,1,6.89,12.06,10.13,0.99,"05/04/18 09:20 AM",etrade_supply,7.05,6.99
+FLX-LGM-420,"LG Optimus G ATT E970 Rear Component Housing",N/A,0,12,0,15.95,13.69,0.99,"05/04/18 09:20 AM",etrade_supply,14.13,14.02
+FLX-LGM-426,"LG Venice LG730 Power Button Flash Earpiece Speaker Headphone Jack Flex Cable",N/A,0,243,0,9.95,7.29,0.99,"05/04/18 09:20 AM",etrade_supply,5.63,5.58
+FLX-LGM-452,"LG Google Nexus 4 E960 Vibrator Motor","03/18/15 10:49 AM",0,4,1.29,3.096,2.39,0.99,"05/04/18 09:20 AM",etrade_supply,1.92,1.9
+FLX-LGM-458,"LG Google Nexus 4 E960 Sim Card Tray","10/03/16 11:02 AM",0,2,2.1,4.95,3.69,0.99,"05/04/18 09:20 AM",etrade_supply,2.61,2.59
+FLX-LGM-476,"LG Optimus G Pro E980 E985 E986 Ear Piece Speaker","11/05/15 12:03 PM",0,5,1.47,3.528,2.79,0.99,"05/04/18 09:20 AM",etrade_supply,1.26,1.25
+FLX-LGM-504,"LG Viper LS840 4G LTE Power Earpiece Speaker Headphone Jack Flex",N/A,0,3,0,11.95,0,0.99,"05/04/18 09:20 AM",etrade_supply,4.69,4.65
+FLX-LGM-510,"LG Optimus G2 VS980 LS980 D800 D801 D803 D805 Proximity Sensor Flex","07/07/15 11:42 AM",1,3,4.12,7.828,6.59,0.99,"05/04/18 09:20 AM",etrade_supply,5.93,5.88
+FLX-LGM-512,"LG Google Nexus 5 D820 D821 WiFi Antenna Cable Wire - Black","01/17/17 02:58 PM",0,7,1.48,3.726,3.09,1.49,"05/04/18 09:40 AM",etrade_supply,1.12,1.11
+FLX-LGM-514,"LG Google Nexus 5 D820 D821 GPS Antenna Cable Wire - White","04/19/16 10:51 AM",0,19,0,6.95,4.19,0.99,"05/04/18 09:40 AM",etrade_supply,1.12,1.11
+FLX-LGM-518,"LG Google Nexus 5 D820 D821 Back Facing Rear Camera Flex Cable","11/19/15 12:09 PM",0,6,5.44,10.098,8.79,8.49,"05/04/18 09:40 AM",etrade_supply,12.69,12.59
+FLX-LGM-520,"LG Google Nexus 5 D820 D821 Charging Port Flex Cable","03/21/18 03:19 PM",0,3,6.41,16.99,9.59,8.09,"05/04/18 09:40 AM",etrade_supply,8.6,8.53
+FLX-LGM-522,"LG Google Nexus 5 D820 D821 Earpiece Speaker Module","06/12/17 01:03 PM",1,7,1.02,3.528,2.79,1.19,"05/04/18 09:40 AM",etrade_supply,2.48,2.46
+FLX-LGM-524,"LG Google Nexus 5 D820 D821 Front Facing Camera Flex Cable","08/07/15 02:32 PM",0,2,2.76,6.21,4.59,5.79,"05/04/18 09:40 AM",etrade_supply,10.03,9.95
+FLX-LGM-526,"LG Google Nexus 5 D820 D821 Loudspeaker Flex Cable","07/03/17 12:08 PM",0,1,2.44,9.44,7.99,2.49,"05/04/18 09:40 AM",etrade_supply,3.54,3.51
+FLX-LGM-534,"LG Optimus G PRO E980 Front Camera Flex","02/29/16 12:01 PM",0,3,2.48,5.58,4.09,0.99,"05/04/18 09:40 AM",etrade_supply,2.59,2.57
+FLX-LGM-538,"LG Optimus G PRO E980 Earpiece Speaker Flex","06/13/16 11:28 AM",0,0,1.33,3.504,2.79,0,"05/04/18 09:40 AM",etrade_supply,1.26,1.25
+FLX-LGM-540,"LG Optimus G PRO E980 Headphone Jack Flex","03/07/16 04:22 PM",0,0,1.43,3.749,3.09,0.79,"05/04/18 10:00 AM",etrade_supply,3.07,3.05
+FLX-LGM-544,"LG Optimus G PRO E980 Vibrator Motor Flex",N/A,0,3,0,5.95,0,0.99,"05/04/18 10:00 AM",etrade_supply,1.92,1.9
+FLX-LGM-550,"LG Optimus G PRO E980 SD and Sim Card Flex","04/13/16 01:49 PM",0,0,4.39,7.771,6.59,0,"05/04/18 10:00 AM",etrade_supply,9.49,9.41
+FLX-LGM-552,"LG Optimus G PRO E980 Home Button Charging Port Flex","01/24/18 11:42 AM",2,15,3.74,7.938,6.29,0.99,"05/04/18 10:00 AM",etrade_supply,5.63,5.58
+FLX-LGM-564,"LG G2 Optimus G D800 D801 D802 D803 D805 LS980 VS980 Sim Card Holder Tray White","07/03/17 12:08 PM",0,2,1.99,6.39,4.69,0.99,"05/04/18 10:00 AM",etrade_supply,2.73,2.71
+FLX-LGM-569,"LG Optimus 4X HD P880 Sim Memory Card Volume Flex Cable",N/A,0,2,0,10.95,0,0.99,"05/04/18 10:00 AM",etrade_supply,5.64,5.59
+FLX-LGM-570,"Rear Camera Flex Cable for LG G3","12/02/16 03:29 PM",0,1,5.29,10.01,8.69,3.49,"05/04/18 10:00 AM",etrade_supply,7.05,8.39
+FLX-LGM-571,"Charging Port for LG G3","05/16/17 02:18 PM",0,0,1.05,3.95,0,0.99,"05/04/18 10:20 AM",etrade_supply,1.12,1.11
+FLX-LGM-574,"Front Camera for LG G3","02/16/17 04:55 PM",0,3,6.93,13.583,10.99,2.99,"05/04/18 10:20 AM",etrade_supply,8.48,8.41
+FLX-LGM-575,"Earpiece for LG G3","03/15/18 01:59 PM",0,2,0.55,5.1075,3.79,0.99,"05/04/18 10:20 AM",etrade_supply,2.52,2.5
+FLX-LGM-577,"Loudspeaker for LG G3 - White","11/05/15 12:03 PM",0,4,7.68,13.056,10.59,3.99,"05/04/18 10:20 AM",etrade_supply,8.2,8.13
+FLX-LGM-582,"LG Optimus G2 LS980 Charging Port Headphone Jack Volume Flex","11/19/15 12:09 PM",0,2,4.75,10.53,9.09,0.99,"05/04/18 10:20 AM",etrade_supply,9.96,9.88
+FLX-LGM-584,"LG Optimus G2 D800 D801 LS980 Loudspeaker ","01/17/17 02:58 PM",0,4,1.19,3.07,2.39,0.99,"05/04/18 10:20 AM",etrade_supply,3,2.98
+FLX-LGM-595,"Front Camera for LG G4",N/A,0,5,4.95,9.41,7.99,3.49,"05/04/18 10:40 AM",etrade_supply,5.65,5.6
+FLX-LGM-596,"Vibration Motor for LG G4",N/A,0,3,1.53,3.52,2.89,2.99,"05/04/18 10:40 AM",etrade_supply,1.88,1.86
+FLX-LGM-602,"LG F6 Charging Port Flex Cable",N/A,0,3,3.29,6.91,5.49,0.99,"05/04/18 10:40 AM",etrade_supply,5.54,5.5
+FLX-LGM-604,"Charging Port Flex Cable for LG G5","03/30/18 03:38 PM",2,2,4.87,12.99,10.08,6.09,"05/04/18 10:40 AM",etrade_supply,8.45,8.38
+FLX-LGM-620,"Rear Camera for LG G4","03/13/18 12:26 PM",0,5,9.29,17.99,9.3,11.69,"05/04/18 10:40 AM",etrade_supply,31.01,30.76
+FLX-LGM-621,"Headphone Jack for LG G4","06/02/17 11:36 AM",0,2,1.47,6.28,4.69,2.99,"05/04/18 10:40 AM",etrade_supply,3.15,3.12
+FLX-LGM-623,"Rear Camera Lens Glass Cover for LG G5","04/25/18 04:13 PM",8,20,1.42,3.48,2.68,1.99,"05/04/18 10:40 AM",etrade_supply,2.26,2.24
+FLX-LGM-627,"Rear Camera Lens for LG G4 - Grey",N/A,0,0,0,6.99,0,0,"05/04/18 10:40 AM",etrade_supply,3.43,3.4
+FLX-LGM-628,"Rear Camera Lens for LG G4 - Gold",N/A,0,0,0,6.99,0,0,"05/04/18 11:00 AM",etrade_supply,4.49,4.45
+FLX-LGM-629,"Rear Camera Lens for LG G4 - White",N/A,0,0,0,6.99,0,0,"05/04/18 11:00 AM",etrade_supply,4.49,4.45
+FLX-SAM-1321,"Rear Camera for Samsung Galaxy Note 4","03/15/18 01:59 PM",0,5,2.29,9.5,8.09,4.89,"05/04/18 11:00 AM",etrade_supply,5.9,5.85
+FLX-SAM-1349,"Front Camera for Samsung Galaxy S6 Edge","04/09/18 04:29 PM",0,4,1.79,7.77,6.19,2.99,"05/04/18 11:00 AM",etrade_supply,2.27,2.25
+FLX-SAM-1428,"Rear Camera for Samsung Galaxy S6 Edge ","01/29/18 01:44 PM",0,2,4.3,12.06,10.13,3.29,"05/04/18 11:00 AM",etrade_supply,7.37,7.31
+FLX-MOT-386,"Motorola MOTO X XT1060 Sim Card Tray - Black -","08/26/16 03:40 PM",0,28,4.22,8.018,6.79,0.99,"05/04/18 11:20 AM",etrade_supply,9.38,9.3
+FLX-MOT-388,"Motorola MOTO X XT1060 Sim Card Tray - White","01/05/16 02:21 PM",0,4,1.59,3.473,2.79,0.99,"05/04/18 11:20 AM",etrade_supply,3.53,3.5
+FLX-MOT-414,"Motorola Droid MAXX XT1080M XT1080 Sim Card Tray","12/30/15 02:07 PM",0,0,1.91,4.39,3.59,0,"05/04/18 11:20 AM",etrade_supply,4.49,4.45
+FLX-MOT-488,"Motorola Moto G XT1032 SIM Card Reader Contact","07/07/15 11:42 AM",0,4,1.5,3.6,2.79,0.99,"05/04/18 11:20 AM",etrade_supply,1.89,1.87
+FLX-MOT-490,"Motorola Moto G XT1032 Earpiece Speaker","03/01/17 12:08 PM",0,4,0.65,1.8,1.59,0.99,"05/04/18 11:20 AM",etrade_supply,1.08,1.07
+FLX-MOT-494,"Motorola Droid M XT907 Volume Button - Black",N/A,0,9,0,5.95,3.49,0.99,"05/04/18 11:20 AM",etrade_supply,0.78,0.77
+FLX-MOT-498,"Motorola Moto X XT1095 XT1096 XT1097 Sim Card Tray","04/30/15 02:48 PM",0,1,0,5.95,0,0.99,"05/04/18 11:20 AM",etrade_supply,4.72,4.68
+FLX-MOT-499,"Motorola Droid MAXX XT1080M XT1080 Loudspeaker Buzzer Assembly","01/17/17 02:58 PM",0,0,1.19,2.86,2.2,0,"05/04/18 11:20 AM",etrade_supply,7.05,6.99
+FLX-MOT-501,"Motorola Moto G XT1032 Power Button Key",N/A,0,9,0.25,0.875,0.59,0.99,"05/04/18 11:20 AM",etrade_supply,0.78,0.77
+FLX-MOT-510,"Motorola Droid Ultra XT1080 Loudspeaker Ringer Headphone Jack and Vibration Motor","09/15/16 01:37 PM",0,0,1.41,4.95,3.69,0,"05/04/18 11:20 AM",etrade_supply,7.05,6.99
+FLX-MOT-511,"Motorola Moto X XT1060 Loudspeaker Ringer Headphone Jack Housing","12/30/15 02:07 PM",0,3,2.33,6.17,4.59,0.99,"05/04/18 11:20 AM",etrade_supply,7.05,6.99
+FLX-MOT-515,"Earpiece Speaker Replacement for Motorola Droid Turbo","02/13/17 01:32 PM",0,0,0.85,2.42,1.89,1.99,"05/04/18 11:20 AM",etrade_supply,1.07,1.06
+FLX-MOT-517,"Rear Camera Replacement for Motorola Droid Turbo",N/A,0,0,6.59,11.53,9.69,6.99,"05/04/18 11:20 AM",etrade_supply,19.72,19.56
+FLX-MOT-518,"Front Camera Replacement for Motorola Droid Turbo","09/27/17 02:06 PM",0,3,4.79,9.07,7.89,0.99,"05/04/18 11:20 AM",etrade_supply,18.23,18.08
+SRN-LGM-643,"LCD and Touch Screen Digitizer with Frame for LG G3 - White","05/04/18 03:36 PM",10,7,27.55,59.2213,49.99,39.99,"05/04/18 11:40 AM",etrade_supply,91.44,90.71
+FLX-NOK-032,"Nokia Lumia 925 Sim Card Tray Holder Slot - Black","08/26/15 04:44 PM",0,1,2.69,6.0525,4.49,0.99,"05/04/18 11:40 AM",etrade_supply,1.87,1.86
+FLX-NOK-036,"Nokia Lumia 1020 Micro USB Charging Port Flex Cable","01/17/17 02:58 PM",0,5,2.51,5.94,4.39,0.99,"05/04/18 11:40 AM",etrade_supply,2.87,2.85
+FLX-NOK-040,"Nokia Lumia 1020 Sim Card Tray Holder Slot - Yellow",N/A,0,0,0,6.95,4.19,1.49,"05/04/18 11:40 AM",etrade_supply,2.64,2.62
+FLX-NOK-046,"Nokia Lumia 1520 Sim Card Tray Holder Slot - Black","01/05/16 02:21 PM",0,3,4.23,8.284,6.99,0.99,"05/04/18 11:40 AM",etrade_supply,5.56,5.52
+FLX-NOK-050,"Nokia Lumia 920 Sim Card Tray Holder Black","05/13/15 01:39 PM",0,1,0,5.95,0,0.99,"05/04/18 11:40 AM",etrade_supply,1.92,1.9
+FLX-NOK-052,"Nokia Lumia 1520 Sim Card Tray Holder Black","07/28/16 04:58 PM",0,0,1.1,3.144,2.49,0.99,"05/04/18 11:40 AM",etrade_supply,5.56,5.52
+FLX-SAM-096,"Sim Card Memory Card Flex Cable for Samsung Galaxy Note 2 N7100 ",N/A,0,6,0,5.95,3.19,2.99,"05/04/18 11:40 AM",etrade_supply,3.58,3.55
+FLX-SAM-1004,"Home Button for Samsung Galaxy S4 Mini - Black",N/A,0,8,0,2.95,0,0.99,"05/04/18 11:40 AM",etrade_supply,0.9,0.89
+FLX-SAM-1008,"Home Button for Samsung Galaxy S4 Mini - White",N/A,1,1,0,2.95,0,0.99,"05/04/18 11:40 AM",etrade_supply,0.76,0.75
+FLX-SAM-1010,"Loud Speaker module for Samsung Galaxy S4 Mini","11/30/16 01:32 PM",0,2,1.71,4.232,3.49,0.99,"05/04/18 12:00 PM",etrade_supply,1.88,1.86
+FLX-SAM-1016,"Home Button for Samsung Galaxy S3 Mini - Blue","03/18/15 10:49 AM",0,5,6.17,10.7975,9.09,0.99,"05/04/18 12:00 PM",etrade_supply,0.9,0.89
+FLX-SAM-1020,"Home Button for Samsung Galaxy S3 Mini - White",N/A,0,3,0,3.95,0,0.99,"05/04/18 12:00 PM",etrade_supply,0.9,0.89
+FLX-SAM-1034,"Rear Camera for Samsung Galaxy S4","12/27/17 03:12 PM",0,2,1.98,9.432,8.19,2.49,"05/04/18 12:00 PM",etrade_supply,5.21,5.17
+FLX-SAM-1036,"Power Volume for Samsung Galaxy S3 - Gray","11/19/15 12:09 PM",0,5,1.16,2.616,2.09,0.99,"05/04/18 12:00 PM",etrade_supply,0.9,0.89
+FLX-SAM-1044,"Samsung Galaxy Note 10.1 N8000 Rev 0.1 USB Charging Port Flex Cable",N/A,0,9,0,9.95,0,0,"05/04/18 12:00 PM",etrade_supply,5.24,5.2
+FLX-SAM-1263,"USB Charging Port for Samsung Galaxy Nexus",N/A,0,100,0,2.95,0,0.99,"05/04/18 12:00 PM",etrade_supply,4.16,4.13
+FLX-SAM-1264,"USB Charging Port Flex Cable for Samsung Galaxy Note 2 N7100 ",N/A,0,92,0,2.95,0,1.99,"05/04/18 12:00 PM",etrade_supply,0.91,0.9
+FLX-SAM-1265,"Charging Port for Samsung Galaxy Tab 3 10.1 GT P5210 (Wifi Version) ","01/10/17 01:01 PM",0,0,1.27,2.424,1.89,0.79,"05/04/18 12:20 PM",etrade_supply,5.25,5.21
+FLX-SAM-1292,"Charging Port Flex Cable for Samsung Galaxy S6 Edge G925F","04/25/18 04:13 PM",0,3,4.61,12.99,7.94,6.49,"05/04/18 12:20 PM",etrade_supply,9.83,9.75
+FLX-SAM-1295,"Keyboard Touch Sensor Home Button Flex Cable for Samsung Galaxy Note Edge SM-N915A SM-N915T ","11/19/15 12:09 PM",0,8,2.38,5.95,0,0,"05/04/18 12:20 PM",etrade_supply,3.77,3.74
+FLX-SAM-1296,"Rear Camera for Samsung Galaxy Note 4","12/27/17 03:12 PM",0,2,2.44,11.76,9.89,4.99,"05/04/18 12:20 PM",etrade_supply,5.9,5.85
+FLX-SAM-1297,"Earpiece Speaker for Samsung Galaxy Note 4","03/23/18 03:25 PM",0,18,0.73,2.4,2.09,1.49,"05/04/18 12:20 PM",etrade_supply,1.12,1.11
+FLX-SAM-1302,"Wifi Antenna  for Samsung Galaxy Note 4","10/19/16 09:33 AM",3,14,1.03,2.95,0,1.49,"05/04/18 12:20 PM",etrade_supply,2.26,2.24
+FLX-SAM-1311,"Micro USB Charging Port Cover Samsung Galaxy S5 - Silver","10/05/17 01:31 PM",0,6,0.41,1.23,0.79,0,"05/04/18 12:20 PM",etrade_supply,0.99,0.98
+FLX-SAM-1315,"Front Camera for Samsung Galaxy Note 4","03/15/18 01:59 PM",0,3,1.34,5.0625,3.79,1.69,"05/04/18 12:20 PM",etrade_supply,2.99,2.97
+FLX-SAM-1317,"Power Button Vibration Motor Flex Cable for Samsung Galaxy Note 4","10/19/16 09:33 AM",1,9,1.58,4.6575,3.49,1.79,"05/04/18 12:40 PM",etrade_supply,1.86,1.85
+FLX-SAM-1320,"Loudspeaker for Samsung Galaxy Note 4","06/23/17 04:35 PM",0,6,1.04,4.14,3.39,2.49,"05/04/18 12:40 PM",etrade_supply,1.86,1.85
+FLX-SAM-1322,"Sim Card SD Card Tray Flex Cable for Samsung Galaxy Note 4","01/17/17 02:58 PM",0,2,1.78,4.09,3.29,1.99,"05/04/18 12:40 PM",etrade_supply,3.36,3.33
+FLX-SAM-1324,"Front Camera for Samsung Galaxy Note Edge",N/A,0,2,2.07,4.6575,3.49,0,"05/04/18 12:40 PM",etrade_supply,2.99,2.97
+FLX-SAM-1325,"Headphone Jack Flex Cable for Samsung Galaxy Note Edge ","01/17/17 02:58 PM",0,1,1.78,4.09,3.29,0.99,"05/04/18 12:40 PM",etrade_supply,3.84,3.81
+FLX-SAM-1326,"Rear Camera for Samsung Galaxy Note Edge","05/15/17 01:29 PM",0,2,3.08,12.1975,10.29,4.99,"05/04/18 12:40 PM",etrade_supply,5.9,5.85
+FLX-SAM-1331,"Earpiece Speaker for Samsung Galaxy Note Edge","03/01/17 12:08 PM",0,3,0.94,3,2.39,0,"05/04/18 12:40 PM",etrade_supply,1.12,1.11
+FLX-SAM-1335,"Samsung Galaxy S6 G920 Front Camera ",N/A,0,3,3.7,7.77,6.19,0,"05/04/18 12:40 PM",etrade_supply,1.88,1.86
+FLX-SAM-1336,"Samsung Galaxy S6 G920 Earpiece ","03/07/18 03:39 PM",0,0,1.19,4.99,3.99,1.59,"05/04/18 12:40 PM",etrade_supply,3.01,2.99
+FLX-SAM-1343,"Rear Camera Lens for Samsung Galaxy S6 Edge - White Pearl","03/20/17 11:34 AM",0,2,2.21,2.4,2.09,1.99,"05/04/18 01:00 PM",etrade_supply,0.7,0.69
+FLX-SAM-1344,"Volume Flex Cable for Samsung Galaxy S6 Edge","10/17/16 12:33 PM",0,2,1.73,4.6575,3.49,1.99,"05/04/18 01:00 PM",etrade_supply,1.89,1.87
+FLX-SAM-1345,"Antenna Signal Cable for Samsung Galaxy S6 Edge","01/29/18 01:44 PM",1,1,1.12,3,2.39,0.99,"05/04/18 01:00 PM",etrade_supply,2.25,2.23
+FLX-SAM-1346,"Charging Port Flex Cable for Samsung Galaxy S6 Edge G925V","04/25/18 04:13 PM",4,5,4.14,9.99,7.49,5.59,"05/04/18 01:00 PM",etrade_supply,7.68,7.62
+FLX-SAM-1347,"Home Button Flex Cable for Samsung Galaxy S6 Edge - White Pearl","01/29/18 01:44 PM",0,5,2.46,6.99,4.79,3.79,"05/04/18 01:00 PM",etrade_supply,9.92,9.84
+FLX-SAM-1348,"Power Flex Cable for Samsung Galaxy S6 Edge","04/20/17 01:14 PM",0,5,1.03,4.6575,3.49,0.99,"05/04/18 01:00 PM",etrade_supply,1.48,1.47
+FLX-SAM-1350,"Sim Card Tray for Samsung Galaxy S6 - Silver","04/25/18 04:13 PM",1,5,0.63,2.25,1.89,0.99,"05/04/18 01:00 PM",etrade_supply,0.7,0.69
+FLX-SAM-1355,"Charging Port Flex Cable for Samsung Galaxy S6 Edge G925A","04/25/18 04:13 PM",5,6,4.14,9.99,7.54,5.59,"05/04/18 01:20 PM",etrade_supply,7.69,7.63
+FLX-SAM-1356,"Charging Port Flex Cable for Samsung Galaxy S6 Edge G925T","05/04/18 03:36 PM",8,1,4.14,10.99,8.19,5.99,"05/04/18 01:20 PM",etrade_supply,7.69,7.63
+FLX-SAM-1357,"Charging Port Flex Cable for Samsung Galaxy S6 Edge G925P","04/25/18 04:13 PM",3,1,4.14,9.99,0,5.59,"05/04/18 01:20 PM",etrade_supply,7.68,7.62
+FLX-SAM-1358,"Loudspeaker for Samsung Galaxy S4 i545/L720 (Verizon/Sprint)",N/A,0,2,3,6.75,4.99,1.99,"05/04/18 01:20 PM",etrade_supply,2.27,2.25
+FLX-SAM-1359,"Ear Speaker for Samsung Galaxy S5",N/A,0,5,1.89,4.347,3.59,1.39,"05/04/18 01:20 PM",etrade_supply,0.76,0.75
+FLX-SAM-1360,"Loudspeaker for Samsung Galaxy S5","09/08/17 12:45 PM",0,8,0.6,4.347,3.59,0.99,"05/04/18 01:20 PM",etrade_supply,0.8,0.79
+FLX-SAM-1362,"Earpiece Speaker for Samsung Galaxy S5 ","03/28/17 11:27 AM",0,5,1.02,1.875,1.59,1.39,"05/04/18 01:20 PM",etrade_supply,0.76,0.75
+FLX-SAM-1366,"Sim Card Tray for Samsung Galaxy S6 Edge Plus  - Gold","08/15/17 01:50 PM",0,2,2.01,6.1,4.49,2.49,"05/04/18 01:40 PM",etrade_supply,1.8,1.79
+FLX-SAM-1372,"Earpiece Speaker for Samsung Galaxy S6 Edge Plus ","05/02/16 11:58 AM",0,2,1.49,3.68,2.99,1.89,"05/04/18 01:40 PM",etrade_supply,1.87,1.86
+FLX-SAM-1380,"Sim Card Tray for Samsung Galaxy Note 5 ","07/10/17 02:52 PM",0,3,0.97,3.98,3.2,1.99,"05/04/18 01:40 PM",etrade_supply,1.33,1.32
+FLX-SAM-1403,"Rear Camera Lens for Samsung Galaxy S6 Edge - Black Sapphire","03/15/18 01:59 PM",0,3,0.71,3.53,2.79,1.99,"05/04/18 02:00 PM",etrade_supply,0.7,0.69
+FLX-SAM-1404,"Rear Camera Lens for Samsung Galaxy S6 Edge - Gold Platinum","06/23/17 04:35 PM",0,5,0.89,3.38,2.69,1.49,"05/04/18 02:00 PM",etrade_supply,0.7,0.69
+FLX-SAM-1412,"Sim Card Tray for Samsung Galaxy S6 Edge - White","01/24/18 11:42 AM",0,7,1.19,2.784,2.19,1.49,"05/04/18 02:00 PM",etrade_supply,0.96,0.95
+FLX-SAM-1413,"Sim Card Tray for Samsung Galaxy S6 Edge - Gold","10/16/17 03:29 PM",0,3,1.95,2.784,2.19,1.49,"05/04/18 02:00 PM",etrade_supply,1.34,1.33
+FLX-SAM-1416,"Home Button for Samsung Galaxy Note 5 - White Pearl","10/16/17 04:38 PM",0,3,7.7,21.99,16.09,11.59,"05/04/18 02:20 PM",etrade_supply,13.83,13.72
+FLX-SAM-746,"Charging Port Flex Cable for Samsung Galaxy Note 2 I317 N7105  Rev 0.7 1.0","01/17/17 02:58 PM",1,0,2.51,5.65,4.14,0.99,"05/04/18 02:20 PM",etrade_supply,5.25,5.21
+FLX-SAM-1422,"Rear Camera Lens for Samsung Galaxy S7 Edge - Black Onyx","03/30/18 03:38 PM",1,9,1.03,2.95,2.28,1.29,"05/04/18 02:20 PM",etrade_supply,0.99,0.98
+FLX-SAM-1425,"Loudspeaker for Samsung Galaxy S6 Edge Plus","05/12/17 01:33 PM",0,8,1.67,4.84,3.59,1.99,"05/04/18 02:20 PM",etrade_supply,1.86,1.85
+FLX-SAM-1436,"USB Charging Port Cover for Samsung Galaxy S5 - Gold","12/02/16 03:29 PM",0,6,0.4,1.23,0.79,0,"05/04/18 02:20 PM",etrade_supply,1.3,1.29
+FLX-SAM-1444,"Charging Port Flex Cable for Samsung Galaxy S7 Edge G935F","06/01/16 03:19 PM",0,11,7.04,15.99,9.75,6.89,"05/04/18 02:40 PM",etrade_supply,7.68,7.62
+FLX-SAM-1445,"Charging Port Flex Cable for Samsung Galaxy S7 Edge G935A","04/17/18 02:12 PM",2,9,3.74,15.99,7.59,6.89,"05/04/18 02:40 PM",etrade_supply,9.15,9.08
+FLX-SAM-1447,"Charging Port Flex Cable for Samsung Galaxy S6 Edge Plus G928P","03/06/17 02:08 PM",0,0,4.18,11.89,8.09,6.49,"05/04/18 02:40 PM",etrade_supply,6.19,6.14
+FLX-SAM-1449,"Charging Port Flex Cable for Samsung Galaxy Note 4 N910V","04/17/18 02:12 PM",3,12,2.63,6.99,7.59,3.19,"05/04/18 02:40 PM",etrade_supply,6.92,6.86
+FLX-SAM-1451,"Charging Port Flex Cable for Samsung Galaxy Note 4 N910A","04/17/18 02:12 PM",1,8,3.42,8.99,6.59,4.29,"05/04/18 02:40 PM",etrade_supply,6.91,6.85
+FLX-SAM-1456,"Home Button Flex Cable for Samsung Galaxy Grand Prime",N/A,0,2,1.17,2.81,2.19,0.99,"05/04/18 02:40 PM",etrade_supply,1.13,1.12
+FLX-SAM-1459,"Charging Port Flex Cable for Samsung Galaxy Note Edge N915T",N/A,0,0,4.41,12.99,7.59,6.89,"05/04/18 02:40 PM",etrade_supply,7.69,7.63
+FLX-SAM-1460,"Home Button Flex Cable for Samsung Galaxy S6 Edge - Black Sapphire","01/29/18 01:44 PM",0,5,2.46,8.99,3.59,4.09,"05/04/18 02:40 PM",etrade_supply,5.26,5.22
+FLX-SAM-1461,"Earpiece Speaker for Samsung Galaxy S6 Edge","12/11/17 01:44 PM",2,3,1.6,6.99,2.19,3.09,"05/04/18 03:00 PM",etrade_supply,4.17,4.14
+FLX-SAM-1462,"Sim Card Tray for Samsung Galaxy S6 Edge - Black",N/A,0,0,1.17,2.81,2.19,1.49,"05/04/18 03:00 PM",etrade_supply,0.89,0.88
+FLX-SAM-1463,"Vibration Motor for Samsung Galaxy S6 Edge Plus",N/A,0,2,1.94,4.46,3.59,1.79,"05/04/18 03:00 PM",etrade_supply,0.73,0.72
+FLX-SAM-1465,"Charging Port Flex Cable for Samsung Galaxy S6 Edge Plus G928P","12/27/17 03:12 PM",1,4,3.96,8.99,7.59,5.89,"05/04/18 03:00 PM",etrade_supply,7.69,7.63
+FLX-SAM-1476,"Charging Port Flex Cable for Samsung Galaxy S5 G900F","08/24/17 02:40 PM",0,5,3.58,7.77,6.11,4.49,"05/04/18 03:00 PM",etrade_supply,9.2,9.13
+FLX-SAM-1489,"Charging Port Flex Cable for Samsung Galaxy S5 G900H","08/24/17 02:40 PM",1,14,3.88,9.37,7.89,4.99,"05/04/18 03:00 PM",etrade_supply,7.69,7.63
+SRN-LGM-677,"LCD and Touch Screen Digitizer with Frame for LG G3 - Gold","05/04/18 03:36 PM",0,4,36.16,54.95,0,0,"05/04/18 03:00 PM",etrade_supply,50.52,50.12
+SRN-LGM-681,"LG Optimus G LS970 LCD Screen Touch Screen Digitizer with Frame","12/19/17 03:54 PM",0,2,0,49.99,0,37.49,"05/04/18 03:00 PM",etrade_supply,50.53,50.13
+SRN-MOT-096,"Motorola Droid Razr XT910 XT912 LCD + Touch Screen Digitizer","12/29/15 03:05 PM",0,0,15.05,22.58,20.39,0,"05/04/18 03:20 PM",etrade_supply,15.05,14.93
+SRN-MOT-422,"Motorola Moto G XT1032 XT1036 LCD Touch Screen Digitizer Assembly","08/22/16 10:30 AM",0,2,24,33.91,31.49,21.49,"05/04/18 03:20 PM",etrade_supply,27.62,27.4
+SRN-MOT-424,"LCD Screen and Digitizer Assembly for Motorola Moto E XT1021 XT1022 No Logo White","04/27/15 03:41 PM",0,0,11.23,17.4065,15.39,14.99,"05/04/18 03:20 PM",etrade_supply,20.71,20.54
+SRN-MOT-426,"LCD Screen and Digitizer Assembly for Motorola Moto E XT1021 XT1022 No Logo Black","10/16/17 03:31 PM",0,1,14.93,22.58,20.39,13.99,"05/04/18 03:20 PM",etrade_supply,24.58,24.38
+SRN-MOT-440,"LCD + Touch Screen Digitizer for Motorola Moto E XT1021 XT1022 XT1025 White",N/A,0,9,0,19.95,0,21.99,"05/04/18 03:20 PM",etrade_supply,20.71,20.54
+SRN-MOT-442,"LCD + Touch Screen Digitizer for Motorola Droid Mini XT1030 Black","03/20/18 03:49 PM",0,4,10.17,23.81,21.89,14.69,"05/04/18 03:20 PM",etrade_supply,31.28,31.03
+SRN-MOT-454,"LCD + Touch Screen Digitizer for Motorola Droid Razr M XT907 Black","07/13/16 11:32 AM",0,0,17.96,22.965,20.69,19.99,"05/04/18 03:20 PM",etrade_supply,24.58,24.38
+SRN-MOT-456,"LCD + Touch Screen Digitizer with Frame for Motorola Droid Razr M XT907 Black","02/26/16 11:30 AM",0,0,18.02,26.13,23.99,0,"05/04/18 03:20 PM",etrade_supply,25.86,25.65
+SRN-MOT-458,"Digitizer Touch Screen Replacement Glass for Motorola Droid Ultra XT1080 Maxx XT1080m","12/16/16 03:03 PM",0,0,7.59,15.011,12.19,4.99,"05/04/18 03:20 PM",etrade_supply,2.94,2.92
+FLX-SAM-1492,"Charging Port for Samsung Galaxy Tab Pro 8.4 T320 ","04/17/18 02:12 PM",0,0,1.51,4.91,3.69,2.49,"05/04/18 03:20 PM",etrade_supply,3.75,3.72
+FLX-SAM-1503,"Rear Camera Rings for Samsung Galaxy S5 Active - Green",N/A,0,1,2.06,4.64,3.49,0,"05/04/18 03:20 PM",etrade_supply,1.58,1.57
+FLX-SAM-1504,"Rear Camera Rings for Samsung Galaxy S5 Active - Black","10/16/17 04:38 PM",1,0,1.41,4.64,3.49,0,"05/04/18 03:20 PM",etrade_supply,1.58,1.57
+FLX-SAM-1506,"Charging Port Flex Cable for Samsung Galaxy S5 G900F","03/21/18 03:19 PM",0,3,3,12.99,0,4.49,"05/04/18 03:20 PM",etrade_supply,9.2,9.13
+FLX-SAM-1545,"Charging Port for Samsung Galaxy Tab 3 8.0 SM T310 ","04/25/18 04:13 PM",2,5,1.99,8.49,0,2.49,"05/04/18 03:41 PM",etrade_supply,5.2,5.16
+FLX-SAM-156,"Keypad Microphone Flex Cable for Samsung Galaxy S",N/A,0,4,0,7.95,5.59,0.99,"05/04/18 03:41 PM",etrade_supply,3.74,3.71
+SRN-LGM-575,"LCD + Touch Screen Digitizer with Frame for LG Optimus G2 D800 D801 B29 - Black","02/06/18 10:39 AM",0,0,27.33,33.1,30.73,29.99,"05/04/18 03:41 PM",etrade_supply,43.11,42.77
+SRN-LGM-577,"LCD and Touch Screen Digitizer for LG Optimus G2 - White","12/21/16 01:09 PM",0,0,22.96,32.68,30.39,26.99,"05/04/18 03:41 PM",etrade_supply,31.27,31.02
+SRN-LGM-580,"LG G4 Mini LCD Screen Touch Screen Assembly - Black",N/A,0,2,45.02,61.9,56.29,36.49,"05/04/18 03:41 PM",etrade_supply,30.08,29.84
+SRN-LGM-585,"LG G Flex 2 LCD Display and Digitizer Assembly - Black","12/01/16 12:52 PM",0,0,56.42,76.17,69.49,0,"05/04/18 03:41 PM",etrade_supply,69.7,69.14
+SRN-LGM-616,"LCD and Touch Screen Digitizer for LG G Vista D631 VS880","09/26/17 02:24 PM",2,2,32.2,49.91,45.38,0,"05/04/18 03:41 PM",etrade_supply,67.38,66.84
+SRN-LGM-618,"LCD and Touch Screen Digitizer Replacement for LG Lucid 2 - Black",N/A,0,0,0,69.95,0,0,"05/04/18 03:41 PM",etrade_supply,63.07,62.57
+SRN-LGM-636,"LG Optimus G Pro E980 LCD Screen","10/12/16 09:38 AM",0,1,12.86,19.93,17.69,16.99,"05/04/18 03:41 PM",etrade_supply,15.6,15.48
+SRN-LGM-637,"LCD and Touch Screen Digitizer With Frame for LG G5 - Black","04/27/18 01:11 PM",10,22,41.11,84.99,56.55,44.39,"05/04/18 03:41 PM",etrade_supply,52.93,52.32
+SRN-LGM-638,"LCD and Digitizer Replacement with Frame for LG Nexus 5X","03/20/18 03:49 PM",1,1,23.6,40.95,38.03,25.99,"05/04/18 04:00 PM",etrade_supply,141.58,140.45
+SRN-LGM-639,"LCD and Digitizer Replacement with Frame for LG Nexus 4",N/A,0,0,0,44.99,0,26.99,"05/04/18 04:00 PM",etrade_supply,34.88,34.6
+SRN-LGM-644,"LCD and Digitizer Replacement with Frame for LG G2 VS980 - White",N/A,0,0,0,39.99,0,33.99,"05/04/18 04:00 PM",etrade_supply,45.7,45.33
+SRN-LGM-647,"LG Optimus G Pro E980 LCD Assembly with Frame - Black","05/30/17 03:57 PM",0,0,28.15,37.3,34.69,0,"05/04/18 04:00 PM",etrade_supply,72.63,72.05
+SRN-LGM-648,"LCD and Touch Screen Replacement with Frame for LG V20 - Black","04/09/18 04:29 PM",9,0,60.9,117.79,109.64,65.29,"05/04/18 04:00 PM",etrade_supply,81.34,80.69
+SRN-LGM-649,"LCD and Touch Screen Replacement with Frame for LG K10 - Black","05/04/18 03:36 PM",0,1,0,57,0,49.99,"05/04/18 04:00 PM",etrade_supply,68.07,67.53
+FLX-LGM-632,"Rear Camera for LG G6 H870 H871 H872 H873","03/15/18 01:59 PM",0,2,10.36,35,0,16.49,"05/04/18 04:00 PM",mengtor,15.5,14.99
+FLX-LGM-631,"Charging Port for LG G6 H870","04/17/18 02:12 PM",2,2,5.02,11,0,6.29,"05/04/18 04:20 PM",mengtor,5.99,5.5
+FLX-SAM-788,"Charging Port Flex Cable for Samsung Galaxy Note 3 N900P ","06/20/17 03:58 PM",1,8,2.97,8.075,6.89,4.49,"05/04/18 04:20 PM",etrade_supply,7.02,6.96
+SRN-HTC-138,"HTC Evo 4G LTE LCD Screen + Digitzer Touch Screen - Black","12/01/15 12:22 PM",0,0,21.15,29.61,27.59,0,"05/04/18 04:20 PM",etrade_supply,26.47,26.26
+SRN-HTC-144,"HTC Evo 4G LTE LCD Screen + Digitzer Touch Screen - White","02/29/16 01:35 PM",0,2,17.34,24.77,22.79,16.99,"05/04/18 04:20 PM",etrade_supply,45.72,45.35
+SRN-HTC-150,"HTC Evo 4G LTE LCD Screen",N/A,0,3,0,30.95,23.79,14.99,"05/04/18 04:20 PM",etrade_supply,18.14,17.99
+SRN-HTC-156,"HTC Evo 4G LTE Touch Screen Digitizer","03/14/16 12:54 PM",0,3,6.44,11.27,9.49,6.99,"05/04/18 04:20 PM",etrade_supply,12.45,12.35
+SRN-HTC-186,"HTC G2 / Desire Z LCD Screen","11/30/15 01:14 PM",0,4,7.12,13.96,11.29,13.99,"05/04/18 04:20 PM",etrade_supply,24.59,24.39
+SRN-HTC-198,"HTC G2 / Desire Z Touch Screen Digitizer","11/30/15 01:14 PM",0,4,5.04,9.07,7.89,7.99,"05/04/18 04:20 PM",etrade_supply,7.78,7.72
+SRN-HTC-240,"HTC Inspire / Desire HD LCD + Touch Screen Digitizer","06/24/15 12:11 PM",0,3,16.76,24.302,22.29,20.99,"05/04/18 04:20 PM",etrade_supply,19.4,19.24
+SRN-HTC-318,"HTC One V Front Housing LCD + Touch Screen Digitizer",N/A,0,6,0,29.95,26.69,8.99,"05/04/18 04:20 PM",etrade_supply,20.71,20.54
+SRN-HTC-324,"HTC One X Front Housing LCD + Touch Screen Digitizer","01/21/16 04:33 PM",0,1,19.39,28.12,25.79,19.99,"05/04/18 04:20 PM",etrade_supply,28.91,28.68
+SRN-HTC-330,"HTC Radar 4G LCD Screen","04/09/15 11:32 AM",0,9,8.89,15.113,12.19,14.49,"05/04/18 04:40 PM",etrade_supply,14.13,14.02
+SRN-HTC-336,"HTC Radar 4G Touch Screen Digitizer",N/A,1,8,0,8.95,8.89,10.99,"05/04/18 04:40 PM",etrade_supply,15.6,15.48
+SRN-HTC-342,"HTC Rezound LCD Screen",N/A,0,3,0,28.95,17.79,15.95,"05/04/18 04:40 PM",etrade_supply,27.14,26.92
+SRN-HTC-348,"HTC Rezound Touch Screen Digitizer",N/A,0,6,0,11.95,6.89,14.49,"05/04/18 04:40 PM",etrade_supply,7.78,7.72
+SRN-HTC-354,"HTC Rhyme Touch Screen Digitizer",N/A,0,9,0,10.95,10.89,7.59,"05/04/18 04:40 PM",etrade_supply,9.35,9.28
+SRN-HTC-360,"HTC Sensation LCD + Touch Screen Digitizer",N/A,0,14,0,30.95,26.69,8.99,"05/04/18 04:40 PM",etrade_supply,32.33,32.07
+SRN-HTC-378,"HTC Sensation Touch Screen Digitizer",N/A,0,2,0,14.95,9.89,5.99,"05/04/18 04:40 PM",etrade_supply,10.84,10.75
+SRN-HTC-384,"HTC Sensation XL LCD + Touch Screen Digitizer - White",N/A,0,5,0,42.95,26.69,28.49,"05/04/18 04:40 PM",etrade_supply,25.86,25.65
+SRN-HTC-396,"HTC Status Touch Screen Digitizer",N/A,0,8,0,7.95,7.89,5.99,"05/04/18 04:40 PM",etrade_supply,4.69,4.65
+SRN-HTC-414,"HTC Thunderbolt LCD Screen",N/A,0,20,0,17.95,15.79,4.99,"05/04/18 04:40 PM",etrade_supply,18.14,17.99
+SRN-HTC-420,"HTC Thunderbolt LCD + Touch Screen Digitizer","11/30/15 12:06 PM",0,0,14.24,23.49,21.19,5.99,"05/04/18 04:40 PM",etrade_supply,21.25,21.08
+SRN-HTC-426,"HTC Thunderbolt Touch Screen Digitizer",N/A,0,4,0,8.95,7.89,4.99,"05/04/18 04:40 PM",etrade_supply,15.6,15.48
+SRN-HTC-432,"HTC Titan 2 Touch Screen Digitizer - Black",N/A,0,3,0,14.95,10.89,4.99,"05/04/18 04:40 PM",etrade_supply,16.82,16.69
+SRN-HTC-438,"HTC Titan Touch Screen Digitizer",N/A,0,10,0,12.95,11.89,4.99,"05/04/18 04:40 PM",etrade_supply,16.82,16.69
+SRN-HTC-444,"HTC Trophy LCD Screen",N/A,0,8,0,13.95,13.89,4.99,"05/04/18 04:40 PM",etrade_supply,18.14,17.99
+SRN-HTC-450,"HTC Trophy LCD + Touch Screen Digitizer","03/11/15 12:05 PM",0,2,17.14,24.853,22.89,4.99,"05/04/18 04:40 PM",etrade_supply,55.34,54.9
+SRN-HTC-456,"HTC Trophy Touch Screen Digitizer",N/A,0,12,0,10.95,10.89,8.99,"05/04/18 04:40 PM",etrade_supply,9.35,9.28
+SRN-HTC-462,"HTC Vivid LCD Screen",N/A,0,28,0,19.95,15.79,42.99,"05/04/18 05:00 PM",etrade_supply,23.3,23.11
+SRN-HTC-468,"HTC Vivid LCD + Touch Screen Digitizer - Black",N/A,0,8,0,28.95,28.69,57.99,"05/04/18 05:00 PM",etrade_supply,26.93,26.71
+SRN-HTC-474,"HTC Vivid LCD + Touch Screen Digitizer - White","04/20/15 11:11 AM",0,17,21.21,29.694,27.59,57.99,"05/04/18 05:00 PM",etrade_supply,26.47,26.26
+SRN-HTC-480,"HTC Vivid Touch Screen Digitizer - Black","04/20/15 12:22 PM",0,5,5.63,10.134,8.79,14.99,"05/04/18 05:00 PM",etrade_supply,10.93,10.84
+SRN-HTC-486,"HTC Vivid Touch Screen Digitizer - White",N/A,1,13,0,9.95,7.89,14.99,"05/04/18 05:00 PM",etrade_supply,10.93,10.84
+SRN-HTC-498,"HTC Wildfire S LCD Screen",N/A,0,8,0,7.95,7.89,12.49,"05/04/18 05:00 PM",etrade_supply,10.93,10.84
+SRN-HTC-528,"HTC Windows 8x Digitizer Touch Screen","12/04/15 04:09 PM",0,1,5.75,10.35,8.99,8.99,"05/04/18 05:00 PM",etrade_supply,10.93,10.84
+SRN-HTC-534,"HTC Windows 8x LCD Screen",N/A,0,5,0,28.95,16.79,14.99,"05/04/18 05:00 PM",etrade_supply,15.6,15.48
+SRN-HTC-540,"HTC Windows 8x LCD Screen Touch Screen Digitizer Assembly","03/07/16 12:28 PM",0,5,17.4,26.78,24.59,20.99,"05/04/18 05:00 PM",etrade_supply,26.92,26.7
+SRN-HTC-546,"HTC Windows Phone 8S LCD Digitizer Assembly - Blue",N/A,0,0,0,36.95,22.79,0,"05/04/18 05:00 PM",etrade_supply,16.81,16.68
+SRN-HTC-550,"HTC One M7 LCD + Touch Screen Digitizer","03/06/18 02:23 PM",0,18,11.39,30.72,28.59,19.49,"05/04/18 05:00 PM",etrade_supply,20.71,20.54
+SRN-HTC-552,"HTC One SV LCD + Touch Screen Digitizer - Black","05/05/16 11:55 AM",0,0,5.5,9.9,8.53,0,"05/04/18 05:00 PM",etrade_supply,20.72,20.55
+SRN-HTC-554,"HTC Verizon Droid DNA LCD + Touch Screen Digitizer","09/25/17 03:22 PM",0,3,16.74,26.61,24.41,27.49,"05/04/18 05:00 PM",etrade_supply,29.04,28.81
+SRN-HTC-582,"LCD and Touch Screen Digitizer for HTC One M8 - Black","01/18/18 09:58 AM",0,2,16.45,47.7125,43.39,16.99,"05/04/18 05:00 PM",etrade_supply,23.29,23.1
+SRN-HTC-584,"HTC One Max LCD Screen and Digitizer Assembly HTC Logo Black","11/21/17 04:43 PM",0,1,21.33,41.15,38.29,29.99,"05/04/18 05:00 PM",etrade_supply,36.26,35.97
+SRN-HTC-586,"HTC One Max Touch Screen Digitizer HTC Logo Black","07/19/16 01:31 PM",0,1,8.44,14.86,11.99,39.49,"05/04/18 05:00 PM",etrade_supply,14.06,13.95
+SRN-HTC-588,"HTC One Max LCD Screen","05/19/15 02:15 PM",0,1,25.92,36.288,33.79,9.99,"05/04/18 05:00 PM",etrade_supply,28.89,28.66
+SRN-HTC-606,"HTC Trophy LCD and Touch Screen Digitizer with Frame",N/A,0,2,0,38.95,0,7.99,"05/04/18 05:20 PM",etrade_supply,48.1,47.72
+SRN-HTC-650,"LCD + Touch Screen Digitizer for HTC Desire 600 601 Zara Black",N/A,0,5,0,52.95,48.49,28.99,"05/04/18 05:20 PM",etrade_supply,23.27,23.08
+SRN-HTC-652,"LCD + Touch Screen Digitizer with Frame for HTC One M7 801e Black","01/17/17 01:21 PM",0,5,21.65,30.31,28.15,16.99,"05/04/18 05:20 PM",etrade_supply,25.27,25.07
+SRN-HTC-656,"LCD + Touch Screen Digitizer with Frame for HTC Droid DNA Black","11/22/16 11:03 AM",0,0,23.69,36.15,33.59,26.99,"05/04/18 05:20 PM",etrade_supply,35.51,35.23
+SRN-HTC-658,"LCD + Touch Screen Digitizer with Frame for HTC One M8 831C","04/17/18 02:12 PM",2,1,17,41.99,37.89,20.89,"05/04/18 05:20 PM",etrade_supply,36.1,35.81
+SRN-HTC-908,"HTC One X LCD + Touch Screen Digitizer with Frame","06/10/16 12:22 PM",0,1,21.66,30.32,28.19,20.99,"05/04/18 05:20 PM",etrade_supply,28.91,28.68
+SRN-LGM-126,"LG Nexus 4 E960 LCD + Digitizer Touch Screen Assembly","12/19/17 03:54 PM",1,0,28.23,39.52,36.7,27.49,"05/04/18 05:20 PM",etrade_supply,31.28,31.03
+SRN-LGM-127,"LG Optimus G Sprint LS970 LCD + Digitizer Touch Screen Assembly","02/13/17 01:32 PM",0,0,27.7,38.16,35.44,0,"05/04/18 05:20 PM",etrade_supply,48.1,47.72
+SRN-LGM-138,"LG L9 P760 International Version Digitizer Touch Screen - Black",N/A,0,5,0,16.95,7.89,6.99,"05/04/18 05:20 PM",etrade_supply,9.35,9.28
+SRN-LGM-146,"LG L9 P760 International Version Digitizer Touch Screen - White",N/A,0,8,0,17.95,7.89,6.99,"05/04/18 05:20 PM",etrade_supply,9.54,9.46
+SRN-LGM-160,"LG Optimus L9 P769 Touch Screen Digitizer","01/26/16 03:02 PM",0,2,6.26,9.025,7.69,12.49,"05/04/18 05:40 PM",etrade_supply,9.35,9.28
+SRN-LGM-162,"LG Optimus G Pro E980 Touch Screen Digitizer","02/13/17 02:13 PM",0,0,4.74,9.01,7.58,7.99,"05/04/18 05:40 PM",etrade_supply,14.24,14.13
+SRN-LGM-166,"LG Mach LS860 Touch Screen Digitizer - Black",N/A,0,2,0,23.95,15.79,9.49,"05/04/18 05:40 PM",etrade_supply,13.58,13.47
+SRN-LGM-246,"LG Venice LG730 LCD Screen Display",N/A,1,74,0,6.95,6.89,10.49,"05/04/18 05:40 PM",etrade_supply,9.35,9.28
+SRN-LGM-264,"LG Intuition VS950 LCD Screen",N/A,0,0,0,18.95,0,0,"05/04/18 05:40 PM",etrade_supply,25.86,25.65
+SRN-LGM-296,"LCD and Touch Screen Digitizer for LG Optimus G2 D802 D805 - Black","03/09/18 04:11 PM",0,9,29.5,48.9225,44.49,37.99,"05/04/18 05:40 PM",etrade_supply,33.68,33.41
+SRN-LGM-352,"LCD + Touch Screen Digitizer for LG G Flex D950 D955 D958 D959 F340 LS995 Black","03/31/17 11:19 AM",0,0,76.97,94.61,88.06,0,"05/04/18 05:40 PM",etrade_supply,98.27,97.48
+SRN-LGM-356,"Touch Screen Digitizer for LG Optimus G Pro E980 E985 F240 White","01/17/17 01:21 PM",0,0,4.13,7.85,6.61,0,"05/04/18 05:40 PM",etrade_supply,18.14,17.99
+SRN-LGM-362,"LCD + Touch Screen Digitizer with Frame for LG Google Nexus 5 D820 D821 Black","04/25/18 10:42 AM",2,2,21.17,34.72,32.24,24.99,"05/04/18 05:40 PM",etrade_supply,36.02,35.73
+SRN-LGM-550,"LG Optimus L90 D405 D415 Touch Screen Digitizer","03/03/16 01:11 PM",0,0,5.84,9.33,7.89,4.99,"05/04/18 05:40 PM",etrade_supply,11.75,11.66
+SRN-LGM-558,"LG Galaxy Nexus 4 E960 Back Housing Glass without Frame",N/A,0,0,0,8.95,8.89,0,"05/04/18 05:40 PM",etrade_supply,12.69,12.59
+FLX-UCP-006,"Blackberry 8800 8820 8830 8810 USB Charging Port",N/A,0,84,0,2.95,2.99,0.49,"05/04/18 06:00 PM",etrade_supply,0.97,0.96
+FLX-UCP-066,"HTC T-Mobile G2/Evo 4G USB Charging Port",N/A,0,184,0,2.95,2.99,0.49,"05/04/18 06:00 PM",etrade_supply,1.74,1.73
+FLX-UCP-084,"Blackberry Curve 8520 8530 9700 9780 Replacement Charging Port",N/A,0,6,0,2.95,0.99,0.49,"05/04/18 06:00 PM",etrade_supply,1.47,1.46
+FLX-UCP-104,"HTC Windows 8X / Evo 4G LTE USB Charging Port",N/A,0,121,0,2.95,2.99,0.49,"05/04/18 06:00 PM",etrade_supply,0.78,0.77
+FLX-UCP-114,"Nokia Lumia 900 Charging Port","12/16/16 03:03 PM",0,2,0.87,2.43,2.09,0.49,"05/04/18 06:00 PM",etrade_supply,0.91,0.9
+FLX-UCP-120,"HTC One X Charging Port","06/21/16 04:46 PM",0,2,1.05,2.52,1.99,0.49,"05/04/18 06:00 PM",etrade_supply,0.78,0.77
+FLX-UCP-122,"HTC One S Charging Port",N/A,0,54,0,2.95,0.69,0.49,"05/04/18 06:00 PM",etrade_supply,0.78,0.77
+FLX-UCP-124,"HTC Evo 4G LTE Charging Port","12/30/15 02:07 PM",0,0,0.97,2.43,2.09,0,"05/04/18 06:00 PM",etrade_supply,0.78,0.77
+FLX-UCP-160,"ZTE Concord V768 Charging Port",N/A,0,0,0,2.95,0.69,0,"05/04/18 06:00 PM",etrade_supply,0.78,0.77
+FLX-UCP-166,"Blackberry Bold 9700 9780 Curve 8520 8530 USB Charging Port",N/A,0,228,0,2.95,0.69,0.49,"05/04/18 06:00 PM",etrade_supply,1.47,1.46
+APL-003-1779,"Sim Card Tray for iPhone 7- Gold","03/23/18 03:25 PM",3,2,0.73,1.29,0,0,"05/04/18 06:20 PM",etrade_supply,1.31,1.3
+FLX-SAM-729,"Sim Card Memory SD Card Flex Cable for Samsung Galaxy S4 REV 1.3","11/15/17 03:07 PM",0,2,0.99,3.36,2.59,0.99,"05/04/18 06:20 PM",etrade_supply,2.72,2.7
+FLX-SAM-731,"Headphone Ear Piece Audio Jack Speaker Flex Cable for Samsung Galaxy Note ",N/A,0,25,0,11.95,9.99,0.99,"05/04/18 06:20 PM",etrade_supply,1.13,1.12
+FLX-SAM-733,"Front Camera for Samsung Galaxy S4",N/A,0,25,0.87,2.175,1.89,0.99,"05/04/18 06:20 PM",etrade_supply,1.86,1.85
+FLX-SAM-736,"Sim Card Memory SD Card Flex Cable for Samsung Galaxy S4 REV 1.3 / 0.5","03/07/18 03:39 PM",0,5,1.19,2.54,1.96,0.99,"05/04/18 06:20 PM",etrade_supply,2.72,2.7
+FLX-SAM-737,"Home Button for Samsung Galaxy S4 - White","01/31/17 03:33 PM",0,17,0.55,1.68,1.49,0,"05/04/18 06:20 PM",etrade_supply,0.67,0.66
+FLX-SAM-738,"Loudspeaker Buzzer for Samsung Galaxy S4 - White","02/20/17 11:36 AM",0,1,1.5,3.6,2.78,1.49,"05/04/18 06:20 PM",etrade_supply,3.74,3.71
+FLX-SAM-739,"Samsung Galaxy Note 10.1 Tablet N8000 Headphone Audio Jack Flex Cable REV 0.3A",N/A,0,9,0,5.95,3.59,0.99,"05/04/18 06:20 PM",etrade_supply,3.77,3.74
+FLX-SAM-740,"Power Volume for Samsung Galaxy S3 - White",N/A,0,66,0,2.95,0.99,0.99,"05/04/18 06:20 PM",etrade_supply,0.68,0.67
+FLX-SAM-742,"USB Charging Port Microphone Flex Cable for Samsung Galaxy S4 i9505  REV 19","05/04/17 12:56 PM",0,7,2.21,5.67,4.19,5.49,"05/04/18 06:20 PM",etrade_supply,4.17,4.14
+FLX-SAM-750,"Vibrator Module for Samsung Galaxy S4",N/A,6,423,0,2.95,0,0.99,"05/04/18 06:20 PM",etrade_supply,2.27,2.25
+FLX-SAM-754,"LCD Tester for Samsung Galaxy S3 ","01/17/17 02:58 PM",0,3,1.78,4.09,3.29,1.99,"05/04/18 06:40 PM",etrade_supply,3.42,3.39
+FLX-SAM-756,"Charging Port Microphone Flex Cable for Samsung Galaxy S4 i337 M919 USB ","05/04/18 03:36 PM",0,12,1.83,5.99,4.39,2.69,"05/04/18 06:40 PM",etrade_supply,5.22,5.18
+FLX-SAM-758,"USB Charging Port Microphone Flex Cable for Samsung Galaxy S4 L720 i545  REV 0.7","03/07/18 03:39 PM",3,2,1.83,6.7275,4.93,2.99,"05/04/18 06:40 PM",etrade_supply,2.86,2.84
+FLX-SAM-772,"Stylus Flex Pen Writing Input for Samsung Galaxy Note 2","09/22/15 02:26 PM",0,16,2.37,6.53,5.19,0.99,"05/04/18 06:40 PM",etrade_supply,3.73,3.7
+FLX-SAM-790,"Charging Port Flex Cable for Samsung Galaxy Note 3 N900T ","05/04/18 03:36 PM",5,1,2.79,8.037,6.79,4.69,"05/04/18 06:40 PM",etrade_supply,6.92,6.86
+FLX-SAM-794,"Charging Port Flex Cable for Samsung Galaxy Note 3 N900V ","05/04/18 03:36 PM",6,2,2.75,8.17,6.49,3.99,"05/04/18 06:40 PM",etrade_supply,6.92,6.86
+FLX-SAM-800,"Audio Headphone Jack Speaker Flex Cable for Samsung Galaxy Note 3 N9000 N900A ","12/27/17 03:12 PM",0,4,1.37,3.979,3.29,1.99,"05/04/18 06:40 PM",etrade_supply,1.89,1.87
+FLX-SAM-810,"Charging Port Microphone Flex Cable for Samsung Galaxy S4 i9505 REV 25","03/07/18 03:39 PM",2,4,2.3,5.99,4.19,2.89,"05/04/18 06:40 PM",etrade_supply,4.17,4.14
+FLX-SAM-812,"Samsung Galaxy Note 3 OEM Stylus Pen - Black","07/03/17 12:08 PM",0,1,2.44,5.63,4.19,0,"05/04/18 07:00 PM",etrade_supply,3,2.98
+FLX-SAM-814,"Samsung Galaxy Note 3 OEM Stylus Pen - White","06/12/17 01:33 PM",0,10,3.24,7.83,6.19,0,"05/04/18 07:00 PM",etrade_supply,3,2.98
+FLX-SAM-816,"LCD Touch Screen Tester Flex Cable for Samsung Galaxy Note 3 ","08/05/15 11:55 AM",0,14,2.31,5.1975,3.89,1.99,"05/04/18 07:00 PM",etrade_supply,3.28,3.25
+FLX-SAM-944,"Home Button for Samsung Galaxy S4 - Purple",N/A,0,39,0,5.95,0,0,"05/04/18 07:00 PM",etrade_supply,1.33,1.32
+FLX-SAM-948,"Home Button for Samsung Galaxy S4 - Brown",N/A,0,35,0,5.95,0,0,"05/04/18 07:00 PM",etrade_supply,1.33,1.32
+FLX-SAM-950,"Home Button for Samsung Galaxy Note 3 - White","05/04/17 04:39 PM",0,18,0.67,1.825,1.59,0.49,"05/04/18 07:00 PM",etrade_supply,0.67,0.66
+FLX-SAM-958,"Back Camera Lens Cover for Samsung Galaxy Note 3 - Black","04/25/18 04:13 PM",1,4,0.79,2.1,1.79,1.99,"05/04/18 07:20 PM",etrade_supply,1.34,1.33
+FLX-SAM-960,"Back Camera Lens Cover for Samsung Galaxy Note 3 - White","09/15/17 03:06 PM",0,10,1.2,2.1,1.79,1.99,"05/04/18 07:20 PM",etrade_supply,0.74,0.73
+FLX-SAM-962,"Power Button Vibrator Flex for Samsung Galaxy Note 3","07/10/17 02:52 PM",0,6,1.26,3.41,2.69,1.49,"05/04/18 07:20 PM",etrade_supply,2.27,2.25
+FLX-SAM-968,"Front Camera Flex Cable for Samsung Galaxy S5","03/16/17 12:04 PM",0,2,1.12,3.504,2.79,1.99,"05/04/18 07:20 PM",cell_parts_hub,0,5.99
+FLX-SAM-974,"Headphone Jack Flex for Samsung Galaxy S5","07/10/17 02:52 PM",0,7,0.97,2.904,2.29,0.69,"05/04/18 07:20 PM",parts_4_cells,0,4.35
+FLX-SAM-984,"Samsung Galaxy S5 i9600 G900A G900T G900V G900P Home Button Flex White","02/09/18 04:16 PM",0,7,1.6,4.49,3.69,1.89,"05/04/18 07:20 PM",parts_4_cells,0,4
+FLX-SAM-994,"Home Button Mic Charging Port Flex for Samsung Galaxy S5 SM G900V Verizon ","05/04/18 03:36 PM",9,12,2.54,7.33,5.76,3.69,"05/04/18 07:40 PM",etrade_supply,6.91,6.85
+FLX-SNY-002,"Sony Xperia Z L36h Power Volume with Mic Flex","12/14/15 02:09 PM",0,3,1.93,4.44,3.59,1.99,"05/04/18 07:40 PM",etrade_supply,3.77,3.74
+FLX-SNY-008,"Sony Xperia Z L36h Ear Piece Speaker","12/30/15 02:07 PM",0,1,0.97,2.275,1.99,1.99,"05/04/18 07:40 PM",etrade_supply,1.09,1.08
+FLX-SNY-016,"Sony Xperia Z1 L39h NFC Antenna Coax Cables","04/13/16 01:49 PM",0,2,1.9,4.37,3.59,1.99,"05/04/18 07:40 PM",etrade_supply,1.12,1.11
+FLX-SNY-018,"Sony Xperia Z1 L39h SIM Card Tray Black","07/22/16 01:08 PM",0,1,1.09,2.5,2.19,1.99,"05/04/18 07:40 PM",etrade_supply,1.47,1.46
+FLX-SNY-020,"Sony Xperia Z1 L39h SIM Card Reader","01/26/16 01:44 PM",0,2,1.58,3.63,2.99,1.99,"05/04/18 07:40 PM",etrade_supply,3.36,3.33
+FLX-SNY-026,"Sony Xperia Z1 L39h NFC Antenna","04/13/16 01:49 PM",0,2,0,3.99,0,1.99,"05/04/18 07:40 PM",etrade_supply,1.12,1.11
+FLX-SAM-639,"SD Memory Card Flex for Samsung Galaxy Tab 10.1 P7500 ",N/A,0,2,0,7.95,5.39,0.99,"05/04/18 07:40 PM",etrade_supply,3.99,3.96
+FLX-SAM-672,"Samsung Galaxy Tab 10.1 N8000 OEM S Pen Stylus - White / Silver","01/03/17 11:56 AM",0,3,4.39,8.27,6.5,0.99,"05/04/18 07:40 PM",etrade_supply,6.33,6.28
+FLX-SAM-673,"Samsung Galaxy Note i717 OEM S Pen Stylus - White / Silver",N/A,0,11,0,21.95,19.99,0.99,"05/04/18 07:40 PM",etrade_supply,5.63,5.58
+FLX-SAM-697,"Charging Port Flex Cable for Samsung Galaxy Note i9220 N7000  REV 1.6","05/27/16 02:02 PM",0,2,2.17,5.31,3.89,0.99,"05/04/18 07:40 PM",etrade_supply,3.47,3.44
+FLX-SAM-702,"Loudspeaker Buzzer for Samsung Galaxy S4 - White (International)",N/A,0,9,0,14.95,12.99,0.99,"05/04/18 07:40 PM",etrade_supply,1.88,1.86
+FLX-SAM-707,"Charging Port Microphone Flex Cable for Samsung Galaxy S4 i9500 USB ","03/15/18 01:59 PM",1,4,1.66,6.23,4.57,3.49,"05/04/18 07:40 PM",etrade_supply,5.22,5.18
+FLX-SAM-716,"Home Button for Samsung Galaxy S4 - Black Mist","01/31/17 03:33 PM",0,27,0.54,1.35,1.19,0.99,"05/04/18 08:00 PM",etrade_supply,0.67,0.66
+FLX-SAM-717,"Home Button for Samsung Galaxy S3 - Red",N/A,0,11,0,2.95,0.99,0.99,"05/04/18 08:00 PM",etrade_supply,0.9,0.89
+FLX-SAM-720,"Home Button for Samsung Galaxy S3 - Black","01/18/16 10:44 AM",0,8,0.73,1.85,1.59,0.59,"05/04/18 08:00 PM",etrade_supply,0.9,0.89
+FLX-SAM-722,"Home Button for Samsung Galaxy S3 - Blue","01/31/17 03:33 PM",0,241,0,2.95,0.89,0.99,"05/04/18 08:00 PM",etrade_supply,0.92,0.91
+FLX-SAM-724,"Samsung Galaxy Note 10.1 Tablet N8000 Charging Port Flex Cable REV 0.5","09/26/16 11:32 AM",0,1,2.78,6.0525,4.49,0.99,"05/04/18 08:00 PM",etrade_supply,5.24,5.2
+FLX-SAM-725,"Samsung Galaxy Note 10.1 Tablet N8000 LCD Flex Cable","08/07/15 02:32 PM",0,15,1.78,4.094,3.29,0.99,"05/04/18 08:00 PM",etrade_supply,1.88,1.86
+FLX-SAM-727,"Power Volume for Samsung Galaxy S3 - Red","01/05/16 02:21 PM",0,0,1.12,2.69,2.09,0.59,"05/04/18 08:00 PM",etrade_supply,1.3,1.29
+TAB-SRN-741,"LCD Touch Screen Digitizer Assembly for Microsoft Surface Pro 3 - Black","03/30/18 03:38 PM",4,0,105.83,229.99,290.49,173.99,"05/04/18 08:00 PM",etrade_supply,171.71,170.34
+APL-001-2347,"Glass with Preinstalled OCA/Polarizer/Cold Pressed Frame for iPhone 6 Plus - White","04/25/17 11:59 AM",0,0,4.3,6.99,6.99,0,"05/04/18 08:00 PM",mobile_sentrix,7.64,8.4
+SRN-LGM-692,"LCD and Touch Screen Digitizer for LG G6 - Black","01/12/18 02:18 PM",0,0,80.35,164.99,0,64.99,"05/04/18 08:00 PM",etrade_supply,90.64,89.91
+SRN-LGM-693,"LCD and Touch Screen Digitizer for LG G6 - Silver","01/12/18 02:18 PM",0,0,80.35,164.99,0,64.49,"05/04/18 08:00 PM",etrade_supply,90.64,89.91
+SRN-LGM-691,"LCD and Touch Screen Digitizer for LG G6 - White","11/21/17 04:43 PM",0,0,80.6,164.99,0,76.99,"05/04/18 08:00 PM",etrade_supply,90.64,89.91
+APL-001-2365,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Premium)","04/19/18 01:15 PM",27,2,48.39,99.99,0,56.89,"05/04/18 08:20 PM",etrade_supply,76.7,76.09
+APL-001-2366,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Premium)","04/19/18 01:15 PM",11,0,62.76,109.99,0,79.99,"05/04/18 08:20 PM",mobile_sentrix,79.1,76.75
+APL-001-2366,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Premium)","04/19/18 01:15 PM",11,0,62.76,109.99,0,79.99,"05/04/18 08:20 PM",mengtor,80.99,78.99
+APL-001-2366,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Premium)","04/19/18 01:15 PM",11,0,62.76,109.99,0,79.99,"05/04/18 08:40 PM",etrade_supply,114.64,113.72
+APL-001-2368,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Premium)","04/19/18 01:15 PM",11,5,62.76,109.99,0,79.99,"05/04/18 08:40 PM",mobile_sentrix,74.6,73.58
+APL-001-2368,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Premium)","04/19/18 01:15 PM",11,5,62.76,109.99,0,79.99,"05/04/18 08:40 PM",mengtor,80.99,78.99
+APL-001-2368,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Premium)","04/19/18 01:15 PM",11,5,62.76,109.99,0,79.99,"05/04/18 08:40 PM",etrade_supply,114.64,113.72
+APL-001-2367,"LCD and Touch Screen Digitizer for iPhone 7 - White (Premium)","04/19/18 01:15 PM",26,4,48.39,99.99,0,56.89,"05/04/18 08:40 PM",etrade_supply,76.7,76.09
+FLX-SAM-796,"LCD Tester for Samsung Galaxy S4 ","07/03/17 12:08 PM",0,8,1.4,3.58,2.79,1.99,"05/04/18 09:00 PM",etrade_supply,2.73,2.71
+FLX-SAM-710,"Headphone Audio Jack Flex Cable for Samsung Galaxy S4",N/A,0,140,0,10.95,8.99,0.99,"05/04/18 09:00 PM",etrade_supply,1.1,1.09
+BTY-COV-1694,"Rear Battery Cover for Samsung Galaxy S6 - Gold Platinum (Standard)","12/28/17 02:21 PM",1,36,3.09,8.99,0,3.89,"05/04/18 09:00 PM",mengtor,2.99,3.5
+BTY-COV-1695,"Rear Battery Cover for Samsung Galaxy S6 - Black Sapphire (Standard)","04/25/18 04:13 PM",6,49,2.54,12.99,0,3.89,"05/04/18 09:00 PM",mengtor,2.99,3.5
+SRN-SAM-1600,"LCD and Touch Screen Digitizer for Samsung Galaxy Note 4 - Grey (Standard)","05/04/18 03:36 PM",5,10,92.65,149.99,0,107.89,"05/04/18 09:20 PM",mengtor,120.99,119.99
+SRN-SAM-1601,"LCD and Touch Screen Digitizer for Samsung Galaxy Note 4 - White (Standard)","04/25/18 04:13 PM",2,5,92.65,149.99,0,107.89,"05/04/18 09:20 PM",mengtor,119.99,118.99
+SRN-SAM-1602,"LCD and Touch Screen Digitizer for Samsung Galaxy S6 - White (Standard)","04/25/18 04:13 PM",7,6,94.25,139.99,0,110.69,"05/04/18 09:20 PM",mengtor,122.99,120.99
+SRN-SAM-1603,"LCD and Touch Screen Digitizer for Samsung Galaxy S6 - Black (Standard)","04/25/18 04:13 PM",18,8,94.25,139.99,0,110.69,"05/04/18 09:20 PM",mengtor,122.99,118.99
+SRN-SAM-1604,"LCD and Touch Screen Digitizer for Samsung Galaxy S6 Edge - Black Sapphire (Standard)",N/A,0,0,0,159.99,0,149.99,"05/04/18 09:20 PM",mengtor,116.99,114.99
+SRN-SAM-1608,"LCD and Touch Screen Digitizer for Samsung Galaxy S6 Edge - White Pearl (Standard)",N/A,0,0,0,159.99,0,149.99,"05/04/18 09:20 PM",mengtor,113.99,111.99
+SRN-SAM-1609,"LCD and Touch Screen Digitizer for Samsung Galaxy S6 Active - White (Standard)",N/A,0,0,0,149.99,0,129.99,"05/04/18 09:40 PM",mengtor,145.99,143.99
+APL-001-2370,"LCD and Touch Screen Digitizer for iPhone 7 - White (Economy Plus)","04/24/18 03:01 PM",442,175,15,36.99,0,19.99,"05/04/18 09:40 PM",mobile_sentrix,23.59,23.51
+APL-001-2370,"LCD and Touch Screen Digitizer for iPhone 7 - White (Economy Plus)","04/24/18 03:01 PM",442,175,15,36.99,0,19.99,"05/04/18 09:40 PM",mengtor,20.99,20.5
+APL-001-2370,"LCD and Touch Screen Digitizer for iPhone 7 - White (Economy Plus)","04/24/18 03:01 PM",442,175,15,36.99,0,19.99,"05/04/18 09:40 PM",etrade_supply,27.1,26.88
+APL-001-2370,"LCD and Touch Screen Digitizer for iPhone 7 - White (Economy Plus)","04/24/18 03:01 PM",442,175,15,36.99,0,19.99,"05/04/18 09:40 PM",cell_parts_hub,22.99,20.99
+APL-001-2369,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Economy Plus)","04/24/18 03:01 PM",452,206,15,36.99,0,19.99,"05/04/18 09:40 PM",mobile_sentrix,23.19,23.28
+APL-001-2369,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Economy Plus)","04/24/18 03:01 PM",452,206,15,36.99,0,19.99,"05/04/18 09:40 PM",mengtor,20.99,20.5
+APL-001-2369,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Economy Plus)","04/24/18 03:01 PM",452,206,15,36.99,0,19.99,"05/04/18 09:40 PM",etrade_supply,27.1,26.88
+APL-001-2369,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Economy Plus)","04/24/18 03:01 PM",452,206,15,36.99,0,19.99,"05/04/18 09:40 PM",cell_parts_hub,22.99,20.99
+APL-001-2372,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Economy Plus)","04/24/18 03:01 PM",559,141,17.5,39.99,0,22.99,"05/04/18 09:40 PM",mobile_sentrix,24.38,24.13
+APL-001-2372,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Economy Plus)","04/24/18 03:01 PM",559,141,17.5,39.99,0,22.99,"05/04/18 10:00 PM",mengtor,24.5,23.99
+APL-001-2372,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Economy Plus)","04/24/18 03:01 PM",559,141,17.5,39.99,0,22.99,"05/04/18 10:00 PM",etrade_supply,24.85,24.65
+APL-001-2372,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Economy Plus)","04/24/18 03:01 PM",559,141,17.5,39.99,0,22.99,"05/04/18 10:00 PM",cell_parts_hub,24.99,23.99
+APL-001-2371,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","05/04/18 10:58 AM",574,95,17.5,39.99,0,22.99,"05/04/18 10:00 PM",mobile_sentrix,24.35,24.16
+APL-001-2371,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","05/04/18 10:58 AM",574,95,17.5,39.99,0,22.99,"05/04/18 10:00 PM",mengtor,24.5,23.99
+APL-001-2371,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","05/04/18 10:58 AM",574,95,17.5,39.99,0,22.99,"05/04/18 10:00 PM",etrade_supply,24.85,24.65
+APL-001-2371,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","05/04/18 10:58 AM",574,95,17.5,39.99,0,22.99,"05/04/18 10:00 PM",cell_parts_hub,24.99,23.99
+SRN-SAM-1616,"LCD and Touch Screen Digitizer for Samsung Galaxy S7 Edge - Silver (Standard) ","04/25/18 04:13 PM",10,13,166.02,209.99,0,196.99,"05/04/18 10:20 PM",mengtor,217.99,212.99
+SRN-SAM-1615,"LCD and Touch Screen Digitizer for Samsung Galaxy S7 Edge - Gold Platinum (Standard) ","04/25/18 04:13 PM",15,7,166.02,209.99,0,196.99,"05/04/18 10:20 PM",mengtor,215.99,210.99
+SRN-SAM-1613,"LCD and Touch Screen Digitizer for Samsung Galaxy S7 Edge - Black (Standard)","04/26/18 12:38 PM",20,6,166.02,209.99,0,196.99,"05/04/18 10:20 PM",mengtor,215.99,210.99
+SRN-SAM-1612,"LCD and Touch Screen Digitizer for Samsung Galaxy S6 - Gold Platinum (Standard) ","04/17/18 02:12 PM",7,1,96.08,139.99,0,110.69,"05/04/18 10:40 PM",mengtor,123.99,120.99
+SRN-SAM-1611,"LCD and Touch Screen Digitizer for Samsung Galaxy S7  - Black Onyx (Standard)","04/13/18 02:47 PM",1,0,124.77,199.99,0,144.89,"05/04/18 10:40 PM",mengtor,148.99,146.99
+SRN-SAM-1610,"LCD and Touch Screen Digitizer for Samsung Galaxy S7 - White (Standard)","04/17/18 02:12 PM",2,4,116.84,199.99,0,144.89,"05/04/18 10:40 PM",mengtor,148.99,146.99
+BTY-COV-1702,"Rear Battery Cover for Samsung Galaxy S7 - Black Onyx (Standard)","03/21/18 10:59 AM",26,21,3.01,10.99,0,5.09,"05/04/18 10:40 PM",mengtor,8.99,7.99
+BTY-COV-1698,"Rear Battery Cover for Samsung Galaxy S6 - White Pearl (Standard)","10/30/17 03:35 PM",2,19,2.9,7.73,0,3.99,"05/04/18 11:00 PM",mengtor,2.99,3.5
+BTY-COV-1701,"Rear Battery Cover for Samsung Galaxy S7 Edge - Gold Platinum (Standard)","12/11/17 12:12 PM",9,0,3.66,10.21,0,4.99,"05/04/18 11:00 PM",mengtor,8.99,7.99
+BTY-COV-1705,"Rear Housing Samsung Galaxy S5 - White (Standard)",N/A,0,0,0,9.25,0,3.99,"05/04/18 11:00 PM",mobile_defenders,2.99,2.49
+BTY-COV-1706,"Samsung Galaxy Note 3 N900A N900T Midframe Bezel - Silver (Standard)",N/A,0,0,0,7.96,0,4.99,"05/04/18 11:20 PM",mobile_defenders,9.99,0
+BTY-COV-1707,"Rear Housing Frame with Loudspeaker Headphone Jack for Samsung Galaxy S5 - White (Standard)",N/A,0,0,0,11.34,0,3.99,"05/04/18 11:20 PM",mobile_defenders,2.99,2.49
+SRN-SAM-1622,"LCD and Touch Screen Digitizer for Samsung Galaxy S6 Active - Grey (Standard)",N/A,0,0,0,225.75,0,129.99,"05/04/18 11:20 PM",mengtor,145.99,143.99
+SRN-SAM-1624,"LCD Screen for Samsung Galaxy Core Prime (Standard)",N/A,0,0,0,19.98,0,14.99,"05/04/18 11:20 PM",mobile_defenders,11.99,0
+SRN-SAM-1626,"LCD and Touch Screen Digitizer for Samsung Galaxy S7 - Gold Platinum (Standard)","05/04/18 03:36 PM",2,1,116.84,199.99,139.05,144.89,"05/04/18 11:20 PM",mengtor,148.99,146.99
+SRN-SAM-1627,"LCD and Touch Screen Digitizer for Samsung Galaxy S8 - Midnight Black (Standard)","04/06/18 11:20 AM",8,0,158.2,329.99,0,172.79,"05/04/18 11:20 PM",mengtor,194.99,191.99
+SRN-SAM-1627,"LCD and Touch Screen Digitizer for Samsung Galaxy S8 - Midnight Black (Standard)","04/06/18 11:20 AM",8,0,158.2,329.99,0,172.79,"05/04/18 11:20 PM",etrade_supply,237.46,247.34
+SRN-SAM-1629,"LCD and Touch Screen Digitizer for Samsung Galaxy S8 Plus - Midnight Black (Standard)","04/25/18 04:13 PM",7,42,209.08,369.99,0,239.99,"05/04/18 11:40 PM",maya_cellular,0,254.95
+FLX-SAM-703,"Earpiece Speaker Proximity Sensor Flex Cable for Samsung Galaxy S4",N/A,0,175,0,3.95,0,1.49,"05/04/18 11:40 PM",etrade_supply,1.88,1.86
+FLX-SAM-700,"Loudspeaker Flex Cable for Samsung Galaxy S3 - Red","01/27/17 03:31 PM",0,35,0,9.95,7.39,0.99,"05/04/18 11:40 PM",etrade_supply,1.88,1.86
+SRN-SAM-1632,"LCD and Touch Screen Digitizer for Samsung Galaxy S7 - Gold (Premium)","04/18/18 10:52 AM",27,8,116,189.99,0,149.89,"05/04/18 11:40 PM",mobile_sentrix,130.89,126.98
+SRN-SAM-1632,"LCD and Touch Screen Digitizer for Samsung Galaxy S7 - Gold (Premium)","04/18/18 10:52 AM",27,8,116,189.99,0,149.89,"05/04/18 11:40 PM",etrade_supply,169.11,167.76
+SRN-SAM-1632,"LCD and Touch Screen Digitizer for Samsung Galaxy S7 - Gold (Premium)","04/18/18 10:52 AM",27,8,116,189.99,0,149.89,"05/04/18 11:40 PM",cell_parts_hub,145,135

@@ -1,0 +1,72 @@
+SKU,Title,"Last Received","30 Days Item Sale",Quantity,"True Cost",D1,P1,"Sale Price","Date Updated",Competitor,"Previous Price",Price
+FLX-SAM-1334,"Power Flex Cable for Samsung Galaxy S6","05/31/18 01:10 PM",0,8,1.03,4.6575,3.49,1.99,"12/26/18 04:00 AM",cell_parts_hub,3.99,0
+FLX-SAM-1335,"Samsung Galaxy S6 G920 Front Camera ",N/A,0,3,3.7,7.77,6.19,0,"12/26/18 04:00 AM",cell_parts_hub,7.99,0
+FLX-SAM-1336,"Samsung Galaxy S6 G920 Earpiece ","03/07/18 03:39 PM",0,0,1.19,4.99,3.99,1.59,"12/26/18 04:02 AM",cell_parts_hub,5.99,0
+APL-001-2115,"LCD and Touch Screen Digitizer for iPhone 6 - Black (Aftermarket)","04/25/18 12:36 PM",0,4,10.5,14.99,100,11.99,"12/26/18 09:11 AM",mobile_sentrix,14.48,14.47
+APL-001-2288,"LCD and Touch Screen Digitizer for iPhone 6 Plus - White (Aftermarket)","11/02/18 02:37 PM",0,5,11.98,16.99,29.99,14.49,"12/26/18 09:12 AM",mobile_sentrix,13.65,13.49
+APL-001-2430,"LCD and Touch Screen Digitizer for iPhone 7 - White (Aftermarket)","11/02/18 02:37 PM",0,4,11.83,17.39,0,14.59,"12/26/18 09:13 AM",mobile_sentrix,16.76,14.86
+APL-001-2433,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Aftermarket)","04/25/18 12:47 PM",0,0,17,20.99,0,17.19,"12/26/18 09:13 AM",mobile_sentrix,17.74,17.85
+APL-001-2436,"LCD and Touch Screen Digitizer for iPhone 8 Plus - White (Aftermarket)","11/02/18 02:37 PM",0,5,15.04,21.29,0,18.99,"12/26/18 09:14 AM",mobile_sentrix,17.86,18.12
+APL-001-2437,"LCD and Touch Screen Digitizer for iPhone 8 Plus - Black (Aftermarket)","04/30/18 11:00 AM",0,0,17.5,21.29,0,18.99,"12/26/18 09:14 AM",mobile_sentrix,17.8,18.12
+APL-001-2431,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Aftermarket)","04/25/18 12:47 PM",0,0,14.5,17.39,0,14.59,"12/26/18 09:14 AM",mobile_sentrix,16.58,14.86
+APL-001-2308,"LCD and Touch Screen Digitizer for iPhone 6 - Black (Aftermarket Premium / Economy Plus)","12/26/18 04:35 PM",777,533,9,21.99,21.99,12.99,"12/26/18 09:32 AM",mobile_sentrix,14.48,14.47
+APL-001-2369,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Aftermarket Premium / Economy Plus)","12/26/18 01:53 PM",363,352,11.25,36.99,0,15.79,"12/26/18 09:36 AM",mobile_sentrix,22.24,22.21
+APL-001-2369,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Aftermarket Premium / Economy Plus)","12/26/18 01:53 PM",363,352,11.25,36.99,0,15.79,"12/26/18 09:36 AM",fixez,24.49,0
+APL-001-2372,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Aftermarket Premium / Economy Plus)","12/26/18 02:35 PM",456,330,14.75,39.99,0,19.99,"12/26/18 09:36 AM",mobile_sentrix,23.89,23.88
+APL-001-2370,"LCD and Touch Screen Digitizer for iPhone 7 - White (Aftermarket Premium / Economy Plus)","12/26/18 01:53 PM",287,401,11.25,36.99,0,15.79,"12/26/18 09:37 AM",mobile_sentrix,22.2,22.19
+APL-001-2380,"LCD and Touch Screen Digitizer for iPhone 8 - White (Aftermarket Premium / Economy Plus)","12/17/18 04:03 PM",91,74,12,37.99,0,16.49,"12/26/18 09:37 AM",mobile_sentrix,23.91,23.9
+APL-001-2310,"LCD and Touch Screen Digitizer for iPhone 6S Plus - White (Aftermarket Premium / Economy Plus)","12/03/18 02:31 PM",389,236,14,47.99,79.99,19.19,"12/26/18 09:39 AM",fixez,27.49,0
+APL-001-2092,"LCD and Touch Screen Digitizer for iPhone 6 - White (Premium)","12/03/18 01:19 PM",42,25,16.8,52.25,52.25,25.79,"12/26/18 09:56 AM",mobile_sentrix,24.75,25.86
+APL-001-2091,"LCD and Touch Screen Digitizer for iPhone 6 - Black (Premium)","12/26/18 03:04 PM",66,54,15.77,52.25,52.25,25.79,"12/26/18 09:57 AM",mobile_sentrix,25.7,25.86
+APL-001-2144,"LCD and Touch Screen Digitizer for iPhone 5 - Black (Premium)","08/09/18 11:48 AM",6,11,13.17,59.99,59.99,15.49,"12/26/18 10:01 AM",mobile_sentrix,15.85,15.58
+APL-001-2204,"LCD and Touch Screen Digitizer for iPhone 6S Plus - White (Premium)","12/26/18 03:04 PM",14,17,37.9,99.99,99.99,55.99,"12/26/18 10:07 AM",mobile_sentrix,56.65,56.63
+APL-001-2365,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Premium)","12/12/18 09:30 AM",17,48,43.26,99.99,0,55.99,"12/26/18 10:07 AM",mobile_sentrix,56.55,56.58
+APL-001-2203,"LCD and Touch Screen Digitizer for iPhone 6S Plus - Black (Premium)","10/18/18 09:40 AM",7,35,46.21,99.99,99.99,55.99,"12/26/18 10:07 AM",mobile_sentrix,56.55,56.6
+APL-001-2367,"LCD and Touch Screen Digitizer for iPhone 7 - White (Premium)","12/12/18 09:30 AM",13,82,36.07,99.99,0,55.99,"12/26/18 10:08 AM",mobile_sentrix,56.54,56.55
+APL-001-2366,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Premium)","10/25/18 09:18 AM",27,36,58.01,109.99,0,61.59,"12/26/18 10:08 AM",mobile_sentrix,61.69,61.7
+APL-001-2368,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Premium)","12/12/18 09:30 AM",16,41,47.45,109.99,0,61.59,"12/26/18 10:09 AM",mobile_sentrix,61.89,61.84
+APL-001-2377,"LCD and Touch Screen Digitizer for iPhone 8 - White (Premium)","11/02/18 02:37 PM",13,34,40.45,129.99,0,54.69,"12/26/18 10:10 AM",mobile_sentrix,55.07,55.06
+APL-001-2403,"LCD and Touch Screen Digitizer for iPhone X - Black (Premium)","11/02/18 02:37 PM",0,2,260.88,349.89,0,266.69,"12/26/18 10:11 AM",maya_cellular,218.95,225.95
+APL-001-2376,"LCD and Touch Screen Digitizer for iPhone 8 Plus - Black (Premium)","12/26/18 03:04 PM",10,13,47.45,149.99,0,69.39,"12/26/18 10:12 AM",mobile_sentrix,72.86,70.09
+APL-001-2381,"LCD and Touch Screen Digitizer for iPhone 8 Plus - White (Premium)","11/02/18 02:37 PM",15,16,54.75,149.99,0,69.39,"12/26/18 10:12 AM",mobile_sentrix,69.47,69.5
+APL-001-2381,"LCD and Touch Screen Digitizer for iPhone 8 Plus - White (Premium)","11/02/18 02:37 PM",15,16,54.75,149.99,0,69.39,"12/26/18 10:12 AM",fixez,89.49,0
+APL-001-2211,"LCD and Touch Screen Digitizer for iPhone 6s - White (Premium)","11/26/18 02:53 PM",21,17,22.2,64.99,64.99,30.79,"12/26/18 10:13 AM",mobile_sentrix,30.83,30.86
+APL-001-2275,"Touch Screen Digitizer With Home Button for iPad 2 - White (Premium)","10/23/18 01:25 PM",19,50,7.47,19.99,19.99,8.79,"12/26/18 10:24 AM",mobile_sentrix,9,0
+APL-001-2446,"Touch Screen Digitizer for iPad Air / iPad 5 (2017) White - Premium","12/14/18 04:42 PM",32,18,11.35,32.99,0,13.89,"12/26/18 10:28 AM",mobile_sentrix,13.96,13.95
+APL-001-2478,"Touch Screen Digitizer for iPad 6 (2018) - White (Premium)","12/04/18 03:51 PM",17,23,13.5,73.99,0,32.59,"12/26/18 10:29 AM",mobile_sentrix,33.56,0
+APL-001-2201,"Touch Screen Digitizer With Home Button for iPad Air - White (Premium)","10/23/18 01:25 PM",66,77,9.53,36.99,36.99,14.49,"12/26/18 10:30 AM",mobile_sentrix,14.58,14.56
+APL-001-2448,"Touch Screen Digitizer With Home Button for iPad Air - White (Standard)","12/14/18 04:42 PM",9,55,9.16,16.99,0,9.99,"12/26/18 10:31 AM",mobile_sentrix,14.58,14.56
+APL-001-2202,"Touch Screen Digitizer with Home Button And IC Chip for iPad Mini & iPad Mini 2 - Black (Premium)","09/26/18 12:05 PM",108,0,10.06,29.99,29.99,15.09,"12/26/18 10:36 AM",mobile_sentrix,15.23,15.21
+BTY-COV-1694,"Rear Battery Cover for Samsung Galaxy S6 - Gold Platinum (Standard)","12/28/17 02:21 PM",4,7,3.09,8.99,0,3.99,"12/26/18 10:40 AM",mobile_sentrix,3.94,5
+BTY-COV-1695,"Rear Battery Cover for Samsung Galaxy S6 - Black Sapphire (Standard)","10/18/18 11:57 AM",1,32,2.39,12.99,0,3.99,"12/26/18 10:41 AM",mobile_sentrix,3.98,3.94
+BTY-COV-1702,"Rear Battery Cover for Samsung Galaxy S7 - Black Onyx (Standard)","09/25/18 04:36 PM",11,31,2.52,8.99,0,4.99,"12/26/18 10:41 AM",mobile_sentrix,5.77,5.74
+SRN-SAM-1629,"LCD and Touch Screen Digitizer for Samsung Galaxy S8 Plus - Midnight Black (Standard) (No Logo)","10/30/18 01:37 PM",19,12,175.63,369.99,0,210.49,"12/26/18 10:51 AM",fixez,232.49,0
+SRN-SAM-1607,"LCD and Touch Screen Digitizer for Samsung Galaxy Note 5 - White Pearl (Standard) (No Logo)","09/24/18 12:21 PM",0,11,107.24,199.99,0,119.59,"12/26/18 10:52 AM",mobile_sentrix,117.37,119.6
+BTY-COV-1698,"Rear Battery Cover for Samsung Galaxy S6 - White Pearl (Standard)","07/27/18 04:23 PM",0,39,3.53,7.73,0,3.99,"12/26/18 11:00 AM",mobile_sentrix,3.92,3.91
+SRN-SAM-1740,"LCD and Touch Screen Digitizer with Frame for Samsung Galaxy S9 Plus (Black Frame) - Black (Premium)","12/11/18 02:23 PM",1,7,199,319.99,0,214.89,"12/26/18 11:06 AM",fixez,0,249.95
+SRN-SAM-1637,"LCD and Touch Screen Digitizer for Samsung Galaxy S6 - White (Premium)","11/28/18 01:16 PM",1,4,96,159.99,0,105.59,"12/26/18 11:07 AM",mengtor,110.99,0
+BT-BP-30192,"BinTEK Battery for iPhone 6S 1715mAH Li-Po Premium ","12/11/18 12:45 PM",290,68,4.32,14.99,14.99,9.99,"12/26/18 11:56 AM",fixez,11.49,0
+APL-002-6448,"LCD Frame for iPhone 8 Plus - White","03/23/18 03:25 PM",0,5,1.52,19.99,0,0,"12/26/18 12:00 PM",etrade_supply,8.52,7.11
+APL-002-6449,"LCD Frame for iPhone 8 Plus - Black","03/23/18 03:25 PM",0,5,1.52,19.99,0,0,"12/26/18 12:01 PM",etrade_supply,8.52,7.11
+BT-BP-30226,"Battery for Apple iPad Pro 12.9 (1st Gen) - 3.77V 10307mAH Li-Polymer","05/26/17 01:11 PM",2,10,18.81,29.99,29.99,18.89,"12/26/18 12:03 PM",mobile_sentrix,15,12.16
+BT-BP-30228,"BinTEK Battery for Apple iPad Pro 9.7 7306mAH Li-Polymer Premium ","12/14/18 10:00 AM",1,16,8.7,29.99,29.99,12.99,"12/26/18 12:03 PM",mobile_sentrix,10.12,11.41
+BT-BP-30228,"BinTEK Battery for Apple iPad Pro 9.7 7306mAH Li-Polymer Premium ","12/14/18 10:00 AM",1,16,8.7,29.99,29.99,12.99,"12/26/18 12:03 PM",fixez,14.49,0
+APL-003-1790,"Rear Camera Module for iPhone 8 Plus ","07/27/18 04:39 PM",2,0,55.72,109.99,109.99,69.99,"12/26/18 12:20 PM",mengtor,57.99,56.99
+APL-002-6450,"LCD Frame for iPhone 8 - Black","03/23/18 03:25 PM",0,4,1.84,19.99,0,4.99,"12/26/18 12:20 PM",etrade_supply,7.97,6.25
+APL-002-6451,"LCD Frame for iPhone 8 - White","03/23/18 03:25 PM",0,5,1.84,19.99,0,4.99,"12/26/18 12:20 PM",etrade_supply,7.97,6.25
+APL-003-1815,"Vibrator for iPhone 8 Plus","07/27/18 04:39 PM",0,5,11.36,19.99,19.99,15.29,"12/26/18 12:41 PM",mengtor,23.99,21.99
+FLX-SAM-1577,"Stylus for Samsung Galaxy Note 8 - Black","06/13/18 01:48 PM",3,0,5.74,25.99,25.99,11.99,"12/26/18 01:40 PM",mengtor,7.5,6.99
+FLX-SAM-1578,"Stylus for Samsung Galaxy Note 8 - Blue	","05/08/18 03:18 PM",0,2,6.61,25.99,25.99,15.99,"12/26/18 01:41 PM",mengtor,7.5,6.99
+APL-003-1824,"Rear Camera Flex Cable for iPhone X","08/15/18 12:53 PM",1,2,58.23,169.99,0,68.29,"12/26/18 03:41 PM",mengtor,53.99,52.99
+APL-001-2398,"LCD and Touch Screen Digitizer for Apple Watch Series 2 38mm","08/24/18 10:50 AM",0,4,119.12,234.99,0,146.89,"12/26/18 04:20 PM",mengtor,133.99,132.99
+APL-001-2398,"LCD and Touch Screen Digitizer for Apple Watch Series 2 38mm","08/24/18 10:50 AM",0,4,119.12,234.99,0,146.89,"12/26/18 04:20 PM",etrade_supply,56.34,49.47
+APL-001-2399,"LCD and Touch Screen Digitizer for Apple Watch Series 2 42mm","11/14/18 04:16 PM",1,2,120.15,199.99,0,157.49,"12/26/18 04:21 PM",mengtor,137.99,136.99
+SRN-HTC-1159,"LCD and Touch Screen Digitizer for Google Pixel - White","05/01/17 01:21 PM",0,0,80.44,119.262,111.01,82.99,"12/26/18 06:21 PM",mengtor,30.99,0
+SRN-HTC-1160,"LCD and Touch Screen Digitizer for Google Pixel XL - Black (No Logo)","10/30/18 01:37 PM",0,4,63.22,149.99,149.99,88.99,"12/26/18 06:40 PM",mengtor,0,49.99
+SRN-HUA-164,"LCD and Touch Screen Digitizer for Huawei Mate 9 (MHA-L09) - Gold","05/08/18 03:18 PM",0,2,25.66,59.99,0,28.09,"12/26/18 06:40 PM",mobile_sentrix,25.55,24
+FLX-SAM-1599,"Power Flex Cable for Samsung Galaxy S9/ S9 Plus","08/06/18 11:36 AM",1,4,2.38,2.99,0,0,"12/26/18 08:20 PM",fixez,0,7.49
+APL-003-1892,"Power Flex Cable With Mic for iPad 5 (2017)","10/18/18 11:57 AM",0,10,1.36,5.99,0,2.99,"12/26/18 09:20 PM",mengtor,1.65,1.45
+SRN-HTC-1161,"LCD and Touch Screen Digitizer for Google Pixel 2 - Black (No Logo)","12/13/18 01:38 PM",1,3,76.39,189.99,0,134.99,"12/26/18 10:20 PM",fixez,141.49,109.95
+SRN-HTC-1162,"LCD and Touch Screen Digitizer for Google Pixel 2 XL - Black","11/13/18 04:48 PM",4,0,104.7,199.99,0,149.99,"12/26/18 10:40 PM",mengtor,122.99,121.99
+APL-001-2452,"Touch Screen Digitizer With Home Button for iPad 2 - Black (Standard)","10/23/18 01:25 PM",9,61,4.82,17.99,0,6.99,"12/26/18 11:20 PM",fixez,0,12.49
+APL-001-2454,"Touch Screen Digitizer With Home Button for iPad 3 - Black (Standard)","12/04/18 03:51 PM",4,14,4.3,17.99,0,6.99,"12/26/18 11:20 PM",fixez,11.49,0

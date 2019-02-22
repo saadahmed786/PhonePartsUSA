@@ -1,0 +1,26 @@
+[02-Nov-2017 13:02:53 America/Chicago] PHP Warning:  include_once(config.php): failed to open stream: No such file or directory in /home/phonerep/public_html/imp/imap/test.php on line 2
+[02-Nov-2017 13:02:53 America/Chicago] PHP Warning:  include_once(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/phonerep/public_html/imp/imap/test.php on line 2
+[02-Nov-2017 13:02:53 America/Chicago] PHP Warning:  include_once(inc/functions.php): failed to open stream: No such file or directory in /home/phonerep/public_html/imp/imap/test.php on line 3
+[02-Nov-2017 13:02:53 America/Chicago] PHP Warning:  include_once(): Failed opening 'inc/functions.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/phonerep/public_html/imp/imap/test.php on line 3
+[02-Nov-2017 13:02:53 America/Chicago] PHP Warning:  require_once(imap/autoload.php): failed to open stream: No such file or directory in /home/phonerep/public_html/imp/imap/test.php on line 4
+[02-Nov-2017 13:02:53 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'imap/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/phonerep/public_html/imp/imap/test.php on line 4
+[02-Nov-2017 11:04:10 America/Los_Angeles] PHP Fatal error:  require_once(): Failed opening required 'ImapClient/ImapClientException.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/phonerep/public_html/imp/imap/autoload.php on line 2
+[02-Nov-2017 11:04:12 America/Los_Angeles] PHP Fatal error:  require_once(): Failed opening required 'ImapClient/ImapClientException.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/phonerep/public_html/imp/imap/autoload.php on line 2
+[02-Nov-2017 11:05:05 America/Los_Angeles] PHP Fatal error:  require_once(): Failed opening required 'ImapClient/ImapClientException.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/phonerep/public_html/imp/imap/autoload.php on line 2
+[02-Nov-2017 11:05:50 America/Los_Angeles] PHP Fatal error:  require_once(): Failed opening required 'ImapClient/ImapClientException.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/phonerep/public_html/imp/imap/autoload.php on line 2
+[02-Nov-2017 11:06:26 America/Los_Angeles] PHP Fatal error:  require_once(): Failed opening required 'ImapClient/ImapClientException.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/phonerep/public_html/imp/imap/autoload.php on line 2
+[02-Nov-2017 11:06:50 America/Los_Angeles] PHP Fatal error:  require_once(): Failed opening required 'ImapClient/ImapClientException.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/phonerep/public_html/imp/imap/autoload.php on line 2
+[02-Nov-2017 12:05:28 America/Los_Angeles] PHP Fatal error:  Cannot use object of type SSilence\ImapClient\IncomingMessage as array in /home/phonerep/public_html/imp/imap/test.php on line 38
+[02-Nov-2017 12:05:50 America/Los_Angeles] PHP Fatal error:  Cannot use object of type SSilence\ImapClient\IncomingMessage as array in /home/phonerep/public_html/imp/imap/test.php on line 38
+[02-Nov-2017 15:56:49 America/Chicago] PHP Parse error:  syntax error, unexpected ':' in /home/phonerep/public_html/imp/imap/test.php on line 38
+[02-Nov-2017 15:57:03 America/Chicago] PHP Parse error:  syntax error, unexpected '::' (T_PAAMAYIM_NEKUDOTAYIM) in /home/phonerep/public_html/imp/imap/test.php on line 38
+[03-Nov-2017 06:57:02 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'SSilence\ImapClient\ImapClientException' with message 'Section object have only "structure" and "body" properties.' in /home/phonerep/public_html/imp/imap/ImapClient/Section.php:72
+Stack trace:
+#0 /home/phonerep/public_html/imp/imap/test.php(38): SSilence\ImapClient\Section->__get('_structure')
+#1 {main}
+  thrown in /home/phonerep/public_html/imp/imap/ImapClient/Section.php on line 72
+[03-Nov-2017 11:39:46 America/Chicago] PHP Parse error:  syntax error, unexpected '$insert' (T_VARIABLE) in /home/phonerep/public_html/imp/imap/test.php on line 43
+[03-Nov-2017 11:40:44 America/Chicago] PHP Parse error:  syntax error, unexpected '$insert' (T_VARIABLE) in /home/phonerep/public_html/imp/imap/test.php on line 44
+[03-Nov-2017 11:40:54 America/Chicago] PHP Parse error:  syntax error, unexpected '$insert' (T_VARIABLE) in /home/phonerep/public_html/imp/imap/test.php on line 44
+[03-Nov-2017 11:41:28 America/Chicago] PHP Parse error:  syntax error, unexpected '$insert' (T_VARIABLE) in /home/phonerep/public_html/imp/imap/test.php on line 45
+[03-Nov-2017 11:42:46 America/Chicago] PHP Parse error:  syntax error, unexpected '$insert' (T_VARIABLE) in /home/phonerep/public_html/imp/imap/test.php on line 44

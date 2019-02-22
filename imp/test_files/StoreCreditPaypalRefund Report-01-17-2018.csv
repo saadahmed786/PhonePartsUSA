@@ -1,0 +1,11 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-01-17 16:25:56",meri,POS,societyrepairs@gmail.com,540858/PP12680,540858R,18.3900,"   16.9900"," APL-001-2116","  LCD and Touch Screen Digitizer for iPhone 6 Plus - Black (Economy Plus) ","Good For Stock-"
+"S Credit","2018-01-17 12:46:03",Billy,Manual,itechptr@gmail.com,N/A/,PP12596R2,129.9900,,,,"RMA - Customer Return Exception"
+"S Credit","2018-01-17 03:49:07",saad,BuyBack,nextgenwirelesss@gmail.com,LBB01912/,LBB2fBKeM,103.5000,103.50,,,LBB
+"S Credit","2018-01-17 03:48:30",saad,BuyBack,brandon@flegeltechrepair.com,LBB01901/,LBB1Yck30,215.7500,215.75,,,LBB
+"S Credit","2018-01-17 03:45:50",saad,BuyBack,,LBB01919/,LBBodYdLW,2.0000,2.00,,,LBB
+"S Credit","2018-01-17 03:44:33",saad,BuyBack,nextgenwirelesss@gmail.com,LBB01893/,LBBJJTI4H,18.0000,18.00,,,LBB
+"S Credit","2018-01-17 03:43:47",saad,BuyBack,Phoneninjass@icloud.com,LBB01915/,LBBUIcQLv,22.0000,22.00,,,LBB
+"S Credit","2018-01-17 03:02:04",Billy,BuyBack,bstafford11@gmail.com,LBB01906/,LBB0W5DXI,410.7500,410.75,,,LBB
+Refund,"2018-01-17 17:00:09",Billy,Order,bun.bunny@outlook.com,"540753 /Cancelled Order",9E241250E33109032,59.75,N/A,N/A,N/A,"Possible Fraud"
+Refund,"2018-01-17 17:00:05",Billy,Order,spittallegiance@gmail.com,"540755 /Cancelled Order",9AN81234HV794454C,208.98,N/A,N/A,N/A,"Possible Fraud"

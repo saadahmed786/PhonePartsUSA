@@ -1,0 +1,18 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-04-16 16:23:21",Meri,Manual,cullmanphone@yahoo.com,N/A/,547701RP,11.0900,,,,"Error - Over Payment Credit"
+"S Credit","2018-04-16 15:33:56",Billy,Order,aum728@gmail.com,548203/,548203-RP1,39.8900,39.89,APL-003-1591,"Rear Camera for iPhone 6s Plus","Out Of Stock"
+"S Credit","2018-04-16 14:16:29",Meri,Manual,hopekmab1@gmail.com,N/A/,BEHALF3120,593.4400,,,,"Payment - Behalf Payment"
+"S Credit","2018-04-16 13:15:40",sandra,POS,tomerall4you@gmail.com,543419-1/,543419-1R,25.9900,25.99,APL-001-2382,"LCD and Touch Screen Digitizer for iPhone 8 Plus - Black (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-04-16 13:14:31",sandra,POS,tomerall4you@gmail.com,544342-1/,544342-1R,25.9900,25.99,APL-001-2383,"LCD and Touch Screen Digitizer for iPhone 8 Plus - White (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-04-16 13:11:49",sandra,POS,tomerall4you@gmail.com,547902-1/,547902-1R,25.9900,25.99,APL-001-2382,"LCD and Touch Screen Digitizer for iPhone 8 Plus - Black (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-04-16 13:07:27",sandra,POS,phonepcfixs@gmail.com,548199/PP13446,548199R,0.7900,0.79,BT-SPX-0304,"Bongo Shield Privacy Tempered Glass Screen Protector - iPhone 5 5S 5C","(Good For Stock-)"
+"S Credit","2018-04-16 12:56:52",sandra,POS,phonepcfixs@gmail.com,547304/PP13444,547304R,20.9900,20.99,APL-001-2370,"LCD and Touch Screen Digitizer for iPhone 7 - White (Economy Plus)","(Item Issue-)"
+"S Credit","2018-04-16 12:36:56",meri,POS,gogeta519@aol.com,547530/PP13440,547530R,18.3900,16.99,APL-001-2116,"LCD and Touch Screen Digitizer for iPhone 6 Plus - Black (Economy Plus) ","(Good For Stock-)"
+"S Credit","2018-04-16 12:16:34",Billy,Order,Nolanj@live.com,548102/,548102-RP1,0.0000,2.99,ACC-ZED-802,"Samsung USB Type C 1.5m/5ft Data Cable - White (Premium)","Out Of Stock"
+"S Credit","2018-04-16 11:14:36",meri,POS,lasvegasgadgets@gmail.com,548074-1/,548074-1R,14.9900,14.99,APL-001-2309,"LCD and Touch Screen Digitizer for iPhone 6 - White (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-04-16 05:18:33",Meri,RMA,amarkle77@gmail.com,546508/PP13400,PP13400R,8.9900,8.99,BT-BP-30192,"BinTEK Battery for iPhone 6S 1715mAH Li-Po Premium ","(Item Issue - RTV-Dead Battery)"
+"S Credit","2018-04-16 05:16:40",Meri,RMA,amarkle77@gmail.com,545645/PP13401,PP13401R,10.9900,10.99,APL-001-0730,"LCD and Touch Screen Digitizer for iPhone 5S SE - Black (Economy Plus)","(Item Issue - RTV-Digitizer Ghosting)"
+"S Credit","2018-04-16 02:35:43",Meri,RMA,kevinedu1@outlook.com,546146/PP13380,PP13380R,10.9900,10.99,APL-001-0730,"LCD and Touch Screen Digitizer for iPhone 5S SE - Black (Economy Plus)","(Item Issue - RTV-Digitizer Ghosting)"
+Refund,"2018-04-16 17:20:04",Meri,Order,erinburch93@LIVE.com,546924,42H851235F145205S,23.99,23.9900,APL-001-2372,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Economy Plus)",-
+Refund,"2018-04-16 13:30:05",,Order,wegotech2010@gmail.com,548183,7W067194FD331194T,259.99,259.9900,SRN-SAM-1648,"LCD and Touch Screen Digitizer for Samsung Galaxy S8 Plus With Frame - Midnight Black (Premium)",-
+Refund,"2018-04-16 13:00:04",,Order,wegotech2010@gmail.com,547800,18743362C8304254T,156.95,N/A,N/A,N/A,"Cancelled Order"

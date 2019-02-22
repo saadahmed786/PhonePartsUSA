@@ -1,0 +1,12 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-02-26 16:49:11",Billy,Order,mark@phoneaxiom.com,544370/,544370-RP1,389.9800,389.98,SRN-SAM-1627,"LCD and Touch Screen Digitizer for Samsung Galaxy S8 - Midnight Black (Standard)","Out Of Stock"
+"S Credit","2018-02-26 16:12:44",meri,POS,galaxycprlv@gmail.com,544112-1/,544112-1R,1.9900,1.99,FLX-UCP-187,"Rear Camera Replacement for Huawei Nexus 6P","(Issue Replacement)"
+"S Credit","2018-02-26 14:51:54",meri,POS,tomerall4you@gmail.com,544165/PP13016,544165R,23.9900,23.99,APL-001-2372,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Economy Plus)","(Item Issue-)"
+"S Credit","2018-02-26 14:35:20",meri,POS,societyrepairs@gmail.com,544025/PP13015,544025R,22.7200,20.99,APL-001-2369,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Economy Plus)","(Good For Stock-)"
+"S Credit","2018-02-26 13:51:11",meri,POS,lasvegasgadgets@gmail.com,543490-1/,543490-1R,20.9900,20.99,APL-001-2369,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-02-26 13:45:15",meri,POS,josephbrown.ip@gmail.com,544007/PP13012,544007R,37.8800,34.99,APL-001-2211,"LCD and Touch Screen Digitizer for iPhone 6s - White (Premium)","(Item Issue-)"
+"S Credit","2018-02-26 11:44:28",meri,POS,iphonedoctor2017@gmail.com,543742-1/,543742-1R,20.9900,20.99,APL-001-2370,"LCD and Touch Screen Digitizer for iPhone 7 - White (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-02-26 10:24:24",meri,POS,nicholashyatt3223@yahoo.com,543698/PP13008,543698R,18.3900,16.99,APL-001-2116,"LCD and Touch Screen Digitizer for iPhone 6 Plus - Black (Economy Plus) ","(Item Issue-)"
+"S Credit","2018-02-26 10:22:44",meri,POS,sterjoskitoni@gmail.com,543914/PP13007,543914R,11.9000,10.99,APL-001-0410,"LCD and Touch Screen Digitizer for iPhone 5 - Black (Economy Plus)","(Good For Stock-)"
+"S Credit","2018-02-26 10:12:19",Billy,Manual,jon@dangitrepair.com,N/A/,543938-MI,247.9900,,,,"Warehouse - Missing Order Item"
+Refund,"2018-02-26 16:00:13",Billy,Order,Stincersara@gmail.com,"544226 /Cancelled Order",4D3655312J8747254,28.88,N/A,N/A,N/A,"Customer Cancel"

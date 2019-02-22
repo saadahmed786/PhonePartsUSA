@@ -1,0 +1,11 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-04-23 15:32:26",Billy,Manual,cbrayans@icloud.com,N/A/,PP13517RX,75.9800,,,,"RMA - Cross Shipping"
+"S Credit","2018-04-23 14:58:23",Meri,Manual,FirstResponsePhoneRepair@Gmail.com,N/A/,PP13361ER,31.9800,,,,"RMA - Customer Return Exception"
+"S Credit","2018-04-23 14:20:40",Meri,Manual,mr.mavis@gmail.com,N/A/,PP13370RE,144.9900,,,,"RMA - Customer Return Exception"
+"S Credit","2018-04-23 09:50:55",meri,POS,iphixsmartphones@gmail.com,545585-1/,545585-1R,23.6900,23.69,APL-001-2380,"LCD and Touch Screen Digitizer for iPhone 8 - White (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-04-23 09:49:47",meri,POS,iphixsmartphones@gmail.com,545359-2/,545359-2R,36.8800,14.99,APL-001-2309,"LCD and Touch Screen Digitizer for iPhone 6 - White (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-04-23 09:49:47",meri,POS,iphixsmartphones@gmail.com,545359-2/,545359-2R,36.8800,21.89,APL-001-2310,"LCD and Touch Screen Digitizer for iPhone 6S Plus - White (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-04-23 09:48:28",meri,POS,iphixsmartphones@gmail.com,546632-1/,546632-1R,41.9800,20.99,APL-001-2369,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-04-23 09:48:28",meri,POS,iphixsmartphones@gmail.com,546632-1/,546632-1R,41.9800,20.99,APL-001-2369,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Economy Plus)","(Issue Replacement)"
+Refund,"2018-04-23 15:00:08",,Order,gogeta519@aol.com,548215,4ED34459P64317843,25.97,23.9900,APL-001-2372,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Economy Plus)",-
+Refund,"2018-04-23 12:20:06",Billy,Order,Godoy_gio@outlook.com,"548728 /Cancelled Order",09L70294MU855234D,70.87,N/A,N/A,N/A,"Customer Cancel"

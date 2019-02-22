@@ -1,0 +1,22 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-02-07 14:22:53",Billy,Manual,gary.cavaretta@experimac.com,N/A/,542688,13.8400,,,,"Error - Over Payment Credit"
+"S Credit","2018-02-07 14:07:03",Billy,Manual,akneasel@lebanon.k12.pa.us,N/A/,PO623R-2,1329.3000,,,,"RMA - RMA Vouchers Consolidation "
+"S Credit","2018-02-07 14:06:01",meri,POS,tomerall4you@gmail.com,542438-1/,542438-1R,23.9900,23.99,APL-001-2371,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-02-07 13:54:11",meri,POS,nicholashyatt3223@yahoo.com,542184/PP12867,542184R,24.8900,22.99,APL-001-2369,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Economy Plus)","(Item Issue-)"
+"S Credit","2018-02-07 12:20:15",meri,POS,salsanlopez@hotmail.com,542418/PP12866,542418R,61.9900,61.99,SRN-LGM-648,"LCD and Touch Screen Replacement with Frame for LG V20 - Black","(Good For Stock-)"
+"S Credit","2018-02-07 10:08:36",Billy,RMA,suncomm.wireless@hotmail.com,/PP12855,PP12855R,16.9900,16.99,APL-001-2116,"LCD and Touch Screen Digitizer for iPhone 6 Plus - Black (Economy Plus) ","(Item Issue - RTV-No Display)"
+"S Credit","2018-02-07 09:43:39",Billy,RMA,suncomm.wireless@hotmail.com,/PP12761,PP12761R,219.7000,16.99,APL-001-2136,"LCD and Touch Screen Digitizer for iPhone 6 Plus - White (Economy Plus) ","(Item Issue - RTV-No Display)"
+"S Credit","2018-02-07 09:43:39",Billy,RMA,suncomm.wireless@hotmail.com,/PP12761,PP12761R,219.7000,14.89,APL-001-2309,"LCD and Touch Screen Digitizer for iPhone 6 - White (Economy Plus)","(Item Issue - RTV-LCD Lines)"
+"S Credit","2018-02-07 09:43:39",Billy,RMA,suncomm.wireless@hotmail.com,/PP12761,PP12761R,219.7000,21.89,APL-001-2310,"LCD and Touch Screen Digitizer for iPhone 6S Plus - White (Economy Plus)","(Item Issue - RTV-Digitizer Issues)"
+"S Credit","2018-02-07 09:43:39",Billy,RMA,suncomm.wireless@hotmail.com,/PP12761,PP12761R,219.7000,22.99,APL-001-2370,"LCD and Touch Screen Digitizer for iPhone 7 - White (Economy Plus)","(Item Issue - RTV-Digitizer Issues)"
+"S Credit","2018-02-07 09:43:39",Billy,RMA,suncomm.wireless@hotmail.com,/PP12761,PP12761R,219.7000,22.99,APL-001-2369,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Economy Plus)","(Item Issue - RTV-Home Button Flex)"
+"S Credit","2018-02-07 09:43:39",Billy,RMA,suncomm.wireless@hotmail.com,/PP12761,PP12761R,219.7000,23.99,APL-001-2372,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Economy Plus)","(Item Issue - RTV-Home Button Flex)"
+"S Credit","2018-02-07 09:43:39",Billy,RMA,suncomm.wireless@hotmail.com,/PP12761,PP12761R,219.7000,23.99,APL-001-2371,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","(Item Issue - RTV-Flex or Digitizer Issues)"
+"S Credit","2018-02-07 09:43:39",Billy,RMA,suncomm.wireless@hotmail.com,/PP12761,PP12761R,219.7000,23.99,APL-001-2371,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","(Item Issue - RTV-Flex or Digitizer Issues)"
+"S Credit","2018-02-07 09:43:39",Billy,RMA,suncomm.wireless@hotmail.com,/PP12761,PP12761R,219.7000,23.99,APL-001-2371,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","(Item Issue - RTV-Flex or Digitizer Issues)"
+"S Credit","2018-02-07 09:43:39",Billy,RMA,suncomm.wireless@hotmail.com,/PP12761,PP12761R,219.7000,23.99,APL-001-2371,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","(Item Issue - RTV-Home Button Flex)"
+"S Credit","2018-02-07 05:20:19",saad,BuyBack,aum728@gmail.com,LBB01938/,LBBANuzLO,1.5000,1.50,,,LBB
+"S Credit","2018-02-07 05:19:36",saad,BuyBack,contact@tiptonrepair.com,LBB01899/,LBBLsvQTJ,931.7500,931.75,,,LBB
+"S Credit","2018-02-07 05:18:45",saad,BuyBack,joby@dropnfixla.com,LBB01920/,LBBBOjolF,96.0000,96.00,,,LBB
+"S Credit","2018-02-07 05:18:05",saad,BuyBack,jassar733@yahoo.com,LBB01842/,LBBnkt3sD,1659.7500,1659.75,,,LBB
+"S Credit","2018-02-07 05:17:47",saad,BuyBack,rexburg@cellvationrepairs.com,LBB01930/,LBBHdJlp0,60.5000,60.50,,,LBB

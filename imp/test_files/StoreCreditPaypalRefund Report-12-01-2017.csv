@@ -1,0 +1,10 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2017-12-01 16:18:33",Billy,Manual,sairakp786@gmail.com,N/A/N/A,524156V2,84.9700,,,,"RMA - Customer Return Exception"
+"S Credit","2017-12-01 15:48:51",meri,POS,vanko.68@gmail.com,536148/N/A,536148R,14.0600,"   12.9900"," APL-001-0730"," Title:LCD and Touch Screen Digitizer for iPhone 5S - Black (Economy Plus)",-
+"S Credit","2017-12-01 14:56:15",billy,POS,Lviphonerepair102@gmail.com,536902/PP12357,536902R,26.9900,26.99,APL-001-2370,"LCD and Touch Screen Digitizer for iPhone 7 - White (Economy Plus)","(Item Issue-M1 - Flex Cable Misaligned)"
+"S Credit","2017-12-01 13:07:53",meri,POS,bam1320@yahoo.com,534934/PP12356,534934R,30.4600,27.99,APL-001-2371,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","(Good For Stock-)"
+"S Credit","2017-12-01 12:00:04",Billy,Manual,Info@BSRCellular.com,N/A/N/A,536945-RP,77.9800,,,,"Items - Out of Stock"
+"S Credit","2017-12-01 11:57:30",meri,POS,dr_miracle_79@hotmail.com,536924/PP12355,536924R,27.9900,27.99,APL-001-2371,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","(Item Issue-)"
+"S Credit","2017-12-01 10:19:17",meri,POS,Lviphonerepair102@gmail.com,536744/PP12353,536744R,72.9900,72.99,SRN-SAM-1660,"LCD and Touch Screen Digitizer for Samsung Galaxy J7 (2016) - White (Premium)","(Good For Stock-)"
+"S Credit","2017-12-01 03:57:52",Billy,RMA,vanko.68@gmail.com,536815/PP12359,PP12359R,12.4900,12.49,APL-001-0730,"LCD and Touch Screen Digitizer for iPhone 5S - Black (Economy Plus)","(Good For Stock-)"
+Refund,"2017-12-01 11:00:09",Manual,Manual,frank@bsrcellular.com,"Voucher(PP12050R, $115.95",9MA44456JS2592913,115.95,N/A,N/A,N/A,"Manually Refunded"

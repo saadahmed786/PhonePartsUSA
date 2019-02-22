@@ -1,0 +1,8 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-06-06 16:49:30",Meri,Manual,neighborhoodcellular@charter.net,N/A/,551986SE,32.6800,,,,"Warehouse - Wrong Item Shipped"
+"S Credit","2018-06-06 15:01:19",Meri,Manual,mobileman@cellvationrepairs.com,N/A/,FBPR6618,5.0000,,,,"Promotion or Discount"
+"S Credit","2018-06-06 14:17:05",Meri,Manual,nicholashyatt3223@yahoo.com,N/A/,PROMOFB661,5.0000,,,,"Promotion or Discount"
+"S Credit","2018-06-06 13:48:04",Billy,Manual,aaryaelectronics1@gmail.com,N/A/,551943-SH,6.9900,,,,"Shipping Charge - Combined Order Compensation"
+"S Credit","2018-06-06 13:25:19",meri,POS,Daniel@restorethefuture.com,551815/PP13846,551815R,53.3900,53.39,APL-001-2365,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Premium)","(Item Issue-)"
+"S Credit","2018-06-06 11:38:02",meri,POS,support@ifixlv.com,551801/PP13844,551801R,166.2900,166.29,APL-001-2406,"LCD and Touch Screen Digitizer for iPad Pro 10.5 - Black	","(Good For Stock-)"
+Refund,"2018-06-06 16:10:05",Meri,Order,Armadov@dr.com,"551764 /Cancelled Order",85M55607GH4314720,391.97,N/A,N/A,N/A,Fraud

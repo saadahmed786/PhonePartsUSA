@@ -1,0 +1,10 @@
+[26-Oct-2017 08:01:09 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''chann' (T_ENCAPSED_AND_WHITESPACE) in /home/phonerep/public_html/imp/inc/functions.php on line 892
+[22-Nov-2017 21:54:01 America/Los_Angeles] PHP Warning:  mysql_query() expects parameter 2 to be resource, object given in /home/phonerep/public_html/imp/inc/db.php on line 23
+[22-Nov-2017 21:54:01 America/Los_Angeles] PHP Warning:  mysql_query() expects parameter 2 to be resource, object given in /home/phonerep/public_html/imp/inc/db.php on line 23
+[22-Nov-2017 21:54:31 America/Los_Angeles] PHP Warning:  mysql_query() expects parameter 2 to be resource, object given in /home/phonerep/public_html/imp/inc/db.php on line 23
+[22-Nov-2017 21:54:31 America/Los_Angeles] PHP Warning:  mysql_query() expects parameter 2 to be resource, object given in /home/phonerep/public_html/imp/inc/db.php on line 23
+[23-Nov-2017 03:03:04 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '$db' (T_VARIABLE) in /home/phonerep/public_html/imp/inc/functions.php on line 3341
+[23-Nov-2017 03:03:35 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '$db' (T_VARIABLE) in /home/phonerep/public_html/imp/inc/functions.php on line 3341
+[23-Nov-2017 03:04:04 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '$db' (T_VARIABLE) in /home/phonerep/public_html/imp/inc/functions.php on line 3341
+[23-Nov-2017 03:04:34 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '$db' (T_VARIABLE) in /home/phonerep/public_html/imp/inc/functions.php on line 3341
+[23-Nov-2017 03:05:05 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '$db' (T_VARIABLE) in /home/phonerep/public_html/imp/inc/functions.php on line 3341

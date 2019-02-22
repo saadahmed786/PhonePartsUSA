@@ -1,0 +1,17 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-06-22 15:56:23",meri,POS,tomerall4you@gmail.com,553093-1/,553093-1R,22.9900,22.99,APL-001-2372,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-06-22 15:12:10",meri,POS,dannyvilla714@hotmail.com,553160-1/,553160-1R,153.0900,153.09,SRN-SAM-1627,"LCD and Touch Screen Digitizer for Samsung Galaxy S8 - Midnight Black (Standard)","(Issue Replacement)"
+"S Credit","2018-06-22 14:34:42",billy,POS,summerlin@ubreakifix.com,549043/PP13987,549043R,21.2900,21.29,APL-001-2311,"LCD and Touch Screen Digitizer for iPhone 6S Plus - Black (Economy Plus)","(Item Issue-)"
+"S Credit","2018-06-22 14:33:07",billy,POS,summerlin@ubreakifix.com,551819/PP13986,551819R,66.2600,19.29,APL-001-2369,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Economy Plus)","(Item Issue-)"
+"S Credit","2018-06-22 14:33:07",billy,POS,summerlin@ubreakifix.com,551819/PP13986,551819R,66.2600,19.29,APL-001-2369,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Economy Plus)","(Item Issue-)"
+"S Credit","2018-06-22 14:33:07",billy,POS,summerlin@ubreakifix.com,551819/PP13986,551819R,66.2600,10.69,APL-001-0732,"LCD and Touch Screen Digitizer for iPhone 5C - Black (Economy Plus)","(Item Issue-)"
+"S Credit","2018-06-22 14:33:07",billy,POS,summerlin@ubreakifix.com,551819/PP13986,551819R,66.2600,16.99,APL-001-2080,"LCD and Touch Screen Digitizer for iPhone 5S SE - White (Premium)","(Item Issue-)"
+"S Credit","2018-06-22 13:00:44",Meri,Manual,becca@cmptechs.com,N/A/,552777MP,9.9900,,,,"Warehouse - Missing Order Item"
+"S Credit","2018-06-22 12:56:40",Meri,Manual,Rudyakamoreno@aol.com,N/A/,553156SC,13.0000,,,,"Delivery - Other Delivery Related"
+"S Credit","2018-06-22 10:48:45",Meri,BuyBack,p.terrado27@gmail.com,LBB02136/,LBBA8SRdw,22.5000,22.50,,,LBB
+"S Credit","2018-06-22 10:20:40",Meri,BuyBack,nicholashyatt3223@yahoo.com,LBB02133/,LBBu3sjkN,129.5000,129.50,,,LBB
+"S Credit","2018-06-22 09:16:32",Meri,RMA,gconnors@allyit.net,551664/PP13945,PP13945R,19.2900,19.29,APL-001-2370,"LCD and Touch Screen Digitizer for iPhone 7 - White (Economy Plus)","(Item Issue - RTV-Digitizer No Touch)"
+"S Credit","2018-06-22 09:16:07",Meri,RMA,gconnors@allyit.net,548508/PP13922,PP13922R,19.2900,19.29,APL-001-2370,"LCD and Touch Screen Digitizer for iPhone 7 - White (Economy Plus)","(Item Issue - RTV-Digitizer Ghosting)"
+"S Credit","2018-06-22 03:15:05",Meri,RMA,t.dowling@masterrepairsmi.com,552917/PP13984,PP13984R,2.9800,0.99,ACC-APL-1166,"Glossy Silicon Protective Case for iPad Mini Neon Pink","(Not Tested-)"
+"S Credit","2018-06-22 03:15:05",Meri,RMA,t.dowling@masterrepairsmi.com,552917/PP13984,PP13984R,2.9800,1.99,ACC-APL-1092,"Grip Hard Shell Standing Case for iPad Mini Red","(Not Tested-)"
+Refund,"2018-06-22 09:30:08",,Order,jessed@ejiff.com,553131,4AU36929KD898925F,7.99,N/A,N/A,N/A,"Cancelled Order"

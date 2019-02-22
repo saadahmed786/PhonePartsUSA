@@ -1,0 +1,19 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-03-26 16:25:16",Billy,Manual,itechptr@gmail.com,N/A/,546667SH,19.9900,,,,"Shipping Charge - Combined Order Compensation"
+"S Credit","2018-03-26 15:43:50",meri,POS,hispeedfix@gmail.com,546616/PP13270,546616R,16.9900,16.99,APL-001-2090,"LCD and Touch Screen Digitizer for iPhone 5S SE - Black (Premium) ","(Item Issue-)"
+"S Credit","2018-03-26 15:20:12",meri,POS,iphixsmartphones@gmail.com,545359-1/,545359-1R,35.9800,20.99,APL-001-2369,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-03-26 15:20:12",meri,POS,iphixsmartphones@gmail.com,545359-1/,545359-1R,35.9800,14.99,APL-001-2309,"LCD and Touch Screen Digitizer for iPhone 6 - White (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-03-26 15:18:51",meri,POS,iphixsmartphones@gmail.com,545067-1/,545067-1R,20.9900,20.99,APL-001-2298,"LCD and Touch Screen Digitizer for iPhone 6S - Black (Economy Plus) ","(Issue Replacement)"
+"S Credit","2018-03-26 14:10:41",meri,POS,tomerall4you@gmail.com,546471-1/,546471-1R,29.9900,29.99,SRN-MOT-666,"LCD and Digitizer Replacement for Droid Maxx 2 XT1565 - Black","(Issue Replacement)"
+"S Credit","2018-03-26 14:09:35",meri,POS,tomerall4you@gmail.com,546471/PP13266,546471R,144.9900,144.99,SRN-SAM-1633,"LCD and Touch Screen Digitizer for Samsung Galaxy S7 - Black (Premium)","(Good For Stock-)"
+"S Credit","2018-03-26 14:01:15",meri,POS,p.terrado27@gmail.com,546036/PP13265,546036R,140.7100,129.99,APL-001-2184,"LCD and Touch Screen Digitizer for iPad Mini 4 - Black","(Good For Stock-)"
+"S Credit","2018-03-26 12:38:53",Billy,Order,statics.gadgets@gmail.com,546538/,546538-RP1,0.7800,0.78,BT-SPX-0197,"BiNTEK Screen Guard Premium HD Screen Protector - Apple Watch 38mm","Out Of Stock"
+"S Credit","2018-03-26 12:05:49",Billy,RMA,pooyan.pazargadi@gmail.com,/PP13264,PP13264R,113.9400,8.99,APL-003-1505,"Rear Camera with Flex Cable for iPhone 6 Plus","(Item Issue - RTV-Product Wear)"
+"S Credit","2018-03-26 12:05:49",Billy,RMA,pooyan.pazargadi@gmail.com,/PP13264,PP13264R,113.9400,20.99,APL-001-2298,"LCD and Touch Screen Digitizer for iPhone 6S - Black (Economy Plus) ","(Item Issue - RTV-Digitizer Issues)"
+"S Credit","2018-03-26 12:05:49",Billy,RMA,pooyan.pazargadi@gmail.com,/PP13264,PP13264R,113.9400,20.99,APL-001-2298,"LCD and Touch Screen Digitizer for iPhone 6S - Black (Economy Plus) ","(Item Issue - RTV-OCA Separation)"
+"S Credit","2018-03-26 12:05:49",Billy,RMA,pooyan.pazargadi@gmail.com,/PP13264,PP13264R,113.9400,20.99,APL-001-2298,"LCD and Touch Screen Digitizer for iPhone 6S - Black (Economy Plus) ","(Item Issue - RTV-OCA Separation)"
+"S Credit","2018-03-26 12:05:49",Billy,RMA,pooyan.pazargadi@gmail.com,/PP13264,PP13264R,113.9400,20.99,APL-001-2369,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Economy Plus)","(Item Issue - RTV-Digitizer Issues)"
+"S Credit","2018-03-26 12:05:49",Billy,RMA,pooyan.pazargadi@gmail.com,/PP13264,PP13264R,113.9400,20.99,APL-001-2369,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Economy Plus)","(Item Issue - RTV-Digitizer Issues)"
+"S Credit","2018-03-26 10:02:58",saad,BuyBack,invshieldplm@gmail.com,LBB02016/,LBBywJo8z,84.0000,84.00,,,LBB
+"S Credit","2018-03-26 10:02:37",saad,BuyBack,aum728@gmail.com,LBB02013/,LBBWPwCu5,38.2500,38.25,,,LBB
+Refund,"2018-03-26 15:00:09",Billy,Order,wac256@gmail.com,"546637 /Cancelled Order",2U983340GC4104048,4.99,N/A,N/A,N/A,"Customer Cancel"

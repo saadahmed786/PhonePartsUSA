@@ -1,0 +1,9 @@
+select o.* , od.* from inv_orders o inner join inv_orders_details od on o.order_id = od.order_id
+	where (shipstation_added = 0 OR shipstation_added is null) and store_type = 'po_business' and order_status<>'Estimate' and order_date >= '2018-10-30 13:52:00' and order_date <= '2018-10-31 14:58:00'
+	group by o.order_id order by order_date DESC limit 0 , 10select o.* , od.* from inv_orders o inner join inv_orders_details od on o.order_id = od.order_id
+		   where (shipstation_added = 0 OR shipstation_added is null) and store_type = 'po_business' and order_status<>'Estimate' 
+		   group by o.order_id order by order_date DESC select o.* , od.* from inv_orders o inner join inv_orders_details od on o.order_id = od.order_id
+	where (shipstation_added = 0 OR shipstation_added is null) and store_type = 'po_business' and order_status<>'Estimate' and order_date >= '2018-10-30 13:58:00' and order_date <= '2018-10-31 14:59:00'
+	group by o.order_id order by order_date DESC limit 0 , 10select o.* , od.* from inv_orders o inner join inv_orders_details od on o.order_id = od.order_id
+		   where (shipstation_added = 0 OR shipstation_added is null) and store_type = 'po_business' and order_status<>'Estimate' 
+		   group by o.order_id order by order_date DESC 

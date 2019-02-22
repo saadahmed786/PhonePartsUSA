@@ -1,3 +1,0 @@
-<?php
-rename(".buy",".BIN");
-?>

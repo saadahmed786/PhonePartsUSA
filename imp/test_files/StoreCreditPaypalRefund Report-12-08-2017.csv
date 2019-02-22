@@ -1,0 +1,6 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2017-12-08 14:46:14",Billy,Manual,raulordunacelumania@gmail.com,N/A/,537645-OV,1.4000,,,,"Shipping Charge - Combined Order Compensation"
+"S Credit","2017-12-08 13:33:03",meri,POS,josephbrown.ip@gmail.com,537549-1/,537549-1R,26.9900,26.99,APL-001-2371,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","(Issue Replacement)"
+"S Credit","2017-12-08 11:52:06",meri,POS,galaxycprlv@gmail.com,535954/PP12413,535954R,134.9900,134.99,APL-001-2185,"LCD and Touch Screen Digitizer for iPad Mini 4 - White","(Good For Stock-)"
+Refund,"2017-12-08 17:00:06",Manual,Manual,forwardship@protonmail.com,,3881572709486350L,188.97,N/A,N/A,N/A,"Manually Refunded"
+Refund,"2017-12-08 15:50:07",,Order,jaydeetwo74@gmail.com,537672,5LN801247M436714G,25.79,N/A,N/A,N/A,"Cancelled Order"

@@ -1,0 +1,6 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-01-18 14:25:29",Billy,Manual,tomerall4you@gmail.com,N/A/,20180118-M,225.0000,,,,"Purchase of Goods"
+"S Credit","2018-01-18 10:16:51",Billy,RMA,onestopwirelesslv@gmail.com,/PP12679,PP12679R,38.8800,14.89,APL-001-2308,"LCD and Touch Screen Digitizer for iPhone 6 - Black (Economy Plus)","(Item Issue - RTV-Digitizer Issues)"
+"S Credit","2018-01-18 10:16:51",Billy,RMA,onestopwirelesslv@gmail.com,/PP12679,PP12679R,38.8800,23.99,APL-001-2372,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Economy Plus)","(Item Issue - RTV-Digitizer Issues)"
+"S Credit","2018-01-18 09:51:07",meri,POS,redclip90@gmail.com,540939-1/,540939-1R,129.9900,129.99,APL-001-2184,"LCD and Touch Screen Digitizer for iPad Mini 4 - Black","(Issue Replacement)"
+Refund,"2018-01-18 16:40:05",Billy,Order,Vrgorman1983@gmail.com,"540862 /Cancelled Order",4J177772EJ194070M,141.96,N/A,N/A,N/A,"Possible Fraud"

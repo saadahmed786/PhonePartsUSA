@@ -1,0 +1,6 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-02-19 14:58:33",meri,POS,jamericslv@hotmail.com,543441/PP12959,543441R,54.9900,54.99,APL-001-0762,"LCD Screen with Retina Display for iPad Mini 2 3","(Good For Stock-)"
+"S Credit","2018-02-19 14:30:19",meri,POS,tomerall4you@gmail.com,542438-2/,542438-2R,23.9900,23.99,APL-001-2372,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-02-19 11:59:05",Billy,RMA,mobileman@cellvationrepairs.com,543207/PP12955,PP12955R,0.9900,0.99,FLX-SAM-806,"Ear Speaker Earpiece Audio Jack Flex Cable for Samsung Galaxy Note 8.0 Rev 0.4","(Good For Stock-)"
+Refund,"2018-02-19 13:50:07",,Order,billy@moonlightrambler.net,543465,7DR63384E91440223,18.67,2.9900,BTT110001,"BinTEK 2.5 Premium Suction Cup",-
+Refund,"2018-02-19 11:30:07",Billy,Order,deewby69@gmail.com,"543702 /Cancelled Order",3RW49097VA4875931,10.48,N/A,N/A,N/A,"Customer Cancel"

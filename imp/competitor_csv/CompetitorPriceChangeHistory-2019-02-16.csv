@@ -1,0 +1,575 @@
+SKU,Title,"Last Received","30 Days Item Sale",Quantity,"True Cost",D1,P1,"Sale Price","Date Updated",Competitor,"Previous Price",Price
+APL-003-0246,"iPhone 4 Home Button Flex Cable","04/03/17 01:21 PM",0,44,0.17,1.61,0.99,0.69,"02/15/19 01:00 AM",etrade_supply,1.03,1.02
+APL-003-0330,"Verizon/Sprint iPhone 4 Charging Port Flex Cable Ribbon - Black","05/02/18 11:28 AM",0,4,2.46,4.12,3.39,3.09,"02/15/19 01:00 AM",etrade_supply,4.98,4.94
+APL-003-0390,"iPhone 4S Proximity Light Sensor Power Flex","08/15/18 12:53 PM",0,13,1.08,3.48,2.69,1.49,"02/15/19 01:01 AM",etrade_supply,2.25,2.23
+APL-003-0342,"Verizon/Sprint iPhone 4 Proximity Light Sensor Power Flex","05/16/18 02:40 PM",0,10,1.24,2.976,2.29,1.69,"02/15/19 01:01 AM",etrade_supply,3.8,3.77
+APL-003-0444,"iPhone 4S Home Button Flex Cable","05/16/18 02:40 PM",0,6,0.17,0.98,0.59,0.49,"02/15/19 01:20 AM",etrade_supply,0.71,0.7
+APL-003-0450,"iPhone 4S Headphone Jack Volume Vibrator Switch Flex - Black","05/16/18 02:40 PM",0,8,1.49,4.485,3.69,1.49,"02/15/19 01:20 AM",etrade_supply,3.02,3
+APL-003-0522,"Front Camera with Proximity Sensor Flex Cable for iPhone 5","02/01/19 03:16 PM",3,29,1.74,3.99,2.39,2.99,"02/15/19 01:20 AM",etrade_supply,2.99,2.97
+APL-003-0528,"Back Camera for iPhone 5 ","09/07/18 11:38 AM",0,5,3.21,9.99,6.72,3.79,"02/15/19 01:20 AM",etrade_supply,5.26,5.22
+APL-003-0564,"Headphone Jack Charging Port Flex Cable for iPhone 5 Black","01/30/19 04:56 PM",3,15,1.79,4.03,3.29,2.49,"02/15/19 01:20 AM",etrade_supply,3.76,3.73
+APL-003-0588,"Headphone Jack Charging Port Flex Cable for iPhone 5 White","08/15/18 12:53 PM",0,9,1.53,4.6,3.7,2.29,"02/15/19 01:21 AM",etrade_supply,3.76,3.73
+APL-003-0588,"Headphone Jack Charging Port Flex Cable for iPhone 5 White","08/15/18 12:53 PM",0,9,1.53,4.6,3.7,2.29,"02/15/19 01:21 AM",maya_cellular,0,1.99
+APL-003-0618,"Power Volume Flex Cable for iPhone 5","08/15/18 12:53 PM",1,8,1.68,3.46,2.69,1.69,"02/15/19 01:21 AM",etrade_supply,3,2.98
+APL-003-0618,"Power Volume Flex Cable for iPhone 5","08/15/18 12:53 PM",1,8,1.68,3.46,2.69,1.69,"02/15/19 01:40 AM",maya_cellular,0,1.49
+APL-003-0702,"Home Button for iPod Touch 4 Flex","09/26/17 10:48 AM",0,0,0.51,1.55,1.39,0.49,"02/15/19 01:40 AM",etrade_supply,1.49,1.48
+APL-003-0708,"Loud Speaker Buzzer Flex for iPod Touch 4","06/12/17 01:03 PM",0,10,0.73,2.95,0.99,0.49,"02/15/19 01:40 AM",etrade_supply,1.88,1.87
+APL-003-0714,"Power Volume Flex Cable for iPod Touch 4","10/04/17 02:24 PM",0,0,0.98,2.08,1.79,1.29,"02/15/19 01:40 AM",etrade_supply,2.02,2
+APL-003-0786,"Bluetooth Signal Antenna Flex Cable for iPad 1","12/22/15 02:09 PM",0,2,1.88,4.32,3.49,3.99,"02/15/19 01:40 AM",etrade_supply,4.29,4.26
+APL-003-0834,"Audio Headphone Jack Flex Cable GSM Version for iPad 2","01/31/18 09:42 AM",0,12,1.64,4.117,3.39,1.99,"02/15/19 01:40 AM",etrade_supply,2.27,2.25
+APL-003-0840,"Audio Headphone Jack Flex Cable WIFI / CDMA Version for iPad 2 821-1378-A","06/29/18 04:06 PM",0,5,1.24,4.09,3.29,1.79,"02/15/19 01:40 AM",etrade_supply,2.26,2.24
+APL-003-0858,"Charging Port Dock Flex Cable for iPad 2","12/31/18 01:34 PM",1,6,2.06,3.611,2.99,2.49,"02/15/19 01:40 AM",etrade_supply,3.61,3.58
+APL-003-0858,"Charging Port Dock Flex Cable for iPad 2","12/31/18 01:34 PM",1,6,2.06,3.611,2.99,2.49,"02/15/19 01:40 AM",maya_cellular,0,1.99
+APL-003-0864,"LCD Screen Connector Flex Cable for iPad 2","08/15/18 12:53 PM",0,6,3.17,8.99,8.99,4.79,"02/15/19 01:40 AM",etrade_supply,4.92,4.88
+APL-003-0876,"Volume Vibrator Switch Power Button Flex Cable CDMA Version for iPad 2 (EMC 2560)","08/24/18 10:50 AM",1,22,1.74,2.99,2.99,2.19,"02/15/19 01:41 AM",etrade_supply,3.76,3.73
+APL-003-0876,"Volume Vibrator Switch Power Button Flex Cable CDMA Version for iPad 2 (EMC 2560)","08/24/18 10:50 AM",1,22,1.74,2.99,2.99,2.19,"02/15/19 01:41 AM",maya_cellular,0,1.99
+APL-003-0882,"Volume Vibrator Switch Power Button Flex Cable for iPad 2 - GSM / WIFI Version (2011)","01/30/19 04:56 PM",0,5,1.79,4.66,2.09,1.99,"02/15/19 01:41 AM",etrade_supply,3.02,0
+APL-003-0882,"Volume Vibrator Switch Power Button Flex Cable for iPad 2 - GSM / WIFI Version (2011)","01/30/19 04:56 PM",0,5,1.79,4.66,2.09,1.99,"02/15/19 01:41 AM",maya_cellular,0,1.99
+APL-003-0954,"Wifi & Bluetooth Flex Cable for iPad 3/4","12/04/18 03:51 PM",0,3,1.53,3.24,2.5,1.89,"02/15/19 02:00 AM",etrade_supply,2.57,2.55
+APL-003-0960,"Charging Port Flex Cable for iPad 3","12/27/18 01:50 PM",0,3,1.94,6.89,6.89,2.99,"02/15/19 02:00 AM",etrade_supply,3.95,3.92
+APL-003-0960,"Charging Port Flex Cable for iPad 3","12/27/18 01:50 PM",0,3,1.94,6.89,6.89,2.99,"02/15/19 02:00 AM",maya_cellular,0,2.99
+APL-003-0966,"GPS Antenna Flex Cable for iPad 3",N/A,0,3,0,3.95,1.69,1.49,"02/15/19 02:00 AM",etrade_supply,2.15,2.13
+APL-003-0978,"Power On Off Volume Flex Cable for iPad 3","10/24/18 04:07 PM",0,3,1.46,4.117,3.39,1.69,"02/15/19 02:00 AM",etrade_supply,3.31,3.28
+APL-003-0978,"Power On Off Volume Flex Cable for iPad 3","10/24/18 04:07 PM",0,3,1.46,4.117,3.39,1.69,"02/15/19 02:00 AM",maya_cellular,0,1.99
+APL-003-0990,"Headphone Audio Jack Flex Cable for iPad Mini White","07/27/18 04:39 PM",0,15,0.98,4.21,3.39,1.89,"02/15/19 02:00 AM",etrade_supply,2.64,2.62
+APL-003-1002,"Charging Port Flex Cable Assembly for iPad Mini White","08/15/18 12:53 PM",0,4,2.13,4.52,3.32,2.49,"02/15/19 02:00 AM",etrade_supply,2.99,2.97
+APL-003-1020,"Microphone Flex Cable for iPad Mini","01/15/19 10:48 AM",0,23,1.8,4.99,4.99,1.99,"02/15/19 02:00 AM",etrade_supply,1.86,1.85
+APL-002-0823,"Charging Port Flex Cable for iPad 1","03/27/17 12:21 PM",0,0,12.55,19.92,17.99,4.99,"02/15/19 02:01 AM",etrade_supply,14.77,14.66
+APL-003-1330,"Home Button with Flex Cable for iPhone 5S - Silver","10/18/18 11:57 AM",1,14,0.92,2.79,2.79,1.19,"02/15/19 02:01 AM",etrade_supply,3.02,3
+APL-003-1330,"Home Button with Flex Cable for iPhone 5S - Silver","10/18/18 11:57 AM",1,14,0.92,2.79,2.79,1.19,"02/15/19 02:01 AM",maya_cellular,0,1.49
+FLX-HTC-396,"HTC Vivid Headphone Jack, Mic, Power & Volume Button Flex Cable",N/A,0,0,0,21.95,19.89,17.89,"02/15/19 02:20 AM",etrade_supply,18.68,18.54
+FLX-HTC-402,"HTC Vivid Battery Charger Connector Flex Cable",N/A,0,0,0,5.95,3.89,2.89,"02/15/19 02:20 AM",etrade_supply,3,2.98
+FLX-SAM-462,"Keypad Home Button Flex Cable for Samsung Galaxy Note 2 ","09/20/18 10:50 AM",0,4,1.78,4.324,3.49,0.99,"02/15/19 02:20 AM",etrade_supply,3.56,3.53
+FLX-SAM-090,"Power Button Flex Cable for Samsung Galaxy Note 2","07/20/18 05:01 PM",0,5,0.76,2.175,1.89,0.99,"02/15/19 02:20 AM",etrade_supply,1.04,1.03
+FLX-SAM-102,"Front Camera Flex Cable for Samsung Galaxy Note ",N/A,0,3,0,5.95,3.89,0.99,"02/15/19 02:20 AM",etrade_supply,4.98,4.94
+FLX-SAM-108,"Microphone Charging Port Flex Cable for Samsung Galaxy Note T879 i717  ","10/03/16 11:02 AM",0,6,3.34,6.972,5.49,0.99,"02/15/19 02:20 AM",etrade_supply,5.26,5.22
+FLX-SAM-114,"Keypad Button Ribbon Flex Cable for Samsung Galaxy Note","07/28/15 02:50 PM",0,7,1.88,4.324,3.49,0.99,"02/15/19 02:20 AM",etrade_supply,3.26,3.24
+FLX-SAM-120,"Earpiece Earphone Flex Cable for Samsung Galaxy Note N7000 i9220 ",N/A,0,10,0,4.95,2.19,0.99,"02/15/19 02:20 AM",etrade_supply,1.06,1.05
+FLX-SAM-174,"Sim Card Memory Card Flex Cable for Samsung Galaxy S",N/A,0,21,0,4.95,2.69,0.99,"02/15/19 02:20 AM",etrade_supply,1.69,1.68
+FLX-SAM-228,"Keypad Button Light Flex Cable for Samsung Galaxy S2","01/18/16 10:44 AM",0,1,2.57,5.895,4.39,0.99,"02/15/19 02:20 AM",etrade_supply,3.53,3.5
+FLX-SAM-240,"Back Camera Flex Cable for Samsung Galaxy S3","02/16/17 04:55 PM",1,16,2.62,5.895,4.39,0.99,"02/15/19 02:20 AM",etrade_supply,1.67,1.66
+FLX-SAM-246,"Loudspeaker Flex Cable for Samsung Galaxy S3 - White","02/16/17 04:55 PM",0,2,1.75,4.232,3.49,0.99,"02/15/19 02:21 AM",etrade_supply,1.76,1.75
+FLX-SAM-252,"Front Camera Flex Cable for Samsung Galaxy S3","02/16/17 04:55 PM",0,12,1.69,3.887,3.19,0.59,"02/15/19 02:21 AM",etrade_supply,1.76,1.75
+FLX-SAM-258,"Home Button Flex Cable for Samsung Galaxy S3","02/16/17 04:55 PM",0,297,0,2.95,0.99,0.99,"02/15/19 02:40 AM",etrade_supply,1.2,1.19
+FLX-SAM-264,"Keypad Flex Cable for Samsung Galaxy S3",N/A,0,47,0,3.95,1.69,0.99,"02/15/19 02:40 AM",etrade_supply,0.76,0.75
+FLX-SAM-276,"Vibrator Flex Cable for Samsung Galaxy S3","09/29/17 12:50 PM",0,595,0,3.95,1.69,0.99,"02/15/19 02:40 AM",etrade_supply,0.85,0.84
+FLX-SAM-282,"Sim Memory Card Flex Cable for Samsung Galaxy S3 i9300 T999 i747 ","11/19/15 12:09 PM",0,2,1.63,3.519,2.89,0.99,"02/15/19 02:40 AM",etrade_supply,2.13,2.11
+FLX-SAM-288,"Charging Port Flex Cable for Samsung Galaxy Tab 10.1","01/17/17 02:58 PM",0,0,2.51,5.895,4.39,0.99,"02/15/19 02:40 AM",etrade_supply,4.93,4.89
+APL-003-1032,"Long GPS Antenna Flex Cable for iPad 3 3G","01/18/17 11:54 AM",0,8,1.61,3.48,2.69,1.99,"02/15/19 02:40 AM",etrade_supply,2.15,2.13
+APL-003-1044,"Microphone Flex Cable for iPad 2 (Revision EMC 2560)",N/A,0,38,0,5.95,2.99,1.99,"02/15/19 02:40 AM",etrade_supply,2.64,2.62
+APL-003-1050,"Back Camera Flex Cable for iPad 3","04/03/17 01:21 PM",0,4,3.66,3.98,3.29,3.99,"02/15/19 02:40 AM",etrade_supply,4.92,4.88
+APL-003-1056,"Sim Card Flex Cable for iPad 3",N/A,0,9,0,6.95,2.59,1.99,"02/15/19 02:40 AM",etrade_supply,2.13,2.11
+APL-003-1122,"Front Camera Flex Cable for iPad 4","10/17/16 12:33 PM",0,6,1.43,3.43,2.69,2.49,"02/15/19 02:40 AM",etrade_supply,3.02,3
+APL-003-1128,"Charging Port Flex Cable for iPad 4","12/19/18 10:10 AM",1,4,1.96,4.89,4.89,2.09,"02/15/19 02:41 AM",etrade_supply,4,3.97
+APL-003-1134,"Microphone Flex Cable for iPad 4","10/24/18 04:07 PM",0,25,1.61,4.14,3.39,1.79,"02/15/19 03:00 AM",etrade_supply,1.86,1.85
+FLX-SAM-426,"Galaxy S3 i747 T999 Sim Card SD Memory Card Flex Cable","10/17/16 12:33 PM",0,1,1.73,4.048,3.29,0.99,"02/15/19 03:00 AM",etrade_supply,2.13,2.11
+FLX-SAM-456,"Charging Port Flex Cable for Samsung Galaxy Note 2 N7100 ","02/02/16 04:02 PM",0,3,2.52,5.625,4.19,0.99,"02/15/19 03:00 AM",etrade_supply,3.27,3.25
+FLX-SAM-564,"Samsung Galaxy Tab 2 10.1\\","09/08/17 12:45 PM",0,1,1.67,4.09,3.29,0.99,"02/15/19 03:00 AM",etrade_supply,1.76,1.75
+FLX-SAM-570," Power Button Flex Cable for Samsung Galaxy Tab 2 10.1","11/19/15 12:09 PM",0,1,1.16,2.472,1.99,0.99,"02/15/19 03:00 AM",etrade_supply,1.76,1.75
+FLX-SAM-594,"Sim Card Memory SD Card Flex Cable for Samsung Galaxy Note","03/07/16 04:22 PM",0,6,3.12,6.55,5.19,0.99,"02/15/19 03:00 AM",etrade_supply,7.11,7.06
+FLX-SAM-600,"Headphone Jack Earpiece Flex Cable for Samsung Galaxy Note 2","09/08/17 12:45 PM",0,0,0.91,3.58,2.79,0.99,"02/15/19 03:00 AM",etrade_supply,1.75,1.74
+FLX-SAM-606,"Audio Headphone Jack Flex Cable for Samsung Galaxy Note","07/28/15 02:50 PM",0,5,1.55,3.565,2.89,0.99,"02/15/19 03:00 AM",etrade_supply,1.06,1.05
+FLX-SAM-643,"Headphone Jack Earpiece Flex Cable for Samsung Galaxy S ",N/A,0,5,0,5.95,3.19,0.99,"02/15/19 03:00 AM",etrade_supply,2.86,2.84
+FLX-SAM-651,"Charging Port Flex Cable for Samsung Galaxy Tab 2  10.1 P5113 P5100 ","01/17/17 02:58 PM",0,1,2.51,5.625,4.19,0.99,"02/15/19 03:00 AM",etrade_supply,1.76,1.75
+APL-003-1592,"Earpiece Speaker for iPhone 6S Plus","02/01/19 03:16 PM",9,18,0.61,4.99,4.99,0.69,"02/15/19 03:00 AM",etrade_supply,0.77,0.76
+APL-003-1592,"Earpiece Speaker for iPhone 6S Plus","02/01/19 03:16 PM",9,18,0.61,4.99,4.99,0.69,"02/15/19 03:00 AM",maya_cellular,0,0.99
+APL-003-1607,"Home Button Assembly for iPhone 6S & 6S Plus  Gold","10/18/18 11:57 AM",1,22,1.06,2.5,2.5,1.29,"02/15/19 03:20 AM",etrade_supply,3.76,3.73
+APL-003-1607,"Home Button Assembly for iPhone 6S & 6S Plus  Gold","10/18/18 11:57 AM",1,22,1.06,2.5,2.5,1.29,"02/15/19 03:20 AM",maya_cellular,0,1.99
+APL-003-1734,"Front Camera Proximity Sensor Flex Cable for iPhone 7 Plus","01/30/19 04:56 PM",52,23,8.21,29.99,29.99,10.89,"02/15/19 03:20 AM",etrade_supply,20,19.85
+APL-003-1734,"Front Camera Proximity Sensor Flex Cable for iPhone 7 Plus","01/30/19 04:56 PM",52,23,8.21,29.99,29.99,10.89,"02/15/19 03:20 AM",maya_cellular,0,12.99
+APL-003-1708,"Loudspeaker for iPhone 7 Plus","02/01/19 03:16 PM",1,17,1.57,6.99,6.99,1.99,"02/15/19 03:20 AM",etrade_supply,3.76,3.73
+APL-003-1708,"Loudspeaker for iPhone 7 Plus","02/01/19 03:16 PM",1,17,1.57,6.99,6.99,1.99,"02/15/19 03:20 AM",maya_cellular,0,1.99
+FLX-SAM-826,"Vibrator Motor & Power Key Button Flex Cable for Samsung Galaxy Note 2 ",N/A,1,185,0,7.95,5.99,0.99,"02/15/19 03:20 AM",etrade_supply,1.38,1.37
+FLX-SAM-860,"Home Button Flex Cable Keypad for Samsung Galaxy S4 (CDMA)","02/23/18 04:55 PM",0,43,1.59,3.66,2.99,1.89,"02/15/19 03:20 AM",etrade_supply,3.93,3.9
+FLX-SAM-862,"Charging Port Flex Cable for Samsung Galaxy Note 2 i605 ","05/04/18 03:36 PM",0,0,1.65,5.99,4.39,0.99,"02/15/19 03:20 AM",etrade_supply,4.93,4.89
+FLX-SAM-888,"Front Camera With Proximity Sensor Flex Cable for Samsung Galaxy Note 3","03/16/17 12:04 PM",0,2,2,4.97,3.65,1.99,"02/15/19 03:20 AM",etrade_supply,1.76,1.75
+FLX-SAM-890,"Samsung Galaxy Note 10.1 Tablet N8000 Charging Port Flex Cable REV 0.5",N/A,0,0,0,12.95,10.99,0.99,"02/15/19 03:20 AM",etrade_supply,4.97,4.93
+FLX-SAM-892,"Sim Card Memory SD Card Flex Cable for Samsung Galaxy S4 REV 0.3","03/21/18 03:19 PM",0,2,1.26,3.979,3.29,1.39,"02/15/19 03:20 AM",etrade_supply,2.58,2.56
+FLX-SAM-964,"Antenna Signal Cable Flex for Samsung Galaxy Note 3","09/07/18 11:38 AM",0,5,0.55,4.002,3.29,0.89,"02/15/19 03:21 AM",etrade_supply,0.85,0.84
+APL-003-1382,"Headphone Jack Home Button Charging Port Flex for iPod Touch 5 Black","01/31/18 09:42 AM",0,0,1.64,3.933,3.19,1.79,"02/15/19 03:21 AM",etrade_supply,3.78,3.75
+APL-003-1384,"Headphone Jack Home Button Charging Port Flex for iPod Touch 5 White","08/27/18 10:32 AM",0,5,1.64,4.347,3.59,1.79,"02/15/19 03:21 AM",etrade_supply,3.78,3.75
+APL-003-1394,"Home Button Flex for iPad Air","01/30/19 04:56 PM",1,9,1.79,5.0625,3.79,1.89,"02/15/19 03:40 AM",etrade_supply,4.6,4.57
+APL-003-1396,"Microphone Flex for iPad Air","02/12/18 01:25 PM",7,0,1.53,5.95,0,1.99,"02/15/19 03:40 AM",etrade_supply,2.64,2.62
+FLX-SAM-966,"Back Camera Flex Cable for Samsung Galaxy S5","05/16/18 02:40 PM",0,2,2.09,6.99,5.49,2.19,"02/15/19 03:40 AM",etrade_supply,3.26,3.24
+FLX-SAM-968,"Front Camera Flex Cable for Samsung Galaxy S5","05/16/18 02:40 PM",0,7,1.12,3.504,2.79,1.99,"02/15/19 03:40 AM",etrade_supply,3.26,3.24
+FLX-SAM-974,"Headphone Jack Flex for Samsung Galaxy S5","07/10/17 02:52 PM",0,5,0.97,2.904,2.29,0.69,"02/15/19 03:40 AM",etrade_supply,0.72,0.71
+FLX-SAM-976,"Power Button Flex for Samsung Galaxy S5",N/A,0,32,0,5.95,0,0.99,"02/15/19 03:40 AM",etrade_supply,0.74,0.73
+FLX-SAM-978,"Vibrator Motor Flex for Samsung Galaxy S5","03/16/17 12:04 PM",0,3,0.83,2.4,2.09,0.99,"02/15/19 03:40 AM",etrade_supply,0.87,0.86
+FLX-SAM-980,"Volume Button Flex for Samsung Galaxy S5",N/A,0,12,0,3.99,0,0.59,"02/15/19 03:40 AM",etrade_supply,0.72,0.71
+FLX-SAM-982,"Home Button Flex Cable for Samsung Galaxy S5 - Black","02/09/18 04:16 PM",0,2,1.6,4.49,3.69,1.89,"02/15/19 03:40 AM",etrade_supply,3.27,3.25
+FLX-SAM-984,"Samsung Galaxy S5 i9600 G900A G900T G900V G900P Home Button Flex White","02/09/18 04:16 PM",0,2,1.6,4.49,3.69,1.89,"02/15/19 03:40 AM",etrade_supply,3.27,3.25
+FLX-SAM-988,"Home Button Charging Port Flex for Samsung Galaxy S5 SM G900A ATT ","10/30/18 01:37 PM",3,2,3.07,7.64,7.64,3.39,"02/15/19 03:40 AM",etrade_supply,5.85,5.81
+FLX-SAM-990,"Home Button Charging Port Flex for Samsung Galaxy S5 SM G900P Sprint","08/15/18 12:53 PM",1,9,2.42,9.23,7.79,2.89,"02/15/19 03:40 AM",etrade_supply,6.56,6.51
+FLX-SAM-992,"Home Button Charging Port Flex Cable for Samsung Galaxy S5 SM G900T T Mobile ","10/10/18 04:00 PM",1,20,2.73,8.34,8.34,2.89,"02/15/19 03:40 AM",etrade_supply,6.51,6.46
+FLX-SAM-996,"Back Camera Flex for Samsung Galaxy S4 Mini","07/20/15 03:01 PM",0,6,5.41,9.738,8.39,0.99,"02/15/19 03:40 AM",etrade_supply,5.89,5.85
+FLX-SAM-998,"Charging Port Flex Cable for Samsung Galaxy S4 Mini i9190 i9195 ","06/20/17 03:58 PM",0,0,1.65,4.5675,3.39,0.99,"02/15/19 03:40 AM",etrade_supply,3.94,3.91
+FLX-SAM-1022,"Charging Port Flex Cable for Samsung Galaxy Note 3 N9000 International With 3G ","01/18/16 10:44 AM",0,3,4.11,8.398,7.09,0.99,"02/15/19 03:41 AM",etrade_supply,6.66,6.61
+FLX-SAM-868,"Front Camera Flex for Samsung Galaxy Tab 2 7.0",N/A,0,3,0,6.95,0,0.99,"02/15/19 03:41 AM",etrade_supply,1.76,1.75
+FLX-SAM-870,"Back Camera Flex for Samsung Galaxy Tab 2 7.0",N/A,0,4,0,14.95,0,0.99,"02/15/19 03:41 AM",etrade_supply,3.31,3.28
+APL-003-1412,"Proximity Light Sensor Power Button Mic Flex for ATT iPhone 4","05/16/18 02:40 PM",0,676,0,4.95,0,1.89,"02/15/19 03:41 AM",etrade_supply,2.64,2.62
+FLX-SAM-1028,"Charging Port Flex for Samsung Galaxy Tab 3 10.1 3G","05/15/17 01:29 PM",0,0,2.35,5.3325,3.99,2.49,"02/15/19 03:41 AM",etrade_supply,4.98,4.94
+FLX-SAM-1032,"LCD Touch Screen Tester Flex Cable for Samsung Galaxy S5 ","05/16/18 02:40 PM",0,19,1.74,4.995,3.69,1.99,"02/15/19 04:00 AM",etrade_supply,3.04,3.02
+APL-003-1430,"Charging Port and Headphone Jack Flex Cable for iPhone 6 White","02/01/19 03:04 PM",5,30,3.1,8.99,5.21,3.99,"02/15/19 04:00 AM",etrade_supply,4.92,4.88
+APL-003-1434,"Volume Button Flex Cable for iPhone 6","02/01/19 03:04 PM",17,13,1.46,3.55,2.79,2.09,"02/15/19 04:00 AM",etrade_supply,3,2.98
+APL-003-1436,"Power Button Flex Cable for iPhone 6","02/01/19 03:16 PM",1,11,1.55,6.73,6.73,1.99,"02/15/19 04:00 AM",etrade_supply,2.28,2.26
+APL-003-1446,"Charging Dock Port & Headphone Jack Flex Cable for iPhone 6 Plus White","02/01/19 03:16 PM",5,15,3.71,8.99,8.99,3.99,"02/15/19 04:00 AM",etrade_supply,3.94,3.91
+FLX-SAM-1038,"LCD Screen to Mainboard Flex Ribbon Cable for Samsung Galaxy Note 8.0","01/17/17 02:58 PM",0,4,1.78,4.09,3.29,2.79,"02/15/19 04:00 AM",etrade_supply,2.9,2.88
+FLX-SAM-1042,"Charging Port Flex Cable for Samsung Galaxy Note 4 N910P Rev 0.8","10/19/16 09:33 AM",0,3,4.38,9.22,7.79,4.99,"02/15/19 04:00 AM",etrade_supply,5.84,5.8
+FLX-SAM-1048,"SIM Memory Card Flex Cable for Samsung Galaxy S4 i337 Rev 0.4 USB ","03/30/18 03:38 PM",0,2,0.88,3.43,2.69,1.19,"02/15/19 04:00 AM",etrade_supply,2.46,2.44
+FLX-SAM-1050,"SIM Card Flex Cable for Samsung Galaxy Tab 10.1 P7500 Rev 2.0 ",N/A,0,2,0,5.95,0,3.59,"02/15/19 04:00 AM",etrade_supply,3.79,3.76
+FLX-SAM-1057,"Charger Charging Connector Port Flex Cable For Samsung Galaxy Tab 3 10.1 P5200 Rev 1.0",N/A,0,3,2.11,4.7475,3.49,2.39,"02/15/19 04:00 AM",etrade_supply,4.98,4.94
+FLX-SAM-1058,"Charging Port with Flex Cable for Samsung Galaxy Note PRO 12.2 P900 REV 0.1",N/A,0,5,3.42,7.182,5.69,3.99,"02/15/19 04:00 AM",etrade_supply,3.96,3.93
+FLX-SAM-1251,"LCD Flex Cable for Samsung Galaxy Note PRO 12.2 P900 REV 0.7","02/03/15 03:05 PM",0,3,2.92,6.57,4.89,0.99,"02/15/19 04:00 AM",etrade_supply,2.84,2.82
+FLX-SAM-1060,"Charging Port Flex Cable for Samsung Galaxy S5 Mini G800F REV 0.6","02/03/15 03:05 PM",0,5,5.05,9.09,7.89,0.99,"02/15/19 04:00 AM",etrade_supply,3.55,3.52
+FLX-SAM-1259,"Samsung Galaxy Note 10.1 Tablet N8000 Power Volume Flex Cable REV 3.0",N/A,0,3,0,5.95,0,0.99,"02/15/19 04:01 AM",etrade_supply,1.05,1.04
+APL-003-1472,"iPhone 3G 3GS Home Button Flex Cable",N/A,0,54,0,1.95,0.59,0.39,"02/15/19 04:01 AM",etrade_supply,1.86,1.85
+FLX-SAM-1268,"Charging Port Flex Cable for Samsung Galaxy Note 2 N7105 Rev 0.7","08/18/15 01:45 PM",0,1,3.34,7.014,5.59,3.49,"02/15/19 04:01 AM",etrade_supply,4.93,4.89
+APL-003-1494,"Power Switch Volume Flex Cable for iPad Air iPad Mini","04/17/18 02:12 PM",0,3,1.51,3,2.39,1.89,"02/15/19 04:01 AM",etrade_supply,3.03,3.01
+APL-003-1496,"Home Button With Flex Cable for iPad Air 2 - White / Silver","09/13/18 02:02 PM",0,12,3.77,9.99,9.99,4.99,"02/15/19 04:01 AM",etrade_supply,3.29,3.27
+APL-003-1498,"Home Button With Flex Cable for iPad Air 2 - White / Gold","07/27/18 04:39 PM",1,6,2.34,9.99,9.99,2.49,"02/15/19 04:01 AM",etrade_supply,3.29,3.27
+APL-003-1500,"Charging Port with Flex Cable for iPad Air 2 - White","07/27/18 04:39 PM",0,8,1.58,7.29,5.73,1.99,"02/15/19 04:01 AM",etrade_supply,3.96,3.93
+APL-003-1501,"Volume Flex Cable for iPad Air 2","10/24/18 04:07 PM",0,13,1.9,3.96,3.18,1.99,"02/15/19 04:20 AM",etrade_supply,2.62,2.6
+APL-003-1502,"Charging Port with Flex Cable Earphone Jack and Mic for iPhone 6 Plus - Gray","02/01/19 03:16 PM",11,26,3.71,8.99,8.99,4.29,"02/15/19 04:20 AM",etrade_supply,3.94,3.91
+APL-003-1504,"Back Flex Cable for iPhone 6 Plus","11/26/18 02:53 PM",0,10,1.29,4.68,4.68,1.69,"02/15/19 04:20 AM",etrade_supply,3.94,3.91
+APL-003-1505,"Rear Camera with Flex Cable for iPhone 6 Plus","02/01/19 03:16 PM",5,45,6.92,18.99,18.99,6.99,"02/15/19 04:20 AM",etrade_supply,8.74,8.67
+APL-003-1507,"Charging Port with Flex Cable Earphone Jack and Mic for iPhone 6 Plus - Dark Gray","02/01/19 03:16 PM",0,15,3.71,8.99,8.99,4.09,"02/15/19 04:20 AM",etrade_supply,3.94,3.91
+APL-003-1509,"Earphone Jack With Flex Cable for iPad Air 2 - White","07/27/18 04:39 PM",0,5,1.58,5.65,4.14,1.99,"02/15/19 04:20 AM",etrade_supply,4.45,4.42
+APL-003-1512,"Charging Port with Flex Cable for iPad Air 2 - Black","08/06/18 11:36 AM",1,7,1.94,7.29,7.29,2.59,"02/15/19 04:20 AM",etrade_supply,3.96,3.93
+APL-003-1513,"Power Flex Cable for iPhone 6 Plus","02/01/19 03:16 PM",2,23,1.45,3.49,3.49,2.99,"02/15/19 04:20 AM",etrade_supply,2.28,2.26
+APL-003-1517,"Front Camera with Proximity Sensor Microphone Module Flex Cable for iPhone 6 Plus","02/01/19 03:16 PM",33,76,2.79,6.66,5.29,3.89,"02/15/19 04:20 AM",etrade_supply,5.83,5.79
+APL-003-1524,"Audio Flex Cable for iPod Nano 6 - White","04/09/15 04:09 PM",0,0,0,1.95,1.99,1.79,"02/15/19 04:20 AM",etrade_supply,2.27,2.25
+APL-003-1527,"Home Button Flex Cable for iPhone 6","08/06/18 11:36 AM",2,21,0.89,3.38,3.38,0.99,"02/15/19 04:20 AM",etrade_supply,1.87,1.86
+APL-003-1529,"Charging Port and Headphone Jack Flex Cable for iPhone 6 Space Gray","02/01/19 03:16 PM",18,62,3.35,8.99,4.19,4.29,"02/15/19 04:20 AM",etrade_supply,4.92,4.88
+APL-003-1532,"Front Camera with Proximity Sensor Flex Cable for iPhone 6","01/30/19 04:56 PM",43,16,2.69,6.39,6.39,3.39,"02/15/19 04:20 AM",etrade_supply,5.89,5.85
+APL-003-1545,"LCD and Touch Screen Tester Flex Cable for iPhone 6  ","05/31/18 01:10 PM",0,0,2.29,6.48,4.79,3.49,"02/15/19 04:21 AM",etrade_supply,3.64,3.61
+APL-003-1546,"LCD and Touch Screen Tester Flex Cable for iPhone 6 Plus ","04/06/18 11:20 AM",0,4,2.38,6.7,5.29,2.79,"02/15/19 04:21 AM",etrade_supply,3.31,3.28
+FLX-SAM-1269,"Charging Port Flex Cable for Samsung Galaxy S6 G920F Rev 0.6A","08/24/17 02:40 PM",0,8,3.28,7.83,6.59,4.99,"02/15/19 04:21 AM",etrade_supply,6.55,6.5
+FLX-SAM-1291,"Charging Port Flex Cable for Samsung Galaxy S6 G920F Rev 0.6","09/15/17 03:06 PM",0,6,3.38,8.34,8.34,3.69,"02/15/19 04:21 AM",etrade_supply,6.55,6.5
+FLX-SAM-1300,"Front Camera Flex Cable for Samsung Galaxy Note 4","12/20/17 04:32 PM",0,6,1.75,4.95,0,2.69,"02/15/19 04:21 AM",etrade_supply,2.83,2.81
+FLX-SAM-1304,"SIM SD Card Flex Cable for Samsung Galaxy Note 4 N910F",N/A,0,3,2.37,5.95,0,2.99,"02/15/19 04:21 AM",etrade_supply,3.16,3.14
+FLX-SAM-1306,"Stylus S Pen Sensor Flex Cable for Samsung Galaxy Note 4","05/10/18 04:59 PM",0,14,3.2,7.875,6.19,3.49,"02/15/19 04:21 AM",etrade_supply,7.54,7.48
+FLX-SAM-1307,"Charging Port Flex Cable for Samsung Galaxy S5 Mini G800F Rev .6","07/20/15 03:01 PM",0,3,3.78,6.95,0,0.99,"02/15/19 04:40 AM",etrade_supply,3.55,3.52
+FLX-SAM-1308,"SIM SD Card Flex Cable for Samsung Galaxy S5 Mini G800F ",N/A,0,4,2.85,5.95,0,0.99,"02/15/19 04:40 AM",etrade_supply,2.99,2.97
+FLX-SAM-1314,"Sensor Home Flex Cable for Samsung Galaxy Note Edge","09/20/18 10:50 AM",0,3,2.72,6.39,4.69,3.39,"02/15/19 04:40 AM",etrade_supply,3.58,3.55
+FLX-SAM-1316,"Home Button with Touch Sensor Flex Cable for Samsung Galaxy Note 4 - Black","06/13/18 01:48 PM",0,3,2.61,6.99,6.99,3.29,"02/15/19 04:40 AM",etrade_supply,3.56,3.53
+FLX-SAM-1318,"Volume Flex Cable for Samsung Galaxy Note 4","10/19/16 09:33 AM",0,10,1.8,4.6575,3.49,1.49,"02/15/19 04:40 AM",etrade_supply,1.04,1.03
+FLX-SAM-1319,"Charging Port Flex Cable for Samsung Galaxy Note 4 N910F International","12/27/18 01:50 PM",0,4,3.25,9.22,9.22,4.79,"02/15/19 04:40 AM",etrade_supply,6.55,6.5
+FLX-SAM-1323,"Charging Port Flex Cable for Samsung Galaxy Note Edge N915V ","02/09/18 04:16 PM",0,4,2.4,2.45,1.89,1.79,"02/15/19 04:40 AM",etrade_supply,6.58,6.53
+FLX-SAM-1329,"Keypad Sensor Flex Cable for Samsung Galaxy Note Edge N915 ",N/A,0,2,2.88,6.48,4.79,3.39,"02/15/19 04:40 AM",etrade_supply,3.58,3.55
+FLX-SAM-1351,"Charging Port Flex Cable for Samsung Galaxy S5 Active SM-G870A ","07/20/18 05:01 PM",1,1,1.52,9.04,7.79,1.19,"02/15/19 04:40 AM",etrade_supply,2.87,2.85
+FLX-SAM-1352,"LCD Touch Screen Tester Flex Cable for Samsung Galaxy Note 4","08/05/15 11:55 AM",0,4,2.31,5.1975,3.89,2.99,"02/15/19 04:40 AM",etrade_supply,4.12,4.09
+APL-003-1549,"Home Button Flex with Home Button for iPad Mini 3  - Gold","07/27/18 04:39 PM",0,7,2.34,4.09,3.29,3.99,"02/15/19 04:40 AM",etrade_supply,10.69,10.61
+APL-003-1550,"Home Button Flex with Home Button for iPad Mini 3 - Black","12/19/18 10:10 AM",0,8,2.4,3.53,2.79,2.89,"02/15/19 04:40 AM",etrade_supply,10.69,10.61
+APL-003-1552,"Home Button Flex for iPad Mini 3 ",N/A,0,8,0,12.49,0,0.99,"02/15/19 04:40 AM",etrade_supply,1.88,1.87
+APL-003-1554,"iPhone 4 Replacement Headphone Jack Flex Cable - White - GSM",N/A,0,5,1.27,3.048,2.39,1.39,"02/15/19 04:40 AM",etrade_supply,2.26,2.24
+APL-003-1555,"iPhone 4 Replace Headphone Jack Flex Cable - White - CDMA",N/A,0,7,1.9,4.37,3.59,0.89,"02/15/19 04:40 AM",etrade_supply,3.8,3.77
+APL-003-1563,"Charging Port Flex Cable for iPad Mini 4 ","08/15/18 12:53 PM",0,9,1.98,8.645,3.99,2.59,"02/15/19 04:41 AM",etrade_supply,3.77,3.74
+APL-003-1564,"Power and Volume Button Flex Cable for iPhone 6s","02/01/19 03:16 PM",15,0,1.96,5.99,5.99,2.69,"02/15/19 04:41 AM",etrade_supply,3,2.98
+FLX-SAM-1363,"Charging Port Flex Cable for Samsung Galaxy S6 Edge Plus G928A ","10/18/18 11:57 AM",0,6,2.83,8.34,6.55,3.99,"02/15/19 04:41 AM",etrade_supply,7.28,7.22
+FLX-SAM-1364,"Charging Port Flex Cable for Samsung Galaxy S6 Edge Plus G928T ","09/25/18 04:36 PM",0,4,2.52,8.34,6.55,3.99,"02/15/19 04:41 AM",etrade_supply,7.28,7.22
+FLX-SAM-1365,"Charging Port Flex Cable for Samsung Galaxy S6 Edge Plus G928F ","07/31/18 10:50 AM",0,5,3.41,9.06,7.69,5.99,"02/15/19 04:41 AM",etrade_supply,7.27,7.21
+FLX-SAM-1367,"Rear Camera Flex Cable for Samsung Galaxy S6 Edge Plus ","05/31/18 01:10 PM",0,5,3.08,9.99,11.39,3.09,"02/15/19 05:00 AM",etrade_supply,6.65,6.6
+APL-003-1571,"Charging Port and Headphone Jack Flex Cable for iPhone 6s  White","02/01/19 03:16 PM",11,32,3.9,9.89,6.59,5.09,"02/15/19 05:00 AM",etrade_supply,7.27,7.21
+APL-003-1573,"Charging Port and Headphone Jack Flex Cable for iPhone 6s  Gray","02/01/19 03:16 PM",5,45,3.53,8.27,8.27,4.69,"02/15/19 05:00 AM",etrade_supply,7.27,7.21
+APL-003-1587,"Charging Port and Headphone Jack Flex Cable for iPhone 6s Plus  Space Gray","02/01/19 03:16 PM",29,10,4.28,10.99,7.89,5.69,"02/15/19 05:00 AM",etrade_supply,5.26,5.22
+APL-003-1589,"Charging Port and Headphone Jack Flex Cable for iPhone 6s Plus  White","02/01/19 03:16 PM",7,43,4.81,10.99,5.18,5.79,"02/15/19 05:00 AM",etrade_supply,5.26,5.22
+APL-003-1595,"Power Button Flex Cable for Apple iPhone 6S Plus ","02/01/19 03:04 PM",0,20,1.61,6.99,6.49,1.69,"02/15/19 05:00 AM",etrade_supply,3,2.98
+APL-003-1596,"Volume and Mute Button Flex Cable for iPhone 6s Plus","02/01/19 03:04 PM",0,15,1.61,4.32,3.49,2.39,"02/15/19 05:00 AM",etrade_supply,3.27,3.25
+APL-003-1608,"Home Button Assembly for iPhone 6s and 6s Plus  Rose Gold","02/01/19 03:04 PM",10,24,1.31,2.5,2.5,1.39,"02/15/19 05:00 AM",etrade_supply,3.76,3.73
+APL-003-1633,"Metal LCD Backplate Shield & Home Extend Flex for iPhone 6 Plus (Refurbished)","02/01/19 03:16 PM",8,8,1.04,4.99,2.66,2.09,"02/15/19 05:00 AM",etrade_supply,5.13,5.09
+APL-001-2182,"Touch Screen Digitizer and IC Control Circuit Logic Board Flex Cable for iPad mini 3 - Black - Grade A",N/A,0,0,0,17.6,0,0,"02/15/19 05:00 AM",etrade_supply,11.03,10.95
+APL-003-1635,"Home Button Flex Cable for iPhone 6 and 6 Plus ","12/04/18 03:51 PM",1,7,1.09,2.35,1.97,1.99,"02/15/19 05:00 AM",etrade_supply,1.87,1.86
+APL-003-1640,"Wi-Fi Antenna Flex Cable for iPhone 5s","10/24/18 04:07 PM",3,2,0.43,2.35,1.99,0.99,"02/15/19 05:00 AM",etrade_supply,0.77,0.76
+APL-003-1643,"Microphone Flex Cable for iPad 3 Wi-Fi Model",N/A,0,4,1.41,3.38,2.69,2.49,"02/15/19 05:00 AM",etrade_supply,2.71,2.69
+APL-003-1644,"Microphone Flex Cable for iPad 3 Cellular Model",N/A,0,5,1.41,3.38,2.69,1.79,"02/15/19 05:00 AM",etrade_supply,1.86,1.85
+APL-003-1645,"Microphone Flex Cable for iPad 2","07/27/18 04:39 PM",0,5,1.43,2.39,2.39,1.89,"02/15/19 05:00 AM",etrade_supply,2.64,2.62
+FLX-SAM-1438,"Vibration Motor without Flex Cable for Samsung Galaxy Note 3","05/18/16 01:35 PM",0,0,1.35,3.24,2.59,1.49,"02/15/19 05:01 AM",etrade_supply,2.14,2.12
+FLX-SAM-1441,"Charging Port Flex Cable for Samsung Galaxy Note 4 N910T T-Mobile","09/25/18 04:36 PM",0,5,3.11,9.89,6.69,2.99,"02/15/19 05:01 AM",etrade_supply,6.57,6.52
+FLX-SAM-1467,"Charging Port Flex Cable for Samsung Galaxy Note 5 N920G","10/18/18 11:57 AM",0,12,5.05,10.99,0,6.09,"02/15/19 05:01 AM",etrade_supply,5.3,5.26
+FLX-SAM-1493,"Charging Port Flex Cable for Samsung Galaxy Mega 6.3 AT&T i527","07/26/17 02:43 PM",0,0,4.57,6.26,4.59,3.99,"02/15/19 05:01 AM",etrade_supply,7.28,7.22
+FLX-SAM-1494,"Samsung Galaxy S4 L720T Charging Port Flex Cable","08/23/16 11:49 AM",0,0,3.48,7.31,3.79,3.79,"02/15/19 05:01 AM",etrade_supply,3.96,3.93
+FLX-SAM-1510,"Home Button with Touch Sensor Flex Cable for Samsung Galaxy Note 4 - White","10/19/16 09:33 AM",0,6,0,6.99,0,2.29,"02/15/19 05:20 AM",etrade_supply,4.98,4.94
+APL-003-1709,"Power and Volume Button Flex Cable for iPhone 7 Plus","02/01/19 03:16 PM",0,20,3.35,14.26,4.19,3.99,"02/15/19 05:20 AM",etrade_supply,5.83,5.79
+FLX-SAM-1516,"Samsung Galaxy Note 5 N920P Charging Port Flex Cable - Grade A","11/09/16 01:41 PM",0,13,0,3.99,0,3.99,"02/15/19 05:20 AM",etrade_supply,5.3,5.26
+APL-003-1715,"Home Button With Flex Cable for iPad Air 2 - Black","07/27/18 04:39 PM",0,3,2.19,9.99,9.99,2.49,"02/15/19 05:20 AM",etrade_supply,3.29,3.27
+FLX-SAM-1529,"Home Button Flex Cable for Samsung Galaxy S7 Edge - White","04/03/17 01:21 PM",0,3,5.84,17.18,14.82,6.99,"02/15/19 05:20 AM",etrade_supply,21.79,21.62
+FLX-SAM-1532,"Power Button Flex Cable for Samsung Galaxy S7 Edge","04/03/17 01:21 PM",0,3,1.18,3.89,3.13,1.49,"02/15/19 05:20 AM",etrade_supply,1.76,1.75
+FLX-SAM-1534,"Volume Button Flex Cable for Samsung Galaxy S7 Edge","05/17/18 01:55 PM",0,2,1.04,4.55,3.66,1.79,"02/15/19 05:20 AM",etrade_supply,2.13,2.11
+APL-003-1721,"Rear Camera Flex Cable for iPhone SE","10/18/18 11:57 AM",0,11,7.55,20.99,20.99,8.99,"02/15/19 05:20 AM",etrade_supply,10.2,10.12
+APL-003-1737,"Power and Volume Button Flex Cable for iPhone 7","02/01/19 03:16 PM",0,8,3.09,4.99,4.99,3.59,"02/15/19 05:20 AM",etrade_supply,5.3,5.26
+APL-001-2333,"Metal Shield Backplate with Flex Cable for iPhone 6 ","12/31/18 01:34 PM",10,19,1.77,4.99,0,1.99,"02/15/19 05:20 AM",etrade_supply,5.13,5.09
+SRN-MOT-659,"LCD and Touch Screen Digitizer for Motorola Droid Turbo 2 LCD With Frame","03/13/18 12:26 PM",0,7,74.5,179.99,0,79.99,"02/15/19 05:21 AM",etrade_supply,106.38,105.57
+SRN-MOT-657,"LCD and Touch Screen Digitizer for Motorola Moto G4 - Black","01/29/18 01:44 PM",0,0,27.31,36.694,36.694,27.59,"02/15/19 05:21 AM",etrade_supply,31.87,31.63
+FLX-HTC-454,"HTC Status Proximity Sensor / Volume Up Down Flex Cable",N/A,0,0,0,8.95,6.99,2.89,"02/15/19 05:21 AM",etrade_supply,3,2.98
+FLX-HTC-496,"HTC Windows 8X 6990L Vibrator Motor Flex",N/A,0,10,0,5.95,0,0.99,"02/15/19 05:21 AM",etrade_supply,1.39,1.38
+FLX-HTC-502,"HTC Windows 8X 6990L HeadphOne Jack Flex",N/A,0,19,0,5.95,0,0.99,"02/15/19 05:21 AM",etrade_supply,2.72,2.7
+FLX-HTC-504,"HTC Windows 8X 6990L Front Camera Flex",N/A,0,5,0,6.95,0,0.99,"02/15/19 05:21 AM",etrade_supply,8.02,7.96
+FLX-HTC-506,"HTC Windows 8X 6990L Back Camera Flex",N/A,0,2,0,12.95,0,0.99,"02/15/19 05:21 AM",etrade_supply,5.3,5.26
+FLX-HTC-508,"HTC Windows 8X 6990L Power Button Flex",N/A,0,17,0,9.95,0,0.99,"02/15/19 05:40 AM",etrade_supply,2.72,2.7
+FLX-HTC-510,"HTC Windows 8X 6990L Charging Port With Mic Flex",N/A,0,3,0,16.95,0,0.99,"02/15/19 05:40 AM",etrade_supply,5.31,5.27
+FLX-HTC-514,"HTC Windows 8X 6990L Sim Card Tray",N/A,0,3,0,3.95,0,0.99,"02/15/19 05:40 AM",etrade_supply,1.77,1.76
+FLX-HTC-516,"HTC Windows 8X 6990L Sim Card Reader Mic Flex",N/A,0,20,0,13.95,0,0.99,"02/15/19 05:40 AM",etrade_supply,8.88,0
+FLX-HTC-522,"HTC Droid DNA Earpiece Speaker Flex","01/05/16 02:21 PM",0,0,0.81,3.519,2.89,0.69,"02/15/19 05:40 AM",etrade_supply,0.71,0.7
+FLX-HTC-524,"HTC Droid DNA Front Facing Camera Flex Cable",N/A,1,11,0,9.95,7.59,0.99,"02/15/19 05:40 AM",etrade_supply,10.73,10.65
+FLX-HTC-526,"HTC Droid DNA Main Board with Headphone Jack &amp; Sim Card Slot Power Flex","01/05/16 02:21 PM",0,2,17.45,42.2813,38.49,0.99,"02/15/19 05:40 AM",etrade_supply,26.67,26.47
+FLX-HTC-528,"HTC Droid DNA Micro USB Charging Port Mic Flex Cable","01/26/16 01:44 PM",1,0,4.97,9.072,7.89,0.99,"02/15/19 05:40 AM",etrade_supply,6.69,6.64
+FLX-HTC-530,"HTC Droid DNA Rear Back Camera Flex Cable",N/A,1,0,0,10.95,8.19,0.99,"02/15/19 05:40 AM",etrade_supply,5.3,5.26
+FLX-HTC-532,"HTC One M7 801e Back Facing Camera Flex","02/13/17 02:13 PM",0,4,9.87,16.86,14.55,0.99,"02/15/19 05:40 AM",etrade_supply,13.44,13.34
+FLX-HTC-534,"HTC One M7 801e Charging Port Mic Flex Cable","01/05/16 02:21 PM",1,52,2.64,6.615,5.29,0.99,"02/15/19 05:40 AM",etrade_supply,5.3,5.26
+FLX-HTC-536,"HTC One M7 801e Loudspeaker Flex Module","12/27/18 01:50 PM",0,1,1.36,4.393,3.59,0.99,"02/15/19 05:40 AM",etrade_supply,3,2.98
+FLX-HTC-538,"HTC One M7 801e Daughter Board Connectors Volume Mic Headphone Jack Flex","07/01/16 12:34 PM",0,0,14.03,21.48,19.39,0.99,"02/15/19 05:40 AM",etrade_supply,25.99,25.79
+FLX-HTC-540,"HTC One Mini Sim Card Tray Holder Slot - White","02/29/16 10:48 AM",0,1,1.65,4.048,3.29,0.99,"02/15/19 05:40 AM",etrade_supply,1.69,1.68
+FLX-HTC-544,"HTC Windows 8XT Headphone Jack Flex Cable",N/A,0,17,0,5.95,3.89,0.99,"02/15/19 05:40 AM",etrade_supply,2.72,2.7
+FLX-HTC-548,"HTC Windows 8XT Front Facing Camera Flex",N/A,0,5,0,12.95,10.09,0.99,"02/15/19 05:41 AM",etrade_supply,8.02,7.96
+FLX-HTC-550,"HTC Windows 8XT Rear Facing Camera Flex",N/A,0,5,0,12.95,10.09,0.99,"02/15/19 05:41 AM",etrade_supply,5.3,5.26
+FLX-HTC-552,"Top and Bottom Glass Cover for HTC One M8 Silver",N/A,0,0,0,10.95,8.99,1.99,"02/15/19 05:41 AM",etrade_supply,2.14,2.12
+FLX-HTC-554,"Top and Bottom Glass Cover for HTC One M8 Gold","11/30/15 12:29 PM",0,1,2.74,6.17,4.59,1.99,"02/15/19 05:41 AM",etrade_supply,2.14,2.12
+FLX-HTC-556,"Top and Bottom Glass Cover for HTC One M8 Gray","12/08/15 12:22 PM",0,0,3.01,6.32,4.99,1.99,"02/15/19 06:00 AM",etrade_supply,2.14,2.12
+FLX-HTC-558,"Micro SD Reader & Volume Button Flex for HTC One M8","03/06/18 02:23 PM",0,3,4.27,9.99,4.49,5.99,"02/15/19 06:00 AM",etrade_supply,4.49,4.46
+FLX-HTC-560,"Loudspeaker Module for HTC One M8","07/20/18 05:01 PM",0,2,1.37,4.99,4.99,0.69,"02/15/19 06:00 AM",etrade_supply,3.36,3.33
+FLX-HTC-572,"Micro USB Charging Port with Mic Flex Cable for HTC One Max T6 803S","09/15/16 01:44 PM",0,1,7.36,12.495,10.09,0.99,"02/15/19 06:00 AM",etrade_supply,7.12,7.07
+FLX-HTC-578,"HTC Droid DNA Butterfly J Main Board w/ Headphone Jack Sim Card Slot Power Flex","06/15/15 02:39 PM",1,4,0,29.5,0,0.99,"02/15/19 06:00 AM",etrade_supply,26.67,26.47
+FLX-HTC-579,"HTC One M7 Sim Card Tray Holder Slot - White","07/20/15 03:01 PM",0,10,1.14,2.736,2.19,0.99,"02/15/19 06:00 AM",etrade_supply,1.77,1.76
+FLX-HTC-580,"HTC One M8 SIM SD Card Flex Cable","02/21/17 02:31 PM",1,0,3.61,6.83,5.39,3.39,"02/15/19 06:00 AM",etrade_supply,3.57,3.54
+FLX-HTC-581,"HTC One M8 Vibrator Module","10/16/17 03:31 PM",0,1,2.73,5.95,0,3.19,"02/15/19 06:00 AM",etrade_supply,3.26,3.24
+FLX-HTC-582,"HTC One M8 Charging Port Flex Cable Sprint/T-Mobile","09/13/18 02:02 PM",1,2,2.73,7.81,6.59,3.49,"02/15/19 06:00 AM",etrade_supply,6.69,6.64
+FLX-HTC-583,"HTC One M8 HTC6995LVW HTC6525LVW Rear Camera Flex Cable","11/05/15 10:22 AM",0,0,8.14,13.95,0,7.69,"02/15/19 06:01 AM",etrade_supply,8.02,7.96
+FLX-HTC-584,"HTC One M8 Front Camera Flex Cable","04/30/15 02:48 PM",0,4,0,5.99,0,1.99,"02/15/19 06:01 AM",etrade_supply,6.67,6.62
+FLX-HTC-587,"HTC One M8 Charging Port Flex Cable (32GB) AT&T/Verizon","09/25/18 04:36 PM",0,2,2.37,8.32,6.59,3.49,"02/15/19 06:01 AM",etrade_supply,6.69,6.64
+FLX-HTC-591,"Earpiece Speaker for HTC One M8","07/27/18 04:39 PM",0,1,0.68,3.99,1.99,2.29,"02/15/19 06:20 AM",etrade_supply,1,0.99
+FLX-HTC-599,"Earpiece Speaker for HTC Sensation/Vivid/One S","04/27/16 02:54 PM",0,5,1.16,2.78,2.19,0.99,"02/15/19 06:20 AM",etrade_supply,0.71,0.7
+FLX-HTC-601,"Rear Camera Replacement for HTC Desire 626",N/A,0,5,5.67,10.21,8.79,0.99,"02/15/19 06:20 AM",etrade_supply,10.73,10.65
+FLX-HTC-602,"Front Camera Replacement for HTC Desire 626",N/A,0,5,4.89,9.29,7.89,0.99,"02/15/19 06:20 AM",etrade_supply,8.1,8.04
+FLX-HTC-604,"Charging Port Replacement for HTC Desire 626","03/06/18 02:23 PM",0,1,3,4.99,6.89,2.29,"02/15/19 06:20 AM",etrade_supply,6.69,6.64
+FLX-HTC-610,"Charging Port Microphone Replacement for HTC One A9","10/10/18 04:00 PM",0,3,3.97,10.78,9.06,5.99,"02/15/19 06:20 AM",etrade_supply,12.32,12.23
+FLX-HTC-612,"Loudspeaker Replacement for HTC One A9",N/A,0,0,0,12.99,0,4.99,"02/15/19 06:20 AM",etrade_supply,8.88,8.81
+FLX-HTC-615,"Loudspeaker Replacement for HTC 10",N/A,0,0,0,9.89,0,4.89,"02/15/19 06:20 AM",etrade_supply,8.54,8.48
+FLX-NOK-012,"Nokia Lumia 920 Charging Port Flex Cable",N/A,0,0,0,5.95,3.49,3.19,"02/15/19 06:20 AM",etrade_supply,3.57,3.54
+FLX-NOK-006,"Nokia Lumia 720 Charging Port Flex Cable",N/A,0,5,0,13.95,11.99,0.99,"02/15/19 06:20 AM",etrade_supply,3.05,3.03
+FLX-NOK-018,"Nokia Lumia 820 Camera Button / Power Volume Button Flex Cable",N/A,0,11,0,8.95,6.49,0.99,"02/15/19 06:20 AM",etrade_supply,3.26,3.24
+FLX-NOK-020,"Nokia Lumia 920 Back Rear Camera Flex Cable",N/A,0,5,0,10.95,8.89,0.99,"02/15/19 06:20 AM",etrade_supply,3.33,3.3
+FLX-NOK-022,"Nokia Lumia 920 Headphone Jack Port Flex Cable","08/24/15 10:48 AM",0,1,2.2,4.95,3.69,0.99,"02/15/19 06:20 AM",etrade_supply,1.69,1.68
+FLX-NOK-024,"Nokia Lumia 920 Main Sim Card Flex Ribbon Cable",N/A,0,0,0,14.95,12.59,6.39,"02/15/19 06:21 AM",etrade_supply,6.69,6.64
+FLX-NOK-026,"Nokia Lumia 920 Power Volume Camera Buttons Flex Cable","05/13/15 01:39 PM",0,4,0,6.95,4.69,0.99,"02/15/19 06:21 AM",etrade_supply,3.34,3.31
+FLX-NOK-028,"Nokia Lumia 920 USB Charging Port Flex Cable","11/05/15 12:03 PM",0,1,2.9,6.525,4.79,0.99,"02/15/19 06:21 AM",etrade_supply,3.57,3.54
+FLX-NOK-030,"Nokia Lumia 925 Power Volume Camera Buttons Flex Cable",N/A,0,1,0,7.95,5.49,0.99,"02/15/19 06:40 AM",etrade_supply,1.69,1.68
+FLX-NOK-034,"Nokia Lumia 1020 Headphone Jack Audio Mic Microphone Flex","06/24/15 12:11 PM",0,10,2.21,4.9725,3.69,0.99,"02/15/19 06:40 AM",etrade_supply,2.69,2.67
+FLX-NOK-038,"Nokia Lumia 1020 Power Volume Camera Buttons Flex Cable",N/A,0,5,0,5.95,3.89,0.99,"02/15/19 06:40 AM",etrade_supply,3.06,3.04
+FLX-NOK-042,"Nokia Lumia 1520 Back Rear Camera Flex Cable",N/A,0,2,0,15.95,13.79,0.99,"02/15/19 06:40 AM",etrade_supply,7.46,7.4
+FLX-NOK-044,"Nokia Lumia 1520 Power Volume Camera Buttons Flex Cable","06/24/15 12:11 PM",0,4,2.2,4.95,3.69,0.99,"02/15/19 06:40 AM",etrade_supply,3.33,3.3
+FLX-MOT-342,"Motorola Droid 4 XT894 Ear Piece Speaker Flex","04/27/16 02:54 PM",0,0,0.7,1.725,1.49,0.99,"02/15/19 06:40 AM",etrade_supply,1.03,1.02
+FLX-MOT-376,"Motorola MOTO X XT1060 Power Volume Flex","11/15/16 12:50 PM",0,0,3.6,7.938,4.49,1.39,"02/15/19 06:40 AM",etrade_supply,1.69,1.68
+FLX-MOT-378,"Motorola MOTO X XT1060 Ear Piece Speaker Flex With Mic","02/05/15 12:29 PM",0,0,8.79,14.943,12.09,0.99,"02/15/19 06:40 AM",etrade_supply,5.31,5.27
+FLX-MOT-380,"Motorola MOTO X XT1060 Volume Flash Motherboard Flex","02/29/16 12:01 PM",0,0,4.79,9.1,7.69,4.29,"02/15/19 06:40 AM",etrade_supply,4.47,4.44
+FLX-MOT-382,"Motorola MOTO X XT1060 Flash Flex","01/26/16 01:44 PM",0,12,5.44,10.44,8.99,0.99,"02/15/19 06:40 AM",etrade_supply,1.69,1.68
+FLX-MOT-402,"Motorola Droid MAXX XT1080M XT1080 Front Camera Flex","11/01/16 03:45 PM",0,0,8,13.974,11.29,4.99,"02/15/19 06:40 AM",etrade_supply,5.3,5.26
+FLX-TAB-066,"ASUS GOOGLE Nexus 7 ME370T USB Charging Port With Headphone Jack Flex","01/17/17 02:58 PM",0,0,3.24,6.8,5.35,0.99,"02/15/19 06:40 AM",etrade_supply,3.58,3.55
+FLX-TAB-106,"ASUS Transformer Pad TF300T Front Camera Flex",N/A,0,0,0,9.89,0,4.89,"02/15/19 06:40 AM",etrade_supply,6.05,6
+FLX-SNY-004,"Sony Xperia Z L36h SIM Card Reader Flex","08/07/15 02:32 PM",0,3,1.95,4.485,3.69,1.99,"02/15/19 06:40 AM",etrade_supply,3.16,3.14
+FLX-SNY-006,"Sony Xperia Z L36h Back Facing Camera Flex",N/A,0,2,0,10.95,0,1.99,"02/15/19 06:40 AM",etrade_supply,6.67,6.62
+FLX-SNY-010,"Sony Xperia Z1 L39h Motherboard Flex Cable Ribbon","12/14/15 02:09 PM",0,2,2.72,6.075,4.49,1.99,"02/15/19 06:40 AM",etrade_supply,5.96,5.91
+FLX-SNY-012,"Sony Xperia Z1 L39h Headphone Jack Flex Cable Ribbon",N/A,0,6,0,8.95,0,1.99,"02/15/19 06:41 AM",etrade_supply,1.69,1.68
+FLX-SNY-014,"Sony Xperia Z1 L39h Microphone Flex Cable Ribbon",N/A,0,7,0,6.95,0,1.99,"02/15/19 06:41 AM",etrade_supply,2.71,2.69
+FLX-NOK-053,"Front Camera Module with Flex Cable for Nokia Lumia 1020",N/A,0,5,6.19,10.8325,9.19,0.99,"02/15/19 06:41 AM",etrade_supply,5.3,5.26
+FLX-SNY-021,"Sony Xperia Z3 D6603 D6643 D6653 Headphone Audio Flex Cable","09/01/16 11:51 AM",0,1,4.1,6.95,0,1.99,"02/15/19 06:41 AM",etrade_supply,2.69,2.67
+FLX-SAM-1410,"Asus Zenfone 2 Dock Charging Flex Cable","10/17/16 12:33 PM",0,2,2.95,7.37,5.79,0.99,"02/15/19 07:00 AM",etrade_supply,3.32,3.29
+FLX-SNY-030,"Charging Port Flex Cable Replacement for Sony Xperia Z5",N/A,0,4,2.62,5.9,4.39,1.99,"02/15/19 07:00 AM",etrade_supply,7.2,7.15
+FLX-SNY-037,"Camera Flash Flex Cable Replacement for Sony Xperia Z5 Compact",N/A,0,1,2.5,5.63,4.19,1.99,"02/15/19 07:00 AM",etrade_supply,2.72,2.7
+FLX-SNY-042,"Charging Port Flex Cable Replacement for Sony Xperia Z5 Premium","07/10/17 02:52 PM",0,5,2.44,6.32,4.69,1.99,"02/15/19 07:00 AM",etrade_supply,6.66,6.61
+FLX-SNY-044,"Power and Volume Button Flex Cable Replacement for Sony Xperia Z5 Compact","10/03/16 11:02 AM",0,4,8.17,13.89,11.19,1.99,"02/15/19 07:00 AM",etrade_supply,14.64,0
+FLX-SAM-1040,"Rear Camera for Samsung Galaxy S4","09/25/18 04:36 PM",0,5,1.93,9.23,7.79,1.99,"02/15/19 07:00 AM",etrade_supply,3.95,3.92
+APL-003-1428,"Home Button Assembly for iPhone 6 & 6 Plus  Black","02/01/19 03:04 PM",17,33,1.31,4.09,4.09,1.49,"02/15/19 07:00 AM",maya_cellular,0,1.49
+APL-003-1615,"Front Camera with Proximity Sensor and Microphone for iPhone 6s","02/01/19 03:16 PM",20,70,2.44,6.89,5.18,2.99,"02/15/19 07:00 AM",etrade_supply,6.41,6.36
+APL-003-1615,"Front Camera with Proximity Sensor and Microphone for iPhone 6s","02/01/19 03:16 PM",20,70,2.44,6.89,5.18,2.99,"02/15/19 07:00 AM",maya_cellular,0,2.99
+APL-001-0030,"Touch Screen Digitizer Glass for iPhone 3GS Black","03/16/17 12:04 PM",0,3,3.02,4.95,4.69,1.49,"02/15/19 07:00 AM",etrade_supply,10.44,10.36
+APL-001-0090,"LCD Screen for iPhone 3GS",N/A,0,29,0,15.95,15.09,2.99,"02/15/19 07:01 AM",etrade_supply,13.66,13.56
+APL-001-0096,"LCD and Touch Screen Digitizer for ATT iPhone 4 Black","02/01/19 03:16 PM",3,2,7.49,17.95,12.99,10.39,"02/15/19 07:01 AM",etrade_supply,14.78,14.67
+APL-001-0102,"LCD and Touch Screen Digitizer for ATT iPhone 4 White","02/01/19 03:16 PM",0,6,7.49,17.95,10.89,10.89,"02/15/19 07:20 AM",etrade_supply,14.78,14.67
+APL-001-0186,"LCD and Touch Screen Digitizer for Verizon/Sprint iPhone 4 Black","01/16/19 10:10 AM",0,4,9.39,17.95,17.95,10.39,"02/15/19 07:20 AM",etrade_supply,18.18,18.04
+APL-001-0276,"LCD and Touch Screen Digitizer for iPhone 4S Black","02/01/19 03:16 PM",1,6,7.49,17.95,17.95,10.59,"02/15/19 07:20 AM",etrade_supply,14.34,14.23
+APL-001-0276,"LCD and Touch Screen Digitizer for iPhone 4S Black","02/01/19 03:16 PM",1,6,7.49,17.95,17.95,10.59,"02/15/19 07:20 AM",maya_cellular,0,9.95
+APL-001-0282,"LCD and Touch Screen Digitizer for iPhone 4S White","01/30/19 04:56 PM",3,10,9.4,17.95,17.95,10.59,"02/15/19 07:20 AM",etrade_supply,14.34,14.23
+APL-001-0282,"LCD and Touch Screen Digitizer for iPhone 4S White","01/30/19 04:56 PM",3,10,9.4,17.95,17.95,10.59,"02/15/19 07:20 AM",maya_cellular,0,9.95
+APL-001-0408,"LCD Screen for iPad 1","10/03/17 03:20 PM",1,1,31.45,52.855,39.99,39.99,"02/15/19 07:20 AM",etrade_supply,49.18,48.81
+APL-001-0415,"Front Screen Glass for iPhone 5/5C/5S White","01/19/16 11:25 AM",0,65,1.09,4.99,2.59,0.69,"02/15/19 07:21 AM",etrade_supply,3.02,3
+APL-001-0418,"Front Screen Glass  for iPhone 5/5C/5S Black","03/13/18 12:26 PM",0,9,1.06,4.99,2.59,0.69,"02/15/19 07:40 AM",etrade_supply,3.02,3
+APL-001-0462,"LCD Screen for iPad 2","01/30/19 04:56 PM",3,4,29.55,47.69,47.69,43.79,"02/15/19 07:40 AM",etrade_supply,42.77,42.45
+APL-001-0462,"LCD Screen for iPad 2","01/30/19 04:56 PM",3,4,29.55,47.69,47.69,43.79,"02/15/19 07:40 AM",maya_cellular,0,34.95
+APL-001-0504,"LCD Screen for iPad 3 4","10/18/18 11:57 AM",2,4,23.78,39.99,32.89,32.89,"02/15/19 07:40 AM",etrade_supply,33.01,32.76
+APL-001-0504,"LCD Screen for iPad 3 4","10/18/18 11:57 AM",2,4,23.78,39.99,32.89,32.89,"02/15/19 07:40 AM",maya_cellular,0,28.95
+APL-001-0522,"LCD Screen for iPad Mini (Non-Retina)","02/01/19 03:16 PM",6,0,25.25,59.99,59.99,33.69,"02/15/19 07:40 AM",etrade_supply,40.47,40.16
+APL-001-0522,"LCD Screen for iPad Mini (Non-Retina)","02/01/19 03:16 PM",6,0,25.25,59.99,59.99,33.69,"02/15/19 07:40 AM",maya_cellular,0,31.95
+APL-001-0564,"Touch Screen Digitizer for iPod Touch 3",N/A,0,37,0,5.95,5.79,1.99,"02/15/19 07:40 AM",etrade_supply,7.17,7.12
+APL-001-0582,"LCD Screen for iPod Touch 3","12/07/15 04:43 PM",0,5,4.3,7.96,6.79,3.99,"02/15/19 07:41 AM",etrade_supply,5.05,5.01
+APL-001-0588,"LCD and Touch Screen Digitizer for iPod Touch 4 Black","11/21/18 10:15 AM",2,3,9.17,19.99,19.99,12.19,"02/15/19 07:41 AM",etrade_supply,13.66,13.56
+APL-001-0588,"LCD and Touch Screen Digitizer for iPod Touch 4 Black","11/21/18 10:15 AM",2,3,9.17,19.99,19.99,12.19,"02/15/19 07:41 AM",maya_cellular,0,12.95
+APL-001-0594,"LCD and Touch Screen Digitizer for iPod Touch 4 - White","01/02/19 10:04 AM",0,2,9.86,19.99,19.99,12.19,"02/15/19 07:41 AM",etrade_supply,13.66,13.56
+APL-001-0594,"LCD and Touch Screen Digitizer for iPod Touch 4 - White","01/02/19 10:04 AM",0,2,9.86,19.99,19.99,12.19,"02/15/19 07:41 AM",maya_cellular,0,12.95
+APL-001-0718,"LCD and Touch Screen Digitizer for iPod Touch 5 White","02/01/19 03:16 PM",2,3,18.2,49.99,49.99,28.49,"02/15/19 07:41 AM",etrade_supply,25.29,25.1
+APL-001-0718,"LCD and Touch Screen Digitizer for iPod Touch 5 White","02/01/19 03:16 PM",2,3,18.2,49.99,49.99,28.49,"02/15/19 07:41 AM",maya_cellular,0,26.95
+APL-001-0762,"LCD Screen with Retina Display for iPad Mini 2 3 (Premium)","02/01/19 03:16 PM",6,2,31.82,99.99,99.99,70.79,"02/15/19 07:41 AM",etrade_supply,56.05,55.63
+APL-001-0762,"LCD Screen with Retina Display for iPad Mini 2 3 (Premium)","02/01/19 03:16 PM",6,2,31.82,99.99,99.99,70.79,"02/15/19 08:00 AM",maya_cellular,0,37.95
+APL-001-0776,"LCD Screen for iPad Air / iPad 5 (2017)","02/01/19 03:16 PM",14,0,30.36,80.84,80.84,41.09,"02/15/19 08:00 AM",etrade_supply,48.39,48.02
+APL-001-0776,"LCD Screen for iPad Air / iPad 5 (2017)","02/01/19 03:16 PM",14,0,30.36,80.84,80.84,41.09,"02/15/19 08:00 AM",maya_cellular,0,39.95
+APL-001-1180,"LCD and Touch Screen Digitizer for iPod Touch 5 Black","01/30/19 04:56 PM",0,4,22.84,49.99,49.99,28.49,"02/15/19 08:00 AM",etrade_supply,25.29,25.1
+APL-001-1180,"LCD and Touch Screen Digitizer for iPod Touch 5 Black","01/30/19 04:56 PM",0,4,22.84,49.99,49.99,28.49,"02/15/19 08:00 AM",maya_cellular,0,26.95
+APL-001-1248,"Front Screen Glass for iPhone 4S White","09/15/15 12:45 PM",0,23,1.08,2.592,2.09,0.69,"02/15/19 08:00 AM",etrade_supply,2.41,2.39
+APL-001-1250,"Front Screen Glass for iPhone 4/4S Black","10/12/16 09:38 AM",0,6,1.32,3.17,2.49,0.69,"02/15/19 08:00 AM",etrade_supply,2.41,2.39
+APL-001-1252,"Front Screen Glass for iPhone 6 - Black","05/27/16 02:02 PM",1,145,1.88,4.57,3.39,0.69,"02/15/19 08:00 AM",etrade_supply,3.02,3
+APL-001-1254,"Front Screen Glass for iPhone 6 - White","05/27/16 02:02 PM",3,45,1.88,4.57,3.39,0.69,"02/15/19 08:00 AM",etrade_supply,3.02,3
+APL-001-1256,"Front Screen Glass for iPhone 6 Plus - Black","01/19/16 11:25 AM",0,145,2.01,4.52,3.39,0.69,"02/15/19 08:01 AM",etrade_supply,3.63,3.6
+APL-001-1258,"Front Screen Glass for iPhone 6 Plus - White","01/19/16 11:25 AM",0,116,2.01,4.52,3.39,0.69,"02/15/19 08:01 AM",etrade_supply,3.63,3.6
+APL-001-2062,"Touch Screen Digitizer for iPod Nano 7 - Black","05/31/18 01:10 PM",0,3,12.89,29.99,29.99,15.99,"02/15/19 08:01 AM",etrade_supply,15.93,15.81
+APL-001-2065,"LCD for iPod Nano 6","04/09/15 04:09 PM",0,3,0,6.99,5.99,4.79,"02/15/19 08:01 AM",etrade_supply,5.05,5.01
+APL-001-2107,"LCD Backlight Film for iPhone 6 Plus (Premium)","07/05/17 03:38 PM",0,42,3.17,6.66,5.29,1.99,"02/15/19 08:20 AM",etrade_supply,7.23,7.18
+APL-001-2108,"LCD Backlight Film for iPhone 6 (Premium)","07/05/17 03:38 PM",0,1,3.11,6.44,4.79,1.79,"02/15/19 08:20 AM",etrade_supply,6.39,6.34
+APL-001-2109,"LCD Backlight Film for iPhone 5C 5S (Premium)","04/25/16 04:04 PM",0,33,1.53,3.528,2.79,1.59,"02/15/19 08:20 AM",etrade_supply,2.12,2.1
+APL-001-2111,"LCD Backlight Film for iPhone 5 ","04/25/16 04:04 PM",0,162,1.3,3.528,2.79,1.59,"02/15/19 08:20 AM",etrade_supply,2.12,2.1
+APL-001-2123,"Front Screen Glass for iPhone 6s Plus - White","02/29/16 01:35 PM",0,0,2.11,4.75,3.49,2.19,"02/15/19 08:20 AM",etrade_supply,4.55,4.52
+TAB-SRN-306,"Touch Screen Digitizer for Samsung Galaxy Tab 3 7.0 - Black","06/05/17 02:22 PM",0,0,4.53,12.206,12.21,4.29,"02/15/19 08:20 AM",etrade_supply,7.73,7.67
+TAB-SRN-314,"LCD and Touch Screen Digitizer for Samsung Galaxy Tab 3 8.0 - Black","01/26/16 01:44 PM",0,0,35.74,50.64,46.09,64.99,"02/15/19 08:20 AM",etrade_supply,40.98,40.67
+TAB-SRN-316,"LCD Screen for Samsung Galaxy Note 10.1 N8000",N/A,0,3,0,109.95,79.19,31.39,"02/15/19 08:20 AM",etrade_supply,38.71,38.42
+TAB-SRN-318,"Touch Screen Digitizer for Samsung Galaxy Tab 3 10.1 - Black","03/17/15 03:02 PM",0,0,8.63,15.39,8.39,8.39,"02/15/19 08:20 AM",etrade_supply,13.51,13.41
+TAB-SRN-322,"LCD Screen for Samsung Galaxy Tab 3 10.1 P5200","12/27/17 03:12 PM",0,1,24.54,64.95,49.49,29.99,"02/15/19 08:20 AM",etrade_supply,34.14,33.88
+TAB-SRN-326,"Touch Screen Digitizer for Samsung Galaxy Tab 3 7.0 - White","05/25/17 12:53 PM",0,0,5.03,12.206,6.69,6.69,"02/15/19 08:20 AM",etrade_supply,12.15,12.06
+APL-001-2218,"Glass With OCA iPhone 5 - White (Premium)","04/28/16 01:37 PM",0,313,1.51,3.99,2.79,0.99,"02/15/19 08:20 AM",etrade_supply,3.95,3.92
+APL-001-2220,"Glass With OCA iPhone 5G 5C 5S - Black (Premium)","04/04/17 02:08 PM",1,161,1.51,4.99,0,0.99,"02/15/19 08:20 AM",etrade_supply,3.95,3.92
+APL-001-2231,"Glass With OCA for iphone 6 Plus - White AA",N/A,0,54,2.01,4.52,3.39,2.99,"02/15/19 08:20 AM",etrade_supply,5.82,5.78
+APL-001-2232,"Glass With OCA for iPhone 6 Plus - Black AA",N/A,0,19,2.01,4.52,3.39,1.49,"02/15/19 08:40 AM",etrade_supply,5.82,5.78
+APL-001-2251,"Glass With Frame for iPhone 6S Plus - White",N/A,0,0,4.44,8.44,7.19,1.99,"02/15/19 08:40 AM",etrade_supply,13.38,13.28
+APL-001-2252,"Glass With Frame for iPhone 6S Plus - Black",N/A,0,0,4.44,8.44,7.19,2.99,"02/15/19 08:40 AM",etrade_supply,13.38,13.28
+APL-001-2254,"Front Glass Lens for iPhone 6S - White (Premium)",N/A,0,6,0,6.99,0,1.49,"02/15/19 08:40 AM",etrade_supply,5.82,5.78
+APL-001-2259,"LCD and Touch Screen Digitizer for iPod Touch 6 - White","12/27/18 01:50 PM",3,2,22.52,49.99,45.7,36.99,"02/15/19 08:40 AM",etrade_supply,24.2,24.02
+APL-001-2260,"LCD and Touch Screen Digitizer for iPod Touch 6 - Black","12/27/18 01:50 PM",0,3,22.52,49.99,45.7,36.99,"02/15/19 08:40 AM",etrade_supply,24.2,24.02
+APL-001-2265," LCD and Touch Screen Digitizer for Apple Watch 38mm (1st Gen)","01/30/19 04:56 PM",3,4,51.2,123.77,123.77,57.79,"02/15/19 08:40 AM",etrade_supply,88.73,88.06
+APL-001-2272,"LCD and Touch Screen Digitizer for Apple Watch 42mm (1st Gen)","12/31/18 01:34 PM",6,5,50.24,129.99,129.99,61.09,"02/15/19 08:40 AM",etrade_supply,50.6,50.22
+APL-001-2333,"Metal Shield Backplate with Flex Cable for iPhone 6 ","12/31/18 01:34 PM",10,19,1.77,4.99,0,1.99,"02/15/19 08:40 AM",maya_cellular,0,1.99
+APL-002-0756,"Middle Chassis Midframe Bezel Complete Assembly for iPhone 4S Silver/Black",N/A,0,0,0,32.95,31.99,29.99,"02/15/19 08:40 AM",etrade_supply,33.24,32.99
+APL-002-0825,"Touch Screen Digitizer Frame Bezel for iPhone 5 Black","02/02/16 04:02 PM",0,150,0.67,1.68,1.49,0.39,"02/15/19 08:41 AM",etrade_supply,0.69,0.68
+APL-002-0827,"Touch Screen Digitizer Frame Bezel for iPhone 5 White","02/02/16 04:02 PM",0,143,0.67,1.68,1.49,0.39,"02/15/19 08:41 AM",etrade_supply,0.69,0.68
+APL-002-0845,"Middle Chassis Midframe Bezel Complete Assembly for iPhone 4S Silver/White",N/A,0,0,0,38.89,38.89,32.95,"02/15/19 08:41 AM",etrade_supply,31.48,31.24
+APL-002-1168,"Glass Housing Back Plate with Frame for Verizon/Sprint iPhone 4 and 4S Black","07/19/17 05:04 PM",0,0,0.76,3.552,2.79,1.49,"02/15/19 08:41 AM",etrade_supply,1.49,1.48
+APL-002-1170,"Glass Housing Back Plate with Frame for Verizon/Sprint iPhone 4 and 4S White","11/08/17 02:43 PM",0,0,1.15,3.288,2.59,1.99,"02/15/19 08:41 AM",etrade_supply,1.47,1.46
+APL-002-2059,"LCD Frame for iPhone 6 Plus - Black","05/27/16 02:02 PM",0,13,1.24,2.856,2.29,0.99,"02/15/19 08:41 AM",etrade_supply,1.71,1.7
+APL-002-6365,"Front Middle Frame Bezel LCD Holder for iPhone 6 Plus - Black","02/03/16 02:45 PM",0,78,0.9,3.19,2.49,0.39,"02/15/19 09:00 AM",etrade_supply,1.71,1.7
+APL-002-6366,"LCD Frame for iPhone 6 Plus - White","02/03/16 02:45 PM",0,0,0.9,2.25,1.89,0.99,"02/15/19 09:00 AM",etrade_supply,1.71,1.7
+APL-002-6368,"Front Bezel LCD Holder for iPhone 5 - Black","07/19/16 12:52 PM",0,81,0.82,2.05,1.79,0.39,"02/15/19 09:00 AM",etrade_supply,0.69,0.68
+APL-002-6369,"Front Middle Frame Bezel LCD Holder for iPhone 5 - White","07/19/16 12:52 PM",0,87,0.82,2.05,1.79,0.39,"02/15/19 09:00 AM",etrade_supply,0.69,0.68
+APL-002-6370,"Front Middle Frame Bezel LCD Holder for iPhone 5S - Black","07/19/16 12:52 PM",0,105,0.82,2.05,1.79,0.39,"02/15/19 09:00 AM",etrade_supply,0.69,0.68
+APL-002-6371,"Front Middle Frame Bezel LCD Holder for iPhone 5S - White","07/19/16 12:52 PM",0,96,0.82,2.05,1.79,0.39,"02/15/19 09:00 AM",etrade_supply,0.69,0.68
+APL-002-6372,"Front Middle Frame Bezel LCD Holder for iPhone 5C - Black","07/19/16 12:52 PM",0,9,0.82,2.05,1.79,0.39,"02/15/19 09:00 AM",etrade_supply,0.69,0.68
+APL-002-6374,"Front Bezel LCD Holder for iPhone 6 - Black","02/03/16 02:45 PM",0,1,0.75,1.88,1.59,0.39,"02/15/19 09:00 AM",etrade_supply,1.36,1.35
+APL-002-6424,"Front Bezel LCD Holder for iPhone 6 - White (Premium)","03/27/17 12:21 PM",0,0,1.36,3.82,3.09,0.39,"02/15/19 09:01 AM",etrade_supply,4.92,4.88
+APL-002-6425,"Front Middle Bezel LCD Holder for iPhone 6 Plus - White (Premium)","05/05/16 01:27 PM",0,39,1.81,4.16,3.39,0.99,"02/15/19 09:01 AM",etrade_supply,5.58,5.54
+APL-002-6427,"Front Middle Bezel LCD Holder for iPhone 6 Plus - Black (Premium)","05/05/16 01:27 PM",0,58,1.81,4.16,3.39,0.99,"02/15/19 09:01 AM",etrade_supply,5.58,5.54
+APL-002-6436,"Front Middle Frame Bezel LCD Holder for iPhone 5 - White (Premium)","07/19/16 12:52 PM",0,21,0,3.99,0,0.69,"02/15/19 09:01 AM",etrade_supply,2.28,2.26
+TAB-SRN-666,"LCD Screen for Samsung Galaxy Tab 4 10.1","07/24/17 11:57 AM",0,0,23.7,39.51,39.51,24.69,"02/15/19 09:01 AM",etrade_supply,34.15,33.89
+TAB-SRN-668,"LG G Pad 8.3 LTE VK810 LCD With Digitizer Assembly - Black","01/18/16 10:44 AM",0,0,27.96,39.14,36.39,28.89,"02/15/19 09:20 AM",etrade_supply,30.05,29.82
+TAB-SRN-743,"Touch Screen Digitizer for Samsung Galaxy Tab 2 7.0 - White ",N/A,0,0,0,22.99,0,8.49,"02/15/19 09:20 AM",etrade_supply,6.78,6.73
+APL-003-1438,"Loud Speaker for iPhone 6","09/25/18 04:36 PM",5,1,0.75,3.31,3.31,1.29,"02/15/19 09:20 AM",etrade_supply,1.15,1.14
+APL-002-6437,"Front Middle Frame Bezel LCD Holder for iPhone 5S - Black (Premium)","07/19/16 12:52 PM",0,65,0,3.99,0,0.69,"02/15/19 09:20 AM",etrade_supply,2.28,2.26
+APL-002-6438,"Front Middle Frame Bezel LCD Holder for iPhone 5C - Black (Premium)","07/19/16 12:52 PM",0,1,0,3.99,0,0.69,"02/15/19 09:20 AM",etrade_supply,2.28,2.26
+APL-002-6439,"Front Middle Frame Bezel LCD Holder for iPhone 5S - White (Premium)","07/19/16 12:52 PM",0,58,0,3.99,0,0.69,"02/15/19 09:20 AM",etrade_supply,2.28,2.26
+APL-002-6440,"Front Middle Frame Bezel LCD Holder for iPhone 5 - Black (Premium)","07/19/16 12:52 PM",0,100,0,3.99,0,0.69,"02/15/19 09:20 AM",etrade_supply,2.28,2.26
+APL-003-0006,"3 Megapixel Replacement Camera for iPhone 3GS","12/20/17 04:32 PM",0,96,0,4.95,1.09,0.99,"02/15/19 09:20 AM",etrade_supply,1.76,1.75
+APL-003-0018,"Earpiece Speaker for iPhone 3G 3GS ","04/22/15 03:22 PM",0,5,0.8,2,1.69,0.99,"02/15/19 09:20 AM",etrade_supply,1.42,1.41
+APL-003-0188,"Headphone Audio Flex Ribbon Cable Jack for iPhone 3G 3GS White","12/20/17 04:32 PM",0,574,0,3.95,2.59,0.59,"02/15/19 09:20 AM",etrade_supply,3.8,3.77
+APL-003-0198,"ATT iPhone 4 Headphone Audio Flex Ribbon Cable","06/04/15 02:26 PM",0,5,1.72,3.956,3.19,2.49,"02/15/19 09:40 AM",etrade_supply,2.26,2.24
+APL-003-0204,"Charging Port Flex Cable Ribbon for ATT iPhone 4 Black","04/03/17 01:21 PM",0,10,1.18,3.979,3.979,2.09,"02/15/19 09:40 AM",etrade_supply,3.76,3.73
+APL-003-0206,"Charging Port Flex Cable Ribbon for ATT iPhone 4 White","11/05/15 12:03 PM",0,11,1.95,4.485,3.69,2.99,"02/15/19 09:40 AM",etrade_supply,3.76,3.73
+APL-003-0210,"ATT iPhone 4 Camera Front-Facing",N/A,0,78,0,3.95,1.49,0.99,"02/15/19 09:40 AM",etrade_supply,2.16,2.14
+APL-003-0216,"ATT iPhone 4 Signal Antenna Cover Cable","02/10/15 04:21 PM",0,7,1.17,2.808,2.19,0.99,"02/15/19 09:40 AM",etrade_supply,2.13,2.11
+APL-003-0222,"ATT iPhone 4 Wifi Antenna Metal Cover","01/19/17 01:06 PM",0,9,0.39,1.575,0.99,0.99,"02/15/19 09:40 AM",etrade_supply,0.87,0.86
+APL-003-0240,"iPhone 4 Camera Back-Facing","06/04/15 02:26 PM",0,11,2.21,4.9725,4.9725,1.99,"02/15/19 09:40 AM",etrade_supply,2.64,2.62
+APL-003-0252,"iPhone 4 Vibrator Motor","06/04/15 02:26 PM",0,12,0.9,2.25,1.89,0.99,"02/15/19 09:41 AM",etrade_supply,0.88,0.87
+APL-003-0264,"iPhone 4 Home Button - Black","03/27/18 03:10 PM",0,3,0.32,1.47,0.89,0.79,"02/15/19 10:00 AM",etrade_supply,2.13,2.11
+APL-003-0270,"iPhone 4 Home Button - White","05/16/18 02:40 PM",0,22,0.67,1.35,1.19,0.79,"02/15/19 10:00 AM",etrade_supply,0.91,0.9
+APL-003-0336,"Verizon/Sprint iPhone 4 Headphone Audio Flex Ribbon Cable","06/04/15 02:26 PM",0,4,2.11,4.9725,3.69,1.49,"02/15/19 10:00 AM",etrade_supply,3.02,3
+APL-003-0354,"iPhone 4 4S Loudspeaker Module","12/28/17 04:11 PM",0,6,0.31,1.45,1.45,0.89,"02/15/19 10:00 AM",etrade_supply,1.31,1.3
+APL-003-0378,"iPhone 4 4S LCD Testing Module","04/24/17 01:31 PM",0,7,1.76,3.43,2.69,2.69,"02/15/19 10:00 AM",etrade_supply,2.41,2.39
+APL-003-0384,"iPhone 4 4S Metal Buttons","04/26/17 01:30 PM",0,9,0.66,2.544,1.99,0.99,"02/15/19 10:00 AM",etrade_supply,1.27,1.26
+APL-003-0396,"iPhone 4S Camera - Back Facing - 8 Megapixel - Original",N/A,0,1599,0,3.95,0.99,0.99,"02/15/19 10:01 AM",etrade_supply,3.96,3.93
+APL-003-0402,"iPhone 4S Complete Replacement Screw Set","02/01/19 03:04 PM",0,2,0.71,1.8,1.59,0.69,"02/15/19 10:01 AM",etrade_supply,1.06,1.05
+APL-003-0408,"iPhone 4S Camera - Front Facing","04/03/17 01:21 PM",0,5,1.18,3.772,3.09,1.49,"02/15/19 10:01 AM",etrade_supply,1.86,1.85
+APL-003-0432,"iPhone 4S Signal Antenna Metal Cover Cable","03/21/18 03:19 PM",0,2,0.78,2.95,0.99,0.99,"02/15/19 10:01 AM",etrade_supply,1.31,1.3
+APL-003-0456,"iPhone 4S Rubber Home Button Bracket","05/16/18 02:40 PM",0,64,0.41,1.435,0.89,0.99,"02/15/19 10:20 AM",etrade_supply,1.23,1.22
+APL-003-0534,"Mute Volume Power Metal Buttons for iPhone 5 - Black","07/19/17 05:04 PM",0,9,0.67,2.99,2.69,0.99,"02/15/19 10:20 AM",etrade_supply,2.13,2.11
+APL-003-0540,"Mute Volume Power Metal Buttons for iPhone 5 - White","09/07/18 11:38 AM",0,8,0.85,2.99,2.29,0.99,"02/15/19 10:20 AM",etrade_supply,2.13,2.11
+APL-003-0546,"Vibrator Motor for iPhone 5 ","07/19/17 05:04 PM",0,22,0.46,2.93,2.29,0.99,"02/15/19 10:20 AM",maya_cellular,0,1.49
+APL-003-0552,"SIM Card Tray for iPhone 5 - Silver","08/24/18 10:50 AM",0,9,0.7,1.4,1.18,0.99,"02/15/19 10:20 AM",etrade_supply,1.27,1.26
+APL-003-0558,"SIM Card Tray for iPhone 5 - Black","09/07/18 11:38 AM",1,4,0.55,1.55,1.39,0.99,"02/15/19 10:20 AM",etrade_supply,0.91,0.9
+APL-003-0576,"Home Button for iPhone 5 Black","11/26/18 02:53 PM",0,21,0.4,1.47,0.89,0.69,"02/15/19 10:20 AM",etrade_supply,0.87,0.86
+APL-003-0582,"LoudSpeaker for iPhone 5","01/31/18 09:42 AM",0,4,0.68,2.81,2.19,1.29,"02/15/19 10:21 AM",maya_cellular,0,0.99
+APL-003-0600,"Pentalobe Star Screws for iPhone 5 Silver","10/04/17 02:24 PM",0,5,0.23,1.61,0.99,0.39,"02/15/19 10:21 AM",maya_cellular,0,0.49
+APL-003-0606,"Complete Screw Set for iPhone 5","09/07/18 11:38 AM",0,3,0.4,1.95,1.69,0.79,"02/15/19 10:21 AM",etrade_supply,0.87,0.86
+APL-003-0606,"Complete Screw Set for iPhone 5","09/07/18 11:38 AM",0,3,0.4,1.95,1.69,0.79,"02/15/19 10:40 AM",maya_cellular,0,0.99
+APL-003-0626,"Home Button Rubber Gasket for iPhone 5","09/07/18 11:38 AM",0,6,0.33,1.4,1.19,0.79,"02/15/19 10:40 AM",maya_cellular,0,0.49
+APL-003-0634,"Top Bottom Glass Cover for iPhone 5 White","09/07/18 11:38 AM",0,6,0.85,2.225,1.89,1.99,"02/15/19 10:40 AM",etrade_supply,2.15,2.13
+APL-003-0635,"Top Bottom Glass Cover for iPhone 5 Black","02/21/17 01:19 PM",0,11,1.45,2.225,1.89,1.99,"02/15/19 10:40 AM",etrade_supply,2.15,2.13
+TAB-SRN-120,"Touch Screen Digitizer for Samsung Galaxy Tab 2 10.1- White","01/18/16 10:44 AM",0,0,7.19,14.433,8.59,8.59,"02/15/19 10:40 AM",etrade_supply,10.86,10.78
+TAB-SRN-108,"Touch Screen Digitizer for Samsung Galaxy Tab 2 7.0 - Black","11/28/16 11:18 AM",0,0,7.87,13.226,10.69,11.49,"02/15/19 10:40 AM",etrade_supply,12.1,12.01
+TAB-SRN-066,"Samsung Galaxy Note 10.1 Tablet LCD Screen","07/24/15 12:04 PM",0,0,60.62,81.837,74.59,39.99,"02/15/19 10:40 AM",etrade_supply,38.71,38.42
+APL-003-0726,"Wifi Flex Cable for iPod Touch 4","06/12/17 01:03 PM",0,9,0.87,3,2.39,0.99,"02/15/19 10:40 AM",etrade_supply,1.5,1.49
+APL-003-0846,"Rear Camera for iPad 2","08/15/18 12:53 PM",0,5,1.38,4.071,3.29,0.79,"02/15/19 10:40 AM",etrade_supply,3.25,3.23
+APL-003-0846,"Rear Camera for iPad 2","08/15/18 12:53 PM",0,5,1.38,4.071,3.29,0.79,"02/15/19 10:41 AM",maya_cellular,0,0.99
+APL-003-0852,"Camera Front Facing for iPad 2","03/15/18 01:59 PM",0,1,1.34,4.324,3.49,1.69,"02/15/19 10:41 AM",etrade_supply,1.42,1.41
+APL-003-0852,"Camera Front Facing for iPad 2","03/15/18 01:59 PM",0,1,1.34,4.324,3.49,1.69,"02/15/19 11:00 AM",maya_cellular,0,1.49
+APL-003-0870,"Internal Loudspeaker for iPad 2","10/26/17 10:59 AM",0,5,1.33,4.439,3.59,1.59,"02/15/19 11:00 AM",etrade_supply,3.59,3.56
+APL-003-0894,"WIFI Bluetooth Signal Antenna Flex Cable for iPad 2","12/19/18 10:10 AM",0,5,1.67,2.976,2.29,1.69,"02/15/19 11:00 AM",maya_cellular,0,1.49
+APL-003-0900,"Micro SIM Card Tray Holder for iPad 2",N/A,0,6,0,3.95,1.49,0.99,"02/15/19 11:00 AM",etrade_supply,1.32,1.31
+APL-003-0906,"Home Button for iPad 2 3 4 White","04/09/18 04:29 PM",0,9,0.51,1.75,1.09,0.49,"02/15/19 11:00 AM",etrade_supply,0.91,0.9
+APL-003-0912,"Home Button for iPad 2 3 4 Black","04/09/18 04:29 PM",0,14,0.51,1.3,1.09,0.99,"02/15/19 11:00 AM",etrade_supply,1.06,1.05
+APL-003-0948,"Home Button Circuit Control Board for iPad 2 3","06/01/16 03:19 PM",0,3,0.86,1.7,1.49,0.99,"02/15/19 11:00 AM",etrade_supply,1.23,1.22
+APL-003-0972,"Headphone Audio Jack Flex Cable WIFI Version for iPad 3",N/A,0,27,0,5.95,3.19,1.89,"02/15/19 11:00 AM",etrade_supply,3.8,3.77
+APL-003-0984,"Home Button Circuit Control Board for iPad 2 3","01/31/18 09:42 AM",0,3,0.37,1.525,1.29,0.49,"02/15/19 11:00 AM",etrade_supply,1.23,1.22
+APL-003-1004,"Charging Port Flex Cable Assembly for iPad Mini Black","07/27/18 04:39 PM",0,3,1.43,4.52,3.4,1.99,"02/15/19 11:00 AM",etrade_supply,2.99,2.97
+APL-003-1014,"Home Button Flex Cable for iPad Mini & iPad Mini 2","05/07/15 03:34 PM",3,36,1.64,3.772,3.09,2.99,"02/15/19 11:00 AM",etrade_supply,2.28,2.26
+APL-003-1068,"Home Button for iPad 3 White",N/A,0,17,0,2.95,0.99,0.89,"02/15/19 11:01 AM",etrade_supply,1.27,1.26
+APL-003-1074,"Home Button for iPad 3 Black",N/A,0,16,0,2.95,0.99,0.89,"02/15/19 11:01 AM",etrade_supply,1.06,1.05
+APL-003-1110,"Home Button for iPad Mini & iPad Mini 2 Black","04/25/18 04:13 PM",3,2,0.63,1.525,1.29,0.89,"02/15/19 11:01 AM",etrade_supply,1.23,1.22
+APL-003-1116,"Home Button for iPad Mini & iPad Mini 2 White","04/25/18 04:13 PM",0,3,0.63,2.075,1.79,0.89,"02/15/19 11:01 AM",etrade_supply,1.23,1.22
+APL-003-1128,"Charging Port Flex Cable for iPad 4","12/19/18 10:10 AM",1,4,1.96,4.89,4.89,2.09,"02/15/19 11:01 AM",maya_cellular,0,1.99
+APL-003-1146,"LCD Power Switch Key Connection Board (WIFI Version) for iPad 2","06/01/17 11:14 AM",0,7,4.2,8.89,8.89,4.49,"02/15/19 11:20 AM",etrade_supply,17.08,16.95
+APL-003-1152,"LCD Power Switch Key Connection Board (3G Version) for iPad 2","02/21/17 02:31 PM",0,6,9.48,16.371,13.19,5.49,"02/15/19 11:20 AM",etrade_supply,16.32,16.2
+APL-003-1156,"Wifi Antenna Ribbon Flex Cable for iPhone 5","08/10/17 11:31 AM",0,6,0.92,1.575,0.99,0.99,"02/15/19 11:20 AM",etrade_supply,0.79,0.78
+APL-003-1160,"Earpiece Audio Speaker for iPhone 5","08/15/18 12:53 PM",0,9,0.49,1.5,1.29,0.69,"02/15/19 11:20 AM",maya_cellular,0,0.49
+APL-003-1224,"Home Button Ribbon Flex Cable for iPhone 5","11/27/18 03:20 PM",9,10,0.4,1.99,1.09,0.69,"02/15/19 11:20 AM",etrade_supply,0.78,0.77
+APL-003-1224,"Home Button Ribbon Flex Cable for iPhone 5","11/27/18 03:20 PM",9,10,0.4,1.99,1.09,0.69,"02/15/19 11:20 AM",maya_cellular,0,0.49
+APL-003-1228,"LCD and Touch Screen Tester Flex Cable for iPhone 5","04/06/18 11:20 AM",0,41,2.41,6.14,4.59,2.79,"02/15/19 11:20 AM",maya_cellular,0,2.99
+APL-003-1232,"Charging Dock Flex Cable for iPhone 4S White","12/02/16 03:29 PM",0,10,1.49,3.979,3.29,1.99,"02/15/19 11:20 AM",etrade_supply,3.78,3.75
+APL-003-1234,"Charging Port Flex Cable Ribbon for Verizon/Sprint iPhone 4 White","10/12/15 01:52 PM",0,42,1.42,4,3.29,2.89,"02/15/19 11:21 AM",etrade_supply,5.25,5.21
+APL-003-1236,"Apple iPhone 4 Bluetooth WiFi Antenna for Verizon/Sprint CDMA",N/A,0,160,0,3.95,0.99,1.19,"02/15/19 11:21 AM",etrade_supply,1.27,1.26
+APL-003-1238,"Motherboard Interconnect Flex Cables for iPhone 5","09/07/18 11:38 AM",0,4,0.4,1.4,1.19,0.89,"02/15/19 11:21 AM",etrade_supply,0.82,0.81
+APL-003-1240,"Internal Loudspeaker for iPad 3 4","05/22/18 12:38 PM",0,4,5.14,13.99,3.49,6.69,"02/15/19 11:40 AM",etrade_supply,7.29,7.23
+APL-003-1242,"WIFI Bluetooth Antenna Flex Cable for iPhone 4S","05/04/17 12:56 PM",0,8,0.61,1.575,0.99,0.89,"02/15/19 11:40 AM",etrade_supply,1.27,1.26
+APL-003-1248,"Headphone Audio Jack Flex Cable for iPad Mini Black","09/05/18 02:37 PM",0,12,0.98,4.89,3.18,1.89,"02/15/19 11:40 AM",etrade_supply,2.64,2.62
+APL-003-1250,"Home Button Key Flex Cable for iPad 4","10/16/18 10:43 AM",0,5,1.14,2.89,2.89,1.79,"02/15/19 11:40 AM",etrade_supply,1.03,1.02
+APL-003-1252,"Top Bottom Glass Cover for iPhone 5S Black","09/07/18 11:38 AM",1,12,0.85,2.05,1.79,1.99,"02/15/19 11:40 AM",etrade_supply,2.15,2.13
+APL-003-1254,"Top Bottom Glass Cover for iPhone 5S White","09/07/18 11:38 AM",0,7,0.85,2.05,1.79,1.99,"02/15/19 11:40 AM",etrade_supply,2.13,2.11
+APL-003-1274,"Sim Card Tray for iPhone 5C Blue","12/04/17 02:41 PM",0,2,0.66,1.35,1.19,0.99,"02/15/19 11:40 AM",etrade_supply,1.25,1.24
+APL-003-1276,"Sim Card Tray for iPhone 5c Green","06/23/17 04:35 PM",0,7,0.45,2.35,1.99,0.99,"02/15/19 11:40 AM",etrade_supply,1.25,1.24
+APL-003-1278,"Sim Card Tray for iPhone 5c Hot Pink","01/19/17 01:06 PM",0,4,0.5,1.5,1.29,0.99,"02/15/19 11:41 AM",etrade_supply,1.25,1.24
+APL-003-1280,"Sim Card Tray for iPhone 5c Yellow","01/19/17 01:06 PM",0,7,0.45,1.575,0.99,0.99,"02/15/19 11:41 AM",etrade_supply,1.25,1.24
+APL-003-1282,"Sim Card Tray for iPhone 5c White","03/21/18 03:19 PM",0,2,0.47,1.575,0.99,0.89,"02/15/19 11:41 AM",etrade_supply,1.25,1.24
+APL-003-1284,"Power Button / Volume Button / Mute Button for iPhone 5c - Blue","07/19/17 05:04 PM",0,10,0.46,1.9,1.69,1.99,"02/15/19 11:41 AM",etrade_supply,1.49,1.48
+APL-003-1286,"Power Button / Volume Button / Mute Button for iPhone 5c - Green","07/19/17 05:04 PM",0,9,0.46,3.95,1.49,0.99,"02/15/19 12:00 PM",etrade_supply,1.49,1.48
+APL-003-1290,"Power Button / Volume Button / Mute Button for iPhone 5c  Yellow","07/19/17 05:04 PM",0,10,0.46,3.95,1.49,0.99,"02/15/19 12:00 PM",etrade_supply,1.49,1.48
+APL-003-1292,"Power Button / Volume Button / Mute Button for iPhone 5c  White","07/19/17 05:04 PM",0,9,0.46,3.192,2.49,0.99,"02/15/19 12:00 PM",etrade_supply,1.49,1.48
+APL-003-1294,"Sim Card Tray for iPhone 5S SE Gold","08/15/18 12:53 PM",0,8,0.56,1.99,1.99,0.99,"02/15/19 12:00 PM",etrade_supply,0.87,0.86
+APL-003-1296,"Sim Card Tray for iPhone 5S SE Silver","08/24/18 10:50 AM",0,8,0.7,1.99,1.99,0.89,"02/15/19 12:00 PM",etrade_supply,0.87,0.86
+APL-003-1298,"Mute Volume Power Metal Buttons for iPhone 5S SE - Gold","07/19/17 05:04 PM",0,7,0.76,3.95,1.49,0.99,"02/15/19 12:00 PM",etrade_supply,2.15,2.13
+APL-003-1300,"Mute Volume Power Metal Buttons for iPhone 5S SE - Silver","07/19/17 05:04 PM",0,9,0.76,2.712,2.09,1.89,"02/15/19 12:00 PM",etrade_supply,2.15,2.13
+APL-003-1302,"Home Button Flex Cable for iPhone 5S","09/07/18 11:38 AM",0,2,0.85,2.13,1.79,1.69,"02/15/19 12:01 PM",etrade_supply,1.87,1.86
+FLX-SAM-1547,"Charging Port Flex Cable for Samsung Galaxy S8 G950F (International Version)","09/25/18 04:36 PM",0,5,3.4,19.99,0,5.29,"02/15/19 12:20 PM",maya_cellular,0,5.99
+FLX-SAM-1548,"Charging Port Flex Cable for Samsung Galaxy S8 G950U (USA Version)","01/30/19 04:56 PM",4,11,5.67,14.99,0,5.29,"02/15/19 12:20 PM",maya_cellular,0,5.99
+FLX-SAM-1558,"Rear Camera for Samsung Galaxy S8 Plus","02/01/19 03:16 PM",0,6,10.31,39.99,0,10.99,"02/15/19 12:40 PM",maya_cellular,0,9.99
+FLX-SAM-1557,"Rear Camera for Samsung Galaxy S8","07/27/18 04:39 PM",0,5,9.86,34.99,0,10.99,"02/15/19 12:40 PM",maya_cellular,0,9.99
+FLX-SAM-1559,"Front Camera for Samsung Galaxy S8","02/01/19 03:16 PM",3,14,2.1,24.99,0,2.29,"02/15/19 12:41 PM",maya_cellular,0,2.49
+APL-003-1310,"Front Camera with Proximity Sensor Flex Cable for iPhone 5S SE","11/27/18 03:20 PM",22,0,1.95,6.99,6.99,2.29,"02/15/19 12:41 PM",maya_cellular,0,2.99
+APL-003-1312,"Rear Camera Flex Cable for iPhone 5S","11/27/18 03:20 PM",7,0,2.83,9.99,7.89,5.39,"02/15/19 12:41 PM",maya_cellular,0,3.99
+FLX-SAM-1666,"Power / Volume Button For Samsung Note 9",N/A,0,0,0,10.99,0,0,"02/15/19 12:56 PM",mobile_sentrix,0,1.2
+FLX-SAM-1665,"Loud Speaker For Samsung Note 9",N/A,0,0,0,10.99,0,0,"02/15/19 12:59 PM",mobile_sentrix,0,1.82
+APL-003-1314,"Charging Port and Headphone Jack Flex Assembly for iPhone 5c","02/01/19 03:16 PM",4,20,2.07,4.93,4.93,2.49,"02/15/19 01:00 PM",maya_cellular,0,2.49
+APL-003-1316,"Home Button Flex Cable for iPhone 5c","10/18/18 11:57 AM",0,19,0.4,1.325,1.19,0.69,"02/15/19 01:00 PM",maya_cellular,0,0.49
+APL-003-1332,"Home Button with Flex Cable for iPhone 5S - Black","11/26/18 02:53 PM",3,16,0.92,3.53,2.79,1.39,"02/15/19 01:01 PM",maya_cellular,0,1.49
+FLX-SAM-1663,"Front Camera For Samsung Note 9",N/A,0,0,0,20.99,0,0,"02/15/19 01:02 PM",mobile_sentrix,0,3.88
+FLX-SAM-1662,"Rear Camera For Samsung Note 9",N/A,0,0,0,50.99,0,0,"02/15/19 01:03 PM",mobile_sentrix,0,21.29
+FLX-SAM-1661,"Home Button For Samsung Note 9 - Blue",N/A,0,0,0,40.99,0,0,"02/15/19 01:04 PM",mobile_sentrix,0,18.29
+FLX-SAM-1660,"Charging Port with Flex Cable For Samsung Note 9",N/A,0,0,0,20.99,0,0,"02/15/19 01:11 PM",mobile_sentrix,0,3.02
+FLX-SAM-1664,"Earpiece Speaker For Samsung Note 9",N/A,0,0,0,10.99,0,0,"02/15/19 01:15 PM",mobile_sentrix,0,0.76
+APL-003-1350,"Vibrator Motor for iPhone 5S SE","07/27/18 04:39 PM",0,6,0.38,2.3,1.99,1.29,"02/15/19 01:20 PM",maya_cellular,0,0.99
+APL-003-1358,"Front Camera with Proximity Sensor and Microphone Flex Cable Assembly for iPhone 5c","11/27/18 03:20 PM",0,13,2.1,4.64,3.49,2.99,"02/15/19 01:20 PM",maya_cellular,0,2.49
+APL-003-1360,"Power/Volume/Mute Flex Cable Assembly for iPhone 5c","02/01/19 03:16 PM",0,16,1.66,3.979,3.29,2.59,"02/15/19 01:21 PM",maya_cellular,0,1.99
+APL-003-1370,"LCD Touch Screen Tester Flex Cable for iPhone 5S","04/06/18 11:20 AM",0,15,2.41,6.14,4.59,2.79,"02/15/19 01:40 PM",maya_cellular,0,2.99
+APL-003-1372,"LCD Touch Screen Tester Flex Cable for iPhone 5C","04/06/18 11:20 AM",0,15,2.41,6.14,4.59,2.79,"02/15/19 01:40 PM",maya_cellular,0,2.99
+APL-003-1420,"Wifi Antenna Flex Cable for Apple iPhone 6","02/01/19 03:16 PM",2,26,0.56,1.9,1.9,0.69,"02/15/19 01:41 PM",maya_cellular,0,0.49
+APL-003-1422,"Rear Camera for iPhone 6","02/01/19 03:16 PM",13,15,2.47,7.99,7.99,3.69,"02/15/19 01:41 PM",maya_cellular,0,2.49
+APL-001-2195,"Touch Screen Digitizer With Home Button for iPad 4 - Black (Premium)","01/15/19 10:48 AM",74,18,7.08,19.99,19.99,8.79,"02/15/19 01:59 PM",maya_cellular,8.95,0
+APL-003-1424,"Home Button Assembly for iPhone 6 & 6 Plus  White / Silver","02/01/19 03:04 PM",14,41,1.31,4.09,4.09,1.49,"02/15/19 02:00 PM",maya_cellular,0,1.49
+APL-003-1426,"Home Button Assembly for iPhone 6 & 6 Plus  White / Gold","02/01/19 03:04 PM",6,31,1.31,4.09,4.09,1.49,"02/15/19 02:00 PM",maya_cellular,0,1.49
+APL-003-1430,"Charging Port and Headphone Jack Flex Cable for iPhone 6 White","02/01/19 03:04 PM",5,30,3.1,8.99,5.21,3.99,"02/15/19 02:00 PM",maya_cellular,0,2.49
+APL-003-1436,"Power Button Flex Cable for iPhone 6","02/01/19 03:16 PM",1,11,1.55,6.73,6.73,1.99,"02/15/19 02:00 PM",maya_cellular,0,1.49
+APL-003-1442,"SIM Card Tray for iPhone 6 Space Silver","10/10/18 04:00 PM",0,13,0.73,1.65,1.39,0.99,"02/15/19 02:00 PM",maya_cellular,0,0.99
+APL-003-1446,"Charging Dock Port & Headphone Jack Flex Cable for iPhone 6 Plus White","02/01/19 03:16 PM",5,15,3.71,8.99,8.99,3.99,"02/15/19 02:01 PM",maya_cellular,0,2.49
+APL-003-1448,"WiFi/Bluetooth Antenna Flex for iPhone 6 Plus","09/25/18 04:36 PM",0,11,0.45,2.075,1.79,1.19,"02/15/19 02:01 PM",maya_cellular,0,0.99
+APL-001-2047,"LCD and Touch Screen Digitizer for iPad Air 2 - White (Premium)","02/01/19 03:04 PM",8,0,106.38,299.99,209.89,133.69,"02/15/19 02:06 PM",maya_cellular,131.95,0
+SRN-SAM-1654,"LCD and Touch Screen Digitizer for Samsung Galaxy Note 8 - Midnight Black (Premium)","02/13/19 11:45 AM",9,1,194,313.6375,313.64,214.09,"02/15/19 02:16 PM",mobile_defenders,241.99,238.99
+APL-003-1452,"Loudspeaker Module for iPhone 5S SE","11/26/18 02:53 PM",0,12,0.77,4.5675,3.39,1.39,"02/15/19 02:20 PM",maya_cellular,0,0.99
+APL-003-1458,"Earpiece Speaker Module for iPhone 5C","11/27/18 03:20 PM",0,19,0.47,2,1.69,0.79,"02/15/19 02:20 PM",maya_cellular,0,0.49
+APL-003-1460,"Complete Screw Set for iPhone 5S","10/24/18 04:07 PM",1,7,0.58,1.75,1.09,0.99,"02/15/19 02:20 PM",maya_cellular,0,0.99
+APL-003-1464,"Complete Internal Screw Set for iPhone 5c","09/07/18 11:38 AM",0,4,0.7,1.75,1.75,0.99,"02/15/19 02:20 PM",maya_cellular,0,0.99
+APL-003-1496,"Home Button With Flex Cable for iPad Air 2 - White / Silver","09/13/18 02:02 PM",0,12,3.77,9.99,9.99,4.99,"02/15/19 02:21 PM",maya_cellular,0,2.49
+SRN-SAM-1634,"LCD and Touch Screen Digitizer for Samsung Galaxy S7 - White (Premium)","10/11/18 04:27 PM",2,3,96,189.99,189.99,126.19,"02/15/19 02:22 PM",etrade_supply,141.69,140.62
+SRN-SAM-1648,"LCD and Touch Screen Digitizer With Frame for Samsung Galaxy S8 Plus - Midnight Black (Premium)","01/18/19 04:37 PM",6,2,189,349.99,0,199.99,"02/15/19 02:23 PM",mobile_sentrix,200.65,178.82
+SRN-SAM-1633,"LCD and Touch Screen Digitizer for Samsung Galaxy S7 - Black (Premium)","02/13/19 11:45 AM",22,5,89,189.99,0,97.49,"02/15/19 02:26 PM",etrade_supply,141.69,140.62
+SRN-SAM-1611,"LCD and Touch Screen Digitizer for Samsung Galaxy S7  - Black Onyx (Standard) (No Logo)","02/01/19 03:04 PM",7,22,101.91,199.99,0,111.59,"02/15/19 02:34 PM",fixez,129.49,0
+APL-003-1498,"Home Button With Flex Cable for iPad Air 2 - White / Gold","07/27/18 04:39 PM",1,6,2.34,9.99,9.99,2.49,"02/15/19 02:40 PM",maya_cellular,0,2.49
+APL-003-1499,"Home Button Metal Bracket for iPad Air 2","04/17/18 02:12 PM",0,15,0.71,1.55,1.3,1.19,"02/15/19 02:40 PM",maya_cellular,0,0.99
+APL-003-1500,"Charging Port with Flex Cable for iPad Air 2 - White","07/27/18 04:39 PM",0,8,1.58,7.29,5.73,1.99,"02/15/19 02:40 PM",maya_cellular,0,1.99
+APL-003-1501,"Volume Flex Cable for iPad Air 2","10/24/18 04:07 PM",0,13,1.9,3.96,3.18,1.99,"02/15/19 02:40 PM",maya_cellular,0,1.49
+APL-003-1503,"Power Flex Cable With Mic for iPad Air 2","01/31/18 09:42 AM",0,4,1.32,3.93,3.16,1.79,"02/15/19 02:40 PM",maya_cellular,0,1.49
+APL-003-1504,"Back Flex Cable for iPhone 6 Plus","11/26/18 02:53 PM",0,10,1.29,4.68,4.68,1.69,"02/15/19 02:40 PM",maya_cellular,0,1.49
+APL-003-1505,"Rear Camera with Flex Cable for iPhone 6 Plus","02/01/19 03:16 PM",5,45,6.92,18.99,18.99,6.99,"02/15/19 02:40 PM",maya_cellular,0,5.79
+APL-003-1511,"Earpiece Speaker for iPhone 6 Plus","02/01/19 03:16 PM",5,25,0.58,2.45,2.45,0.69,"02/15/19 02:41 PM",maya_cellular,0,0.59
+SRN-SAM-1389,"LCD and Touch Screen Digitizer for Galaxy Note 5 - Gold Platinum (Standard) (No Logo)","12/04/18 03:51 PM",2,5,114.23,199.99,147.89,118.29,"02/15/19 02:42 PM",cell_parts_hub,130,0
+FLX-SAM-1560,"Rear Camera Lens for Samsung Galaxy S8 - Midnight Black","12/31/18 01:34 PM",4,4,1.18,4.99,0,1.29,"02/15/19 03:00 PM",maya_cellular,0,1.49
+FLX-SAM-1561,"Rear Camera Lens for Samsung Galaxy S8 - Orchid Gray","12/04/18 03:51 PM",1,5,0.94,4.99,0,1.29,"02/15/19 03:01 PM",maya_cellular,0,1.49
+FLX-SAM-1562,"Rear Camera Lens for Samsung Galaxy S8 - Arctic Silver","10/11/18 09:47 AM",0,4,0.79,4.99,0,0.99,"02/15/19 03:20 PM",maya_cellular,0,1.49
+FLX-SAM-1563,"Rear Camera Lens for Samsung Galaxy S8 Plus - Midnight Black","10/24/18 04:07 PM",0,13,0.88,4.99,0,1.29,"02/15/19 03:20 PM",maya_cellular,0,1.49
+FLX-SAM-1564,"Rear Camera Lens for Samsung Galaxy S8 Plus - Orchid Gray","12/31/18 01:34 PM",0,10,1.18,4.99,0,1.29,"02/15/19 03:21 PM",maya_cellular,0,1.49
+FLX-SAM-1565,"Rear Camera Lens for Samsung Galaxy S8 Plus - Arctic Silver","12/31/18 01:34 PM",0,10,1.18,4.99,0,1.29,"02/15/19 03:21 PM",maya_cellular,0,1.49
+APL-003-1512,"Charging Port with Flex Cable for iPad Air 2 - Black","08/06/18 11:36 AM",1,7,1.94,7.29,7.29,2.59,"02/15/19 03:40 PM",maya_cellular,0,1.99
+APL-003-1513,"Power Flex Cable for iPhone 6 Plus","02/01/19 03:16 PM",2,23,1.45,3.49,3.49,2.99,"02/15/19 03:40 PM",maya_cellular,0,1.39
+APL-003-1516,"Signal Antenna Cable for iPad Air 2","04/17/18 02:12 PM",0,5,1.83,4.99,3.99,2.49,"02/15/19 03:40 PM",maya_cellular,0,1.49
+APL-003-1517,"Front Camera with Proximity Sensor Microphone Module Flex Cable for iPhone 6 Plus","02/01/19 03:16 PM",33,76,2.79,6.66,5.29,3.89,"02/15/19 03:40 PM",maya_cellular,0,2.99
+APL-003-1529,"Charging Port and Headphone Jack Flex Cable for iPhone 6 Space Gray","02/01/19 03:16 PM",18,62,3.35,8.99,4.19,4.29,"02/15/19 03:41 PM",maya_cellular,0,2.49
+APL-003-1531,"Earpiece Speaker for iPhone 6","12/04/18 03:51 PM",11,17,0.94,3.384,3.38,1.29,"02/15/19 04:00 PM",maya_cellular,0,0.49
+APL-003-1532,"Front Camera with Proximity Sensor Flex Cable for iPhone 6","01/30/19 04:56 PM",43,16,2.69,6.39,6.39,3.39,"02/15/19 04:00 PM",maya_cellular,0,2.49
+APL-003-1534,"Vibrator Motor for iPhone 6","12/04/18 03:51 PM",1,14,0.65,3.6,2.79,1.19,"02/15/19 04:00 PM",maya_cellular,0,0.99
+APL-003-1546,"LCD and Touch Screen Tester Flex Cable for iPhone 6 Plus ","04/06/18 11:20 AM",0,4,2.38,6.7,5.29,2.79,"02/15/19 04:01 PM",maya_cellular,0,3.99
+APL-003-1557,"Loudspeaker for iPhone 5c","11/26/18 02:53 PM",1,6,0.68,4.995,3.69,0.79,"02/15/19 04:20 PM",maya_cellular,0,0.99
+APL-003-1558,"Vibrator Motor for iPhone 5c","08/10/17 11:31 AM",0,12,0.92,2.475,2.09,0.99,"02/15/19 04:20 PM",maya_cellular,0,1.49
+APL-003-1564,"Power and Volume Button Flex Cable for iPhone 6s","02/01/19 03:16 PM",15,0,1.96,5.99,5.99,2.69,"02/15/19 04:20 PM",maya_cellular,0,2.99
+APL-003-1566,"Home Button Flex Cable for iPhone 6s and 6s Plus","12/27/18 01:50 PM",1,3,1.36,2.5,2.1,1.49,"02/15/19 04:20 PM",maya_cellular,0,1.49
+APL-003-1567,"Vibrator Motor for iPhone 6s","12/19/18 10:10 AM",0,6,0.79,4.21,3.39,1.98,"02/15/19 04:20 PM",maya_cellular,0,0.99
+APL-003-1570,"Rear Camera for iPhone 5c","10/24/18 04:07 PM",0,15,2.49,6.0975,4.49,2.69,"02/15/19 04:21 PM",maya_cellular,0,2.99
+APL-003-1571,"Charging Port and Headphone Jack Flex Cable for iPhone 6s  White","02/01/19 03:16 PM",11,32,3.9,9.89,6.59,5.09,"02/15/19 04:21 PM",maya_cellular,0,2.79
+APL-003-1573,"Charging Port and Headphone Jack Flex Cable for iPhone 6s  Gray","02/01/19 03:16 PM",5,45,3.53,8.27,8.27,4.69,"02/15/19 04:40 PM",maya_cellular,0,2.79
+APL-003-1574,"Earpiece Speaker for iPhone 6s","12/31/18 01:34 PM",5,9,0.89,1.89,1.89,0.99,"02/15/19 04:40 PM",maya_cellular,0,0.49
+APL-003-1584,"Loudspeaker for iPhone 6s","02/01/19 03:16 PM",0,10,0.87,5.92,4.39,1.29,"02/15/19 04:40 PM",maya_cellular,0,0.99
+APL-003-1585,"Rear Camera for iPhone 6s","02/01/19 03:16 PM",8,27,8.09,16.79,16.79,8.59,"02/15/19 04:41 PM",maya_cellular,0,7.99
+APL-003-1586,"Vibrator Motor for iPhone 6S Plus","02/01/19 03:04 PM",0,11,0.71,4.21,3.39,1.49,"02/15/19 04:41 PM",maya_cellular,0,0.99
+APL-003-1591,"Rear Camera for iPhone 6s Plus","02/01/19 03:04 PM",20,0,10.86,50.99,69.89,19.99,"02/15/19 05:00 PM",maya_cellular,0,10.99
+APL-003-1593,"Internal screw set for iPhone 6s and 6s Plus","02/01/19 03:04 PM",2,8,0.71,1.78,1.49,0.89,"02/15/19 05:00 PM",maya_cellular,0,0.99
+APL-003-1594,"Loudspeaker for iPhone 6s Plus","10/18/18 11:57 AM",1,0,1.21,7.98,7.98,1.99,"02/15/19 05:00 PM",maya_cellular,0,1.49
+APL-003-1595,"Power Button Flex Cable for Apple iPhone 6S Plus ","02/01/19 03:04 PM",0,20,1.61,6.99,6.49,1.69,"02/15/19 05:00 PM",maya_cellular,0,1.49
+APL-003-1600,"Front Camera with Proximity Sensor and Microphone for iPhone 6s Plus","02/01/19 03:16 PM",51,100,3.17,12.99,7.39,6.99,"02/15/19 05:00 PM",maya_cellular,0,3.49
+APL-003-1605,"Home Button Assembly for iPhone 6S & 6S Plus  Silver","02/01/19 03:04 PM",12,29,1.31,2.5,2.5,1.99,"02/15/19 05:20 PM",maya_cellular,0,1.25
+APL-003-1606,"Home Button Assembly for iPhone 6S & 6S Plus  Space Gray","02/01/19 03:04 PM",13,31,1.31,2.5,2.5,1.49,"02/15/19 05:20 PM",maya_cellular,0,1.25
+APL-003-1608,"Home Button Assembly for iPhone 6s and 6s Plus  Rose Gold","02/01/19 03:04 PM",10,24,1.31,2.5,2.5,1.39,"02/15/19 05:20 PM",maya_cellular,0,1.25
+APL-003-1629,"Power Button Flex Cable with Bracket for iPhone 6s Plus","02/01/19 03:16 PM",1,24,2.14,8.61,7.29,2.79,"02/15/19 05:40 PM",maya_cellular,1.99,1.49
+APL-003-1635,"Home Button Flex Cable for iPhone 6 and 6 Plus ","12/04/18 03:51 PM",1,7,1.09,2.35,1.97,1.99,"02/15/19 05:40 PM",maya_cellular,0,1.49
+APL-003-1638,"LCD Tester for iPhone 6S ","07/20/18 05:01 PM",0,0,3.19,6.49,6.49,3.99,"02/15/19 05:41 PM",maya_cellular,0,3.99
+APL-003-1642,"Front Camera Flex Cable for iPad 3","10/24/16 11:32 AM",0,4,1.37,3.38,2.69,1.99,"02/15/19 06:00 PM",maya_cellular,0,1.49
+APL-003-1648,"Home Button with Flex Cable Ribbon for iPhone 5S - Gold","12/04/18 03:51 PM",0,9,1.09,5.63,5.63,1.49,"02/15/19 06:00 PM",maya_cellular,0,1.49
+APL-003-1660,"Earpiece Speaker for iPhone 5S SE","02/01/19 03:16 PM",0,17,0.58,2.42,1.89,0.79,"02/15/19 06:01 PM",maya_cellular,0,0.99
+APL-003-1661,"Loudspeaker for iPhone 6 Plus","02/01/19 03:16 PM",1,26,1.04,4.99,3.32,2.19,"02/15/19 06:01 PM",maya_cellular,0,1.49
+APL-003-1701,"Charging Port Flex Cable for iPhone 7 - White","02/01/19 03:04 PM",4,39,3.85,13.99,13.99,7.29,"02/15/19 06:20 PM",maya_cellular,0,2.99
+APL-003-1702,"Charging Port Flex Cable for iPhone 7 - Black","02/01/19 03:04 PM",18,38,3.85,13.99,6.45,6.99,"02/15/19 06:21 PM",maya_cellular,0,2.99
+APL-003-1703,"Charging Port Flex Cable for iPhone 7 - Grey","02/01/19 03:04 PM",2,13,3.85,13.99,7.57,7.69,"02/15/19 06:40 PM",maya_cellular,3.49,2.99
+APL-003-1704,"Rear Camera for iPhone 7","02/01/19 03:04 PM",8,10,24.29,54.99,54.99,28.19,"02/15/19 06:40 PM",maya_cellular,0,27.99
+APL-003-1705,"Front Camera with Proximity Sensor and Microphone for iPhone 7","02/01/19 03:16 PM",40,32,7.09,24.99,11.99,8.69,"02/15/19 06:40 PM",maya_cellular,0,8.99
+APL-003-1707,"Loudspeaker for iPhone 7","02/01/19 03:16 PM",2,41,1.15,8.8,7.49,1.29,"02/15/19 06:40 PM",maya_cellular,0,1.49
+APL-003-1709,"Power and Volume Button Flex Cable for iPhone 7 Plus","02/01/19 03:16 PM",0,20,3.35,14.26,4.19,3.99,"02/15/19 06:40 PM",maya_cellular,0,3.49
+APL-003-1710,"Charging Port Flex Cable for iPhone 7 Plus - White","01/30/19 04:56 PM",7,14,3.88,15.99,15.99,8.99,"02/15/19 06:40 PM",maya_cellular,0,3.99
+APL-003-1711,"Charging Port Flex Cable for iPhone 7 Plus - Black","01/30/19 04:56 PM",14,13,3.88,15.99,15.99,9.29,"02/15/19 06:41 PM",maya_cellular,0,3.99
+APL-003-1715,"Home Button With Flex Cable for iPad Air 2 - Black","07/27/18 04:39 PM",0,3,2.19,9.99,9.99,2.49,"02/15/19 07:00 PM",maya_cellular,0,2.49
+APL-003-1730,"Charging Port Replacement for iPhone SE - Black","01/30/19 04:56 PM",0,20,2.69,6.99,6.99,2.99,"02/15/19 07:00 PM",maya_cellular,0,2.49
+APL-003-1731,"Charging Port Replacement for iPhone SE - White","08/24/18 10:50 AM",0,16,2.48,6.99,3.61,2.59,"02/15/19 07:01 PM",maya_cellular,0,2.49
+APL-003-1736,"Rear Camera for iPhone 7 Plus","11/20/18 12:12 PM",2,2,69.02,130.99,130.99,87.99,"02/15/19 07:20 PM",maya_cellular,0,84.99
+APL-003-1737,"Power and Volume Button Flex Cable for iPhone 7","02/01/19 03:16 PM",0,8,3.09,4.99,4.99,3.59,"02/15/19 07:21 PM",maya_cellular,0,1.99
+BT-BP-30158,"BinTEK Battery for iPod Touch 4 980mAH Li-Polymer Premium ","06/30/17 02:35 PM",2,0,3.88,8.99,8.99,4.99,"02/15/19 08:40 PM",maya_cellular,0,4
+BT-BP-30210,"Battery Apple iPad 3/4 11560mAH Li-Polymer","01/25/19 04:01 PM",59,36,9.54,19.99,19.99,13.99,"02/15/19 09:00 PM",maya_cellular,12.99,0
+APL-003-1721,"Rear Camera Flex Cable for iPhone SE","10/18/18 11:57 AM",0,11,7.55,20.99,20.99,8.99,"02/15/19 09:40 PM",maya_cellular,0,11.99
+APL-003-1706,"Earpiece Speaker for iPhone 7","02/01/19 03:16 PM",6,43,0.84,6.99,6.99,1.19,"02/15/19 09:40 PM",maya_cellular,0,1.49
+FLX-SAM-1397,"Stylus Pen for Samsung Galaxy Note 5 - Silver Titanium (No Logo)","02/01/19 03:16 PM",2,6,1.91,13.99,13.99,7.49,"02/15/19 11:00 PM",cell_parts_hub,0,7.99

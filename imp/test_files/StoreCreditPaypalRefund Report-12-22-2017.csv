@@ -1,0 +1,8 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2017-12-22 16:36:25",Billy,Order,specialorders@expressdevicerepair.com,538933/,538933-RP1,3.6900,3.69,APL-003-1615,"Front Camera with Proximity Sensor and Microphone for iPhone 6s","Out Of Stock"
+"S Credit","2017-12-22 16:28:50",Billy,Manual,fahadmalik90.fm9@gmail.com,N/A/,PP12416,30.9800,,,,"Delivery - Damaged Item, In Progress"
+"S Credit","2017-12-22 16:22:25",meri,POS,jesse_quezada2014@yahoo.com,538804/PP12512,538804R,27.5900,"   25.4900"," APL-001-2372","  LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Economy Plus)","Item Issue - RTV-Flex/LCD Connector"
+"S Credit","2017-12-22 14:05:25",meri,POS,tomerall4you@gmail.com,538472/PP12510,538472R,23.9900,"   23.9900"," SRN-HTC-658","  LCD + Touch Screen Digitizer with Frame for HTC One M8 831C","Item Issue - RTV-"
+"S Credit","2017-12-22 12:19:13",Billy,Manual,Justin.lane14@yahoo.com,N/A/,538367,6.9900,,,,"Shipping Charge - Combined Order Compensation"
+Refund,"2017-12-22 16:50:04",Manual,Manual,rebel3500255@gmail.com,,3EN13386GK930332S,187.97,N/A,N/A,N/A,"Manually Refunded"
+Refund,"2017-12-22 14:00:08",Manual,Manual,melanieh0991@yahoo.com,,85A74972SW6782515,50.98,N/A,N/A,N/A,"Manually Refunded"

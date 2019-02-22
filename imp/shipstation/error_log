@@ -1,0 +1,25 @@
+[16-Feb-2016 04:33:35 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''select grade' (T_ENCAPSED_AND_WHITESPACE) in /home/phonerep/public_html/imp/inc/functions.php on line 490
+[23-Feb-2016 07:25:26 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/phonerep/public_html/imp/shipstation/rma_return_shipment.php on line 168
+[23-Feb-2016 07:25:34 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/phonerep/public_html/imp/shipstation/rma_return_shipment.php on line 168
+[23-Feb-2016 07:27:10 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/phonerep/public_html/imp/shipstation/rma_return_shipment.php on line 168
+[29-Jun-2016 14:44:46 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[29-Jun-2016 14:44:46 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[29-Jun-2016 14:44:47 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[29-Jun-2016 14:44:47 America/Los_Angeles] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/phonerep/public_html/imp/inc/db.php on line 15
+[15-Jul-2016 12:00:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/phonerep/public_html/imp/inc/functions.php on line 1736
+[08-Sep-2016 14:53:06 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'strtolower' (T_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 1998
+[08-Sep-2016 14:53:06 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'strtolower' (T_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 1998
+[08-Sep-2016 14:53:06 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'strtolower' (T_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 1998
+[08-Sep-2016 14:53:07 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'strtolower' (T_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 1998
+[24-Jan-2017 11:15:06 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '"', expecting ',' or ';' in /home/phonerep/public_html/imp/inc/functions.php on line 1407
+[21-Jul-2017 12:42:08 America/Los_Angeles] PHP Fatal error:  Class 'Database' not found in /home/phonerep/public_html/imp/config.php on line 25
+[26-Oct-2017 09:11:40 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/phonerep/public_html/imp/inc/functions.php on line 2452
+[23-Nov-2017 03:03:37 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '$db' (T_VARIABLE) in /home/phonerep/public_html/imp/inc/functions.php on line 3341
+[23-May-2018 15:56:25 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '$allocated_qty' (T_VARIABLE) in /home/phonerep/public_html/imp/inc/functions.php on line 3629
+[09-Jul-2018 16:23:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/inventory/class.php on line 771
+[13-Jul-2018 14:40:43 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '(', expecting ')' in /home/phonerep/public_html/imp/inventory/class.php on line 42
+[27-Sep-2018 12:15:11 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '$item' (T_VARIABLE) in /home/phonerep/public_html/imp/inventory/class.php on line 1179
+[11-Feb-2019 02:59:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:59:52 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:00:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:00:49 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116

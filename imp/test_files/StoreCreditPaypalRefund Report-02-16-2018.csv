@@ -1,0 +1,13 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-02-16 16:54:31",Billy,Manual,gadgetrepairlv@gmail.com,N/A/,543562-72T,41.5200,,,,"Error - Tax Exempt Problem"
+"S Credit","2018-02-16 16:09:08",Billy,Manual,teckzon@outlook.com,N/A/,543579-SH,20.0000,,,,"Delivery - Other Delivery Related"
+"S Credit","2018-02-16 16:07:57",meri,POS,iphonerepairslv@gmail.com,542241/PP12952,542241R,23.6900,23.69,APL-001-2379,"LCD and Touch Screen Digitizer for iPhone 8 - Black (Economy Plus)","(Item Issue-)"
+"S Credit","2018-02-16 15:50:37",meri,POS,tomerall4you@gmail.com,542021/PP12951,542021R,40.9800,16.99,APL-001-2116,"LCD and Touch Screen Digitizer for iPhone 6 Plus - Black (Economy Plus) ","(Item Issue-)"
+"S Credit","2018-02-16 15:50:37",meri,POS,tomerall4you@gmail.com,542021/PP12951,542021R,40.9800,23.99,APL-001-2371,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","(Item Issue-)"
+"S Credit","2018-02-16 15:48:01",meri,POS,tomerall4you@gmail.com,543489/PP12950,543489R,114.9900,114.99,SRN-SAM-1600,"LCD and Touch Screen Digitizer for Samsung Galaxy Note 4 - Grey (Standard)","(Item Issue-)"
+"S Credit","2018-02-16 15:42:26",Billy,Manual,itechptr@gmail.com,N/A/,PP12859-CA,164.9900,,,,"Customer Appreciation - Replacement Shipping Cost"
+"S Credit","2018-02-16 15:01:11",billy,POS,iphixsmartphones@gmail.com,539918-1/,539918-1R,45.9800,22.99,APL-001-2370,"LCD and Touch Screen Digitizer for iPhone 7 - White (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-02-16 15:01:11",billy,POS,iphixsmartphones@gmail.com,539918-1/,539918-1R,45.9800,22.99,APL-001-2370,"LCD and Touch Screen Digitizer for iPhone 7 - White (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-02-16 13:35:22",meri,POS,eric.suntelecom@gmail.com,542921/PP12948,542921R,129.9900,129.99,APL-001-2185,"LCD and Touch Screen Digitizer for iPad Mini 4 - White","(Good For Stock-)"
+Refund,"2018-02-16 12:30:12",Billy,Order,dh102290@gmail.com,"543545 /Cancelled Order",1SC143021R366720F,222.43,N/A,N/A,N/A,Fraud
+Refund,"2018-02-16 11:10:07",Billy,Order,Candicesabrina502@gmail.com,"543547 /Cancelled Order",8UM88316ED368210U,20.34,N/A,N/A,N/A,"Customer Cancel"

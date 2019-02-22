@@ -1,0 +1,25 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2017-12-20 23:02:11",kashif.sqa,Order,test_order@yopmail.com,538756/,538756-CO1,131.9900,123.98,APL-001-2365,"LCD and Touch Screen Digitizer for iPhone 7 - Black (Premium)",
+"S Credit","2017-12-20 23:01:34",kashif.sqa,Order,test_order@yopmail.com,538757/,538757-CO1,14.2700,15.49,APL-001-2309,"LCD and Touch Screen Digitizer for iPhone 6 - White (Economy Plus)",
+"S Credit","2017-12-20 22:56:17",Gohar,Manual,test_order@yopmail.com,N/A/,tester23,2.5000,,,,"Purchase of Goods"
+"S Credit","2017-12-20 21:59:44",Gohar,Manual,test_order@yopmail.com,N/A/,tester22,2.2200,,,,"Purchase of Goods"
+"S Credit","2017-12-20 21:38:13",Gohar,Manual,test_order@yopmail.com,N/A/,test_sqa,1.5600,,,,"Purchase of Goods"
+"S Credit","2017-12-20 16:18:08",meri,POS,sterjoskitoni@gmail.com,538667-1/,538667-1R,23.7900,23.79,APL-001-2370,"LCD and Touch Screen Digitizer for iPhone 7 - White (Economy Plus)","(Issue Replacement)"
+"S Credit","2017-12-20 15:26:39",meri,POS,tomerall4you@gmail.com,535104/PP12502,535104R,6.9900,"   6.9900"," BT-BP-30008","  BinTEK™ Battery for iPhone 5S/5C 1560mAH Li-Ion Premium ","Item Issue - RTV-Dead Battery"
+"S Credit","2017-12-20 14:57:58",billy,POS,dr_miracle_79@hotmail.com,537965-1/,537965-1R,4.9900,4.99,ACC-ZED-806,"Samsung Galaxy Fast Adaptive 2A 5V Charging Adapter - White (Original)","(Issue Replacement)"
+"S Credit","2017-12-20 13:26:03",Billy,Order,test_order@yopmail.com,538703/,538703-CO1,5.9900,8.95,ACC-ZED-138,"8-Pin Data Cable for iPhone 5 5S 5C 6 6+ 7 7 Plus 8 8 Plus iPad 4 Mini 1 2 Air Pro (Standard)",
+"S Credit","2017-12-20 12:16:47",Billy,Order,test_order@yopmail.com,538689/,538689-CO1,3.7000,2.99,ACC-ZED-488,"iPhone 5 and 6 Series Headphones (Aftermarket)",
+"S Credit","2017-12-20 12:16:47",Billy,Order,test_order@yopmail.com,538689/,538689-CO1,3.7000,1.49,ACC-ZED-102,"Wall Charger for iPod, iPad, iPhone Models (Standard)",
+"S Credit","2017-12-20 11:16:08",Billy,Order,nilehalol@yahoo.com,538670/,538670-RP1,3.7800,3.78,APL-003-1527,"Home Button Flex Cable for iPhone 6","Out Of Stock"
+"S Credit","2017-12-20 03:01:50",Gohar,Manual,kalimumtaz@gmail.com,N/A/,qa_test_vo,2.0000,,,,"Purchase of Goods"
+"S Credit","2017-12-20 02:49:30",saad,BuyBack,brad@elkoifix.com,LBB01840/,LBBS0UU2K,561.7500,561.75,,,LBB
+"S Credit","2017-12-20 02:49:05",saad,BuyBack,glen@teddybearpools.com,LBB01828/,LBBgnFB9z,13.5000,13.50,,,LBB
+"S Credit","2017-12-20 02:45:50",saad,BuyBack,cellphone.planet@yahoo.com,LBB01846/,LBBQbWvac,364.5000,364.50,,,LBB
+"S Credit","2017-12-20 02:44:08",saad,BuyBack,HuyNguyen201090@gmail.com,LBB01859/,LBBaaP3j1,13.0000,13.00,,,LBB
+"S Credit","2017-12-20 02:43:44",saad,BuyBack,dj@starbitrepair.com,LBB01845/,LBBBHQX3F,20.0000,20.00,,,LBB
+"S Credit","2017-12-20 02:42:48",saad,BuyBack,Nolanj@live.com,LBB01847/,LBBl8oVQv,31.2500,31.25,,,LBB
+"S Credit","2017-12-20 02:38:03",saad,BuyBack,asamafath37@gmail.com,LBB01841/,LBBdiKP7K,168.7500,168.75,,,LBB
+"S Credit","2017-12-20 02:04:12",Gohar,Manual,kalimumtaz@gmail.com,N/A/,kashif_sqa,30.4000,,,,"Purchase of Goods"
+"S Credit","2017-12-20 01:20:47",Gohar,Manual,kalimumtaz@gmail.com,N/A/,kashif_rpm,6.6500,,,,"Purchase of Goods"
+Refund,"2017-12-20 14:00:09",Manual,Manual,walkerkemp1@icloud.com,,9F636801JM669822E,0.99,N/A,N/A,N/A,"Manually Refunded"
+Refund,"2017-12-20 13:30:05",,Order,jaydeetwo74@gmail.com,538707,8DP326302U196194D,58.76,N/A,N/A,N/A,"Cancelled Order"

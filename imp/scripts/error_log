@@ -1,0 +1,107 @@
+[23-Jun-2017 18:48:49 America/Chicago] PHP Parse error:  syntax error, unexpected '(float)' (double) (T_DOUBLE_CAST), expecting ')' in /home/phonerep/public_html/imp/scripts/top_customers.php on line 156
+[04-Jul-2017 08:36:04 America/Chicago] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/phonerep/public_html/imp/scripts/current_stock_products.php on line 14
+[04-Jul-2017 08:36:28 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/phonerep/public_html/imp/scripts/current_stock_products.php on line 24
+[07-Aug-2017 12:44:59 America/Chicago] PHP Parse error:  syntax error, unexpected '$products' (T_VARIABLE) in /home/phonerep/public_html/imp/scripts/default1_less_price.php on line 70
+[07-Aug-2017 12:45:27 America/Chicago] PHP Parse error:  syntax error, unexpected '"Class"' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/phonerep/public_html/imp/scripts/default1_less_price.php on line 80
+[07-Aug-2017 12:45:29 America/Chicago] PHP Parse error:  syntax error, unexpected '"Class"' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/phonerep/public_html/imp/scripts/default1_less_price.php on line 80
+[07-Aug-2017 12:46:31 America/Chicago] PHP Parse error:  syntax error, unexpected '"Class"' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/phonerep/public_html/imp/scripts/default1_less_price.php on line 80
+[07-Aug-2017 12:48:09 America/Chicago] PHP Parse error:  syntax error, unexpected '"Class"' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/phonerep/public_html/imp/scripts/default1_less_price.php on line 74
+[07-Aug-2017 12:48:59 America/Chicago] PHP Warning:  include(auth.php): failed to open stream: No such file or directory in /home/phonerep/public_html/imp/scripts/default1_less_price.php on line 4
+[07-Aug-2017 12:48:59 America/Chicago] PHP Warning:  include(auth.php): failed to open stream: No such file or directory in /home/phonerep/public_html/imp/scripts/default1_less_price.php on line 4
+[07-Aug-2017 12:48:59 America/Chicago] PHP Warning:  include(): Failed opening 'auth.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/phonerep/public_html/imp/scripts/default1_less_price.php on line 4
+[07-Aug-2017 12:48:59 America/Chicago] PHP Fatal error:  Call to a member function func_query() on a non-object in /home/phonerep/public_html/imp/scripts/default1_less_price.php on line 65
+[18-Sep-2017 12:31:35 America/Chicago] PHP Parse error:  syntax error, unexpected '''' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/scripts/zaman_temp.php on line 6
+[31-Oct-2017 13:47:25 America/Los_Angeles] PHP Fatal error:  Call to a member function getTrueCostRow() on a non-object in /home/phonerep/public_html/imp/scripts/zaman_temp2.php on line 1127
+[31-Oct-2017 13:47:27 America/Los_Angeles] PHP Fatal error:  Call to a member function getTrueCostRow() on a non-object in /home/phonerep/public_html/imp/scripts/zaman_temp2.php on line 1127
+[31-Oct-2017 13:48:00 America/Los_Angeles] PHP Fatal error:  Call to a member function getTrueCostRow() on a non-object in /home/phonerep/public_html/imp/scripts/zaman_temp2.php on line 1127
+[23-Nov-2017 03:05:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '$db' (T_VARIABLE) in /home/phonerep/public_html/imp/inc/functions.php on line 3341
+[18-Dec-2017 11:07:04 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/phonerep/public_html/imp/scripts/update_customers.php on line 49
+[18-Dec-2017 11:07:06 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/phonerep/public_html/imp/scripts/update_customers.php on line 49
+[12-Feb-2018 00:16:39 America/Chicago] PHP Parse error:  syntax error, unexpected ''APL-003-1660'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/phonerep/public_html/imp/scripts/update_product_qty.php on line 9
+[12-Feb-2018 00:16:41 America/Chicago] PHP Parse error:  syntax error, unexpected ''APL-003-1660'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/phonerep/public_html/imp/scripts/update_product_qty.php on line 9
+[20-Feb-2018 01:08:29 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home/phonerep/public_html/imp/scripts/export_duplicate_customers.php on line 19
+[20-Feb-2018 01:09:52 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home/phonerep/public_html/imp/scripts/export_duplicate_customers.php on line 19
+[20-Feb-2018 01:11:57 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home/phonerep/public_html/imp/scripts/export_duplicate_customers.php on line 19
+[20-Feb-2018 01:12:00 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home/phonerep/public_html/imp/scripts/export_duplicate_customers.php on line 19
+[20-Feb-2018 01:12:10 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home/phonerep/public_html/imp/scripts/export_duplicate_customers.php on line 19
+[20-Feb-2018 01:37:02 America/Chicago] PHP Parse error:  syntax error, unexpected ')' in /home/phonerep/public_html/imp/scripts/export_duplicate_customers.php on line 20
+[20-Feb-2018 01:37:27 America/Chicago] PHP Parse error:  syntax error, unexpected ')' in /home/phonerep/public_html/imp/scripts/export_duplicate_customers.php on line 20
+[20-Feb-2018 07:14:06 America/Los_Angeles] PHP Catchable fatal error:  Object of class DateTime could not be converted to string in /home/phonerep/public_html/imp/scripts/customer_weekly.php on line 7
+[20-Feb-2018 07:14:08 America/Los_Angeles] PHP Catchable fatal error:  Object of class DateTime could not be converted to string in /home/phonerep/public_html/imp/scripts/customer_weekly.php on line 7
+[20-Feb-2018 07:14:08 America/Los_Angeles] PHP Catchable fatal error:  Object of class DateTime could not be converted to string in /home/phonerep/public_html/imp/scripts/customer_weekly.php on line 7
+[20-Feb-2018 07:14:46 America/Los_Angeles] PHP Catchable fatal error:  Object of class DateTime could not be converted to string in /home/phonerep/public_html/imp/scripts/customer_weekly.php on line 7
+[20-Feb-2018 07:14:48 America/Los_Angeles] PHP Catchable fatal error:  Object of class DateTime could not be converted to string in /home/phonerep/public_html/imp/scripts/customer_weekly.php on line 7
+[20-Feb-2018 07:14:49 America/Los_Angeles] PHP Catchable fatal error:  Object of class DateTime could not be converted to string in /home/phonerep/public_html/imp/scripts/customer_weekly.php on line 7
+[20-Feb-2018 07:14:55 America/Los_Angeles] PHP Catchable fatal error:  Object of class DateTime could not be converted to string in /home/phonerep/public_html/imp/scripts/customer_weekly.php on line 7
+[05-Mar-2018 04:40:32 America/Los_Angeles] PHP Fatal error:  Call to undefined method Database::func_escape_strimg() in /home/phonerep/public_html/imp/scripts/test_script.php on line 10
+[05-Mar-2018 04:40:34 America/Los_Angeles] PHP Fatal error:  Call to undefined method Database::func_escape_strimg() in /home/phonerep/public_html/imp/scripts/test_script.php on line 10
+[12-Mar-2018 01:19:11 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/phonerep/public_html/imp/scripts/export_customer_accounts.php on line 33
+[22-Mar-2018 00:05:50 America/Chicago] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/phonerep/public_html/imp/scripts/test_script.php on line 39
+[21-Mar-2018 22:06:06 America/Los_Angeles] PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 77 bytes) in /home/phonerep/public_html/imp/inc/db.php on line 58
+[25-Apr-2018 04:51:25 America/Los_Angeles] PHP Catchable fatal error:  Object of class DateTime could not be converted to string in /home/phonerep/public_html/imp/scripts/customer_weekly.php on line 87
+[02-May-2018 04:19:05 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'Exception' with message 'DatePeriod::__construct(): This constructor accepts either (DateTimeInterface, DateInterval, int) OR (DateTimeInterface, DateInterval, DateTime) OR (string) as arguments.' in /home/phonerep/public_html/imp/scripts/customer_weekly.php:13
+Stack trace:
+#0 /home/phonerep/public_html/imp/scripts/customer_weekly.php(13): DatePeriod->__construct(Object(DateTime), NULL, Object(DateTime))
+#1 {main}
+  thrown in /home/phonerep/public_html/imp/scripts/customer_weekly.php on line 13
+[02-May-2018 04:19:08 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'Exception' with message 'DatePeriod::__construct(): This constructor accepts either (DateTimeInterface, DateInterval, int) OR (DateTimeInterface, DateInterval, DateTime) OR (string) as arguments.' in /home/phonerep/public_html/imp/scripts/customer_weekly.php:13
+Stack trace:
+#0 /home/phonerep/public_html/imp/scripts/customer_weekly.php(13): DatePeriod->__construct(Object(DateTime), NULL, Object(DateTime))
+#1 {main}
+  thrown in /home/phonerep/public_html/imp/scripts/customer_weekly.php on line 13
+[02-May-2018 04:22:07 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateInterval::__construct(): Unknown or bad format (P1d)' in /home/phonerep/public_html/imp/scripts/customer_weekly.php:12
+Stack trace:
+#0 /home/phonerep/public_html/imp/scripts/customer_weekly.php(12): DateInterval->__construct('P1d')
+#1 {main}
+  thrown in /home/phonerep/public_html/imp/scripts/customer_weekly.php on line 12
+[02-May-2018 04:22:09 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateInterval::__construct(): Unknown or bad format (P1d)' in /home/phonerep/public_html/imp/scripts/customer_weekly.php:12
+Stack trace:
+#0 /home/phonerep/public_html/imp/scripts/customer_weekly.php(12): DateInterval->__construct('P1d')
+#1 {main}
+  thrown in /home/phonerep/public_html/imp/scripts/customer_weekly.php on line 12
+[02-May-2018 04:23:48 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateInterval::__construct(): Unknown or bad format (P1H)' in /home/phonerep/public_html/imp/scripts/customer_weekly.php:12
+Stack trace:
+#0 /home/phonerep/public_html/imp/scripts/customer_weekly.php(12): DateInterval->__construct('P1H')
+#1 {main}
+  thrown in /home/phonerep/public_html/imp/scripts/customer_weekly.php on line 12
+[09-Aug-2018 18:13:49 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/phonerep/public_html/imp/scripts/zaman_temp2.php on line 428
+[09-Aug-2018 18:13:51 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/phonerep/public_html/imp/scripts/zaman_temp2.php on line 428
+[05-Oct-2018 18:26:57 America/Los_Angeles] PHP Fatal error:  Call to undefined method Database::exec() in /home/phonerep/public_html/imp/scripts/zaman_temp2.php on line 149
+[05-Oct-2018 18:26:59 America/Los_Angeles] PHP Fatal error:  Call to undefined method Database::exec() in /home/phonerep/public_html/imp/scripts/zaman_temp2.php on line 149
+[05-Oct-2018 18:27:14 America/Los_Angeles] PHP Fatal error:  Call to undefined method Database::exec() in /home/phonerep/public_html/imp/scripts/zaman_temp2.php on line 149
+[08-Oct-2018 13:53:32 America/Chicago] PHP Parse error:  syntax error, unexpected '$end_cron_date' (T_VARIABLE) in /home/phonerep/public_html/imp/scripts/test_script.php on line 14
+[08-Oct-2018 13:53:33 America/Chicago] PHP Parse error:  syntax error, unexpected '$end_cron_date' (T_VARIABLE) in /home/phonerep/public_html/imp/scripts/test_script.php on line 14
+[08-Oct-2018 13:53:35 America/Chicago] PHP Parse error:  syntax error, unexpected '$end_cron_date' (T_VARIABLE) in /home/phonerep/public_html/imp/scripts/test_script.php on line 14
+[08-Oct-2018 11:53:49 America/Los_Angeles] PHP Fatal error:  Class 'PaypalPayment' not found in /home/phonerep/public_html/imp/scripts/test_script.php on line 11
+[08-Oct-2018 11:53:51 America/Los_Angeles] PHP Fatal error:  Class 'PaypalPayment' not found in /home/phonerep/public_html/imp/scripts/test_script.php on line 11
+[08-Oct-2018 11:53:57 America/Los_Angeles] PHP Fatal error:  Class 'PaypalPayment' not found in /home/phonerep/public_html/imp/scripts/test_script.php on line 11
+[09-Oct-2018 12:59:16 America/Chicago] PHP Warning:  file_put_contents(logs/paypal_ipn.txt): failed to open stream: No such file or directory in /home/phonerep/public_html/imp/scripts/test_ipn.php on line 4
+[09-Oct-2018 14:00:30 America/Chicago] PHP Warning:  file_put_contents(logs/paypal_ipn.txt): failed to open stream: No such file or directory in /home/phonerep/public_html/imp/scripts/test_ipn.php on line 4
+[12-Oct-2018 16:00:58 America/Chicago] PHP Fatal error:  Call to a member function func_query() on a non-object in /home/phonerep/public_html/imp/scripts/test_script.php on line 2
+[12-Oct-2018 16:01:12 America/Chicago] PHP Fatal error:  Call to a member function func_query() on a non-object in /home/phonerep/public_html/imp/scripts/test_script.php on line 2
+[12-Oct-2018 16:01:13 America/Chicago] PHP Fatal error:  Call to a member function func_query() on a non-object in /home/phonerep/public_html/imp/scripts/test_script.php on line 2
+[12-Oct-2018 16:01:15 America/Chicago] PHP Fatal error:  Call to a member function func_query() on a non-object in /home/phonerep/public_html/imp/scripts/test_script.php on line 2
+[12-Oct-2018 16:01:36 America/Chicago] PHP Fatal error:  Call to a member function func_query() on a non-object in /home/phonerep/public_html/imp/scripts/test_script.php on line 2
+[12-Oct-2018 16:01:41 America/Chicago] PHP Fatal error:  Call to a member function func_query() on a non-object in /home/phonerep/public_html/imp/scripts/test_script.php on line 2
+[15-Oct-2018 11:05:58 America/Chicago] PHP Parse error:  syntax error, unexpected 'fputcsv' (T_STRING) in /home/phonerep/public_html/imp/scripts/weekly_top_selling.php on line 43
+[15-Oct-2018 18:49:43 America/Chicago] PHP Parse error:  syntax error, unexpected ',' in /home/phonerep/public_html/imp/scripts/weekly_top_selling.php on line 12
+[15-Oct-2018 18:50:04 America/Chicago] PHP Parse error:  syntax error, unexpected ',' in /home/phonerep/public_html/imp/scripts/weekly_top_selling.php on line 12
+[20-Dec-2018 17:49:47 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/phonerep/public_html/imp/inc/functions.php on line 3795
+[04-Jan-2019 14:54:27 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/phonerep/public_html/imp/scripts/monthly_sales_report.php on line 88
+[04-Jan-2019 14:55:23 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/phonerep/public_html/imp/scripts/monthly_sales_report.php on line 88
+[04-Jan-2019 15:02:31 America/Chicago] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/phonerep/public_html/imp/scripts/monthly_sales_report.php on line 125
+[04-Jan-2019 15:02:37 America/Chicago] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/phonerep/public_html/imp/scripts/monthly_sales_report.php on line 125
+[10-Jan-2019 17:15:02 America/Los_Angeles] PHP Warning:  Unterminated comment starting line 2123 in /home/phonerep/public_html/imp/inc/functions.php on line 2123
+[10-Jan-2019 17:15:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '[' in /home/phonerep/public_html/imp/inc/functions.php on line 2137
+[11-Jan-2019 12:46:09 America/Chicago] PHP Parse error:  syntax error, unexpected ',', expecting ')' in /home/phonerep/public_html/imp/scripts/vendor_return_data.php on line 57
+[11-Jan-2019 12:47:03 America/Chicago] PHP Parse error:  syntax error, unexpected ',', expecting ')' in /home/phonerep/public_html/imp/scripts/vendor_return_data.php on line 57
+[17-Jan-2019 11:56:30 America/Chicago] PHP Parse error:  syntax error, unexpected '$rowData' (T_VARIABLE) in /home/phonerep/public_html/imp/scripts/zaman_temp2.php on line 167
+[01-Feb-2019 16:52:18 America/Chicago] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/phonerep/public_html/imp/scripts/top_customers.php on line 71
+[01-Feb-2019 16:52:35 America/Chicago] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/phonerep/public_html/imp/scripts/top_customers.php on line 71
+[04-Feb-2019 13:42:07 America/Los_Angeles] PHP Fatal error:  [] operator not supported for strings in /home/phonerep/public_html/imp/scripts/top_customers.php on line 99
+[04-Feb-2019 13:42:13 America/Los_Angeles] PHP Fatal error:  [] operator not supported for strings in /home/phonerep/public_html/imp/scripts/top_customers.php on line 99
+[04-Feb-2019 13:42:23 America/Los_Angeles] PHP Fatal error:  [] operator not supported for strings in /home/phonerep/public_html/imp/scripts/top_customers.php on line 99
+[11-Feb-2019 02:50:04 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 02:55:03 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:00:02 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116
+[11-Feb-2019 03:00:04 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ''",REPLACE($column, ",", "'' (T_CONSTANT_ENCAPSED_STRING) in /home/phonerep/public_html/imp/inc/functions.php on line 4116

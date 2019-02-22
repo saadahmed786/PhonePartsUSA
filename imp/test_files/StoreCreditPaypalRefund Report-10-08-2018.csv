@@ -1,0 +1,7 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-10-08 12:25:58",Meri,RMA,purchasing@paconnect.com,555119/PP14552,PP14552R,4.9900,4.99,BT-BP-30080,"BinTEK Battery for Samsung Galaxy S5 Mini EB-BG800BBE 2100mAH Li-Ion Premium ","(Good For Stock-)"
+"S Credit","2018-10-08 10:07:00",meri,POS,daw100213@gmail.com,560414/PP14626,560414R,9.7300,8.99,FLX-SAM-1553,"Charging Port Flex Cable for Samsung Galaxy S8 Plus G955F (International Version)","(Good For Stock-)"
+Refund,"2018-10-08 12:40:07",Meri,Order,rickwobig93@gmail.com,559549,05H56139LK654842W,368.99,368.9900,APL-001-2479,"LCD Screen Display with Digitizer Touch Panel and Mother Board for iPad Pro (12.9 inches) 2nd Gen - Black",-
+Refund,"2018-10-08 12:30:08",Meri,Order,miller6230@outlook.com,"560291 /Cancelled Order",8FJ02765L12989723,86.68,N/A,N/A,N/A,Fraud
+Refund,"2018-10-08 09:40:10",Meri,Order,Austenlovesmarissa@gmail.com,"560279 /Cancelled Order",7M942953HL791852R,65.48,N/A,N/A,N/A,"Possible Fraud"
+Refund,"2018-10-08 08:50:12",Meri,Order,joellaugust@yahoo.com,"560288 /Cancelled Order",74R50721NW9289732,119.88,N/A,N/A,N/A,Fraud

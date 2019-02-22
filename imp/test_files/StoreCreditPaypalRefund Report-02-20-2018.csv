@@ -1,0 +1,12 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-02-20 17:01:46",Billy,Manual,support@ifixlv.com,N/A/,543838TX,9.0700,,,,"Payment - Taxes Paid"
+"S Credit","2018-02-20 15:59:40",Billy,Order,rexburg@cellvationrepairs.com,543766/,543766-RP1,64.4900,64.49,SRN-LGM-693,"LCD and Touch Screen Digitizer for LG G6 - Silver","Out Of Stock"
+"S Credit","2018-02-20 12:28:15",meri,POS,nicholashyatt3223@yahoo.com,542608/PP12966,542608R,18.3900,16.99,APL-001-2116,"LCD and Touch Screen Digitizer for iPhone 6 Plus - Black (Economy Plus) ","(Item Issue-)"
+"S Credit","2018-02-20 09:41:36",Billy,Manual,guerrero_rf51@yahoo.com,N/A/,542576,8.4800,,,,"RMA - Customer Return Exception"
+"S Credit","2018-02-20 09:33:43",Billy,RMA,onestopwirelesslv@gmail.com,/PP12881,PP12881R,21.9800,10.99,APL-001-0730,"LCD and Touch Screen Digitizer for iPhone 5S - Black (Economy Plus)","(Good For Stock-)"
+"S Credit","2018-02-20 09:33:43",Billy,RMA,onestopwirelesslv@gmail.com,/PP12881,PP12881R,21.9800,10.99,APL-001-0728,"LCD and Touch Screen Digitizer for iPhone 5S - White (Economy Plus)","(Item Issue - RTV-LCD Lines)"
+"S Credit","2018-02-20 02:03:26",Billy,RMA,teamcarmona@yahoo.com,542849/PP12903,PP12903R,131.9800,124.99,APL-001-2326,"LCD and Touch Screen Digitizer for iPad Pro 9.7 - White (Standard) ","(Shipping Damage-)"
+"S Credit","2018-02-20 02:03:26",Billy,RMA,teamcarmona@yahoo.com,542849/PP12903,PP12903R,131.9800,6.99,FLX-SAM-1553,"Charging Port Flex Cable for Samsung Galaxy S8 Plus G955A AT&T","(Item Issue - RTV-Product Wear)"
+Refund,"2018-02-20 15:30:04",Billy,Order,shawnadeshay@yahoo.com,538863,2CC42114J7837164T,25.49,25.4900,APL-001-2372,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Economy Plus)",-
+Refund,"2018-02-20 13:50:04",,Order,billy@moonlightrambler.net,543676,46J665237H486783H,4.32,3.9900,BT-BP-30070,"BinTEK LG Nexus 5 BL-T9 2100mAH Li-Ion Premium Battery",-
+Refund,"2018-02-20 12:50:05",Manual,Manual,bp326@batteriesplus.net,,3VD47186SD5228601,64.99,N/A,N/A,N/A,"Manually Refunded"

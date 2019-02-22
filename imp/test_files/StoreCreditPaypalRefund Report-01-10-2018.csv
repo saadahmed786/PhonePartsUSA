@@ -1,0 +1,12 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-01-10 12:25:24",Billy,Manual,joby@dropnfixla.com,N/A/,540362-SH,6.9900,,,,"Shipping Charge - Combined Order Compensation"
+"S Credit","2018-01-10 11:56:20",meri,POS,phonepcfixs@gmail.com,540115/PP12638,540115R,45.8800,"   23.9900"," APL-001-2371","  LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","Item Issue - RTV-Digitizer Issues"
+"S Credit","2018-01-10 11:56:20",meri,POS,phonepcfixs@gmail.com,540115/PP12638,540115R,45.8800,"   21.8900"," APL-001-2311","  LCD and Touch Screen Digitizer for iPhone 6S Plus - Black (Economy Plus)","Item Issue - RTV-Home Button Flex"
+"S Credit","2018-01-10 11:29:35",Billy,Order,test_order@yopmail.com,540360/,540360-CO1,1.9400,1.79,ACC-ZED-138,"8-Pin Data Cable for iPhone 5 5S 5C 6 6+ 7 7 Plus 8 8 Plus iPad 4 Mini 1 2 Air Pro (Standard)",
+"S Credit","2018-01-10 11:29:31",Billy,Order,test_order@yopmail.com,540361/,540361-CO1,3.2400,2.99,ACC-ZED-488,"iPhone 5 and 6 Series Headphones (Aftermarket)",
+"S Credit","2018-01-10 11:29:27",Billy,Order,test_order@yopmail.com,540363/,540363-CO1,1.9400,1.79,ACC-ZED-138,"8-Pin Data Cable for iPhone 5 5S 5C 6 6+ 7 7 Plus 8 8 Plus iPad 4 Mini 1 2 Air Pro (Standard)",
+"S Credit","2018-01-10 11:29:27",Billy,Order,test_order@yopmail.com,540364/,540364-CO1,3.2400,2.99,ACC-ZED-488,"iPhone 5 and 6 Series Headphones (Aftermarket)",
+"S Credit","2018-01-10 11:29:21",Billy,Order,test_order@yopmail.com,540367/,540367-CO1,1.6100,1.49,ACC-ZED-102,"Wall Charger for iPod, iPad, iPhone Models (Standard)",
+"S Credit","2018-01-10 11:29:06",Billy,Order,test_order@yopmail.com,540370/,540370-CO1,3.2400,2.99,ACC-ZED-488,"iPhone 5 and 6 Series Headphones (Aftermarket)",
+"S Credit","2018-01-10 11:28:56",Billy,Order,test_order@yopmail.com,540369/,540369-CO1,1.9400,1.79,ACC-ZED-138,"8-Pin Data Cable for iPhone 5 5S 5C 6 6+ 7 7 Plus 8 8 Plus iPad 4 Mini 1 2 Air Pro (Standard)",
+Refund,"2018-01-10 14:30:09",Billy,RMA,iphoneer2@yahoo.com,538564,1D052670DL4050148,10.99,10.9900,APL-001-0588,"LCD and Touch Screen Digitizer for iPod Touch 4 Black",-

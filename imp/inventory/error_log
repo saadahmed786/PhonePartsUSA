@@ -1,0 +1,12 @@
+[27-Sep-2018 12:14:29 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '$item' (T_VARIABLE) in /home/phonerep/public_html/imp/inventory/class.php on line 1179
+[27-Sep-2018 12:14:30 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '$item' (T_VARIABLE) in /home/phonerep/public_html/imp/inventory/class.php on line 1179
+[27-Sep-2018 12:14:31 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '$item' (T_VARIABLE) in /home/phonerep/public_html/imp/inventory/class.php on line 1179
+[27-Sep-2018 12:14:39 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '$item' (T_VARIABLE) in /home/phonerep/public_html/imp/inventory/class.php on line 1179
+[27-Sep-2018 12:15:09 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '$item' (T_VARIABLE) in /home/phonerep/public_html/imp/inventory/class.php on line 1179
+[27-Sep-2018 12:15:11 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '$item' (T_VARIABLE) in /home/phonerep/public_html/imp/inventory/class.php on line 1179
+[27-Sep-2018 12:32:25 America/Los_Angeles] PHP Notice:  Undefined variable: message in /home/phonerep/public_html/imp/inventory/class.php on line 1216
+[27-Sep-2018 12:33:32 America/Los_Angeles] PHP Notice:  Undefined index: debug in /home/phonerep/public_html/imp/inventory/class.php on line 1209
+[28-Sep-2018 13:36:35 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'n', expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/phonerep/public_html/imp/inventory/class.php on line 404
+[09-Oct-2018 12:16:55 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/phonerep/public_html/imp/inventory/class.php on line 198
+[03-Dec-2018 12:18:26 America/Los_Angeles] PHP Parse error:  syntax error, unexpected ' =$m' in /home/phonerep/public_html/imp/inc/functions.php on line 1791
+[21-Dec-2018 12:26:30 America/Los_Angeles] PHP Parse error:  syntax error, unexpected end of file in /home/phonerep/public_html/imp/inc/functions.php on line 3162

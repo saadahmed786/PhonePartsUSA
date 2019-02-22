@@ -1,0 +1,15 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-07-06 15:50:46",Billy,Order,info@irepairdr.com,554030/,554030-RP1,10.5900,10.59,APL-001-0276,"LCD and Touch Screen Digitizer for iPhone 4S Black","Out Of Stock"
+"S Credit","2018-07-06 15:15:37",meri,POS,nicholashyatt3223@yahoo.com,553889/PP14058,553889R,21.6400,19.99,APL-001-2463,"LCD and Touch Screen Digitizer for iPhone 6s - Black (Aftermarket Premium Plus)","(Good For Stock-)"
+"S Credit","2018-07-06 13:32:29",meri,POS,donn_pat@yahoo.com,547975/PP14057,547975R,5.0800,4.69,BT-BP-30068,"BinTEK Battery for Samsung Galaxy Note 3 B800BE 3200mAH Li-Ion Premium ","(Item Issue-)"
+"S Credit","2018-07-06 11:26:03",meri,POS,desert.wireless@yahoo.com,553548-1/,553548-1R,68.2900,68.29,SRN-LGM-648,"LCD and Touch Screen Replacement with Frame for LG V20 - Black","(Issue Replacement)"
+"S Credit","2018-07-06 11:06:39",Meri,Order,repair@landonhalouska.com,553983/,553983-CO1,38.7700,3.49,BTH210002,"BinTEK Pentalobe 0.8 Standard Size Premium Long-Lasting Screwdriver",
+"S Credit","2018-07-06 11:06:39",Meri,Order,repair@landonhalouska.com,553983/,553983-CO1,38.7700,15.29,APL-001-2458,"LCD and Touch Screen Digitizer for iPhone 6 - White (Aftermarket Premium Plus)",
+"S Credit","2018-07-06 10:54:25",meri,POS,cristian.toyz233@gmail.com,553857-1/,553857-1R,33.6900,33.69,APL-001-0522,"LCD Screen for iPad Mini (Non-Retina)","(Issue Replacement)"
+"S Credit","2018-07-06 10:48:59",meri,POS,lv.cellcity@gmail.com,553816/PP14053,553816R,125.2900,125.29,APL-001-2326,"LCD and Touch Screen Digitizer for iPad Pro 9.7 - White (Standard) ","(Good For Stock-)"
+"S Credit","2018-07-06 10:47:36",meri,POS,morconiano@gmail.com,553883-1/,553883-1R,4.9900,4.99,FLX-SAM-1441,"Charging Port Flex Cable for Samsung Galaxy Note 4 N910T T-Mobile","(Issue Replacement)"
+"S Credit","2018-07-06 04:15:52",Meri,RMA,itechrepairz@gmail.com,552060/PP13903,PP13903R,153.6800,146.69,SRN-SAM-1644,"LCD and Touch Screen Digitizer for Samsung Galaxy Note 5 - Gold (Premium)	","(Good For Stock-)"
+"S Credit","2018-07-06 04:15:52",Meri,RMA,itechrepairz@gmail.com,552060/PP13903,PP13903R,153.6800,6.99,BT-BP-30244,"BinTEK Battery for Samsung Galaxy Note 5 3000mAH Li-Polymer Premium ","(Good For Stock-)"
+Refund,"2018-07-06 17:00:06",Meri,Order,masonsandrew@gmail.com,"553869 /Cancelled Order",1FS14336XP672761B,239.72,N/A,N/A,N/A,Fraud
+Refund,"2018-07-06 15:50:09",Meri,Order,Byancooper4@icloud.com,"553965 /Cancelled Order",4W283386XE676021L,70.08,N/A,N/A,N/A,"Customer Cancel"
+Refund,"2018-07-06 09:00:05",Meri,Order,skbrooks2080@gmail.com,552953,3UA01820C3278561F,53.39,53.3900,APL-001-2367,"LCD and Touch Screen Digitizer for iPhone 7 - White (Premium)",-

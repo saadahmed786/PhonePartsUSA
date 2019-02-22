@@ -1,0 +1,13 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-07-13 15:08:44",Billy,Order,summerlin@ubreakifix.com,554513/,554513-RP1,64.6900,64.69,APL-001-2377,"LCD and Touch Screen Digitizer for iPhone 8 - White (Premium)","Customer Cancel"
+"S Credit","2018-07-13 13:03:20",meri,POS,lasvegasgadgets@gmail.com,554358-2/,554358-2R,22.9900,22.99,APL-001-2372,"LCD and Touch Screen Digitizer for iPhone 7 Plus - Black (Aftermarket Premium / Economy Plus)","(Issue Replacement)"
+"S Credit","2018-07-13 11:26:55",meri,POS,corinthian32@gmail.com,551473/PP14105,551473R,11.4700,10.59,APL-001-0411,"LCD and Touch Screen Digitizer for iPhone 5 - White (Aftermarket Premium / Economy Plus)","(Good For Stock-)"
+"S Credit","2018-07-13 09:23:21",meri,POS,lilchrist_mojica01@yahoo.com,554193/PP14102,554193R,69.9900,69.99,APL-003-1790,"Rear Camera Module for iPhone 8 Plus ","(Good For Stock-)"
+"S Credit","2018-07-13 04:31:42",Meri,RMA,nextgenwirelesss@gmail.com,552606/PP14063,PP14063R,15.9800,7.99,APL-002-6457,"Back Glass Cover with Adhesive for iPhone 8 Plus - Black (No Logo)","(Good For Stock-)"
+"S Credit","2018-07-13 04:31:42",Meri,RMA,nextgenwirelesss@gmail.com,552606/PP14063,PP14063R,15.9800,7.99,APL-002-6457,"Back Glass Cover with Adhesive for iPhone 8 Plus - Black (No Logo)","(Good For Stock-)"
+"S Credit","2018-07-13 04:30:53",Meri,RMA,wicommobile@gmail.com,553423/PP14065,PP14065R,52.5900,52.59,SRN-MOT-665,"LCD and Digitizer Replacement with Frame for Motorola Droid Turbo XT1254","(Good For Stock-)"
+"S Credit","2018-07-13 03:33:04",Meri,BuyBack,rexburg@cellvationrepairs.com,LBB02077/,LBBTFi2tr,172.5000,172.50,,,LBB
+Refund,"2018-07-13 16:40:06",Manual,Manual,info@computermikes.net,"RMA # PP13985",4KM35512TS394405E,74.37,N/A,N/A,N/A,"Manually Refunded"
+Refund,"2018-07-13 16:30:06",Meri,Order,ivarg018@fiu.edu,551997,2DP98645P3363762W,17.89,17.8900,APL-001-2299,"LCD and Touch Screen Digitizer for iPhone 6S - White (Aftermarket Premium / Economy Plus)",-
+Refund,"2018-07-13 16:10:08",Meri,Order,NJbrantley@valdosta.edu,"554559 /Cancelled Order",05700038DU965345H,22.98,N/A,N/A,N/A,"Customer Cancel"
+Refund,"2018-07-13 09:10:05",Meri,Order,bp785@batteriesplus.net,554491,2TW21572TH0991932,59.99,59.99,"SRN-SAM-1661 * 1","LCD and Touch Screen Digitizer for Samsung Galaxy J7 (J710) 2016 - Black (Premium)","Ordrered Wrong Item"

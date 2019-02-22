@@ -1,0 +1,13 @@
+Shipment ID	FBA2PQ4T7N
+Name	FBA (5/27/15 9:42 AM) - 1
+Plan ID	PLN4KJ2B2
+Ship To	Amazon.com.dedc LLC, 50 New Canton Way, Robbinsville, NJ, US, 08691-2350
+Total SKUs	4
+Total Units	11
+Pack list	1 of 1
+
+Merchant SKU	Title	ASIN	FNSKU	external-id	Condition	Who will prep?	Prep Type	Who will label?	Shipped
+BINP-1028	BinTEK Brand iPhone 6 Plus 5.5 inch Ultra-Private Privacy 180 Degree UV Ray Fliter Anti-Spy Anti-Fingerprint Anti-Smudge Screen Protector Compatibile with A1522 A1524 AT&T T-Mobile Verizon Sprint US Cellular Metro PCS Cricket Rodgers Bell Telus - Retail Packaging	B00TEADQO4	X000RTQ07H	EAN : 0609459874288	New	"--"	"--"	Merchant	2
+BT-BP-30026K	BinTEK Brand HTC One M7 BN07100 2300mAh Li-Ion Premium Battery with Opening Repair Tool Kit / Compatible with Models 801e 801n AT&T International Unlocked Models	B00RKGS7W0	X000RS47HX	EAN : 0609459874875	New	"--"	"--"	Merchant	3
+BT-BP-30046K	BinTEK Brand Motorola Droid Ultra MAXX EU40 3500mAh Li-Ion Premium Battery with Opening Repair Tool Kit / Compatible with XT1080M, XT1080 Verizon	B00RKGS91E	X000RS47DH		New	"--"	"--"	Merchant	3
+BT-SPX-0004	BinTEK Bongo Shield Apple iPad Mini 1 / Mini 2 / Mini 3 PREMIUM Ballistic Tempered Glass Screen Protector - World Class Protection Against Drops, Impacts and Scratches / Compatible with A1432 A1454 A1455 A1489 A1490 A1491 A1599 A1600 A1601	B00XVCSEY8	X000S3MJFT	EAN : 0609459874615	New	"--"	"--"	Merchant	3

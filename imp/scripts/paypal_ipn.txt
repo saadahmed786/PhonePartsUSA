@@ -1,0 +1,588 @@
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [transaction_subject] => 
+    [payment_date] => 13:53:06 Oct 09, 2018 PDT
+    [txn_type] => web_accept
+    [last_name] => Olbrych
+    [receipt_id] => 0656-7233-4108-4345
+    [residence_country] => US
+    [item_name] => 
+    [payment_gross] => 52.68
+    [mc_currency] => USD
+    [business] => paypal@phonepartsusa.com
+    [payment_type] => instant
+    [protection_eligibility] => Ineligible
+    [verify_sign] => AL7YVxCxx2LI80BKYO5xEMgpijpeARDPOYBJL0cdYhj6Ri7HyZ3zY0Sh
+    [payer_status] => unverified
+    [payer_email] => glen@teddybearpools.com
+    [txn_id] => 71V40259UT354471F
+    [quantity] => 1
+    [receiver_email] => paypal@phonepartsusa.com
+    [first_name] => Glen
+    [payer_id] => A4Z8Z8LHUUKHY
+    [receiver_id] => WB992XDSEKKMS
+    [item_number] => 
+    [payment_status] => Completed
+    [payment_fee] => 1.46
+    [mc_fee] => 1.46
+    [mc_gross] => 52.68
+    [custom] => 
+    [charset] => windows-1252
+    [notify_version] => 3.9
+    [ipn_track_id] => 51c68d4d500d8
+)
+Array
+(
+    [transaction_subject] => 
+    [payment_date] => 14:00:41 Oct 09, 2018 PDT
+    [txn_type] => web_accept
+    [last_name] => Eaton
+    [receipt_id] => 2638-5534-0740-0849
+    [residence_country] => US
+    [item_name] => 
+    [payment_gross] => 96.94
+    [mc_currency] => USD
+    [business] => paypal@phonepartsusa.com
+    [payment_type] => instant
+    [protection_eligibility] => Ineligible
+    [verify_sign] => A9yjO47D2qZfEbmDF7FVtFtTJv60AJKp3JaQUd0FSF.7t1RBRKlNAkdB
+    [payer_status] => unverified
+    [payer_email] => michael777eaton@gmail.com
+    [txn_id] => 612160704R323562W
+    [quantity] => 1
+    [receiver_email] => paypal@phonepartsusa.com
+    [first_name] => Michael
+    [payer_id] => FT72KPZXP32FL
+    [receiver_id] => WB992XDSEKKMS
+    [item_number] => 
+    [payment_status] => Completed
+    [payment_fee] => 2.43
+    [mc_fee] => 2.43
+    [mc_gross] => 96.94
+    [custom] => 
+    [charset] => windows-1252
+    [notify_version] => 3.9
+    [ipn_track_id] => 50d1d00ea5e81
+)
+Array
+(
+    [transaction_subject] => 
+    [payment_date] => 14:45:41 Oct 09, 2018 PDT
+    [last_name] => Lambright
+    [receipt_id] => 0258-1861-5951-8659
+    [residence_country] => US
+    [item_name] => 
+    [payment_gross] => -59.13
+    [mc_currency] => USD
+    [business] => paypal@phonepartsusa.com
+    [payment_type] => instant
+    [protection_eligibility] => Ineligible
+    [verify_sign] => Atag7JAp13AT8WVAPprZSrz34EFRAwO0Exsz0dkyrq1Ku5D7qRp2VX7S
+    [payer_email] => lambrightjr@gmail.com
+    [txn_id] => 0F816664PA0298843
+    [receiver_email] => paypal@phonepartsusa.com
+    [first_name] => Jake
+    [parent_txn_id] => 5HP89810TY172940B
+    [payer_id] => GANKKLXRSZ8J4
+    [receiver_id] => WB992XDSEKKMS
+    [reason_code] => refund
+    [item_number] => 
+    [handling_amount] => 0.00
+    [payment_status] => Refunded
+    [payment_fee] => -1.30
+    [mc_fee] => -1.30
+    [shipping] => 0.00
+    [mc_gross] => -59.13
+    [custom] => 
+    [charset] => windows-1252
+    [notify_version] => 3.9
+    [ipn_track_id] => 115367e01e72b
+)
+Array
+(
+    [transaction_subject] => 
+    [payment_date] => 15:06:55 Oct 09, 2018 PDT
+    [txn_type] => web_accept
+    [last_name] => Alnajjar
+    [receipt_id] => 2674-3564-4661-1151
+    [residence_country] => US
+    [item_name] => 
+    [payment_gross] => 103.32
+    [mc_currency] => USD
+    [business] => paypal@phonepartsusa.com
+    [payment_type] => instant
+    [protection_eligibility] => Ineligible
+    [verify_sign] => A6T0CUf6ygpS9hPH4oe0msrYfT7xAaV0ncRXAi3ASzlpf6J9nsmE1lzn
+    [payer_status] => unverified
+    [payer_email] => summerlin@ubreakifix.com
+    [txn_id] => 8VH34237DA163531D
+    [quantity] => 1
+    [receiver_email] => paypal@phonepartsusa.com
+    [first_name] => Daniel
+    [payer_id] => XBBWNPDC7ZZGN
+    [receiver_id] => WB992XDSEKKMS
+    [item_number] => 
+    [payment_status] => Completed
+    [payment_fee] => 3.62
+    [mc_fee] => 3.62
+    [mc_gross] => 103.32
+    [custom] => 
+    [charset] => windows-1252
+    [notify_version] => 3.9
+    [ipn_track_id] => 9d8301e4da4a4
+)
+Array
+(
+    [mc_gross] => 22.77
+    [protection_eligibility] => Eligible
+    [address_status] => unconfirmed
+    [payer_id] => 8RUFPGAGWRRR8
+    [address_street] => 310 daniel webster hwy
+Kiosk near spencers
+    [payment_date] => 15:37:03 Oct 09, 2018 PDT
+    [payment_status] => Completed
+    [charset] => windows-1252
+    [address_zip] => 03060
+    [first_name] => Fahd
+    [mc_fee] => 0.73
+    [address_country_code] => US
+    [address_name] => Fahd Issa
+    [notify_version] => 3.9
+    [payer_status] => verified
+    [business] => paypal@phonepartsusa.com
+    [address_country] => United States
+    [address_city] => nashua
+    [verify_sign] => AHkrwUHq-Ag5AQSSiZL7rTWCohV0At7PVIoiCJRvqWASKS199rguBuMs
+    [payer_email] => mobrepairworld@gmail.com
+    [memo] => 560650
+    [txn_id] => 5XH196576S064145Y
+    [payment_type] => instant
+    [last_name] => Issa
+    [address_state] => NH
+    [receiver_email] => paypal@phonepartsusa.com
+    [payment_fee] => 0.73
+    [receiver_id] => WB992XDSEKKMS
+    [txn_type] => send_money
+    [mc_currency] => USD
+    [residence_country] => US
+    [transaction_subject] => 
+    [payment_gross] => 22.77
+    [ipn_track_id] => bd5f936483d21
+)
+Array
+(
+    [mc_gross] => 22.33
+    [protection_eligibility] => Eligible
+    [address_status] => unconfirmed
+    [payer_id] => LHLLHNEEEHPDY
+    [address_street] => 105 n. las vegas trail
+    [payment_date] => 16:12:03 Oct 09, 2018 PDT
+    [payment_status] => Completed
+    [charset] => windows-1252
+    [address_zip] => 76108
+    [first_name] => Mit
+    [mc_fee] => 0.72
+    [address_country_code] => US
+    [address_name] => Mit Trudell
+    [notify_version] => 3.9
+    [payer_status] => unverified
+    [business] => paypal@phonepartsusa.com
+    [address_country] => United States
+    [address_city] => white settlement
+    [verify_sign] => AYAEEocn38lxfgHcDhpxg0NAABrcAx57fDhCFsqNLchBW-iX1a2hO1jz
+    [payer_email] => neighborhoodcellular@charter.net
+    [txn_id] => 1YL27223JB8763919
+    [payment_type] => instant
+    [last_name] => Trudell
+    [address_state] => TX
+    [receiver_email] => paypal@phonepartsusa.com
+    [payment_fee] => 0.72
+    [receiver_id] => WB992XDSEKKMS
+    [txn_type] => send_money
+    [mc_currency] => USD
+    [residence_country] => US
+    [transaction_subject] => 
+    [payment_gross] => 22.33
+    [ipn_track_id] => be9d94d1845e5
+)
+Array
+(
+    [transaction_subject] => 
+    [payment_date] => 16:27:07 Oct 09, 2018 PDT
+    [txn_type] => web_accept
+    [last_name] => totten
+    [receipt_id] => 2727-9210-9053-1166
+    [residence_country] => US
+    [item_name] => 
+    [payment_gross] => 30.28
+    [mc_currency] => USD
+    [business] => paypal@phonepartsusa.com
+    [payment_type] => instant
+    [protection_eligibility] => Ineligible
+    [verify_sign] => AczUU94BMMolZ9uHs3gDJVFQWmnrAvFiIK12HQiNMmkeX3XdfNnUxC04
+    [payer_status] => unverified
+    [payer_email] => zachtotten1@gmail.com
+    [txn_id] => 86T76873RP5645833
+    [quantity] => 1
+    [receiver_email] => paypal@phonepartsusa.com
+    [first_name] => zach
+    [invoice] => 560657
+    [payer_id] => APR8TV95BJ3NL
+    [receiver_id] => WB992XDSEKKMS
+    [item_number] => 
+    [payment_status] => Completed
+    [payment_fee] => 0.97
+    [mc_fee] => 0.97
+    [mc_gross] => 30.28
+    [custom] => 
+    [charset] => windows-1252
+    [notify_version] => 3.9
+    [ipn_track_id] => 37c20fede4506
+)
+Array
+(
+    [transaction_subject] => 
+    [payment_date] => 18:45:07 Oct 09, 2018 PDT
+    [txn_type] => web_accept
+    [last_name] => Robinson
+    [receipt_id] => 3651-5155-6463-9212
+    [residence_country] => US
+    [item_name] => 
+    [payment_gross] => 38.07
+    [mc_currency] => USD
+    [business] => paypal@phonepartsusa.com
+    [payment_type] => instant
+    [protection_eligibility] => Ineligible
+    [verify_sign] => AS6ggsdWuAqknUTF-XIKktI.Sz.EAGjNMtA9BghvV9RybA-jMDozB3rb
+    [payer_status] => unverified
+    [payer_email] => tmr714@hotmail.com
+    [txn_id] => 6AA11611DG915384C
+    [quantity] => 1
+    [receiver_email] => paypal@phonepartsusa.com
+    [first_name] => Teri
+    [invoice] => 560703
+    [payer_id] => X2LR6YWB4U8LW
+    [receiver_id] => WB992XDSEKKMS
+    [item_number] => 
+    [payment_status] => Completed
+    [payment_fee] => 1.14
+    [mc_fee] => 1.14
+    [mc_gross] => 38.07
+    [custom] => 
+    [charset] => windows-1252
+    [notify_version] => 3.9
+    [ipn_track_id] => 766bf30754181
+)
+Array
+(
+    [transaction_subject] => 
+    [payment_date] => 19:50:36 Oct 09, 2018 PDT
+    [txn_type] => web_accept
+    [last_name] => Jones
+    [receipt_id] => 0597-6170-5997-1408
+    [residence_country] => US
+    [item_name] => 
+    [payment_gross] => 100.30
+    [mc_currency] => USD
+    [business] => paypal@phonepartsusa.com
+    [payment_type] => instant
+    [protection_eligibility] => Ineligible
+    [verify_sign] => AIc3rvb2o5kXYu3f.Lgs2n65TgrAAwv9f-sKrQse9tLVSqmla2wI4Ozw
+    [payer_status] => unverified
+    [payer_email] => mdjones.1974@yahoo.com
+    [txn_id] => 29Y05217SA844705B
+    [quantity] => 1
+    [receiver_email] => paypal@phonepartsusa.com
+    [first_name] => Michael
+    [invoice] => 560707
+    [payer_id] => B678EH4GDUGMW
+    [receiver_id] => WB992XDSEKKMS
+    [item_number] => 
+    [payment_status] => Completed
+    [payment_fee] => 2.51
+    [mc_fee] => 2.51
+    [mc_gross] => 100.30
+    [custom] => 
+    [charset] => windows-1252
+    [notify_version] => 3.9
+    [ipn_track_id] => 61b4c5768ad54
+)
+Array
+(
+    [transaction_subject] => 
+    [payment_date] => 20:28:31 Oct 09, 2018 PDT
+    [txn_type] => web_accept
+    [last_name] => Landgrave
+    [receipt_id] => 1536-2409-8159-2564
+    [residence_country] => US
+    [item_name] => 
+    [payment_gross] => 70.25
+    [mc_currency] => USD
+    [business] => paypal@phonepartsusa.com
+    [payment_type] => instant
+    [protection_eligibility] => Ineligible
+    [verify_sign] => Ap2IsYxK7sytGF96rGllfN1OtgrUAOVzTRxYMTJTC32bjV3-lwkkalEH
+    [payer_status] => unverified
+    [payer_email] => nlandgrave1@gmail.com
+    [txn_id] => 4NM31313NN382980M
+    [quantity] => 1
+    [receiver_email] => paypal@phonepartsusa.com
+    [first_name] => Nick
+    [invoice] => 560709
+    [payer_id] => YB4V4DPRJSC2Q
+    [receiver_id] => WB992XDSEKKMS
+    [item_number] => 
+    [payment_status] => Completed
+    [payment_fee] => 1.85
+    [mc_fee] => 1.85
+    [mc_gross] => 70.25
+    [custom] => 
+    [charset] => windows-1252
+    [notify_version] => 3.9
+    [ipn_track_id] => 84ff3fa668969
+)
+Array
+(
+    [transaction_subject] => 
+    [payment_date] => 20:48:57 Oct 09, 2018 PDT
+    [txn_type] => web_accept
+    [last_name] => Murphy
+    [receipt_id] => 1157-0191-6116-2127
+    [residence_country] => US
+    [item_name] => 
+    [payment_gross] => 119.46
+    [mc_currency] => USD
+    [business] => paypal@phonepartsusa.com
+    [payment_type] => instant
+    [protection_eligibility] => Ineligible
+    [verify_sign] => AajmpVSTYXM86lfUvKjFAahX6bOTARVPM0K0swkVMlvxKLPHNJ0bzENk
+    [payer_status] => unverified
+    [payer_email] => isaac@kellerpcs.com
+    [txn_id] => 8VD62153DR053433L
+    [quantity] => 1
+    [receiver_email] => paypal@phonepartsusa.com
+    [first_name] => Isaac
+    [invoice] => 560711
+    [payer_id] => YVTSNVXK6AK6E
+    [receiver_id] => WB992XDSEKKMS
+    [item_number] => 
+    [payment_status] => Completed
+    [payment_fee] => 2.93
+    [mc_fee] => 2.93
+    [mc_gross] => 119.46
+    [custom] => 
+    [charset] => windows-1252
+    [notify_version] => 3.9
+    [ipn_track_id] => cf18d962c3c4d
+)
+Array
+(
+    [transaction_subject] => 
+    [payment_date] => 05:59:32 Oct 10, 2018 PDT
+    [txn_type] => web_accept
+    [last_name] => Swinyer
+    [receipt_id] => 5467-0288-1487-8324
+    [residence_country] => US
+    [item_name] => 
+    [payment_gross] => 26.98
+    [mc_currency] => USD
+    [business] => paypal@phonepartsusa.com
+    [payment_type] => instant
+    [protection_eligibility] => Ineligible
+    [verify_sign] => AO9zW.pPBVSU1aNv8w8RRQGeKpIbArm5Rm7zdPQCzp3SU869.uw60wag
+    [payer_status] => unverified
+    [payer_email] => ron.swinyer@gmail.com
+    [txn_id] => 9R661166X86936448
+    [quantity] => 1
+    [receiver_email] => paypal@phonepartsusa.com
+    [first_name] => Ron
+    [invoice] => 560718
+    [payer_id] => R2YEX6F5RDSRS
+    [receiver_id] => WB992XDSEKKMS
+    [item_number] => 
+    [payment_status] => Completed
+    [payment_fee] => 0.89
+    [mc_fee] => 0.89
+    [mc_gross] => 26.98
+    [custom] => 
+    [charset] => windows-1252
+    [notify_version] => 3.9
+    [ipn_track_id] => aef86ffec957b
+)
+Array
+(
+    [transaction_subject] => 
+    [payment_date] => 06:09:12 Oct 10, 2018 PDT
+    [txn_type] => web_accept
+    [last_name] => Corkish
+    [receipt_id] => 1375-4696-2310-5014
+    [residence_country] => US
+    [item_name] => 
+    [payment_gross] => 130.74
+    [mc_currency] => USD
+    [business] => paypal@phonepartsusa.com
+    [payment_type] => instant
+    [protection_eligibility] => Ineligible
+    [verify_sign] => A5akvD8NVjT1ANtcv.nqD-8YKJw.AJQrGnHRb0PfrxV2VDNIFDfKPMfn
+    [payer_status] => unverified
+    [payer_email] => corkishalexander@comcast.net
+    [txn_id] => 4SE341673W6530612
+    [quantity] => 1
+    [receiver_email] => paypal@phonepartsusa.com
+    [first_name] => Alexander
+    [invoice] => 560719
+    [payer_id] => DBR5STZMZC5EN
+    [receiver_id] => WB992XDSEKKMS
+    [item_number] => 
+    [payment_status] => Completed
+    [payment_fee] => 3.18
+    [mc_fee] => 3.18
+    [mc_gross] => 130.74
+    [custom] => 
+    [charset] => windows-1252
+    [notify_version] => 3.9
+    [ipn_track_id] => c807b8fc399ac
+)
+Array
+(
+    [transaction_subject] => 
+    [payment_date] => 07:29:13 Oct 10, 2018 PDT
+    [txn_type] => web_accept
+    [last_name] => Montes
+    [receipt_id] => 3662-5212-9506-5690
+    [residence_country] => US
+    [item_name] => 
+    [payment_gross] => 28.28
+    [mc_currency] => USD
+    [business] => paypal@phonepartsusa.com
+    [payment_type] => instant
+    [protection_eligibility] => Ineligible
+    [verify_sign] => A270mA7WQglKIjQ81D-j5L3G23YBAOrC15a6Fz5jKN05MWWozPHfgwcO
+    [payer_status] => unverified
+    [payer_email] => Perlamontes15@yahoo.com
+    [txn_id] => 2WS11142N79849350
+    [quantity] => 1
+    [receiver_email] => paypal@phonepartsusa.com
+    [first_name] => Perla
+    [invoice] => 560720
+    [payer_id] => AE4LDGHH2JK8U
+    [receiver_id] => WB992XDSEKKMS
+    [item_number] => 
+    [payment_status] => Completed
+    [payment_fee] => 0.92
+    [mc_fee] => 0.92
+    [mc_gross] => 28.28
+    [custom] => 
+    [charset] => windows-1252
+    [notify_version] => 3.9
+    [ipn_track_id] => da2080a122d33
+)
+Array
+(
+    [transaction_subject] => 
+    [payment_date] => 07:55:32 Oct 10, 2018 PDT
+    [txn_type] => web_accept
+    [last_name] => Bordier
+    [receipt_id] => 3197-9217-0120-0051
+    [residence_country] => US
+    [item_name] => 
+    [payment_gross] => 24.97
+    [mc_currency] => USD
+    [business] => paypal@phonepartsusa.com
+    [payment_type] => instant
+    [protection_eligibility] => Ineligible
+    [verify_sign] => AIqJmyZKlLF2vsfcvXoJWxWsCCtTACoUEIlEJfLgHHfj3krQAp7Y2zmv
+    [payer_status] => unverified
+    [payer_email] => israb2c@gmail.com
+    [txn_id] => 0HL97202XP208401U
+    [quantity] => 1
+    [receiver_email] => paypal@phonepartsusa.com
+    [first_name] => Enoc
+    [invoice] => 560721
+    [payer_id] => 22CFNRCK89ZBQ
+    [receiver_id] => WB992XDSEKKMS
+    [item_number] => 
+    [payment_status] => Completed
+    [payment_fee] => 0.85
+    [mc_fee] => 0.85
+    [mc_gross] => 24.97
+    [custom] => 
+    [charset] => windows-1252
+    [notify_version] => 3.9
+    [ipn_track_id] => dc439ce93b3e3
+)
+Array
+(
+    [transaction_subject] => 
+    [payment_date] => 10:05:46 Oct 10, 2018 PDT
+    [last_name] => Hamilton
+    [receipt_id] => 3861-8259-2293-9717
+    [residence_country] => US
+    [item_name] => 
+    [payment_gross] => -323.97
+    [mc_currency] => USD
+    [business] => paypal@phonepartsusa.com
+    [payment_type] => instant
+    [protection_eligibility] => Ineligible
+    [verify_sign] => AFHSK8iDFRtUNKAOGzVfl5yd1cEdAVhOn.bKfYkxNVLlPq458HwRalVB
+    [payer_email] => samanthahexg1jackson@yahoo.com
+    [txn_id] => 44667209CR410663X
+    [receiver_email] => paypal@phonepartsusa.com
+    [first_name] => Janet
+    [parent_txn_id] => 1NC73615398259605
+    [payer_id] => CBNNQ8JAV3UB4
+    [receiver_id] => WB992XDSEKKMS
+    [reason_code] => refund
+    [item_number] => 
+    [handling_amount] => 0.00
+    [payment_status] => Refunded
+    [payment_fee] => -7.13
+    [mc_fee] => -7.13
+    [shipping] => 0.00
+    [mc_gross] => -323.97
+    [custom] => 
+    [charset] => windows-1252
+    [notify_version] => 3.9
+    [ipn_track_id] => e00304a07d7ba
+)
+Array
+(
+    [handling_amount] => 0.00
+    [payer_id] => CBNNQ8JAV3UB4
+    [ipn_track_id] => e00304a07d7ba
+    [shipping] => 0.00
+    [charset] => windows-1252
+    [payment_gross] => -323.97
+    [parent_txn_id] => 1NC73615398259605
+    [receipt_id] => 3861-8259-2293-9717
+    [verify_sign] => ApBHX6qbpxJW-Ll3oP22LSbo0WeuAZjcfsyDsIKP5HJ1zLdiFlVsrYIm
+    [item_name] => 
+    [receiver_id] => WB992XDSEKKMS
+    [payment_fee] => -7.13
+    [mc_currency] => USD
+    [transaction_subject] => 
+    [custom] => 
+    [protection_eligibility] => Ineligible
+    [reason_code] => refund
+    [first_name] => Janet
+    [mc_gross] => -323.97
+    [payment_date] => 10:05:46 Oct 10, 2018 PDT
+    [payment_status] => Refunded
+    [business] => paypal@phonepartsusa.com
+    [item_number] => 
+    [last_name] => Hamilton
+    [txn_id] => 44667209CR410663X
+    [mc_fee] => -7.13
+    [resend] => true
+    [payment_type] => instant
+    [notify_version] => 3.8
+    [payer_email] => samanthahexg1jackson@yahoo.com
+    [receiver_email] => paypal@phonepartsusa.com
+    [residence_country] => US
+)

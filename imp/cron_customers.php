@@ -1,0 +1,163 @@
+<?php
+ini_set('max_execution_time', 300); //300 seconds = 5 minutes
+//require_once("auth.php");
+include_once 'config.php';
+require_once("inc/functions.php");
+
+$orders = $db->func_query("SELECT order_id,TRIM(email) as email,order_price,paid_price,order_status,order_date FROM inv_orders WHERE customer_cron =0 and store_type<>'amazon'
+	AND (
+	LOWER( order_status ) 
+	IN (
+	'processed',  'shipped',  'completed',  'unshipped'
+)
+)
+and DATE(order_date) >= '".date('Y-m-d',strtotime('-4 day'))."'
+ORDER BY id ASC LIMIT 200");
+
+foreach($orders as $order)
+{
+	$detail = $db->func_query_first("SELECT first_name,last_name,phone_number,address1,city,state,zip,company FROM inv_orders_details WHERE order_id='".$order['order_id']."'");
+	
+	$items = $db->func_query("SELECT DISTINCT product_sku FROM inv_orders_items where order_id='".$order['order_id']."'");
+	foreach($items as $item)
+	{
+		$db->db_exec("UPDATE oc_product SET last_ordered='".$order['order_date']."' WHERE sku='".$item['product_sku']."'");	
+		
+	}
+	
+	$customer_detail = $db->func_query_first("SELECT a.customer_id,b.name, a.date_added FROM oc_customer a, oc_customer_group_description b WHERE a.`customer_group_id`=b.`customer_group_id` AND a.`email`='".$order['email']."'");
+	$data['date_added'] = $customer_detail['date_added'];	
+	if(!$customer_detail)
+	{
+		$customer_detail['customer_id'] = 0;	
+		$customer_detail['name'] = 'Guest';	
+		$data['date_added'] = $order['order_date'];
+	}
+	$data = array();
+	$data['firstname'] = $db->func_escape_string($detail['first_name']);
+	$data['lastname'] = $db->func_escape_string($detail['last_name']);
+	$data['email'] = $db->func_escape_string(trim($order['email']));
+	$data['city'] = $db->func_escape_string($detail['city']);
+	$data['state'] = $db->func_escape_string($detail['state']);
+	$data['customer_group'] = $customer_group;
+	$data['no_of_orders'] = 1;
+	$data['total_amount'] = 0.00;
+	$data['customer_id'] = $customer_detail['customer_id'];	
+	$data['customer_group'] = $customer_detail['name'];	
+	$data['address1']=$db->func_escape_string($detail['address1']);
+	$data['last_order'] = $order['order_date'];
+	$data['zip'] = $db->func_escape_string($detail['zip']);
+	$check_query = $db->func_query_first("SELECT no_of_orders,total_amount FROM inv_customers WHERE TRIM(email)='".$order['email']."'");
+	if($order['paid_price'] > 0.00)
+	{
+		$order_price = $order['paid_price'];
+	}
+	else
+	{
+		
+		$order_price = $order['order_price'];
+	}
+	if($check_query)
+	{
+		$data['no_of_orders'] = $check_query['no_of_orders']+1;
+		$data['total_amount'] = $check_query['total_amount']+$order_price;
+		
+		$db->func_array2update("inv_customers", $data,"TRIM(email)='".$data['email']."'");
+	}
+	else
+	{
+		$data['total_amount'] = $order_price;
+		$db->func_array2insert("inv_customers", $data);
+	}
+
+	$curl = curl_init();
+
+	curl_setopt_array($curl, array(
+		CURLOPT_URL => "https://phonepartsusa.freshsales.io/api/lookup?f=email&entities=lead%2Ccontact&q=".urlencode($order['email']),
+		CURLOPT_RETURNTRANSFER => true,
+		CURLOPT_ENCODING => "",
+		CURLOPT_MAXREDIRS => 10,
+		CURLOPT_TIMEOUT => 30,
+		CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+		CURLOPT_CUSTOMREQUEST => "GET",
+		CURLOPT_POSTFIELDS => '{"user":{"email":"saad@phonepartsusa.com","password":"ppusa12345"}}',
+		CURLOPT_HTTPHEADER => array(
+			"auth: Token token=RMKYt6rcgwHUAw3-wcSo7A",
+			"cache-control: no-cache",
+			"content-type: application/json"
+
+			),
+		));
+
+	$response = curl_exec($curl);
+	$err = curl_error($curl);
+
+	curl_close($curl);
+
+	$my_data = json_decode($response,true);
+
+	if(isset($my_data['leads']['leads'][0]) || isset($my_data['contacts']['contacts'][0]) )
+	{
+
+	}
+	else
+	{
+		$business_type = $db->func_query_first_cell("SELECT source FROM oc_customer_source WHERE LOWER(email)='".strtolower($data['email'])."' and `type`='business_type'");
+		$hear = $db->func_query_first_cell("SELECT source FROM oc_customer_source WHERE LOWER(email)='".strtolower($data['email'])."' and `type`='hear'");
+		$api_data = array();
+
+		$api_data['lead_source_id'] = '31845';
+		$api_data['time_zone'] ='Pacific Time';
+		if($business_type=='Not a Business')
+		{
+		$api_data['owner_id'] = '';	
+		$api_data['lead_stage_id'] = '16121';
+		$api_data['lead_reason_id'] = '38455';
+		}
+		else
+		{
+
+		$api_data['owner_id'] = '4067';	
+		}
+		$api_data['work_number'] = '+1'.$detail['phone_number'];
+		$api_data['first_name'] = ucfirst($data['firstname']);
+		$api_data['last_name'] = ucfirst($data['lastname']);
+		$api_data['email'] = strtolower($data['email']);
+		$api_data['company']['name'] = ($detail['company']!=''?$detail['company']:'NA');
+		$api_data['custom_field']['cf_business_type'] = ($business_type?$business_type:'NA');
+		$api_data['custom_field']['cf_of_locations'] = 1;
+		if($hear)
+		{
+			$api_data['custom_field']['cf_how_did_you_hear_about_us'] = $hear;
+
+		}
+		$api_data = json_encode($api_data);
+			// echo $data;exit;
+			// Generated by curl-to-PHP: http://incarnate.github.io/curl-to-php/
+		$ch = curl_init();
+
+		curl_setopt($ch, CURLOPT_URL, "https://phonepartsusa.freshsales.io/api/leads");
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $api_data);
+		curl_setopt($ch, CURLOPT_POST, 1);
+
+		$headers = array();
+		$headers[] = "Authorization: Token token=RMKYt6rcgwHUAw3-wcSo7A";
+		$headers[] = "Content-Type: application/json";
+		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+		$result = curl_exec($ch);
+		// echo $result."<br>";
+		if (curl_errno($ch)) {
+				// echo 'Error:' . curl_error($ch);exit;
+			mail("xaman.riaz@gmail.com", "Freshsale Data sync failed", 'Error:' . curl_error($ch));
+		}
+		curl_close ($ch);
+	}
+
+	$db->db_exec("UPDATE inv_orders SET customer_cron=1 WHERE order_id='".$order['order_id']."'");
+	echo $order['order_id']."<br>";
+}
+
+
+?>

@@ -1,0 +1,14 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2017-12-18 16:39:02",Billy,Manual,phoneshop27@yahoo.com,N/A/,538489-RP,29.5800,,,,"Items - Out of Stock"
+"S Credit","2017-12-18 16:16:18",Billy,Order,xboxnoob62@gmail.com,538325/,538325-RP1,1.4900,1.49,FLX-SAM-1438,"Vibration Motor without Flex Cable for Samsung Galaxy Note 3","Out Of Stock"
+"S Credit","2017-12-18 15:24:41",billy,POS,phonepcfixs@gmail.com,538426-1/,538426-1R,25.4900,25.49,APL-001-2371,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","(Issue Replacement)"
+"S Credit","2017-12-18 13:01:37",meri,POS,Lviphonerepair102@gmail.com,538186/PP12480,538186R,64.9900,"   64.9900"," APL-001-2367","  LCD and Touch Screen Digitizer for iPhone 7 - White (Premium)","Good For Stock-"
+"S Credit","2017-12-18 12:04:55",meri,POS,fixituprepair@gmail.com,535900/PP12478,535900R-Fe,7.3800,"   3.8900"," APL-003-1517","  Front Camera with Proximity Sensor Microphone Module Flex Cable for iPhone 6 Plus","Item Issue - RTV-Product Wear"
+"S Credit","2017-12-18 12:04:55",meri,POS,fixituprepair@gmail.com,535900/PP12478,535900R-Fe,7.3800,"   3.4900"," APL-003-1532","  Front Camera with Proximity Sensor Flex Cable for iPhone 6","Item Issue - RTV-Product Wear"
+"S Credit","2017-12-18 11:50:34",meri,POS,dr_miracle_79@hotmail.com,537383-1/,537383-1R,25.9900,25.99,APL-001-2370,"LCD and Touch Screen Digitizer for iPhone 7 - White (Economy Plus)","(Issue Replacement)"
+"S Credit","2017-12-18 11:47:13",meri,POS,phonepcfixs@gmail.com,538285-1/,538285-1R,23.7900,23.79,APL-001-2370,"LCD and Touch Screen Digitizer for iPhone 7 - White (Economy Plus)","(Issue Replacement)"
+"S Credit","2017-12-18 10:41:30",meri,POS,casey@simplecomputerrepair.com,538251-1/,538251-1R,134.9900,134.99,APL-001-2184,"LCD and Touch Screen Digitizer for iPad Mini 4 - Black","(Issue Replacement)"
+"S Credit","2017-12-18 10:04:44",Billy,Manual,geryorlando@hotmail.com,N/A/,538410-SH,6.9900,,,,"Shipping Charge - Combined Order Compensation"
+"S Credit","2017-12-18 02:52:17",Billy,RMA,greybeard411@yahoo.com,538003/PP12483,PP12483R,13.9900,13.99,BT-BP-30206,"BinTEK Apple iPad 1 6600mAH Li-Polymer Premium Battery","(Shipping Damage-)"
+"S Credit","2017-12-18 01:11:19",Billy,RMA,azfiredog300@cox.net,536791/PP12481,PP12481R,6.9900,6.99,BT-BP-30008,"BinTEK Battery for iPhone 5S/5C 1560mAH Li-Ion Premium ","(Good For Stock-)"
+Refund,"2017-12-18 13:00:04","meri merlkonyan",RMA,support@ifixlv.com,538432,1FL69817WN761650L,134.99,134.9900,SRN-SAM-1626,"LCD and Touch Screen Digitizer for Samsung Galaxy S7 - Gold Platinum (Standard)",-

@@ -1,0 +1,21 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-02-15 16:50:56",Billy,Manual,jassar733@yahoo.com,N/A/,543517,1.1700,,,,"Inventory - Out of Stock"
+"S Credit","2018-02-15 16:47:42",Billy,Manual,phoneshop27@yahoo.com,N/A/,543414,7.1600,,,,"Inventory - Out of Stock"
+"S Credit","2018-02-15 14:44:15",billy,POS,societyrepairs@gmail.com,543467-1/,543467-1R,23.9900,23.99,APL-001-2371,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","(Issue Replacement)"
+"S Credit","2018-02-15 11:49:35",Billy,Order,repairs@cpr-woodbridge.com,543454/,543454-RP1,7.6900,7.69,FLX-HTC-583,"HTC One M8 HTC6995LVW HTC6525LVW Rear Camera Flex Cable","Out Of Stock"
+"S Credit","2018-02-15 04:18:48",admin,POS,sqatester758@gmail.com,543438/PP12933,543438R,1.4800,0.59,APL-003-0570,"Home Button for iPhone 5 White","(Good For Stock-)"
+"S Credit","2018-02-15 04:18:48",admin,POS,sqatester758@gmail.com,543438/PP12933,543438R,1.4800,0.39,APL-003-0600,"Pentalobe Star Screws for iPhone 5 Silver","(Good For Stock-)"
+"S Credit","2018-02-15 04:18:48",admin,POS,sqatester758@gmail.com,543438/PP12933,543438R,1.4800,0.39,APL-003-0594,"Pentalobe Star Screws for iPhone 5 Black","(Good For Stock-)"
+"S Credit","2018-02-15 01:56:53",Billy,BuyBack,societyrepairs@gmail.com,LBB01976/,LBBkzL464,0.0000,0.00,,,LBB
+"S Credit","2018-02-15 01:53:40",Billy,BuyBack,Phoneninjass@icloud.com,LBB01980/,LBBqckmBg,21.0000,21.00,,,LBB
+"S Credit","2018-02-15 01:53:02",Billy,BuyBack,raulordunacelumania@gmail.com,LBB01964/,LBBtnlmqI,81.0000,81.00,,,LBB
+"S Credit","2018-02-15 01:51:44",Billy,BuyBack,dr_miracle_79@hotmail.com,LBB01974/,LBBRnqCUy,31.0000,31.00,,,LBB
+"S Credit","2018-02-15 01:50:16",Billy,BuyBack,societyrepairs@gmail.com,LBB01969/,LBBHxCKyk,40.0000,40.00,,,LBB
+"S Credit","2018-02-15 01:49:51",Billy,BuyBack,societyrepairs@gmail.com,LBB01971/,LBBoZB0F7,20.0000,20.00,,,LBB
+"S Credit","2018-02-15 01:48:00",Billy,BuyBack,pooyan.pazargadi@gmail.com,LBB01975/,LBBXDJRr6,298.0000,298.00,,,LBB
+"S Credit","2018-02-15 01:39:50",Billy,BuyBack,mark@phoneaxiom.com,LBB01952/,LBBIzeqJt,6.0000,6.00,,,LBB
+"S Credit","2018-02-15 01:37:46",Billy,BuyBack,asamafath37@gmail.com,LBB01948/,LBBWpGTyh,44.7500,44.75,,,LBB
+"S Credit","2018-02-15 01:36:25",Billy,BuyBack,itechcliff@centurylink.net,LBB01940/,LBBTSY8yS,286.0000,286.00,,,LBB
+"S Credit","2018-02-15 01:35:06",Billy,BuyBack,repairs@cpr-rome.com,LBB01949/,LBB2hrltp,375.2500,375.25,,,LBB
+Refund,"2018-02-15 16:40:04",,Order,edrake@offthehookrepair.com,535589,62989075ME103635U,45.98,N/A,N/A,N/A,"Cancelled Order"
+Refund,"2018-02-15 14:50:04",,Order,billy@moonlightrambler.net,543465,28C91325RD064924E,3.24,2.9900,BTT110001,"BinTEK 2.5 Premium Suction Cup",-

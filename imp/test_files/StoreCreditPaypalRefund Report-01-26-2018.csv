@@ -1,0 +1,5 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-01-26 14:13:55",billy,POS,support@ifixlv.com,541648-1/,541648-1R,6.9900,6.99,BT-BP-30244,"BinTEK Battery for Samsung Galaxy Note 5 3000mAH Li-Polymer Premium ","(Issue Replacement)"
+"S Credit","2018-01-26 13:57:55",Billy,Manual,japanesebookers@gmail.com,N/A/,451752-SH,20.0000,,,,"Delivery - Other Delivery Related"
+"S Credit","2018-01-26 13:52:59",Billy,Manual,mvasquez1052@gmail.com,N/A/,541604-MS,229.2700,,,,"Delivery - Other Delivery Related"
+Refund,"2018-01-26 15:00:10",,Order,robertfortenberry@icloud.com,541268,5R4195593L773591A,12.19,N/A,N/A,N/A,"Cancelled Order"

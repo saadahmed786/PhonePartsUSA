@@ -1,0 +1,6 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-10-17 14:22:46",Meri,Manual,cellular.hays@gmail.com,N/A/,561072LS,25.9900,,,,"Late Carrier Delivery"
+"S Credit","2018-10-17 13:51:31",billy,POS,tomerall4you@gmail.com,560744-1/,560744-1R,12.8900,12.89,BT-BP-30304,"BinTEK Battery for Samsung Galaxy Note 8 3.85V 3300mAh Li-Ion Premium ","(Issue Replacement)"
+"S Credit","2018-10-17 12:17:21",meri,POS,info@lasvegasiphonerepair.com,561128-1/,561128-1R,24.9900,24.99,APL-001-2468,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Aftermarket Premium Plus)","(Issue Replacement)"
+"S Credit","2018-10-17 02:44:02",Meri,RMA,edrake@offthehookrepair.com,535589/PP14499,PP14499R,16.3900,16.39,APL-001-2136,"LCD and Touch Screen Digitizer for iPhone 6 Plus - White (Aftermarket Premium / Economy Plus)","(Item Issue - RTV-Digitizer No Touch)"
+Refund,"2018-10-17 14:45:06",Meri,Order,edrake@offthehookrepair.com,557168,9PD74969MH649271A,10.99,10.9900,APL-001-2450,"Touch Screen Digitizer With Home Button And IC Chip for iPad Mini & iPad Mini 2 - White (Standard)",-

@@ -1,0 +1,271 @@
+SKU,ItemName
+LBB-G2 ,LBB LG G2 
+LBB-G3 ,LBB LG G3 
+LBB-G4 ,LBB LG G4 
+LBB-I4 ,LBB Iphone 4 
+LBB-I5 ,LBB Iphone 5 
+LBB-I5C ,LBB Iphone 5C 
+LBB-I5S ,LBB Iphone 5S 
+LBB-I6 ,LBB Iphone 6 
+LBB-I6P ,LBB Iphone 6 Plus 
+LBB-I6S ,LBB Iphone 6S 
+LBB-I6SP ,LBB Iphone 6S Plus 
+LBB-IP12C ,iPad Mini 1/2 iC Chip 
+LBB-IPMIC ,iPad Mini IC
+LBB-MEG ,LBB Galaxy Mega 
+LBB-N1 ,LBB Note 1 
+LBB-N2 ,LBB Note 2 
+LBB-N3 ,LBB Note 3 
+LBB-N4 ,LBB Note 4 
+LBB-N5 ,LBB Note 5 
+LBB-NX4 ,LBB LG Nexus 4
+LBB-NX5 ,LBB LG Nexus 5 
+LBB-NX6 ,LBB Motorola Nexus 6
+LBB-S3 ,LBB Galaxy S3 
+LBB-S4 ,LBB Galaxy S4 
+LBB-S5 ,LBB Galaxy S5 
+LBB-S6 ,LBB Galaxy S6 
+LBB-S6E ,LBB Galaxy S6 Edge 
+LBB-OEM-A-G2 ,LBB LG G2 OEM Grade A 
+LBB-OEM-A-G3 ,LBB LG G3 OEM Grade A 
+LBB-OEM-A-G4 ,LBB LG G4 OEM Grade A 
+LBB-OEM-A-I4 ,LBB Iphone 4 OEM Grade A 
+LBB-OEM-A-I5 ,LBB Iphone 5 OEM Grade A 
+LBB-OEM-A-I5C ,LBB Iphone 5C OEM Grade A 
+LBB-OEM-A-I5S ,LBB Iphone 5S OEM Grade A 
+LBB-OEM-A-I6 ,LBB Iphone 6 OEM Grade A 
+LBB-OEM-A-I6P ,LBB Iphone 6 Plus OEM Grade A 
+LBB-OEM-A-I6S ,LBB Iphone 6S OEM Grade A 
+LBB-OEM-A-I6SP ,LBB Iphone 6S Plus OEM Grade A 
+LBB-OEM-A-IP12C ,iPad Mini 1/2 iC Chip OEM Grade A 
+LBB-OEM-A-IPMIC ,iPad Mini IC OEM Grade A
+LBB-OEM-A-MEG ,LBB Galaxy Mega OEM Grade A 
+LBB-OEM-A-N1 ,LBB Note 1 OEM Grade A 
+LBB-OEM-A-N2 ,LBB Note 2 OEM Grade A 
+LBB-OEM-A-N3 ,LBB Note 3 OEM Grade A 
+LBB-OEM-A-N4 ,LBB Note 4 OEM Grade A 
+LBB-OEM-A-N5 ,LBB Note 5 OEM Grade A 
+LBB-OEM-A-NX4 ,LBB LG Nexus 4 OEM Grade A
+LBB-OEM-A-NX5 ,LBB LG Nexus 5 OEM Grade A 
+LBB-OEM-A-NX6 ,LBB Motorola Nexus 6 OEM Grade A
+LBB-OEM-A-S3 ,LBB Galaxy S3 OEM Grade A 
+LBB-OEM-A-S4 ,LBB Galaxy S4 OEM Grade A 
+LBB-OEM-A-S5 ,LBB Galaxy S5 OEM Grade A 
+LBB-OEM-A-S6 ,LBB Galaxy S6 OEM Grade A 
+LBB-OEM-A-S6E ,LBB Galaxy S6 Edge OEM Grade A 
+LBB-OEM-Am-G2 ,LBB LG G2 OEM Grade A- 
+LBB-OEM-Am-G3 ,LBB LG G3 OEM Grade A- 
+LBB-OEM-Am-G4 ,LBB LG G4 OEM Grade A- 
+LBB-OEM-Am-I4 ,LBB Iphone 4 OEM Grade A- 
+LBB-OEM-Am-I5 ,LBB Iphone 5 OEM Grade A- 
+LBB-OEM-Am-I5C ,LBB Iphone 5C OEM Grade A- 
+LBB-OEM-Am-I5S ,LBB Iphone 5S OEM Grade A- 
+LBB-OEM-Am-I6 ,LBB Iphone 6 OEM Grade A- 
+LBB-OEM-Am-I6P ,LBB Iphone 6 Plus OEM Grade A- 
+LBB-OEM-Am-I6S ,LBB Iphone 6S OEM Grade A- 
+LBB-OEM-Am-I6SP ,LBB Iphone 6S Plus OEM Grade A- 
+LBB-OEM-Am-IP12C ,iPad Mini 1/2 iC Chip OEM Grade A- 
+LBB-OEM-Am-IPMIC ,iPad Mini IC OEM Grade A-
+LBB-OEM-Am-MEG ,LBB Galaxy Mega OEM Grade A- 
+LBB-OEM-Am-N1 ,LBB Note 1 OEM Grade A- 
+LBB-OEM-Am-N2 ,LBB Note 2 OEM Grade A- 
+LBB-OEM-Am-N3 ,LBB Note 3 OEM Grade A- 
+LBB-OEM-Am-N4 ,LBB Note 4 OEM Grade A- 
+LBB-OEM-Am-N5 ,LBB Note 5 OEM Grade A- 
+LBB-OEM-Am-NX4 ,LBB LG Nexus 4 OEM Grade A-
+LBB-OEM-Am-NX5 ,LBB LG Nexus 5 OEM Grade A- 
+LBB-OEM-Am-NX6 ,LBB Motorola Nexus 6 OEM Grade A-
+LBB-OEM-Am-S3 ,LBB Galaxy S3 OEM Grade A- 
+LBB-OEM-Am-S4 ,LBB Galaxy S4 OEM Grade A- 
+LBB-OEM-Am-S5 ,LBB Galaxy S5 OEM Grade A- 
+LBB-OEM-Am-S6 ,LBB Galaxy S6 OEM Grade A- 
+LBB-OEM-Am-S6E ,LBB Galaxy S6 Edge OEM Grade A- 
+LBB-OEM-B-G2 ,LBB LG G2 OEM Grade B 
+LBB-OEM-B-G3 ,LBB LG G3 OEM Grade B 
+LBB-OEM-B-G4 ,LBB LG G4 OEM Grade B 
+LBB-OEM-B-I4 ,LBB Iphone 4 OEM Grade B 
+LBB-OEM-B-I5 ,LBB Iphone 5 OEM Grade B 
+LBB-OEM-B-I5C ,LBB Iphone 5C OEM Grade B 
+LBB-OEM-B-I5S ,LBB Iphone 5S OEM Grade B 
+LBB-OEM-B-I6 ,LBB Iphone 6 OEM Grade B 
+LBB-OEM-B-I6P ,LBB Iphone 6 Plus OEM Grade B 
+LBB-OEM-B-I6S ,LBB Iphone 6S OEM Grade B 
+LBB-OEM-B-I6SP ,LBB Iphone 6S Plus OEM Grade B 
+LBB-OEM-B-IP12C ,iPad Mini 1/2 iC Chip OEM Grade B 
+LBB-OEM-B-IPMIC ,iPad Mini IC OEM Grade B
+LBB-OEM-B-MEG ,LBB Galaxy Mega OEM Grade B 
+LBB-OEM-B-N1 ,LBB Note 1 OEM Grade B 
+LBB-OEM-B-N2 ,LBB Note 2 OEM Grade B 
+LBB-OEM-B-N3 ,LBB Note 3 OEM Grade B 
+LBB-OEM-B-N4 ,LBB Note 4 OEM Grade B 
+LBB-OEM-B-N5 ,LBB Note 5 OEM Grade B 
+LBB-OEM-B-NX4 ,LBB LG Nexus 4 OEM Grade B
+LBB-OEM-B-NX5 ,LBB LG Nexus 5 OEM Grade B 
+LBB-OEM-B-NX6 ,LBB Motorola Nexus 6 OEM Grade B
+LBB-OEM-B-S3 ,LBB Galaxy S3 OEM Grade B 
+LBB-OEM-B-S4 ,LBB Galaxy S4 OEM Grade B 
+LBB-OEM-B-S5 ,LBB Galaxy S5 OEM Grade B 
+LBB-OEM-B-S6 ,LBB Galaxy S6 OEM Grade B 
+LBB-OEM-B-S6E ,LBB Galaxy S6 Edge OEM Grade B 
+LBB-OEM-C-G2 ,LBB LG G2 OEM Grade C 
+LBB-OEM-C-G3 ,LBB LG G3 OEM Grade C 
+LBB-OEM-C-G4 ,LBB LG G4 OEM Grade C 
+LBB-OEM-C-I4 ,LBB Iphone 4 OEM Grade C 
+LBB-OEM-C-I5 ,LBB Iphone 5 OEM Grade C 
+LBB-OEM-C-I5C ,LBB Iphone 5C OEM Grade C 
+LBB-OEM-C-I5S ,LBB Iphone 5S OEM Grade C 
+LBB-OEM-C-I6 ,LBB Iphone 6 OEM Grade C 
+LBB-OEM-C-I6P ,LBB Iphone 6 Plus OEM Grade C 
+LBB-OEM-C-I6S ,LBB Iphone 6S OEM Grade C 
+LBB-OEM-C-I6SP ,LBB Iphone 6S Plus OEM Grade C 
+LBB-OEM-C-IP12C ,iPad Mini 1/2 iC Chip OEM Grade C 
+LBB-OEM-C-IPMIC ,iPad Mini IC OEM Grade C
+LBB-OEM-C-MEG ,LBB Galaxy Mega OEM Grade C 
+LBB-OEM-C-N1 ,LBB Note 1 OEM Grade C 
+LBB-OEM-C-N2 ,LBB Note 2 OEM Grade C 
+LBB-OEM-C-N3 ,LBB Note 3 OEM Grade C 
+LBB-OEM-C-N4 ,LBB Note 4 OEM Grade C 
+LBB-OEM-C-N5 ,LBB Note 5 OEM Grade C 
+LBB-OEM-C-NX4 ,LBB LG Nexus 4 OEM Grade C
+LBB-OEM-C-NX5 ,LBB LG Nexus 5 OEM Grade C 
+LBB-OEM-C-NX6 ,LBB Motorola Nexus 6 OEM Grade C
+LBB-OEM-C-S3 ,LBB Galaxy S3 OEM Grade C 
+LBB-OEM-C-S4 ,LBB Galaxy S4 OEM Grade C 
+LBB-OEM-C-S5 ,LBB Galaxy S5 OEM Grade C 
+LBB-OEM-C-S6 ,LBB Galaxy S6 OEM Grade C 
+LBB-OEM-C-S6E ,LBB Galaxy S6 Edge OEM Grade C 
+LBB-NON-A-G2 ,LBB LG G2 Non-OEM Grade A 
+LBB-NON-A-G3 ,LBB LG G3 Non-OEM Grade A 
+LBB-NON-A-G4 ,LBB LG G4 Non-OEM Grade A 
+LBB-NON-A-I4 ,LBB Iphone 4 Non-OEM Grade A 
+LBB-NON-A-I5 ,LBB Iphone 5 Non-OEM Grade A 
+LBB-NON-A-I5C ,LBB Iphone 5C Non-OEM Grade A 
+LBB-NON-A-I5S ,LBB Iphone 5S Non-OEM Grade A 
+LBB-NON-A-I6 ,LBB Iphone 6 Non-OEM Grade A 
+LBB-NON-A-I6P ,LBB Iphone 6 Plus Non-OEM Grade A 
+LBB-NON-A-I6S ,LBB Iphone 6S Non-OEM Grade A 
+LBB-NON-A-I6SP ,LBB Iphone 6S Plus Non-OEM Grade A 
+LBB-NON-A-IP12C ,iPad Mini 1/2 iC Chip Non-OEM Grade A 
+LBB-NON-A-IPMIC ,iPad Mini IC Non-OEM Grade A
+LBB-NON-A-MEG ,LBB Galaxy Mega Non-OEM Grade A 
+LBB-NON-A-N1 ,LBB Note 1 Non-OEM Grade A 
+LBB-NON-A-N2 ,LBB Note 2 Non-OEM Grade A 
+LBB-NON-A-N3 ,LBB Note 3 Non-OEM Grade A 
+LBB-NON-A-N4 ,LBB Note 4 Non-OEM Grade A 
+LBB-NON-A-N5 ,LBB Note 5 Non-OEM Grade A 
+LBB-NON-A-NX4 ,LBB LG Nexus 4 Non-OEM Grade A
+LBB-NON-A-NX5 ,LBB LG Nexus 5 Non-OEM Grade A 
+LBB-NON-A-NX6 ,LBB Motorola Nexus 6 Non-OEM Grade A
+LBB-NON-A-S3 ,LBB Galaxy S3 Non-OEM Grade A 
+LBB-NON-A-S4 ,LBB Galaxy S4 Non-OEM Grade A 
+LBB-NON-A-S5 ,LBB Galaxy S5 Non-OEM Grade A 
+LBB-NON-A-S6 ,LBB Galaxy S6 Non-OEM Grade A 
+LBB-NON-A-S6E ,LBB Galaxy S6 Edge Non-OEM Grade A 
+LBB-NON-Am-G2 ,LBB LG G2 Non-OEM Grade A- 
+LBB-NON-Am-G3 ,LBB LG G3 Non-OEM Grade A- 
+LBB-NON-Am-G4 ,LBB LG G4 Non-OEM Grade A- 
+LBB-NON-Am-I4 ,LBB Iphone 4 Non-OEM Grade A- 
+LBB-NON-Am-I5 ,LBB Iphone 5 Non-OEM Grade A- 
+LBB-NON-Am-I5C ,LBB Iphone 5C Non-OEM Grade A- 
+LBB-NON-Am-I5S ,LBB Iphone 5S Non-OEM Grade A- 
+LBB-NON-Am-I6 ,LBB Iphone 6 Non-OEM Grade A- 
+LBB-NON-Am-I6P ,LBB Iphone 6 Plus Non-OEM Grade A- 
+LBB-NON-Am-I6S ,LBB Iphone 6S Non-OEM Grade A- 
+LBB-NON-Am-I6SP ,LBB Iphone 6S Plus Non-OEM Grade A- 
+LBB-NON-Am-IP12C ,iPad Mini 1/2 iC Chip Non-OEM Grade A- 
+LBB-NON-Am-IPMIC ,iPad Mini IC Non-OEM Grade A-
+LBB-NON-Am-MEG ,LBB Galaxy Mega Non-OEM Grade A- 
+LBB-NON-Am-N1 ,LBB Note 1 Non-OEM Grade A- 
+LBB-NON-Am-N2 ,LBB Note 2 Non-OEM Grade A- 
+LBB-NON-Am-N3 ,LBB Note 3 Non-OEM Grade A- 
+LBB-NON-Am-N4 ,LBB Note 4 Non-OEM Grade A- 
+LBB-NON-Am-N5 ,LBB Note 5 Non-OEM Grade A- 
+LBB-NON-Am-NX4 ,LBB LG Nexus 4 Non-OEM Grade A-
+LBB-NON-Am-NX5 ,LBB LG Nexus 5 Non-OEM Grade A- 
+LBB-NON-Am-NX6 ,LBB Motorola Nexus 6 Non-OEM Grade A-
+LBB-NON-Am-S3 ,LBB Galaxy S3 Non-OEM Grade A- 
+LBB-NON-Am-S4 ,LBB Galaxy S4 Non-OEM Grade A- 
+LBB-NON-Am-S5 ,LBB Galaxy S5 Non-OEM Grade A- 
+LBB-NON-Am-S6 ,LBB Galaxy S6 Non-OEM Grade A- 
+LBB-NON-Am-S6E ,LBB Galaxy S6 Edge Non-OEM Grade A- 
+LBB-NON-B-G2 ,LBB LG G2 Non-OEM Grade B 
+LBB-NON-B-G3 ,LBB LG G3 Non-OEM Grade B 
+LBB-NON-B-G4 ,LBB LG G4 Non-OEM Grade B 
+LBB-NON-B-I4 ,LBB Iphone 4 Non-OEM Grade B 
+LBB-NON-B-I5 ,LBB Iphone 5 Non-OEM Grade B 
+LBB-NON-B-I5C ,LBB Iphone 5C Non-OEM Grade B 
+LBB-NON-B-I5S ,LBB Iphone 5S Non-OEM Grade B 
+LBB-NON-B-I6 ,LBB Iphone 6 Non-OEM Grade B 
+LBB-NON-B-I6P ,LBB Iphone 6 Plus Non-OEM Grade B 
+LBB-NON-B-I6S ,LBB Iphone 6S Non-OEM Grade B 
+LBB-NON-B-I6SP ,LBB Iphone 6S Plus Non-OEM Grade B 
+LBB-NON-B-IP12C ,iPad Mini 1/2 iC Chip Non-OEM Grade B 
+LBB-NON-B-IPMIC ,iPad Mini IC Non-OEM Grade B
+LBB-NON-B-MEG ,LBB Galaxy Mega Non-OEM Grade B 
+LBB-NON-B-N1 ,LBB Note 1 Non-OEM Grade B 
+LBB-NON-B-N2 ,LBB Note 2 Non-OEM Grade B 
+LBB-NON-B-N3 ,LBB Note 3 Non-OEM Grade B 
+LBB-NON-B-N4 ,LBB Note 4 Non-OEM Grade B 
+LBB-NON-B-N5 ,LBB Note 5 Non-OEM Grade B 
+LBB-NON-B-NX4 ,LBB LG Nexus 4 Non-OEM Grade B
+LBB-NON-B-NX5 ,LBB LG Nexus 5 Non-OEM Grade B 
+LBB-NON-B-NX6 ,LBB Motorola Nexus 6 Non-OEM Grade B
+LBB-NON-B-S3 ,LBB Galaxy S3 Non-OEM Grade B 
+LBB-NON-B-S4 ,LBB Galaxy S4 Non-OEM Grade B 
+LBB-NON-B-S5 ,LBB Galaxy S5 Non-OEM Grade B 
+LBB-NON-B-S6 ,LBB Galaxy S6 Non-OEM Grade B 
+LBB-NON-B-S6E ,LBB Galaxy S6 Edge Non-OEM Grade B 
+LBB-NON-C-G2 ,LBB LG G2 Non-OEM Grade C 
+LBB-NON-C-G3 ,LBB LG G3 Non-OEM Grade C 
+LBB-NON-C-G4 ,LBB LG G4 Non-OEM Grade C 
+LBB-NON-C-I4 ,LBB Iphone 4 Non-OEM Grade C 
+LBB-NON-C-I5 ,LBB Iphone 5 Non-OEM Grade C 
+LBB-NON-C-I5C ,LBB Iphone 5C Non-OEM Grade C 
+LBB-NON-C-I5S ,LBB Iphone 5S Non-OEM Grade C 
+LBB-NON-C-I6 ,LBB Iphone 6 Non-OEM Grade C 
+LBB-NON-C-I6P ,LBB Iphone 6 Plus Non-OEM Grade C 
+LBB-NON-C-I6S ,LBB Iphone 6S Non-OEM Grade C 
+LBB-NON-C-I6SP ,LBB Iphone 6S Plus Non-OEM Grade C 
+LBB-NON-C-IP12C ,iPad Mini 1/2 iC Chip Non-OEM Grade C 
+LBB-NON-C-IPMIC ,iPad Mini IC Non-OEM Grade C
+LBB-NON-C-MEG ,LBB Galaxy Mega Non-OEM Grade C 
+LBB-NON-C-N1 ,LBB Note 1 Non-OEM Grade C 
+LBB-NON-C-N2 ,LBB Note 2 Non-OEM Grade C 
+LBB-NON-C-N3 ,LBB Note 3 Non-OEM Grade C 
+LBB-NON-C-N4 ,LBB Note 4 Non-OEM Grade C 
+LBB-NON-C-N5 ,LBB Note 5 Non-OEM Grade C 
+LBB-NON-C-NX4 ,LBB LG Nexus 4 Non-OEM Grade C
+LBB-NON-C-NX5 ,LBB LG Nexus 5 Non-OEM Grade C 
+LBB-NON-C-NX6 ,LBB Motorola Nexus 6 Non-OEM Grade C
+LBB-NON-C-S3 ,LBB Galaxy S3 Non-OEM Grade C 
+LBB-NON-C-S4 ,LBB Galaxy S4 Non-OEM Grade C 
+LBB-NON-C-S5 ,LBB Galaxy S5 Non-OEM Grade C 
+LBB-NON-C-S6 ,LBB Galaxy S6 Non-OEM Grade C 
+LBB-NON-C-S6E ,LBB Galaxy S6 Edge Non-OEM Grade C 
+LBB-SLVG-G2 ,LBB LG G2 Salvage 
+LBB-SLVG-G3 ,LBB LG G3 Salvage 
+LBB-SLVG-G4 ,LBB LG G4 Salvage 
+LBB-SLVG-I4 ,LBB Iphone 4 Salvage 
+LBB-SLVG-I5 ,LBB Iphone 5 Salvage 
+LBB-SLVG-I5C ,LBB Iphone 5C Salvage 
+LBB-SLVG-I5S ,LBB Iphone 5S Salvage 
+LBB-SLVG-I6 ,LBB Iphone 6 Salvage 
+LBB-SLVG-I6P ,LBB Iphone 6 Plus Salvage 
+LBB-SLVG-I6S ,LBB Iphone 6S Salvage 
+LBB-SLVG-I6SP ,LBB Iphone 6S Plus Salvage 
+LBB-SLVG-IP12C ,iPad Mini 1/2 iC Chip Salvage 
+LBB-SLVG-IPMIC ,iPad Mini IC Salvage
+LBB-SLVG-MEG ,LBB Galaxy Mega Salvage 
+LBB-SLVG-N1 ,LBB Note 1 Salvage 
+LBB-SLVG-N2 ,LBB Note 2 Salvage 
+LBB-SLVG-N3 ,LBB Note 3 Salvage 
+LBB-SLVG-N4 ,LBB Note 4 Salvage 
+LBB-SLVG-N5 ,LBB Note 5 Salvage 
+LBB-SLVG-NX4 ,LBB LG Nexus 4 Salvage
+LBB-SLVG-NX5 ,LBB LG Nexus 5 Salvage 
+LBB-SLVG-NX6 ,LBB Motorola Nexus 6 Salvage
+LBB-SLVG-S3 ,LBB Galaxy S3 Salvage 
+LBB-SLVG-S4 ,LBB Galaxy S4 Salvage 
+LBB-SLVG-S5 ,LBB Galaxy S5 Salvage 
+LBB-SLVG-S6 ,LBB Galaxy S6 Salvage 
+LBB-SLVG-S6E ,LBB Galaxy S6 Edge Salvage 

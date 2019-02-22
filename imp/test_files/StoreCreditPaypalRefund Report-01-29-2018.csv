@@ -1,0 +1,9 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-01-29 15:10:16",meri,POS,puronami@msn.com,540994/PP12778,540994R,11.9000,"   10.9900"," APL-001-0730","  LCD and Touch Screen Digitizer for iPhone 5S - Black (Economy Plus)","Good For Stock-"
+"S Credit","2018-01-29 14:45:51",Billy,Order,brandon@flegeltechrepair.com,541876/,541876-RP1,4.9900,4.99,BTY-COV-1565,"Rear Battery Cover for Samsung Galaxy S6 Edge - White Pearl","Out Of Stock"
+"S Credit","2018-01-29 13:33:40",Billy,Manual,simpletechny@outlook.com,N/A/,541685-GRD,76.0000,,,,"Warehouse – Wrong Item Shipped"
+"S Credit","2018-01-29 12:26:11",meri,POS,galaxycprlv@gmail.com,540669/PP12776,540669R,10.9900,"   10.9900"," APL-003-1761","  Loudspeaker Set Replacement for iPad Mini 2","Good For Stock-"
+Refund,"2018-01-29 15:40:05","Billy Maddex",Order,jaydeetwo74@gmail.com,541923,0A226656TL346004L,10.99,10.9900,APL-001-2199,"Touch Screen Digitizer With Home Button for iPad 2 - Black (Premium)",-
+Refund,"2018-01-29 13:10:05",Billy,Order,priscy.peak@gmail.com,"541839 /Cancelled Order",1EJ80076JU3500529,134.31,N/A,N/A,N/A,Fraud
+Refund,"2018-01-29 10:40:06","meri merlkonyan",Order,support@ifixlv.com,541786,98178061XF8994003,129.99,129.9900,APL-001-2328,"LCD and Touch Screen Digitizer for iPad Pro 12.9 - White (Standard)",-
+Refund,"2018-01-29 09:50:04",Billy,Order,chris.smith.ut@gmail.com,"541802 /Cancelled Order",0UT07711EM9115602,27.98,N/A,N/A,N/A,"Customer Cancel"

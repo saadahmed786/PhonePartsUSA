@@ -1,0 +1,16 @@
+Type,"Date Added",User,Source,"Sent To","Ref Order/Shipment ID","Ref ID","Amount Total","Item Total","Item SKU","Item Name",Reason
+"S Credit","2018-05-07 17:03:24",Billy,Order,jassar733@yahoo.com,549762/,549762-RP1,144.8900,144.89,SRN-SAM-1611,"LCD and Touch Screen Digitizer for Samsung Galaxy S7  - Black Onyx (Standard)","Out Of Stock"
+"S Credit","2018-05-07 15:52:52",meri,POS,VARAGON@YESOFCOURSE.COM,549621-1/,549621-1R,3.1900,3.19,FLX-SAM-1449,"Charging Port Flex Cable for Samsung Galaxy Note 4 N910V","(Issue Replacement)"
+"S Credit","2018-05-07 15:46:56",Billy,Manual,technolobby@live.com,N/A/,549689-RP1,51.4900,,,,"Inventory - Out of Stock"
+"S Credit","2018-05-07 14:07:00",Billy,Order,staugustinephonerepair@gmail.com,549694/,549694-RP1,4.2900,4.29,APL-003-1529,"Charging Port and Headphone Jack Flex Cable for iPhone 6 Space Gray",
+"S Credit","2018-05-07 14:02:47",Billy,Order,tlstoner@hotmail.com,549721/,549721-RP1,15.9900,15.99,APL-001-2202,"Touch Screen Digitizer with Home Button And IC Chip for iPad Mini & iPad Mini 2 - Black (Premium)","Out Of Stock"
+"S Credit","2018-05-07 13:48:25",meri,POS,phonepcfixs@gmail.com,549590/PP13628,549590R-Dv,0.0000,19.00,APL-001-2370,"LCD and Touch Screen Digitizer for iPhone 7 - White (Economy Plus)","(Customer Damage-)"
+"S Credit","2018-05-07 13:40:44",meri,POS,phonepcfixs@gmail.com,549590/PP13627,549590R,56.9000,21.90,APL-001-2371,"LCD and Touch Screen Digitizer for iPhone 7 Plus - White (Economy Plus)","(Item Issue-)"
+"S Credit","2018-05-07 13:40:44",meri,POS,phonepcfixs@gmail.com,549590/PP13627,549590R,56.9000,17.50,APL-001-2298,"LCD and Touch Screen Digitizer for iPhone 6S - Black (Economy Plus) ","(Item Issue-)"
+"S Credit","2018-05-07 13:40:44",meri,POS,phonepcfixs@gmail.com,549590/PP13627,549590R,56.9000,17.50,APL-001-2298,"LCD and Touch Screen Digitizer for iPhone 6S - Black (Economy Plus) ","(Item Issue-)"
+"S Credit","2018-05-07 11:52:44",Billy,RMA,urbanodesignrd@gmail.com,548503/PP13626,PP13626R,9.8900,9.89,BT-BP-30010,"BinTEK Battery for iPhone 6 1810mAH Li-Ion Premium ","(Not Tested-)"
+Refund,"2018-05-07 15:00:06",Billy,Order,louberhane@gmail.com,"549739 /Cancelled Order",2M939075VC215861W,128.98,N/A,N/A,N/A,"Customer Cancel"
+Refund,"2018-05-07 12:30:08",Billy,Order,chin.choe.kr@us.af.mil,549059,9R180375NG6353441,57.99,57.99,"SHIPPING-1 * 1","Shipping and Handling Fee","Out Of Stock "
+Refund,"2018-05-07 11:00:05",Billy,Order,kitsune.tyan@gmail.com,549636,5HD459035G2960122,0.39,0.39,"APL-002-6373 * 1","Front Middle Frame Bezel LCD Holder for iPhone 5C - White","Out Of Stock "
+Refund,"2018-05-07 09:40:07",Billy,Order,aleshacd1@yahoo.com,"549638 /Cancelled Order",35039642P74598736,49.98,N/A,N/A,N/A,"Customer Cancel"
+Refund,"2018-05-07 09:30:04",Billy,Order,davidcalvo123@yahoo.com,"549656 /Cancelled Order",26X64238XK094233H,28.27,N/A,N/A,N/A,"Customer Cancel"
