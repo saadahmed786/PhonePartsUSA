@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b958ae54-05e5-4149-8e1c-963adbf93b49" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.purchasing_metrics.items_below_rop.1550676682" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.purchasing_metrics.lost_sales_oos.1550676687" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.purchasing_metrics.models_with_returns.12f42e3f7afddfd084cb072fbb051dca.1550676703" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.purchasing_metrics.parts_with_return_ratio.95892612fc87004738a3c0a076ffd2e9.1550676698" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.purchasing_metrics.parts_with_return_ratio2.bbd48af760c42a9105283d3b5e118bae.1550676701" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.purchasing_metrics.profit_by_part_type.1e9728758e4e4f0a5a04a003d2476bdb.1550676763" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.purchasing_metrics.profit_by_sku_type.f85eaa83cdb9367bb15450e581d5a324.1550676738" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.purchasing_metrics.profit_by_vendor.55735ff65bdb512e9a52ab7c56fb25df.1550676768" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imp/auth.php" afterPath="$PROJECT_DIR$/imp/auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imp/inc/db.php" afterPath="$PROJECT_DIR$/imp/inc/db.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.sales_dashboard.customers1.f8d0addc85f2dd933b687c193b199e0c.1550845669" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.sales_dashboard.customers2.f8d0addc85f2dd933b687c193b199e0c.1550844838" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.sales_dashboard.customers3.f8d0addc85f2dd933b687c193b199e0c.1550844862" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.sales_dashboard.last_potentials.f8d0addc85f2dd933b687c193b199e0c.1550844862" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.sales_dashboard.lbb_vouchers.f8d0addc85f2dd933b687c193b199e0c.1550844862" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.sales_dashboard.potentials.f8d0addc85f2dd933b687c193b199e0c.1550844862" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.sales_dashboard.vouchers.f8d0addc85f2dd933b687c193b199e0c.1550844862" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imp/login.php" afterPath="$PROJECT_DIR$/imp/login.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,11 +26,37 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/imp/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="52" column="4" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
+              <folding>
+                <marker date="1551068441880" expanded="true" signature="1037:1084" ph="SELECT salt inv_users" />
+                <marker date="1551068441880" expanded="true" signature="1371:1536" ph="SELECT a.*, inv_users" />
+                <marker date="1551068441880" expanded="true" signature="1781:1953" ph="SELECT a.*, inv_users" />
+                <marker date="1551068441880" expanded="true" signature="2033:2162" ph="SELECT b.`na... inv_group_perm" />
+                <marker date="1551068441880" expanded="true" signature="2377:2410" ph="SELECT b.`pe... inv_perm" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imp/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1728">
               <caret line="96" column="46" lean-forward="false" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -57,6 +82,7 @@
       <find>stock_level</find>
       <find>message</find>
       <find>getSetting</find>
+      <find>salt</find>
     </findStrings>
     <replaceStrings>
       <replace>$PROJECT_DIR$/../</replace>
@@ -72,11 +98,12 @@
         <option value="$PROJECT_DIR$/imp/inc/db.php" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/admin/config.php" />
-        <option value="$PROJECT_DIR$/imp/login.php" />
         <option value="$PROJECT_DIR$/imp/auth.php" />
         <option value="$PROJECT_DIR$/imp/home.php" />
         <option value="$PROJECT_DIR$/imp/config.php" />
         <option value="$PROJECT_DIR$/imp/product_catalog/man_catalog.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/imp/login.php" />
       </list>
     </option>
   </component>
@@ -216,12 +243,12 @@
       <option name="presentableId" value="Default" />
       <updated>1550818244338</updated>
       <workItem from="1550818248358" duration="12423000" />
-      <workItem from="1551068024917" duration="104000" />
+      <workItem from="1551068024917" duration="586000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12527000" />
+    <option name="totallyTimeSpent" value="13009000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -234,9 +261,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="59" y="27" width="1307" height="741" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22839017" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22839017" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952693" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -271,11 +298,11 @@
         <state relative-caret-position="864">
           <caret line="48" column="4" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
           <folding>
-            <marker date="1550832604721" expanded="true" signature="1037:1084" ph="SELECT salt inv_users" />
-            <marker date="1550832604721" expanded="true" signature="1298:1463" ph="SELECT a.*, inv_users" />
-            <marker date="1550832604721" expanded="true" signature="1708:1880" ph="SELECT a.*, inv_users" />
-            <marker date="1550832604721" expanded="true" signature="1960:2089" ph="SELECT b.`na... inv_group_perm" />
-            <marker date="1550832604721" expanded="true" signature="2304:2337" ph="SELECT b.`pe... inv_perm" />
+            <marker date="1551068441880" expanded="true" signature="1037:1084" ph="SELECT salt inv_users" />
+            <marker date="1551068441880" expanded="true" signature="1371:1536" ph="SELECT a.*, inv_users" />
+            <marker date="1551068441880" expanded="true" signature="1781:1953" ph="SELECT a.*, inv_users" />
+            <marker date="1551068441880" expanded="true" signature="2033:2162" ph="SELECT b.`na... inv_group_perm" />
+            <marker date="1551068441880" expanded="true" signature="2377:2410" ph="SELECT b.`pe... inv_perm" />
           </folding>
         </state>
       </provider>
@@ -970,6 +997,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding>
+            <marker date="1550821631628" expanded="true" signature="8471:8487" ph="UPDATE ${$tb... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -991,6 +1021,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="29" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1617,25 +1648,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imp/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="48" column="4" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
-          <folding>
-            <marker date="1550832604721" expanded="true" signature="1037:1084" ph="SELECT salt inv_users" />
-            <marker date="1550832604721" expanded="true" signature="1298:1463" ph="SELECT a.*, inv_users" />
-            <marker date="1550832604721" expanded="true" signature="1708:1880" ph="SELECT a.*, inv_users" />
-            <marker date="1550832604721" expanded="true" signature="1960:2089" ph="SELECT b.`na... inv_group_perm" />
-            <marker date="1550832604721" expanded="true" signature="2304:2337" ph="SELECT b.`pe... inv_perm" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imp/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1728">
           <caret line="96" column="46" lean-forward="false" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="52" column="4" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
+          <folding>
+            <marker date="1551068441880" expanded="true" signature="1037:1084" ph="SELECT salt inv_users" />
+            <marker date="1551068441880" expanded="true" signature="1371:1536" ph="SELECT a.*, inv_users" />
+            <marker date="1551068441880" expanded="true" signature="1781:1953" ph="SELECT a.*, inv_users" />
+            <marker date="1551068441880" expanded="true" signature="2033:2162" ph="SELECT b.`na... inv_group_perm" />
+            <marker date="1551068441880" expanded="true" signature="2377:2410" ph="SELECT b.`pe... inv_perm" />
+          </folding>
         </state>
       </provider>
     </entry>

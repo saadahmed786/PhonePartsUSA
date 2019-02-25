@@ -44,7 +44,11 @@ else
 }
 $error = 0;
 $salt = $db->func_query_first_cell("SELECT salt from inv_users WHERE email='$email'");
-$password = md5($password);
+if($salt != '') {
+    $password = md5($password . $salt);
+} else {
+    $password = md5($password);
+}
 // if($email=='meri@phonepartsusa.com')
 // {
 
