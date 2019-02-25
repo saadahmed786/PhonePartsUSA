@@ -3,7 +3,7 @@
 $path = "/home/phonerep/public_html/imp/";
 
 if ($_SERVER ['HTTP_HOST'] == 'localhost') {
-	$path = "E:/xampp2/htdocs/phonepartsusa/";
+	$path = "/opt/lampp/htdocs/ppusa/imp/";
 }
 
 require_once ($path . "config.php");

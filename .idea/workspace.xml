@@ -1,0 +1,1643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b958ae54-05e5-4149-8e1c-963adbf93b49" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.purchasing_metrics.items_below_rop.1550676682" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.purchasing_metrics.lost_sales_oos.1550676687" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.purchasing_metrics.models_with_returns.12f42e3f7afddfd084cb072fbb051dca.1550676703" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.purchasing_metrics.parts_with_return_ratio.95892612fc87004738a3c0a076ffd2e9.1550676698" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.purchasing_metrics.parts_with_return_ratio2.bbd48af760c42a9105283d3b5e118bae.1550676701" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.purchasing_metrics.profit_by_part_type.1e9728758e4e4f0a5a04a003d2476bdb.1550676763" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.purchasing_metrics.profit_by_sku_type.f85eaa83cdb9367bb15450e581d5a324.1550676738" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imp/cache/cache.purchasing_metrics.profit_by_vendor.55735ff65bdb512e9a52ab7c56fb25df.1550676768" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imp/auth.php" afterPath="$PROJECT_DIR$/imp/auth.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imp/inc/db.php" afterPath="$PROJECT_DIR$/imp/inc/db.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imp/login.php" afterPath="$PROJECT_DIR$/imp/login.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/imp/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1728">
+              <caret line="96" column="46" lean-forward="false" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>SELECT</find>
+      <find>conn</find>
+      <find>$this-&gt;conn</find>
+      <find>/var/www/html/</find>
+      <find>getCustomerByEmail</find>
+      <find>pass</find>
+      <find>addSocialMediaCustomer</find>
+      <find>passw</find>
+      <find>Sign into your PPUSA account</find>
+      <find>from</find>
+      <find>$password</find>
+      <find>password</find>
+      <find>$user</find>
+      <find>stock_level</find>
+      <find>message</find>
+      <find>getSetting</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>$PROJECT_DIR$/../</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/imp/index.php" />
+        <option value="$PROJECT_DIR$/imp/inc/db.php" />
+        <option value="$PROJECT_DIR$/config.php" />
+        <option value="$PROJECT_DIR$/admin/config.php" />
+        <option value="$PROJECT_DIR$/imp/login.php" />
+        <option value="$PROJECT_DIR$/imp/auth.php" />
+        <option value="$PROJECT_DIR$/imp/home.php" />
+        <option value="$PROJECT_DIR$/imp/config.php" />
+        <option value="$PROJECT_DIR$/imp/product_catalog/man_catalog.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="59" />
+    <option name="y" value="27" />
+    <option name="width" value="1307" />
+    <option name="height" value="741" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ppusa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ppusa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ppusa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ppusa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imp" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="/usr/bin/node" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b958ae54-05e5-4149-8e1c-963adbf93b49" name="Default" comment="" />
+      <created>1550818244338</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550818244338</updated>
+      <workItem from="1550818248358" duration="12423000" />
+      <workItem from="1551068024917" duration="104000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="12527000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="59" y="27" width="1307" height="741" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22839017" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952693" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2822186" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3425775" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/imp/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="48" column="4" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+          <folding>
+            <marker date="1550832604721" expanded="true" signature="1037:1084" ph="SELECT salt inv_users" />
+            <marker date="1550832604721" expanded="true" signature="1298:1463" ph="SELECT a.*, inv_users" />
+            <marker date="1550832604721" expanded="true" signature="1708:1880" ph="SELECT a.*, inv_users" />
+            <marker date="1550832604721" expanded="true" signature="1960:2089" ph="SELECT b.`na... inv_group_perm" />
+            <marker date="1550832604721" expanded="true" signature="2304:2337" ph="SELECT b.`pe... inv_perm" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/sales_dashboard_new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+          <folding>
+            <marker date="1550815195275" expanded="true" signature="1298:1651" ph="SELECT a.use... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="1728:1793" ph="SELECT name oc_zone" />
+            <marker date="1550815195275" expanded="true" signature="1840:2083" ph="SELECT order... inv_orders" />
+            <marker date="1550815195275" expanded="true" signature="3418:3903" ph="select sum(d... oc_voucher" />
+            <marker date="1550815195275" expanded="true" signature="3939:4369" ph="select a.rea... oc_voucher" />
+            <marker date="1550815195275" expanded="true" signature="4466:4982" ph="select sum(d... oc_voucher" />
+            <marker date="1550815195275" expanded="true" signature="5024:5485" ph="select a.rea... oc_voucher" />
+            <marker date="1550815195275" expanded="false" signature="7012:7043" ph="..." />
+            <marker date="1550815195275" expanded="false" signature="7165:7197" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="7198:7389" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="7214:7364" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="7227:7347" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="7380:7389" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="7581:7597" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="9657:9673" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="10217:10766" ph="select sum(d... oc_voucher" />
+            <marker date="1550815195275" expanded="true" signature="10859:11439" ph="select sum(d... oc_voucher" />
+            <marker date="1550815195275" expanded="true" signature="11895:11911" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="12489:12727" ph="SELECT SUM(b... inv_customer_data_summary" />
+            <marker date="1550815195275" expanded="true" signature="12833:13079" ph="SELECT SUM(b... inv_customer_data_summary" />
+            <marker date="1550815195275" expanded="true" signature="13158:13406" ph="SELECT SUM(b... inv_customer_data_summary" />
+            <marker date="1550815195275" expanded="true" signature="14380:14724" ph="SELECT SUM(b... inv_customer_data_summary" />
+            <marker date="1550815195275" expanded="true" signature="14768:15144" ph="SELECT SUM(b... " />
+            <marker date="1550815195275" expanded="true" signature="15190:15684" ph="SELECT sum(c... " />
+            <marker date="1550815195275" expanded="true" signature="15779:16122" ph="SELECT SUM(b... inv_customer_data_summary" />
+            <marker date="1550815195275" expanded="true" signature="16165:16540" ph="SELECT SUM(b... " />
+            <marker date="1550815195275" expanded="true" signature="16585:17079" ph="SELECT sum(c... " />
+            <marker date="1550815195275" expanded="true" signature="17173:17516" ph="SELECT SUM(b... inv_customer_data_summary" />
+            <marker date="1550815195275" expanded="true" signature="17559:17934" ph="SELECT SUM(b... " />
+            <marker date="1550815195275" expanded="true" signature="17979:18473" ph="SELECT sum(c... " />
+            <marker date="1550815195275" expanded="true" signature="18542:18887" ph="SELECT SUM(b... inv_customer_data_summary" />
+            <marker date="1550815195275" expanded="true" signature="18932:19309" ph="SELECT SUM(b... " />
+            <marker date="1550815195275" expanded="true" signature="19356:19852" ph="SELECT sum(c... " />
+            <marker date="1550815195275" expanded="true" signature="20023:20097" ph="SELECT commi... inv_users" />
+            <marker date="1550815195275" expanded="true" signature="21587:21836" ph="SELECT SUM(s... inv_user_commission" />
+            <marker date="1550815195275" expanded="true" signature="21876:22244" ph="SELECT sum(s... inv_user_commission" />
+            <marker date="1550815195275" expanded="true" signature="23242:23258" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="23259:23781" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="24948:25008" ph="SELECT quart... inv_users" />
+            <marker date="1550815195275" expanded="true" signature="25584:25910" ph="SELECT c.dat... " />
+            <marker date="1550815195275" expanded="true" signature="26016:26356" ph="SELECT c.dat... " />
+            <marker date="1550815195275" expanded="true" signature="26435:26761" ph="SELECT c.dat... " />
+            <marker date="1550815195275" expanded="true" signature="27635:27688" ph="SELECT id fr... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="27753:28036" ph="INSERT INTO inv_customer_comments... " />
+            <marker date="1550815195275" expanded="true" signature="28173:28265" ph="UPDATE inv_c... " />
+            <marker date="1550815195275" expanded="true" signature="28559:28612" ph="SELECT id fr... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="28794:28878" ph="UPDATE inv_c... " />
+            <marker date="1550815195275" expanded="true" signature="29197:29250" ph="SELECT id fr... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="29277:29318" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="29406:29431" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="29432:29746" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="29458:29695" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="29462:29664" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="29725:29746" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="29806:29930" ph="SELECT * FRO... inv_customer_comments" />
+            <marker date="1550815195275" expanded="true" signature="30001:30400" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="32232:32868" ph="select a.id,... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="34592:35051" ph="SELECT a.fir... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="35846:36426" ph="SELECT a.fir... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="36297:36408" ph="select c.ema... inv_customer_data_summary" />
+            <marker date="1550815195275" expanded="true" signature="37289:37883" ph="SELECT b.id,... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="37725:37863" ph="select c.ema... inv_customer_data_summary" />
+            <marker date="1550815195275" expanded="true" signature="38076:38556" ph="SELECT disti... oc_voucher" />
+            <marker date="1550815195275" expanded="true" signature="38753:39081" ph="select a.fir... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="38799:38847" ph="select name oc_zone" />
+            <marker date="1550815195275" expanded="true" signature="39302:39633" ph="select a.fir... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="39348:39396" ph="select name oc_zone" />
+            <marker date="1550815195275" expanded="true" signature="40946:41598" ph="select a.fir... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="40992:41040" ph="select name oc_zone" />
+            <marker date="1550815195275" expanded="true" signature="41791:42179" ph="SELECT disti... oc_voucher" />
+            <marker date="1550815195275" expanded="true" signature="42965:43072" ph="SELECT weekl... inv_users" />
+            <marker date="1550815195275" expanded="true" signature="43125:43341" ph="SELECT SUM(b... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="47700:47765" ph="select id,na... inv_users" />
+            <marker date="1550815195275" expanded="true" signature="54110:54360" ph="SELECT order... inv_orders" />
+            <marker date="1550815195275" expanded="true" signature="56757:57007" ph="SELECT order... inv_orders" />
+            <marker date="1550815195275" expanded="true" signature="59754:59992" ph="SELECT order... inv_orders" />
+            <marker date="1550815195275" expanded="true" signature="60076:60326" ph="SELECT order... inv_orders" />
+            <marker date="1550815195275" expanded="true" signature="68369:68434" ph="select id,na... inv_users" />
+            <marker date="1550815195275" expanded="true" signature="71395:71460" ph="select id,na... inv_users" />
+            <marker date="1550815195275" expanded="true" signature="74770:75020" ph="SELECT order... inv_orders" />
+            <marker date="1550815195275" expanded="true" signature="75769:76019" ph="SELECT order... inv_orders" />
+            <marker date="1550815195275" expanded="true" signature="76767:77017" ph="SELECT order... inv_orders" />
+            <marker date="1550815195275" expanded="true" signature="78773:78788" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="79384:79407" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="79530:79548" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="79587:79597" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="79659:79677" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="79718:79735" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="80495:80510" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="80818:80824" ph=" " />
+            <marker date="1550815195275" expanded="true" signature="100864:100887" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="22" />
+          <folding>
+            <marker date="1550815156963" expanded="true" signature="276:348" ph="select last_... ebay_credential" />
+            <marker date="1550815156963" expanded="true" signature="409:488" ph="select last_... bigcommerce_credential" />
+            <marker date="1550815156963" expanded="true" signature="542:612" ph="select last_... ca_credential" />
+            <marker date="1550815156963" expanded="true" signature="666:725" ph="select last_... amazon_credential" />
+            <marker date="1550815156963" expanded="true" signature="782:841" ph="select last_... amazon_credential" />
+            <marker date="1550815156963" expanded="true" signature="898:957" ph="select last_... amazon_credential" />
+            <marker date="1550815156963" expanded="true" signature="1014:1073" ph="select last_... amazon_credential" />
+            <marker date="1550815156963" expanded="true" signature="1132:1191" ph="select last_... amazon_credential" />
+            <marker date="1550815156963" expanded="true" signature="1250:1309" ph="select last_... amazon_credential" />
+            <marker date="1550815156963" expanded="true" signature="1359:1438" ph="select confi... configuration" />
+            <marker date="1550815156963" expanded="true" signature="1481:1522" ph="Select count... inv_orders" />
+            <marker date="1550815156963" expanded="true" signature="1570:1618" ph="Select count... inv_return_orders" />
+            <marker date="1550815156963" expanded="true" signature="1661:1746" ph="Select count... inv_orders" />
+            <marker date="1550815156963" expanded="true" signature="1794:1886" ph="Select count... inv_return_orders" />
+            <marker date="1550815156963" expanded="true" signature="1923:2106" ph="Select sum(o... inv_orders" />
+            <marker date="1550815156963" expanded="true" signature="2155:2294" ph="Select sum(o... inv_orders" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/inc/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding>
+            <marker date="1550815194203" expanded="true" signature="227:431" ph="select sum(p... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="686:746" ph="SELECT user_... inv_customers" />
+            <marker date="1550815194203" expanded="true" signature="918:1270" ph="SELECT min(b... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="1590:1690" ph="SELECT id,no... inv_customers" />
+            <marker date="1550815194203" expanded="true" signature="1928:1990" ph="SELECT id FR... inv_po_customers" />
+            <marker date="1550815194203" expanded="true" signature="2191:2322" ph="SELECT buyba... oc_buyback" />
+            <marker date="1550815194203" expanded="true" signature="2570:2701" ph="SELECT buyba... oc_buyback" />
+            <marker date="1550815194203" expanded="true" signature="2949:3087" ph="SELECT 0,COU... oc_order" />
+            <marker date="1550815194203" expanded="true" signature="3266:3356" ph="SELECT name oc_customer_group" />
+            <marker date="1550815194203" expanded="true" signature="3449:3577" ph="SELECT 0,COU... inv_orders" />
+            <marker date="1550815194203" expanded="true" signature="4473:4717" ph="SELECT count... " />
+            <marker date="1550815194203" expanded="true" signature="4832:5096" ph="SELECT sum(b... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="5256:5520" ph="SELECT sum(b... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="5686:5913" ph="SELECT SUM(b... inv_return_items" />
+            <marker date="1550815194203" expanded="true" signature="6031:6084" ph="SELECT image... inv_users" />
+            <marker date="1550815194203" expanded="true" signature="6551:6627" ph="select count... inv_product_outofstock_days" />
+            <marker date="1550815194203" expanded="true" signature="6715:6991" ph="select ot.pr... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="7163:7241" ph="SELECT is_fb... inv_po_customers" />
+            <marker date="1550815194203" expanded="true" signature="9112:9217" ph="select max(a... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="9351:9467" ph="select sku f... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="11328:11403" ph="select packa... inv_rejected_shipments" />
+            <marker date="1550815194203" expanded="true" signature="11444:11528" ph="select packa... inv_rejected_shipments" />
+            <marker date="1550815194203" expanded="true" signature="11949:12021" ph="SELECT vendo... inv_shipments" />
+            <marker date="1550815194203" expanded="true" signature="12160:12248" ph="select id fr... inv_rejected_shipments" />
+            <marker date="1550815194203" expanded="true" signature="14903:14982" ph="SELECT * FRO... inv_return_shipment_box_items" />
+            <marker date="1550815194203" expanded="true" signature="15023:15122" ph="select box_n... inv_return_shipment_boxes" />
+            <marker date="1550815194203" expanded="true" signature="15162:15233" ph="select packa... inv_rejected_shipments" />
+            <marker date="1550815194203" expanded="true" signature="15980:16057" ph="DELETE FROM " />
+            <marker date="1550815194203" expanded="true" signature="17155:17227" ph="SELECT vendo... inv_shipments" />
+            <marker date="1550815194203" expanded="true" signature="17996:18066" ph="select box_n... inv_return_shipment_boxes" />
+            <marker date="1550815194203" expanded="true" signature="18197:18298" ph="delete from " />
+            <marker date="1550815194203" expanded="true" signature="18607:18717" ph="select id, b... inv_return_shipment_boxes" />
+            <marker date="1550815194203" expanded="true" signature="19406:19478" ph="SELECT vendo... inv_shipments" />
+            <marker date="1550815194203" expanded="true" signature="20241:20327" ph="SELECT date_... inv_rejected_shipment_items" />
+            <marker date="1550815194203" expanded="true" signature="21299:21397" ph="select id fr... inv_return_shipment_boxes" />
+            <marker date="1550815194203" expanded="true" signature="22291:22356" ph="select id fr... inv_rejected_shipments" />
+            <marker date="1550815194203" expanded="true" signature="22413:22558" ph="delete from " />
+            <marker date="1550815194203" expanded="true" signature="23027:23149" ph="select raw_c... inv_product_costs" />
+            <marker date="1550815194203" expanded="true" signature="24326:24448" ph="select name oc_product_description" />
+            <marker date="1550815194203" expanded="true" signature="24958:25040" ph="SELECT MIN(p... oc_product_discount" />
+            <marker date="1550815194203" expanded="true" signature="25119:25250" ph="SELECT MIN(p... oc_product_discount" />
+            <marker date="1550815194203" expanded="true" signature="25982:26064" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="26118:26201" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="26287:26358" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="26670:26717" ph="select image... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="26979:27037" ph="select produ... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="28840:28921" ph="delete from " />
+            <marker date="1550815194203" expanded="true" signature="28947:29024" ph="insert into oc_product_to_store... " />
+            <marker date="1550815194203" expanded="true" signature="29375:29565" ph="select p.pro... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="29745:29868" ph="SELECT `raw_... inv_product_costs" />
+            <marker date="1550815194203" expanded="true" signature="30498:30622" ph="update oc_pr... " />
+            <marker date="1550815194203" expanded="true" signature="30646:30829" ph="insert into oc_product_to_category... " />
+            <marker date="1550815194203" expanded="true" signature="30708:30789" ph="select ${$pr... oc_product_to_category" />
+            <marker date="1550815194203" expanded="true" signature="31089:31147" ph="select ${$fi... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="33692:33806" ph="select max(a... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="34556:34619" ph="select rma_n... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="35066:35149" ph="select max(a... inv_returns_po" />
+            <marker date="1550815194203" expanded="true" signature="35285:35413" ph="select max(a... inv_return_shipment_boxes" />
+            <marker date="1550815194203" expanded="true" signature="36071:36164" ph="select ${$co... ${$table}" />
+            <marker date="1550815194203" expanded="true" signature="37301:37443" ph="select max(a... inv_rejected_shipment_items" />
+            <marker date="1550815194203" expanded="true" signature="37511:37655" ph="select max(a... inv_return_shipment_box_items" />
+            <marker date="1550815194203" expanded="true" signature="42266:42337" ph="select attac... inv_order_docs" />
+            <marker date="1550815194203" expanded="true" signature="42617:42695" ph="SELECT track... inv_order_shipments" />
+            <marker date="1550815194203" expanded="true" signature="43255:43329" ph="select oh.co... oc_order_history" />
+            <marker date="1550815194203" expanded="true" signature="47624:47751" ph="select shipp... oc_order" />
+            <marker date="1550815194203" expanded="true" signature="48630:48693" ph="select is_ba... oc_customer" />
+            <marker date="1550815194203" expanded="true" signature="48941:49016" ph="select count... oc_order" />
+            <marker date="1550815194203" expanded="true" signature="49267:49444" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="49769:49786" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="50168:50392" ph="SELECT SUM(b... inv_orders" />
+            <marker date="1550815194203" expanded="true" signature="50441:50699" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="50748:50985" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="51095:51136" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="51347:51703" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="51929:52170" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="52238:52479" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="52547:52786" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="52854:53095" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="53163:53405" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="53776:53793" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="54101:54323" ph="SELECT SUM(b... inv_orders" />
+            <marker date="1550815194203" expanded="true" signature="54380:54661" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="54711:54987" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="55038:55314" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="55367:55408" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="55619:55861" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="55929:56209" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="56277:56562" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="56631:56942" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="57034:57340" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="57426:57732" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="58344:58485" ph="SELECT o.*,o... inv_orders" />
+            <marker date="1550815194203" expanded="true" signature="58544:58644" ph="SELECT * FRO... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="60191:60244" ph="SELECT `valu... oc_setting" />
+            <marker date="1550815194203" expanded="true" signature="60372:60458" ph="SELECT CONCA... oc_user" />
+            <marker date="1550815194203" expanded="true" signature="60514:60569" ph="SELECT name inv_users" />
+            <marker date="1550815194203" expanded="true" signature="60730:60791" ph="SELECT ${$de... oc_user" />
+            <marker date="1550815194203" expanded="true" signature="60847:60905" ph="SELECT ${$de... inv_users" />
+            <marker date="1550815194203" expanded="true" signature="62502:62558" ph="SELECT id FR... inv_price_change_history" />
+            <marker date="1550815194203" expanded="true" signature="62951:63054" ph="select main_... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="63142:63292" ph="SELECT DISTI... " />
+            <marker date="1550815194203" expanded="true" signature="63581:63684" ph="select main_... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="63838:63892" ph="select produ... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="63933:64054" ph="SELECT AVG(p... oc_product_discount" />
+            <marker date="1550815194203" expanded="true" signature="64117:64190" ph="SELECT AVG(p... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="64918:64972" ph="SELECT main_... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="65048:65180" ph="SELECT cost_... inv_product_costs" />
+            <marker date="1550815194203" expanded="true" signature="65598:65721" ph="SELECT `prod... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="68282:68342" ph="SELECT prefi... inv_orders" />
+            <marker date="1550815194203" expanded="true" signature="69067:69131" ph="SELECT custo... inv_customers" />
+            <marker date="1550815194203" expanded="true" signature="69767:69867" ph="SELECT id,no... inv_customers" />
+            <marker date="1550815194203" expanded="true" signature="70115:70177" ph="SELECT id FR... inv_po_customers" />
+            <marker date="1550815194203" expanded="true" signature="70389:70520" ph="SELECT buyba... oc_buyback" />
+            <marker date="1550815194203" expanded="true" signature="70779:70910" ph="SELECT buyba... oc_buyback" />
+            <marker date="1550815194203" expanded="true" signature="71169:71307" ph="SELECT 0,COU... oc_order" />
+            <marker date="1550815194203" expanded="true" signature="71492:71582" ph="SELECT name oc_customer_group" />
+            <marker date="1550815194203" expanded="true" signature="71681:71809" ph="SELECT 0,COU... inv_orders" />
+            <marker date="1550815194203" expanded="true" signature="78984:91504" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="78994:91496" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="78998:91485" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79021:91476" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79104:91466" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79117:91458" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79121:91444" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="79187:79261" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79262:91432" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79335:91419" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79351:91411" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79355:91394" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79396:91379" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79505:82237" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79524:82229" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79541:82209" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79574:82191" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79667:82172" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79690:82164" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79694:82141" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79742:80175" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79837:80153" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79863:80145" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79867:79932" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79955:80119" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="80042:80083" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="80085:80091" ph=" " />
+            <marker date="1550815194203" expanded="false" signature="80422:80509" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="80510:81601" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="80656:80674" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="80675:81579" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="80701:81571" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="80705:81545" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="80744:81521" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="80843:81496" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="80872:81488" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="80876:80947" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="80973:81362" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="81085:81181" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="81222:81335" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="81388:81459" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="81687:82120" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="81781:82098" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="81807:82090" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="81811:81876" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="81899:82064" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="81986:82028" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="82030:82036" ph=" " />
+            <marker date="1550815194203" expanded="true" signature="82375:83314" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="82395:83306" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="82399:83286" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="82432:83268" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="82524:83249" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="82547:83241" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="82551:82610" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="82657:83029" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="82693:83008" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="82732:82986" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="82834:82892" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83080:83138" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83159:83218" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83452:88985" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83472:88977" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83476:88957" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83509:88939" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83601:88920" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83652:88912" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83656:84223" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83692:84202" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83788:84180" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83814:84172" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83818:84146" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="83865:83882" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83883:84122" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="84019:84077" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="84275:84334" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="84385:84820" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="84569:84682" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="84683:84799" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="84876:84935" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="84984:87006" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85020:86985" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85103:86963" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85129:86955" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85133:86929" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85172:85546" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="85248:85266" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85325:85521" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85354:85513" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85358:85484" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="85393:85424" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="85447:85453" ph=" " />
+            <marker date="1550815194203" expanded="true" signature="85625:85999" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="85701:85719" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85778:85974" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85807:85966" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85811:85937" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="85846:85877" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="85900:85906" ph=" " />
+            <marker date="1550815194203" expanded="true" signature="86078:86452" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="86154:86172" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="86231:86427" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="86260:86419" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="86264:86390" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="86299:86330" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="86353:86359" ph=" " />
+            <marker date="1550815194203" expanded="true" signature="86531:86905" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="86607:86625" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="86684:86880" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="86713:86872" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="86717:86843" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="86752:86783" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="86806:86812" ph=" " />
+            <marker date="1550815194203" expanded="true" signature="87059:87118" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="87168:87623" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="87356:87452" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="87453:87602" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="87677:87736" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="87785:88698" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="87821:88677" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="87971:87989" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="87990:88655" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="88016:88647" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="88020:88621" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="88202:88337" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="88338:88597" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="88403:88440" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="88466:88572" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="88751:88809" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="88830:88889" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="89075:89170" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="89242:90323" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="89262:90315" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="89266:90295" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="89359:89420" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="89421:90277" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="89513:90258" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="89536:90250" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="89540:89599" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="89652:90111" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="89875:89990" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="89991:90090" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="90010:90016" ph="©" />
+            <marker date="1550815194203" expanded="true" signature="90168:90227" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="90466:91334" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="90486:91326" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="90490:90543" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="90560:91236" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="90593:91218" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="90673:91199" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="90696:91191" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="90700:91168" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="90923:91038" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="91039:91146" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="91089:91095" ph="•" />
+            <marker date="1550815194203" expanded="false" signature="91106:91112" ph="•" />
+            <marker date="1550815194203" expanded="true" signature="91253:91306" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="94258:94318" ph="SELECT produ... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="94489:94620" ph="SELECT cost_... inv_product_costs" />
+            <marker date="1550815194203" expanded="true" signature="94780:94910" ph="SELECT * FRO... inv_product_pricing" />
+            <marker date="1550815194203" expanded="true" signature="94927:95105" ph="SELECT iks.`... inv_kit_skus" />
+            <marker date="1550815194203" expanded="true" signature="97262:97422" ph="UPDATE oc_pr... " />
+            <marker date="1550815194203" expanded="true" signature="97442:97529" ph="DELETE FROM " />
+            <marker date="1550815194203" expanded="true" signature="97571:97755" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="97774:97958" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="97977:98163" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="98206:98391" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="98410:98595" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="98614:98801" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="98848:99032" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="99051:99235" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="99254:99440" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="99485:99677" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="99696:99888" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="99907:100101" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="100146:100336" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="100355:100545" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="100564:100756" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="100803:100997" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="101016:101210" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="101229:101425" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="101469:101662" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="101681:101874" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="101893:102088" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="102142:102274" ph="UPDATE oc_pr... " />
+            <marker date="1550815194203" expanded="true" signature="102315:102447" ph="UPDATE oc_pr... " />
+            <marker date="1550815194203" expanded="true" signature="102488:102620" ph="UPDATE oc_pr... " />
+            <marker date="1550815194203" expanded="true" signature="102683:102786" ph="UPDATE oc_pr... " />
+            <marker date="1550815194203" expanded="true" signature="102912:103118" ph="SELECT * FRO... oc_category" />
+            <marker date="1550815194203" expanded="true" signature="103570:103794" ph="SELECT name,... oc_category" />
+            <marker date="1550815194203" expanded="true" signature="104260:104361" ph="SELECT `whit... inv_customers" />
+            <marker date="1550815194203" expanded="true" signature="104424:104520" ph="SELECT `id` inv_po_customers" />
+            <marker date="1550815194203" expanded="true" signature="104626:104856" ph="SELECT COUNT... inv_chargeback" />
+            <marker date="1550815194203" expanded="true" signature="104913:105050" ph="SELECT COUNT... inv_orders" />
+            <marker date="1550815194203" expanded="true" signature="105124:105216" ph="SELECT produ... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="110530:110613" ph="UPDATE inv_o... " />
+            <marker date="1550815194203" expanded="true" signature="111227:111313" ph="UPDATE inv_o... " />
+            <marker date="1550815194203" expanded="true" signature="111333:111420" ph="UPDATE inv_o... " />
+            <marker date="1550815194203" expanded="true" signature="111440:111621" ph="UPDATE oc_or... " />
+            <marker date="1550815194203" expanded="true" signature="113336:113453" ph="UPDATE inv_o... " />
+            <marker date="1550815194203" expanded="true" signature="113475:113561" ph="UPDATE inv_o... " />
+            <marker date="1550815194203" expanded="true" signature="113583:113763" ph="UPDATE oc_or... " />
+            <marker date="1550815194203" expanded="true" signature="113933:114049" ph="UPDATE inv_o... " />
+            <marker date="1550815194203" expanded="true" signature="114071:114156" ph="UPDATE inv_o... " />
+            <marker date="1550815194203" expanded="true" signature="114178:114359" ph="UPDATE oc_or... " />
+            <marker date="1550815194203" expanded="true" signature="114497:114554" ph="SELECT * FRO... inv_canned_message" />
+            <marker date="1550815194203" expanded="true" signature="115954:116067" ph="UPDATE inv_o... " />
+            <marker date="1550815194203" expanded="true" signature="116087:116172" ph="UPDATE inv_o... " />
+            <marker date="1550815194203" expanded="true" signature="116192:116373" ph="UPDATE oc_or... " />
+            <marker date="1550815194203" expanded="true" signature="117014:117069" ph="SELECT `name... inv_users" />
+            <marker date="1550815194203" expanded="true" signature="120465:120516" ph="SELECT * FRO... oc_voucher" />
+            <marker date="1550815194203" expanded="true" signature="120711:120826" ph="SELECT * FRO... inv_orders" />
+            <marker date="1550815194203" expanded="true" signature="120962:121100" ph="SELECT SUM(p... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="121181:121252" ph="SELECT dis_t... inv_customers" />
+            <marker date="1550815194203" expanded="true" signature="121297:121343" ph="SELECT * FRO... oc_tax_rate" />
+            <marker date="1550815194203" expanded="true" signature="121651:121879" ph="SELECT SUM(`... oc_voucher_history" />
+            <marker date="1550815194203" expanded="true" signature="121916:122137" ph="SELECT `a`.`... oc_voucher_history" />
+            <marker date="1550815194203" expanded="true" signature="122182:122337" ph="SELECT SUM(`... oc_coupon_history" />
+            <marker date="1550815194203" expanded="true" signature="122519:122777" ph="UPDATE inv_o... " />
+            <marker date="1550815194203" expanded="true" signature="122840:122996" ph="UPDATE oc_or... " />
+            <marker date="1550815194203" expanded="true" signature="123020:123156" ph="UPDATE oc_or... " />
+            <marker date="1550815194203" expanded="true" signature="123180:123259" ph="UPDATE oc_or... " />
+            <marker date="1550815194203" expanded="true" signature="123306:123382" ph="DELETE FROM " />
+            <marker date="1550815194203" expanded="true" signature="123448:123656" ph="INSERT INTO oc_order_total... " />
+            <marker date="1550815194203" expanded="true" signature="123708:123780" ph="DELETE FROM " />
+            <marker date="1550815194203" expanded="true" signature="123805:123981" ph="INSERT INTO oc_order_total... " />
+            <marker date="1550815194203" expanded="true" signature="125476:126000" ph="INSERT INTO inv_voucher_details... " />
+            <marker date="1550815194203" expanded="true" signature="126126:126200" ph="SELECT box_n... inv_return_shipment_boxes" />
+            <marker date="1550815194203" expanded="true" signature="126243:126317" ph="SELECT box_n... inv_return_shipment_boxes" />
+            <marker date="1550815194203" expanded="true" signature="126354:126435" ph="SELECT * FRO... inv_return_shipment_box_items" />
+            <marker date="1550815194203" expanded="true" signature="127351:127408" ph="SELECT sku F... inv_buy_back" />
+            <marker date="1550815194203" expanded="true" signature="127448:127535" ph="SELECT * FRO... inv_return_shipment_box_items" />
+            <marker date="1550815194203" expanded="true" signature="128230:128330" ph="SELECT retur... inv_return_shipment_box_items" />
+            <marker date="1550815194203" expanded="true" signature="128371:128470" ph="select box_n... inv_return_shipment_boxes" />
+            <marker date="1550815194203" expanded="true" signature="128510:128577" ph="select packa... inv_buyback_boxes" />
+            <marker date="1550815194203" expanded="true" signature="129412:129490" ph="DELETE FROM " />
+            <marker date="1550815194203" expanded="true" signature="130009:130061" ph="SELECT quant... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="130508:130596" ph="SELECT SUM(p... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="130647:130732" ph="SELECT shipp... inv_orders_details" />
+            <marker date="1550815194203" expanded="true" signature="130985:131125" ph="select shipp... inv_shipstation_transactions" />
+            <marker date="1550815194203" expanded="true" signature="131437:131543" ph="SELECT sum(p... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="131603:131688" ph="SELECT trans... inv_transactions" />
+            <marker date="1550815194203" expanded="true" signature="131742:131827" ph="SELECT SUM(f... inv_order_fees" />
+            <marker date="1550815194203" expanded="true" signature="138769:138792" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="138799:138821" ph="data:" />
+            <marker date="1550815194203" expanded="true" signature="138977:139000" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="139007:139029" ph="data:" />
+            <marker date="1550815194203" expanded="true" signature="139191:139214" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="139221:139243" ph="data:" />
+            <marker date="1550815194203" expanded="true" signature="141158:141376" ph="SELECT * FRO... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="142021:142259" ph="SELECT price... oc_product_discount" />
+            <marker date="1550815194203" expanded="true" signature="142330:142613" ph="SELECT price... oc_product_discount" />
+            <marker date="1550815194203" expanded="true" signature="142760:143006" ph="SELECT price... oc_product_special" />
+            <marker date="1550815194203" expanded="true" signature="143489:143574" ph="select quant... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="144767:145135" ph="INSERT INTO inv_product_ledger... " />
+            <marker date="1550815194203" expanded="true" signature="145370:145480" ph="SELECT quant... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="145799:146033" ph="SELECT sum(b... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="146081:146320" ph="SELECT sum(b... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="146364:146654" ph="SELECT sum(b... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="146698:146945" ph="SELECT sum(b... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="146994:147440" ph="SELECT sum(S... inv_removed_order_items" />
+            <marker date="1550815194203" expanded="true" signature="148985:149040" ph="SELECT * FRO... oc_country" />
+            <marker date="1550815194203" expanded="true" signature="149151:149218" ph="SELECT name oc_country" />
+            <marker date="1550815194203" expanded="true" signature="149411:149463" ph="SELECT * FRO... oc_zone" />
+            <marker date="1550815194203" expanded="true" signature="149570:149628" ph="SELECT name oc_zone" />
+            <marker date="1550815194203" expanded="true" signature="149719:149850" ph="INSERT INTO inv_product_price_scrap... " />
+            <marker date="1550815194203" expanded="true" signature="149870:149992" ph="INSERT INTO inv_product_price_scrap... " />
+            <marker date="1550815194203" expanded="true" signature="150012:150136" ph="INSERT INTO inv_product_price_scrap... " />
+            <marker date="1550815194203" expanded="true" signature="150156:150289" ph="INSERT INTO inv_product_price_scrap... " />
+            <marker date="1550815194203" expanded="true" signature="150309:150439" ph="INSERT INTO inv_product_price_scrap... " />
+            <marker date="1550815194203" expanded="true" signature="150459:150589" ph="INSERT INTO inv_product_price_scrap... " />
+            <marker date="1550815194203" expanded="true" signature="150609:150734" ph="INSERT INTO inv_product_price_scrap... " />
+            <marker date="1550815194203" expanded="true" signature="150754:150884" ph="INSERT INTO inv_product_price_scrap... " />
+            <marker date="1550815194203" expanded="true" signature="150904:151035" ph="INSERT INTO inv_product_price_scrap... " />
+            <marker date="1550815194203" expanded="true" signature="151664:152150" ph="SELECT p.mod... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="151683:151888" ph="SELECT COALE... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="151893:152057" ph="SELECT COALE... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="152368:152542" ph="UPDATE oc_pr... " />
+            <marker date="1550815194203" expanded="true" signature="153948:154046" ph="SELECT name inv_charts" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/product_catalog/man_catalog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1550837527894" expanded="true" signature="2502:2563" ph="SELECT is_ki... oc_product" />
+            <marker date="1550837527894" expanded="true" signature="14418:14430" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="21857:21863" ph=" " />
+            <marker date="1550837527894" expanded="true" signature="22204:22219" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="22396:22411" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="22583:22598" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="22769:22784" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="22960:22975" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="24573:24583" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="24728:24740" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="24942:24952" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="25077:25089" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="25903:25931" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="27528:27538" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="28593:28607" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="29928:29942" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="30138:30155" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="30383:30399" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="30512:30527" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="31746:31753" ph="«" />
+            <marker date="1550837527894" expanded="true" signature="33511:33518" ph="»" />
+            <marker date="1550837527894" expanded="true" signature="34097:34114" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/products.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11304">
+          <caret line="628" column="35" lean-forward="false" selection-start-line="628" selection-start-column="35" selection-end-line="628" selection-end-column="35" />
+          <folding>
+            <marker date="1550815195043" expanded="true" signature="206:245" ph="SELECT * FRO... oc_product" />
+            <marker date="1550815195043" expanded="true" signature="680:753" ph="SELECT * FRO... oc_product_image" />
+            <marker date="1550815195043" expanded="true" signature="3714:3858" ph="SELECT a.*, oc_product" />
+            <marker date="1550815195043" expanded="true" signature="7568:8347" ph="Select p.sku... oc_product" />
+            <marker date="1550815195043" expanded="true" signature="7718:7923" ph="SELECT COALE... inv_orders_items" />
+            <marker date="1550815195043" expanded="true" signature="7928:8092" ph="SELECT COALE... inv_orders_items" />
+            <marker date="1550815195043" expanded="true" signature="8895:9044" ph="SELECT a.dev... inv_device_product" />
+            <marker date="1550815195043" expanded="true" signature="17255:17320" ph="Select COUNT... oc_product" />
+            <marker date="1550815195043" expanded="true" signature="24336:24471" ph="SELECT price... oc_product_discount" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/inc/split_page_results.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1550815194203" expanded="true" signature="2957:2963" ph=" " />
+            <marker date="1550815194203" expanded="true" signature="2991:2997" ph=" " />
+            <marker date="1550815194203" expanded="true" signature="4024:4030" ph=" " />
+            <marker date="1550815194203" expanded="true" signature="4038:4044" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <marker date="1550833247430" expanded="true" signature="83:155" ph="select last_... ebay_credential" />
+            <marker date="1550833247430" expanded="true" signature="216:295" ph="select last_... bigcommerce_credential" />
+            <marker date="1550833247430" expanded="true" signature="349:419" ph="select last_... ca_credential" />
+            <marker date="1550833247430" expanded="true" signature="473:548" ph="select last_... amazon_credential" />
+            <marker date="1550833247430" expanded="true" signature="597:676" ph="select confi... configuration" />
+            <marker date="1550833247430" expanded="true" signature="693:809" ph="select * fro... inv_issues_complaints" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1550815157595" expanded="true" signature="213:266" ph="Select * fro... configuration" />
+            <marker date="1550815157595" expanded="true" signature="306:380" ph="Update confi... " />
+            <marker date="1550815157595" expanded="true" signature="620:674" ph="Select * fro... ebay_credential" />
+            <marker date="1550815157595" expanded="true" signature="1132:1185" ph="Select * fro... configuration" />
+            <marker date="1550815157595" expanded="true" signature="1225:1299" ph="Update confi... " />
+            <marker date="1550815157595" expanded="true" signature="1505:1598" ph="Select * fro... amazon_credential" />
+            <marker date="1550815157595" expanded="true" signature="2054:2107" ph="Select * fro... configuration" />
+            <marker date="1550815157595" expanded="true" signature="2147:2221" ph="Update confi... " />
+            <marker date="1550815157595" expanded="true" signature="2503:2575" ph="Select * fro... fishbowl_credential" />
+            <marker date="1550815157595" expanded="true" signature="3050:3100" ph="Select confi... configuration" />
+            <marker date="1550815157595" expanded="true" signature="3158:3197" ph="select * fro... amazon_credential" />
+            <marker date="1550815157595" expanded="true" signature="3242:3280" ph="select * fro... ebay_credential" />
+            <marker date="1550815157595" expanded="true" signature="3325:3367" ph="select * fro... fishbowl_credential" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/auth_dev.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/addContact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1080">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1550815156963" expanded="true" signature="543:588" ph="SELECT * FRO... ${$table}" />
+            <marker date="1550815156963" expanded="true" signature="701:773" ph="SELECT * FRO... ${$table2}" />
+            <marker date="1550815156963" expanded="true" signature="838:887" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/controller/sale/customer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="963" column="71" lean-forward="false" selection-start-line="963" selection-start-column="53" selection-end-line="963" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/model/sale/customer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="55" column="81" lean-forward="false" selection-start-line="55" selection-start-column="81" selection-end-line="55" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/inc/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/model/account/customer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="355" column="42" lean-forward="false" selection-start-line="355" selection-start-column="20" selection-end-line="355" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/account/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="217" column="30" lean-forward="false" selection-start-line="217" selection-start-column="25" selection-end-line="217" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="29" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <marker date="1550833247430" expanded="true" signature="83:155" ph="select last_... ebay_credential" />
+            <marker date="1550833247430" expanded="true" signature="216:295" ph="select last_... bigcommerce_credential" />
+            <marker date="1550833247430" expanded="true" signature="349:419" ph="select last_... ca_credential" />
+            <marker date="1550833247430" expanded="true" signature="473:548" ph="select last_... amazon_credential" />
+            <marker date="1550833247430" expanded="true" signature="597:676" ph="select confi... configuration" />
+            <marker date="1550833247430" expanded="true" signature="693:809" ph="select * fro... inv_issues_complaints" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/inc/split_page_results.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1550815194203" expanded="true" signature="2957:2963" ph=" " />
+            <marker date="1550815194203" expanded="true" signature="2991:2997" ph=" " />
+            <marker date="1550815194203" expanded="true" signature="4024:4030" ph=" " />
+            <marker date="1550815194203" expanded="true" signature="4038:4044" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/inc/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding>
+            <marker date="1550815194203" expanded="true" signature="227:431" ph="select sum(p... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="686:746" ph="SELECT user_... inv_customers" />
+            <marker date="1550815194203" expanded="true" signature="918:1270" ph="SELECT min(b... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="1590:1690" ph="SELECT id,no... inv_customers" />
+            <marker date="1550815194203" expanded="true" signature="1928:1990" ph="SELECT id FR... inv_po_customers" />
+            <marker date="1550815194203" expanded="true" signature="2191:2322" ph="SELECT buyba... oc_buyback" />
+            <marker date="1550815194203" expanded="true" signature="2570:2701" ph="SELECT buyba... oc_buyback" />
+            <marker date="1550815194203" expanded="true" signature="2949:3087" ph="SELECT 0,COU... oc_order" />
+            <marker date="1550815194203" expanded="true" signature="3266:3356" ph="SELECT name oc_customer_group" />
+            <marker date="1550815194203" expanded="true" signature="3449:3577" ph="SELECT 0,COU... inv_orders" />
+            <marker date="1550815194203" expanded="true" signature="4473:4717" ph="SELECT count... " />
+            <marker date="1550815194203" expanded="true" signature="4832:5096" ph="SELECT sum(b... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="5256:5520" ph="SELECT sum(b... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="5686:5913" ph="SELECT SUM(b... inv_return_items" />
+            <marker date="1550815194203" expanded="true" signature="6031:6084" ph="SELECT image... inv_users" />
+            <marker date="1550815194203" expanded="true" signature="6551:6627" ph="select count... inv_product_outofstock_days" />
+            <marker date="1550815194203" expanded="true" signature="6715:6991" ph="select ot.pr... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="7163:7241" ph="SELECT is_fb... inv_po_customers" />
+            <marker date="1550815194203" expanded="true" signature="9112:9217" ph="select max(a... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="9351:9467" ph="select sku f... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="11328:11403" ph="select packa... inv_rejected_shipments" />
+            <marker date="1550815194203" expanded="true" signature="11444:11528" ph="select packa... inv_rejected_shipments" />
+            <marker date="1550815194203" expanded="true" signature="11949:12021" ph="SELECT vendo... inv_shipments" />
+            <marker date="1550815194203" expanded="true" signature="12160:12248" ph="select id fr... inv_rejected_shipments" />
+            <marker date="1550815194203" expanded="true" signature="14903:14982" ph="SELECT * FRO... inv_return_shipment_box_items" />
+            <marker date="1550815194203" expanded="true" signature="15023:15122" ph="select box_n... inv_return_shipment_boxes" />
+            <marker date="1550815194203" expanded="true" signature="15162:15233" ph="select packa... inv_rejected_shipments" />
+            <marker date="1550815194203" expanded="true" signature="15980:16057" ph="DELETE FROM " />
+            <marker date="1550815194203" expanded="true" signature="17155:17227" ph="SELECT vendo... inv_shipments" />
+            <marker date="1550815194203" expanded="true" signature="17996:18066" ph="select box_n... inv_return_shipment_boxes" />
+            <marker date="1550815194203" expanded="true" signature="18197:18298" ph="delete from " />
+            <marker date="1550815194203" expanded="true" signature="18607:18717" ph="select id, b... inv_return_shipment_boxes" />
+            <marker date="1550815194203" expanded="true" signature="19406:19478" ph="SELECT vendo... inv_shipments" />
+            <marker date="1550815194203" expanded="true" signature="20241:20327" ph="SELECT date_... inv_rejected_shipment_items" />
+            <marker date="1550815194203" expanded="true" signature="21299:21397" ph="select id fr... inv_return_shipment_boxes" />
+            <marker date="1550815194203" expanded="true" signature="22291:22356" ph="select id fr... inv_rejected_shipments" />
+            <marker date="1550815194203" expanded="true" signature="22413:22558" ph="delete from " />
+            <marker date="1550815194203" expanded="true" signature="23027:23149" ph="select raw_c... inv_product_costs" />
+            <marker date="1550815194203" expanded="true" signature="24326:24448" ph="select name oc_product_description" />
+            <marker date="1550815194203" expanded="true" signature="24958:25040" ph="SELECT MIN(p... oc_product_discount" />
+            <marker date="1550815194203" expanded="true" signature="25119:25250" ph="SELECT MIN(p... oc_product_discount" />
+            <marker date="1550815194203" expanded="true" signature="25982:26064" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="26118:26201" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="26287:26358" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="26670:26717" ph="select image... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="26979:27037" ph="select produ... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="28840:28921" ph="delete from " />
+            <marker date="1550815194203" expanded="true" signature="28947:29024" ph="insert into oc_product_to_store... " />
+            <marker date="1550815194203" expanded="true" signature="29375:29565" ph="select p.pro... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="29745:29868" ph="SELECT `raw_... inv_product_costs" />
+            <marker date="1550815194203" expanded="true" signature="30498:30622" ph="update oc_pr... " />
+            <marker date="1550815194203" expanded="true" signature="30646:30829" ph="insert into oc_product_to_category... " />
+            <marker date="1550815194203" expanded="true" signature="30708:30789" ph="select ${$pr... oc_product_to_category" />
+            <marker date="1550815194203" expanded="true" signature="31089:31147" ph="select ${$fi... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="33692:33806" ph="select max(a... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="34556:34619" ph="select rma_n... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="35066:35149" ph="select max(a... inv_returns_po" />
+            <marker date="1550815194203" expanded="true" signature="35285:35413" ph="select max(a... inv_return_shipment_boxes" />
+            <marker date="1550815194203" expanded="true" signature="36071:36164" ph="select ${$co... ${$table}" />
+            <marker date="1550815194203" expanded="true" signature="37301:37443" ph="select max(a... inv_rejected_shipment_items" />
+            <marker date="1550815194203" expanded="true" signature="37511:37655" ph="select max(a... inv_return_shipment_box_items" />
+            <marker date="1550815194203" expanded="true" signature="42266:42337" ph="select attac... inv_order_docs" />
+            <marker date="1550815194203" expanded="true" signature="42617:42695" ph="SELECT track... inv_order_shipments" />
+            <marker date="1550815194203" expanded="true" signature="43255:43329" ph="select oh.co... oc_order_history" />
+            <marker date="1550815194203" expanded="true" signature="47624:47751" ph="select shipp... oc_order" />
+            <marker date="1550815194203" expanded="true" signature="48630:48693" ph="select is_ba... oc_customer" />
+            <marker date="1550815194203" expanded="true" signature="48941:49016" ph="select count... oc_order" />
+            <marker date="1550815194203" expanded="true" signature="49267:49444" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="49769:49786" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="50168:50392" ph="SELECT SUM(b... inv_orders" />
+            <marker date="1550815194203" expanded="true" signature="50441:50699" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="50748:50985" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="51095:51136" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="51347:51703" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="51929:52170" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="52238:52479" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="52547:52786" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="52854:53095" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="53163:53405" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="53776:53793" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="54101:54323" ph="SELECT SUM(b... inv_orders" />
+            <marker date="1550815194203" expanded="true" signature="54380:54661" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="54711:54987" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="55038:55314" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="55367:55408" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="55619:55861" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="55929:56209" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="56277:56562" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="56631:56942" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="57034:57340" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="57426:57732" ph="SELECT COUNT... inv_returns" />
+            <marker date="1550815194203" expanded="true" signature="58344:58485" ph="SELECT o.*,o... inv_orders" />
+            <marker date="1550815194203" expanded="true" signature="58544:58644" ph="SELECT * FRO... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="60191:60244" ph="SELECT `valu... oc_setting" />
+            <marker date="1550815194203" expanded="true" signature="60372:60458" ph="SELECT CONCA... oc_user" />
+            <marker date="1550815194203" expanded="true" signature="60514:60569" ph="SELECT name inv_users" />
+            <marker date="1550815194203" expanded="true" signature="60730:60791" ph="SELECT ${$de... oc_user" />
+            <marker date="1550815194203" expanded="true" signature="60847:60905" ph="SELECT ${$de... inv_users" />
+            <marker date="1550815194203" expanded="true" signature="62502:62558" ph="SELECT id FR... inv_price_change_history" />
+            <marker date="1550815194203" expanded="true" signature="62951:63054" ph="select main_... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="63142:63292" ph="SELECT DISTI... " />
+            <marker date="1550815194203" expanded="true" signature="63581:63684" ph="select main_... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="63838:63892" ph="select produ... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="63933:64054" ph="SELECT AVG(p... oc_product_discount" />
+            <marker date="1550815194203" expanded="true" signature="64117:64190" ph="SELECT AVG(p... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="64918:64972" ph="SELECT main_... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="65048:65180" ph="SELECT cost_... inv_product_costs" />
+            <marker date="1550815194203" expanded="true" signature="65598:65721" ph="SELECT `prod... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="68282:68342" ph="SELECT prefi... inv_orders" />
+            <marker date="1550815194203" expanded="true" signature="69067:69131" ph="SELECT custo... inv_customers" />
+            <marker date="1550815194203" expanded="true" signature="69767:69867" ph="SELECT id,no... inv_customers" />
+            <marker date="1550815194203" expanded="true" signature="70115:70177" ph="SELECT id FR... inv_po_customers" />
+            <marker date="1550815194203" expanded="true" signature="70389:70520" ph="SELECT buyba... oc_buyback" />
+            <marker date="1550815194203" expanded="true" signature="70779:70910" ph="SELECT buyba... oc_buyback" />
+            <marker date="1550815194203" expanded="true" signature="71169:71307" ph="SELECT 0,COU... oc_order" />
+            <marker date="1550815194203" expanded="true" signature="71492:71582" ph="SELECT name oc_customer_group" />
+            <marker date="1550815194203" expanded="true" signature="71681:71809" ph="SELECT 0,COU... inv_orders" />
+            <marker date="1550815194203" expanded="true" signature="78984:91504" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="78994:91496" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="78998:91485" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79021:91476" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79104:91466" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79117:91458" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79121:91444" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="79187:79261" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79262:91432" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79335:91419" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79351:91411" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79355:91394" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79396:91379" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79505:82237" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79524:82229" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79541:82209" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79574:82191" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79667:82172" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79690:82164" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79694:82141" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79742:80175" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79837:80153" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79863:80145" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79867:79932" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="79955:80119" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="80042:80083" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="80085:80091" ph=" " />
+            <marker date="1550815194203" expanded="false" signature="80422:80509" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="80510:81601" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="80656:80674" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="80675:81579" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="80701:81571" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="80705:81545" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="80744:81521" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="80843:81496" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="80872:81488" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="80876:80947" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="80973:81362" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="81085:81181" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="81222:81335" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="81388:81459" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="81687:82120" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="81781:82098" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="81807:82090" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="81811:81876" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="81899:82064" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="81986:82028" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="82030:82036" ph=" " />
+            <marker date="1550815194203" expanded="true" signature="82375:83314" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="82395:83306" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="82399:83286" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="82432:83268" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="82524:83249" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="82547:83241" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="82551:82610" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="82657:83029" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="82693:83008" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="82732:82986" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="82834:82892" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83080:83138" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83159:83218" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83452:88985" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83472:88977" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83476:88957" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83509:88939" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83601:88920" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83652:88912" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83656:84223" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83692:84202" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83788:84180" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83814:84172" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83818:84146" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="83865:83882" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="83883:84122" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="84019:84077" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="84275:84334" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="84385:84820" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="84569:84682" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="84683:84799" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="84876:84935" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="84984:87006" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85020:86985" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85103:86963" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85129:86955" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85133:86929" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85172:85546" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="85248:85266" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85325:85521" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85354:85513" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85358:85484" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="85393:85424" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="85447:85453" ph=" " />
+            <marker date="1550815194203" expanded="true" signature="85625:85999" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="85701:85719" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85778:85974" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85807:85966" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="85811:85937" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="85846:85877" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="85900:85906" ph=" " />
+            <marker date="1550815194203" expanded="true" signature="86078:86452" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="86154:86172" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="86231:86427" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="86260:86419" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="86264:86390" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="86299:86330" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="86353:86359" ph=" " />
+            <marker date="1550815194203" expanded="true" signature="86531:86905" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="86607:86625" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="86684:86880" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="86713:86872" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="86717:86843" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="86752:86783" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="86806:86812" ph=" " />
+            <marker date="1550815194203" expanded="true" signature="87059:87118" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="87168:87623" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="87356:87452" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="87453:87602" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="87677:87736" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="87785:88698" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="87821:88677" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="87971:87989" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="87990:88655" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="88016:88647" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="88020:88621" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="88202:88337" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="88338:88597" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="88403:88440" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="88466:88572" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="88751:88809" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="88830:88889" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="89075:89170" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="89242:90323" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="89262:90315" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="89266:90295" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="89359:89420" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="89421:90277" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="89513:90258" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="89536:90250" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="89540:89599" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="89652:90111" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="89875:89990" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="89991:90090" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="90010:90016" ph="©" />
+            <marker date="1550815194203" expanded="true" signature="90168:90227" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="90466:91334" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="90486:91326" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="90490:90543" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="90560:91236" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="90593:91218" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="90673:91199" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="90696:91191" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="90700:91168" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="90923:91038" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="91039:91146" ph="..." />
+            <marker date="1550815194203" expanded="false" signature="91089:91095" ph="•" />
+            <marker date="1550815194203" expanded="false" signature="91106:91112" ph="•" />
+            <marker date="1550815194203" expanded="true" signature="91253:91306" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="94258:94318" ph="SELECT produ... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="94489:94620" ph="SELECT cost_... inv_product_costs" />
+            <marker date="1550815194203" expanded="true" signature="94780:94910" ph="SELECT * FRO... inv_product_pricing" />
+            <marker date="1550815194203" expanded="true" signature="94927:95105" ph="SELECT iks.`... inv_kit_skus" />
+            <marker date="1550815194203" expanded="true" signature="97262:97422" ph="UPDATE oc_pr... " />
+            <marker date="1550815194203" expanded="true" signature="97442:97529" ph="DELETE FROM " />
+            <marker date="1550815194203" expanded="true" signature="97571:97755" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="97774:97958" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="97977:98163" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="98206:98391" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="98410:98595" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="98614:98801" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="98848:99032" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="99051:99235" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="99254:99440" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="99485:99677" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="99696:99888" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="99907:100101" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="100146:100336" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="100355:100545" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="100564:100756" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="100803:100997" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="101016:101210" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="101229:101425" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="101469:101662" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="101681:101874" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="101893:102088" ph="insert into oc_product_discount... " />
+            <marker date="1550815194203" expanded="true" signature="102142:102274" ph="UPDATE oc_pr... " />
+            <marker date="1550815194203" expanded="true" signature="102315:102447" ph="UPDATE oc_pr... " />
+            <marker date="1550815194203" expanded="true" signature="102488:102620" ph="UPDATE oc_pr... " />
+            <marker date="1550815194203" expanded="true" signature="102683:102786" ph="UPDATE oc_pr... " />
+            <marker date="1550815194203" expanded="true" signature="102912:103118" ph="SELECT * FRO... oc_category" />
+            <marker date="1550815194203" expanded="true" signature="103570:103794" ph="SELECT name,... oc_category" />
+            <marker date="1550815194203" expanded="true" signature="104260:104361" ph="SELECT `whit... inv_customers" />
+            <marker date="1550815194203" expanded="true" signature="104424:104520" ph="SELECT `id` inv_po_customers" />
+            <marker date="1550815194203" expanded="true" signature="104626:104856" ph="SELECT COUNT... inv_chargeback" />
+            <marker date="1550815194203" expanded="true" signature="104913:105050" ph="SELECT COUNT... inv_orders" />
+            <marker date="1550815194203" expanded="true" signature="105124:105216" ph="SELECT produ... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="110530:110613" ph="UPDATE inv_o... " />
+            <marker date="1550815194203" expanded="true" signature="111227:111313" ph="UPDATE inv_o... " />
+            <marker date="1550815194203" expanded="true" signature="111333:111420" ph="UPDATE inv_o... " />
+            <marker date="1550815194203" expanded="true" signature="111440:111621" ph="UPDATE oc_or... " />
+            <marker date="1550815194203" expanded="true" signature="113336:113453" ph="UPDATE inv_o... " />
+            <marker date="1550815194203" expanded="true" signature="113475:113561" ph="UPDATE inv_o... " />
+            <marker date="1550815194203" expanded="true" signature="113583:113763" ph="UPDATE oc_or... " />
+            <marker date="1550815194203" expanded="true" signature="113933:114049" ph="UPDATE inv_o... " />
+            <marker date="1550815194203" expanded="true" signature="114071:114156" ph="UPDATE inv_o... " />
+            <marker date="1550815194203" expanded="true" signature="114178:114359" ph="UPDATE oc_or... " />
+            <marker date="1550815194203" expanded="true" signature="114497:114554" ph="SELECT * FRO... inv_canned_message" />
+            <marker date="1550815194203" expanded="true" signature="115954:116067" ph="UPDATE inv_o... " />
+            <marker date="1550815194203" expanded="true" signature="116087:116172" ph="UPDATE inv_o... " />
+            <marker date="1550815194203" expanded="true" signature="116192:116373" ph="UPDATE oc_or... " />
+            <marker date="1550815194203" expanded="true" signature="117014:117069" ph="SELECT `name... inv_users" />
+            <marker date="1550815194203" expanded="true" signature="120465:120516" ph="SELECT * FRO... oc_voucher" />
+            <marker date="1550815194203" expanded="true" signature="120711:120826" ph="SELECT * FRO... inv_orders" />
+            <marker date="1550815194203" expanded="true" signature="120962:121100" ph="SELECT SUM(p... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="121181:121252" ph="SELECT dis_t... inv_customers" />
+            <marker date="1550815194203" expanded="true" signature="121297:121343" ph="SELECT * FRO... oc_tax_rate" />
+            <marker date="1550815194203" expanded="true" signature="121651:121879" ph="SELECT SUM(`... oc_voucher_history" />
+            <marker date="1550815194203" expanded="true" signature="121916:122137" ph="SELECT `a`.`... oc_voucher_history" />
+            <marker date="1550815194203" expanded="true" signature="122182:122337" ph="SELECT SUM(`... oc_coupon_history" />
+            <marker date="1550815194203" expanded="true" signature="122519:122777" ph="UPDATE inv_o... " />
+            <marker date="1550815194203" expanded="true" signature="122840:122996" ph="UPDATE oc_or... " />
+            <marker date="1550815194203" expanded="true" signature="123020:123156" ph="UPDATE oc_or... " />
+            <marker date="1550815194203" expanded="true" signature="123180:123259" ph="UPDATE oc_or... " />
+            <marker date="1550815194203" expanded="true" signature="123306:123382" ph="DELETE FROM " />
+            <marker date="1550815194203" expanded="true" signature="123448:123656" ph="INSERT INTO oc_order_total... " />
+            <marker date="1550815194203" expanded="true" signature="123708:123780" ph="DELETE FROM " />
+            <marker date="1550815194203" expanded="true" signature="123805:123981" ph="INSERT INTO oc_order_total... " />
+            <marker date="1550815194203" expanded="true" signature="125476:126000" ph="INSERT INTO inv_voucher_details... " />
+            <marker date="1550815194203" expanded="true" signature="126126:126200" ph="SELECT box_n... inv_return_shipment_boxes" />
+            <marker date="1550815194203" expanded="true" signature="126243:126317" ph="SELECT box_n... inv_return_shipment_boxes" />
+            <marker date="1550815194203" expanded="true" signature="126354:126435" ph="SELECT * FRO... inv_return_shipment_box_items" />
+            <marker date="1550815194203" expanded="true" signature="127351:127408" ph="SELECT sku F... inv_buy_back" />
+            <marker date="1550815194203" expanded="true" signature="127448:127535" ph="SELECT * FRO... inv_return_shipment_box_items" />
+            <marker date="1550815194203" expanded="true" signature="128230:128330" ph="SELECT retur... inv_return_shipment_box_items" />
+            <marker date="1550815194203" expanded="true" signature="128371:128470" ph="select box_n... inv_return_shipment_boxes" />
+            <marker date="1550815194203" expanded="true" signature="128510:128577" ph="select packa... inv_buyback_boxes" />
+            <marker date="1550815194203" expanded="true" signature="129412:129490" ph="DELETE FROM " />
+            <marker date="1550815194203" expanded="true" signature="130009:130061" ph="SELECT quant... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="130508:130596" ph="SELECT SUM(p... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="130647:130732" ph="SELECT shipp... inv_orders_details" />
+            <marker date="1550815194203" expanded="true" signature="130985:131125" ph="select shipp... inv_shipstation_transactions" />
+            <marker date="1550815194203" expanded="true" signature="131437:131543" ph="SELECT sum(p... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="131603:131688" ph="SELECT trans... inv_transactions" />
+            <marker date="1550815194203" expanded="true" signature="131742:131827" ph="SELECT SUM(f... inv_order_fees" />
+            <marker date="1550815194203" expanded="true" signature="138769:138792" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="138799:138821" ph="data:" />
+            <marker date="1550815194203" expanded="true" signature="138977:139000" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="139007:139029" ph="data:" />
+            <marker date="1550815194203" expanded="true" signature="139191:139214" ph="..." />
+            <marker date="1550815194203" expanded="true" signature="139221:139243" ph="data:" />
+            <marker date="1550815194203" expanded="true" signature="141158:141376" ph="SELECT * FRO... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="142021:142259" ph="SELECT price... oc_product_discount" />
+            <marker date="1550815194203" expanded="true" signature="142330:142613" ph="SELECT price... oc_product_discount" />
+            <marker date="1550815194203" expanded="true" signature="142760:143006" ph="SELECT price... oc_product_special" />
+            <marker date="1550815194203" expanded="true" signature="143489:143574" ph="select quant... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="144767:145135" ph="INSERT INTO inv_product_ledger... " />
+            <marker date="1550815194203" expanded="true" signature="145370:145480" ph="SELECT quant... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="145799:146033" ph="SELECT sum(b... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="146081:146320" ph="SELECT sum(b... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="146364:146654" ph="SELECT sum(b... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="146698:146945" ph="SELECT sum(b... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="146994:147440" ph="SELECT sum(S... inv_removed_order_items" />
+            <marker date="1550815194203" expanded="true" signature="148985:149040" ph="SELECT * FRO... oc_country" />
+            <marker date="1550815194203" expanded="true" signature="149151:149218" ph="SELECT name oc_country" />
+            <marker date="1550815194203" expanded="true" signature="149411:149463" ph="SELECT * FRO... oc_zone" />
+            <marker date="1550815194203" expanded="true" signature="149570:149628" ph="SELECT name oc_zone" />
+            <marker date="1550815194203" expanded="true" signature="149719:149850" ph="INSERT INTO inv_product_price_scrap... " />
+            <marker date="1550815194203" expanded="true" signature="149870:149992" ph="INSERT INTO inv_product_price_scrap... " />
+            <marker date="1550815194203" expanded="true" signature="150012:150136" ph="INSERT INTO inv_product_price_scrap... " />
+            <marker date="1550815194203" expanded="true" signature="150156:150289" ph="INSERT INTO inv_product_price_scrap... " />
+            <marker date="1550815194203" expanded="true" signature="150309:150439" ph="INSERT INTO inv_product_price_scrap... " />
+            <marker date="1550815194203" expanded="true" signature="150459:150589" ph="INSERT INTO inv_product_price_scrap... " />
+            <marker date="1550815194203" expanded="true" signature="150609:150734" ph="INSERT INTO inv_product_price_scrap... " />
+            <marker date="1550815194203" expanded="true" signature="150754:150884" ph="INSERT INTO inv_product_price_scrap... " />
+            <marker date="1550815194203" expanded="true" signature="150904:151035" ph="INSERT INTO inv_product_price_scrap... " />
+            <marker date="1550815194203" expanded="true" signature="151664:152150" ph="SELECT p.mod... oc_product" />
+            <marker date="1550815194203" expanded="true" signature="151683:151888" ph="SELECT COALE... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="151893:152057" ph="SELECT COALE... inv_orders_items" />
+            <marker date="1550815194203" expanded="true" signature="152368:152542" ph="UPDATE oc_pr... " />
+            <marker date="1550815194203" expanded="true" signature="153948:154046" ph="SELECT name inv_charts" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/products.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11304">
+          <caret line="628" column="35" lean-forward="false" selection-start-line="628" selection-start-column="35" selection-end-line="628" selection-end-column="35" />
+          <folding>
+            <marker date="1550815195043" expanded="true" signature="206:245" ph="SELECT * FRO... oc_product" />
+            <marker date="1550815195043" expanded="true" signature="680:753" ph="SELECT * FRO... oc_product_image" />
+            <marker date="1550815195043" expanded="true" signature="3714:3858" ph="SELECT a.*, oc_product" />
+            <marker date="1550815195043" expanded="true" signature="7568:8347" ph="Select p.sku... oc_product" />
+            <marker date="1550815195043" expanded="true" signature="7718:7923" ph="SELECT COALE... inv_orders_items" />
+            <marker date="1550815195043" expanded="true" signature="7928:8092" ph="SELECT COALE... inv_orders_items" />
+            <marker date="1550815195043" expanded="true" signature="8895:9044" ph="SELECT a.dev... inv_device_product" />
+            <marker date="1550815195043" expanded="true" signature="17255:17320" ph="Select COUNT... oc_product" />
+            <marker date="1550815195043" expanded="true" signature="24336:24471" ph="SELECT price... oc_product_discount" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/sales_dashboard_new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+          <folding>
+            <marker date="1550815195275" expanded="true" signature="1298:1651" ph="SELECT a.use... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="1728:1793" ph="SELECT name oc_zone" />
+            <marker date="1550815195275" expanded="true" signature="1840:2083" ph="SELECT order... inv_orders" />
+            <marker date="1550815195275" expanded="true" signature="3418:3903" ph="select sum(d... oc_voucher" />
+            <marker date="1550815195275" expanded="true" signature="3939:4369" ph="select a.rea... oc_voucher" />
+            <marker date="1550815195275" expanded="true" signature="4466:4982" ph="select sum(d... oc_voucher" />
+            <marker date="1550815195275" expanded="true" signature="5024:5485" ph="select a.rea... oc_voucher" />
+            <marker date="1550815195275" expanded="false" signature="7012:7043" ph="..." />
+            <marker date="1550815195275" expanded="false" signature="7165:7197" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="7198:7389" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="7214:7364" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="7227:7347" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="7380:7389" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="7581:7597" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="9657:9673" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="10217:10766" ph="select sum(d... oc_voucher" />
+            <marker date="1550815195275" expanded="true" signature="10859:11439" ph="select sum(d... oc_voucher" />
+            <marker date="1550815195275" expanded="true" signature="11895:11911" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="12489:12727" ph="SELECT SUM(b... inv_customer_data_summary" />
+            <marker date="1550815195275" expanded="true" signature="12833:13079" ph="SELECT SUM(b... inv_customer_data_summary" />
+            <marker date="1550815195275" expanded="true" signature="13158:13406" ph="SELECT SUM(b... inv_customer_data_summary" />
+            <marker date="1550815195275" expanded="true" signature="14380:14724" ph="SELECT SUM(b... inv_customer_data_summary" />
+            <marker date="1550815195275" expanded="true" signature="14768:15144" ph="SELECT SUM(b... " />
+            <marker date="1550815195275" expanded="true" signature="15190:15684" ph="SELECT sum(c... " />
+            <marker date="1550815195275" expanded="true" signature="15779:16122" ph="SELECT SUM(b... inv_customer_data_summary" />
+            <marker date="1550815195275" expanded="true" signature="16165:16540" ph="SELECT SUM(b... " />
+            <marker date="1550815195275" expanded="true" signature="16585:17079" ph="SELECT sum(c... " />
+            <marker date="1550815195275" expanded="true" signature="17173:17516" ph="SELECT SUM(b... inv_customer_data_summary" />
+            <marker date="1550815195275" expanded="true" signature="17559:17934" ph="SELECT SUM(b... " />
+            <marker date="1550815195275" expanded="true" signature="17979:18473" ph="SELECT sum(c... " />
+            <marker date="1550815195275" expanded="true" signature="18542:18887" ph="SELECT SUM(b... inv_customer_data_summary" />
+            <marker date="1550815195275" expanded="true" signature="18932:19309" ph="SELECT SUM(b... " />
+            <marker date="1550815195275" expanded="true" signature="19356:19852" ph="SELECT sum(c... " />
+            <marker date="1550815195275" expanded="true" signature="20023:20097" ph="SELECT commi... inv_users" />
+            <marker date="1550815195275" expanded="true" signature="21587:21836" ph="SELECT SUM(s... inv_user_commission" />
+            <marker date="1550815195275" expanded="true" signature="21876:22244" ph="SELECT sum(s... inv_user_commission" />
+            <marker date="1550815195275" expanded="true" signature="23242:23258" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="23259:23781" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="24948:25008" ph="SELECT quart... inv_users" />
+            <marker date="1550815195275" expanded="true" signature="25584:25910" ph="SELECT c.dat... " />
+            <marker date="1550815195275" expanded="true" signature="26016:26356" ph="SELECT c.dat... " />
+            <marker date="1550815195275" expanded="true" signature="26435:26761" ph="SELECT c.dat... " />
+            <marker date="1550815195275" expanded="true" signature="27635:27688" ph="SELECT id fr... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="27753:28036" ph="INSERT INTO inv_customer_comments... " />
+            <marker date="1550815195275" expanded="true" signature="28173:28265" ph="UPDATE inv_c... " />
+            <marker date="1550815195275" expanded="true" signature="28559:28612" ph="SELECT id fr... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="28794:28878" ph="UPDATE inv_c... " />
+            <marker date="1550815195275" expanded="true" signature="29197:29250" ph="SELECT id fr... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="29277:29318" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="29406:29431" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="29432:29746" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="29458:29695" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="29462:29664" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="29725:29746" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="29806:29930" ph="SELECT * FRO... inv_customer_comments" />
+            <marker date="1550815195275" expanded="true" signature="30001:30400" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="32232:32868" ph="select a.id,... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="34592:35051" ph="SELECT a.fir... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="35846:36426" ph="SELECT a.fir... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="36297:36408" ph="select c.ema... inv_customer_data_summary" />
+            <marker date="1550815195275" expanded="true" signature="37289:37883" ph="SELECT b.id,... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="37725:37863" ph="select c.ema... inv_customer_data_summary" />
+            <marker date="1550815195275" expanded="true" signature="38076:38556" ph="SELECT disti... oc_voucher" />
+            <marker date="1550815195275" expanded="true" signature="38753:39081" ph="select a.fir... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="38799:38847" ph="select name oc_zone" />
+            <marker date="1550815195275" expanded="true" signature="39302:39633" ph="select a.fir... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="39348:39396" ph="select name oc_zone" />
+            <marker date="1550815195275" expanded="true" signature="40946:41598" ph="select a.fir... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="40992:41040" ph="select name oc_zone" />
+            <marker date="1550815195275" expanded="true" signature="41791:42179" ph="SELECT disti... oc_voucher" />
+            <marker date="1550815195275" expanded="true" signature="42965:43072" ph="SELECT weekl... inv_users" />
+            <marker date="1550815195275" expanded="true" signature="43125:43341" ph="SELECT SUM(b... inv_customers" />
+            <marker date="1550815195275" expanded="true" signature="47700:47765" ph="select id,na... inv_users" />
+            <marker date="1550815195275" expanded="true" signature="54110:54360" ph="SELECT order... inv_orders" />
+            <marker date="1550815195275" expanded="true" signature="56757:57007" ph="SELECT order... inv_orders" />
+            <marker date="1550815195275" expanded="true" signature="59754:59992" ph="SELECT order... inv_orders" />
+            <marker date="1550815195275" expanded="true" signature="60076:60326" ph="SELECT order... inv_orders" />
+            <marker date="1550815195275" expanded="true" signature="68369:68434" ph="select id,na... inv_users" />
+            <marker date="1550815195275" expanded="true" signature="71395:71460" ph="select id,na... inv_users" />
+            <marker date="1550815195275" expanded="true" signature="74770:75020" ph="SELECT order... inv_orders" />
+            <marker date="1550815195275" expanded="true" signature="75769:76019" ph="SELECT order... inv_orders" />
+            <marker date="1550815195275" expanded="true" signature="76767:77017" ph="SELECT order... inv_orders" />
+            <marker date="1550815195275" expanded="true" signature="78773:78788" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="79384:79407" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="79530:79548" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="79587:79597" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="79659:79677" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="79718:79735" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="80495:80510" ph="..." />
+            <marker date="1550815195275" expanded="true" signature="80818:80824" ph=" " />
+            <marker date="1550815195275" expanded="true" signature="100864:100887" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="22" />
+          <folding>
+            <marker date="1550815156963" expanded="true" signature="276:348" ph="select last_... ebay_credential" />
+            <marker date="1550815156963" expanded="true" signature="409:488" ph="select last_... bigcommerce_credential" />
+            <marker date="1550815156963" expanded="true" signature="542:612" ph="select last_... ca_credential" />
+            <marker date="1550815156963" expanded="true" signature="666:725" ph="select last_... amazon_credential" />
+            <marker date="1550815156963" expanded="true" signature="782:841" ph="select last_... amazon_credential" />
+            <marker date="1550815156963" expanded="true" signature="898:957" ph="select last_... amazon_credential" />
+            <marker date="1550815156963" expanded="true" signature="1014:1073" ph="select last_... amazon_credential" />
+            <marker date="1550815156963" expanded="true" signature="1132:1191" ph="select last_... amazon_credential" />
+            <marker date="1550815156963" expanded="true" signature="1250:1309" ph="select last_... amazon_credential" />
+            <marker date="1550815156963" expanded="true" signature="1359:1438" ph="select confi... configuration" />
+            <marker date="1550815156963" expanded="true" signature="1481:1522" ph="Select count... inv_orders" />
+            <marker date="1550815156963" expanded="true" signature="1570:1618" ph="Select count... inv_return_orders" />
+            <marker date="1550815156963" expanded="true" signature="1661:1746" ph="Select count... inv_orders" />
+            <marker date="1550815156963" expanded="true" signature="1794:1886" ph="Select count... inv_return_orders" />
+            <marker date="1550815156963" expanded="true" signature="1923:2106" ph="Select sum(o... inv_orders" />
+            <marker date="1550815156963" expanded="true" signature="2155:2294" ph="Select sum(o... inv_orders" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/product_catalog/man_catalog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding>
+            <marker date="1550837527894" expanded="true" signature="2502:2563" ph="SELECT is_ki... oc_product" />
+            <marker date="1550837527894" expanded="true" signature="14418:14430" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="21857:21863" ph=" " />
+            <marker date="1550837527894" expanded="true" signature="22204:22219" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="22396:22411" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="22583:22598" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="22769:22784" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="22960:22975" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="24573:24583" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="24728:24740" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="24942:24952" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="25077:25089" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="25903:25931" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="27528:27538" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="28593:28607" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="29928:29942" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="30138:30155" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="30383:30399" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="30512:30527" ph="..." />
+            <marker date="1550837527894" expanded="true" signature="31746:31753" ph="«" />
+            <marker date="1550837527894" expanded="true" signature="33511:33518" ph="»" />
+            <marker date="1550837527894" expanded="true" signature="34097:34114" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="48" column="4" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+          <folding>
+            <marker date="1550832604721" expanded="true" signature="1037:1084" ph="SELECT salt inv_users" />
+            <marker date="1550832604721" expanded="true" signature="1298:1463" ph="SELECT a.*, inv_users" />
+            <marker date="1550832604721" expanded="true" signature="1708:1880" ph="SELECT a.*, inv_users" />
+            <marker date="1550832604721" expanded="true" signature="1960:2089" ph="SELECT b.`na... inv_group_perm" />
+            <marker date="1550832604721" expanded="true" signature="2304:2337" ph="SELECT b.`pe... inv_perm" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imp/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1728">
+          <caret line="96" column="46" lean-forward="false" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

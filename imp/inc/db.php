@@ -15,13 +15,13 @@ class Database{
 
 		$this->conn = mysqli_connect($sql_host, $sql_user, $sql_password , $sql_db) or die("could not connect - " . mysql_error());
 
-		mysql_query("SET
+		/*mysql_query("SET
                   character_set_results = 'utf8', 
                   character_set_client = 'utf8', 
                   character_set_connection = 'utf8', 
                   character_set_database = 'utf8', 
                   character_set_server = 'utf8'", 
-		$this->conn);
+		$this->conn);*/
 	}
 
 	public function select_db($db){
